@@ -6,6 +6,8 @@ const LINKS = [
   { to: '/time-machine', label: 'Time Machine' },
   { to: '/atlas', label: 'Atlas' },
   { to: '/sommelier', label: 'Sommelier' },
+  { to: '/persona-match', label: 'Persona Match' },
+  { to: '/pantry-raid', label: 'Pantry Raid' },
 ]
 
 export function NavBar() {

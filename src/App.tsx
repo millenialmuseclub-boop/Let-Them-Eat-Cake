@@ -4,6 +4,8 @@ import { HomePage } from './pages/HomePage'
 import { TimeMachinePage } from './pages/TimeMachinePage'
 import { AtlasPage } from './pages/AtlasPage'
 import { SommelierPage } from './pages/SommelierPage'
+import { PersonaMatchPage } from './pages/PersonaMatchPage'
+import { PantryRaidPage } from './pages/PantryRaidPage'
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path="/time-machine" element={<TimeMachinePage />} />
         <Route path="/atlas" element={<AtlasPage />} />
         <Route path="/sommelier" element={<SommelierPage />} />
+        <Route path="/persona-match" element={<PersonaMatchPage />} />
+        <Route path="/pantry-raid" element={<PantryRaidPage />} />
       </Routes>
     </>
   )

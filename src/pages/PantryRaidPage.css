@@ -1,0 +1,61 @@
+.pantry-checklist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 32px;
+}
+
+.pantry-chip {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 14px;
+}
+
+.pantry-chip.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--cocoa);
+  font-weight: 600;
+}
+
+.pantry-results {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pantry-result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pantry-ready {
+  background: var(--raspberry);
+  color: white;
+}
+
+.pantry-missing-count {
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.pantry-missing-list {
+  font-size: 14px;
+  color: var(--raspberry);
+}
+
+.pantry-steps {
+  margin-top: 12px;
+  padding-left: 20px;
+}
+
+.pantry-steps li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}

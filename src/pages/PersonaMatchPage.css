@@ -1,0 +1,58 @@
+.mode-toggle {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.mode-toggle button {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 15px;
+}
+
+.mode-toggle button.active {
+  background: var(--raspberry);
+  border-color: var(--raspberry);
+  color: white;
+}
+
+.persona-select {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  max-width: 320px;
+  margin-bottom: 28px;
+}
+
+.persona-select select {
+  font: inherit;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.persona-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.persona-result-card h3 {
+  color: var(--raspberry);
+}
+
+.persona-notes {
+  font-size: 14px;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+.persona-empty {
+  opacity: 0.7;
+}

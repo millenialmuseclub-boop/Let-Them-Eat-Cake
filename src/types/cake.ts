@@ -1,3 +1,5 @@
+import type { PersonaTags } from './persona'
+
 export interface FlavorProfile {
   /** 1 (barely sweet) to 5 (very sweet) */
   sweetness: number
@@ -18,8 +20,7 @@ export interface CakeProfile {
   flavorProfile: FlavorProfile
   flavorNotes: string[]
   texture: CakeTexture
-  /** Reserved for the Phase 2 persona-matching engine (zodiac/mood/aesthetic). Not read by anything in Phase 1. */
-  personaTags?: string[]
+  personaTags?: PersonaTags
 }
 
 export type DietTag = 'vegan' | 'gluten-free' | 'dairy-free' | 'egg-free' | 'nut-free'

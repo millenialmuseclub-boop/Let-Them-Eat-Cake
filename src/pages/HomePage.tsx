@@ -17,6 +17,16 @@ const FEATURES = [
     title: 'Cake Sommelier',
     description: 'Pick a cake and see which drinks pair best with it, scored by flavor science.',
   },
+  {
+    to: '/persona-match',
+    title: 'Cosmic & Mood Match',
+    description: 'Match your zodiac sign, your current mood, or your aesthetic to a cake built for it.',
+  },
+  {
+    to: '/pantry-raid',
+    title: 'Pantry Raid',
+    description: "Check off what's in your kitchen and find the emergency cake that needs the least shopping.",
+  },
 ]
 
 export function HomePage() {

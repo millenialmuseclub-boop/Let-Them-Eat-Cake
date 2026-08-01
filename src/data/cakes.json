@@ -5,7 +5,8 @@
     "description": "A tender yellow butter cake stacked with fudgy chocolate frosting, the centerpiece of the postwar boxed-mix boom.",
     "flavorProfile": { "sweetness": 4, "fatRichness": 4, "acidity": 1, "intensity": 3 },
     "flavorNotes": ["vanilla", "cocoa", "butter"],
-    "texture": "sponge"
+    "texture": "sponge",
+    "personaTags": { "zodiacElements": ["earth"], "moods": ["cozy-sunday", "celebration"] }
   },
   {
     "id": "cake_tunnel_fudge_bundt_1960s",
@@ -13,7 +14,8 @@
     "description": "A dense chocolate-walnut bundt cake with a molten fudge core that stays gooey even after baking.",
     "flavorProfile": { "sweetness": 4, "fatRichness": 4, "acidity": 1, "intensity": 4 },
     "flavorNotes": ["cocoa", "walnut", "butter"],
-    "texture": "dense"
+    "texture": "dense",
+    "personaTags": { "zodiacElements": ["fire"], "moods": ["pure-hype"] }
   },
   {
     "id": "cake_hummingbird",
@@ -21,7 +23,8 @@
     "description": "A spiced banana-pineapple layer cake finished with cream cheese frosting and toasted pecans.",
     "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 2, "intensity": 3 },
     "flavorNotes": ["banana", "pineapple", "cinnamon", "pecan"],
-    "texture": "dense"
+    "texture": "dense",
+    "personaTags": { "zodiacElements": ["water"], "moods": ["cozy-sunday", "homesick"], "aesthetics": ["cottagecore"] }
   },
   {
     "id": "cake_carrot_cream_cheese_1980s",
@@ -29,7 +32,8 @@
     "description": "A warmly spiced carrot cake studded with walnuts and pineapple, capped with tangy cream cheese frosting.",
     "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 2, "intensity": 3 },
     "flavorNotes": ["cinnamon", "walnut", "cream cheese"],
-    "texture": "dense"
+    "texture": "dense",
+    "personaTags": { "zodiacElements": ["earth"], "moods": ["cozy-sunday"], "aesthetics": ["cottagecore"] }
   },
   {
     "id": "cake_molten_lava_1990s",
@@ -37,7 +41,8 @@
     "description": "An individual dark chocolate cake with an underbaked center engineered to flow the moment it's cut.",
     "flavorProfile": { "sweetness": 3, "fatRichness": 5, "acidity": 1, "intensity": 5 },
     "flavorNotes": ["dark chocolate", "butter", "espresso"],
-    "texture": "creamy"
+    "texture": "creamy",
+    "personaTags": { "zodiacElements": ["fire"], "moods": ["breakup-catharsis"], "aesthetics": ["dark-academia"] }
   },
   {
     "id": "cake_red_velvet_cupcake_2000s",
@@ -45,7 +50,8 @@
     "description": "A cocoa-tinged buttermilk cupcake with a faint tang, crowned with a swoop of cream cheese frosting.",
     "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 2, "intensity": 2 },
     "flavorNotes": ["cocoa", "buttermilk", "cream cheese"],
-    "texture": "sponge"
+    "texture": "sponge",
+    "personaTags": { "zodiacElements": ["air"], "moods": ["pure-hype", "celebration"], "aesthetics": ["coquette-vintage", "y2k-maximalist"] }
   },
   {
     "id": "cake_rainbow_drip_2010s",
@@ -53,7 +59,8 @@
     "description": "A tall naked-style layer cake in vivid tinted sponges, finished with a glossy ganache drip built for the camera.",
     "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 2 },
     "flavorNotes": ["vanilla", "white chocolate", "buttercream"],
-    "texture": "sponge"
+    "texture": "sponge",
+    "personaTags": { "zodiacElements": ["air"], "moods": ["pure-hype"], "aesthetics": ["y2k-maximalist"] }
   },
   {
     "id": "cake_basque_burnt_cheesecake",
@@ -61,7 +68,8 @@
     "description": "A crustless cheesecake baked hot and fast until the top is deliberately scorched, staying custardy and jiggling at the center.",
     "flavorProfile": { "sweetness": 3, "fatRichness": 5, "acidity": 3, "intensity": 3 },
     "flavorNotes": ["cream cheese", "caramelized sugar", "vanilla"],
-    "texture": "creamy"
+    "texture": "creamy",
+    "personaTags": { "zodiacElements": ["fire"], "moods": ["celebration"], "aesthetics": ["dark-academia"] }
   },
   {
     "id": "cake_tres_leches",
@@ -69,7 +77,8 @@
     "description": "A light sponge soaked in three milks until custardy, topped with whipped cream.",
     "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 2 },
     "flavorNotes": ["condensed milk", "vanilla", "cream"],
-    "texture": "sponge"
+    "texture": "sponge",
+    "personaTags": { "zodiacElements": ["water"], "moods": ["homesick", "cozy-sunday"] }
   },
   {
     "id": "cake_chocoflan",
@@ -77,7 +86,8 @@
     "description": "A single pan that bakes into two layers: dense chocolate cake on the bottom, silky caramel flan on top, known as the 'impossible cake'.",
     "flavorProfile": { "sweetness": 4, "fatRichness": 4, "acidity": 1, "intensity": 3 },
     "flavorNotes": ["cocoa", "caramel", "egg custard"],
-    "texture": "dense"
+    "texture": "dense",
+    "personaTags": { "zodiacElements": ["earth"], "moods": ["celebration", "homesick"] }
   },
   {
     "id": "cake_bizcocho_dominicano",
@@ -85,7 +95,8 @@
     "description": "A pillowy vanilla-almond cake soaked in fruit syrup and swathed in Dominican-style meringue buttercream.",
     "flavorProfile": { "sweetness": 5, "fatRichness": 3, "acidity": 1, "intensity": 2 },
     "flavorNotes": ["vanilla", "almond", "pineapple"],
-    "texture": "sponge"
+    "texture": "sponge",
+    "personaTags": { "zodiacElements": ["air"], "moods": ["celebration"], "aesthetics": ["coquette-vintage"] }
   },
   {
     "id": "cake_kladdkaka",
@@ -93,7 +104,8 @@
     "description": "Swedish 'sticky cake' — a thin, fudgy chocolate cake deliberately underbaked to a gooey center.",
     "flavorProfile": { "sweetness": 3, "fatRichness": 4, "acidity": 1, "intensity": 4 },
     "flavorNotes": ["cocoa", "butter"],
-    "texture": "creamy"
+    "texture": "creamy",
+    "personaTags": { "zodiacElements": ["fire"], "moods": ["breakup-catharsis", "lazy-weekend"], "aesthetics": ["dark-academia"] }
   },
   {
     "id": "cake_medovik",
@@ -101,7 +113,8 @@
     "description": "A Russian honey cake of thin baked honey layers stacked with sour-cream frosting and rested until soft.",
     "flavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 2, "intensity": 3 },
     "flavorNotes": ["honey", "sour cream", "caramel"],
-    "texture": "dense"
+    "texture": "dense",
+    "personaTags": { "zodiacElements": ["earth"], "moods": ["cozy-sunday"], "aesthetics": ["dark-academia"] }
   },
   {
     "id": "cake_kouign_amann",
@@ -109,7 +122,8 @@
     "description": "A Breton laminated pastry cake folded with layers of butter and sugar and caramelized until the exterior shatters.",
     "flavorProfile": { "sweetness": 3, "fatRichness": 5, "acidity": 1, "intensity": 3 },
     "flavorNotes": ["butter", "caramelized sugar"],
-    "texture": "crumbly"
+    "texture": "crumbly",
+    "personaTags": { "zodiacElements": ["earth"], "moods": ["lazy-weekend", "cozy-sunday"], "aesthetics": ["cottagecore"] }
   },
   {
     "id": "cake_sachertorte",
@@ -117,7 +131,8 @@
     "description": "A dense Viennese chocolate cake with a thin layer of apricot jam beneath a dark chocolate glaze.",
     "flavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 3, "intensity": 4 },
     "flavorNotes": ["dark chocolate", "apricot"],
-    "texture": "dense"
+    "texture": "dense",
+    "personaTags": { "zodiacElements": ["earth"], "moods": ["celebration", "breakup-catharsis"], "aesthetics": ["dark-academia"] }
   },
   {
     "id": "cake_mawa_cake",
@@ -125,7 +140,8 @@
     "description": "A Parsi Mumbai bakery cake enriched with mawa (reduced milk solids) and cardamom, denser and milkier than a standard sponge.",
     "flavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 1, "intensity": 3 },
     "flavorNotes": ["cardamom", "condensed milk", "nutmeg"],
-    "texture": "dense"
+    "texture": "dense",
+    "personaTags": { "zodiacElements": ["earth"], "moods": ["cozy-sunday", "homesick"], "aesthetics": ["cottagecore"] }
   },
   {
     "id": "cake_pandan_chiffon",
@@ -133,7 +149,8 @@
     "description": "A featherlight Southeast Asian chiffon cake flavored and colored with pandan leaf, coconut-forward and airy.",
     "flavorProfile": { "sweetness": 2, "fatRichness": 2, "acidity": 1, "intensity": 2 },
     "flavorNotes": ["pandan", "coconut", "vanilla"],
-    "texture": "sponge"
+    "texture": "sponge",
+    "personaTags": { "zodiacElements": ["air"], "moods": ["lazy-weekend"], "aesthetics": ["minimalist-k-style"] }
   },
   {
     "id": "cake_basbousa",
@@ -141,7 +158,8 @@
     "description": "A Levantine semolina cake soaked in orange blossom or rosewater syrup, often studded with almonds.",
     "flavorProfile": { "sweetness": 5, "fatRichness": 2, "acidity": 1, "intensity": 2 },
     "flavorNotes": ["orange blossom", "coconut", "almond"],
-    "texture": "dense"
+    "texture": "dense",
+    "personaTags": { "zodiacElements": ["water"], "moods": ["homesick", "cozy-sunday"], "aesthetics": ["cottagecore"] }
   },
   {
     "id": "cake_japanese_souffle_cheesecake",
@@ -149,7 +167,8 @@
     "description": "A whipped, meringue-lightened cheesecake baked in a water bath until cloud-like and barely sweet.",
     "flavorProfile": { "sweetness": 2, "fatRichness": 3, "acidity": 2, "intensity": 1 },
     "flavorNotes": ["cream cheese", "lemon", "egg"],
-    "texture": "creamy"
+    "texture": "creamy",
+    "personaTags": { "zodiacElements": ["air"], "moods": ["lazy-weekend"], "aesthetics": ["minimalist-k-style"] }
   },
   {
     "id": "cake_castella",
@@ -157,7 +176,8 @@
     "description": "A Nagasaki honey sponge cake of Portuguese origin, tall, moist, and springy with a golden crumb.",
     "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 1, "intensity": 2 },
     "flavorNotes": ["honey", "egg"],
-    "texture": "sponge"
+    "texture": "sponge",
+    "personaTags": { "zodiacElements": ["air"], "moods": ["lazy-weekend", "homesick"], "aesthetics": ["minimalist-k-style"] }
   },
   {
     "id": "cake_gooey_butter_cake",
@@ -165,7 +185,8 @@
     "description": "A yeasted shortcake base topped with a dense, syrupy butter-and-cream-cheese layer that never fully sets.",
     "flavorProfile": { "sweetness": 5, "fatRichness": 5, "acidity": 1, "intensity": 2 },
     "flavorNotes": ["butter", "vanilla", "cream cheese"],
-    "texture": "creamy"
+    "texture": "creamy",
+    "personaTags": { "zodiacElements": ["earth", "water"], "moods": ["cozy-sunday", "lazy-weekend"], "aesthetics": ["cottagecore"] }
   },
   {
     "id": "cake_brooklyn_blackout",
@@ -173,7 +194,8 @@
     "description": "A triple-layer dark chocolate cake filled with chocolate pudding and coated in cake crumbs, born from a Brooklyn bakery near the WWII-era Navy Yard blackouts.",
     "flavorProfile": { "sweetness": 4, "fatRichness": 4, "acidity": 1, "intensity": 5 },
     "flavorNotes": ["dark chocolate", "cocoa", "pudding"],
-    "texture": "dense"
+    "texture": "dense",
+    "personaTags": { "zodiacElements": ["fire"], "moods": ["breakup-catharsis"], "aesthetics": ["dark-academia"] }
   },
   {
     "id": "cake_lane_cake",
@@ -181,7 +203,8 @@
     "description": "An Alabama white layer cake filled with a boozy custard of egg yolks, bourbon, pecans, and candied cherries.",
     "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 3 },
     "flavorNotes": ["bourbon", "pecan", "cherry"],
-    "texture": "sponge"
+    "texture": "sponge",
+    "personaTags": { "zodiacElements": ["earth"], "moods": ["celebration"], "aesthetics": ["coquette-vintage"] }
   },
   {
     "id": "cake_malva_pudding",
@@ -189,7 +212,8 @@
     "description": "A warm, spongy South African baked pudding soaked in a hot buttery apricot-cream sauce until deeply moist.",
     "flavorProfile": { "sweetness": 5, "fatRichness": 3, "acidity": 2, "intensity": 3 },
     "flavorNotes": ["caramel", "apricot", "butter"],
-    "texture": "dense"
+    "texture": "dense",
+    "personaTags": { "zodiacElements": ["water"], "moods": ["cozy-sunday", "homesick"], "aesthetics": ["cottagecore"] }
   },
   {
     "id": "cake_pavlova",
@@ -197,7 +221,8 @@
     "description": "A crisp-shelled, marshmallow-centered meringue base piled with whipped cream and passionfruit, at the center of a decades-long naming dispute between Australia and New Zealand.",
     "flavorProfile": { "sweetness": 4, "fatRichness": 2, "acidity": 2, "intensity": 1 },
     "flavorNotes": ["meringue", "passionfruit", "cream"],
-    "texture": "crumbly"
+    "texture": "crumbly",
+    "personaTags": { "zodiacElements": ["air"], "moods": ["celebration"], "aesthetics": ["minimalist-k-style"] }
   },
   {
     "id": "cake_lamington",
@@ -205,6 +230,7 @@
     "description": "Cubes of Australian sponge cake dipped in chocolate icing and rolled in desiccated coconut.",
     "flavorProfile": { "sweetness": 4, "fatRichness": 2, "acidity": 1, "intensity": 2 },
     "flavorNotes": ["cocoa", "coconut", "vanilla"],
-    "texture": "sponge"
+    "texture": "sponge",
+    "personaTags": { "zodiacElements": ["air"], "moods": ["lazy-weekend", "pure-hype"], "aesthetics": ["cottagecore"] }
   }
 ]
