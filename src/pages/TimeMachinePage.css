@@ -1,0 +1,31 @@
+.dob-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin: 24px 0 32px;
+  flex-wrap: wrap;
+}
+
+.dob-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.dob-form input {
+  font: inherit;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.time-machine-result .card {
+  margin-bottom: 24px;
+}
+
+.recipe-heading {
+  margin-top: 8px;
+}

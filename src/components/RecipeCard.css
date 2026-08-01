@@ -1,0 +1,73 @@
+.recipe-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.recipe-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.recipe-controls input,
+.recipe-controls select {
+  font: inherit;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.recipe-controls input[type='number'] {
+  width: 70px;
+}
+
+.unit-toggle {
+  display: flex;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.unit-toggle button {
+  padding: 8px 14px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.unit-toggle button.active {
+  background: var(--raspberry);
+  color: white;
+}
+
+.ingredient-list,
+.step-list {
+  padding-left: 20px;
+  margin: 0 0 20px;
+}
+
+.ingredient-list li,
+.step-list li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.ingredient-qty {
+  font-weight: 600;
+  color: var(--cocoa-strong);
+}
+
+.substitution-note {
+  color: var(--raspberry);
+  font-style: italic;
+}

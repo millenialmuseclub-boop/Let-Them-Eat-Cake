@@ -2,10 +2,15 @@
   --cream: #fff8f0;
   --cocoa: #3d2314;
   --raspberry: #e88d9e;
+  --raspberry-bg: rgba(232, 141, 158, 0.15);
   --gold: #d4af37;
 
   --text: var(--cocoa);
+  --cocoa-strong: var(--cocoa);
   --bg: var(--cream);
+  --bg-card: #ffffff;
+  --border: rgba(61, 35, 20, 0.12);
+  --shadow: rgba(61, 35, 20, 0.08) 0 4px 16px;
 
   font: 18px/145% system-ui, 'Segoe UI', Roboto, sans-serif;
   color-scheme: light dark;
@@ -20,16 +25,101 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #f3ece4;
+    --cocoa-strong: #f3ece4;
     --bg: #1c1310;
+    --bg-card: #2a1c15;
+    --border: rgba(243, 236, 228, 0.14);
+    --shadow: rgba(0, 0, 0, 0.35) 0 4px 16px;
+    --raspberry-bg: rgba(232, 141, 158, 0.2);
   }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--heading, inherit);
+  color: var(--cocoa-strong);
+  margin: 0 0 8px;
+}
+
 h1 {
   font-size: 40px;
   letter-spacing: -0.5px;
-  margin: 0;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 19px;
+}
+
+p {
+  margin: 0 0 8px;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: var(--raspberry);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--cocoa);
+  font-size: 13px;
+  font-weight: 600;
 }

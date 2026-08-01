@@ -1,11 +1,21 @@
-import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import { NavBar } from './components/NavBar'
+import { HomePage } from './pages/HomePage'
+import { TimeMachinePage } from './pages/TimeMachinePage'
+import { AtlasPage } from './pages/AtlasPage'
+import { SommelierPage } from './pages/SommelierPage'
 
 function App() {
   return (
-    <main className="app-shell">
-      <h1>Let Them Eat Cake</h1>
-      <p>The ultimate confectionery universe is preheating.</p>
-    </main>
+    <>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/time-machine" element={<TimeMachinePage />} />
+        <Route path="/atlas" element={<AtlasPage />} />
+        <Route path="/sommelier" element={<SommelierPage />} />
+      </Routes>
+    </>
   )
 }
 

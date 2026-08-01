@@ -1,0 +1,46 @@
+.passport-summary {
+  margin: 20px 0 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.atlas-region {
+  margin-bottom: 36px;
+}
+
+.atlas-region h2 {
+  border-bottom: 2px solid var(--raspberry);
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 16px;
+}
+
+.atlas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.atlas-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.atlas-location {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--raspberry);
+  margin-bottom: 4px;
+}
+
+.atlas-card p:not(.atlas-location) {
+  flex-grow: 1;
+  font-size: 15px;
+}
+
+.atlas-card .btn,
+.atlas-card .btn-secondary {
+  align-self: flex-start;
+  margin-top: 12px;
+}
