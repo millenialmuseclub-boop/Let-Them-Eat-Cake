@@ -1,0 +1,198 @@
+[
+  {
+    "id": "recipe_yellow_choc_1950s",
+    "cakeId": "cake_yellow_choc_1950s",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 280, "unit": "g" }, "imperial": { "qty": 2.25, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 300, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" } },
+      { "id": "butter", "name": "Butter, softened", "metric": { "qty": 227, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 4, "unit": "count" }, "imperial": { "qty": 4, "unit": "count" }, "substitutions": [{ "diet": "vegan", "replacement": "4 tbsp ground flaxseed + 12 tbsp water, rested 5 min" }, { "diet": "egg-free", "replacement": "4 tbsp ground flaxseed + 12 tbsp water, rested 5 min" }] },
+      { "id": "milk", "name": "Whole milk", "metric": { "qty": 240, "unit": "ml" }, "imperial": { "qty": 1, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "oat milk" }] },
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 10, "unit": "g" }, "imperial": { "qty": 2, "unit": "tsp" } },
+      { "id": "vanilla", "name": "Vanilla extract", "metric": { "qty": 10, "unit": "ml" }, "imperial": { "qty": 2, "unit": "tsp" } },
+      { "id": "salt", "name": "Salt", "metric": { "qty": 3, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "tsp" } },
+      { "id": "frosting-butter", "name": "Butter (frosting)", "metric": { "qty": 113, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "dairy-free butter block" }, { "diet": "vegan", "replacement": "dairy-free butter block" }] },
+      { "id": "cocoa", "name": "Cocoa powder", "metric": { "qty": 60, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "powdered-sugar", "name": "Powdered sugar", "metric": { "qty": 360, "unit": "g" }, "imperial": { "qty": 3, "unit": "cup" } },
+      { "id": "frosting-milk", "name": "Milk (frosting)", "metric": { "qty": 60, "unit": "ml" }, "imperial": { "qty": 0.25, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "oat milk" }] }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease two 9-inch round pans.",
+      "Cream butter and sugar until light and fluffy, then beat in eggs one at a time, followed by vanilla.",
+      "Whisk flour, baking powder, and salt together; add to the batter alternately with milk until just combined.",
+      "Divide batter between pans and bake 25-30 minutes until a toothpick comes out clean. Cool completely.",
+      "Beat frosting butter, cocoa, powdered sugar, and milk together until fluffy, then frost between layers and over the top."
+    ]
+  },
+  {
+    "id": "recipe_tunnel_fudge_1960s",
+    "cakeId": "cake_tunnel_fudge_bundt_1960s",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "butter", "name": "Butter, softened", "metric": { "qty": 227, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 400, "unit": "g" }, "imperial": { "qty": 2, "unit": "cup" } },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 6, "unit": "count" }, "imperial": { "qty": 6, "unit": "count" } },
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 315, "unit": "g" }, "imperial": { "qty": 2.5, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "cocoa", "name": "Cocoa powder", "metric": { "qty": 85, "unit": "g" }, "imperial": { "qty": 0.75, "unit": "cup" } },
+      { "id": "walnuts", "name": "Chopped walnuts", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 2, "unit": "cup" }, "substitutions": [{ "diet": "nut-free", "replacement": "toasted sunflower seeds, or omit" }] },
+      { "id": "powdered-sugar", "name": "Powdered sugar (glaze)", "metric": { "qty": 120, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "glaze-milk", "name": "Milk (glaze)", "metric": { "qty": 30, "unit": "ml" }, "imperial": { "qty": 2, "unit": "tbsp" }, "substitutions": [{ "diet": "dairy-free", "replacement": "oat milk" }] }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and generously grease a 10-cup bundt pan.",
+      "Cream butter and sugar, then beat in eggs one at a time until smooth.",
+      "Fold in flour and cocoa powder until just combined, then stir in walnuts.",
+      "Pour into the bundt pan and bake 50-60 minutes — the center should look slightly underdone. Do not overbake or the tunnel disappears.",
+      "Cool in the pan 1-2 hours, invert onto a plate, then drizzle with a milk-thinned powdered sugar glaze."
+    ]
+  },
+  {
+    "id": "recipe_hummingbird",
+    "cakeId": "cake_hummingbird",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 375, "unit": "g" }, "imperial": { "qty": 3, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 300, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" } },
+      { "id": "cinnamon", "name": "Ground cinnamon", "metric": { "qty": 5, "unit": "g" }, "imperial": { "qty": 2, "unit": "tsp" } },
+      { "id": "baking-soda", "name": "Baking soda", "metric": { "qty": 5, "unit": "g" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "salt", "name": "Salt", "metric": { "qty": 3, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "tsp" } },
+      { "id": "oil", "name": "Vegetable oil", "metric": { "qty": 240, "unit": "ml" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 3, "unit": "count" }, "imperial": { "qty": 3, "unit": "count" }, "substitutions": [{ "diet": "vegan", "replacement": "3 tbsp ground flaxseed + 9 tbsp water, rested 5 min" }, { "diet": "egg-free", "replacement": "3 tbsp ground flaxseed + 9 tbsp water, rested 5 min" }] },
+      { "id": "banana", "name": "Mashed ripe banana", "metric": { "qty": 340, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" } },
+      { "id": "pineapple", "name": "Crushed pineapple, drained", "metric": { "qty": 230, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "pecans", "name": "Chopped pecans", "metric": { "qty": 100, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" }, "substitutions": [{ "diet": "nut-free", "replacement": "omit" }] },
+      { "id": "cream-cheese", "name": "Cream cheese", "metric": { "qty": 227, "unit": "g" }, "imperial": { "qty": 8, "unit": "oz" }, "substitutions": [{ "diet": "dairy-free", "replacement": "vegan cream cheese" }] },
+      { "id": "frosting-butter", "name": "Butter (frosting)", "metric": { "qty": 113, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "dairy-free butter block" }] },
+      { "id": "powdered-sugar", "name": "Powdered sugar", "metric": { "qty": 480, "unit": "g" }, "imperial": { "qty": 4, "unit": "cup" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease three 8-inch round pans.",
+      "Whisk flour, sugar, cinnamon, baking soda, and salt together.",
+      "Stir in oil and eggs until just combined, then fold in banana, pineapple, and pecans — do not overmix.",
+      "Divide between pans and bake 25 minutes until a toothpick comes out clean. Cool completely.",
+      "Beat cream cheese, butter, and powdered sugar together and frost between layers and over the top; garnish with extra pecans."
+    ]
+  },
+  {
+    "id": "recipe_carrot_cream_cheese_1980s",
+    "cakeId": "cake_carrot_cream_cheese_1980s",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 300, "unit": "g" }, "imperial": { "qty": 2.5, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 300, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" } },
+      { "id": "cinnamon", "name": "Ground cinnamon", "metric": { "qty": 5, "unit": "g" }, "imperial": { "qty": 2, "unit": "tsp" } },
+      { "id": "baking-soda", "name": "Baking soda", "metric": { "qty": 5, "unit": "g" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "salt", "name": "Salt", "metric": { "qty": 3, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "tsp" } },
+      { "id": "oil", "name": "Vegetable oil", "metric": { "qty": 240, "unit": "ml" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 4, "unit": "count" }, "imperial": { "qty": 4, "unit": "count" }, "substitutions": [{ "diet": "vegan", "replacement": "4 tbsp ground flaxseed + 12 tbsp water, rested 5 min" }, { "diet": "egg-free", "replacement": "4 tbsp ground flaxseed + 12 tbsp water, rested 5 min" }] },
+      { "id": "carrots", "name": "Grated carrots", "metric": { "qty": 300, "unit": "g" }, "imperial": { "qty": 3, "unit": "cup" } },
+      { "id": "pineapple", "name": "Crushed pineapple, drained", "metric": { "qty": 115, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "walnuts", "name": "Chopped walnuts", "metric": { "qty": 100, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" }, "substitutions": [{ "diet": "nut-free", "replacement": "omit" }] },
+      { "id": "cream-cheese", "name": "Cream cheese", "metric": { "qty": 227, "unit": "g" }, "imperial": { "qty": 8, "unit": "oz" }, "substitutions": [{ "diet": "dairy-free", "replacement": "vegan cream cheese" }] },
+      { "id": "frosting-butter", "name": "Butter (frosting)", "metric": { "qty": 113, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "dairy-free butter block" }] },
+      { "id": "powdered-sugar", "name": "Powdered sugar", "metric": { "qty": 480, "unit": "g" }, "imperial": { "qty": 4, "unit": "cup" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease two 9-inch round pans.",
+      "Whisk flour, sugar, cinnamon, baking soda, and salt together.",
+      "Stir in oil and eggs, then fold in carrots, pineapple, and walnuts.",
+      "Divide between pans and bake 30-35 minutes until a toothpick comes out clean. Cool completely.",
+      "Beat cream cheese, butter, and powdered sugar together and frost between layers and over the top."
+    ]
+  },
+  {
+    "id": "recipe_molten_lava_1990s",
+    "cakeId": "cake_molten_lava_1990s",
+    "baseServings": 4,
+    "ingredients": [
+      { "id": "dark-chocolate", "name": "Dark chocolate", "metric": { "qty": 170, "unit": "g" }, "imperial": { "qty": 6, "unit": "oz" }, "substitutions": [{ "diet": "dairy-free", "replacement": "dairy-free dark chocolate" }] },
+      { "id": "butter", "name": "Butter", "metric": { "qty": 113, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "dairy-free butter block" }] },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 2, "unit": "count" }, "imperial": { "qty": 2, "unit": "count" } },
+      { "id": "egg-yolks", "name": "Egg yolks", "metric": { "qty": 2, "unit": "count" }, "imperial": { "qty": 2, "unit": "count" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 100, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 30, "unit": "g" }, "imperial": { "qty": 0.25, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "salt", "name": "Salt", "metric": { "qty": 1, "unit": "g" }, "imperial": { "qty": 1, "unit": "pinch" } }
+    ],
+    "steps": [
+      "Preheat oven to 220°C (425°F) and butter four ramekins, dusting with cocoa powder.",
+      "Melt chocolate and butter together until smooth.",
+      "Whisk eggs, egg yolks, and sugar until pale and thick, then fold in the melted chocolate.",
+      "Fold in flour and salt just until combined, then divide among the ramekins.",
+      "Bake 10-12 minutes until the edges are set but the center still jiggles. Unmold immediately and serve."
+    ]
+  },
+  {
+    "id": "recipe_red_velvet_cupcake_2000s",
+    "cakeId": "cake_red_velvet_cupcake_2000s",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 190, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "cocoa", "name": "Cocoa powder", "metric": { "qty": 15, "unit": "g" }, "imperial": { "qty": 1, "unit": "tbsp" } },
+      { "id": "baking-soda", "name": "Baking soda", "metric": { "qty": 3, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "tsp" } },
+      { "id": "salt", "name": "Salt", "metric": { "qty": 3, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "tsp" } },
+      { "id": "oil", "name": "Vegetable oil", "metric": { "qty": 120, "unit": "ml" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "buttermilk", "name": "Buttermilk", "metric": { "qty": 120, "unit": "ml" }, "imperial": { "qty": 0.5, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "oat milk + 1 tsp lemon juice" }] },
+      { "id": "egg", "name": "Egg, large", "metric": { "qty": 1, "unit": "count" }, "imperial": { "qty": 1, "unit": "count" }, "substitutions": [{ "diet": "vegan", "replacement": "1 tbsp ground flaxseed + 3 tbsp water, rested 5 min" }, { "diet": "egg-free", "replacement": "1 tbsp ground flaxseed + 3 tbsp water, rested 5 min" }] },
+      { "id": "food-coloring", "name": "Red food coloring", "metric": { "qty": 10, "unit": "ml" }, "imperial": { "qty": 2, "unit": "tsp" } },
+      { "id": "vinegar", "name": "White vinegar", "metric": { "qty": 5, "unit": "ml" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "cream-cheese", "name": "Cream cheese", "metric": { "qty": 170, "unit": "g" }, "imperial": { "qty": 6, "unit": "oz" }, "substitutions": [{ "diet": "dairy-free", "replacement": "vegan cream cheese" }] },
+      { "id": "frosting-butter", "name": "Butter (frosting)", "metric": { "qty": 57, "unit": "g" }, "imperial": { "qty": 0.25, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "dairy-free butter block" }] },
+      { "id": "powdered-sugar", "name": "Powdered sugar", "metric": { "qty": 240, "unit": "g" }, "imperial": { "qty": 2, "unit": "cup" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and line a 12-cup muffin tin.",
+      "Whisk flour, cocoa, baking soda, and salt together.",
+      "In a separate bowl, whisk oil, buttermilk, egg, food coloring, and vinegar, then combine with the dry ingredients.",
+      "Divide batter among liners and bake 18-20 minutes until a toothpick comes out clean. Cool completely.",
+      "Beat cream cheese, butter, and powdered sugar together and pipe onto the cooled cupcakes."
+    ]
+  },
+  {
+    "id": "recipe_rainbow_drip_2010s",
+    "cakeId": "cake_rainbow_drip_2010s",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 400, "unit": "g" }, "imperial": { "qty": 3.25, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 400, "unit": "g" }, "imperial": { "qty": 2, "unit": "cup" } },
+      { "id": "butter", "name": "Butter, softened", "metric": { "qty": 227, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "dairy-free butter block" }] },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 6, "unit": "count" }, "imperial": { "qty": 6, "unit": "count" } },
+      { "id": "milk", "name": "Whole milk", "metric": { "qty": 300, "unit": "ml" }, "imperial": { "qty": 1.25, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "oat milk" }] },
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 12, "unit": "g" }, "imperial": { "qty": 2.5, "unit": "tsp" } },
+      { "id": "vanilla", "name": "Vanilla extract", "metric": { "qty": 10, "unit": "ml" }, "imperial": { "qty": 2, "unit": "tsp" } },
+      { "id": "food-coloring", "name": "Gel food coloring, assorted", "metric": { "qty": 1, "unit": "set" }, "imperial": { "qty": 1, "unit": "set" } },
+      { "id": "white-chocolate", "name": "White chocolate (ganache)", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 7, "unit": "oz" } },
+      { "id": "cream", "name": "Heavy cream (ganache)", "metric": { "qty": 100, "unit": "ml" }, "imperial": { "qty": 0.33, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "coconut cream" }] },
+      { "id": "frosting-butter", "name": "Butter (buttercream)", "metric": { "qty": 340, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "dairy-free butter block" }] },
+      { "id": "powdered-sugar", "name": "Powdered sugar (buttercream)", "metric": { "qty": 600, "unit": "g" }, "imperial": { "qty": 5, "unit": "cup" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease four 6-inch round pans.",
+      "Cream butter and sugar, beat in eggs and vanilla, then alternate adding the flour/baking powder mix with milk.",
+      "Divide batter evenly and tint each portion a different color, then pour into pans and bake 22-25 minutes.",
+      "Cool completely, then stack and crumb-coat the layers with vanilla buttercream, chilling between coats.",
+      "Warm the cream and pour over the white chocolate to make ganache; once slightly cooled, drip it down the sides of the chilled cake."
+    ]
+  },
+  {
+    "id": "recipe_basque_burnt_cheesecake",
+    "cakeId": "cake_basque_burnt_cheesecake",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "cream-cheese", "name": "Cream cheese, room temperature", "metric": { "qty": 900, "unit": "g" }, "imperial": { "qty": 32, "unit": "oz" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 300, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" } },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 6, "unit": "count" }, "imperial": { "qty": 6, "unit": "count" } },
+      { "id": "cream", "name": "Heavy cream", "metric": { "qty": 480, "unit": "ml" }, "imperial": { "qty": 2, "unit": "cup" } },
+      { "id": "salt", "name": "Salt", "metric": { "qty": 3, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "tsp" } },
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 20, "unit": "g" }, "imperial": { "qty": 2, "unit": "tbsp" }, "substitutions": [{ "diet": "gluten-free", "replacement": "cornstarch, same quantity" }] }
+    ],
+    "steps": [
+      "Preheat oven to 230°C (450°F) and line a 9-inch springform pan with overlapping parchment that extends well above the rim.",
+      "Beat cream cheese and sugar until smooth, then add eggs one at a time.",
+      "Mix in heavy cream, salt, and flour until just combined — do not overmix.",
+      "Pour into the pan and bake 50-55 minutes until deeply browned on top and the center still wobbles.",
+      "Cool at room temperature, then chill at least 4 hours before releasing from the pan."
+    ]
+  }
+]

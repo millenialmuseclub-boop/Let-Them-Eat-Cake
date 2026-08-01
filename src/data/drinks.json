@@ -1,0 +1,72 @@
+[
+  {
+    "id": "drink_espresso",
+    "name": "Espresso",
+    "category": "coffee",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 1, "acidity": 3, "intensity": 5, "bitternessTannin": 4, "carbonation": 0 },
+    "flavorNotes": ["espresso", "dark chocolate", "caramel"]
+  },
+  {
+    "id": "drink_drip_coffee",
+    "name": "Medium Roast Drip Coffee",
+    "category": "coffee",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 1, "acidity": 2, "intensity": 3, "bitternessTannin": 2, "carbonation": 0 },
+    "flavorNotes": ["caramel", "walnut"]
+  },
+  {
+    "id": "drink_earl_grey",
+    "name": "Earl Grey Tea",
+    "category": "tea",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 2, "intensity": 2, "bitternessTannin": 3, "carbonation": 0 },
+    "flavorNotes": ["bergamot", "vanilla"]
+  },
+  {
+    "id": "drink_matcha",
+    "name": "Matcha Green Tea",
+    "category": "tea",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 1, "intensity": 2, "bitternessTannin": 2, "carbonation": 0 },
+    "flavorNotes": ["grassy", "umami"]
+  },
+  {
+    "id": "drink_chai_latte",
+    "name": "Spiced Chai Latte",
+    "category": "tea",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 1, "intensity": 3, "bitternessTannin": 1, "carbonation": 0 },
+    "flavorNotes": ["cinnamon", "cardamom", "honey"]
+  },
+  {
+    "id": "drink_dry_prosecco",
+    "name": "Dry Prosecco",
+    "category": "wine",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 4, "intensity": 2, "bitternessTannin": 1, "carbonation": 4 },
+    "flavorNotes": ["green apple", "citrus"]
+  },
+  {
+    "id": "drink_ruby_port",
+    "name": "Ruby Port",
+    "category": "wine",
+    "flavorProfile": { "sweetness": 5, "fatRichness": 1, "acidity": 2, "intensity": 4, "bitternessTannin": 3, "carbonation": 0 },
+    "flavorNotes": ["dark chocolate", "cherry", "caramel"]
+  },
+  {
+    "id": "drink_imperial_stout",
+    "name": "Imperial Stout",
+    "category": "beer",
+    "flavorProfile": { "sweetness": 2, "fatRichness": 2, "acidity": 1, "intensity": 5, "bitternessTannin": 3, "carbonation": 3 },
+    "flavorNotes": ["dark chocolate", "cocoa", "espresso"]
+  },
+  {
+    "id": "drink_bourbon",
+    "name": "Bourbon",
+    "category": "spirits",
+    "flavorProfile": { "sweetness": 2, "fatRichness": 1, "acidity": 1, "intensity": 5, "bitternessTannin": 2, "carbonation": 0 },
+    "flavorNotes": ["vanilla", "caramel", "bourbon"]
+  },
+  {
+    "id": "drink_sparkling_lemonade",
+    "name": "Sparkling Lemonade",
+    "category": "non_alcoholic",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 0, "acidity": 4, "intensity": 1, "bitternessTannin": 0, "carbonation": 4 },
+    "flavorNotes": ["lemon", "citrus"]
+  }
+]

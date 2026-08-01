@@ -1,0 +1,147 @@
+[
+  {
+    "id": "region_tres_leches",
+    "region": "Latin America",
+    "country": "Mexico",
+    "cakeId": "cake_tres_leches",
+    "shortDescription": "A sponge soaked in three milks until custardy, one of the most-ordered desserts across Latin America.",
+    "passportStampId": "stamp_tres_leches"
+  },
+  {
+    "id": "region_chocoflan",
+    "region": "Latin America",
+    "country": "Mexico",
+    "cakeId": "cake_chocoflan",
+    "shortDescription": "The 'impossible cake' — chocolate cake and caramel flan that swap layers in the oven as they bake.",
+    "passportStampId": "stamp_chocoflan"
+  },
+  {
+    "id": "region_bizcocho_dominicano",
+    "region": "Latin America",
+    "country": "Dominican Republic",
+    "cakeId": "cake_bizcocho_dominicano",
+    "shortDescription": "The centerpiece of Dominican birthdays, soaked in syrup and finished with glossy meringue buttercream.",
+    "passportStampId": "stamp_bizcocho_dominicano"
+  },
+  {
+    "id": "region_kladdkaka",
+    "region": "Europe",
+    "country": "Sweden",
+    "cakeId": "cake_kladdkaka",
+    "shortDescription": "Sweden's 'sticky cake', a thin fudgy chocolate bake meant to stay gooey at the center.",
+    "passportStampId": "stamp_kladdkaka"
+  },
+  {
+    "id": "region_medovik",
+    "region": "Europe",
+    "country": "Russia",
+    "cakeId": "cake_medovik",
+    "shortDescription": "Wafer-thin honey layers rested for a day under sour-cream frosting until they soften into a torte.",
+    "passportStampId": "stamp_medovik"
+  },
+  {
+    "id": "region_kouign_amann",
+    "region": "Europe",
+    "country": "France",
+    "cityMicroRegion": "Brittany",
+    "cakeId": "cake_kouign_amann",
+    "shortDescription": "A Breton laminated pastry cake, folded with layer upon layer of butter and sugar until it caramelizes.",
+    "passportStampId": "stamp_kouign_amann"
+  },
+  {
+    "id": "region_basque_cheesecake",
+    "region": "Europe",
+    "country": "Spain",
+    "cityMicroRegion": "San Sebastián",
+    "cakeId": "cake_basque_burnt_cheesecake",
+    "shortDescription": "Born at a small San Sebastián bar, this scorched crustless cheesecake later defined the 2020s worldwide.",
+    "passportStampId": "stamp_basque_cheesecake"
+  },
+  {
+    "id": "region_sachertorte",
+    "region": "Europe",
+    "country": "Austria",
+    "cityMicroRegion": "Vienna",
+    "cakeId": "cake_sachertorte",
+    "shortDescription": "A dense chocolate torte with a thin apricot jam layer, at the center of a decades-long ownership dispute between two Viennese institutions.",
+    "passportStampId": "stamp_sachertorte"
+  },
+  {
+    "id": "region_mawa_cake",
+    "region": "Asia & Middle East",
+    "country": "India",
+    "cityMicroRegion": "Mumbai",
+    "cakeId": "cake_mawa_cake",
+    "shortDescription": "A Parsi bakery classic enriched with reduced milk solids and cardamom, found in Mumbai's Irani cafés.",
+    "passportStampId": "stamp_mawa_cake"
+  },
+  {
+    "id": "region_pandan_chiffon",
+    "region": "Asia & Middle East",
+    "country": "Singapore",
+    "cakeId": "cake_pandan_chiffon",
+    "shortDescription": "A featherlight chiffon cake colored and flavored with pandan leaf, a staple across Southeast Asian bakeries.",
+    "passportStampId": "stamp_pandan_chiffon"
+  },
+  {
+    "id": "region_basbousa",
+    "region": "Asia & Middle East",
+    "country": "Egypt",
+    "cakeId": "cake_basbousa",
+    "shortDescription": "A semolina cake soaked in orange blossom syrup, served across the Levant and North Africa.",
+    "passportStampId": "stamp_basbousa"
+  },
+  {
+    "id": "region_japanese_souffle_cheesecake",
+    "region": "Asia & Middle East",
+    "country": "Japan",
+    "cakeId": "cake_japanese_souffle_cheesecake",
+    "shortDescription": "A meringue-lightened cheesecake baked in a water bath until it jiggles like a cloud.",
+    "passportStampId": "stamp_japanese_souffle_cheesecake"
+  },
+  {
+    "id": "region_castella",
+    "region": "Asia & Middle East",
+    "country": "Japan",
+    "cityMicroRegion": "Nagasaki",
+    "cakeId": "cake_castella",
+    "shortDescription": "A tall honey sponge cake of Portuguese origin, brought by traders and adapted into a Nagasaki specialty.",
+    "passportStampId": "stamp_castella"
+  },
+  {
+    "id": "region_gooey_butter_cake",
+    "region": "North America",
+    "country": "United States",
+    "cityMicroRegion": "St. Louis, Missouri",
+    "cakeId": "cake_gooey_butter_cake",
+    "shortDescription": "Legend says a St. Louis baker mixed up the butter cake ratio by accident in the 1930s — the mistake stuck around.",
+    "passportStampId": "stamp_gooey_butter_cake"
+  },
+  {
+    "id": "region_brooklyn_blackout",
+    "region": "North America",
+    "country": "United States",
+    "cityMicroRegion": "Brooklyn, New York",
+    "cakeId": "cake_brooklyn_blackout",
+    "shortDescription": "Named for WWII-era blackout drills near the Brooklyn Navy Yard, this triple-chocolate cake was an Ebinger's Bakery icon.",
+    "passportStampId": "stamp_brooklyn_blackout"
+  },
+  {
+    "id": "region_hummingbird_south",
+    "region": "North America",
+    "country": "United States",
+    "cityMicroRegion": "American South",
+    "cakeId": "cake_hummingbird",
+    "shortDescription": "Believed to have Jamaican roots before becoming the defining cake of Southern potlucks and church suppers.",
+    "passportStampId": "stamp_hummingbird_south"
+  },
+  {
+    "id": "region_lane_cake",
+    "region": "North America",
+    "country": "United States",
+    "cityMicroRegion": "Alabama",
+    "cakeId": "cake_lane_cake",
+    "shortDescription": "Created by Emma Rylander Lane in the 1890s and later immortalized in Harper Lee's To Kill a Mockingbird.",
+    "passportStampId": "stamp_lane_cake"
+  }
+]

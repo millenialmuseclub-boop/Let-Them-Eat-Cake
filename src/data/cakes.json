@@ -1,0 +1,186 @@
+[
+  {
+    "id": "cake_yellow_choc_1950s",
+    "name": "Classic Yellow Layer Cake with Chocolate Frosting",
+    "description": "A tender yellow butter cake stacked with fudgy chocolate frosting, the centerpiece of the postwar boxed-mix boom.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 4, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["vanilla", "cocoa", "butter"],
+    "texture": "sponge"
+  },
+  {
+    "id": "cake_tunnel_fudge_bundt_1960s",
+    "name": "Tunnel of Fudge Bundt Cake",
+    "description": "A dense chocolate-walnut bundt cake with a molten fudge core that stays gooey even after baking.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 4, "acidity": 1, "intensity": 4 },
+    "flavorNotes": ["cocoa", "walnut", "butter"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_hummingbird",
+    "name": "Hummingbird Cake",
+    "description": "A spiced banana-pineapple layer cake finished with cream cheese frosting and toasted pecans.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 2, "intensity": 3 },
+    "flavorNotes": ["banana", "pineapple", "cinnamon", "pecan"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_carrot_cream_cheese_1980s",
+    "name": "Carrot Cake with Cream Cheese Frosting",
+    "description": "A warmly spiced carrot cake studded with walnuts and pineapple, capped with tangy cream cheese frosting.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 2, "intensity": 3 },
+    "flavorNotes": ["cinnamon", "walnut", "cream cheese"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_molten_lava_1990s",
+    "name": "Molten Chocolate Lava Cake",
+    "description": "An individual dark chocolate cake with an underbaked center engineered to flow the moment it's cut.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 5, "acidity": 1, "intensity": 5 },
+    "flavorNotes": ["dark chocolate", "butter", "espresso"],
+    "texture": "creamy"
+  },
+  {
+    "id": "cake_red_velvet_cupcake_2000s",
+    "name": "Red Velvet Cupcake",
+    "description": "A cocoa-tinged buttermilk cupcake with a faint tang, crowned with a swoop of cream cheese frosting.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 2, "intensity": 2 },
+    "flavorNotes": ["cocoa", "buttermilk", "cream cheese"],
+    "texture": "sponge"
+  },
+  {
+    "id": "cake_rainbow_drip_2010s",
+    "name": "Rainbow Drip Cake",
+    "description": "A tall naked-style layer cake in vivid tinted sponges, finished with a glossy ganache drip built for the camera.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["vanilla", "white chocolate", "buttercream"],
+    "texture": "sponge"
+  },
+  {
+    "id": "cake_basque_burnt_cheesecake",
+    "name": "Basque Burnt Cheesecake",
+    "description": "A crustless cheesecake baked hot and fast until the top is deliberately scorched, staying custardy and jiggling at the center.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 5, "acidity": 3, "intensity": 3 },
+    "flavorNotes": ["cream cheese", "caramelized sugar", "vanilla"],
+    "texture": "creamy"
+  },
+  {
+    "id": "cake_tres_leches",
+    "name": "Tres Leches Cake",
+    "description": "A light sponge soaked in three milks until custardy, topped with whipped cream.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["condensed milk", "vanilla", "cream"],
+    "texture": "sponge"
+  },
+  {
+    "id": "cake_chocoflan",
+    "name": "Chocoflan",
+    "description": "A single pan that bakes into two layers: dense chocolate cake on the bottom, silky caramel flan on top, known as the 'impossible cake'.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 4, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["cocoa", "caramel", "egg custard"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_bizcocho_dominicano",
+    "name": "Bizcocho Dominicano",
+    "description": "A pillowy vanilla-almond cake soaked in fruit syrup and swathed in Dominican-style meringue buttercream.",
+    "flavorProfile": { "sweetness": 5, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["vanilla", "almond", "pineapple"],
+    "texture": "sponge"
+  },
+  {
+    "id": "cake_kladdkaka",
+    "name": "Kladdkaka",
+    "description": "Swedish 'sticky cake' — a thin, fudgy chocolate cake deliberately underbaked to a gooey center.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 4, "acidity": 1, "intensity": 4 },
+    "flavorNotes": ["cocoa", "butter"],
+    "texture": "creamy"
+  },
+  {
+    "id": "cake_medovik",
+    "name": "Medovik",
+    "description": "A Russian honey cake of thin baked honey layers stacked with sour-cream frosting and rested until soft.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 2, "intensity": 3 },
+    "flavorNotes": ["honey", "sour cream", "caramel"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_kouign_amann",
+    "name": "Kouign-Amann",
+    "description": "A Breton laminated pastry cake folded with layers of butter and sugar and caramelized until the exterior shatters.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 5, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["butter", "caramelized sugar"],
+    "texture": "crumbly"
+  },
+  {
+    "id": "cake_sachertorte",
+    "name": "Sachertorte",
+    "description": "A dense Viennese chocolate cake with a thin layer of apricot jam beneath a dark chocolate glaze.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 3, "intensity": 4 },
+    "flavorNotes": ["dark chocolate", "apricot"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_mawa_cake",
+    "name": "Mawa Cake",
+    "description": "A Parsi Mumbai bakery cake enriched with mawa (reduced milk solids) and cardamom, denser and milkier than a standard sponge.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["cardamom", "condensed milk", "nutmeg"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_pandan_chiffon",
+    "name": "Pandan Chiffon Cake",
+    "description": "A featherlight Southeast Asian chiffon cake flavored and colored with pandan leaf, coconut-forward and airy.",
+    "flavorProfile": { "sweetness": 2, "fatRichness": 2, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["pandan", "coconut", "vanilla"],
+    "texture": "sponge"
+  },
+  {
+    "id": "cake_basbousa",
+    "name": "Basbousa",
+    "description": "A Levantine semolina cake soaked in orange blossom or rosewater syrup, often studded with almonds.",
+    "flavorProfile": { "sweetness": 5, "fatRichness": 2, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["orange blossom", "coconut", "almond"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_japanese_souffle_cheesecake",
+    "name": "Japanese Soufflé Cheesecake",
+    "description": "A whipped, meringue-lightened cheesecake baked in a water bath until cloud-like and barely sweet.",
+    "flavorProfile": { "sweetness": 2, "fatRichness": 3, "acidity": 2, "intensity": 1 },
+    "flavorNotes": ["cream cheese", "lemon", "egg"],
+    "texture": "creamy"
+  },
+  {
+    "id": "cake_castella",
+    "name": "Castella Cake",
+    "description": "A Nagasaki honey sponge cake of Portuguese origin, tall, moist, and springy with a golden crumb.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["honey", "egg"],
+    "texture": "sponge"
+  },
+  {
+    "id": "cake_gooey_butter_cake",
+    "name": "St. Louis Gooey Butter Cake",
+    "description": "A yeasted shortcake base topped with a dense, syrupy butter-and-cream-cheese layer that never fully sets.",
+    "flavorProfile": { "sweetness": 5, "fatRichness": 5, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["butter", "vanilla", "cream cheese"],
+    "texture": "creamy"
+  },
+  {
+    "id": "cake_brooklyn_blackout",
+    "name": "Brooklyn Blackout Cake",
+    "description": "A triple-layer dark chocolate cake filled with chocolate pudding and coated in cake crumbs, born from a Brooklyn bakery near the WWII-era Navy Yard blackouts.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 4, "acidity": 1, "intensity": 5 },
+    "flavorNotes": ["dark chocolate", "cocoa", "pudding"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_lane_cake",
+    "name": "Lane Cake",
+    "description": "An Alabama white layer cake filled with a boozy custard of egg yolks, bourbon, pecans, and candied cherries.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["bourbon", "pecan", "cherry"],
+    "texture": "sponge"
+  }
+]

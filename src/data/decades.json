@@ -1,0 +1,74 @@
+[
+  {
+    "id": "decade_1950s",
+    "yearStart": 1950,
+    "yearEnd": 1959,
+    "decadeLabel": "1950s",
+    "cakeId": "cake_yellow_choc_1950s",
+    "eraContext": "Postwar convenience baking arrived with Betty Crocker and Duncan Hines boxed mixes, and the yellow layer cake with chocolate frosting became the default centerpiece of American birthdays and potlucks.",
+    "recipeId": "recipe_yellow_choc_1950s"
+  },
+  {
+    "id": "decade_1960s",
+    "yearStart": 1960,
+    "yearEnd": 1969,
+    "decadeLabel": "1960s",
+    "cakeId": "cake_tunnel_fudge_bundt_1960s",
+    "eraContext": "The Tunnel of Fudge cake took second place in the 1966 Pillsbury Bake-Off, but home bakers loved it so much that Bundt pan sales exploded, cementing the bundt shape in American kitchens.",
+    "recipeId": "recipe_tunnel_fudge_1960s"
+  },
+  {
+    "id": "decade_1970s",
+    "yearStart": 1970,
+    "yearEnd": 1979,
+    "decadeLabel": "1970s",
+    "cakeId": "cake_hummingbird",
+    "eraContext": "Published anonymously by a home cook in a 1978 issue of Southern Living, the Hummingbird Cake recipe spread by word of mouth across the American South and became the magazine's most-requested recipe ever.",
+    "recipeId": "recipe_hummingbird"
+  },
+  {
+    "id": "decade_1980s",
+    "yearStart": 1980,
+    "yearEnd": 1989,
+    "decadeLabel": "1980s",
+    "cakeId": "cake_carrot_cream_cheese_1980s",
+    "eraContext": "Riding the era's health-food-chic wave — carrots read as 'wholesome' even under a pound of cream cheese frosting — carrot cake graduated from health-food-store novelty to upscale bakery staple.",
+    "recipeId": "recipe_carrot_cream_cheese_1980s"
+  },
+  {
+    "id": "decade_1990s",
+    "yearStart": 1990,
+    "yearEnd": 1999,
+    "decadeLabel": "1990s",
+    "cakeId": "cake_molten_lava_1990s",
+    "eraContext": "Chef Jean-Georges Vongerichten popularized the molten center in the early 1990s after pulling an underbaked chocolate cake early by accident, and it became the defining status dessert of fine dining menus through the decade.",
+    "recipeId": "recipe_molten_lava_1990s"
+  },
+  {
+    "id": "decade_2000s",
+    "yearStart": 2000,
+    "yearEnd": 2009,
+    "decadeLabel": "2000s",
+    "cakeId": "cake_red_velvet_cupcake_2000s",
+    "eraContext": "Magnolia Bakery's cameo in Sex and the City kicked off a citywide cupcake-boutique boom, and red velvet's dramatic color made it the flagship flavor of the single-serving cake era.",
+    "recipeId": "recipe_red_velvet_cupcake_2000s"
+  },
+  {
+    "id": "decade_2010s",
+    "yearStart": 2010,
+    "yearEnd": 2019,
+    "decadeLabel": "2010s",
+    "cakeId": "cake_rainbow_drip_2010s",
+    "eraContext": "As baking went visual-first on Instagram, tall naked-style layer cakes finished with a glossy ganache drip became the decade's most photographed dessert, engineered for the feed as much as the fork.",
+    "recipeId": "recipe_rainbow_drip_2010s"
+  },
+  {
+    "id": "decade_2020s",
+    "yearStart": 2020,
+    "yearEnd": 2029,
+    "decadeLabel": "2020s",
+    "cakeId": "cake_basque_burnt_cheesecake",
+    "eraContext": "A deliberately scorched, crustless cheesecake from a San Sebastián bar went viral on TikTok and Instagram, turning imperfection into the decade's defining aesthetic after ten years of flawless drip cakes.",
+    "recipeId": "recipe_basque_burnt_cheesecake"
+  }
+]
