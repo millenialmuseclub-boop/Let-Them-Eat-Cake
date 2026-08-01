@@ -143,5 +143,29 @@
     "cakeId": "cake_lane_cake",
     "shortDescription": "Created by Emma Rylander Lane in the 1890s and later immortalized in Harper Lee's To Kill a Mockingbird.",
     "passportStampId": "stamp_lane_cake"
+  },
+  {
+    "id": "region_malva_pudding",
+    "region": "Africa",
+    "country": "South Africa",
+    "cakeId": "cake_malva_pudding",
+    "shortDescription": "A staple of South African Sunday lunches, served warm with custard or ice cream to melt into the sauce.",
+    "passportStampId": "stamp_malva_pudding"
+  },
+  {
+    "id": "region_pavlova",
+    "region": "Oceania",
+    "country": "Australia",
+    "cakeId": "cake_pavlova",
+    "shortDescription": "The centerpiece of Christmas dinner in Australia and New Zealand, topped with whatever fruit is in season.",
+    "passportStampId": "stamp_pavlova"
+  },
+  {
+    "id": "region_lamington",
+    "region": "Oceania",
+    "country": "Australia",
+    "cakeId": "cake_lamington",
+    "shortDescription": "Named after a 19th-century Governor of Queensland, now celebrated every July 21 on National Lamington Day.",
+    "passportStampId": "stamp_lamington"
   }
 ]

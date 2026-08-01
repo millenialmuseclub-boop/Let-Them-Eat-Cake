@@ -161,7 +161,7 @@
       { "id": "milk", "name": "Whole milk", "metric": { "qty": 300, "unit": "ml" }, "imperial": { "qty": 1.25, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "oat milk" }] },
       { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 12, "unit": "g" }, "imperial": { "qty": 2.5, "unit": "tsp" } },
       { "id": "vanilla", "name": "Vanilla extract", "metric": { "qty": 10, "unit": "ml" }, "imperial": { "qty": 2, "unit": "tsp" } },
-      { "id": "food-coloring", "name": "Gel food coloring, assorted", "metric": { "qty": 1, "unit": "set" }, "imperial": { "qty": 1, "unit": "set" } },
+      { "id": "food-coloring", "name": "Gel food coloring, assorted colors", "metric": { "qty": 8, "unit": "drops" }, "imperial": { "qty": 8, "unit": "drops" } },
       { "id": "white-chocolate", "name": "White chocolate (ganache)", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 7, "unit": "oz" } },
       { "id": "cream", "name": "Heavy cream (ganache)", "metric": { "qty": 100, "unit": "ml" }, "imperial": { "qty": 0.33, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "coconut cream" }] },
       { "id": "frosting-butter", "name": "Butter (buttercream)", "metric": { "qty": 340, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "dairy-free butter block" }] },

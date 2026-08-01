@@ -123,3 +123,18 @@ button {
   font-size: 13px;
   font-weight: 600;
 }
+
+@media (max-width: 640px) {
+  :root {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 21px;
+  }
+  .page {
+    padding: 20px 16px 48px;
+  }
+}

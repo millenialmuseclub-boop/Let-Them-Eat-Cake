@@ -25,10 +25,20 @@
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 20px;
+  overflow-wrap: break-word;
 }
 
 .share-card .btn-secondary {
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.5);
   color: white;
+}
+
+@media (max-width: 480px) {
+  .share-card {
+    padding: 24px 16px;
+  }
+  .share-cake-name {
+    font-size: 24px;
+  }
 }

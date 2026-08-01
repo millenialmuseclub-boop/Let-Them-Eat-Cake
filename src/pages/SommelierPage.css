@@ -53,11 +53,26 @@
 .pairing-details h3 {
   display: flex;
   align-items: center;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 8px 10px;
   margin-bottom: 4px;
 }
 
 .pairing-bridge {
   font-size: 14px;
   margin: 0;
+}
+
+@media (max-width: 480px) {
+  .cake-select {
+    max-width: none;
+  }
+  .pairing-row {
+    gap: 12px;
+  }
+  .pairing-score {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
 }

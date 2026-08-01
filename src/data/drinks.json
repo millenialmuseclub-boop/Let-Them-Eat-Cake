@@ -68,5 +68,26 @@
     "category": "non_alcoholic",
     "flavorProfile": { "sweetness": 3, "fatRichness": 0, "acidity": 4, "intensity": 1, "bitternessTannin": 0, "carbonation": 4 },
     "flavorNotes": ["lemon", "citrus"]
+  },
+  {
+    "id": "drink_rose_wine",
+    "name": "Rosé Wine",
+    "category": "wine",
+    "flavorProfile": { "sweetness": 2, "fatRichness": 0, "acidity": 3, "intensity": 2, "bitternessTannin": 1, "carbonation": 0 },
+    "flavorNotes": ["strawberry", "citrus"]
+  },
+  {
+    "id": "drink_hot_chocolate",
+    "name": "Hot Chocolate",
+    "category": "non_alcoholic",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 3, "bitternessTannin": 1, "carbonation": 0 },
+    "flavorNotes": ["cocoa", "vanilla", "cream"]
+  },
+  {
+    "id": "drink_craft_ipa",
+    "name": "Craft IPA",
+    "category": "beer",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 2, "intensity": 4, "bitternessTannin": 4, "carbonation": 4 },
+    "flavorNotes": ["citrus", "pine"]
   }
 ]

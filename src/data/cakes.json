@@ -182,5 +182,29 @@
     "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 3 },
     "flavorNotes": ["bourbon", "pecan", "cherry"],
     "texture": "sponge"
+  },
+  {
+    "id": "cake_malva_pudding",
+    "name": "Malva Pudding",
+    "description": "A warm, spongy South African baked pudding soaked in a hot buttery apricot-cream sauce until deeply moist.",
+    "flavorProfile": { "sweetness": 5, "fatRichness": 3, "acidity": 2, "intensity": 3 },
+    "flavorNotes": ["caramel", "apricot", "butter"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_pavlova",
+    "name": "Pavlova",
+    "description": "A crisp-shelled, marshmallow-centered meringue base piled with whipped cream and passionfruit, at the center of a decades-long naming dispute between Australia and New Zealand.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 2, "acidity": 2, "intensity": 1 },
+    "flavorNotes": ["meringue", "passionfruit", "cream"],
+    "texture": "crumbly"
+  },
+  {
+    "id": "cake_lamington",
+    "name": "Lamington",
+    "description": "Cubes of Australian sponge cake dipped in chocolate icing and rolled in desiccated coconut.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 2, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["cocoa", "coconut", "vanilla"],
+    "texture": "sponge"
   }
 ]
