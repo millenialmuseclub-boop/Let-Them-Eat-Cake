@@ -5,12 +5,12 @@ const FEATURES = [
   {
     to: '/time-machine',
     title: 'Birthday Time Machine',
-    description: 'Enter your date of birth to discover the cake that defined your decade — with its history and full recipe.',
+    description: 'Enter your date of birth to discover the cake that defined your exact year — with its history and full recipe.',
   },
   {
     to: '/atlas',
     title: 'Global Cake Atlas',
-    description: 'Explore iconic cakes from around the world and collect passport stamps as you go.',
+    description: 'Search any country for its most popular cake, complete with a full recipe and background story.',
   },
   {
     to: '/sommelier',
