@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { getCakeForBirthYear } from '../lib/timeMachine'
+import { getYearVariant } from '../lib/yearVintage'
 import { getCake, getRecipe } from '../lib/data'
 import { RecipeCard } from '../components/RecipeCard'
 import { ShareCard } from '../components/ShareCard'
@@ -19,11 +20,12 @@ export function TimeMachinePage() {
   const entry = birthYear !== null ? getCakeForBirthYear(birthYear) : null
   const cake = entry ? getCake(entry.cakeId) : null
   const recipe = entry ? getRecipe(entry.recipeId) : null
+  const variant = cake && birthYear !== null ? getYearVariant(birthYear, cake.name) : null
 
   return (
     <main className="page time-machine-page">
       <h1>Birthday Time Machine</h1>
-      <p>Enter your date of birth to uncover the cake that defined your decade.</p>
+      <p>Enter your date of birth to uncover the cake that defined your exact year.</p>
 
       <form className="dob-form" onSubmit={handleSubmit}>
         <label>
@@ -35,9 +37,9 @@ export function TimeMachinePage() {
         </button>
       </form>
 
-      {entry && cake && recipe && (
+      {entry && cake && recipe && variant && (
         <section className="time-machine-result">
-          <ShareCard year={birthYear!} cakeName={cake.name} />
+          <ShareCard year={birthYear!} cakeName={variant.variantName} subtitle={`a ${entry.decadeLabel} ${cake.name}`} />
 
           <div className="card">
             <span className="tag">{entry.decadeLabel}</span>
@@ -47,8 +49,15 @@ export function TimeMachinePage() {
             <p>{entry.eraContext}</p>
           </div>
 
-          <h2 className="recipe-heading">Recipe</h2>
-          <RecipeCard recipe={recipe} />
+          <div className="card year-twist-card">
+            <span className="tag tag-gold">{birthYear} vintage</span>
+            <h2>{variant.variantName}</h2>
+            <p>{variant.twist}</p>
+            <p className="year-twist-note">{variant.recipeTwistNote}</p>
+          </div>
+
+          <h2 className="recipe-heading">Base Recipe</h2>
+          <RecipeCard key={recipe.id} recipe={recipe} />
         </section>
       )}
     </main>

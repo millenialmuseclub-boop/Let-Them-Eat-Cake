@@ -9,12 +9,19 @@ export interface DrinkFlavorProfile extends FlavorProfile {
   carbonation: number
 }
 
+export interface ServingGuidance {
+  temperature: string
+  glassware: string
+  garnish?: string
+}
+
 export interface DrinkProfile {
   id: string
   name: string
   category: DrinkCategory
   flavorProfile: DrinkFlavorProfile
   flavorNotes: string[]
+  serving: ServingGuidance
 }
 
 /** Named, tunable weights for calculatePairingScore. Adjust here instead of hardcoding magic numbers. */

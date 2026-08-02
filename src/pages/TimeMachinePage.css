@@ -26,6 +26,21 @@
   margin-bottom: 24px;
 }
 
+.year-twist-card {
+  border: 1px solid var(--gold);
+}
+
+.year-twist-card .tag-gold {
+  background: var(--raspberry);
+  color: white;
+}
+
+.year-twist-note {
+  font-style: italic;
+  opacity: 0.85;
+  margin-top: 8px;
+}
+
 .recipe-heading {
   margin-top: 8px;
 }

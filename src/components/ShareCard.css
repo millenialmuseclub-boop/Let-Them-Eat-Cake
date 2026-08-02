@@ -24,8 +24,14 @@
 .share-cake-name {
   font-size: 30px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 4px;
   overflow-wrap: break-word;
+}
+
+.share-subtitle {
+  font-size: 15px;
+  opacity: 0.9;
+  margin-bottom: 20px;
 }
 
 .share-card .btn-secondary {

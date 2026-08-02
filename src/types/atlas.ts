@@ -6,15 +6,9 @@ export interface RegionalCakeEntry {
   country: string
   cityMicroRegion?: string
   cakeId: string
+  recipeId: string
   shortDescription: string
-  passportStampId: string
-}
-
-export interface PassportStamp {
-  stampId: string
-  collectedAt: string
-}
-
-export interface PassportProgress {
-  stamps: PassportStamp[]
+  historyNote: string
+  /** The one cake shown first when searching this country; other entries for the same country show as secondary favorites. */
+  isPrimary: boolean
 }

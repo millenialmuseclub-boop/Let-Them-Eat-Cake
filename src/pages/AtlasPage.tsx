@@ -1,62 +1,105 @@
-import { useState } from 'react'
-import { getCake, regions } from '../lib/data'
-import { addStamp, getPassport, hasStamp } from '../lib/passport'
-import type { AtlasRegion } from '../types/atlas'
+import { useMemo, useState } from 'react'
+import { getCake, getRecipe, regions } from '../lib/data'
+import { getAllCountries, getCountryEntries, getPrimaryEntry } from '../lib/atlas'
+import { RecipeCard } from '../components/RecipeCard'
 import './AtlasPage.css'
 
-const REGION_ORDER: AtlasRegion[] = ['Latin America', 'Europe', 'Asia & Middle East', 'North America', 'Africa', 'Oceania']
-
 export function AtlasPage() {
-  const [passport, setPassport] = useState(getPassport())
+  const allCountries = useMemo(() => getAllCountries(), [])
+  const [query, setQuery] = useState('')
+  const [country, setCountry] = useState<string | null>(null)
+  const [selectedEntryId, setSelectedEntryId] = useState<string | null>(null)
 
-  function handleCollect(stampId: string) {
-    setPassport(addStamp(stampId))
+  function handleSearch(value: string) {
+    setQuery(value)
+    const match = allCountries.find((c) => c.toLowerCase() === value.toLowerCase())
+    if (match) {
+      setCountry(match)
+      setSelectedEntryId(getPrimaryEntry(match)?.id ?? null)
+    } else {
+      setCountry(null)
+      setSelectedEntryId(null)
+    }
   }
 
-  const groups = REGION_ORDER.map((region) => ({
-    region,
-    entries: regions.filter((entry) => entry.region === region),
-  })).filter((group) => group.entries.length > 0)
+  const countryEntries = country ? getCountryEntries(country) : []
+  const selectedEntry = countryEntries.find((e) => e.id === selectedEntryId) ?? null
+  const selectedCake = selectedEntry ? getCake(selectedEntry.cakeId) : null
+  const selectedRecipe = selectedEntry ? getRecipe(selectedEntry.recipeId) : null
+  const otherEntries = countryEntries.filter((e) => e.id !== selectedEntryId)
 
   return (
     <main className="page atlas-page">
       <h1>Global Cake Atlas</h1>
-      <p>Explore regional cakes from around the world and collect a passport stamp for each one you discover.</p>
+      <p>Search a country to find its most popular cake, complete with a full recipe and background story.</p>
 
-      <div className="card passport-summary">
-        <span className="tag">
-          {passport.stamps.length} / {regions.length} stamps collected
-        </span>
+      <div className="atlas-search">
+        <input
+          type="text"
+          list="atlas-countries"
+          placeholder="Search a country (e.g. Japan, Mexico, Sweden)"
+          value={query}
+          onChange={(e) => handleSearch(e.target.value)}
+        />
+        <datalist id="atlas-countries">
+          {allCountries.map((c) => (
+            <option key={c} value={c} />
+          ))}
+        </datalist>
       </div>
 
-      {groups.map((group) => (
-        <section key={group.region} className="atlas-region">
-          <h2>{group.region}</h2>
-          <div className="atlas-grid">
-            {group.entries.map((entry) => {
+      {query && !country && <p className="atlas-empty">No country matches "{query}" yet — try one from the suggestions.</p>}
+
+      {selectedEntry && selectedCake && selectedRecipe && (
+        <section className="atlas-result">
+          <div className="card">
+            <span className="tag">{country}</span>
+            {selectedEntry.cityMicroRegion && <span className="tag atlas-city-tag">{selectedEntry.cityMicroRegion}</span>}
+            <h2>{selectedCake.name}</h2>
+            <p>{selectedCake.description}</p>
+            <h3>Background story</h3>
+            <p>{selectedEntry.historyNote}</p>
+          </div>
+
+          <h2 className="recipe-heading">Recipe</h2>
+          <RecipeCard key={selectedRecipe.id} recipe={selectedRecipe} />
+
+          {otherEntries.length > 0 && (
+            <>
+              <h2 className="recipe-heading">Other favorites from {country}</h2>
+              <div className="atlas-grid">
+                {otherEntries.map((entry) => {
+                  const cake = getCake(entry.cakeId)
+                  return (
+                    <button key={entry.id} className="card atlas-card" onClick={() => setSelectedEntryId(entry.id)}>
+                      {entry.cityMicroRegion && <p className="atlas-location">{entry.cityMicroRegion}</p>}
+                      <h3>{cake?.name}</h3>
+                      <p>{entry.shortDescription}</p>
+                    </button>
+                  )
+                })}
+              </div>
+            </>
+          )}
+        </section>
+      )}
+
+      {!country && !query && (
+        <div className="atlas-grid atlas-browse">
+          {regions
+            .filter((r) => r.isPrimary)
+            .map((entry) => {
               const cake = getCake(entry.cakeId)
-              const collected = hasStamp(entry.passportStampId)
               return (
-                <div key={entry.id} className="card atlas-card">
-                  <p className="atlas-location">
-                    {entry.country}
-                    {entry.cityMicroRegion ? ` · ${entry.cityMicroRegion}` : ''}
-                  </p>
+                <button key={entry.id} className="card atlas-card" onClick={() => handleSearch(entry.country)}>
+                  <p className="atlas-location">{entry.country}</p>
                   <h3>{cake?.name}</h3>
                   <p>{entry.shortDescription}</p>
-                  <button
-                    className={collected ? 'btn btn-secondary' : 'btn'}
-                    onClick={() => handleCollect(entry.passportStampId)}
-                    disabled={collected}
-                  >
-                    {collected ? '✓ Stamped' : 'Collect stamp'}
-                  </button>
-                </div>
+                </button>
               )
             })}
-          </div>
-        </section>
-      ))}
+        </div>
+      )}
     </main>
   )
 }

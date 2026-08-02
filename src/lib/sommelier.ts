@@ -54,3 +54,33 @@ export function rankPairings(cake: CakeProfile, candidateDrinks: DrinkProfile[])
     .map((drink) => ({ drink, ...calculatePairingScore(cake, drink) }))
     .sort((a, b) => b.score - a.score)
 }
+
+/** Turns a score breakdown into full-sentence reasoning, in priority order (strongest effect first). */
+export function explainPairing(cake: CakeProfile, drink: DrinkProfile, result: PairingResult): string[] {
+  const { breakdown } = result
+  const sentences: string[] = []
+
+  if (breakdown.intensityPenalty === 0) {
+    sentences.push(`${cake.name}'s intensity is closely matched with ${drink.name}, so neither one overwhelms the other.`)
+  } else if (breakdown.intensityPenalty >= 24) {
+    sentences.push(`There's a large intensity gap here — one of these two flavors is going to dominate the other.`)
+  } else if (breakdown.intensityPenalty >= 8) {
+    sentences.push(`Their intensities aren't a perfect match, so expect one flavor to lead slightly over the other.`)
+  }
+
+  if (breakdown.cleansingBonus > 0) {
+    sentences.push(
+      `This cake is rich enough that ${drink.name}'s acidity, carbonation, or tannin cuts through the fat and resets your palate between bites.`,
+    )
+  }
+
+  if (breakdown.sharedNotes.length > 0) {
+    sentences.push(`They share ${breakdown.sharedNotes.join(', ')} flavor notes, creating a direct bridge between the cake and the drink.`)
+  }
+
+  if (sentences.length === 0) {
+    sentences.push(`This isn't a natural pairing — the flavors don't reinforce each other and there's little to bridge the gap.`)
+  }
+
+  return sentences
+}

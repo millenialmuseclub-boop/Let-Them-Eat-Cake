@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { cakes, drinks } from '../lib/data'
-import { rankPairings } from '../lib/sommelier'
+import { explainPairing, rankPairings } from '../lib/sommelier'
+import { FlavorProfileCompare } from '../components/FlavorProfileCompare'
 import './SommelierPage.css'
 
 export function SommelierPage() {
   const [cakeId, setCakeId] = useState(cakes[0].id)
+  const [expandedDrinkId, setExpandedDrinkId] = useState<string | null>(null)
   const cake = cakes.find((c) => c.id === cakeId)!
   const pairings = rankPairings(cake, drinks)
 
@@ -15,7 +17,13 @@ export function SommelierPage() {
 
       <label className="cake-select">
         Cake
-        <select value={cakeId} onChange={(e) => setCakeId(e.target.value)}>
+        <select
+          value={cakeId}
+          onChange={(e) => {
+            setCakeId(e.target.value)
+            setExpandedDrinkId(null)
+          }}
+        >
           {cakes.map((c) => (
             <option key={c.id} value={c.id}>
               {c.name}
@@ -31,22 +39,62 @@ export function SommelierPage() {
       </div>
 
       <div className="pairing-list">
-        {pairings.map(({ drink, score, breakdown }) => (
-          <div key={drink.id} className="card pairing-row">
-            <div className="pairing-score" style={{ background: scoreColor(score) }}>
-              {score}
-            </div>
-            <div className="pairing-details">
-              <h3>
-                {drink.name} <span className="tag">{drink.category.replace('_', ' ')}</span>
-              </h3>
-              {breakdown.sharedNotes.length > 0 && (
-                <p className="pairing-bridge">Shared notes: {breakdown.sharedNotes.join(', ')}</p>
+        {pairings.map((pairing) => {
+          const { drink, score, breakdown } = pairing
+          const isExpanded = expandedDrinkId === drink.id
+          return (
+            <div key={drink.id} className="card pairing-card">
+              <button className="pairing-row" onClick={() => setExpandedDrinkId(isExpanded ? null : drink.id)}>
+                <div className="pairing-score" style={{ background: scoreColor(score) }}>
+                  {score}
+                </div>
+                <div className="pairing-details">
+                  <h3>
+                    {drink.name} <span className="tag">{drink.category.replace('_', ' ')}</span>
+                  </h3>
+                  {breakdown.sharedNotes.length > 0 && (
+                    <p className="pairing-bridge">Shared notes: {breakdown.sharedNotes.join(', ')}</p>
+                  )}
+                  {breakdown.cleansingBonus > 0 && <p className="pairing-bridge">Cuts through the richness of this cake</p>}
+                </div>
+                <span className="pairing-toggle">{isExpanded ? 'Hide details' : 'Show details'}</span>
+              </button>
+
+              {isExpanded && (
+                <div className="pairing-expanded">
+                  <div className="pairing-expanded-section">
+                    <h4>Why this pairing works</h4>
+                    <ul>
+                      {explainPairing(cake, drink, pairing).map((sentence, i) => (
+                        <li key={i}>{sentence}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="pairing-expanded-section">
+                    <h4>Serving guidance</h4>
+                    <p>
+                      <strong>Temperature:</strong> {drink.serving.temperature}
+                    </p>
+                    <p>
+                      <strong>Glassware:</strong> {drink.serving.glassware}
+                    </p>
+                    {drink.serving.garnish && (
+                      <p>
+                        <strong>Garnish:</strong> {drink.serving.garnish}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="pairing-expanded-section">
+                    <h4>Flavor profile comparison</h4>
+                    <FlavorProfileCompare cake={cake} drink={drink} />
+                  </div>
+                </div>
               )}
-              {breakdown.cleansingBonus > 0 && <p className="pairing-bridge">Cuts through the richness of this cake</p>}
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </main>
   )

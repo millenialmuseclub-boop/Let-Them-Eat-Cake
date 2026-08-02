@@ -194,5 +194,444 @@
       "Pour into the pan and bake 50-55 minutes until deeply browned on top and the center still wobbles.",
       "Cool at room temperature, then chill at least 4 hours before releasing from the pan."
     ]
+  },
+  {
+    "id": "recipe_tres_leches",
+    "cakeId": "cake_tres_leches",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 210, "unit": "g" }, "imperial": { "qty": 1.75, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 10, "unit": "g" }, "imperial": { "qty": 2, "unit": "tsp" } },
+      { "id": "salt", "name": "Salt", "metric": { "qty": 3, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "tsp" } },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 5, "unit": "count" }, "imperial": { "qty": 5, "unit": "count" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "butter", "name": "Butter, melted", "metric": { "qty": 30, "unit": "g" }, "imperial": { "qty": 2, "unit": "tbsp" } },
+      { "id": "vanilla", "name": "Vanilla extract", "metric": { "qty": 5, "unit": "ml" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "whole-milk", "name": "Whole milk", "metric": { "qty": 240, "unit": "ml" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "evaporated-milk", "name": "Evaporated milk", "metric": { "qty": 354, "unit": "ml" }, "imperial": { "qty": 12, "unit": "oz" } },
+      { "id": "condensed-milk", "name": "Sweetened condensed milk", "metric": { "qty": 396, "unit": "g" }, "imperial": { "qty": 14, "unit": "oz" } },
+      { "id": "heavy-cream", "name": "Heavy cream, whipped", "metric": { "qty": 240, "unit": "ml" }, "imperial": { "qty": 1, "unit": "cup" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease a 9x13-inch pan.",
+      "Whisk flour, baking powder, and salt together.",
+      "Beat eggs and sugar until pale and doubled in volume, mix in melted butter and vanilla, then fold in the dry ingredients.",
+      "Pour into the pan and bake 25 minutes until a toothpick comes out clean. Cool completely, then poke holes all over the top.",
+      "Whisk whole milk, evaporated milk, and condensed milk together and pour slowly over the cake, letting it soak in.",
+      "Chill at least 2 hours, then top with whipped cream just before serving."
+    ]
+  },
+  {
+    "id": "recipe_chocoflan",
+    "cakeId": "cake_chocoflan",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "caramel-sugar", "name": "Granulated sugar (for caramel)", "metric": { "qty": 150, "unit": "g" }, "imperial": { "qty": 0.75, "unit": "cup" } },
+      { "id": "condensed-milk", "name": "Sweetened condensed milk", "metric": { "qty": 396, "unit": "g" }, "imperial": { "qty": 14, "unit": "oz" } },
+      { "id": "evaporated-milk", "name": "Evaporated milk", "metric": { "qty": 354, "unit": "ml" }, "imperial": { "qty": 12, "unit": "oz" } },
+      { "id": "cream-cheese", "name": "Cream cheese", "metric": { "qty": 113, "unit": "g" }, "imperial": { "qty": 4, "unit": "oz" } },
+      { "id": "flan-eggs", "name": "Eggs, large (flan)", "metric": { "qty": 3, "unit": "count" }, "imperial": { "qty": 3, "unit": "count" } },
+      { "id": "vanilla", "name": "Vanilla extract", "metric": { "qty": 5, "unit": "ml" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 190, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "cocoa", "name": "Cocoa powder", "metric": { "qty": 30, "unit": "g" }, "imperial": { "qty": 0.25, "unit": "cup" } },
+      { "id": "cake-sugar", "name": "Granulated sugar (cake)", "metric": { "qty": 150, "unit": "g" }, "imperial": { "qty": 0.75, "unit": "cup" } },
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 5, "unit": "g" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "baking-soda", "name": "Baking soda", "metric": { "qty": 3, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "tsp" } },
+      { "id": "oil", "name": "Vegetable oil", "metric": { "qty": 80, "unit": "ml" }, "imperial": { "qty": 0.33, "unit": "cup" } },
+      { "id": "cake-eggs", "name": "Eggs, large (cake)", "metric": { "qty": 2, "unit": "count" }, "imperial": { "qty": 2, "unit": "count" } },
+      { "id": "milk", "name": "Milk", "metric": { "qty": 120, "unit": "ml" }, "imperial": { "qty": 0.5, "unit": "cup" } }
+    ],
+    "steps": [
+      "Preheat oven to 160°C (325°F). Melt the caramel sugar in a saucepan until deep amber, then pour into the bottom of a bundt pan and swirl to coat.",
+      "Blend condensed milk, evaporated milk, cream cheese, flan eggs, and vanilla until smooth — this is the flan batter.",
+      "Whisk flour, cocoa, cake sugar, baking powder, and baking soda together, then mix in oil, cake eggs, and milk until smooth — this is the cake batter.",
+      "Pour the cake batter over the caramel in the pan, then gently pour the flan batter on top without stirring — they'll swap places as they bake.",
+      "Cover tightly with foil and set the pan in a larger roasting pan filled with hot water halfway up the sides. Bake 60-70 minutes until set.",
+      "Cool completely, then chill at least 4 hours before inverting onto a plate."
+    ]
+  },
+  {
+    "id": "recipe_bizcocho_dominicano",
+    "cakeId": "cake_bizcocho_dominicano",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 375, "unit": "g" }, "imperial": { "qty": 3, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 300, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" } },
+      { "id": "butter", "name": "Butter, softened", "metric": { "qty": 227, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 4, "unit": "count" }, "imperial": { "qty": 4, "unit": "count" } },
+      { "id": "milk", "name": "Milk", "metric": { "qty": 180, "unit": "ml" }, "imperial": { "qty": 0.75, "unit": "cup" } },
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 10, "unit": "g" }, "imperial": { "qty": 2, "unit": "tsp" } },
+      { "id": "vanilla", "name": "Vanilla extract", "metric": { "qty": 5, "unit": "ml" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "almond-extract", "name": "Almond extract", "metric": { "qty": 2, "unit": "ml" }, "imperial": { "qty": 0.5, "unit": "tsp" } },
+      { "id": "syrup-sugar", "name": "Granulated sugar (syrup)", "metric": { "qty": 100, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "syrup-water", "name": "Water (syrup)", "metric": { "qty": 120, "unit": "ml" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "egg-whites", "name": "Egg whites", "metric": { "qty": 4, "unit": "count" }, "imperial": { "qty": 4, "unit": "count" } },
+      { "id": "frosting-sugar", "name": "Granulated sugar (frosting)", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "frosting-butter", "name": "Butter (frosting)", "metric": { "qty": 340, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease three 8-inch round pans.",
+      "Cream butter and sugar, beat in eggs one at a time, then vanilla and almond extract.",
+      "Alternate adding flour/baking powder with milk until just combined. Divide between pans and bake 20-25 minutes. Cool completely.",
+      "Simmer syrup sugar and water into a light syrup, then brush over each cooled layer.",
+      "Whisk egg whites and frosting sugar over a double boiler until warm, then whip to stiff peaks. Beat in frosting butter a little at a time until smooth meringue buttercream forms.",
+      "Frost between layers and over the outside of the cake."
+    ]
+  },
+  {
+    "id": "recipe_kladdkaka",
+    "cakeId": "cake_kladdkaka",
+    "baseServings": 8,
+    "ingredients": [
+      { "id": "butter", "name": "Butter, melted", "metric": { "qty": 113, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 2, "unit": "count" }, "imperial": { "qty": 2, "unit": "count" } },
+      { "id": "vanilla", "name": "Vanilla extract", "metric": { "qty": 5, "unit": "ml" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 95, "unit": "g" }, "imperial": { "qty": 0.75, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "cocoa", "name": "Cocoa powder", "metric": { "qty": 40, "unit": "g" }, "imperial": { "qty": 0.33, "unit": "cup" } },
+      { "id": "salt", "name": "Salt", "metric": { "qty": 2, "unit": "g" }, "imperial": { "qty": 0.25, "unit": "tsp" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease an 8-inch springform pan.",
+      "Whisk melted butter, sugar, eggs, and vanilla together.",
+      "Fold in flour, cocoa, and salt until just combined.",
+      "Pour into the pan and bake 20 minutes — the center should still be very soft and underbaked.",
+      "Cool slightly, dust with powdered sugar, and serve with whipped cream."
+    ]
+  },
+  {
+    "id": "recipe_medovik",
+    "cakeId": "cake_medovik",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "honey", "name": "Honey", "metric": { "qty": 100, "unit": "g" }, "imperial": { "qty": 0.33, "unit": "cup" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 150, "unit": "g" }, "imperial": { "qty": 0.75, "unit": "cup" } },
+      { "id": "butter", "name": "Butter", "metric": { "qty": 57, "unit": "g" }, "imperial": { "qty": 0.25, "unit": "cup" } },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 2, "unit": "count" }, "imperial": { "qty": 2, "unit": "count" } },
+      { "id": "baking-soda", "name": "Baking soda", "metric": { "qty": 5, "unit": "g" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 375, "unit": "g" }, "imperial": { "qty": 3, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "sour-cream", "name": "Sour cream", "metric": { "qty": 480, "unit": "g" }, "imperial": { "qty": 2, "unit": "cup" } },
+      { "id": "frosting-sugar", "name": "Powdered sugar", "metric": { "qty": 150, "unit": "g" }, "imperial": { "qty": 1.25, "unit": "cup" } },
+      { "id": "heavy-cream", "name": "Heavy cream", "metric": { "qty": 120, "unit": "ml" }, "imperial": { "qty": 0.5, "unit": "cup" } }
+    ],
+    "steps": [
+      "Warm honey, sugar, and butter together in a saucepan until melted, then whisk in baking soda — it will foam up.",
+      "Remove from heat, whisk in eggs, then stir in flour until a soft dough forms. Divide into 8 portions and roll each thin.",
+      "Bake each layer at 175°C (350°F) for 4-5 minutes until golden; trim edges while warm and reserve the trimmings.",
+      "Whip sour cream, powdered sugar, and heavy cream together into a frosting.",
+      "Stack the layers with frosting between each, frost the outside, then press the reserved crumbs onto the sides.",
+      "Refrigerate at least 8 hours, ideally overnight, so the layers soften into a torte before serving."
+    ]
+  },
+  {
+    "id": "recipe_kouign_amann",
+    "cakeId": "cake_kouign_amann",
+    "baseServings": 8,
+    "ingredients": [
+      { "id": "flour", "name": "Bread flour", "metric": { "qty": 300, "unit": "g" }, "imperial": { "qty": 2.5, "unit": "cup" } },
+      { "id": "salt", "name": "Salt", "metric": { "qty": 6, "unit": "g" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "yeast", "name": "Instant yeast", "metric": { "qty": 5, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "tsp" } },
+      { "id": "water", "name": "Water, warm", "metric": { "qty": 180, "unit": "ml" }, "imperial": { "qty": 0.75, "unit": "cup" } },
+      { "id": "laminating-butter", "name": "Butter, cold (for laminating)", "metric": { "qty": 227, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 150, "unit": "g" }, "imperial": { "qty": 0.75, "unit": "cup" } }
+    ],
+    "steps": [
+      "Mix flour, salt, yeast, and warm water into a smooth dough. Let rise 1 hour until doubled.",
+      "Roll out the dough and enclose the cold butter block, then fold and roll repeatedly as you would puff pastry, sprinkling sugar between folds and chilling between each to keep the butter firm.",
+      "After the final fold, roll out and cut into squares, fold the corners into the center, and place in a muffin tin, sprinkling more sugar on top.",
+      "Proof 45 minutes, then bake at 220°C (425°F) for 20-25 minutes until deeply caramelized and shattering-crisp on the outside."
+    ]
+  },
+  {
+    "id": "recipe_sachertorte",
+    "cakeId": "cake_sachertorte",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "dark-chocolate", "name": "Dark chocolate", "metric": { "qty": 170, "unit": "g" }, "imperial": { "qty": 6, "unit": "oz" } },
+      { "id": "butter", "name": "Butter, softened", "metric": { "qty": 113, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 150, "unit": "g" }, "imperial": { "qty": 0.75, "unit": "cup" } },
+      { "id": "eggs", "name": "Eggs, separated", "metric": { "qty": 6, "unit": "count" }, "imperial": { "qty": 6, "unit": "count" } },
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 140, "unit": "g" }, "imperial": { "qty": 1.125, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "apricot-jam", "name": "Apricot jam, warmed", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 0.75, "unit": "cup" } },
+      { "id": "glaze-chocolate", "name": "Dark chocolate (glaze)", "metric": { "qty": 150, "unit": "g" }, "imperial": { "qty": 5.5, "unit": "oz" } },
+      { "id": "glaze-cream", "name": "Heavy cream (glaze)", "metric": { "qty": 120, "unit": "ml" }, "imperial": { "qty": 0.5, "unit": "cup" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease a 9-inch springform pan.",
+      "Melt the dark chocolate and butter together. Beat egg yolks with half the sugar until pale, then whisk into the chocolate mixture.",
+      "Whip egg whites with the remaining sugar to soft peaks, then fold into the batter along with the flour.",
+      "Bake 45-50 minutes until a toothpick comes out with a few moist crumbs. Cool completely.",
+      "Slice the cake in half horizontally, spread warmed apricot jam between the layers and over the top and sides.",
+      "Warm the glaze cream, pour over the glaze chocolate and stir smooth, then pour over the cake, letting it drip down the sides. Let set before slicing."
+    ]
+  },
+  {
+    "id": "recipe_mawa_cake",
+    "cakeId": "cake_mawa_cake",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "mawa", "name": "Mawa (khoya), or ricotta", "metric": { "qty": 115, "unit": "g" }, "imperial": { "qty": 4, "unit": "oz" } },
+      { "id": "butter", "name": "Butter, softened", "metric": { "qty": 113, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 3, "unit": "count" }, "imperial": { "qty": 3, "unit": "count" } },
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 250, "unit": "g" }, "imperial": { "qty": 2, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 8, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "tsp" } },
+      { "id": "cardamom", "name": "Ground cardamom", "metric": { "qty": 3, "unit": "g" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "nutmeg", "name": "Ground nutmeg", "metric": { "qty": 1, "unit": "g" }, "imperial": { "qty": 0.25, "unit": "tsp" } },
+      { "id": "milk", "name": "Milk", "metric": { "qty": 60, "unit": "ml" }, "imperial": { "qty": 0.25, "unit": "cup" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease a loaf pan.",
+      "Cream butter, sugar, and mawa together until smooth, then beat in eggs one at a time.",
+      "Fold in flour, baking powder, cardamom, and nutmeg, alternating with milk.",
+      "Pour into the pan and bake 40-45 minutes until a toothpick comes out clean."
+    ]
+  },
+  {
+    "id": "recipe_pandan_chiffon",
+    "cakeId": "cake_pandan_chiffon",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "flour", "name": "Cake flour", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 1.6, "unit": "cup" } },
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 8, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "tsp" } },
+      { "id": "sugar", "name": "Granulated sugar, divided", "metric": { "qty": 150, "unit": "g" }, "imperial": { "qty": 0.75, "unit": "cup" } },
+      { "id": "egg-yolks", "name": "Egg yolks", "metric": { "qty": 5, "unit": "count" }, "imperial": { "qty": 5, "unit": "count" } },
+      { "id": "coconut-milk", "name": "Coconut milk", "metric": { "qty": 120, "unit": "ml" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "oil", "name": "Vegetable oil", "metric": { "qty": 80, "unit": "ml" }, "imperial": { "qty": 0.33, "unit": "cup" } },
+      { "id": "pandan-extract", "name": "Pandan extract", "metric": { "qty": 10, "unit": "ml" }, "imperial": { "qty": 2, "unit": "tsp" } },
+      { "id": "egg-whites", "name": "Egg whites", "metric": { "qty": 6, "unit": "count" }, "imperial": { "qty": 6, "unit": "count" } },
+      { "id": "cream-of-tartar", "name": "Cream of tartar", "metric": { "qty": 2, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "tsp" } }
+    ],
+    "steps": [
+      "Preheat oven to 165°C (325°F). Whisk flour, baking powder, and half the sugar together.",
+      "Whisk in egg yolks, coconut milk, oil, and pandan extract until smooth.",
+      "In a separate bowl, whip egg whites with cream of tartar, gradually adding the remaining sugar, to stiff peaks.",
+      "Fold the egg whites into the batter in three additions, then pour into an ungreased tube pan.",
+      "Bake 45-50 minutes until springy to the touch. Invert the pan immediately and cool completely upside down before releasing."
+    ]
+  },
+  {
+    "id": "recipe_basbousa",
+    "cakeId": "cake_basbousa",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "semolina", "name": "Fine semolina", "metric": { "qty": 300, "unit": "g" }, "imperial": { "qty": 2, "unit": "cup" } },
+      { "id": "coconut", "name": "Shredded coconut", "metric": { "qty": 60, "unit": "g" }, "imperial": { "qty": 0.75, "unit": "cup" }, "substitutions": [{ "diet": "nut-free", "replacement": "omit, or use extra semolina" }] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 100, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "yogurt", "name": "Plain yogurt", "metric": { "qty": 240, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "butter", "name": "Butter, melted", "metric": { "qty": 113, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 8, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "tsp" } },
+      { "id": "almonds", "name": "Whole almonds (topping)", "metric": { "qty": 20, "unit": "count" }, "imperial": { "qty": 20, "unit": "count" }, "substitutions": [{ "diet": "nut-free", "replacement": "omit" }] },
+      { "id": "syrup-sugar", "name": "Granulated sugar (syrup)", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "syrup-water", "name": "Water (syrup)", "metric": { "qty": 180, "unit": "ml" }, "imperial": { "qty": 0.75, "unit": "cup" } },
+      { "id": "lemon-juice", "name": "Lemon juice", "metric": { "qty": 5, "unit": "ml" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "orange-blossom-water", "name": "Orange blossom water", "metric": { "qty": 5, "unit": "ml" }, "imperial": { "qty": 1, "unit": "tsp" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease a baking pan.",
+      "Mix semolina, coconut, sugar, yogurt, melted butter, and baking powder into a thick batter.",
+      "Spread into the pan, score into diamonds, and press an almond into the center of each piece.",
+      "Bake 30-35 minutes until golden.",
+      "Simmer syrup sugar, water, lemon juice, and orange blossom water into a syrup, then pour the hot syrup over the cake as soon as it comes out of the oven."
+    ]
+  },
+  {
+    "id": "recipe_japanese_souffle_cheesecake",
+    "cakeId": "cake_japanese_souffle_cheesecake",
+    "baseServings": 8,
+    "ingredients": [
+      { "id": "cream-cheese", "name": "Cream cheese", "metric": { "qty": 227, "unit": "g" }, "imperial": { "qty": 8, "unit": "oz" } },
+      { "id": "butter", "name": "Butter", "metric": { "qty": 57, "unit": "g" }, "imperial": { "qty": 0.25, "unit": "cup" } },
+      { "id": "milk", "name": "Milk", "metric": { "qty": 100, "unit": "ml" }, "imperial": { "qty": 0.4, "unit": "cup" } },
+      { "id": "egg-yolks", "name": "Egg yolks", "metric": { "qty": 6, "unit": "count" }, "imperial": { "qty": 6, "unit": "count" } },
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 30, "unit": "g" }, "imperial": { "qty": 0.25, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "cornstarch", "name": "Cornstarch", "metric": { "qty": 20, "unit": "g" }, "imperial": { "qty": 2, "unit": "tbsp" } },
+      { "id": "lemon-juice", "name": "Lemon juice", "metric": { "qty": 10, "unit": "ml" }, "imperial": { "qty": 2, "unit": "tsp" } },
+      { "id": "egg-whites", "name": "Egg whites", "metric": { "qty": 6, "unit": "count" }, "imperial": { "qty": 6, "unit": "count" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 130, "unit": "g" }, "imperial": { "qty": 0.65, "unit": "cup" } },
+      { "id": "cream-of-tartar", "name": "Cream of tartar", "metric": { "qty": 2, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "tsp" } }
+    ],
+    "steps": [
+      "Preheat oven to 160°C (320°F) and prepare a water bath. Melt cream cheese, butter, and milk together until smooth.",
+      "Whisk in egg yolks, flour, cornstarch, and lemon juice.",
+      "In a separate bowl, whip egg whites with cream of tartar, gradually adding sugar, to soft peaks.",
+      "Fold the egg whites into the cheese mixture in three additions.",
+      "Pour into a lined pan, place in the water bath, and bake 65-70 minutes until golden and just set.",
+      "Turn off the oven and let the cake cool inside with the door ajar to prevent sinking."
+    ]
+  },
+  {
+    "id": "recipe_castella",
+    "cakeId": "cake_castella",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 6, "unit": "count" }, "imperial": { "qty": 6, "unit": "count" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "honey", "name": "Honey", "metric": { "qty": 30, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "tbsp" } },
+      { "id": "flour", "name": "Bread flour", "metric": { "qty": 190, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" } },
+      { "id": "milk", "name": "Milk", "metric": { "qty": 30, "unit": "ml" }, "imperial": { "qty": 2, "unit": "tbsp" } }
+    ],
+    "steps": [
+      "Preheat oven to 160°C (320°F) and line a loaf pan with parchment extending above the rim.",
+      "Whisk eggs and sugar over a warm water bath until warm to the touch and doubled in volume.",
+      "Whisk in honey and milk, then fold in the bread flour in three additions.",
+      "Pour into the pan, tap firmly on the counter to release air bubbles, and bake 50-55 minutes.",
+      "Drop the pan from a small height as soon as it comes out of the oven to prevent shrinking, then cool wrapped in plastic to keep it moist."
+    ]
+  },
+  {
+    "id": "recipe_gooey_butter_cake",
+    "cakeId": "cake_gooey_butter_cake",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "base-flour", "name": "All-purpose flour (base)", "metric": { "qty": 250, "unit": "g" }, "imperial": { "qty": 2, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "base-sugar", "name": "Granulated sugar (base)", "metric": { "qty": 100, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "base-butter", "name": "Butter, melted (base)", "metric": { "qty": 113, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "base-egg", "name": "Egg, large (base)", "metric": { "qty": 1, "unit": "count" }, "imperial": { "qty": 1, "unit": "count" } },
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 5, "unit": "g" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "cream-cheese", "name": "Cream cheese", "metric": { "qty": 227, "unit": "g" }, "imperial": { "qty": 8, "unit": "oz" } },
+      { "id": "topping-butter", "name": "Butter, softened (topping)", "metric": { "qty": 113, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "topping-eggs", "name": "Eggs, large (topping)", "metric": { "qty": 2, "unit": "count" }, "imperial": { "qty": 2, "unit": "count" } },
+      { "id": "vanilla", "name": "Vanilla extract", "metric": { "qty": 5, "unit": "ml" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "powdered-sugar", "name": "Powdered sugar", "metric": { "qty": 480, "unit": "g" }, "imperial": { "qty": 4, "unit": "cup" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease a 9x13-inch pan.",
+      "Mix base flour, base sugar, base butter, base egg, and baking powder into a soft dough and press evenly into the pan.",
+      "Beat cream cheese and topping butter until smooth, add topping eggs and vanilla, then beat in powdered sugar until smooth.",
+      "Pour the topping over the base.",
+      "Bake 40-45 minutes until the edges are golden but the center still jiggles slightly — it should never fully set.",
+      "Cool completely before slicing; dust with powdered sugar."
+    ]
+  },
+  {
+    "id": "recipe_brooklyn_blackout",
+    "cakeId": "cake_brooklyn_blackout",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 315, "unit": "g" }, "imperial": { "qty": 2.5, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 350, "unit": "g" }, "imperial": { "qty": 1.75, "unit": "cup" } },
+      { "id": "cocoa", "name": "Cocoa powder", "metric": { "qty": 85, "unit": "g" }, "imperial": { "qty": 0.75, "unit": "cup" } },
+      { "id": "baking-soda", "name": "Baking soda", "metric": { "qty": 8, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "tsp" } },
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 3, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "tsp" } },
+      { "id": "salt", "name": "Salt", "metric": { "qty": 5, "unit": "g" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 2, "unit": "count" }, "imperial": { "qty": 2, "unit": "count" } },
+      { "id": "buttermilk", "name": "Buttermilk", "metric": { "qty": 240, "unit": "ml" }, "imperial": { "qty": 1, "unit": "cup" }, "substitutions": [{ "diet": "dairy-free", "replacement": "oat milk + 1 tbsp lemon juice" }] },
+      { "id": "oil", "name": "Vegetable oil", "metric": { "qty": 120, "unit": "ml" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "coffee", "name": "Hot brewed coffee", "metric": { "qty": 240, "unit": "ml" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "pudding-sugar", "name": "Granulated sugar (pudding)", "metric": { "qty": 150, "unit": "g" }, "imperial": { "qty": 0.75, "unit": "cup" } },
+      { "id": "pudding-cocoa", "name": "Cocoa powder (pudding)", "metric": { "qty": 30, "unit": "g" }, "imperial": { "qty": 0.25, "unit": "cup" } },
+      { "id": "cornstarch", "name": "Cornstarch", "metric": { "qty": 30, "unit": "g" }, "imperial": { "qty": 3, "unit": "tbsp" } },
+      { "id": "pudding-milk", "name": "Milk (pudding)", "metric": { "qty": 480, "unit": "ml" }, "imperial": { "qty": 2, "unit": "cup" } },
+      { "id": "pudding-egg-yolks", "name": "Egg yolks (pudding)", "metric": { "qty": 2, "unit": "count" }, "imperial": { "qty": 2, "unit": "count" } },
+      { "id": "pudding-butter", "name": "Butter (pudding)", "metric": { "qty": 30, "unit": "g" }, "imperial": { "qty": 2, "unit": "tbsp" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease three 8-inch pans.",
+      "Whisk flour, sugar, cocoa, baking soda, baking powder, and salt together.",
+      "Whisk in eggs, buttermilk, oil, and hot coffee until smooth — the batter will be thin.",
+      "Divide between pans and bake 22-25 minutes. Cool completely, then crumble one layer into fine crumbs for coating.",
+      "Whisk pudding sugar, pudding cocoa, and cornstarch in a saucepan, whisk in pudding milk and egg yolks, and cook over medium heat, stirring constantly, until thickened into a pudding. Stir in pudding butter, then chill.",
+      "Stack the two remaining cake layers with pudding filling between them and on top, then press the reserved crumbs over the entire outside."
+    ]
+  },
+  {
+    "id": "recipe_lane_cake",
+    "cakeId": "cake_lane_cake",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 375, "unit": "g" }, "imperial": { "qty": 3, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 300, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" } },
+      { "id": "butter", "name": "Butter, softened", "metric": { "qty": 227, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "egg-whites", "name": "Egg whites", "metric": { "qty": 8, "unit": "count" }, "imperial": { "qty": 8, "unit": "count" } },
+      { "id": "milk", "name": "Milk", "metric": { "qty": 180, "unit": "ml" }, "imperial": { "qty": 0.75, "unit": "cup" } },
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 10, "unit": "g" }, "imperial": { "qty": 2, "unit": "tsp" } },
+      { "id": "vanilla", "name": "Vanilla extract", "metric": { "qty": 5, "unit": "ml" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "filling-egg-yolks", "name": "Egg yolks (filling)", "metric": { "qty": 8, "unit": "count" }, "imperial": { "qty": 8, "unit": "count" } },
+      { "id": "filling-sugar", "name": "Granulated sugar (filling)", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "filling-butter", "name": "Butter (filling)", "metric": { "qty": 113, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "bourbon", "name": "Bourbon", "metric": { "qty": 45, "unit": "ml" }, "imperial": { "qty": 3, "unit": "tbsp" } },
+      { "id": "pecans", "name": "Chopped pecans", "metric": { "qty": 150, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" }, "substitutions": [{ "diet": "nut-free", "replacement": "omit" }] },
+      { "id": "cherries", "name": "Candied cherries, chopped", "metric": { "qty": 100, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease three 9-inch pans.",
+      "Cream butter and sugar, alternate adding flour/baking powder with milk, then fold in whipped egg whites and vanilla.",
+      "Divide between pans and bake 20-25 minutes. Cool completely.",
+      "Cook filling egg yolks, filling sugar, and filling butter over low heat, stirring constantly, until thickened. Remove from heat and stir in bourbon, pecans, and cherries.",
+      "Spread the filling between the layers only, leaving the outside of the cake bare in the traditional style. Let set before slicing."
+    ]
+  },
+  {
+    "id": "recipe_malva_pudding",
+    "cakeId": "cake_malva_pudding",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 190, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "egg", "name": "Egg, large", "metric": { "qty": 1, "unit": "count" }, "imperial": { "qty": 1, "unit": "count" } },
+      { "id": "butter", "name": "Butter, melted", "metric": { "qty": 15, "unit": "g" }, "imperial": { "qty": 1, "unit": "tbsp" } },
+      { "id": "apricot-jam", "name": "Apricot jam", "metric": { "qty": 15, "unit": "g" }, "imperial": { "qty": 1, "unit": "tbsp" } },
+      { "id": "baking-soda", "name": "Baking soda", "metric": { "qty": 5, "unit": "g" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "vinegar", "name": "Vinegar", "metric": { "qty": 15, "unit": "ml" }, "imperial": { "qty": 1, "unit": "tbsp" } },
+      { "id": "milk", "name": "Milk", "metric": { "qty": 120, "unit": "ml" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "sauce-cream", "name": "Heavy cream (sauce)", "metric": { "qty": 120, "unit": "ml" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "sauce-butter", "name": "Butter (sauce)", "metric": { "qty": 57, "unit": "g" }, "imperial": { "qty": 0.25, "unit": "cup" } },
+      { "id": "sauce-sugar", "name": "Granulated sugar (sauce)", "metric": { "qty": 100, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease a baking dish.",
+      "Beat sugar and egg until light, then mix in melted butter and apricot jam.",
+      "Whisk baking soda into vinegar — it will fizz — then add to the batter alternately with flour and milk.",
+      "Pour into the dish and bake 35-40 minutes until golden and set.",
+      "Warm sauce cream, sauce butter, and sauce sugar together until the butter melts, then pour the hot sauce evenly over the pudding as soon as it comes out of the oven, letting it soak in."
+    ]
+  },
+  {
+    "id": "recipe_pavlova",
+    "cakeId": "cake_pavlova",
+    "baseServings": 8,
+    "ingredients": [
+      { "id": "egg-whites", "name": "Egg whites", "metric": { "qty": 6, "unit": "count" }, "imperial": { "qty": 6, "unit": "count" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 350, "unit": "g" }, "imperial": { "qty": 1.75, "unit": "cup" } },
+      { "id": "cornstarch", "name": "Cornstarch", "metric": { "qty": 10, "unit": "g" }, "imperial": { "qty": 1, "unit": "tbsp" } },
+      { "id": "vinegar", "name": "White vinegar", "metric": { "qty": 10, "unit": "ml" }, "imperial": { "qty": 2, "unit": "tsp" } },
+      { "id": "vanilla", "name": "Vanilla extract", "metric": { "qty": 5, "unit": "ml" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "heavy-cream", "name": "Heavy cream, whipped", "metric": { "qty": 300, "unit": "ml" }, "imperial": { "qty": 1.25, "unit": "cup" } },
+      { "id": "passionfruit", "name": "Passionfruit pulp (or seasonal fruit)", "metric": { "qty": 4, "unit": "count" }, "imperial": { "qty": 4, "unit": "count" } }
+    ],
+    "steps": [
+      "Preheat oven to 150°C (300°F) and draw a 9-inch circle on parchment paper as a guide.",
+      "Whip egg whites to soft peaks, then gradually add sugar and whip to stiff, glossy peaks.",
+      "Fold in cornstarch, vinegar, and vanilla, then mound onto the parchment within the circle, smoothing the sides and creating a slight well in the center.",
+      "Bake 60-75 minutes, then turn off the oven and let it cool completely inside with the door closed to prevent cracking.",
+      "Top with whipped cream and passionfruit (or other fresh fruit) just before serving."
+    ]
+  },
+  {
+    "id": "recipe_lamington",
+    "cakeId": "cake_lamington",
+    "baseServings": 16,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 300, "unit": "g" }, "imperial": { "qty": 2.4, "unit": "cup" }, "substitutions": [{ "diet": "gluten-free", "replacement": "1:1 gluten-free baking blend" }] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 250, "unit": "g" }, "imperial": { "qty": 1.25, "unit": "cup" } },
+      { "id": "butter", "name": "Butter, softened", "metric": { "qty": 170, "unit": "g" }, "imperial": { "qty": 0.75, "unit": "cup" } },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 3, "unit": "count" }, "imperial": { "qty": 3, "unit": "count" } },
+      { "id": "milk", "name": "Milk", "metric": { "qty": 180, "unit": "ml" }, "imperial": { "qty": 0.75, "unit": "cup" } },
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 10, "unit": "g" }, "imperial": { "qty": 2, "unit": "tsp" } },
+      { "id": "vanilla", "name": "Vanilla extract", "metric": { "qty": 5, "unit": "ml" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "icing-sugar", "name": "Powdered sugar (icing)", "metric": { "qty": 300, "unit": "g" }, "imperial": { "qty": 2.5, "unit": "cup" } },
+      { "id": "icing-cocoa", "name": "Cocoa powder (icing)", "metric": { "qty": 30, "unit": "g" }, "imperial": { "qty": 0.25, "unit": "cup" } },
+      { "id": "icing-milk", "name": "Milk (icing)", "metric": { "qty": 90, "unit": "ml" }, "imperial": { "qty": 0.375, "unit": "cup" } },
+      { "id": "coconut", "name": "Desiccated coconut", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 2.5, "unit": "cup" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease a square pan. Cream butter and sugar, beat in eggs, then alternate adding flour/baking powder with milk and vanilla.",
+      "Pour into the pan and bake 25-30 minutes until a toothpick comes out clean. Cool completely, then chill — it's easier to cut and dip when cold.",
+      "Cut the cooled sponge into squares.",
+      "Whisk icing sugar, icing cocoa, and icing milk into a thin chocolate icing.",
+      "Dip each square in the icing, letting excess drip off, then roll in desiccated coconut.",
+      "Let set on a wire rack before serving."
+    ]
   }
 ]

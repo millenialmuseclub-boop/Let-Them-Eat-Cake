@@ -4,90 +4,103 @@
     "name": "Espresso",
     "category": "coffee",
     "flavorProfile": { "sweetness": 1, "fatRichness": 1, "acidity": 3, "intensity": 5, "bitternessTannin": 4, "carbonation": 0 },
-    "flavorNotes": ["espresso", "dark chocolate", "caramel"]
+    "flavorNotes": ["espresso", "dark chocolate", "caramel"],
+    "serving": { "temperature": "Hot, straight from the machine", "glassware": "Demitasse cup", "garnish": "A twist of lemon peel (optional)" }
   },
   {
     "id": "drink_drip_coffee",
     "name": "Medium Roast Drip Coffee",
     "category": "coffee",
     "flavorProfile": { "sweetness": 1, "fatRichness": 1, "acidity": 2, "intensity": 3, "bitternessTannin": 2, "carbonation": 0 },
-    "flavorNotes": ["caramel", "walnut"]
+    "flavorNotes": ["caramel", "walnut"],
+    "serving": { "temperature": "Hot", "glassware": "Standard coffee mug" }
   },
   {
     "id": "drink_earl_grey",
     "name": "Earl Grey Tea",
     "category": "tea",
     "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 2, "intensity": 2, "bitternessTannin": 3, "carbonation": 0 },
-    "flavorNotes": ["bergamot", "vanilla"]
+    "flavorNotes": ["bergamot", "vanilla"],
+    "serving": { "temperature": "Hot, steeped 3-4 minutes", "glassware": "Porcelain teacup", "garnish": "A thin slice of lemon" }
   },
   {
     "id": "drink_matcha",
     "name": "Matcha Green Tea",
     "category": "tea",
     "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 1, "intensity": 2, "bitternessTannin": 2, "carbonation": 0 },
-    "flavorNotes": ["grassy", "umami"]
+    "flavorNotes": ["grassy", "umami"],
+    "serving": { "temperature": "Hot or chilled", "glassware": "Wide matcha bowl, or a tall glass over ice" }
   },
   {
     "id": "drink_chai_latte",
     "name": "Spiced Chai Latte",
     "category": "tea",
     "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 1, "intensity": 3, "bitternessTannin": 1, "carbonation": 0 },
-    "flavorNotes": ["cinnamon", "cardamom", "honey"]
+    "flavorNotes": ["cinnamon", "cardamom", "honey"],
+    "serving": { "temperature": "Hot, steamed with milk", "glassware": "Tall mug", "garnish": "A dusting of ground cinnamon" }
   },
   {
     "id": "drink_dry_prosecco",
     "name": "Dry Prosecco",
     "category": "wine",
     "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 4, "intensity": 2, "bitternessTannin": 1, "carbonation": 4 },
-    "flavorNotes": ["green apple", "citrus"]
+    "flavorNotes": ["green apple", "citrus"],
+    "serving": { "temperature": "Well chilled, 6-8°C (43-46°F)", "glassware": "Champagne flute" }
   },
   {
     "id": "drink_ruby_port",
     "name": "Ruby Port",
     "category": "wine",
     "flavorProfile": { "sweetness": 5, "fatRichness": 1, "acidity": 2, "intensity": 4, "bitternessTannin": 3, "carbonation": 0 },
-    "flavorNotes": ["dark chocolate", "cherry", "caramel"]
+    "flavorNotes": ["dark chocolate", "cherry", "caramel"],
+    "serving": { "temperature": "Slightly below room temperature, 16-18°C (61-64°F)", "glassware": "Small port glass" }
   },
   {
     "id": "drink_imperial_stout",
     "name": "Imperial Stout",
     "category": "beer",
     "flavorProfile": { "sweetness": 2, "fatRichness": 2, "acidity": 1, "intensity": 5, "bitternessTannin": 3, "carbonation": 3 },
-    "flavorNotes": ["dark chocolate", "cocoa", "espresso"]
+    "flavorNotes": ["dark chocolate", "cocoa", "espresso"],
+    "serving": { "temperature": "Cellar temperature, 10-13°C (50-55°F)", "glassware": "Snifter or tulip glass" }
   },
   {
     "id": "drink_bourbon",
     "name": "Bourbon",
     "category": "spirits",
     "flavorProfile": { "sweetness": 2, "fatRichness": 1, "acidity": 1, "intensity": 5, "bitternessTannin": 2, "carbonation": 0 },
-    "flavorNotes": ["vanilla", "caramel", "bourbon"]
+    "flavorNotes": ["vanilla", "caramel", "bourbon"],
+    "serving": { "temperature": "Neat, or with a single large ice cube", "glassware": "Rocks glass", "garnish": "An orange peel twist" }
   },
   {
     "id": "drink_sparkling_lemonade",
     "name": "Sparkling Lemonade",
     "category": "non_alcoholic",
     "flavorProfile": { "sweetness": 3, "fatRichness": 0, "acidity": 4, "intensity": 1, "bitternessTannin": 0, "carbonation": 4 },
-    "flavorNotes": ["lemon", "citrus"]
+    "flavorNotes": ["lemon", "citrus"],
+    "serving": { "temperature": "Well chilled, over ice", "glassware": "Highball glass", "garnish": "A lemon wheel" }
   },
   {
     "id": "drink_rose_wine",
     "name": "Rosé Wine",
     "category": "wine",
     "flavorProfile": { "sweetness": 2, "fatRichness": 0, "acidity": 3, "intensity": 2, "bitternessTannin": 1, "carbonation": 0 },
-    "flavorNotes": ["strawberry", "citrus"]
+    "flavorNotes": ["strawberry", "citrus"],
+    "serving": { "temperature": "Well chilled, 8-10°C (46-50°F)", "glassware": "White wine glass" }
   },
   {
     "id": "drink_hot_chocolate",
     "name": "Hot Chocolate",
     "category": "non_alcoholic",
     "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 3, "bitternessTannin": 1, "carbonation": 0 },
-    "flavorNotes": ["cocoa", "vanilla", "cream"]
+    "flavorNotes": ["cocoa", "vanilla", "cream"],
+    "serving": { "temperature": "Hot", "glassware": "Mug", "garnish": "Whipped cream and a dusting of cocoa" }
   },
   {
     "id": "drink_craft_ipa",
     "name": "Craft IPA",
     "category": "beer",
     "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 2, "intensity": 4, "bitternessTannin": 4, "carbonation": 4 },
-    "flavorNotes": ["citrus", "pine"]
+    "flavorNotes": ["citrus", "pine"],
+    "serving": { "temperature": "Cold, 7-10°C (45-50°F)", "glassware": "Pint or tulip glass" }
   }
 ]

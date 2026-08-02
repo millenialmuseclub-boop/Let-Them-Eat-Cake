@@ -1,0 +1,68 @@
+.flavor-compare {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flavor-compare-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.legend-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legend-cake {
+  background: var(--raspberry);
+}
+
+.legend-drink {
+  background: var(--gold);
+  margin-left: 12px;
+}
+
+.flavor-compare-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.flavor-compare-label {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.flavor-compare-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.flavor-bar-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.flavor-bar {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.flavor-bar-cake {
+  background: var(--raspberry);
+}
+
+.flavor-bar-drink {
+  background: var(--gold);
+}
