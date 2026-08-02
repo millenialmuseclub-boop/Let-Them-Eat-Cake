@@ -1,9 +1,13 @@
 .atlas-search {
-  margin: 20px 0 32px;
+  display: flex;
+  gap: 10px;
+  margin: 20px 0 16px;
+  flex-wrap: wrap;
 }
 
 .atlas-search input {
-  width: 100%;
+  flex: 1;
+  min-width: 220px;
   max-width: 420px;
   font: inherit;
   padding: 12px 16px;
@@ -13,8 +17,36 @@
   color: var(--text);
 }
 
-.atlas-empty {
+.atlas-examples {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 32px;
+}
+
+.atlas-example-chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 14px;
+}
+
+.atlas-status {
   opacity: 0.7;
+  font-style: italic;
+}
+
+.atlas-error {
+  border: 1px solid var(--raspberry);
+}
+
+.atlas-error .btn-secondary {
+  margin-top: 12px;
 }
 
 .atlas-result .card {
@@ -27,38 +59,77 @@
   margin-left: 8px;
 }
 
+.atlas-local-name {
+  font-weight: 400;
+  opacity: 0.75;
+  font-size: 0.75em;
+}
+
+.atlas-tagline {
+  font-style: italic;
+  color: var(--raspberry);
+}
+
+.atlas-era {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.atlas-flavor-notes {
+  margin-top: 12px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
 .recipe-heading {
   margin-top: 8px;
 }
 
-.atlas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 16px;
-}
-
-.atlas-browse {
-  margin-top: 8px;
-}
-
-.atlas-card {
+.atlas-recipe-meta {
   display: flex;
-  flex-direction: column;
-  text-align: left;
-  width: 100%;
-  font: inherit;
-  cursor: pointer;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
 }
 
-.atlas-location {
-  font-size: 13px;
+.atlas-ingredient-group h4 {
+  color: var(--raspberry);
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--raspberry);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
-.atlas-card p:not(.atlas-location) {
-  flex-grow: 1;
-  font-size: 15px;
+.atlas-ingredient-group {
+  margin-bottom: 16px;
+}
+
+.ingredient-list,
+.step-list {
+  padding-left: 20px;
+  margin: 0 0 12px;
+}
+
+.ingredient-list li,
+.step-list li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.ingredient-qty {
+  font-weight: 600;
+  color: var(--cocoa-strong);
+}
+
+.atlas-baker-notes {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
 }

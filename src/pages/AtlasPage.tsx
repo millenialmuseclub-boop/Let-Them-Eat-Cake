@@ -1,104 +1,141 @@
-import { useMemo, useState } from 'react'
-import { getCake, getRecipe, regions } from '../lib/data'
-import { getAllCountries, getCountryEntries, getPrimaryEntry } from '../lib/atlas'
-import { RecipeCard } from '../components/RecipeCard'
+import { useState, type FormEvent } from 'react'
+import { lookupCakeForLocation } from '../lib/atlas'
+import type { AiCakeResult, IngredientCategory } from '../types/atlas'
 import './AtlasPage.css'
 
-export function AtlasPage() {
-  const allCountries = useMemo(() => getAllCountries(), [])
-  const [query, setQuery] = useState('')
-  const [country, setCountry] = useState<string | null>(null)
-  const [selectedEntryId, setSelectedEntryId] = useState<string | null>(null)
+const INGREDIENT_CATEGORY_ORDER: IngredientCategory[] = ['Cake Base', 'Filling', 'Frosting', 'Decor']
 
-  function handleSearch(value: string) {
-    setQuery(value)
-    const match = allCountries.find((c) => c.toLowerCase() === value.toLowerCase())
-    if (match) {
-      setCountry(match)
-      setSelectedEntryId(getPrimaryEntry(match)?.id ?? null)
-    } else {
-      setCountry(null)
-      setSelectedEntryId(null)
+const EXAMPLE_LOCATIONS = ['Vienna, Austria', 'Hokkaido, Japan', 'Tuscany, Italy', 'Lagos, Nigeria']
+
+export function AtlasPage() {
+  const [query, setQuery] = useState('')
+  const [status, setStatus] = useState<'idle' | 'loading' | 'error' | 'done'>('idle')
+  const [error, setError] = useState<string | null>(null)
+  const [result, setResult] = useState<AiCakeResult | null>(null)
+
+  async function handleSearch(e: FormEvent) {
+    e.preventDefault()
+    if (!query.trim()) return
+    setStatus('loading')
+    setError(null)
+    try {
+      const data = await lookupCakeForLocation(query.trim())
+      setResult(data)
+      setStatus('done')
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong.')
+      setStatus('error')
     }
   }
-
-  const countryEntries = country ? getCountryEntries(country) : []
-  const selectedEntry = countryEntries.find((e) => e.id === selectedEntryId) ?? null
-  const selectedCake = selectedEntry ? getCake(selectedEntry.cakeId) : null
-  const selectedRecipe = selectedEntry ? getRecipe(selectedEntry.recipeId) : null
-  const otherEntries = countryEntries.filter((e) => e.id !== selectedEntryId)
 
   return (
     <main className="page atlas-page">
       <h1>Global Cake Atlas</h1>
-      <p>Search a country to find its most popular cake, complete with a full recipe and background story.</p>
+      <p>Search any city, region, or country to discover its most iconic cake — history and full recipe included.</p>
 
-      <div className="atlas-search">
+      <form className="atlas-search" onSubmit={handleSearch}>
         <input
           type="text"
-          list="atlas-countries"
-          placeholder="Search a country (e.g. Japan, Mexico, Sweden)"
+          placeholder="e.g. Vienna, Austria"
           value={query}
-          onChange={(e) => handleSearch(e.target.value)}
+          onChange={(e) => setQuery(e.target.value)}
         />
-        <datalist id="atlas-countries">
-          {allCountries.map((c) => (
-            <option key={c} value={c} />
+        <button type="submit" className="btn" disabled={status === 'loading'}>
+          {status === 'loading' ? 'Searching…' : 'Search'}
+        </button>
+      </form>
+
+      {status === 'idle' && (
+        <div className="atlas-examples">
+          <span>Try:</span>
+          {EXAMPLE_LOCATIONS.map((loc) => (
+            <button key={loc} className="atlas-example-chip" onClick={() => setQuery(loc)}>
+              {loc}
+            </button>
           ))}
-        </datalist>
-      </div>
+        </div>
+      )}
 
-      {query && !country && <p className="atlas-empty">No country matches "{query}" yet — try one from the suggestions.</p>}
+      {status === 'loading' && <p className="atlas-status">Consulting the culinary archives…</p>}
 
-      {selectedEntry && selectedCake && selectedRecipe && (
+      {status === 'error' && (
+        <div className="card atlas-error">
+          <p>{error}</p>
+          <button className="btn btn-secondary" onClick={() => setStatus('idle')}>
+            Try again
+          </button>
+        </div>
+      )}
+
+      {status === 'done' && result && (
         <section className="atlas-result">
           <div className="card">
-            <span className="tag">{country}</span>
-            {selectedEntry.cityMicroRegion && <span className="tag atlas-city-tag">{selectedEntry.cityMicroRegion}</span>}
-            <h2>{selectedCake.name}</h2>
-            <p>{selectedCake.description}</p>
+            <span className="tag">{result.resolved_location.country}</span>
+            {result.resolved_location.region_state && <span className="tag atlas-city-tag">{result.resolved_location.region_state}</span>}
+            {result.resolved_location.city && <span className="tag atlas-city-tag">{result.resolved_location.city}</span>}
+            <h2>
+              {result.cake.name}
+              {result.cake.local_name && <span className="atlas-local-name"> ({result.cake.local_name})</span>}
+            </h2>
+            <p className="atlas-tagline">{result.cake.tagline}</p>
+
             <h3>Background story</h3>
-            <p>{selectedEntry.historyNote}</p>
+            <p className="atlas-era">{result.cake.origin.creation_era}</p>
+            <p>{result.cake.origin.history_and_significance}</p>
+
+            <p className="atlas-flavor-notes">Flavor notes: {result.cake.key_flavor_profile.join(', ')}</p>
           </div>
 
           <h2 className="recipe-heading">Recipe</h2>
-          <RecipeCard key={selectedRecipe.id} recipe={selectedRecipe} />
+          <div className="card">
+            <div className="atlas-recipe-meta">
+              <span>
+                <strong>Prep:</strong> {result.cake.recipe.prep_time}
+              </span>
+              <span>
+                <strong>Bake:</strong> {result.cake.recipe.bake_time}
+              </span>
+              <span>
+                <strong>Difficulty:</strong> {result.cake.recipe.difficulty}
+              </span>
+              <span>
+                <strong>Servings:</strong> {result.cake.recipe.servings}
+              </span>
+            </div>
 
-          {otherEntries.length > 0 && (
-            <>
-              <h2 className="recipe-heading">Other favorites from {country}</h2>
-              <div className="atlas-grid">
-                {otherEntries.map((entry) => {
-                  const cake = getCake(entry.cakeId)
-                  return (
-                    <button key={entry.id} className="card atlas-card" onClick={() => setSelectedEntryId(entry.id)}>
-                      {entry.cityMicroRegion && <p className="atlas-location">{entry.cityMicroRegion}</p>}
-                      <h3>{cake?.name}</h3>
-                      <p>{entry.shortDescription}</p>
-                    </button>
-                  )
-                })}
+            <h3>Ingredients</h3>
+            {INGREDIENT_CATEGORY_ORDER.filter((category) =>
+              result.cake.recipe.ingredients.some((ing) => ing.category === category),
+            ).map((category) => (
+              <div key={category} className="atlas-ingredient-group">
+                <h4>{category}</h4>
+                <ul className="ingredient-list">
+                  {result.cake.recipe.ingredients
+                    .filter((ing) => ing.category === category)
+                    .map((ing, i) => (
+                      <li key={i}>
+                        <span className="ingredient-qty">
+                          {ing.amount} {ing.unit}
+                        </span>{' '}
+                        {ing.item}
+                      </li>
+                    ))}
+                </ul>
               </div>
-            </>
-          )}
-        </section>
-      )}
+            ))}
 
-      {!country && !query && (
-        <div className="atlas-grid atlas-browse">
-          {regions
-            .filter((r) => r.isPrimary)
-            .map((entry) => {
-              const cake = getCake(entry.cakeId)
-              return (
-                <button key={entry.id} className="card atlas-card" onClick={() => handleSearch(entry.country)}>
-                  <p className="atlas-location">{entry.country}</p>
-                  <h3>{cake?.name}</h3>
-                  <p>{entry.shortDescription}</p>
-                </button>
-              )
-            })}
-        </div>
+            <h3>Steps</h3>
+            <ol className="step-list">
+              {result.cake.recipe.instructions.map((step, i) => (
+                <li key={i}>{step}</li>
+              ))}
+            </ol>
+
+            <div className="atlas-baker-notes">
+              <strong>Baker's notes:</strong> {result.cake.recipe.baker_notes}
+            </div>
+          </div>
+        </section>
       )}
     </main>
   )
