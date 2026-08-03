@@ -1,0 +1,27 @@
+.cake-illustration {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.cake-board {
+  fill: var(--cocoa-strong);
+  opacity: 0.35;
+}
+
+.cake-frosting {
+  stroke: var(--border);
+  stroke-width: 1.5;
+}
+
+.cake-layer {
+  stroke: var(--bg-card);
+  stroke-width: 1;
+}
+
+.cake-garnish-dot {
+  stroke: var(--bg-card);
+  stroke-width: 1;
+}

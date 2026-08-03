@@ -9,6 +9,7 @@ const LINKS = [
   { to: '/persona-match', label: 'Persona Match' },
   { to: '/pantry-raid', label: 'Pantry Raid' },
   { to: '/wedding-cake-planner', label: 'Wedding Cake Planner' },
+  { to: '/assembly-lab', label: 'Assembly Lab' },
 ]
 
 export function NavBar() {

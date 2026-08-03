@@ -7,6 +7,7 @@ import { SommelierPage } from './pages/SommelierPage'
 import { PersonaMatchPage } from './pages/PersonaMatchPage'
 import { PantryRaidPage } from './pages/PantryRaidPage'
 import { WeddingCakePlannerPage } from './pages/WeddingCakePlannerPage'
+import { AssemblyLabPage } from './pages/AssemblyLabPage'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/persona-match" element={<PersonaMatchPage />} />
         <Route path="/pantry-raid" element={<PantryRaidPage />} />
         <Route path="/wedding-cake-planner" element={<WeddingCakePlannerPage />} />
+        <Route path="/assembly-lab" element={<AssemblyLabPage />} />
       </Routes>
     </>
   )

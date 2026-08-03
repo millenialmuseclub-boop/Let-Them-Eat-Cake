@@ -32,6 +32,11 @@ const FEATURES = [
     title: 'Wedding Cake Planner',
     description: 'Set your culture, guest count, season, and aesthetic to get a full master planning sheet — structure, flavors, allergens, and decor.',
   },
+  {
+    to: '/assembly-lab',
+    title: 'Assembly Lab',
+    description: 'Pick a sponge, filling, frosting, and garnish, watch your cake come together live, and get the full recipe to bake it.',
+  },
 ]
 
 export function HomePage() {

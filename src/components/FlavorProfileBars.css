@@ -1,0 +1,29 @@
+.profile-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-bar-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-bar-label {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.profile-bar-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.profile-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+}
