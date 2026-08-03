@@ -8,6 +8,7 @@ const LINKS = [
   { to: '/sommelier', label: 'Sommelier' },
   { to: '/persona-match', label: 'Persona Match' },
   { to: '/pantry-raid', label: 'Pantry Raid' },
+  { to: '/wedding-cake-planner', label: 'Wedding Cake Planner' },
 ]
 
 export function NavBar() {

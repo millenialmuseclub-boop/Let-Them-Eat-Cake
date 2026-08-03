@@ -27,6 +27,11 @@ const FEATURES = [
     title: 'Pantry Raid',
     description: "Check off what's in your kitchen and find the emergency cake that needs the least shopping.",
   },
+  {
+    to: '/wedding-cake-planner',
+    title: 'Wedding Cake Planner',
+    description: 'Set your culture, guest count, season, and aesthetic to get a full master planning sheet — structure, flavors, allergens, and decor.',
+  },
 ]
 
 export function HomePage() {

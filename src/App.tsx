@@ -6,6 +6,7 @@ import { AtlasPage } from './pages/AtlasPage'
 import { SommelierPage } from './pages/SommelierPage'
 import { PersonaMatchPage } from './pages/PersonaMatchPage'
 import { PantryRaidPage } from './pages/PantryRaidPage'
+import { WeddingCakePlannerPage } from './pages/WeddingCakePlannerPage'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/sommelier" element={<SommelierPage />} />
         <Route path="/persona-match" element={<PersonaMatchPage />} />
         <Route path="/pantry-raid" element={<PantryRaidPage />} />
+        <Route path="/wedding-cake-planner" element={<WeddingCakePlannerPage />} />
       </Routes>
     </>
   )
