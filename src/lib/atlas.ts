@@ -1,16 +1,15 @@
-import type { AiCakeResult } from '../types/atlas'
+import { regions } from './data'
+import type { RegionalCakeEntry } from '../types/atlas'
 
-export async function lookupCakeForLocation(location: string): Promise<AiCakeResult> {
-  const response = await fetch('/api/atlas-lookup', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ location }),
-  })
+export function getAllCountries(): string[] {
+  return Array.from(new Set(regions.map((r) => r.country))).sort()
+}
 
-  if (!response.ok) {
-    const body = await response.json().catch(() => null)
-    throw new Error(body?.error ?? `Lookup failed with status ${response.status}`)
-  }
+export function getCountryEntries(country: string): RegionalCakeEntry[] {
+  return regions.filter((r) => r.country.toLowerCase() === country.toLowerCase())
+}
 
-  return response.json() as Promise<AiCakeResult>
+export function getPrimaryEntry(country: string): RegionalCakeEntry | undefined {
+  const entries = getCountryEntries(country)
+  return entries.find((e) => e.isPrimary) ?? entries[0]
 }

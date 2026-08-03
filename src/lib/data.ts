@@ -1,16 +1,19 @@
 import cakesJson from '../data/cakes.json'
 import decadesJson from '../data/decades.json'
 import recipesJson from '../data/recipes.json'
+import regionsJson from '../data/regions.json'
 import drinksJson from '../data/drinks.json'
 import emergencyRecipesJson from '../data/emergency-recipes.json'
 import type { CakeProfile, Recipe } from '../types/cake'
 import type { HistoricalCakeEntry } from '../types/timeMachine'
+import type { RegionalCakeEntry } from '../types/atlas'
 import type { DrinkProfile } from '../types/sommelier'
 import type { EmergencyRecipe } from '../types/pantry'
 
 export const cakes = cakesJson as CakeProfile[]
 export const decades = decadesJson as HistoricalCakeEntry[]
 export const recipes = recipesJson as Recipe[]
+export const regions = regionsJson as RegionalCakeEntry[]
 export const drinks = drinksJson as DrinkProfile[]
 export const emergencyRecipes = emergencyRecipesJson as EmergencyRecipe[]
 

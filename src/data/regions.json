@@ -1,0 +1,456 @@
+[
+  {
+    "id": "region_tres_leches",
+    "region": "Latin America",
+    "country": "Mexico",
+    "cakeId": "cake_tres_leches",
+    "recipeId": "recipe_tres_leches",
+    "shortDescription": "A sponge soaked in three milks until custardy, one of the most-ordered desserts across Latin America.",
+    "historyNote": "Tres leches cake's exact origin is debated across Mexico, Nicaragua, and other Latin American countries, but its rise tracks closely with the mid-20th-century popularity of canned condensed and evaporated milk, which Nestlé began printing recipes for on its labels. The cake became a fixture of birthdays and quinceañeras because it could be made a day ahead — the soak only improves overnight.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_chocoflan",
+    "region": "Latin America",
+    "country": "Mexico",
+    "cakeId": "cake_chocoflan",
+    "recipeId": "recipe_chocoflan",
+    "shortDescription": "The 'impossible cake' — chocolate cake and caramel flan that swap layers in the oven as they bake.",
+    "historyNote": "Also called 'pastel imposible' (impossible cake), chocoflan relies on a quirk of density: the flan batter sinks below the chocolate cake batter in the oven, then the two swap places as they bake, so the flan ends up on top once the pan is flipped. It became a mainstay of Mexican home baking in the mid-20th century as canned caramel and flan mixes grew widely available.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_bizcocho_dominicano",
+    "region": "Latin America",
+    "country": "Dominican Republic",
+    "cakeId": "cake_bizcocho_dominicano",
+    "recipeId": "recipe_bizcocho_dominicano",
+    "shortDescription": "The centerpiece of Dominican birthdays, soaked in syrup and finished with glossy meringue buttercream.",
+    "historyNote": "Unlike American buttercream, the meringue-based frosting on a bizcocho dominicano is whipped with hot sugar syrup, giving it a glossy, marshmallow-like finish that holds up in Caribbean heat. No Dominican birthday, wedding, or quinceañera is considered complete without one, often decorated with elaborate piped flowers.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_kladdkaka",
+    "region": "Europe",
+    "country": "Sweden",
+    "cakeId": "cake_kladdkaka",
+    "recipeId": "recipe_kladdkaka",
+    "shortDescription": "Sweden's 'sticky cake', a thin fudgy chocolate bake meant to stay gooey at the center.",
+    "historyNote": "Kladdkaka means 'sticky cake' in Swedish, and recipes for it began circulating in home-cooking magazines in the 1990s as an antidote to more finicky French-style tortes. It's deliberately pulled from the oven before it fully sets, and is traditionally served with a dusting of powdered sugar and a dollop of softly whipped cream.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_medovik",
+    "region": "Europe",
+    "country": "Russia",
+    "cakeId": "cake_medovik",
+    "recipeId": "recipe_medovik",
+    "shortDescription": "Wafer-thin honey layers rested for a day under sour-cream frosting until they soften into a torte.",
+    "historyNote": "Legend credits Medovik's invention to a court chef of Tsar Alexander I's wife, who reportedly disliked honey until she was served this cake without knowing what was in it. The thin layers are baked separately and stacked while still warm, then left to rest for a day so the sour-cream frosting softens them into a torte.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_kouign_amann",
+    "region": "Europe",
+    "country": "France",
+    "cityMicroRegion": "Brittany",
+    "cakeId": "cake_kouign_amann",
+    "recipeId": "recipe_kouign_amann",
+    "shortDescription": "A Breton laminated pastry cake, folded with layer upon layer of butter and sugar until it caramelizes.",
+    "historyNote": "Invented in the Breton town of Douarnenez in the 1860s by a baker who folded leftover bread dough with butter and sugar rather than throw it out, kouign-amann's name literally means 'butter cake' in Breton. It wasn't well known outside Brittany until the 2010s, when American bakeries popularized a muffin-tin version.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_basque_cheesecake",
+    "region": "Europe",
+    "country": "Spain",
+    "cityMicroRegion": "San Sebastián",
+    "cakeId": "cake_basque_burnt_cheesecake",
+    "recipeId": "recipe_basque_burnt_cheesecake",
+    "shortDescription": "Born at a small San Sebastián bar, this scorched crustless cheesecake later defined the 2020s worldwide.",
+    "historyNote": "Created in the 1990s at La Viña, a small bar in San Sebastián's old town, the cake was originally just called 'tarta de queso' — cheesecake — with no crust and a deliberately scorched top the chef considered a happy accident. It stayed a regional secret for two decades before a wave of social media videos in 2019-2020 made 'burnt Basque cheesecake' one of the most searched desserts in the world.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_sachertorte",
+    "region": "Europe",
+    "country": "Austria",
+    "cityMicroRegion": "Vienna",
+    "cakeId": "cake_sachertorte",
+    "recipeId": "recipe_sachertorte",
+    "shortDescription": "A dense chocolate torte with a thin apricot jam layer, at the center of a decades-long ownership dispute between two Viennese institutions.",
+    "historyNote": "Created in 1832 by a 16-year-old apprentice chef, Franz Sacher, who was filling in for his ill boss at a dinner for Prince Wenzel von Metternich. The cake sparked a decades-long legal battle between Vienna's Hotel Sacher and the Demel bakery over which one could call its version the 'Original Sachertorte,' finally settled by an Austrian court in 1963.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_mawa_cake",
+    "region": "Asia & Middle East",
+    "country": "India",
+    "cityMicroRegion": "Mumbai",
+    "cakeId": "cake_mawa_cake",
+    "recipeId": "recipe_mawa_cake",
+    "shortDescription": "A Parsi bakery classic enriched with reduced milk solids and cardamom, found in Mumbai's Irani cafés.",
+    "historyNote": "A specialty of Mumbai's Irani cafés — coffee houses founded by Zoroastrian immigrants from Iran in the early 20th century — mawa cake gets its dense, milky richness from mawa (khoya), milk simmered for hours until it reduces to a solid. Once a common afternoon snack in these cafés, it's now sought out specifically as many of the original Irani cafés have closed.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_pandan_chiffon",
+    "region": "Asia & Middle East",
+    "country": "Singapore",
+    "cakeId": "cake_pandan_chiffon",
+    "recipeId": "recipe_pandan_chiffon",
+    "shortDescription": "A featherlight chiffon cake colored and flavored with pandan leaf, a staple across Southeast Asian bakeries.",
+    "historyNote": "Chiffon cake itself was invented in 1920s Los Angeles and kept secret by its creator for 20 years before he sold the recipe to Betty Crocker. When the technique reached Southeast Asia, bakers swapped in pandan leaf — used across the region's sweet and savory cooking for its vanilla-grassy aroma — creating what's now considered a defining Singaporean and Malaysian bake.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_basbousa",
+    "region": "Asia & Middle East",
+    "country": "Egypt",
+    "cakeId": "cake_basbousa",
+    "recipeId": "recipe_basbousa",
+    "shortDescription": "A semolina cake soaked in orange blossom syrup, served across the Levant and North Africa.",
+    "historyNote": "Basbousa's semolina base and syrup-soaking technique connect it to a wider family of desserts across the former Ottoman Empire, related to Turkish revani and Greek ravani. In Egypt it's traditionally made to celebrate the end of Ramadan and other festive occasions, though it's eaten year-round today.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_japanese_souffle_cheesecake",
+    "region": "Asia & Middle East",
+    "country": "Japan",
+    "cakeId": "cake_japanese_souffle_cheesecake",
+    "recipeId": "recipe_japanese_souffle_cheesecake",
+    "shortDescription": "A meringue-lightened cheesecake baked in a water bath until it jiggles like a cloud.",
+    "historyNote": "Japanese confectioner Tomotaro Kuzuno is credited with developing the technique in the 1960s after tasting a German käsekuchen and wanting a lighter version suited to Japanese tastes. The exaggerated jiggle became its signature, and videos of the cake wobbling went viral internationally in the 2010s, cementing it as one of Japan's best-known dessert exports.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_castella",
+    "region": "Asia & Middle East",
+    "country": "Japan",
+    "cityMicroRegion": "Nagasaki",
+    "cakeId": "cake_castella",
+    "recipeId": "recipe_castella",
+    "shortDescription": "A tall honey sponge cake of Portuguese origin, brought by traders and adapted into a Nagasaki specialty.",
+    "historyNote": "Portuguese traders introduced the sponge cake technique to Nagasaki in the 16th century, and Japanese bakers refined it over 400 years by removing dairy and adjusting the sugar to local taste. Fukusaya and Bunmeido, two of Nagasaki's oldest castella makers, still guard their exact recipes as closely held trade secrets.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_gooey_butter_cake",
+    "region": "North America",
+    "country": "United States",
+    "cityMicroRegion": "St. Louis, Missouri",
+    "cakeId": "cake_gooey_butter_cake",
+    "recipeId": "recipe_gooey_butter_cake",
+    "shortDescription": "Legend says a St. Louis baker mixed up the butter cake ratio by accident in the 1930s — the mistake stuck around.",
+    "historyNote": "As the story goes, a St. Louis bakery worker in the 1930s accidentally reversed the ratio of butter to flour in a coffee cake recipe, and rather than waste the ingredients, sold the gooey result anyway — customers kept coming back for it. St. Louis still celebrates it with an official 'Gooey Butter Cake Day.'",
+    "isPrimary": false
+  },
+  {
+    "id": "region_brooklyn_blackout",
+    "region": "North America",
+    "country": "United States",
+    "cityMicroRegion": "Brooklyn, New York",
+    "cakeId": "cake_brooklyn_blackout",
+    "recipeId": "recipe_brooklyn_blackout",
+    "shortDescription": "Named for WWII-era blackout drills near the Brooklyn Navy Yard, this triple-chocolate cake was an Ebinger's Bakery icon.",
+    "historyNote": "Created by Ebinger's Bakery, a Brooklyn institution from 1898 until it closed abruptly in 1972, the cake was named for the WWII civil-defense blackout drills held near the nearby Brooklyn Navy Yard. Its closure left such a void that home bakers spent decades trying to reverse-engineer the original recipe from memory.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_hummingbird_south",
+    "region": "North America",
+    "country": "United States",
+    "cityMicroRegion": "American South",
+    "cakeId": "cake_hummingbird",
+    "recipeId": "recipe_hummingbird",
+    "shortDescription": "Believed to have Jamaican roots before becoming the defining cake of Southern potlucks and church suppers.",
+    "historyNote": "Though it's now considered quintessentially Southern American, food historians trace the recipe's roots to Jamaica, where the hummingbird is the national bird and a similar banana-pineapple cake predates the American version. It's still unclear how the recipe crossed to the American South, but by the time Southern Living published it in 1978, it was already a well-loved local secret.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_lane_cake",
+    "region": "North America",
+    "country": "United States",
+    "cityMicroRegion": "Alabama",
+    "cakeId": "cake_lane_cake",
+    "recipeId": "recipe_lane_cake",
+    "shortDescription": "Created by Emma Rylander Lane in the 1890s and later immortalized in Harper Lee's To Kill a Mockingbird.",
+    "historyNote": "Emma Rylander Lane self-published the original recipe in her 1898 cookbook 'Some Good Things to Eat,' calling it simply 'Prize Cake' after it won a baking contest. It gained lasting fame decades later when Harper Lee had Miss Maudie bake one for Scout in To Kill a Mockingbird, cementing it as a symbol of Southern hospitality.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_malva_pudding",
+    "region": "Africa",
+    "country": "South Africa",
+    "cakeId": "cake_malva_pudding",
+    "recipeId": "recipe_malva_pudding",
+    "shortDescription": "A staple of South African Sunday lunches, served warm with custard or ice cream to melt into the sauce.",
+    "historyNote": "Despite the name, malva pudding contains no mallow — 'malva' likely refers to the pudding's soft, spongy texture. Apricot jam, a pantry staple across South Africa since Cape Dutch settlers began preserving fruit in the 17th century, is what gives the pudding its signature tang and color.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_pavlova",
+    "region": "Oceania",
+    "country": "Australia",
+    "cakeId": "cake_pavlova",
+    "recipeId": "recipe_pavlova",
+    "shortDescription": "The centerpiece of Christmas dinner in Australia and New Zealand, topped with whatever fruit is in season.",
+    "historyNote": "Named after Russian ballerina Anna Pavlova following her 1926 tour of Australia and New Zealand, the dessert is meant to evoke the lightness of her dancing — though both countries have argued for decades over which one actually invented it first. Food historians have found evidence supporting both claims, and the dispute remains unresolved to this day.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_lamington",
+    "region": "Oceania",
+    "country": "Australia",
+    "cakeId": "cake_lamington",
+    "recipeId": "recipe_lamington",
+    "shortDescription": "Named after a 19th-century Governor of Queensland, now celebrated every July 21 on National Lamington Day.",
+    "historyNote": "Named after Lord Lamington, Governor of Queensland from 1896 to 1901, the cake's exact origin story varies — some say his cook invented it out of necessity when unexpected guests arrived, others say it was named simply because it resembled the felt hats Lamington favored. Whatever the true story, Australia now marks July 21 as National Lamington Day.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_black_forest",
+    "region": "Europe",
+    "country": "Germany",
+    "cityMicroRegion": "Black Forest",
+    "cakeId": "cake_black_forest",
+    "recipeId": "recipe_black_forest",
+    "shortDescription": "Chocolate sponge, cherries, kirsch, and whipped cream layered into Germany's most exported dessert.",
+    "historyNote": "Schwarzwälder Kirschtorte takes its name not from the region's forests but from the traditional dress of Black Forest women, whose costume featured pom-poms styled after the cake's cherry garnish — or so one popular theory goes. It was first documented in a 1915 recipe by confectioner Josef Keller, though the version served today wasn't standardized until the 1930s.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_panettone",
+    "region": "Europe",
+    "country": "Italy",
+    "cityMicroRegion": "Milan",
+    "cakeId": "cake_panettone",
+    "recipeId": "recipe_panettone",
+    "shortDescription": "A tall, dome-shaped sweet bread studded with candied fruit, central to Milanese Christmas tables.",
+    "historyNote": "One popular legend traces panettone to a 15th-century Milanese kitchen mishap, where a scullery boy named Toni accidentally saved a burnt Christmas dessert by improvising a new one — 'pan de Toni,' or Toni's bread. Its long natural-yeast fermentation, sometimes taking days, is still considered the mark of a serious Milanese bakery.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_pastel_de_nata",
+    "region": "Europe",
+    "country": "Portugal",
+    "cityMicroRegion": "Belém, Lisbon",
+    "cakeId": "cake_pastel_de_nata",
+    "recipeId": "recipe_pastel_de_nata",
+    "shortDescription": "Custard tarts in blistered puff pastry, first baked by monks and still guarded as a closely held secret recipe.",
+    "historyNote": "Created before the 18th century by Catholic monks at the Jerónimos Monastery in Belém, who used leftover egg yolks (egg whites were used to starch monastic habits) to make the custard filling. When the monastery closed in 1834, the monks sold the recipe to a nearby sugar refinery, which still bakes them today as Pastéis de Belém — the exact recipe known only to a handful of confectioners.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_victoria_sponge",
+    "region": "Europe",
+    "country": "United Kingdom",
+    "cakeId": "cake_victoria_sponge",
+    "recipeId": "recipe_victoria_sponge",
+    "shortDescription": "Jam and cream sandwiched between two plain sponges, the standard by which British tea-time baking is measured.",
+    "historyNote": "Named for Queen Victoria, who was said to enjoy a slice with her afternoon tea, the cake's popularity also owes a debt to the 1840s introduction of baking powder, which made a reliably light sponge achievable in home kitchens for the first time. It remains the benchmark bake on The Great British Bake Off, where contestants are judged on the evenness of its rise.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_guinness_chocolate",
+    "region": "Europe",
+    "country": "Ireland",
+    "cakeId": "cake_guinness_chocolate",
+    "recipeId": "recipe_guinness_chocolate",
+    "shortDescription": "A rich stout-and-cocoa cake topped with cream cheese frosting styled to look like a pint's foamy head.",
+    "historyNote": "Stout has been used in Irish baking for generations since its dark, roasted bitterness balances the sweetness of chocolate, but the cake's modern popularity took off after Nigella Lawson published her version in the 2000s. Bakers traditionally leave the cream cheese frosting white and untinted, deliberately mimicking the head on a freshly poured pint.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_sernik",
+    "region": "Europe",
+    "country": "Poland",
+    "cakeId": "cake_sernik",
+    "recipeId": "recipe_sernik",
+    "shortDescription": "A dense baked cheesecake made from twaróg farmer's cheese, a fixture of Polish Sunday tables and Easter spreads.",
+    "historyNote": "Sernik relies on twaróg, a dry curd cheese pressed for days to remove moisture, giving Polish cheesecake a denser, less creamy texture than its American counterpart. It's traditionally served at Easter alongside mazurek and babka, and nearly every Polish family claims their grandmother's version is the definitive one.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_dobos_torte",
+    "region": "Europe",
+    "country": "Hungary",
+    "cityMicroRegion": "Budapest",
+    "cakeId": "cake_dobos_torte",
+    "recipeId": "recipe_dobos_torte",
+    "shortDescription": "Six thin sponge layers and chocolate buttercream topped with a caramel shard, engineered to survive travel without refrigeration.",
+    "historyNote": "Confectioner József Dobos unveiled the cake at the 1885 National General Exhibition in Budapest, designing its hard caramel top specifically so the cake could be shipped and kept without spoiling in an era before reliable refrigeration. Dobos refused to publish the recipe for years to protect his shop's exclusivity, only releasing it in 1906 as a gift to the Budapest Confectioners' Guild.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_revani",
+    "region": "Asia & Middle East",
+    "country": "Turkey",
+    "cakeId": "cake_revani",
+    "recipeId": "recipe_revani",
+    "shortDescription": "A syrup-soaked semolina cake found across the former Ottoman world under a dozen different names.",
+    "historyNote": "Revani is believed to take its name from Revani, a 15th-century Ottoman court poet, though the syrup-soaked semolina technique itself spread across the empire's former territories, resurfacing as basbousa in Egypt and ravani in Greece. It's traditionally served at celebrations, cut into diamonds and finished with a sprinkle of coconut or a single pistachio.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_karydopita",
+    "region": "Europe",
+    "country": "Greece",
+    "cakeId": "cake_karydopita",
+    "recipeId": "recipe_karydopita",
+    "shortDescription": "A spiced walnut cake drenched in honey syrup, traditionally made when autumn's walnut harvest comes in.",
+    "historyNote": "Karydopita has been made in Greek households for generations as a way to use the year's fresh walnut harvest, with breadcrumbs standing in for flour in older mountain-village versions where wheat was scarce. Its close cousin, ravani, uses semolina instead of nuts, and the two are often confused outside Greece despite being distinct cakes.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_moroccan_orange_almond",
+    "region": "Africa",
+    "country": "Morocco",
+    "cakeId": "cake_moroccan_orange_almond",
+    "recipeId": "recipe_moroccan_orange_almond",
+    "shortDescription": "A flourless cake of whole boiled oranges and ground almonds, naturally moist and gluten-free.",
+    "historyNote": "Though closely associated with Moroccan and broader Sephardic Jewish baking, versions of the whole-orange almond cake appear across the Mediterranean, likely spread through historical trade and migration around North Africa and southern Europe. Boiling the oranges whole — peel included — for over an hour breaks down the bitterness and is what gives the cake its intensely moist, almost pudding-like crumb.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_persian_love_cake",
+    "region": "Asia & Middle East",
+    "country": "Iran",
+    "cakeId": "cake_persian_love_cake",
+    "recipeId": "recipe_persian_love_cake",
+    "shortDescription": "A rose- and cardamom-scented almond cake said to have been baked to win the heart of a Persian prince.",
+    "historyNote": "The romantic backstory — a woman baking the cake to secretly win a prince's affection — is widely repeated but likely a modern invention rather than a documented historical event; the cake's real roots trace to Persian confectionery traditions built around rosewater, cardamom, and almonds. Regardless of origin, the name stuck, and the cake is now popular well beyond Iran across Persian diaspora baking.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_mooncake",
+    "region": "Asia & Middle East",
+    "country": "China",
+    "cakeId": "cake_mooncake",
+    "recipeId": "recipe_mooncake",
+    "shortDescription": "A dense pastry filled with lotus seed paste and salted egg yolk, exchanged during the Mid-Autumn Festival.",
+    "historyNote": "Mooncakes are tied to the Mid-Autumn Festival, a harvest celebration with roots over a thousand years old, and to a folk legend claiming that 14th-century rebels hid coded messages inside them to coordinate an uprising against Mongol rule. The embossed patterns pressed into each cake's top traditionally represent the moon, and the single egg yolk at the center is meant to evoke a full moon.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_korean_strawberry_cream",
+    "region": "Asia & Middle East",
+    "country": "South Korea",
+    "cakeId": "cake_korean_strawberry_cream",
+    "recipeId": "recipe_korean_strawberry_cream",
+    "shortDescription": "An airy sponge with barely-sweet whipped cream and fresh strawberries, South Korea's default birthday cake.",
+    "historyNote": "The style took hold in South Korea in the 1980s as Western-style bakeries spread, but local bakers lightened the cream and reduced the sugar to suit Korean tastes, creating a distinct national style now instantly recognizable across the country's cake shops. Strawberries are used specifically because their harvest season overlaps with Korea's winter birthday and Christmas cake season.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_ube_cake",
+    "region": "Asia & Middle East",
+    "country": "Philippines",
+    "cakeId": "cake_ube_cake",
+    "recipeId": "recipe_ube_cake",
+    "shortDescription": "A vividly purple cake flavored with ube halaya, the purple yam jam found in nearly every Filipino dessert case.",
+    "historyNote": "Ube has been used in Filipino desserts for generations, but the cake version gained international visibility as Filipino bakeries expanded abroad in the 2010s and its striking color made it a natural fit for social media. Purple yam jam, or ube halaya, is traditionally made by hand-stirring grated yam over low heat for hours until it thickens.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_banh_bo_nuong",
+    "region": "Asia & Middle East",
+    "country": "Vietnam",
+    "cakeId": "cake_banh_bo_nuong",
+    "recipeId": "recipe_banh_bo_nuong",
+    "shortDescription": "A pandan-scented baked honeycomb cake prized for the airy tunnel of holes inside each chewy slice.",
+    "historyNote": "Bánh bò nướng is the baked cousin of the steamed bánh bò hấp, and its honeycomb structure comes from a long yeast fermentation that fills the batter with air pockets before it ever reaches the oven. The tapioca starch base, unusual outside Southeast Asian baking, gives it a distinctly chewy, springy bite rather than a typical soft crumb.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_khanom_chan",
+    "region": "Asia & Middle East",
+    "country": "Thailand",
+    "cakeId": "cake_khanom_chan",
+    "recipeId": "recipe_khanom_chan",
+    "shortDescription": "A steamed layered coconut cake traditionally made with nine layers for good luck.",
+    "historyNote": "Khanom chan is traditionally steamed in exactly nine layers, since 'chan' means both 'layer' and is a homophone for a Thai word associated with progress and prosperity, making the cake a common gift at housewarmings and promotions. Each layer must fully set before the next is poured, a process that can take well over an hour for a single cake.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_lapis_legit",
+    "region": "Asia & Middle East",
+    "country": "Indonesia",
+    "cakeId": "cake_lapis_legit",
+    "recipeId": "recipe_lapis_legit",
+    "shortDescription": "A spiced Indonesian layer cake built one thin sheet at a time under the broiler, sometimes 20 layers deep.",
+    "historyNote": "Lapis legit developed during the Dutch colonial period as a fusion of Dutch layer-cake technique with local spices like cinnamon, clove, and nutmeg, and its name literally means 'sticky layers' in Indonesian. A single cake can take hours to bake since each thin layer is broiled individually, making it a traditional centerpiece for Lebaran and other major celebrations.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_brigadeiro_cake",
+    "region": "Latin America",
+    "country": "Brazil",
+    "cakeId": "cake_brigadeiro_cake",
+    "recipeId": "recipe_brigadeiro_cake",
+    "shortDescription": "A chocolate cake frosted with brigadeiro, Brazil's beloved condensed-milk fudge, and buried in sprinkles.",
+    "historyNote": "Brigadeiro fudge itself is said to date to the 1940s, named after Brigadier Eduardo Gomes and sold at rallies to fund his political campaign, and Brazilians eventually began spreading the same condensed-milk fudge over cake layers instead of rolling it into truffles. It's now the default birthday cake across Brazil, always finished with a heavy layer of chocolate sprinkles called granulado.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_nanaimo_bar",
+    "region": "North America",
+    "country": "Canada",
+    "cityMicroRegion": "Nanaimo, British Columbia",
+    "cakeId": "cake_nanaimo_bar",
+    "recipeId": "recipe_nanaimo_bar",
+    "shortDescription": "A no-bake bar cake of coconut-crumb base, custard filling, and chocolate topping, named for its coastal BC hometown.",
+    "historyNote": "Named after the city of Nanaimo on Vancouver Island, the bar's exact inventor is unknown despite the city holding an official recipe contest in the 1980s to try to settle the question, receiving over 100 competing 'original' recipes. Its three no-bake layers made it a practical potluck staple decades before it became one of Canada's most recognized desserts.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_torta_rogel",
+    "region": "Latin America",
+    "country": "Argentina",
+    "cakeId": "cake_torta_rogel",
+    "recipeId": "recipe_torta_rogel",
+    "shortDescription": "Paper-thin pastry discs stacked with dulce de leche and crowned in torched Italian meringue.",
+    "historyNote": "Rogel takes its name from its creator, a Buenos Aires baker whose exact identity has been lost to history, though the cake's reliance on dulce de leche places it firmly in Argentina's broader confectionery tradition. Making the wafer-thin pastry discs evenly is considered a benchmark of skill among home bakers, since a single overly thick layer throws off the whole cake's balance.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_torta_mil_hojas",
+    "region": "Latin America",
+    "country": "Chile",
+    "cakeId": "cake_torta_mil_hojas",
+    "recipeId": "recipe_torta_mil_hojas",
+    "shortDescription": "Chile's 'thousand-leaf' cake, layers of crisp puff pastry filled with manjar and dusted heavily in powdered sugar.",
+    "historyNote": "Torta mil hojas descends from French mille-feuille but took on its own identity in Chile, where manjar — the local name for dulce de leche — replaced pastry cream as the traditional filling. It's a fixture of Chilean birthdays and Fiestas Patrias celebrations, usually bought from a neighborhood pastelería rather than made at home given how finicky the pastry layers are.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_louise_cake",
+    "region": "Oceania",
+    "country": "New Zealand",
+    "cakeId": "cake_louise_cake",
+    "recipeId": "recipe_louise_cake",
+    "shortDescription": "A traybake of shortbread base, raspberry jam, and toasted coconut meringue, a staple of New Zealand school lunches.",
+    "historyNote": "Louise cake has been a fixture of New Zealand home baking and school fundraiser tables for generations, though like many traybakes of its era, no clear record survives of who 'Louise' actually was. Its combination of a firm shortbread base and a chewy coconut meringue top makes it sturdy enough to travel well in a lunchbox, which likely explains its lasting popularity.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_kransekake",
+    "region": "Europe",
+    "country": "Norway",
+    "cakeId": "cake_kransekake",
+    "recipeId": "recipe_kransekake",
+    "shortDescription": "A towering ring cake of stacked almond rings, built for Norwegian weddings, graduations, and New Year's Eve.",
+    "historyNote": "Kransekake, meaning 'wreath cake,' is built from 18 graduated almond-paste rings stacked into a cone and traditionally decorated with paper flags and crackers tucked between the layers. It's less a dessert to be cut cleanly than a centerpiece meant to be dismantled ring by ring as guests pull pieces from the tower.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_runeberg_torte",
+    "region": "Europe",
+    "country": "Finland",
+    "cakeId": "cake_runeberg_torte",
+    "recipeId": "recipe_runeberg_torte",
+    "shortDescription": "A small rum-and-almond spice cake topped with jam and an icing ring, eaten every February 5th across Finland.",
+    "historyNote": "Named after Finland's national poet Johan Ludvig Runeberg, the cake is said to have been his favorite breakfast, supposedly invented by his wife Fredrika using leftover stale cookie crumbs so nothing went to waste. Finns still bake it specifically on Runeberg's birthday, February 5th, when bakeries across the country sell little else.",
+    "isPrimary": true
+  }
+]

@@ -232,5 +232,197 @@
     "flavorNotes": ["cocoa", "coconut", "vanilla"],
     "texture": "sponge",
     "personaTags": { "zodiacElements": ["air"], "moods": ["lazy-weekend", "pure-hype"], "aesthetics": ["cottagecore"] }
+  },
+  {
+    "id": "cake_black_forest",
+    "name": "Black Forest Cake",
+    "description": "A dark chocolate sponge layered with cherries, whipped cream, and a splash of cherry brandy.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 4, "acidity": 2, "intensity": 3 },
+    "flavorNotes": ["dark chocolate", "cherry", "kirsch"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_panettone",
+    "name": "Panettone",
+    "description": "A tall, airy, dome-shaped yeasted sweet bread studded with candied fruit and raisins.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["candied citrus", "raisin", "vanilla"],
+    "texture": "sponge"
+  },
+  {
+    "id": "cake_pastel_de_nata",
+    "name": "Pastel de Nata",
+    "description": "A custard tart in a flaky, laminated pastry shell, blistered and caramelized on top.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["egg custard", "cinnamon", "caramel"],
+    "texture": "creamy"
+  },
+  {
+    "id": "cake_victoria_sponge",
+    "name": "Victoria Sponge Cake",
+    "description": "Two vanilla sponge layers sandwiched with raspberry jam and whipped cream.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 2, "intensity": 1 },
+    "flavorNotes": ["vanilla", "raspberry jam", "cream"],
+    "texture": "sponge"
+  },
+  {
+    "id": "cake_guinness_chocolate",
+    "name": "Guinness Chocolate Cake",
+    "description": "A dark, moist stout-infused chocolate cake topped with a cream cheese frosting styled like a pint's foam head.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 1, "intensity": 4 },
+    "flavorNotes": ["stout", "dark chocolate", "cream cheese"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_sernik",
+    "name": "Sernik",
+    "description": "A dense, baked Polish cheesecake made with farmer's cheese, traditionally set on a shortcrust base.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 4, "acidity": 2, "intensity": 2 },
+    "flavorNotes": ["cream cheese", "vanilla", "lemon zest"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_dobos_torte",
+    "name": "Dobos Torte",
+    "description": "A multi-layer sponge cake filled with chocolate buttercream and crowned with a shatteringly thin caramel top.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 4, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["chocolate buttercream", "caramel"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_revani",
+    "name": "Revani",
+    "description": "A semolina cake soaked in citrus syrup until dense and moist, popular across the former Ottoman world.",
+    "flavorProfile": { "sweetness": 5, "fatRichness": 2, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["semolina", "lemon syrup", "coconut"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_karydopita",
+    "name": "Karydopita",
+    "description": "A spiced Greek walnut cake soaked in honey syrup, dense and fragrant with cinnamon and clove.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["walnut", "cinnamon", "honey syrup"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_moroccan_orange_almond",
+    "name": "Moroccan Orange Almond Cake",
+    "description": "A flourless cake made from whole boiled oranges and ground almonds, naturally moist and gluten-free.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 3, "intensity": 2 },
+    "flavorNotes": ["orange", "almond", "cardamom"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_persian_love_cake",
+    "name": "Persian Love Cake",
+    "description": "A rose- and cardamom-scented almond cake, delicately spiced and topped with pistachios.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 2, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["rose water", "cardamom", "pistachio"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_mooncake",
+    "name": "Mooncake",
+    "description": "A dense, round pastry with a rich lotus seed filling, traditionally centered around a salted egg yolk.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["lotus seed", "salted egg yolk", "five-spice"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_korean_strawberry_cream",
+    "name": "Korean Strawberry Cream Cake",
+    "description": "A featherlight sponge layered with whipped cream and fresh strawberries, minimally sweetened.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 2, "intensity": 1 },
+    "flavorNotes": ["strawberry", "whipped cream", "vanilla"],
+    "texture": "sponge"
+  },
+  {
+    "id": "cake_ube_cake",
+    "name": "Ube Cake",
+    "description": "A vividly purple Filipino cake flavored with ube (purple yam), moist and lightly coconut-scented.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 2, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["ube", "coconut", "vanilla"],
+    "texture": "sponge"
+  },
+  {
+    "id": "cake_banh_bo_nuong",
+    "name": "Bánh Bò Nướng",
+    "description": "A baked Vietnamese honeycomb cake with a distinctively chewy, spongy texture riddled with tiny air pockets.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["coconut", "pandan", "tapioca"],
+    "texture": "sponge"
+  },
+  {
+    "id": "cake_khanom_chan",
+    "name": "Khanom Chan",
+    "description": "A steamed Thai layered cake made from alternating thin coconut and pandan batters, traditionally nine layers deep.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["coconut milk", "pandan", "jasmine"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_lapis_legit",
+    "name": "Lapis Legit",
+    "description": "An Indonesian spiced layer cake built from dozens of thin, individually baked layers, rich with butter and warm spices.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 5, "acidity": 1, "intensity": 4 },
+    "flavorNotes": ["clove", "cinnamon", "butter"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_brigadeiro_cake",
+    "name": "Brazilian Brigadeiro Cake",
+    "description": "A chocolate sponge covered in thick, fudgy brigadeiro frosting and showered with chocolate sprinkles.",
+    "flavorProfile": { "sweetness": 5, "fatRichness": 3, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["condensed milk", "cocoa", "chocolate sprinkles"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_nanaimo_bar",
+    "name": "Nanaimo Bar",
+    "description": "A no-bake, three-layer Canadian bar with a coconut-crumb base, custard filling, and chocolate topping.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 4, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["coconut", "custard", "chocolate"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_torta_rogel",
+    "name": "Torta Rogel",
+    "description": "Thin, crisp Argentine pastry wafers stacked with dulce de leche and crowned with torched Italian meringue.",
+    "flavorProfile": { "sweetness": 5, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["dulce de leche", "meringue"],
+    "texture": "crumbly"
+  },
+  {
+    "id": "cake_torta_mil_hojas",
+    "name": "Torta de Mil Hojas",
+    "description": "A Chilean 'thousand-layer cake' of crisp puff pastry sheets stacked with manjar (dulce de leche).",
+    "flavorProfile": { "sweetness": 5, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["manjar", "puff pastry"],
+    "texture": "crumbly"
+  },
+  {
+    "id": "cake_louise_cake",
+    "name": "Louise Cake",
+    "description": "A shortbread base topped with raspberry jam and a baked coconut meringue, cut into squares.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 2, "intensity": 2 },
+    "flavorNotes": ["raspberry", "coconut", "shortbread"],
+    "texture": "crumbly"
+  },
+  {
+    "id": "cake_kransekake",
+    "name": "Kransekake",
+    "description": "A towering stack of graduated almond rings, piped together with royal icing to mark major celebrations.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 2, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["almond", "royal icing"],
+    "texture": "dense"
+  },
+  {
+    "id": "cake_runeberg_torte",
+    "name": "Runeberg Torte",
+    "description": "Small cylindrical Finnish almond-and-rum cakes topped with raspberry jam and a delicate ring of icing.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 2, "intensity": 3 },
+    "flavorNotes": ["almond", "raspberry", "rum"],
+    "texture": "dense"
   }
 ]
