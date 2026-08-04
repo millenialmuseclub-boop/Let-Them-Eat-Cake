@@ -1,0 +1,50 @@
+[
+  {
+    "id": "cake_layer",
+    "name": "Cake Layer",
+    "purpose": "The base sponge or crumb that gives the cake its identity and provides the primary eating experience between fillings.",
+    "textureContribution": "Sets the fundamental crumb — light and airy for a genoise-style sponge, dense and moist for a butter cake.",
+    "structuralRole": "Bears the weight of everything stacked above it; must be sturdy enough to hold its shape once cut and stacked.",
+    "flavorImpact": "Usually the dominant flavor note of the whole cake, since it makes up the largest volume of any bite."
+  },
+  {
+    "id": "soak_syrup",
+    "name": "Soak / Syrup",
+    "purpose": "A brushed-on liquid — simple syrup, coffee, liqueur — that keeps the sponge moist and adds a secondary flavor layer.",
+    "textureContribution": "Prevents the crumb from drying out, especially important for leaner sponges with less butter or oil.",
+    "structuralRole": "Minimal on its own, but oversoaking weakens the crumb and can cause layers to slump — balance matters.",
+    "flavorImpact": "A concentrated flavor hit that can echo or contrast the filling — coffee syrup under a mocha filling, or citrus syrup for brightness."
+  },
+  {
+    "id": "filling",
+    "name": "Filling",
+    "purpose": "The layer spread between cake layers — buttercream, jam, curd, ganache — adding moisture, richness, and a flavor counterpoint to the sponge.",
+    "textureContribution": "Introduces contrast: creamy against crumbly, or fruity-tart against sweet, depending on what's chosen.",
+    "structuralRole": "Acts as the 'glue' bonding layers together — too thin and layers can shift, too thick and it squeezes out under the weight above.",
+    "flavorImpact": "Often defines the cake's identity more than the sponge itself — a vanilla sponge reads completely differently with raspberry jam versus salted caramel."
+  },
+  {
+    "id": "crunch_layer",
+    "name": "Crunch Layer",
+    "purpose": "An optional textural layer — praline, feuilletine, nut brittle, cookie crumble — borrowed from professional pastry construction to add contrast.",
+    "textureContribution": "The only source of genuine crunch in an otherwise soft cake — a deliberate textural surprise partway through a bite.",
+    "structuralRole": "Thin and rigid; needs to be sandwiched carefully so it doesn't crack the layers above it when sliced.",
+    "flavorImpact": "Concentrated, often nutty or caramelized flavor in a small dose — punches above its weight relative to its thin profile."
+  },
+  {
+    "id": "mousse",
+    "name": "Mousse",
+    "purpose": "An aerated, often gelatin- or whipped-cream-stabilized layer used in entremet-style cakes for a lighter, cloud-like eating experience.",
+    "textureContribution": "The lightest texture in the whole build — airy and melting rather than dense or chewy.",
+    "structuralRole": "Needs to fully set (usually chilled or frozen) before the next layer goes on, typically held in shape by a cake ring or acetate collar while setting.",
+    "flavorImpact": "Delivers flavor through aroma and a lingering finish rather than immediate intensity, since whipping dilutes concentration."
+  },
+  {
+    "id": "glaze_finish",
+    "name": "Glaze / Finish",
+    "purpose": "The final exterior coating — mirror glaze, ganache pour, fondant, or frosting — that seals and presents the cake.",
+    "textureContribution": "The first texture a bite encounters; can be glossy-smooth, matte, or textured depending on technique.",
+    "structuralRole": "Seals in moisture and, for glazes and fondant, adds a protective shell that helps the cake hold its shape during handling and transport.",
+    "flavorImpact": "The first flavor note tasted and often the most visually promised one — a glaze that doesn't match the interior flavor can feel like a mismatch."
+  }
+]

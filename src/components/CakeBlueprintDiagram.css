@@ -1,0 +1,74 @@
+.blueprint-diagram {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.blueprint-centerline {
+  stroke: var(--border);
+  stroke-width: 1;
+  stroke-dasharray: 2 4;
+}
+
+.blueprint-dimension-line,
+.blueprint-tick,
+.blueprint-leader {
+  stroke: var(--cocoa-strong);
+  stroke-width: 1;
+  opacity: 0.6;
+}
+
+.blueprint-dimension-label {
+  font-size: 10px;
+  fill: var(--cocoa-strong);
+  text-anchor: middle;
+  letter-spacing: 0.5px;
+}
+
+.blueprint-board {
+  fill: var(--cocoa-strong);
+  opacity: 0.3;
+}
+
+.blueprint-frosting {
+  stroke: var(--cocoa-strong);
+  stroke-width: 1.5;
+  fill-opacity: 0.14;
+}
+
+.blueprint-layer {
+  stroke: var(--bg-card);
+  stroke-width: 1;
+  fill-opacity: 0.18;
+}
+
+.blueprint-label {
+  font-size: 11px;
+  fill: var(--text);
+}
+
+.blueprint-label-left {
+  text-anchor: start;
+}
+
+.blueprint-title-block {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+.blueprint-title-text {
+  font-size: 11px;
+  font-weight: 600;
+  fill: var(--cocoa-strong);
+  letter-spacing: 0.5px;
+}
+
+.blueprint-title-subtext {
+  font-size: 10px;
+  fill: var(--text);
+  opacity: 0.7;
+}

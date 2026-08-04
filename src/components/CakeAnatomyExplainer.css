@@ -1,0 +1,44 @@
+.anatomy-explainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.anatomy-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.anatomy-step-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.anatomy-step {
+  font: inherit;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.anatomy-step.active {
+  background: var(--raspberry);
+  border-color: var(--raspberry);
+  color: white;
+}
+
+.anatomy-arrow {
+  color: var(--border);
+  font-size: 16px;
+}
+
+.anatomy-detail p {
+  font-size: 15px;
+}
