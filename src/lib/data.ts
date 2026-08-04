@@ -10,6 +10,7 @@ import weddingSeasonsJson from '../data/weddingSeasons.json'
 import assemblyComponentsJson from '../data/assemblyComponents.json'
 import bakeOffChallengesJson from '../data/bakeOffChallenges.json'
 import cakeAnatomyJson from '../data/cakeAnatomy.json'
+import cakePersonalitiesJson from '../data/cakePersonalities.json'
 import type { CakeProfile, Recipe } from '../types/cake'
 import type { HistoricalCakeEntry } from '../types/timeMachine'
 import type { RegionalCakeEntry } from '../types/atlas'
@@ -19,6 +20,7 @@ import type { WeddingCulture, WeddingAesthetic, WeddingSeasonEntry } from '../ty
 import type { AssemblyComponent } from '../types/assemblyLab'
 import type { BakeOffChallenge } from '../types/bakeOff'
 import type { CakeAnatomyStage } from '../types/cakeAnatomy'
+import type { CakePersonality } from '../types/personaMatch'
 
 export const cakes = cakesJson as CakeProfile[]
 export const decades = decadesJson as HistoricalCakeEntry[]
@@ -32,6 +34,7 @@ export const weddingSeasons = weddingSeasonsJson as WeddingSeasonEntry[]
 export const assemblyComponents = assemblyComponentsJson as AssemblyComponent[]
 export const bakeOffChallenges = bakeOffChallengesJson as BakeOffChallenge[]
 export const cakeAnatomyStages = cakeAnatomyJson as CakeAnatomyStage[]
+export const cakePersonalities = cakePersonalitiesJson as CakePersonality[]
 
 function toMap<T extends { id: string }>(items: T[]): Map<string, T> {
   return new Map(items.map((item) => [item.id, item]))
@@ -51,4 +54,10 @@ export function getRecipe(recipeId: string): Recipe | undefined {
 
 export function getRecipeForCake(cakeId: string): Recipe | undefined {
   return recipesByCakeId.get(cakeId)
+}
+
+export const cakePersonalitiesById = toMap(cakePersonalities)
+
+export function getCakePersonality(personalityId: string): CakePersonality | undefined {
+  return cakePersonalitiesById.get(personalityId)
 }

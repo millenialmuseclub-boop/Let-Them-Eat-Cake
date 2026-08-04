@@ -1,40 +1,98 @@
-.mode-toggle {
-  display: flex;
-  gap: 8px;
-  margin: 20px 0;
+.persona-step-indicator {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  margin-bottom: 20px;
 }
 
-.mode-toggle button {
-  padding: 10px 20px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  color: var(--text);
-  font-size: 15px;
+.persona-quiz-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
 }
 
-.mode-toggle button.active {
-  background: var(--raspberry);
-  border-color: var(--raspberry);
-  color: white;
-}
-
-.persona-select {
+.persona-quiz-card {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 4px;
-  font-size: 14px;
-  max-width: 320px;
-  margin-bottom: 28px;
-}
-
-.persona-select select {
-  font: inherit;
-  padding: 10px 14px;
-  border-radius: 8px;
+  text-align: left;
+  padding: 18px 20px;
+  border-radius: 12px;
   border: 1px solid var(--border);
   background: var(--bg-card);
   color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.persona-quiz-card:hover {
+  border-color: var(--raspberry);
+}
+
+.persona-quiz-card-label {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.persona-quiz-card-hint {
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.persona-quiz-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.persona-quiz-swatch {
+  aspect-ratio: 1;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+
+.persona-result {
+  max-width: 640px;
+}
+
+.persona-result-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.persona-result-title {
+  font-size: 17px;
+  color: var(--raspberry);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.persona-result-radar-card {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.persona-result-description {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.persona-section-heading {
+  margin-top: 32px;
 }
 
 .persona-results {
