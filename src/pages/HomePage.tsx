@@ -37,6 +37,16 @@ const FEATURES = [
     title: 'Assembly Lab',
     description: 'Pick a sponge, filling, frosting, and garnish, watch your cake come together live, and get the full recipe to bake it.',
   },
+  {
+    to: '/bake-off',
+    title: 'Bake Off',
+    description: "Submit your Assembly Lab creation, vote on the community's favorites, and compete under this month's theme.",
+  },
+  {
+    to: '/encyclopedia',
+    title: 'Cake Encyclopedia',
+    description: 'Browse the full archive of 50 cakes — history, flavor profile, traditional recipe, and related finds for every entry.',
+  },
 ]
 
 export function HomePage() {

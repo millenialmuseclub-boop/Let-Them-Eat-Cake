@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { cakes, drinks } from '../lib/data'
 import { explainPairing, rankPairings } from '../lib/sommelier'
 import { FlavorProfileCompare } from '../components/FlavorProfileCompare'
@@ -36,6 +37,9 @@ export function SommelierPage() {
         <h3>{cake.name}</h3>
         <p>{cake.description}</p>
         <p className="flavor-notes">Notes: {cake.flavorNotes.join(', ')}</p>
+        <Link to={`/cake/${cake.id}`} className="encyclopedia-link">
+          View full encyclopedia entry →
+        </Link>
       </div>
 
       <div className="pairing-list">

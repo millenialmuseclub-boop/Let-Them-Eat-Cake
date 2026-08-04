@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import type { CakeProfile } from '../types/cake'
 import type { AestheticTag, MoodTag, ZodiacSign } from '../types/persona'
 import {
@@ -89,6 +90,9 @@ export function PersonaMatchPage() {
             <h3>{cake.name}</h3>
             <p>{cake.description}</p>
             <p className="persona-notes">Notes: {cake.flavorNotes.join(', ')}</p>
+            <Link to={`/cake/${cake.id}`} className="encyclopedia-link">
+              View full encyclopedia entry →
+            </Link>
           </div>
         ))}
       </div>

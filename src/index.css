@@ -124,6 +124,14 @@ button {
   font-weight: 600;
 }
 
+.encyclopedia-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--raspberry);
+}
+
 @media (max-width: 640px) {
   :root {
     font-size: 16px;

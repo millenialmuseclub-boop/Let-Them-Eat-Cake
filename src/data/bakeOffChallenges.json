@@ -1,0 +1,74 @@
+[
+  {
+    "id": "challenge_fresh_start",
+    "month": 1,
+    "name": "Fresh Start",
+    "description": "Kick off the year with something light and bright — think clean citrus, delicate sponges, and nothing too heavy."
+  },
+  {
+    "id": "challenge_sweetheart_showcase",
+    "month": 2,
+    "name": "Sweetheart Showcase",
+    "description": "Romance is in the air — build something worthy of a Valentine's centerpiece, blush tones and all."
+  },
+  {
+    "id": "challenge_citrus_season",
+    "month": 3,
+    "name": "Citrus Season",
+    "description": "Lemon, orange, or anything else that bites back — this month is all about acidity and zest."
+  },
+  {
+    "id": "challenge_spring_garden",
+    "month": 4,
+    "name": "Spring Garden",
+    "description": "Floral, pastel, and blooming — build a cake that looks like it grew in a garden."
+  },
+  {
+    "id": "challenge_berry_bliss",
+    "month": 5,
+    "name": "Berry Bliss",
+    "description": "Raspberry, strawberry, whatever's in season — let a berry filling or garnish lead the way."
+  },
+  {
+    "id": "challenge_wedding_worthy",
+    "month": 6,
+    "name": "Wedding-Worthy",
+    "description": "June is wedding season — build something elegant enough to be a showstopper centerpiece."
+  },
+  {
+    "id": "challenge_tropical_getaway",
+    "month": 7,
+    "name": "Tropical Getaway",
+    "description": "Coconut, pineapple, anything that tastes like vacation — beat the heat with a tropical build."
+  },
+  {
+    "id": "challenge_retro_bake",
+    "month": 8,
+    "name": "Retro Bake",
+    "description": "Funfetti, classic vanilla, throwback combos — channel a cake straight out of a 1980s birthday party."
+  },
+  {
+    "id": "challenge_cozy_spice",
+    "month": 9,
+    "name": "Cozy Spice",
+    "description": "Cinnamon, carrot, warm spice — the first cool weeks of fall call for something cozy."
+  },
+  {
+    "id": "challenge_rich_and_decadent",
+    "month": 10,
+    "name": "Rich & Decadent",
+    "description": "Go dark, go rich, go all in on chocolate — this month has no room for restraint."
+  },
+  {
+    "id": "challenge_comfort_classics",
+    "month": 11,
+    "name": "Comfort Classics",
+    "description": "The flavors that feel like home — build the cake you'd want on a holiday dessert table."
+  },
+  {
+    "id": "challenge_festive_showstopper",
+    "month": 12,
+    "name": "Festive Showstopper",
+    "description": "End the year with maximum decoration — gold leaf, sprinkles, drips, whatever makes it feel like a celebration."
+  }
+]

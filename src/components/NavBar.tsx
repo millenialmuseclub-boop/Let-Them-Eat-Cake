@@ -10,6 +10,8 @@ const LINKS = [
   { to: '/pantry-raid', label: 'Pantry Raid' },
   { to: '/wedding-cake-planner', label: 'Wedding Cake Planner' },
   { to: '/assembly-lab', label: 'Assembly Lab' },
+  { to: '/bake-off', label: 'Bake Off' },
+  { to: '/encyclopedia', label: 'Encyclopedia' },
 ]
 
 export function NavBar() {

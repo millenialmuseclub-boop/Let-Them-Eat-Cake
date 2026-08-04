@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { getCake, getRecipe, regions } from '../lib/data'
 import { getAllCountries, getCountryEntries, getPrimaryEntry } from '../lib/atlas'
 import { RecipeCard } from '../components/RecipeCard'
@@ -59,6 +60,9 @@ export function AtlasPage() {
             <p>{selectedCake.description}</p>
             <h3>Background story</h3>
             <p>{selectedEntry.historyNote}</p>
+            <Link to={`/cake/${selectedCake.id}`} className="encyclopedia-link">
+              View full encyclopedia entry →
+            </Link>
           </div>
 
           <h2 className="recipe-heading">Recipe</h2>

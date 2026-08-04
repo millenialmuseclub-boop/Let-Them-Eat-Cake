@@ -8,6 +8,9 @@ import { PersonaMatchPage } from './pages/PersonaMatchPage'
 import { PantryRaidPage } from './pages/PantryRaidPage'
 import { WeddingCakePlannerPage } from './pages/WeddingCakePlannerPage'
 import { AssemblyLabPage } from './pages/AssemblyLabPage'
+import { BakeOffPage } from './pages/BakeOffPage'
+import { CakeEncyclopediaIndexPage } from './pages/CakeEncyclopediaIndexPage'
+import { CakeDetailPage } from './pages/CakeDetailPage'
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
         <Route path="/pantry-raid" element={<PantryRaidPage />} />
         <Route path="/wedding-cake-planner" element={<WeddingCakePlannerPage />} />
         <Route path="/assembly-lab" element={<AssemblyLabPage />} />
+        <Route path="/bake-off" element={<BakeOffPage />} />
+        <Route path="/encyclopedia" element={<CakeEncyclopediaIndexPage />} />
+        <Route path="/cake/:id" element={<CakeDetailPage />} />
       </Routes>
     </>
   )

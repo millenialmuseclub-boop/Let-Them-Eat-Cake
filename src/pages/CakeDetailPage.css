@@ -1,0 +1,81 @@
+.cake-detail-hero {
+  margin: 20px 0 20px;
+}
+
+.cake-detail-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.cake-detail-texture-tag {
+  background: var(--border);
+  color: var(--text);
+  text-transform: capitalize;
+}
+
+.cake-detail-section {
+  margin-bottom: 24px;
+}
+
+.cake-detail-section h2 {
+  margin-bottom: 12px;
+}
+
+.cake-detail-flavor-notes {
+  margin-top: 12px;
+  color: var(--raspberry);
+  font-size: 14px;
+}
+
+.cake-detail-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.cake-detail-related-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.cake-detail-related-card p {
+  font-size: 14px;
+  color: var(--raspberry);
+  margin-bottom: 0;
+}
+
+.cake-detail-pairing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cake-detail-pairing-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+}
+
+.cake-detail-pairing-score {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--cocoa);
+}
+
+.cake-detail-sommelier-link {
+  display: inline-flex;
+}

@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import { Link } from 'react-router-dom'
 import { getCakeForBirthYear } from '../lib/timeMachine'
 import { getYearVariant } from '../lib/yearVintage'
 import { getCake, getRecipe } from '../lib/data'
@@ -47,6 +48,9 @@ export function TimeMachinePage() {
             <p>{cake.description}</p>
             <h3>Why this cake?</h3>
             <p>{entry.eraContext}</p>
+            <Link to={`/cake/${cake.id}`} className="encyclopedia-link">
+              View full encyclopedia entry →
+            </Link>
           </div>
 
           <div className="card year-twist-card">

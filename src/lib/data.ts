@@ -8,6 +8,7 @@ import weddingCulturesJson from '../data/weddingCultures.json'
 import weddingAestheticsJson from '../data/weddingAesthetics.json'
 import weddingSeasonsJson from '../data/weddingSeasons.json'
 import assemblyComponentsJson from '../data/assemblyComponents.json'
+import bakeOffChallengesJson from '../data/bakeOffChallenges.json'
 import type { CakeProfile, Recipe } from '../types/cake'
 import type { HistoricalCakeEntry } from '../types/timeMachine'
 import type { RegionalCakeEntry } from '../types/atlas'
@@ -15,6 +16,7 @@ import type { DrinkProfile } from '../types/sommelier'
 import type { EmergencyRecipe } from '../types/pantry'
 import type { WeddingCulture, WeddingAesthetic, WeddingSeasonEntry } from '../types/weddingCake'
 import type { AssemblyComponent } from '../types/assemblyLab'
+import type { BakeOffChallenge } from '../types/bakeOff'
 
 export const cakes = cakesJson as CakeProfile[]
 export const decades = decadesJson as HistoricalCakeEntry[]
@@ -26,6 +28,7 @@ export const weddingCultures = weddingCulturesJson as WeddingCulture[]
 export const weddingAesthetics = weddingAestheticsJson as WeddingAesthetic[]
 export const weddingSeasons = weddingSeasonsJson as WeddingSeasonEntry[]
 export const assemblyComponents = assemblyComponentsJson as AssemblyComponent[]
+export const bakeOffChallenges = bakeOffChallengesJson as BakeOffChallenge[]
 
 function toMap<T extends { id: string }>(items: T[]): Map<string, T> {
   return new Map(items.map((item) => [item.id, item]))
