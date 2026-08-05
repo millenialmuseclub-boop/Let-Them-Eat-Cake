@@ -42,8 +42,16 @@
   gap: 20px;
 }
 
-.copy-markdown-btn {
+.wedding-result-actions {
+  display: flex;
+  gap: 12px;
   align-self: flex-start;
+}
+
+.decoration-diagram-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
 }
 
 .wedding-section h2 {
@@ -110,5 +118,30 @@
 
   .wedding-form input[type='number'] {
     width: 100%;
+  }
+}
+
+@media print {
+  .nav-bar,
+  .wedding-form,
+  .wedding-result-actions {
+    display: none !important;
+  }
+
+  .wedding-page,
+  .wedding-section {
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  .wedding-section {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .wedding-cake-diagram {
+    max-width: 280px;
   }
 }

@@ -5,7 +5,8 @@
     "description": "An organic, garden-grown look built around exposed cake layers, fresh greenery, and a deliberately imperfect hand-finished texture.",
     "paletteGuidance": "Sage, dusty terracotta, cream, and muted wildflower tones — avoid anything glossy or high-shine.",
     "textureGuidance": "A thin 'semi-naked' scrape of buttercream that lets the sponge layers show through, finished with fresh or sugar-crafted greenery, berries, and seasonal blooms tucked between tiers.",
-    "architectureNudge": "semi-naked-bare"
+    "architectureNudge": "semi-naked-bare",
+    "swatchHex": "#e4d9c4"
   },
   {
     "id": "aesthetic_modern_minimalist",
@@ -13,7 +14,8 @@
     "description": "Clean geometric lines, a restrained palette, and precise sculpted surfaces — the cake reads as architecture first, dessert second.",
     "paletteGuidance": "Monochrome white, soft greige, or a single bold accent color against a matte white base — no more than two colors total.",
     "textureGuidance": "Smooth, mirror-flat fondant panels with sharp tier edges; any decoration is a single deliberate accent (one botanical stem, one metallic line) rather than an all-over pattern.",
-    "architectureNudge": "fondant-sculpted"
+    "architectureNudge": "fondant-sculpted",
+    "swatchHex": "#f5f5f0"
   },
   {
     "id": "aesthetic_traditional_luxury",
@@ -21,7 +23,8 @@
     "description": "The timeless formal wedding cake — tiered, symmetrical, and finished with classic piped detail meant to photograph as a grand centerpiece.",
     "paletteGuidance": "Ivory, white, and gold, with soft blush or champagne accents.",
     "textureGuidance": "Smooth buttercream or fondant with raised piped lace, beading, or basketweave detail; fresh flowers cascading down one side.",
-    "architectureNudge": "classic-tiered-sponge"
+    "architectureNudge": "classic-tiered-sponge",
+    "swatchHex": "#fdf6e3"
   },
   {
     "id": "aesthetic_cultural_heritage",
@@ -29,7 +32,8 @@
     "description": "A richly decorated, multi-generational centerpiece built to carry the visual weight and symbolism of a specific cultural tradition.",
     "paletteGuidance": "Bold, saturated tones drawn from the couple's heritage — deep reds and golds, vivid jewel tones, or hand-painted motifs rather than a muted palette.",
     "textureGuidance": "Elaborate piped or hand-painted detail, gold leaf, and pronounced ornamentation on every visible tier surface.",
-    "architectureNudge": "separated-pillar-display"
+    "architectureNudge": "separated-pillar-display",
+    "swatchHex": "#8b1e2b"
   },
   {
     "id": "aesthetic_boho_garden",
@@ -37,7 +41,8 @@
     "description": "Airy, undressed, and floral-forward — feels like it was cut fresh from a wildflower field rather than a bakery kitchen.",
     "paletteGuidance": "Warm neutrals, dried-flower rust and mauve tones, with pops of golden yellow.",
     "textureGuidance": "Very light frosting coverage, visible crumb, dried and fresh florals, pampas grass, and edible foraged-looking accents.",
-    "architectureNudge": "semi-naked-bare"
+    "architectureNudge": "semi-naked-bare",
+    "swatchHex": "#d9c2a3"
   },
   {
     "id": "aesthetic_glam_art_deco",
@@ -45,7 +50,8 @@
     "description": "Geometric, metallic, and unapologetically dramatic — sharp fondant panels with repeating deco patterning.",
     "paletteGuidance": "Black, gold, and ivory, or deep emerald and gold for a bolder statement.",
     "textureGuidance": "Fondant panel work with hand-painted or piped fan and chevron motifs, metallic leafing along every tier edge.",
-    "architectureNudge": "fondant-sculpted"
+    "architectureNudge": "fondant-sculpted",
+    "swatchHex": "#1c1c1c"
   },
   {
     "id": "aesthetic_whimsical_pastel_piping",
@@ -53,7 +59,8 @@
     "description": "Playful, hand-piped buttercream detail — lambeth-style borders, dots, and swirls in a soft color story.",
     "paletteGuidance": "Pastel pink, lilac, mint, and butter yellow, often combined across a single cake.",
     "textureGuidance": "A smooth buttercream base as the canvas for dense piped borders, rosettes, and dot-work — needs a stable sponge underneath to hold the piping's weight.",
-    "architectureNudge": "classic-tiered-sponge"
+    "architectureNudge": "classic-tiered-sponge",
+    "swatchHex": "#f6cbe0"
   },
   {
     "id": "aesthetic_coastal_destination",
@@ -61,6 +68,7 @@
     "description": "Light, breezy, and built for warm-weather celebrations — reads as effortless even when it isn't.",
     "paletteGuidance": "Sandy neutrals, seafoam, and white, with dried palm or citrus accents.",
     "textureGuidance": "Light semi-naked or lightly frosted finish that avoids heat-fragile fondant, dressed with dried citrus slices, palm fronds, or delicate sugar shells.",
-    "architectureNudge": "semi-naked-bare"
+    "architectureNudge": "semi-naked-bare",
+    "swatchHex": "#eef2ea"
   }
 ]

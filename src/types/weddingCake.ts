@@ -14,6 +14,20 @@ export type SeasonVariant = 'indoor' | 'outdoor'
 export type FrostingType = 'swiss-meringue-buttercream' | 'fondant' | 'whipped-cream'
 export type TierRole = 'top' | 'middle' | 'base'
 export type Allergen = 'dairy' | 'eggs' | 'wheat-gluten' | 'tree-nuts' | 'peanuts' | 'soy'
+export type CakeShape = 'round' | 'square' | 'hexagon'
+export type DecorationCategory = 'floral' | 'piped' | 'lace' | 'geometric' | 'painted' | 'metallic' | 'natural'
+
+export interface WeddingDecorationStyle {
+  id: string
+  name: string
+  description: string
+  techniqueNotes: string
+  category: DecorationCategory
+  /** aesthetic ids this style scores a bonus against in rankDecorationStyles() */
+  bestForAestheticIds?: string[]
+  /** drives WeddingCakeDiagram's decoration overlay color */
+  swatchHex: string
+}
 
 export interface WeddingCulture {
   id: string
@@ -39,6 +53,8 @@ export interface WeddingAesthetic {
   textureGuidance: string
   /** always set — primary structure driver unless overridden by culture.architectureNudge */
   architectureNudge: ArchitectureType
+  /** drives WeddingCakeDiagram's base tier color */
+  swatchHex: string
 }
 
 export interface SeasonFrostingGuidance {
@@ -94,6 +110,8 @@ export interface WeddingPlanInput {
   variant: SeasonVariant
   aestheticId: string
   diet: DietTag | 'none'
+  shape: CakeShape
+  decorationStyleId: string
 }
 
 export interface WeddingPlanResult {
@@ -111,4 +129,5 @@ export interface WeddingPlanResult {
   allergenFooterNote: string
   /** one line per physical tier */
   cuttingGuide: string[]
+  decorationStyle: WeddingDecorationStyle
 }

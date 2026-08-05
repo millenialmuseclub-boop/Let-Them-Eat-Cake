@@ -1,10 +1,18 @@
 import { useState } from 'react'
 import type { DietTag } from '../types/cake'
-import type { SeasonVariant, WeddingPlanInput, WeddingPlanResult, WeddingSeason } from '../types/weddingCake'
-import { weddingCultures, weddingAesthetics, getCake, getRecipe } from '../lib/data'
-import { generateWeddingPlan, formatArchitectureLabel, formatFrostingLabel, formatRoleLabel, toMarkdown } from '../lib/weddingCake'
+import type { CakeShape, SeasonVariant, WeddingPlanInput, WeddingPlanResult, WeddingSeason } from '../types/weddingCake'
+import { weddingCultures, weddingAesthetics, weddingDecorationStyles, getCake, getRecipe } from '../lib/data'
+import { generateWeddingPlan, formatArchitectureLabel, formatFrostingLabel, formatRoleLabel, formatShapeLabel, toMarkdown } from '../lib/weddingCake'
+import { rankDecorationStyles } from '../lib/weddingDecoration'
 import { RecipeCard } from '../components/RecipeCard'
+import { WeddingCakeDiagram } from '../components/WeddingCakeDiagram'
 import './WeddingCakePlannerPage.css'
+
+const SHAPE_OPTIONS: { value: CakeShape; label: string }[] = [
+  { value: 'round', label: 'Round' },
+  { value: 'square', label: 'Square' },
+  { value: 'hexagon', label: 'Hexagon' },
+]
 
 const DIET_OPTIONS: { value: DietTag | 'none'; label: string }[] = [
   { value: 'none', label: 'No constraint' },
@@ -38,11 +46,17 @@ export function WeddingCakePlannerPage() {
   const [variant, setVariant] = useState<SeasonVariant>('indoor')
   const [aestheticId, setAestheticId] = useState(weddingAesthetics[0].id)
   const [diet, setDiet] = useState<DietTag | 'none'>('none')
+  const [shape, setShape] = useState<CakeShape>('round')
+  const [decorationStyleId, setDecorationStyleId] = useState(weddingDecorationStyles[0].id)
   const [result, setResult] = useState<WeddingPlanResult | null>(null)
   const [copied, setCopied] = useState(false)
 
+  const decorationRanking = rankDecorationStyles(aestheticId)
+  const topDecorationScore = decorationRanking[0]?.score
+  const recommendedDecorationIds = new Set(decorationRanking.filter((r) => r.score === topDecorationScore).map((r) => r.style.id))
+
   function handleGenerate() {
-    const input: WeddingPlanInput = { cultureId, guestCount, season, variant, aestheticId, diet }
+    const input: WeddingPlanInput = { cultureId, guestCount, season, variant, aestheticId, diet, shape, decorationStyleId }
     setResult(generateWeddingPlan(input))
     setCopied(false)
   }
@@ -116,6 +130,28 @@ export function WeddingCakePlannerPage() {
           </select>
         </label>
 
+        <div className="variant-toggle-wrap">
+          <span>Cake shape</span>
+          <div className="unit-toggle">
+            {SHAPE_OPTIONS.map((opt) => (
+              <button key={opt.value} className={shape === opt.value ? 'active' : ''} onClick={() => setShape(opt.value)}>
+                {opt.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <label>
+          Decoration style
+          <select value={decorationStyleId} onChange={(e) => setDecorationStyleId(e.target.value)}>
+            {weddingDecorationStyles.map((d) => (
+              <option key={d.id} value={d.id}>
+                {recommendedDecorationIds.has(d.id) ? `⭐ ${d.name} (Recommended)` : d.name}
+              </option>
+            ))}
+          </select>
+        </label>
+
         <label>
           Dietary constraint
           <select value={diet} onChange={(e) => setDiet(e.target.value as DietTag | 'none')}>
@@ -134,9 +170,14 @@ export function WeddingCakePlannerPage() {
 
       {result && (
         <div className="wedding-result">
-          <button className="btn btn-secondary copy-markdown-btn" onClick={handleCopyMarkdown}>
-            {copied ? 'Copied!' : 'Copy as Markdown'}
-          </button>
+          <div className="wedding-result-actions">
+            <button className="btn btn-secondary copy-markdown-btn" onClick={handleCopyMarkdown}>
+              {copied ? 'Copied!' : 'Copy as Markdown'}
+            </button>
+            <button className="btn btn-secondary print-btn" onClick={() => window.print()}>
+              Print / Save as PDF
+            </button>
+          </div>
 
           <section className="card wedding-section">
             <h2>💍 Cultural History &amp; Traditions</h2>
@@ -195,7 +236,7 @@ export function WeddingCakePlannerPage() {
               const cake = getCake(pick.cakeId)
               if (!recipe || !cake) return null
               return (
-                <div key={pick.role} className="tier-pick">
+                <div key={`${pick.role}-${pick.cakeId}`} className="tier-pick">
                   <h3>
                     {formatRoleLabel(pick.role)}: {cake.name}
                   </h3>
@@ -240,6 +281,26 @@ export function WeddingCakePlannerPage() {
                 <li key={i}>{line}</li>
               ))}
             </ul>
+          </section>
+
+          <section className="card wedding-section">
+            <h2>📐 Cake Design Preview</h2>
+            <p>
+              <span className="tag">{formatShapeLabel(result.input.shape)}</span> <span className="tag">{result.decorationStyle.name}</span>
+            </p>
+            <div className="decoration-diagram-wrap">
+              <WeddingCakeDiagram
+                tiers={result.architecturePlan.tiers}
+                shape={result.input.shape}
+                swatchHex={result.aesthetic.swatchHex}
+                decorationCategory={result.decorationStyle.category}
+                decorationSwatchHex={result.decorationStyle.swatchHex}
+              />
+            </div>
+            <p>{result.decorationStyle.description}</p>
+            <p>
+              <strong>Technique:</strong> {result.decorationStyle.techniqueNotes}
+            </p>
           </section>
         </div>
       )}

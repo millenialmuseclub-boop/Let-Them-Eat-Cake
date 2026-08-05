@@ -1,0 +1,17 @@
+.wedding-cake-diagram {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.wedding-diagram-board {
+  fill: var(--cocoa-strong);
+  opacity: 0.35;
+}
+
+.wedding-diagram-tier {
+  stroke: var(--border);
+  stroke-width: 1.5;
+}

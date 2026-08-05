@@ -1,8 +1,8 @@
-import { weddingCultures, weddingAesthetics, weddingSeasons, getRecipe, getCake } from './data'
+import { weddingCultures, weddingAesthetics, weddingSeasons, weddingDecorationStyles, getRecipe, getCake } from './data'
 import { generateTierPlan, buildCuttingGuide, ARCHITECTURE_FROSTING_MAP } from './weddingArchitecture'
 import { pickTiers } from './weddingFlavor'
 import { auditAllergens } from './weddingAllergens'
-import type { ArchitectureType, FrostingType, TierRole, WeddingPlanInput, WeddingPlanResult } from '../types/weddingCake'
+import type { ArchitectureType, CakeShape, FrostingType, TierRole, WeddingPlanInput, WeddingPlanResult } from '../types/weddingCake'
 
 const ALLERGEN_FOOTER_NOTE =
   'Consider a small nut-free/dairy-free mini cutting tier for allergic guests rather than substituting the whole design.'
@@ -11,9 +11,10 @@ export function generateWeddingPlan(input: WeddingPlanInput): WeddingPlanResult 
   const culture = weddingCultures.find((c) => c.id === input.cultureId)
   const aesthetic = weddingAesthetics.find((a) => a.id === input.aestheticId)
   const seasonEntry = weddingSeasons.find((s) => s.id === input.season)
+  const decorationStyle = weddingDecorationStyles.find((d) => d.id === input.decorationStyleId)
 
-  if (!culture || !aesthetic || !seasonEntry) {
-    throw new Error('Invalid wedding plan input: unknown culture, aesthetic, or season id.')
+  if (!culture || !aesthetic || !seasonEntry || !decorationStyle) {
+    throw new Error('Invalid wedding plan input: unknown culture, aesthetic, season, or decoration style id.')
   }
 
   const architecturePlan = generateTierPlan(input.guestCount, aesthetic, culture)
@@ -40,6 +41,7 @@ export function generateWeddingPlan(input: WeddingPlanInput): WeddingPlanResult 
     allergenAudit,
     allergenFooterNote: ALLERGEN_FOOTER_NOTE,
     cuttingGuide,
+    decorationStyle,
   }
 }
 
@@ -58,12 +60,22 @@ const FROSTING_LABELS: Record<FrostingType, string> = {
   'whipped-cream': 'Whipped Cream',
 }
 
+const SHAPE_LABELS: Record<CakeShape, string> = {
+  round: 'Round',
+  square: 'Square',
+  hexagon: 'Hexagon',
+}
+
 export function formatArchitectureLabel(type: ArchitectureType): string {
   return ARCHITECTURE_LABELS[type]
 }
 
 export function formatFrostingLabel(type: FrostingType): string {
   return FROSTING_LABELS[type]
+}
+
+export function formatShapeLabel(shape: CakeShape): string {
+  return SHAPE_LABELS[shape]
 }
 
 export function formatRoleLabel(role: TierRole): string {
@@ -73,13 +85,13 @@ export function formatRoleLabel(role: TierRole): string {
 }
 
 export function toMarkdown(result: WeddingPlanResult): string {
-  const { culture, aesthetic, seasonEntry, architecturePlan, tierPicks, allergenAudit, allergenFooterNote, cuttingGuide, chosenFrosting, frostingGuidance, input } = result
+  const { culture, aesthetic, seasonEntry, architecturePlan, tierPicks, allergenAudit, allergenFooterNote, cuttingGuide, chosenFrosting, frostingGuidance, decorationStyle, input } = result
   const lines: string[] = []
 
   lines.push('# Wedding Cake Profile & Master Planning Sheet')
   lines.push('')
   lines.push(
-    `**Location/Culture:** ${culture.name} · **Guests:** ${input.guestCount} · **Season:** ${seasonEntry.name} (${input.variant}) · **Aesthetic:** ${aesthetic.name} · **Dietary:** ${input.diet}`,
+    `**Location/Culture:** ${culture.name} · **Guests:** ${input.guestCount} · **Season:** ${seasonEntry.name} (${input.variant}) · **Aesthetic:** ${aesthetic.name} · **Shape:** ${formatShapeLabel(input.shape)} · **Dietary:** ${input.diet}`,
   )
   lines.push('')
 
@@ -144,6 +156,10 @@ export function toMarkdown(result: WeddingPlanResult): string {
   lines.push('## 🎨 Aesthetic Decor & Baker Logistics')
   lines.push('')
   lines.push(`**Exterior finish & palette:** ${aesthetic.paletteGuidance} ${aesthetic.textureGuidance} ${culture.decorHint}.`)
+  lines.push('')
+  lines.push(`**Cake shape:** ${formatShapeLabel(input.shape)}`)
+  lines.push('')
+  lines.push(`**Decoration style — ${decorationStyle.name}:** ${decorationStyle.description} ${decorationStyle.techniqueNotes}`)
   lines.push('')
   lines.push('**Caterer cutting guide:**')
   for (const line of cuttingGuide) {
