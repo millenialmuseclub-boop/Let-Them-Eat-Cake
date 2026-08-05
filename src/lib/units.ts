@@ -1,4 +1,4 @@
-import type { DietTag, Recipe, RecipeIngredient } from '../types/cake'
+import type { DietTag, IngredientSubstitution, Recipe, RecipeIngredient } from '../types/cake'
 
 export type UnitSystem = 'metric' | 'imperial'
 
@@ -15,6 +15,14 @@ function roundQty(qty: number): number {
   return Math.round(qty * 100) / 100
 }
 
+/** Fills {0},{1}... placeholders in `replacement` with amounts scaled by the same ratio as the base ingredient. */
+function formatSubstitution(sub: IngredientSubstitution, ratio: number): string {
+  const text = sub.scalableAmounts
+    ? sub.replacement.replace(/\{(\d+)\}/g, (_, i) => String(roundQty(sub.scalableAmounts![Number(i)] * ratio)))
+    : sub.replacement
+  return sub.notes ? `${text} — ${sub.notes}` : text
+}
+
 function scaleIngredient(ingredient: RecipeIngredient, ratio: number, system: UnitSystem, activeDiet?: DietTag): ScaledIngredient {
   const base = ingredient[system]
   const substitution = activeDiet ? ingredient.substitutions?.find((sub) => sub.diet === activeDiet) : undefined
@@ -24,7 +32,7 @@ function scaleIngredient(ingredient: RecipeIngredient, ratio: number, system: Un
     name: ingredient.name,
     qty: roundQty(base.qty * ratio),
     unit: base.unit,
-    substitutionNote: substitution ? `${substitution.replacement}${substitution.notes ? ` — ${substitution.notes}` : ''}` : undefined,
+    substitutionNote: substitution ? formatSubstitution(substitution, ratio) : undefined,
   }
 }
 

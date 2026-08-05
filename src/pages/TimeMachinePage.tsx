@@ -2,23 +2,31 @@ import { useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { getCakeForBirthYear } from '../lib/timeMachine'
 import { getYearVariant } from '../lib/yearVintage'
-import { getCake, getRecipe } from '../lib/data'
+import { getCake, getRecipe, decades } from '../lib/data'
 import { RecipeCard } from '../components/RecipeCard'
 import { ShareCard } from '../components/ShareCard'
+import { TimeMachineTimeline } from '../components/TimeMachineTimeline'
 import './TimeMachinePage.css'
 
 export function TimeMachinePage() {
   const [dobInput, setDobInput] = useState('')
   const [birthYear, setBirthYear] = useState<number | null>(null)
+  const [activeDecadeId, setActiveDecadeId] = useState<string | null>(null)
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault()
     if (!dobInput) return
     const year = new Date(dobInput).getFullYear()
     setBirthYear(year)
+    setActiveDecadeId(getCakeForBirthYear(year).id)
   }
 
-  const entry = birthYear !== null ? getCakeForBirthYear(birthYear) : null
+  function handleTimelineSelect(decadeId: string) {
+    setBirthYear(null)
+    setActiveDecadeId(decadeId)
+  }
+
+  const entry = activeDecadeId ? (decades.find((d) => d.id === activeDecadeId) ?? null) : null
   const cake = entry ? getCake(entry.cakeId) : null
   const recipe = entry ? getRecipe(entry.recipeId) : null
   const variant = cake && birthYear !== null ? getYearVariant(birthYear, cake.name) : null
@@ -26,7 +34,9 @@ export function TimeMachinePage() {
   return (
     <main className="page time-machine-page">
       <h1>Birthday Time Machine</h1>
-      <p>Enter your date of birth to uncover the cake that defined your exact year.</p>
+      <p>Enter your date of birth — or browse the decade timeline below — to uncover the cake that defined an era.</p>
+
+      <TimeMachineTimeline decades={decades} activeDecadeId={activeDecadeId} onSelectDecade={handleTimelineSelect} />
 
       <form className="dob-form" onSubmit={handleSubmit}>
         <label>
@@ -38,9 +48,11 @@ export function TimeMachinePage() {
         </button>
       </form>
 
-      {entry && cake && recipe && variant && (
+      {entry && cake && recipe && (
         <section className="time-machine-result">
-          <ShareCard year={birthYear!} cakeName={variant.variantName} subtitle={`a ${entry.decadeLabel} ${cake.name}`} />
+          {birthYear !== null && variant && (
+            <ShareCard year={birthYear} cakeName={variant.variantName} subtitle={`a ${entry.decadeLabel} ${cake.name}`} />
+          )}
 
           <div className="card">
             <span className="tag">{entry.decadeLabel}</span>
@@ -53,12 +65,14 @@ export function TimeMachinePage() {
             </Link>
           </div>
 
-          <div className="card year-twist-card">
-            <span className="tag tag-gold">{birthYear} vintage</span>
-            <h2>{variant.variantName}</h2>
-            <p>{variant.twist}</p>
-            <p className="year-twist-note">{variant.recipeTwistNote}</p>
-          </div>
+          {birthYear !== null && variant && (
+            <div className="card year-twist-card">
+              <span className="tag tag-gold">{birthYear} vintage</span>
+              <h2>{variant.variantName}</h2>
+              <p>{variant.twist}</p>
+              <p className="year-twist-note">{variant.recipeTwistNote}</p>
+            </div>
+          )}
 
           <h2 className="recipe-heading">Base Recipe</h2>
           <RecipeCard key={recipe.id} recipe={recipe} />

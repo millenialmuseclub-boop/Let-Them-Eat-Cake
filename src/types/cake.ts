@@ -33,6 +33,8 @@ export interface UnitQuantity {
 export interface IngredientSubstitution {
   diet: DietTag
   replacement: string
+  /** Amounts referenced via {0},{1}... placeholders in `replacement` — each scales with servings exactly like the base ingredient's own quantity. */
+  scalableAmounts?: number[]
   notes?: string
 }
 
