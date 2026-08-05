@@ -1,19 +1,8 @@
 import { NavLink } from 'react-router-dom'
+import { HUBS } from '../data/hubs'
 import './NavBar.css'
 
-const LINKS = [
-  { to: '/', label: 'Home', end: true },
-  { to: '/time-machine', label: 'Time Machine' },
-  { to: '/atlas', label: 'Atlas' },
-  { to: '/sommelier', label: 'Sommelier' },
-  { to: '/persona-match', label: 'Persona Match' },
-  { to: '/pantry-raid', label: 'Pantry Raid' },
-  { to: '/wedding-cake-planner', label: 'Wedding Cake Planner' },
-  { to: '/assembly-lab', label: 'Assembly Lab' },
-  { to: '/bake-off', label: 'Bake Off' },
-  { to: '/encyclopedia', label: 'Encyclopedia' },
-  { to: '/notebook', label: 'Pastry Notebook' },
-]
+const LINKS = [{ to: '/', label: 'Home', end: true }, ...HUBS.map((hub) => ({ to: hub.path, label: hub.navLabel, end: false }))]
 
 export function NavBar() {
   return (

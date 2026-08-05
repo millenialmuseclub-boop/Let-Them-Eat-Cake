@@ -12,6 +12,8 @@ import { BakeOffPage } from './pages/BakeOffPage'
 import { CakeEncyclopediaIndexPage } from './pages/CakeEncyclopediaIndexPage'
 import { CakeDetailPage } from './pages/CakeDetailPage'
 import { PastryNotebookPage } from './pages/PastryNotebookPage'
+import { HubPage } from './components/HubPage'
+import { HUBS } from './data/hubs'
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        {HUBS.map((hub) => (
+          <Route key={hub.path} path={hub.path} element={<HubPage hub={hub} />} />
+        ))}
         <Route path="/time-machine" element={<TimeMachinePage />} />
         <Route path="/atlas" element={<AtlasPage />} />
         <Route path="/sommelier" element={<SommelierPage />} />
