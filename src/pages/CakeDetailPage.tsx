@@ -3,6 +3,7 @@ import { getCake, getRecipeForCake } from '../lib/data'
 import { getRegionEntriesForCake, getDecadeForCake, getTopPairings, getRelatedCakes } from '../lib/encyclopedia'
 import { FlavorProfileBars } from '../components/FlavorProfileBars'
 import { RecipeCard } from '../components/RecipeCard'
+import { SaveButton } from '../components/SaveButton'
 import './CakeDetailPage.css'
 
 function scoreColor(score: number): string {
@@ -45,6 +46,7 @@ export function CakeDetailPage() {
         </div>
         <h1>{cake.name}</h1>
         <p>{cake.description}</p>
+        <SaveButton type="cake" id={cake.id} />
       </div>
 
       {historyText && (

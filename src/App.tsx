@@ -11,6 +11,7 @@ import { AssemblyLabPage } from './pages/AssemblyLabPage'
 import { BakeOffPage } from './pages/BakeOffPage'
 import { CakeEncyclopediaIndexPage } from './pages/CakeEncyclopediaIndexPage'
 import { CakeDetailPage } from './pages/CakeDetailPage'
+import { PastryNotebookPage } from './pages/PastryNotebookPage'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/bake-off" element={<BakeOffPage />} />
         <Route path="/encyclopedia" element={<CakeEncyclopediaIndexPage />} />
         <Route path="/cake/:id" element={<CakeDetailPage />} />
+        <Route path="/notebook" element={<PastryNotebookPage />} />
       </Routes>
     </>
   )

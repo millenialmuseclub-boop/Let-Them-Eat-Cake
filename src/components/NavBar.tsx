@@ -12,6 +12,7 @@ const LINKS = [
   { to: '/assembly-lab', label: 'Assembly Lab' },
   { to: '/bake-off', label: 'Bake Off' },
   { to: '/encyclopedia', label: 'Encyclopedia' },
+  { to: '/notebook', label: 'Pastry Notebook' },
 ]
 
 export function NavBar() {

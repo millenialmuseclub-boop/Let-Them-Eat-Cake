@@ -47,6 +47,11 @@ const FEATURES = [
     title: 'Cake Encyclopedia',
     description: 'Browse the full archive of 50 cakes — history, flavor profile, traditional recipe, and related finds for every entry.',
   },
+  {
+    to: '/notebook',
+    title: 'Pastry Notebook',
+    description: 'Save your favorite cakes and cake personalities to come back to anytime — stored right in your browser.',
+  },
 ]
 
 export function HomePage() {

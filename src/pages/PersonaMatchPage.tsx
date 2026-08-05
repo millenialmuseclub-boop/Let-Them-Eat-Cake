@@ -8,6 +8,7 @@ import { matchPersonality, matchRecommendedCakes, personalityResult } from '../l
 import { getCakePersonality } from '../lib/data'
 import { FlavorRadarChart } from '../components/FlavorRadarChart'
 import { PersonaShareCard } from '../components/PersonaShareCard'
+import { SaveButton } from '../components/SaveButton'
 import './PersonaMatchPage.css'
 
 const FLAVOR_PULL_OPTIONS: { value: FlavorPull; label: string; hint: string }[] = [
@@ -50,6 +51,7 @@ function ResultView({
       <p className="persona-result-eyebrow">Your cake personality is</p>
       <h1>{personality.name}</h1>
       <p className="persona-result-title">{personality.personalityTitle}</p>
+      <SaveButton type="personality" id={personality.id} />
 
       <div className="card persona-result-radar-card">
         <FlavorRadarChart profile={personality.targetFlavorProfile} colorHex={personality.colorHex} />

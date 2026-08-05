@@ -1,0 +1,40 @@
+.notebook-empty {
+  opacity: 0.7;
+  margin-top: 20px;
+}
+
+.notebook-section-heading {
+  margin-top: 32px;
+}
+
+.notebook-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.notebook-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.notebook-texture-tag {
+  align-self: flex-start;
+  background: var(--border);
+  color: var(--text);
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.notebook-card p {
+  flex-grow: 1;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.notebook-personality-title {
+  color: var(--raspberry);
+  font-weight: 600;
+}
