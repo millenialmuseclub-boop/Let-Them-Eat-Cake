@@ -1,0 +1,45 @@
+.atlas-map-wrap {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 28px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.atlas-map-wrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.atlas-map-country {
+  fill: var(--border);
+  stroke: var(--bg);
+  stroke-width: 0.5;
+  outline: none;
+}
+
+.atlas-map-pin {
+  fill: var(--raspberry);
+  stroke: white;
+  stroke-width: 1.5;
+  cursor: pointer;
+  transition: r 0.15s;
+}
+
+.atlas-map-pin.active {
+  fill: var(--gold);
+}
+
+.atlas-map-label {
+  font-size: 11px;
+  font-weight: 600;
+  fill: var(--cocoa-strong);
+  paint-order: stroke;
+  stroke: var(--bg-card);
+  stroke-width: 3px;
+  pointer-events: none;
+}

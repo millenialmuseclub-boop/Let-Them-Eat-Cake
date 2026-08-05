@@ -10,7 +10,7 @@ const FEATURES = [
   {
     to: '/atlas',
     title: 'Global Cake Atlas',
-    description: 'Search any country for its most popular cake, complete with a full recipe and background story.',
+    description: 'Click a pin on an interactive world map — or search directly — for any country’s most popular cake, complete with a full recipe and background story.',
   },
   {
     to: '/sommelier',
@@ -19,8 +19,8 @@ const FEATURES = [
   },
   {
     to: '/persona-match',
-    title: 'Cosmic & Mood Match',
-    description: 'Match your zodiac sign, your current mood, or your aesthetic to a cake built for it.',
+    title: 'Cake Personality Quiz',
+    description: 'Answer four quick questions and get matched to a cake personality, complete with a flavor radar chart and a shareable card.',
   },
   {
     to: '/pantry-raid',

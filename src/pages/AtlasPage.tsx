@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { getCake, getRecipe, regions } from '../lib/data'
 import { getAllCountries, getCountryEntries, getPrimaryEntry } from '../lib/atlas'
 import { RecipeCard } from '../components/RecipeCard'
+import { AtlasWorldMap } from '../components/AtlasWorldMap'
 import './AtlasPage.css'
 
 export function AtlasPage() {
@@ -32,7 +33,9 @@ export function AtlasPage() {
   return (
     <main className="page atlas-page">
       <h1>Global Cake Atlas</h1>
-      <p>Search a country to find its most popular cake, complete with a full recipe and background story.</p>
+      <p>Click a pin on the map — or search a country below — to find its most popular cake, complete with a full recipe and background story.</p>
+
+      <AtlasWorldMap countries={allCountries} selectedCountry={country} onSelectCountry={handleSearch} />
 
       <div className="atlas-search">
         <input
