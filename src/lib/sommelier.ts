@@ -55,6 +55,12 @@ export function rankPairings(cake: CakeProfile, candidateDrinks: DrinkProfile[])
     .sort((a, b) => b.score - a.score)
 }
 
+export function rankCakesForDrink(drink: DrinkProfile, candidateCakes: CakeProfile[]): (PairingResult & { cake: CakeProfile })[] {
+  return candidateCakes
+    .map((cake) => ({ cake, ...calculatePairingScore(cake, drink) }))
+    .sort((a, b) => b.score - a.score)
+}
+
 /** Turns a score breakdown into full-sentence reasoning, in priority order (strongest effect first). */
 export function explainPairing(cake: CakeProfile, drink: DrinkProfile, result: PairingResult): string[] {
   const { breakdown } = result

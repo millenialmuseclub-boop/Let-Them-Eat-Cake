@@ -15,7 +15,7 @@ const FEATURES = [
   {
     to: '/sommelier',
     title: 'Cake Sommelier',
-    description: 'Pick a cake and see which drinks pair best with it, scored by flavor science.',
+    description: 'Start from a cake to find its best drink pairings, or start from a drink to find the cakes that match it — scored by flavor science.',
   },
   {
     to: '/persona-match',

@@ -69,3 +69,9 @@ export const weddingDecorationStylesById = toMap(weddingDecorationStyles)
 export function getWeddingDecorationStyle(id: string): WeddingDecorationStyle | undefined {
   return weddingDecorationStylesById.get(id)
 }
+
+export const drinksById = toMap(drinks)
+
+export function getDrink(drinkId: string): DrinkProfile | undefined {
+  return drinksById.get(drinkId)
+}
