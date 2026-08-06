@@ -1,3 +1,36 @@
+.encyclopedia-collections-row {
+  margin-top: 24px;
+}
+
+.encyclopedia-collections-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.encyclopedia-collections-header h2 {
+  margin: 0;
+}
+
+.encyclopedia-collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.encyclopedia-collection-card {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.encyclopedia-ingredients-link {
+  display: inline-block;
+  margin-top: 16px;
+}
+
 .encyclopedia-search {
   margin: 20px 0 32px;
 }

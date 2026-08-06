@@ -1,0 +1,42 @@
+.ingredient-detail-section {
+  margin: 24px 0;
+}
+
+.ingredient-detail-section h2 {
+  margin-bottom: 12px;
+}
+
+.ingredient-substitution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ingredient-substitution-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.ingredient-cake-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.ingredient-cake-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.ingredient-cake-card p {
+  font-size: 14px;
+  flex-grow: 1;
+  margin-bottom: 0;
+}

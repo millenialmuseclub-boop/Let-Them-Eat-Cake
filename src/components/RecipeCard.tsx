@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import type { DietTag, Recipe } from '../types/cake'
 import { scaleRecipe, type UnitSystem } from '../lib/units'
+import { slugify } from '../lib/ingredients'
 import './RecipeCard.css'
 
 const DIET_OPTIONS: { value: DietTag | 'none'; label: string }[] = [
@@ -59,7 +61,7 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
             <span className="ingredient-qty">
               {ing.qty} {ing.unit === 'count' ? '' : ing.unit}
             </span>{' '}
-            {ing.name}
+            {ing.substitutionNote ? ing.name : <Link to={`/ingredient/${slugify(ing.name)}`}>{ing.name}</Link>}
             {ing.substitutionNote && <span className="substitution-note"> — use {ing.substitutionNote}</span>}
           </li>
         ))}

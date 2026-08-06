@@ -1,0 +1,29 @@
+.collections-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.collection-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.collection-card-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.collection-card p {
+  flex-grow: 1;
+  font-size: 15px;
+}
+
+.collection-card-count {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--raspberry);
+}

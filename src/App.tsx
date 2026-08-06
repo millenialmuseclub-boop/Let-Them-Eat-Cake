@@ -12,6 +12,10 @@ import { BakeOffPage } from './pages/BakeOffPage'
 import { CakeEncyclopediaIndexPage } from './pages/CakeEncyclopediaIndexPage'
 import { CakeDetailPage } from './pages/CakeDetailPage'
 import { PastryNotebookPage } from './pages/PastryNotebookPage'
+import { IngredientIndexPage } from './pages/IngredientIndexPage'
+import { IngredientDetailPage } from './pages/IngredientDetailPage'
+import { CollectionsIndexPage } from './pages/CollectionsIndexPage'
+import { CollectionDetailPage } from './pages/CollectionDetailPage'
 import { HubPage } from './components/HubPage'
 import { BottomTabBar } from './components/BottomTabBar'
 import { HUBS } from './data/hubs'
@@ -36,6 +40,10 @@ function App() {
         <Route path="/encyclopedia" element={<CakeEncyclopediaIndexPage />} />
         <Route path="/cake/:id" element={<CakeDetailPage />} />
         <Route path="/notebook" element={<PastryNotebookPage />} />
+        <Route path="/ingredients" element={<IngredientIndexPage />} />
+        <Route path="/ingredient/:slug" element={<IngredientDetailPage />} />
+        <Route path="/collections" element={<CollectionsIndexPage />} />
+        <Route path="/collections/:id" element={<CollectionDetailPage />} />
       </Routes>
       <BottomTabBar />
     </>

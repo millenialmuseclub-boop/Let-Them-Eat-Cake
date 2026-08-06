@@ -1,0 +1,49 @@
+.origin-story {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.origin-story-point {
+  display: flex;
+  gap: 16px;
+}
+
+.origin-story-marker {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12px;
+}
+
+.origin-story-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--raspberry);
+  flex-shrink: 0;
+}
+
+.origin-story-line {
+  flex-grow: 1;
+  width: 2px;
+  background: var(--border);
+  margin-top: 4px;
+  min-height: 24px;
+}
+
+.origin-story-content {
+  padding-bottom: 20px;
+}
+
+.origin-story-label {
+  display: block;
+  font-weight: 700;
+  color: var(--raspberry);
+  margin-bottom: 4px;
+}
+
+.origin-story-text {
+  margin: 0;
+}

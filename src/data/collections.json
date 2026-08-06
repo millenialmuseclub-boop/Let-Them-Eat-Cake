@@ -1,0 +1,51 @@
+[
+  {
+    "id": "chocolate-classics",
+    "title": "Chocolate Classics",
+    "description": "Cocoa, dark chocolate, and chocolate buttercream take the lead in these rich, chocolate-forward bakes.",
+    "icon": "🍫",
+    "rule": { "type": "flavorNote", "values": ["cocoa", "dark chocolate", "white chocolate", "chocolate", "chocolate buttercream", "chocolate sprinkles"] }
+  },
+  {
+    "id": "coconut-tropical",
+    "title": "Coconut & Tropical",
+    "description": "Coconut, pandan, and pineapple bring island flavor to these bright, tropical cakes.",
+    "icon": "🥥",
+    "rule": { "type": "flavorNote", "values": ["coconut", "coconut milk", "pandan", "pineapple", "passionfruit"] }
+  },
+  {
+    "id": "caramel-toffee",
+    "title": "Caramel & Toffee",
+    "description": "Dulce de leche, caramelized sugar, and condensed milk give these cakes their deep, buttery sweetness.",
+    "icon": "🍮",
+    "rule": { "type": "flavorNote", "values": ["caramel", "caramelized sugar", "dulce de leche", "manjar", "condensed milk"] }
+  },
+  {
+    "id": "spiced-warm",
+    "title": "Spiced & Warm",
+    "description": "Cinnamon, cardamom, and clove warm up these cakes with fragrant, aromatic spice.",
+    "icon": "🌶️",
+    "rule": { "type": "flavorNote", "values": ["cinnamon", "cardamom", "nutmeg", "five-spice", "clove", "rose water"] }
+  },
+  {
+    "id": "light-creamy",
+    "title": "Light & Creamy",
+    "description": "Soft, custardy, and mousse-like cakes with a delicate, creamy crumb.",
+    "icon": "🍰",
+    "rule": { "type": "texture", "value": "creamy" }
+  },
+  {
+    "id": "cozy-sunday",
+    "title": "Cozy Sunday Classics",
+    "description": "Comforting bakes built for a slow Sunday afternoon at home.",
+    "icon": "🕯️",
+    "rule": { "type": "mood", "value": "cozy-sunday" }
+  },
+  {
+    "id": "celebration-worthy",
+    "title": "Celebration-Worthy",
+    "description": "Showstoppers built for birthdays, milestones, and big occasions.",
+    "icon": "🎉",
+    "rule": { "type": "mood", "value": "celebration" }
+  }
+]

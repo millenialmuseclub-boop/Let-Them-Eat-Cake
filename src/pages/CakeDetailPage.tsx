@@ -1,7 +1,8 @@
 import { Link, useParams } from 'react-router-dom'
 import { getCake, getRecipeForCake } from '../lib/data'
 import { getRegionEntriesForCake, getDecadeForCake, getTopPairings, getRelatedCakes } from '../lib/encyclopedia'
-import { FlavorProfileBars } from '../components/FlavorProfileBars'
+import { FlavorRadarChart } from '../components/FlavorRadarChart'
+import { CakeOriginStory } from '../components/CakeOriginStory'
 import { RecipeCard } from '../components/RecipeCard'
 import { SaveButton } from '../components/SaveButton'
 import './CakeDetailPage.css'
@@ -35,7 +36,10 @@ export function CakeDetailPage() {
   const pairings = getTopPairings(cake)
 
   const locationLabel = primaryRegion?.country ?? decade?.decadeLabel ?? null
-  const historyText = primaryRegion?.historyNote ?? decade?.eraContext ?? null
+  const originPoints = [
+    ...(primaryRegion ? [{ label: primaryRegion.country, text: primaryRegion.historyNote }] : []),
+    ...(decade ? [{ label: decade.decadeLabel, text: decade.eraContext }] : []),
+  ]
 
   return (
     <main className="page cake-detail-page">
@@ -49,16 +53,16 @@ export function CakeDetailPage() {
         <SaveButton type="cake" id={cake.id} />
       </div>
 
-      {historyText && (
+      {originPoints.length > 0 && (
         <section className="card cake-detail-section">
-          <h2>🕰️ History &amp; Cultural Significance</h2>
-          <p>{historyText}</p>
+          <h2>🕰️ Origin Story</h2>
+          <CakeOriginStory points={originPoints} />
         </section>
       )}
 
       <section className="card cake-detail-section">
         <h2>🍰 Flavor Profile</h2>
-        <FlavorProfileBars profile={cake.flavorProfile} />
+        <FlavorRadarChart profile={cake.flavorProfile} />
         <p className="cake-detail-flavor-notes">Notes: {cake.flavorNotes.join(', ')}</p>
       </section>
 
