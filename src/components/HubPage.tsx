@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom'
 import type { Hub } from '../data/hubs'
 import './HubPage.css'
 
-export function HubPage({ hub }: { hub: Hub }) {
+type LandingHub = Extract<Hub, { kind: 'landing' }>
+
+export function HubPage({ hub }: { hub: LandingHub }) {
   return (
     <main className="page hub-page">
       <h1>{hub.title}</h1>

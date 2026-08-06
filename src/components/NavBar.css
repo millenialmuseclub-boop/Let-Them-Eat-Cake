@@ -42,13 +42,8 @@
 }
 
 @media (max-width: 640px) {
-  .nav-bar {
-    flex-direction: column;
-    gap: 12px;
-    align-items: stretch;
-  }
+  /* The bottom tab bar owns navigation on mobile — keep just the brand as a slim identity header. */
   .nav-bar nav {
-    justify-content: center;
-    flex-wrap: wrap;
+    display: none;
   }
 }

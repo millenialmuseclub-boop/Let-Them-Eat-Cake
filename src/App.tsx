@@ -13,6 +13,7 @@ import { CakeEncyclopediaIndexPage } from './pages/CakeEncyclopediaIndexPage'
 import { CakeDetailPage } from './pages/CakeDetailPage'
 import { PastryNotebookPage } from './pages/PastryNotebookPage'
 import { HubPage } from './components/HubPage'
+import { BottomTabBar } from './components/BottomTabBar'
 import { HUBS } from './data/hubs'
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {HUBS.map((hub) => (
+        {HUBS.filter((hub): hub is Extract<typeof hub, { kind: 'landing' }> => hub.kind === 'landing').map((hub) => (
           <Route key={hub.path} path={hub.path} element={<HubPage hub={hub} />} />
         ))}
         <Route path="/time-machine" element={<TimeMachinePage />} />
@@ -36,6 +37,7 @@ function App() {
         <Route path="/cake/:id" element={<CakeDetailPage />} />
         <Route path="/notebook" element={<PastryNotebookPage />} />
       </Routes>
+      <BottomTabBar />
     </>
   )
 }

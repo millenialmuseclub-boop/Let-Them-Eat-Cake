@@ -143,6 +143,6 @@ button {
     font-size: 21px;
   }
   .page {
-    padding: 20px 16px 48px;
+    padding: 20px 16px calc(48px + 76px);
   }
 }

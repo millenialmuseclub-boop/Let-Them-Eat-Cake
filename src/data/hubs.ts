@@ -4,18 +4,31 @@ export interface HubSubItem {
   description: string
 }
 
-export interface Hub {
-  path: string
-  navLabel: string
-  title: string
-  description: string
-  items: HubSubItem[]
-}
+export type Hub =
+  | {
+      kind: 'landing'
+      path: string
+      navLabel: string
+      navIcon: string
+      title: string
+      description: string
+      items: HubSubItem[]
+    }
+  | {
+      kind: 'direct'
+      path: string
+      navLabel: string
+      navIcon: string
+      title: string
+      description: string
+    }
 
 export const HUBS: Hub[] = [
   {
+    kind: 'landing',
     path: '/discover',
     navLabel: 'Discover',
+    navIcon: '📚',
     title: 'Discover',
     description: "Explore the world's cakes through history and geography.",
     items: [
@@ -39,10 +52,12 @@ export const HUBS: Hub[] = [
     ],
   },
   {
-    path: '/bake',
-    navLabel: 'Bake',
-    title: 'Bake',
-    description: 'Build, calculate, and troubleshoot your next cake.',
+    kind: 'landing',
+    path: '/workshop',
+    navLabel: 'Workshop',
+    navIcon: '👩‍🍳',
+    title: 'Workshop',
+    description: 'Build, calculate, and show off your next cake.',
     items: [
       {
         to: '/assembly-lab',
@@ -54,25 +69,27 @@ export const HUBS: Hub[] = [
         title: 'Pantry Raid',
         description: "Check off what's in your kitchen and find the emergency cake that needs the least shopping.",
       },
-    ],
-  },
-  {
-    path: '/pair',
-    navLabel: 'Pair',
-    title: 'Pair',
-    description: 'Find the perfect cake and drink pairing, from either direction.',
-    items: [
       {
-        to: '/sommelier',
-        title: 'Cake Sommelier',
-        description: 'Start from a cake to find its best drink pairings, or start from a drink to find the cakes that match it — scored by flavor science.',
+        to: '/bake-off',
+        title: 'Bake Off',
+        description: "Submit your Assembly Lab creation, vote on the community's favorites, and compete under this month's theme.",
       },
     ],
   },
   {
-    path: '/plan',
-    navLabel: 'Plan',
-    title: 'Plan',
+    kind: 'direct',
+    path: '/sommelier',
+    navLabel: 'Sommelier',
+    navIcon: '🍷',
+    title: 'Cake Sommelier',
+    description: 'Start from a cake to find its best drink pairings, or start from a drink to find the cakes that match it — scored by flavor science.',
+  },
+  {
+    kind: 'landing',
+    path: '/celebrate',
+    navLabel: 'Celebrate',
+    navIcon: '🎂',
+    title: 'Celebrate',
     description: 'Plan a full custom cake for your next big event.',
     items: [
       {
@@ -83,21 +100,10 @@ export const HUBS: Hub[] = [
     ],
   },
   {
-    path: '/community',
-    navLabel: 'Community',
-    title: 'Community',
-    description: 'See what other bakers are making.',
-    items: [
-      {
-        to: '/bake-off',
-        title: 'Bake Off',
-        description: "Submit your Assembly Lab creation, vote on the community's favorites, and compete under this month's theme.",
-      },
-    ],
-  },
-  {
+    kind: 'landing',
     path: '/my-cakes',
     navLabel: 'My Cakes',
+    navIcon: '❤️',
     title: 'My Cakes',
     description: 'Your personal cake identity and saved collection.',
     items: [
@@ -114,3 +120,9 @@ export const HUBS: Hub[] = [
     ],
   },
 ]
+
+/** True if `pathname` is this hub's own path, or (for landing hubs) one of its sub-item paths. */
+export function isHubActive(hub: Hub, pathname: string): boolean {
+  if (pathname === hub.path) return true
+  return hub.kind === 'landing' && hub.items.some((item) => item.to === pathname)
+}
