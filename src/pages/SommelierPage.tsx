@@ -2,7 +2,9 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { cakes, drinks } from '../lib/data'
 import { explainPairing, rankCakesForDrink, rankPairings } from '../lib/sommelier'
-import { FlavorProfileCompare } from '../components/FlavorProfileCompare'
+import { getLifestylePairing } from '../lib/lifestylePairings'
+import { DualFlavorRadarChart } from '../components/DualFlavorRadarChart'
+import type { DrinkCategory } from '../types/sommelier'
 import './SommelierPage.css'
 
 type Mode = 'cake-first' | 'drink-first'
@@ -129,12 +131,17 @@ function CakeFirstView({
                         <strong>Garnish:</strong> {drink.serving.garnish}
                       </p>
                     )}
+                    <p>
+                      <strong>Prep tip:</strong> {drink.serving.prepTip}
+                    </p>
                   </div>
 
                   <div className="pairing-expanded-section">
                     <h4>Flavor profile comparison</h4>
-                    <FlavorProfileCompare cake={cake} drink={drink} />
+                    <DualFlavorRadarChart cakeProfile={cake.flavorProfile} drinkProfile={drink.flavorProfile} cakeLabel={cake.name} drinkLabel={drink.name} score={score} />
                   </div>
+
+                  <LifestyleSection category={drink.category} />
                 </div>
               )}
             </div>
@@ -195,6 +202,9 @@ function DrinkFirstView({
               <strong>Garnish:</strong> {drink.serving.garnish}
             </p>
           )}
+          <p>
+            <strong>Prep tip:</strong> {drink.serving.prepTip}
+          </p>
         </div>
       </div>
 
@@ -231,8 +241,10 @@ function DrinkFirstView({
 
                   <div className="pairing-expanded-section">
                     <h4>Flavor profile comparison</h4>
-                    <FlavorProfileCompare cake={cake} drink={drink} />
+                    <DualFlavorRadarChart cakeProfile={cake.flavorProfile} drinkProfile={drink.flavorProfile} cakeLabel={cake.name} drinkLabel={drink.name} score={score} />
                   </div>
+
+                  <LifestyleSection category={drink.category} />
 
                   <Link to={`/cake/${cake.id}`} className="encyclopedia-link">
                     View full encyclopedia entry →
@@ -244,6 +256,29 @@ function DrinkFirstView({
         })}
       </div>
     </>
+  )
+}
+
+function LifestyleSection({ category }: { category: DrinkCategory }) {
+  const lifestyle = getLifestylePairing(category)
+  if (!lifestyle) return null
+
+  return (
+    <div className="pairing-expanded-section">
+      <h4>🎉 Complete the Celebration</h4>
+      <p>
+        <strong>Flowers:</strong> {lifestyle.flowers}
+      </p>
+      <p>
+        <strong>Table styling:</strong> {lifestyle.tableStyle}
+      </p>
+      <p>
+        <strong>Music:</strong> {lifestyle.music}
+      </p>
+      <p>
+        <strong>Best for:</strong> {lifestyle.occasion}
+      </p>
+    </div>
   )
 }
 

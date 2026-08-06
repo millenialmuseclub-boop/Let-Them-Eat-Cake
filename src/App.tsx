@@ -16,6 +16,8 @@ import { IngredientIndexPage } from './pages/IngredientIndexPage'
 import { IngredientDetailPage } from './pages/IngredientDetailPage'
 import { CollectionsIndexPage } from './pages/CollectionsIndexPage'
 import { CollectionDetailPage } from './pages/CollectionDetailPage'
+import { BakingTraditionsIndexPage } from './pages/BakingTraditionsIndexPage'
+import { BakingTraditionDetailPage } from './pages/BakingTraditionDetailPage'
 import { HubPage } from './components/HubPage'
 import { BottomTabBar } from './components/BottomTabBar'
 import { HUBS } from './data/hubs'
@@ -44,6 +46,8 @@ function App() {
         <Route path="/ingredient/:slug" element={<IngredientDetailPage />} />
         <Route path="/collections" element={<CollectionsIndexPage />} />
         <Route path="/collections/:id" element={<CollectionDetailPage />} />
+        <Route path="/traditions" element={<BakingTraditionsIndexPage />} />
+        <Route path="/traditions/:id" element={<BakingTraditionDetailPage />} />
       </Routes>
       <BottomTabBar />
     </>

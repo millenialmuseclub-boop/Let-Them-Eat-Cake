@@ -51,9 +51,14 @@ export function CakeEncyclopediaIndexPage() {
         </div>
       </section>
 
-      <Link to="/ingredients" className="encyclopedia-link encyclopedia-ingredients-link">
-        🧂 Browse by Ingredient →
-      </Link>
+      <div className="encyclopedia-secondary-links">
+        <Link to="/ingredients" className="encyclopedia-link">
+          🧂 Browse by Ingredient →
+        </Link>
+        <Link to="/traditions" className="encyclopedia-link">
+          🌍 Baking Traditions →
+        </Link>
+      </div>
 
       <div className="encyclopedia-search">
         <input type="text" placeholder="Search cakes (e.g. chocolate, dense, Japan)" value={query} onChange={(e) => setQuery(e.target.value)} />

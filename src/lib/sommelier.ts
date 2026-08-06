@@ -84,6 +84,13 @@ export function explainPairing(cake: CakeProfile, drink: DrinkProfile, result: P
     sentences.push(`They share ${breakdown.sharedNotes.join(', ')} flavor notes, creating a direct bridge between the cake and the drink.`)
   }
 
+  const sweetnessDiff = cake.flavorProfile.sweetness - drink.flavorProfile.sweetness
+  if (sweetnessDiff >= 2) {
+    sentences.push(`${drink.name} is noticeably less sweet than the cake, so it acts as a contrast rather than piling on more sugar.`)
+  } else if (sweetnessDiff <= -2) {
+    sentences.push(`${drink.name} brings more sweetness than the cake itself, so expect the drink to lead on that front.`)
+  }
+
   if (sentences.length === 0) {
     sentences.push(`This isn't a natural pairing — the flavors don't reinforce each other and there's little to bridge the gap.`)
   }

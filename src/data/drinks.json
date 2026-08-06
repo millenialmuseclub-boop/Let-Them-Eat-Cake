@@ -5,7 +5,7 @@
     "category": "coffee",
     "flavorProfile": { "sweetness": 1, "fatRichness": 1, "acidity": 3, "intensity": 5, "bitternessTannin": 4, "carbonation": 0 },
     "flavorNotes": ["espresso", "dark chocolate", "caramel"],
-    "serving": { "temperature": "Hot, straight from the machine", "glassware": "Demitasse cup", "garnish": "A twist of lemon peel (optional)" }
+    "serving": { "temperature": "Hot, straight from the machine", "glassware": "Demitasse cup", "garnish": "A twist of lemon peel (optional)", "prepTip": "Pull the shot right before serving — crema fades fast, so don't let it sit." }
   },
   {
     "id": "drink_drip_coffee",
@@ -13,7 +13,7 @@
     "category": "coffee",
     "flavorProfile": { "sweetness": 1, "fatRichness": 1, "acidity": 2, "intensity": 3, "bitternessTannin": 2, "carbonation": 0 },
     "flavorNotes": ["caramel", "walnut"],
-    "serving": { "temperature": "Hot", "glassware": "Standard coffee mug" }
+    "serving": { "temperature": "Hot", "glassware": "Standard coffee mug", "prepTip": "Brew at roughly a 1:16 coffee-to-water ratio to avoid over-extracting bitterness." }
   },
   {
     "id": "drink_earl_grey",
@@ -21,7 +21,7 @@
     "category": "tea",
     "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 2, "intensity": 2, "bitternessTannin": 3, "carbonation": 0 },
     "flavorNotes": ["bergamot", "vanilla"],
-    "serving": { "temperature": "Hot, steeped 3-4 minutes", "glassware": "Porcelain teacup", "garnish": "A thin slice of lemon" }
+    "serving": { "temperature": "Hot, steeped 3-4 minutes", "glassware": "Porcelain teacup", "garnish": "A thin slice of lemon", "prepTip": "Steep no longer than 4 minutes — bergamot turns bitter and astringent past that." }
   },
   {
     "id": "drink_matcha",
@@ -29,7 +29,7 @@
     "category": "tea",
     "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 1, "intensity": 2, "bitternessTannin": 2, "carbonation": 0 },
     "flavorNotes": ["grassy", "umami"],
-    "serving": { "temperature": "Hot or chilled", "glassware": "Wide matcha bowl, or a tall glass over ice" }
+    "serving": { "temperature": "Hot or chilled", "glassware": "Wide matcha bowl, or a tall glass over ice", "prepTip": "Whisk in a zigzag motion until a fine foam forms — clumps mean the matcha wasn't sifted." }
   },
   {
     "id": "drink_chai_latte",
@@ -37,7 +37,7 @@
     "category": "tea",
     "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 1, "intensity": 3, "bitternessTannin": 1, "carbonation": 0 },
     "flavorNotes": ["cinnamon", "cardamom", "honey"],
-    "serving": { "temperature": "Hot, steamed with milk", "glassware": "Tall mug", "garnish": "A dusting of ground cinnamon" }
+    "serving": { "temperature": "Hot, steamed with milk", "glassware": "Tall mug", "garnish": "A dusting of ground cinnamon", "prepTip": "Simmer the spices in the milk itself rather than steeping tea bags in water — it pulls far more flavor." }
   },
   {
     "id": "drink_dry_prosecco",
@@ -45,15 +45,15 @@
     "category": "wine",
     "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 4, "intensity": 2, "bitternessTannin": 1, "carbonation": 4 },
     "flavorNotes": ["green apple", "citrus"],
-    "serving": { "temperature": "Well chilled, 6-8°C (43-46°F)", "glassware": "Champagne flute" }
+    "serving": { "temperature": "Well chilled, 6-8°C (43-46°F)", "glassware": "Champagne flute", "prepTip": "Pour down the side of a tilted glass to preserve the bubbles." }
   },
   {
     "id": "drink_ruby_port",
     "name": "Ruby Port",
-    "category": "wine",
+    "category": "port",
     "flavorProfile": { "sweetness": 5, "fatRichness": 1, "acidity": 2, "intensity": 4, "bitternessTannin": 3, "carbonation": 0 },
     "flavorNotes": ["dark chocolate", "cherry", "caramel"],
-    "serving": { "temperature": "Slightly below room temperature, 16-18°C (61-64°F)", "glassware": "Small port glass" }
+    "serving": { "temperature": "Slightly below room temperature, 16-18°C (61-64°F)", "glassware": "Small port glass", "prepTip": "Pour in small 60ml pours — port's sweetness and strength are built for sipping, not gulping." }
   },
   {
     "id": "drink_imperial_stout",
@@ -61,7 +61,7 @@
     "category": "beer",
     "flavorProfile": { "sweetness": 2, "fatRichness": 2, "acidity": 1, "intensity": 5, "bitternessTannin": 3, "carbonation": 3 },
     "flavorNotes": ["dark chocolate", "cocoa", "espresso"],
-    "serving": { "temperature": "Cellar temperature, 10-13°C (50-55°F)", "glassware": "Snifter or tulip glass" }
+    "serving": { "temperature": "Cellar temperature, 10-13°C (50-55°F)", "glassware": "Snifter or tulip glass", "prepTip": "Let it warm slightly out of the fridge first — cold temperatures mute the roasted-malt aromatics." }
   },
   {
     "id": "drink_bourbon",
@@ -69,7 +69,7 @@
     "category": "spirits",
     "flavorProfile": { "sweetness": 2, "fatRichness": 1, "acidity": 1, "intensity": 5, "bitternessTannin": 2, "carbonation": 0 },
     "flavorNotes": ["vanilla", "caramel", "bourbon"],
-    "serving": { "temperature": "Neat, or with a single large ice cube", "glassware": "Rocks glass", "garnish": "An orange peel twist" }
+    "serving": { "temperature": "Neat, or with a single large ice cube", "glassware": "Rocks glass", "garnish": "An orange peel twist", "prepTip": "Express the orange peel's oils over the glass before dropping it in — twist, don't just drop." }
   },
   {
     "id": "drink_sparkling_lemonade",
@@ -77,7 +77,7 @@
     "category": "non_alcoholic",
     "flavorProfile": { "sweetness": 3, "fatRichness": 0, "acidity": 4, "intensity": 1, "bitternessTannin": 0, "carbonation": 4 },
     "flavorNotes": ["lemon", "citrus"],
-    "serving": { "temperature": "Well chilled, over ice", "glassware": "Highball glass", "garnish": "A lemon wheel" }
+    "serving": { "temperature": "Well chilled, over ice", "glassware": "Highball glass", "garnish": "A lemon wheel", "prepTip": "Add the sparkling water last, right before serving, to keep the fizz from going flat." }
   },
   {
     "id": "drink_rose_wine",
@@ -85,7 +85,7 @@
     "category": "wine",
     "flavorProfile": { "sweetness": 2, "fatRichness": 0, "acidity": 3, "intensity": 2, "bitternessTannin": 1, "carbonation": 0 },
     "flavorNotes": ["strawberry", "citrus"],
-    "serving": { "temperature": "Well chilled, 8-10°C (46-50°F)", "glassware": "White wine glass" }
+    "serving": { "temperature": "Well chilled, 8-10°C (46-50°F)", "glassware": "White wine glass", "prepTip": "Chill for at least 2 hours — rosé served too warm tastes flabby and overly sweet." }
   },
   {
     "id": "drink_hot_chocolate",
@@ -93,7 +93,7 @@
     "category": "non_alcoholic",
     "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 3, "bitternessTannin": 1, "carbonation": 0 },
     "flavorNotes": ["cocoa", "vanilla", "cream"],
-    "serving": { "temperature": "Hot", "glassware": "Mug", "garnish": "Whipped cream and a dusting of cocoa" }
+    "serving": { "temperature": "Hot", "glassware": "Mug", "garnish": "Whipped cream and a dusting of cocoa", "prepTip": "Whisk the cocoa into a small amount of hot milk first to dissolve it before adding the rest — prevents clumping." }
   },
   {
     "id": "drink_craft_ipa",
@@ -101,6 +101,30 @@
     "category": "beer",
     "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 2, "intensity": 4, "bitternessTannin": 4, "carbonation": 4 },
     "flavorNotes": ["citrus", "pine"],
-    "serving": { "temperature": "Cold, 7-10°C (45-50°F)", "glassware": "Pint or tulip glass" }
+    "serving": { "temperature": "Cold, 7-10°C (45-50°F)", "glassware": "Pint or tulip glass", "prepTip": "Pour at a 45-degree angle to build a proper head without losing carbonation." }
+  },
+  {
+    "id": "drink_champagne_brut",
+    "name": "Champagne Brut",
+    "category": "champagne",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 4, "intensity": 2, "bitternessTannin": 1, "carbonation": 5 },
+    "flavorNotes": ["green apple", "brioche", "citrus"],
+    "serving": { "temperature": "Well chilled, 6-9°C (43-48°F)", "glassware": "Tulip-shaped champagne glass", "prepTip": "Open it slowly, holding the cork and twisting the bottle — a loud pop means lost pressure and flat bubbles." }
+  },
+  {
+    "id": "drink_old_fashioned",
+    "name": "Old Fashioned",
+    "category": "cocktails",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 0, "acidity": 1, "intensity": 5, "bitternessTannin": 2, "carbonation": 0 },
+    "flavorNotes": ["bourbon", "orange", "caramel"],
+    "serving": { "temperature": "Over one large ice cube", "glassware": "Rocks glass", "garnish": "An orange peel twist", "prepTip": "Stir, don't shake — shaking over-dilutes and clouds a spirit-forward cocktail like this one." }
+  },
+  {
+    "id": "drink_espresso_martini",
+    "name": "Espresso Martini",
+    "category": "cocktails",
+    "flavorProfile": { "sweetness": 2, "fatRichness": 1, "acidity": 2, "intensity": 5, "bitternessTannin": 3, "carbonation": 0 },
+    "flavorNotes": ["espresso", "dark chocolate", "vanilla"],
+    "serving": { "temperature": "Ice-cold, served up", "glassware": "Martini glass", "garnish": "Three whole coffee beans", "prepTip": "Shake hard for a full 15 seconds — that's what builds the signature crema on top." }
   }
 ]
