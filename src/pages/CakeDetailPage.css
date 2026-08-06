@@ -4,14 +4,23 @@
 
 .cake-detail-tags {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 8px;
 }
 
-.cake-detail-texture-tag {
+.cake-detail-texture-tag,
+.cake-detail-difficulty-tag,
+.cake-detail-occasion-tag {
   background: var(--border);
   color: var(--text);
   text-transform: capitalize;
+}
+
+.cake-detail-pronunciation {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--raspberry);
 }
 
 .cake-detail-section {

@@ -21,6 +21,10 @@ export interface CakeProfile {
   flavorNotes: string[]
   texture: CakeTexture
   personaTags?: PersonaTags
+  /** Phonetic guide, only set for non-English names. */
+  pronunciation?: string
+  difficulty?: 'easy' | 'medium' | 'hard'
+  occasion?: string[]
 }
 
 export type DietTag = 'vegan' | 'gluten-free' | 'dairy-free' | 'egg-free' | 'nut-free'

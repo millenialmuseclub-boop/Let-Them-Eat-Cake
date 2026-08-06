@@ -47,8 +47,17 @@ export function CakeDetailPage() {
         <div className="cake-detail-tags">
           {locationLabel && <span className="tag">{locationLabel}</span>}
           <span className="tag cake-detail-texture-tag">{cake.texture}</span>
+          {cake.difficulty && <span className="tag cake-detail-difficulty-tag">{cake.difficulty}</span>}
+          {cake.occasion?.map((o) => (
+            <span key={o} className="tag cake-detail-occasion-tag">
+              {o}
+            </span>
+          ))}
         </div>
-        <h1>{cake.name}</h1>
+        <h1>
+          {cake.name}
+          {cake.pronunciation && <span className="cake-detail-pronunciation"> ({cake.pronunciation})</span>}
+        </h1>
         <p>{cake.description}</p>
         <SaveButton type="cake" id={cake.id} />
       </div>

@@ -452,5 +452,305 @@
     "shortDescription": "A small rum-and-almond spice cake topped with jam and an icing ring, eaten every February 5th across Finland.",
     "historyNote": "Named after Finland's national poet Johan Ludvig Runeberg, the cake is said to have been his favorite breakfast, supposedly invented by his wife Fredrika using leftover stale cookie crumbs so nothing went to waste. Finns still bake it specifically on Runeberg's birthday, February 5th, when bakeries across the country sell little else.",
     "isPrimary": true
+  },
+  {
+    "id": "region_paris_brest",
+    "region": "Europe",
+    "country": "France",
+    "cakeId": "cake_paris_brest",
+    "recipeId": "recipe_paris_brest",
+    "shortDescription": "A ring of choux pastry filled with hazelnut praline cream, shaped to echo a bicycle wheel.",
+    "historyNote": "Created in 1910 by pâtissier Louis Durand to commemorate the Paris–Brest–Paris cycling race, the cake's ring shape was deliberately designed to resemble a bicycle wheel. It remains one of France's most beloved pâtisserie classics, prized for the contrast between crisp choux and rich praline cream.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_cassata_siciliana",
+    "region": "Europe",
+    "country": "Italy",
+    "cakeId": "cake_cassata_siciliana",
+    "recipeId": "recipe_cassata_siciliana",
+    "shortDescription": "A Sicilian sponge cake wrapped in marzipan and layered with sweetened ricotta and candied fruit.",
+    "historyNote": "Cassata's roots trace to Arab-ruled Sicily, where sugar, ricotta, and marzipan were first combined; its name likely derives from the Arabic 'qas'ah,' the bowl the cake was traditionally molded in. Today it's a fixture of Sicilian Easter celebrations, instantly recognizable by its brightly candied fruit and pastel-green marzipan shell.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_baumkuchen",
+    "region": "Europe",
+    "country": "Germany",
+    "cakeId": "cake_baumkuchen",
+    "recipeId": "recipe_baumkuchen",
+    "shortDescription": "A German 'tree cake' of dozens of thin roasted batter layers, revealing tree-ring layers when sliced.",
+    "historyNote": "Baumkuchen dates back centuries in German baking tradition and takes its name — literally 'tree cake' — from the visible rings left by each thin layer of batter roasted individually on a rotating spit. It's considered such a mark of baking skill that it's often served at weddings and other major celebrations, and is a protected specialty in some German regions.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_linzer_torte",
+    "region": "Europe",
+    "country": "Austria",
+    "cakeId": "cake_linzer_torte",
+    "recipeId": "recipe_linzer_torte",
+    "shortDescription": "A lattice-topped spiced nut pastry filled with redcurrant jam, often cited as the world's oldest cake recipe.",
+    "historyNote": "A handwritten recipe resembling the Linzer Torte dates to 1653, making it one of the oldest documented cake recipes in the world. Named for the Austrian city of Linz, it remains a beloved Christmas staple across Austria and neighboring countries, prized for its spiced, nutty pastry and glossy lattice top.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_bolo_rei",
+    "region": "Europe",
+    "country": "Portugal",
+    "cakeId": "cake_bolo_rei",
+    "recipeId": "recipe_bolo_rei",
+    "shortDescription": "A ring-shaped Portuguese Christmas cake studded with candied and dried fruit.",
+    "historyNote": "Bolo Rei ('King Cake') was introduced to Portugal from France in the 19th century and quickly became a fixture of the Christmas season, traditionally eaten from early December through Epiphany in early January. Its ring shape and jeweled crown of candied fruit are meant to evoke royal regalia.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_tarta_de_santiago",
+    "region": "Europe",
+    "country": "Spain",
+    "cakeId": "cake_tarta_de_santiago",
+    "recipeId": "recipe_tarta_de_santiago",
+    "shortDescription": "A flourless Galician almond cake dusted with sugar in the shape of the Cross of Saint James.",
+    "historyNote": "Documented since at least the 16th century in Galicia, this flourless almond cake became closely tied to the Camino de Santiago pilgrimage route, with the Cross of Saint James stenciled into powdered sugar on top marking cakes sold to pilgrims completing their journey. It remains one of Spain's most protected regional desserts.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_battenberg",
+    "region": "Europe",
+    "country": "England",
+    "cakeId": "cake_battenberg",
+    "recipeId": "recipe_battenberg",
+    "shortDescription": "A checkerboard sponge cake in pink and yellow squares, wrapped in a sheet of marzipan.",
+    "historyNote": "Battenberg cake is widely believed to have been created in 1884 to celebrate the marriage of Princess Victoria to Prince Louis of Battenberg, with its four checkered squares said to represent the four Battenberg princes. It remains a staple of British afternoon tea trays and supermarket bakeries alike.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_dundee_cake",
+    "region": "Europe",
+    "country": "Scotland",
+    "cakeId": "cake_dundee_cake",
+    "recipeId": "recipe_dundee_cake",
+    "shortDescription": "A Scottish fruit cake finished with a spiral of whole almonds, traditionally free of cherries.",
+    "historyNote": "Dundee Cake takes its name from the Scottish city where it was first commercially produced by the Keiller marmalade company in the 19th century. Its distinguishing feature — a neat spiral of whole blanched almonds pressed into the top before baking — has been protected as a traditional recipe by Scottish bakers for generations.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_welsh_cakes",
+    "region": "Europe",
+    "country": "Wales",
+    "cakeId": "cake_welsh_cakes",
+    "recipeId": "recipe_welsh_cakes",
+    "shortDescription": "Small currant-studded griddle cakes, cooked on a bakestone rather than baked in an oven.",
+    "historyNote": "Welsh cakes date back to the 19th century, born from a tradition of cooking on a flat iron bakestone (a 'planc') over an open fire, a method used long before household ovens were common. They remain a fixture of Welsh tea tables, traditionally eaten warm off the griddle with a dusting of sugar.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_drommekage",
+    "region": "Europe",
+    "country": "Denmark",
+    "cakeId": "cake_drommekage",
+    "recipeId": "recipe_drommekage",
+    "shortDescription": "A Danish vanilla sponge topped with a broiled caramelized coconut layer.",
+    "historyNote": "Drømmekage ('dream cake') became a fixture of Danish home baking in the mid-20th century, prized for how simple its base sponge is compared to its show-stopping caramelized coconut topping. It remains one of the most-baked cakes in Danish households, often appearing at children's birthday parties.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_bublanina",
+    "region": "Europe",
+    "country": "Czech Republic",
+    "cakeId": "cake_bublanina",
+    "recipeId": "recipe_bublanina",
+    "shortDescription": "A Czech fruit sponge cake studded generously with fresh cherries or apricots.",
+    "historyNote": "Bublanina takes its name from the Czech word for 'bubble,' describing the light, airy sponge that puffs up around the fruit as it bakes. It's a summer staple across the Czech Republic, made whenever cherries or apricots are in season and requiring no special equipment or technique.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_cozonac",
+    "region": "Europe",
+    "country": "Romania",
+    "cakeId": "cake_cozonac",
+    "recipeId": "recipe_cozonac",
+    "shortDescription": "A rich, braided Romanian sweet bread-cake filled with a swirl of walnut or cocoa paste.",
+    "historyNote": "Cozonac has roots in Romanian and Moldovan Easter and Christmas baking traditions, with families often baking dozens at once to give as gifts to neighbors and relatives. Recipes and exact braiding techniques are passed down through generations and vary noticeably from household to household.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_kyiv_cake",
+    "region": "Europe",
+    "country": "Ukraine",
+    "cakeId": "cake_kyiv_cake",
+    "recipeId": "recipe_kyiv_cake",
+    "shortDescription": "Crisp hazelnut meringue layers filled with buttercream, a beloved Soviet-era gift cake.",
+    "historyNote": "Kyiv Cake was created in 1956 at Kyiv's Karl Marx Confectionery Factory and quickly became one of the most iconic desserts of the Soviet era, prized as a special gift precisely because its meringue layers made it difficult to produce reliably at home. It remains a symbol of Kyiv and Ukrainian confectionery pride today.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_garash",
+    "region": "Europe",
+    "country": "Bulgaria",
+    "cakeId": "cake_garash",
+    "recipeId": "recipe_garash",
+    "shortDescription": "Thin walnut-studded chocolate layers bound with chocolate cream, a Bulgarian classic.",
+    "historyNote": "Garash cake emerged in Bulgaria in the mid-20th century and quickly became one of the country's most iconic desserts, often considered the Bulgarian answer to Austria's Sachertorte. Its name is thought to come from a Hungarian confectioner, though the cake as it's known today is distinctly Bulgarian.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_napoleon_torte",
+    "region": "Europe",
+    "country": "Georgia",
+    "cakeId": "cake_napoleon_torte",
+    "recipeId": "recipe_napoleon_torte",
+    "shortDescription": "A many-layered puff pastry cake filled with vanilla custard, beloved across the former Soviet Caucasus.",
+    "historyNote": "Napoleon Torte spread across the Russian Empire and later the Soviet Union in the 19th and 20th centuries, likely inspired by French mille-feuille pastry, and took on distinct regional character in Georgia. It remains a fixture of Georgian New Year and celebration tables, prized for the labor involved in rolling and baking each thin pastry layer.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_prinsesstarta",
+    "region": "Europe",
+    "country": "Sweden",
+    "cakeId": "cake_prinsesstarta",
+    "recipeId": "recipe_prinsesstarta",
+    "shortDescription": "A domed Swedish sponge cake under a shell of pale green marzipan, filled with cream and pastry custard.",
+    "historyNote": "Prinsesstårta was popularized in the 1920s in a cookbook written for the daughters of Prince Carl of Sweden, which is where its 'princess cake' name comes from. Its signature pale green marzipan dome has made it one of the most recognizable cakes in Swedish bakery windows.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_merveilleux",
+    "region": "Europe",
+    "country": "Belgium",
+    "cakeId": "cake_merveilleux",
+    "recipeId": "recipe_merveilleux",
+    "shortDescription": "Meringue disks sandwiching whipped cream, entirely coated in chocolate shavings.",
+    "historyNote": "Merveilleux ('marvel') originates in Northern France and Belgium, where it has long been a bakery staple built almost entirely from meringue, cream, and chocolate. Its simple ingredient list belies a labor-intensive assembly, since the whole exterior must be hand-coated in chocolate shavings before serving.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_appeltaart",
+    "region": "Europe",
+    "country": "Netherlands",
+    "cakeId": "cake_appeltaart",
+    "recipeId": "recipe_appeltaart",
+    "shortDescription": "A tall, custardy Dutch apple cake bound with cinnamon-spiced apples under a lattice crust.",
+    "historyNote": "Appeltaart is considered a quintessential Dutch dessert, denser and taller than an American apple pie, often studded with raisins and finished with a dusting of powdered sugar. It's traditionally served with a dollop of whipped cream (slagroom) on the side rather than mixed in.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_zuger_kirschtorte",
+    "region": "Europe",
+    "country": "Switzerland",
+    "cakeId": "cake_zuger_kirschtorte",
+    "recipeId": "recipe_zuger_kirschtorte",
+    "shortDescription": "A Swiss layer cake soaked in cherry brandy, a specialty of the town of Zug.",
+    "historyNote": "Zuger Kirschtorte was created for the 1915 Swiss National Exhibition by a confectioner in the town of Zug, home to Switzerland's kirsch (cherry brandy) production. The recipe remains a closely guarded local specialty, with several Zug bakeries still competing over whose version is most authentic.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_bolo_de_rolo",
+    "region": "Latin America",
+    "country": "Brazil",
+    "cakeId": "cake_bolo_de_rolo",
+    "recipeId": "recipe_bolo_de_rolo",
+    "shortDescription": "A tightly spiral-rolled Brazilian cake with wafer-thin sponge layers spread with guava paste.",
+    "historyNote": "Bolo de Rolo originates in Pernambuco in northeastern Brazil, where Portuguese-influenced baking traditions met the region's abundant guava harvest. Making it well is considered a real test of skill, since the sponge must be rolled paper-thin without tearing while still warm from the oven.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_paneton",
+    "region": "Latin America",
+    "country": "Peru",
+    "cakeId": "cake_paneton",
+    "recipeId": "recipe_paneton",
+    "shortDescription": "Peru's version of Italian panettone, a tall candied-fruit sweet bread central to Christmas.",
+    "historyNote": "Panetón arrived in Peru with Italian immigrants in the 19th and 20th centuries and has since become so deeply embedded in Peruvian culture that Peru is now one of the world's largest per-capita panettone markets. Sharing a slice with hot chocolate on Christmas Eve is a near-universal Peruvian tradition.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_chaja",
+    "region": "Latin America",
+    "country": "Uruguay",
+    "cakeId": "cake_chaja",
+    "recipeId": "recipe_chaja",
+    "shortDescription": "A Uruguayan sponge cake layered with dulce de leche, peaches, and clouds of meringue.",
+    "historyNote": "Chajá was created in the 1920s by a confectioner in Paysandú, Uruguay, and named after a local bird known for being light and fluffy in appearance — much like the cake's airy layers of meringue and cream. It has since become one of Uruguay's most iconic desserts.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_torta_negra",
+    "region": "Latin America",
+    "country": "Colombia",
+    "cakeId": "cake_torta_negra",
+    "recipeId": "recipe_torta_negra",
+    "shortDescription": "A dark, rum-soaked Colombian fruit cake traditionally baked for Christmas.",
+    "historyNote": "Torta Negra reflects Colombia's Spanish and Caribbean culinary influences, built from dried fruit soaked for weeks in rum and deepened with molasses. Families often begin soaking the fruit as early as October to have the cake ready for Christmas Eve celebrations.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_torta_de_guayaba",
+    "region": "Latin America",
+    "country": "Cuba",
+    "cakeId": "cake_torta_de_guayaba",
+    "recipeId": "recipe_torta_de_guayaba",
+    "shortDescription": "A Cuban guava cake layered and topped with sweet guava paste and cream cheese frosting.",
+    "historyNote": "Guava paste (guayaba) is a staple of Cuban and broader Caribbean pantries, and this layered cake pairing it with cream cheese frosting reflects the strong Cuban-American bakery tradition, especially prominent in Miami. It's a frequent choice for birthdays and quinceañeras in Cuban communities.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_jamaican_black_cake",
+    "region": "Latin America",
+    "country": "Jamaica",
+    "cakeId": "cake_jamaican_black_cake",
+    "recipeId": "recipe_jamaican_black_cake",
+    "shortDescription": "A dense, dark fruit cake soaked in rum and wine for weeks, central to Jamaican Christmas and weddings.",
+    "historyNote": "Jamaican Black Cake descends from the British plum pudding tradition, transformed by enslaved and free Afro-Caribbean cooks using local rum and the practice of long fruit-soaking. It remains essential at Jamaican Christmas gatherings and weddings, with families often guarding their own soaking recipes closely.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_simnel_cake",
+    "region": "Africa",
+    "country": "Nigeria",
+    "cakeId": "cake_simnel_cake",
+    "recipeId": "recipe_simnel_cake",
+    "shortDescription": "A light fruit cake topped with marzipan and eleven marzipan balls, eaten at Easter.",
+    "historyNote": "Simnel Cake arrived in Nigeria through British colonial-era influence and was embraced as part of Easter celebrations, particularly within Nigeria's Christian communities. The eleven marzipan balls on top traditionally represent Jesus's apostles, excluding Judas.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_sfouf",
+    "region": "Asia & Middle East",
+    "country": "Lebanon",
+    "cakeId": "cake_sfouf",
+    "recipeId": "recipe_sfouf",
+    "shortDescription": "A bright yellow semolina cake flavored with turmeric and anise, popular across the Levant.",
+    "historyNote": "Sfouf's turmeric-gold color and semolina crumb make it a distinctive fixture of Lebanese and wider Levantine baking, often prepared for religious holidays and offered to guests alongside coffee. Its name comes from the Arabic word for 'rows,' referring to how it's traditionally cut into diamond shapes.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_ma_lai_go",
+    "region": "Asia & Middle East",
+    "country": "China",
+    "cakeId": "cake_ma_lai_go",
+    "recipeId": "recipe_ma_lai_go",
+    "shortDescription": "A steamed Cantonese sponge cake, a dim sum staple prized for its airy texture.",
+    "historyNote": "Ma Lai Go ('Malay cake') is believed to have arrived in Hong Kong via Cantonese cooks who encountered similar steamed cakes in Malaysia during the early 20th century, adapting the technique with local ingredients. It's now a dim sum teahouse staple across Hong Kong and southern China.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_kerala_plum_cake",
+    "region": "Asia & Middle East",
+    "country": "India",
+    "cakeId": "cake_kerala_plum_cake",
+    "recipeId": "recipe_kerala_plum_cake",
+    "shortDescription": "A rum-soaked fruit cake with caramelized sugar, central to Kerala's Christmas tradition.",
+    "historyNote": "Kerala Plum Cake reflects the strong Christian community in Kerala, southern India, where Portuguese and British colonial influence introduced European-style fruit cake, later adapted with local caramelized sugar and long fruit-soaking techniques. It's a fixture of Christmas tables across the state.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_kek_lapis_sarawak",
+    "region": "Asia & Middle East",
+    "country": "Malaysia",
+    "cakeId": "cake_kek_lapis_sarawak",
+    "recipeId": "recipe_kek_lapis_sarawak",
+    "shortDescription": "An intricately patterned Malaysian layer cake built from dozens of thin, individually colored layers.",
+    "historyNote": "Kek Lapis Sarawak developed in the East Malaysian state of Sarawak, drawing on the layer-cake tradition of neighboring Indonesia but pushing it toward elaborate geometric and floral patterns visible when sliced. Skilled bakers can produce dozens of distinct patterns, and the cake is a prized gift during Hari Raya and other celebrations.",
+    "isPrimary": true
   }
 ]
