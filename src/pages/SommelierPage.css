@@ -95,6 +95,20 @@
   color: var(--cocoa);
 }
 
+.pairing-row .cake-hero-image-thumbnail,
+.pairing-row .drink-image-thumbnail {
+  flex-shrink: 0;
+  margin: 0;
+  width: 56px;
+}
+
+.pairing-row .cake-hero-image-thumbnail img,
+.pairing-row .drink-image-thumbnail img {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+}
+
 .pairing-details {
   flex: 1;
   min-width: 0;
@@ -170,6 +184,15 @@
   }
   .pairing-toggle {
     display: none;
+  }
+  .pairing-row .cake-hero-image-thumbnail,
+  .pairing-row .drink-image-thumbnail {
+    width: 44px;
+  }
+  .pairing-row .cake-hero-image-thumbnail img,
+  .pairing-row .drink-image-thumbnail img {
+    width: 44px;
+    height: 44px;
   }
 }
 

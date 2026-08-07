@@ -28,6 +28,12 @@
   border-radius: 10px;
 }
 
+.pairing-comparison-side .drink-image-thumbnail {
+  margin: 0 0 4px;
+  width: 100%;
+  max-width: 120px;
+}
+
 .pairing-comparison-side h5 {
   margin: 0;
   font-size: 14px;

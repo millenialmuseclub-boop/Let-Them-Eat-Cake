@@ -4,6 +4,8 @@ import { cakes, drinks } from '../lib/data'
 import { explainPairing, rankCakesForDrink, rankPairings } from '../lib/sommelier'
 import { getLifestylePairing } from '../lib/lifestylePairings'
 import { PairingComparisonCard } from '../components/PairingComparisonCard'
+import { DrinkImage } from '../components/DrinkImage'
+import { CakeHeroImage } from '../components/CakeHeroImage'
 import type { DrinkCategory } from '../types/sommelier'
 import './SommelierPage.css'
 
@@ -92,6 +94,7 @@ function CakeFirstView({
           return (
             <div key={drink.id} className="card pairing-card">
               <button className="pairing-row" onClick={() => setExpandedId(isExpanded ? null : drink.id)}>
+                <DrinkImage drinkId={drink.id} variant="thumbnail" alt={drink.name} />
                 <div className="pairing-score" style={{ background: scoreColor(score) }}>
                   {score}
                 </div>
@@ -187,6 +190,7 @@ function DrinkFirstView({
       </label>
 
       <div className="card cake-summary">
+        <DrinkImage drinkId={drink.id} variant="hero" alt={drink.name} />
         <h3>
           {drink.name} <span className="tag">{drink.category.replace('_', ' ')}</span>
         </h3>
@@ -216,6 +220,7 @@ function DrinkFirstView({
           return (
             <div key={cake.id} className="card pairing-card">
               <button className="pairing-row" onClick={() => setExpandedId(isExpanded ? null : cake.id)}>
+                <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
                 <div className="pairing-score" style={{ background: scoreColor(score) }}>
                   {score}
                 </div>

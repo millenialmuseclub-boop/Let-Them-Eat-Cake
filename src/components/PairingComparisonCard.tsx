@@ -1,6 +1,7 @@
 import type { CakeProfile } from '../types/cake'
 import type { DrinkProfile } from '../types/sommelier'
 import { CakeHeroImage } from './CakeHeroImage'
+import { DrinkImage } from './DrinkImage'
 import './PairingComparisonCard.css'
 
 function scoreColor(score: number): string {
@@ -24,6 +25,7 @@ export function PairingComparisonCard({ cake, drink, score }: { cake: CakeProfil
       </div>
 
       <div className="pairing-comparison-side">
+        <DrinkImage drinkId={drink.id} variant="thumbnail" alt={drink.name} />
         <h5>{drink.name}</h5>
         <span className="tag pairing-comparison-tag">{drink.category.replace('_', ' ')}</span>
         <p className="pairing-comparison-notes">{drink.flavorNotes.join(', ')}</p>
