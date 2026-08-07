@@ -79,6 +79,11 @@ export function SocialShareCard({ eyebrow, title, subtitle, colorHex, imageUrl, 
         <h2 className="social-share-title">{title}</h2>
         {subtitle && <p className="social-share-subtitle">{subtitle}</p>}
         {imageUrl && <img src={imageUrl} alt="" className="social-share-image" />}
+        {!imageUrl && !children && (
+          <div className="social-share-fallback-visual" aria-hidden="true">
+            🍰
+          </div>
+        )}
         {children && <div className="social-share-visual">{children}</div>}
         <p className="social-share-wordmark">🍰 Let Them Eat Cake</p>
       </div>

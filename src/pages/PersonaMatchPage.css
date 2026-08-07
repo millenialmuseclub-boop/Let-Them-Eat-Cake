@@ -6,6 +6,10 @@
   margin-bottom: 20px;
 }
 
+.persona-quiz-question {
+  margin: 0 0 20px;
+}
+
 .persona-quiz-options {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));

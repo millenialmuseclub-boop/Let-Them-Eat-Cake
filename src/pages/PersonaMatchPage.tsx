@@ -38,6 +38,13 @@ const AESTHETIC_SWATCH_COLOR: Record<AestheticTag, string> = {
 
 type Step = 0 | 1 | 2 | 3
 
+const STEP_QUESTIONS: Record<Step, string> = {
+  0: 'What kind of mood are you baking — or eating — for?',
+  1: 'Which flavors pull you in first?',
+  2: 'What texture makes a cake irresistible to you?',
+  3: "What's your cake aesthetic?",
+}
+
 function ResultView({
   personality,
   recommendedCakes,
@@ -168,6 +175,7 @@ export function PersonaMatchPage() {
       <p>Answer four quick questions and we'll match you to a cake personality — plus real cakes to try.</p>
 
       <p className="persona-step-indicator">Step {step + 1} of 4</p>
+      <h2 className="persona-quiz-question">{STEP_QUESTIONS[step]}</h2>
 
       {step === 0 && (
         <div className="persona-quiz-options">
