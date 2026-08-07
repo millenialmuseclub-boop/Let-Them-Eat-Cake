@@ -1,0 +1,7 @@
+.birthday-time-machine-link {
+  display: block;
+  text-decoration: none;
+  color: var(--raspberry);
+  font-weight: 600;
+  margin-bottom: 20px;
+}

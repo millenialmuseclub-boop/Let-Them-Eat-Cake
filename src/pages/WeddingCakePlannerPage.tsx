@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import type { DietTag } from '../types/cake'
 import type { CakeShape, CelebrationOccasion, SeasonVariant, WeddingPlanInput, WeddingPlanResult, WeddingSeason } from '../types/weddingCake'
@@ -59,8 +59,16 @@ const ALLERGEN_LABELS: Record<string, string> = {
   soy: 'Soy',
 }
 
-export function WeddingCakePlannerPage() {
-  const [occasion, setOccasion] = useState<CelebrationOccasion>('wedding')
+export function WeddingCakePlannerPage({
+  lockedOccasion,
+  occasionChoices,
+  headerContent,
+}: {
+  lockedOccasion?: CelebrationOccasion
+  occasionChoices?: CelebrationOccasion[]
+  headerContent?: ReactNode
+}) {
+  const [occasion, setOccasion] = useState<CelebrationOccasion>(lockedOccasion ?? 'wedding')
   const [cultureId, setCultureId] = useState(weddingCultures[0].id)
   const [guestCount, setGuestCount] = useState(100)
   const [season, setSeason] = useState<WeddingSeason>('summer')
@@ -71,8 +79,10 @@ export function WeddingCakePlannerPage() {
   const [decorationStyleId, setDecorationStyleId] = useState(weddingDecorationStyles[0].id)
   const [result, setResult] = useState<WeddingPlanResult | null>(null)
   const [copied, setCopied] = useState(false)
-  const [occasionChosen, setOccasionChosen] = useState(false)
+  const [occasionChosen, setOccasionChosen] = useState(!!lockedOccasion)
   const [inspirationChosen, setInspirationChosen] = useState(false)
+
+  const visibleOccasionOptions = occasionChoices ? OCCASION_OPTIONS.filter((opt) => occasionChoices.includes(opt.value)) : OCCASION_OPTIONS
 
   function chooseOccasion(value: CelebrationOccasion) {
     setOccasion(value)
@@ -103,15 +113,33 @@ export function WeddingCakePlannerPage() {
 
   return (
     <main className="page wedding-page">
-      <h1>Celebration Cake Planner</h1>
-      <p>Build a full master planning sheet for any occasion — weddings, birthdays, baby showers, holidays, graduations, and anniversaries — covering structure, seasonal flavor, allergens, decor, and a budget estimate in one pass.</p>
+      <h1>
+        {lockedOccasion === 'wedding'
+          ? 'Wedding Cake Planner'
+          : lockedOccasion === 'birthday'
+            ? 'Birthday Cake Planner'
+            : occasionChoices
+              ? 'Other Celebrations'
+              : 'Celebration Cake Planner'}
+      </h1>
+      <p>
+        {lockedOccasion === 'wedding'
+          ? "A full wedding cake planning journey — culture, structure, seasonal flavor, allergens, and decor in one pass."
+          : lockedOccasion === 'birthday'
+            ? 'A full birthday cake planning journey — flavor, structure, decor, and a budget estimate in one pass.'
+            : occasionChoices
+              ? 'For baby showers, holidays, graduations, and anniversaries — a quick, complete planning sheet.'
+              : 'Build a full master planning sheet for any occasion — weddings, birthdays, baby showers, holidays, graduations, and anniversaries — covering structure, seasonal flavor, allergens, decor, and a budget estimate in one pass.'}
+      </p>
+
+      {headerContent}
 
       {!occasionChosen ? (
         <>
           <h2 className="inspiration-heading">What are you celebrating?</h2>
           <p className="inspiration-subtext">Start with the occasion — everything after is tailored to it.</p>
           <div className="inspiration-grid">
-            {OCCASION_OPTIONS.map((opt) => (
+            {visibleOccasionOptions.map((opt) => (
               <button
                 key={opt.value}
                 className="inspiration-tile"
@@ -134,9 +162,11 @@ export function WeddingCakePlannerPage() {
         </>
       ) : !inspirationChosen ? (
         <>
-          <button className="inspiration-change-link" onClick={() => setOccasionChosen(false)}>
-            ← Change occasion
-          </button>
+          {!lockedOccasion && (
+            <button className="inspiration-change-link" onClick={() => setOccasionChosen(false)}>
+              ← Change occasion
+            </button>
+          )}
 
           <h2 className="inspiration-heading">What's your vibe?</h2>
           <p className="inspiration-subtext">Start with a look that feels like you — you can fine-tune every detail after.</p>

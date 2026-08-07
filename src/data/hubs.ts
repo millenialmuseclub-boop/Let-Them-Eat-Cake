@@ -122,9 +122,19 @@ export const HUBS: Hub[] = [
     description: 'Plan a full custom cake for weddings, birthdays, and every celebration in between.',
     items: [
       {
-        to: '/wedding-cake-planner',
-        title: 'Celebration Cake Planner',
-        description: 'For weddings, birthdays, baby showers, holidays, graduations, and anniversaries — set your culture, guest count, season, and aesthetic to get a full master planning sheet with a budget estimate.',
+        to: '/wedding-planner',
+        title: 'Wedding',
+        description: 'A dedicated wedding cake planning journey — culture, structure, seasonal flavor, allergens, and decor in one pass.',
+      },
+      {
+        to: '/birthday-planner',
+        title: 'Birthday',
+        description: 'A dedicated birthday cake planning journey, with a link to the Birthday Time Machine to find the cake from your birth year.',
+      },
+      {
+        to: '/other-celebrations',
+        title: 'Other Celebrations',
+        description: 'For baby showers, holidays, graduations, and anniversaries — a quick, complete planning sheet.',
       },
       {
         to: '/time-machine',
