@@ -5,4 +5,6 @@ export interface CakeAnatomyStage {
   textureContribution: string
   structuralRole: string
   flavorImpact: string
+  commonMistake: string
+  proTip: string
 }

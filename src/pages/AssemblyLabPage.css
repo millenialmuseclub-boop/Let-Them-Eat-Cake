@@ -112,6 +112,13 @@
   line-height: 1.5;
 }
 
+.stability-servings {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
 @media (max-width: 640px) {
   .assembly-preview {
     grid-template-columns: 1fr;

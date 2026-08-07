@@ -3,6 +3,8 @@ import { getComponentsByCategory, buildAssembledRecipe, combineFlavorProfile, de
 import { calculateStability } from '../lib/stabilityCalculator'
 import { CakeBlueprintDiagram } from '../components/CakeBlueprintDiagram'
 import { CakeAnatomyExplainer } from '../components/CakeAnatomyExplainer'
+import { TechniqueLibrary } from '../components/TechniqueLibrary'
+import { CakeScienceExplainer } from '../components/CakeScienceExplainer'
 import { FlavorProfileBars } from '../components/FlavorProfileBars'
 import { RecipeCard } from '../components/RecipeCard'
 import type { FillingWeight, StabilityTemperature, TransportCondition } from '../types/stabilityCalculator'
@@ -153,6 +155,10 @@ export function AssemblyLabPage() {
 
         <div className="stability-results">
           <div className="stability-result-group">
+            <h4>Estimated Servings</h4>
+            <p className="stability-servings">{stability.estimatedServings} party-style slices</p>
+          </div>
+          <div className="stability-result-group">
             <h4>Supports</h4>
             <ul>
               {stability.supportNotes.map((note, i) => (
@@ -177,6 +183,18 @@ export function AssemblyLabPage() {
             </ul>
           </div>
         </div>
+      </div>
+
+      <h2 className="assembly-section-heading">🔧 Technique Library</h2>
+      <p>The hands-on techniques behind every stage of construction — what each one is, common mistakes, and a chef's tip.</p>
+      <div className="card">
+        <TechniqueLibrary />
+      </div>
+
+      <h2 className="assembly-section-heading">🧪 Cake Science</h2>
+      <p>The baking science behind why each ingredient and technique does what it does.</p>
+      <div className="card">
+        <CakeScienceExplainer />
       </div>
     </main>
   )

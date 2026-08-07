@@ -38,6 +38,12 @@ export function CakeAnatomyExplainer() {
           <p>
             <strong>Flavor impact:</strong> {expandedStage.flavorImpact}
           </p>
+          <p className="anatomy-mistake">
+            <strong>⚠️ Common mistake:</strong> {expandedStage.commonMistake}
+          </p>
+          <p className="anatomy-tip">
+            <strong>👩‍🍳 Pro tip:</strong> {expandedStage.proTip}
+          </p>
         </div>
       )}
     </div>

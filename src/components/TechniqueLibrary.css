@@ -1,23 +1,16 @@
-.anatomy-explainer {
+.technique-library {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.anatomy-flow {
+.technique-chip-row {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 4px;
+  gap: 8px;
 }
 
-.anatomy-step-wrap {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.anatomy-step {
+.technique-chip {
   font: inherit;
   padding: 8px 14px;
   border-radius: 999px;
@@ -28,23 +21,28 @@
   font-size: 14px;
 }
 
-.anatomy-step.active {
+.technique-chip.active {
   background: var(--raspberry);
   border-color: var(--raspberry);
   color: white;
 }
 
-.anatomy-arrow {
-  color: var(--border);
-  font-size: 16px;
-}
-
-.anatomy-detail p {
+.technique-detail p {
   font-size: 15px;
 }
 
-.anatomy-mistake,
-.anatomy-tip {
+.technique-steps {
+  padding-left: 20px;
+  margin: 0 0 12px;
+}
+
+.technique-steps li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.technique-mistake,
+.technique-tip {
   padding: 10px 12px;
   border-radius: 8px;
   background: var(--bg);

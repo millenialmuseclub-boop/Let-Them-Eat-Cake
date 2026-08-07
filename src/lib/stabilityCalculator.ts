@@ -1,7 +1,11 @@
+import { TIER_SERVING_CHART } from './weddingArchitecture'
 import type { StabilityInput, StabilityResult } from '../types/stabilityCalculator'
 
 export function calculateStability(input: StabilityInput): StabilityResult {
   const { tierCount, diameterIn, fillingWeight, temperature, transport } = input
+
+  const chartRow = TIER_SERVING_CHART.find((row) => row.diameterIn === diameterIn)
+  const estimatedServings = (chartRow?.partySlices ?? 0) * tierCount
 
   const supportNotes: string[] = []
   if (tierCount <= 1) {
@@ -28,6 +32,9 @@ export function calculateStability(input: StabilityInput): StabilityResult {
   if (temperature === 'warm') {
     chillNotes.push('In warm conditions, keep the cake refrigerated until as close to serving time as possible.')
   }
+  if (temperature === 'warm' && transport === 'long' && fillingWeight === 'light') {
+    chillNotes.push('A light filling like whipped cream is risky for a warm, long-transport combo — swap to a ganache or buttercream-based filling that holds its structure better in heat.')
+  }
 
   const displayNotes: string[] = []
   if (temperature === 'warm') {
@@ -44,6 +51,9 @@ export function calculateStability(input: StabilityInput): StabilityResult {
   } else if (transport === 'short') {
     displayNotes.push('Transport flat and chilled in a non-slip box; add any delicate garnish after arrival.')
   }
+  if (temperature === 'warm' && transport !== 'none') {
+    displayNotes.push('Consider a fondant or firm ganache exterior over a soft buttercream finish — it holds its shape and shields the cake better in transit and warm-weather display.')
+  }
 
-  return { supportNotes, chillNotes, displayNotes }
+  return { supportNotes, chillNotes, displayNotes, estimatedServings }
 }

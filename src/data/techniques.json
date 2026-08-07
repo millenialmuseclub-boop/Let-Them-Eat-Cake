@@ -1,0 +1,171 @@
+[
+  {
+    "id": "leveling",
+    "name": "Leveling",
+    "whatItIs": "Trimming the domed top off a baked layer so it sits flat and stacks evenly.",
+    "steps": [
+      "Let the layer cool completely — trimming a warm cake tears rather than cuts.",
+      "Set the cake on a turntable and hold a long serrated knife level against the dome's high point.",
+      "Rotate the turntable while keeping the knife still, sawing gently through in one continuous pass.",
+      "Save the trimmed dome — it makes excellent cake pops or a snack for the baker."
+    ],
+    "commonMistake": "Trying to eyeball it freehand without a turntable — the cut wanders and one side ends up thinner than the other.",
+    "chefTip": "A cake leveler (a wire stretched across an adjustable frame) gives a straighter cut than a knife if you're leveling often."
+  },
+  {
+    "id": "torting",
+    "name": "Torting",
+    "whatItIs": "Slicing a single baked layer horizontally into two or more thinner layers to add more filling opportunities.",
+    "steps": [
+      "Chill the layer first — cold cake tortes far more cleanly than room-temperature cake.",
+      "Mark the midpoint all the way around the side with toothpicks as a cutting guide.",
+      "Using a long serrated knife, saw through following the toothpick line, rotating the cake as you go.",
+      "Lift the top half off carefully with a flat cardboard round to keep it from cracking."
+    ],
+    "commonMistake": "Torting a layer that's too short to begin with — under about 1.5 inches, each resulting layer becomes too thin and fragile to handle.",
+    "chefTip": "A cake-torting wire with adjustable height guides gives a perfectly even split without any toothpick marking."
+  },
+  {
+    "id": "soaking",
+    "name": "Soaking",
+    "whatItIs": "Brushing a flavored syrup onto cake layers to add moisture and a secondary flavor note.",
+    "steps": [
+      "Make sure the syrup is fully cooled — hot syrup can melt the crumb structure.",
+      "Poke the layer lightly with a skewer in a few spots if it's on the drier side.",
+      "Brush syrup on in two thin, even passes rather than one heavy one, letting the first absorb before the second.",
+      "Let the soaked layer rest 5-10 minutes before filling so the syrup settles in evenly."
+    ],
+    "commonMistake": "Soaking a still-warm layer straight from the oven — the syrup runs through instead of being absorbed, leaving soggy spots.",
+    "chefTip": "Use a squeeze bottle instead of a brush for more even, controlled coverage, especially on delicate sponges."
+  },
+  {
+    "id": "filling",
+    "name": "Filling",
+    "whatItIs": "Spreading the layer between cake tiers that adds moisture, richness, and flavor contrast.",
+    "steps": [
+      "Pipe a thin dam of firmer frosting or buttercream around the perimeter of the layer.",
+      "Fill the center within the dam with the looser filling — jam, curd, mousse, or ganache.",
+      "Spread to an even thickness with an offset spatula, staying inside the dam.",
+      "Gently set the next layer on top, pressing just enough to seat it without squeezing filling out."
+    ],
+    "commonMistake": "Spreading filling all the way to the edge with no dam — it squeezes out under the weight of the next layer and bulges the sides.",
+    "chefTip": "Keep filling layers under about 1/4 inch thick unless the recipe calls for more — too thick and the stack becomes unstable."
+  },
+  {
+    "id": "crumb_coating",
+    "name": "Crumb Coating",
+    "whatItIs": "A thin first layer of frosting that seals in loose crumbs before the final finish coat goes on.",
+    "steps": [
+      "Apply a thin, even layer of frosting over the entire cake — it's fine if some cake shows through.",
+      "Smooth with a bench scraper or offset spatula, wiping the tool clean between passes.",
+      "Chill the crumb-coated cake for 20-30 minutes until the coat is firm to the touch.",
+      "Apply the final, thicker finish coat over the now-sealed surface."
+    ],
+    "commonMistake": "Skipping the chill step and going straight to the finish coat — loose crumbs lift back into the final layer and show through.",
+    "chefTip": "Keep a separate bowl of frosting for the crumb coat so any crumbs that mix in don't contaminate your finish-coat batch."
+  },
+  {
+    "id": "ganache",
+    "name": "Ganache",
+    "whatItIs": "A mixture of chocolate and hot cream, used as a filling, glaze, or the base for a drip finish depending on its ratio.",
+    "steps": [
+      "Chop chocolate finely and place in a heatproof bowl.",
+      "Heat cream just to a simmer, then pour over the chocolate and let sit undisturbed for 2-3 minutes.",
+      "Stir gently from the center outward until fully smooth and glossy.",
+      "Cool to the target consistency — thin and pourable for a glaze, thicker and chilled for a whippable filling."
+    ],
+    "commonMistake": "Stirring too vigorously or too soon — it can incorporate air bubbles and break the emulsion into a grainy, oily-looking mixture.",
+    "chefTip": "A 1:1 chocolate-to-cream ratio makes a pourable glaze; 2:1 makes a firmer filling that holds its shape when piped."
+  },
+  {
+    "id": "buttercream_smoothing",
+    "name": "Buttercream Smoothing",
+    "whatItIs": "Achieving a clean, even buttercream surface on the sides and top of a frosted cake.",
+    "steps": [
+      "Apply a generous, even layer of buttercream, slightly overfilling to allow for scraping down.",
+      "Hold a bench scraper vertically against the side and rotate the turntable in one smooth motion.",
+      "Clean the scraper between passes and repeat until the sides are flat and even.",
+      "Pull excess buttercream inward across the top edge with a straight spatula for a clean edge."
+    ],
+    "commonMistake": "Working with buttercream that's too warm — it drags and smears instead of holding a clean edge under the scraper.",
+    "chefTip": "If the buttercream is too soft to smooth cleanly, chill the cake for 10 minutes and try again rather than fighting a soft surface."
+  },
+  {
+    "id": "sharp_edges",
+    "name": "Sharp Edges",
+    "whatItIs": "The technique for getting crisp, defined 90-degree corners on a frosted cake's top edge, a hallmark of modern minimalist cakes.",
+    "steps": [
+      "Overfill the top slightly with buttercream so there's excess to pull inward.",
+      "Hold a straight-edge spatula flat across the top and drag excess buttercream toward the center.",
+      "Chill the cake fully, then apply one more thin layer and repeat the pull with a cold spatula.",
+      "Chill again before handling — sharp edges only hold once the buttercream is fully set."
+    ],
+    "commonMistake": "Trying to achieve a sharp edge in one pass — it almost always takes at least two chilled coats to get a truly crisp corner.",
+    "chefTip": "Keep your straight-edge spatula in a cup of ice water between passes — a cold tool holds a cleaner line."
+  },
+  {
+    "id": "piping",
+    "name": "Piping",
+    "whatItIs": "Using a piping bag and tip to apply frosting in controlled shapes — rosettes, borders, shells, and lettering.",
+    "steps": [
+      "Fit a piping bag with the chosen tip and fill it no more than two-thirds full.",
+      "Twist the top of the bag to remove air pockets before you start piping.",
+      "Hold the bag at a consistent angle and apply steady, even pressure from the top of the bag, not the tip.",
+      "Release pressure completely before lifting away to avoid a trailing tail."
+    ],
+    "commonMistake": "Squeezing from the middle or bottom of the bag — it's harder to control pressure and the bag tends to burst at a weak point.",
+    "chefTip": "Practice a new tip or pattern on a plate or parchment first — you can scrape it back into the bag and try again with zero waste."
+  },
+  {
+    "id": "fondant",
+    "name": "Fondant",
+    "whatItIs": "A pliable sugar paste rolled into a smooth sheet and draped over a cake for a seamless, sculptural finish.",
+    "steps": [
+      "Crumb-coat the cake with buttercream or ganache first — fondant needs something to adhere to and won't hide flaws on its own.",
+      "Knead the fondant until pliable, then roll it out evenly to about 1/4 inch thick on a surface dusted with cornstarch or powdered sugar.",
+      "Drape the fondant over the cake using the rolling pin to lift it, then smooth from the top down with fondant smoothers.",
+      "Trim excess at the base with a sharp knife or pizza cutter, pressing gently to seal the edge."
+    ],
+    "commonMistake": "Draping fondant over a cake that hasn't been chilled and crumb-coated smooth — every bump and dent underneath telegraphs straight through.",
+    "chefTip": "Small air bubbles can be popped with a clean pin and smoothed flat — invisible once the surface is worked over again."
+  },
+  {
+    "id": "glazing",
+    "name": "Glazing",
+    "whatItIs": "Pouring a thin, glossy coating — mirror glaze, ganache, or a simple icing — over a chilled cake for a polished exterior.",
+    "steps": [
+      "Chill the cake thoroughly, ideally frozen, so the glaze sets on contact rather than melting the surface.",
+      "Set the cake on a wire rack over a tray to catch drips.",
+      "Pour the glaze at the temperature the recipe specifies, starting in the center and working outward in a spiral.",
+      "Let excess drip off naturally for a minute before moving the cake to its final serving surface."
+    ],
+    "commonMistake": "Glazing a cake that's still cold but not cold enough, or pouring glaze that's too hot — either way it runs thin and patchy instead of coating evenly.",
+    "chefTip": "Use an offset spatula for one gentle pass only if needed — over-touching a glaze ruins its natural glossy finish."
+  },
+  {
+    "id": "doweling_stacking",
+    "name": "Doweling & Stacking",
+    "whatItIs": "Inserting internal supports so upper tiers don't sink into the frosting and filling of the tiers beneath them.",
+    "steps": [
+      "Mark where the next tier's base will sit using its cake board as a template.",
+      "Insert dowels (or an SPS separator plate for larger builds) evenly spaced within that marked circle.",
+      "Trim dowels flush with the top of the tier using a small saw or scissors.",
+      "Center the next tier's board directly on top of the trimmed dowels before setting the tier down."
+    ],
+    "commonMistake": "Using too few dowels or spacing them only around the very edge — the center of the tier above can still sink over time.",
+    "chefTip": "For tiers 10 inches or larger, an SPS (Single Plate System) separator distributes weight more evenly than plain dowels alone."
+  },
+  {
+    "id": "transport",
+    "name": "Transport",
+    "whatItIs": "Safely moving an assembled cake from kitchen to venue without shifting, melting, or collapsing.",
+    "steps": [
+      "Chill the cake fully — ideally for at least an hour — right before transport.",
+      "Place it in a non-slip box sized closely to the cake, or secure it with anti-slip mat on the vehicle floor, never a seat.",
+      "Keep the vehicle's air conditioning running in warm weather, and drive gently — brake and accelerate smoothly.",
+      "Add any delicate garnish, fresh flowers, or topper after arrival rather than before the drive."
+    ],
+    "commonMistake": "Transporting a fully finished cake, garnish and all, on a car seat with a seatbelt — the angle and bounce can slide the whole cake sideways.",
+    "chefTip": "For long or multi-stop trips, transport tiers unstacked in separate boxes and assemble the final stack on site."
+  }
+]

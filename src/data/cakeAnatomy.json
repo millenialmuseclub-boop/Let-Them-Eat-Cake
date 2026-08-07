@@ -5,7 +5,9 @@
     "purpose": "The base sponge or crumb that gives the cake its identity and provides the primary eating experience between fillings.",
     "textureContribution": "Sets the fundamental crumb — light and airy for a genoise-style sponge, dense and moist for a butter cake.",
     "structuralRole": "Bears the weight of everything stacked above it; must be sturdy enough to hold its shape once cut and stacked.",
-    "flavorImpact": "Usually the dominant flavor note of the whole cake, since it makes up the largest volume of any bite."
+    "flavorImpact": "Usually the dominant flavor note of the whole cake, since it makes up the largest volume of any bite.",
+    "commonMistake": "Overbaking to 'play it safe' — a dry sponge can't be rescued by syrup alone and will taste dense and cottony no matter what's layered around it.",
+    "proTip": "Bake layers a day ahead and chill them wrapped in plastic — cold cake torts and stacks far more cleanly than a same-day warm layer."
   },
   {
     "id": "soak_syrup",
@@ -13,7 +15,9 @@
     "purpose": "A brushed-on liquid — simple syrup, coffee, liqueur — that keeps the sponge moist and adds a secondary flavor layer.",
     "textureContribution": "Prevents the crumb from drying out, especially important for leaner sponges with less butter or oil.",
     "structuralRole": "Minimal on its own, but oversoaking weakens the crumb and can cause layers to slump — balance matters.",
-    "flavorImpact": "A concentrated flavor hit that can echo or contrast the filling — coffee syrup under a mocha filling, or citrus syrup for brightness."
+    "flavorImpact": "A concentrated flavor hit that can echo or contrast the filling — coffee syrup under a mocha filling, or citrus syrup for brightness.",
+    "commonMistake": "Soaking a hot layer straight out of the oven — the syrup runs straight through instead of being absorbed evenly, leaving soggy spots and dry patches.",
+    "proTip": "Brush syrup on in two thin passes, letting the first soak in before the second — one heavy pass tends to pool instead of absorbing."
   },
   {
     "id": "filling",
@@ -21,7 +25,9 @@
     "purpose": "The layer spread between cake layers — buttercream, jam, curd, ganache — adding moisture, richness, and a flavor counterpoint to the sponge.",
     "textureContribution": "Introduces contrast: creamy against crumbly, or fruity-tart against sweet, depending on what's chosen.",
     "structuralRole": "Acts as the 'glue' bonding layers together — too thin and layers can shift, too thick and it squeezes out under the weight above.",
-    "flavorImpact": "Often defines the cake's identity more than the sponge itself — a vanilla sponge reads completely differently with raspberry jam versus salted caramel."
+    "flavorImpact": "Often defines the cake's identity more than the sponge itself — a vanilla sponge reads completely differently with raspberry jam versus salted caramel.",
+    "commonMistake": "Spreading filling all the way to the edge — it squeezes out under the weight of the layer above and creates a messy bulge along the sides.",
+    "proTip": "Pipe a thin buttercream dam around the perimeter of each layer before spreading a looser filling inside it — keeps everything contained and the sides clean."
   },
   {
     "id": "crunch_layer",
@@ -29,7 +35,9 @@
     "purpose": "An optional textural layer — praline, feuilletine, nut brittle, cookie crumble — borrowed from professional pastry construction to add contrast.",
     "textureContribution": "The only source of genuine crunch in an otherwise soft cake — a deliberate textural surprise partway through a bite.",
     "structuralRole": "Thin and rigid; needs to be sandwiched carefully so it doesn't crack the layers above it when sliced.",
-    "flavorImpact": "Concentrated, often nutty or caramelized flavor in a small dose — punches above its weight relative to its thin profile."
+    "flavorImpact": "Concentrated, often nutty or caramelized flavor in a small dose — punches above its weight relative to its thin profile.",
+    "commonMistake": "Adding the crunch layer while it's still warm — it can melt into the surrounding filling and lose all of its texture by the time the cake is cut.",
+    "proTip": "Freeze the crunch layer flat on a tray for 10-15 minutes before placing it — it goes in rigid and stays crisp instead of deforming under the next layer."
   },
   {
     "id": "mousse",
@@ -37,7 +45,9 @@
     "purpose": "An aerated, often gelatin- or whipped-cream-stabilized layer used in entremet-style cakes for a lighter, cloud-like eating experience.",
     "textureContribution": "The lightest texture in the whole build — airy and melting rather than dense or chewy.",
     "structuralRole": "Needs to fully set (usually chilled or frozen) before the next layer goes on, typically held in shape by a cake ring or acetate collar while setting.",
-    "flavorImpact": "Delivers flavor through aroma and a lingering finish rather than immediate intensity, since whipping dilutes concentration."
+    "flavorImpact": "Delivers flavor through aroma and a lingering finish rather than immediate intensity, since whipping dilutes concentration.",
+    "commonMistake": "Unmolding the ring or collar before the mousse is fully set — it slumps at the edges and loses its clean vertical sides.",
+    "proTip": "Run a warm (not hot) cloth around a metal ring for a few seconds right before unmolding — it releases the mousse cleanly without melting the surface."
   },
   {
     "id": "glaze_finish",
@@ -45,6 +55,8 @@
     "purpose": "The final exterior coating — mirror glaze, ganache pour, fondant, or frosting — that seals and presents the cake.",
     "textureContribution": "The first texture a bite encounters; can be glossy-smooth, matte, or textured depending on technique.",
     "structuralRole": "Seals in moisture and, for glazes and fondant, adds a protective shell that helps the cake hold its shape during handling and transport.",
-    "flavorImpact": "The first flavor note tasted and often the most visually promised one — a glaze that doesn't match the interior flavor can feel like a mismatch."
+    "flavorImpact": "The first flavor note tasted and often the most visually promised one — a glaze that doesn't match the interior flavor can feel like a mismatch.",
+    "commonMistake": "Pouring a glaze over a cake straight from the fridge without a crumb coat underneath — condensation forms and the glaze slides or breaks instead of setting smooth.",
+    "proTip": "Glaze at the temperature the recipe specifies, not warmer 'to make it easier to pour' — too hot and it runs thin and patchy instead of coating evenly."
   }
 ]
