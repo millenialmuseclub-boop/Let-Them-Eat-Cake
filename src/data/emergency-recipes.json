@@ -10,6 +10,7 @@
       "Whisk everything together directly in the pan until smooth — no eggs, no extra bowl needed.",
       "Bake 30-35 minutes until a toothpick comes out clean."
     ],
+    "yield": 9,
     "timeMinutes": 40,
     "skillLevel": "beginner",
     "equipment": ["oven", "baking-pan"],
@@ -45,6 +46,7 @@
       "Microwave on high for 90 seconds to 2 minutes until risen and set.",
       "Let cool for 1 minute, then eat straight from the mug."
     ],
+    "yield": 1,
     "timeMinutes": 5,
     "skillLevel": "beginner",
     "equipment": ["microwave"],
@@ -80,6 +82,7 @@
       "Stir in 3 pots of flour and 1 pot's worth of baking powder (about 2 teaspoons) until just combined.",
       "Pour into the pan and bake 40-45 minutes until a toothpick comes out clean."
     ],
+    "yield": 8,
     "timeMinutes": 55,
     "skillLevel": "beginner",
     "equipment": ["oven", "loaf-pan"],
@@ -115,6 +118,7 @@
       "Stir in applesauce and oil until just combined.",
       "Pour into the pan and bake 30 minutes until a toothpick comes out clean."
     ],
+    "yield": 9,
     "timeMinutes": 40,
     "skillLevel": "beginner",
     "equipment": ["oven", "baking-pan"],
@@ -144,6 +148,7 @@
       "Fold in self-rising flour until just combined.",
       "Pour into the pan and bake 50-55 minutes until a toothpick comes out clean."
     ],
+    "yield": 8,
     "timeMinutes": 65,
     "skillLevel": "intermediate",
     "equipment": ["oven", "hand-mixer", "loaf-pan"],
@@ -173,6 +178,7 @@
       "Fold in self-rising flour until just combined with no dry streaks.",
       "Pour into the pan and bake 25-30 minutes until golden and a toothpick comes out clean."
     ],
+    "yield": 8,
     "timeMinutes": 35,
     "skillLevel": "beginner",
     "equipment": ["oven", "baking-pan"],
@@ -202,6 +208,7 @@
       "Pour into the pan and bake 40 minutes until a toothpick comes out clean.",
       "While still warm, whisk lemon juice with a little extra sugar and poke holes in the top of the cake, then pour the drizzle over so it soaks in."
     ],
+    "yield": 8,
     "timeMinutes": 50,
     "skillLevel": "beginner",
     "equipment": ["oven", "loaf-pan"],

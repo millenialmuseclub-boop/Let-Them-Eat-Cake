@@ -35,6 +35,7 @@ export interface EmergencyRecipe {
   description: string
   requiredIngredients: PantryIngredient[]
   steps: string[]
+  yield: number
   timeMinutes: number
   skillLevel: SkillLevel
   equipment: Equipment[]

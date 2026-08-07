@@ -1,16 +1,21 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getCake, getRecipe, regions } from '../lib/data'
+import { getCake, getRecipe, regions, collections } from '../lib/data'
 import { getAllCountries, getCountryEntries, getPrimaryEntry } from '../lib/atlas'
+import { FEATURED_COLLECTION_IDS } from '../lib/collections'
 import { RecipeCard } from '../components/RecipeCard'
 import { AtlasWorldMap } from '../components/AtlasWorldMap'
+import type { AtlasRegion } from '../types/atlas'
 import './AtlasPage.css'
+
+const ATLAS_REGIONS: AtlasRegion[] = ['Africa', 'Asia & Middle East', 'Europe', 'Latin America', 'North America', 'Oceania']
 
 export function AtlasPage() {
   const allCountries = useMemo(() => getAllCountries(), [])
   const [query, setQuery] = useState('')
   const [country, setCountry] = useState<string | null>(null)
   const [selectedEntryId, setSelectedEntryId] = useState<string | null>(null)
+  const [selectedRegion, setSelectedRegion] = useState<AtlasRegion | null>(null)
 
   function handleSearch(value: string) {
     setQuery(value)
@@ -18,11 +23,15 @@ export function AtlasPage() {
     if (match) {
       setCountry(match)
       setSelectedEntryId(getPrimaryEntry(match)?.id ?? null)
+      setSelectedRegion(null)
     } else {
       setCountry(null)
       setSelectedEntryId(null)
     }
   }
+
+  const featuredCollections = FEATURED_COLLECTION_IDS.map((id) => collections.find((c) => c.id === id)).filter((c) => c !== undefined)
+  const regionEntries = selectedRegion ? regions.filter((r) => r.isPrimary && r.region === selectedRegion) : []
 
   const countryEntries = country ? getCountryEntries(country) : []
   const selectedEntry = countryEntries.find((e) => e.id === selectedEntryId) ?? null
@@ -92,20 +101,53 @@ export function AtlasPage() {
       )}
 
       {!country && !query && (
-        <div className="atlas-grid atlas-browse">
-          {regions
-            .filter((r) => r.isPrimary)
-            .map((entry) => {
-              const cake = getCake(entry.cakeId)
-              return (
-                <button key={entry.id} className="card atlas-card" onClick={() => handleSearch(entry.country)}>
-                  <p className="atlas-location">{entry.country}</p>
-                  <h3>{cake?.name}</h3>
-                  <p>{entry.shortDescription}</p>
+        <>
+          <section className="atlas-row">
+            <h2>🌍 Browse by Region</h2>
+            <div className="atlas-chip-row">
+              {ATLAS_REGIONS.map((region) => (
+                <button
+                  key={region}
+                  className={selectedRegion === region ? 'atlas-chip active' : 'atlas-chip'}
+                  onClick={() => setSelectedRegion(selectedRegion === region ? null : region)}
+                >
+                  {region}
                 </button>
-              )
-            })}
-        </div>
+              ))}
+            </div>
+          </section>
+
+          {selectedRegion && (
+            <div className="atlas-grid atlas-browse">
+              {regionEntries.map((entry) => {
+                const cake = getCake(entry.cakeId)
+                return (
+                  <button key={entry.id} className="card atlas-card" onClick={() => handleSearch(entry.country)}>
+                    <p className="atlas-location">{entry.country}</p>
+                    <h3>{cake?.name}</h3>
+                    <p>{entry.shortDescription}</p>
+                  </button>
+                )
+              })}
+            </div>
+          )}
+
+          <section className="atlas-row">
+            <div className="atlas-row-header">
+              <h2>✨ Explore a Collection</h2>
+              <Link to="/collections" className="encyclopedia-link">
+                See all →
+              </Link>
+            </div>
+            <div className="atlas-chip-row">
+              {featuredCollections.map((collection) => (
+                <Link key={collection.id} to={`/collections/${collection.id}`} className="card atlas-collection-card">
+                  <span aria-hidden="true">{collection.icon}</span> {collection.title}
+                </Link>
+              ))}
+            </div>
+          </section>
+        </>
       )}
     </main>
   )

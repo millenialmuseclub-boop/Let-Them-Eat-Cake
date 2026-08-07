@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import type { Equipment, PantryIngredient, PantryMatch, SkillLevel } from '../types/pantry'
 import { ALL_EQUIPMENT, ALL_PANTRY_INGREDIENTS, EQUIPMENT_LABELS, PANTRY_INGREDIENT_LABELS, SKILL_LEVEL_LABELS, applyPantryFilters, matchEmergencyRecipes } from '../lib/pantry'
 import { emergencyRecipes } from '../lib/data'
@@ -69,6 +70,7 @@ export function PantryRaidPage() {
         <p>{recipe.description}</p>
 
         <div className="pantry-badges">
+          <span className="pantry-badge">Yield: {recipe.yield}</span>
           <span className="pantry-badge">{recipe.timeMinutes} min</span>
           <span className="pantry-badge">{SKILL_LEVEL_LABELS[recipe.skillLevel]}</span>
           {recipe.equipment.map((e) => (
@@ -103,6 +105,15 @@ export function PantryRaidPage() {
             ))}
           </ol>
         )}
+
+        <div className="pantry-workshop-links">
+          <Link to="/assembly-lab" className="encyclopedia-link">
+            🧁 Build a custom version in Assembly Lab →
+          </Link>
+          <Link to="/ingredients" className="encyclopedia-link">
+            🧂 Browse the Ingredient Explorer →
+          </Link>
+        </div>
       </div>
     )
   }
