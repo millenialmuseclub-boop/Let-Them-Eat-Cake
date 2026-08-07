@@ -4,7 +4,7 @@ import { getCake, getRecipeForCake } from '../lib/data'
 import { getRegionEntriesForCake, getDecadeForCake, getTopPairings, getRelatedCakes } from '../lib/encyclopedia'
 import { getCakeImage } from '../lib/images'
 import { recordCakeView } from '../lib/recentlyViewed'
-import { FlavorRadarChart } from '../components/FlavorRadarChart'
+import { FlavorProfileBars } from '../components/FlavorProfileBars'
 import { CakeOriginStory } from '../components/CakeOriginStory'
 import { RecipeCard } from '../components/RecipeCard'
 import { SaveButton } from '../components/SaveButton'
@@ -83,7 +83,7 @@ export function CakeDetailPage() {
 
       <section className="card cake-detail-section">
         <h2>🍰 Flavor Profile</h2>
-        <FlavorRadarChart profile={cake.flavorProfile} />
+        <FlavorProfileBars profile={cake.flavorProfile} />
         <p className="cake-detail-flavor-notes">Notes: {cake.flavorNotes.join(', ')}</p>
       </section>
 

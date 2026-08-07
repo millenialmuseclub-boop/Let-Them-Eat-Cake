@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { cakes, drinks } from '../lib/data'
 import { explainPairing, rankCakesForDrink, rankPairings } from '../lib/sommelier'
 import { getLifestylePairing } from '../lib/lifestylePairings'
-import { DualFlavorRadarChart } from '../components/DualFlavorRadarChart'
+import { PairingComparisonCard } from '../components/PairingComparisonCard'
 import type { DrinkCategory } from '../types/sommelier'
 import './SommelierPage.css'
 
@@ -138,7 +138,7 @@ function CakeFirstView({
 
                   <div className="pairing-expanded-section">
                     <h4>Flavor profile comparison</h4>
-                    <DualFlavorRadarChart cakeProfile={cake.flavorProfile} drinkProfile={drink.flavorProfile} cakeLabel={cake.name} drinkLabel={drink.name} score={score} />
+                    <PairingComparisonCard cake={cake} drink={drink} score={score} />
                   </div>
 
                   <LifestyleSection category={drink.category} />
@@ -242,7 +242,7 @@ function DrinkFirstView({
 
                   <div className="pairing-expanded-section">
                     <h4>Flavor profile comparison</h4>
-                    <DualFlavorRadarChart cakeProfile={cake.flavorProfile} drinkProfile={drink.flavorProfile} cakeLabel={cake.name} drinkLabel={drink.name} score={score} />
+                    <PairingComparisonCard cake={cake} drink={drink} score={score} />
                   </div>
 
                   <LifestyleSection category={drink.category} />

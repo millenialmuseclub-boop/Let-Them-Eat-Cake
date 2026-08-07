@@ -10,6 +10,7 @@ export interface CakePersonality {
   targetFlavorProfile: FlavorProfile
   targetTexture: CakeTexture
   colorHex: string
+  originCountry?: string
   moodAffinity?: MoodTag[]
   aestheticAffinity?: AestheticTag[]
 }

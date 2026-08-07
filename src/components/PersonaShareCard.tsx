@@ -1,5 +1,5 @@
 import type { CakePersonality } from '../types/personaMatch'
-import { FlavorRadarChart } from './FlavorRadarChart'
+import { getPersonalityImage } from '../lib/personalityImages'
 import { SocialShareCard } from './SocialShareCard'
 
 export function PersonaShareCard({ personality, deepLinkPath }: { personality: CakePersonality; deepLinkPath: string }) {
@@ -12,11 +12,10 @@ export function PersonaShareCard({ personality, deepLinkPath }: { personality: C
       title={personality.name}
       subtitle={personality.personalityTitle}
       colorHex={personality.colorHex}
+      imageUrl={getPersonalityImage(personality.id)?.url}
       shareUrl={shareUrl}
       shareText={shareText}
       filename={`${personality.id}-cake-personality`}
-    >
-      <FlavorRadarChart profile={personality.targetFlavorProfile} colorHex="#ffffff" />
-    </SocialShareCard>
+    />
   )
 }

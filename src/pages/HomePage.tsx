@@ -3,22 +3,16 @@ import { HUBS } from '../data/hubs'
 import { cakes, collections } from '../lib/data'
 import { getRecentlyViewed } from '../lib/recentlyViewed'
 import { FEATURED_COLLECTION_IDS } from '../lib/collections'
+import { getCakeOfTheDay } from '../lib/discovery'
 import { CakeHeroImage } from '../components/CakeHeroImage'
 import './HomePage.css'
-
-function dayOfYear(): number {
-  const now = new Date()
-  const start = new Date(now.getFullYear(), 0, 0)
-  const diff = now.getTime() - start.getTime()
-  return Math.floor(diff / (1000 * 60 * 60 * 24))
-}
 
 export function HomePage() {
   const recentCakes = getRecentlyViewed(6)
     .map((id) => cakes.find((c) => c.id === id))
     .filter((c) => c !== undefined)
 
-  const cakeOfTheDay = cakes[dayOfYear() % cakes.length]
+  const cakeOfTheDay = getCakeOfTheDay()
 
   const featuredCollections = FEATURED_COLLECTION_IDS.map((id) => collections.find((c) => c.id === id)).filter((c) => c !== undefined)
 

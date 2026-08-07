@@ -6,7 +6,10 @@ import type { CakePersonality, FlavorPull, QuizAnswers } from '../types/personaM
 import { AESTHETIC_OPTIONS, MOOD_OPTIONS } from '../lib/persona'
 import { matchPersonality, matchRecommendedCakes, personalityResult } from '../lib/personaMatch'
 import { getCakePersonality } from '../lib/data'
-import { FlavorRadarChart } from '../components/FlavorRadarChart'
+import { getPersonalityImage } from '../lib/personalityImages'
+import { getCountryFlag } from '../lib/countryFlags'
+import { FlavorProfileBars } from '../components/FlavorProfileBars'
+import { CakeHeroImage } from '../components/CakeHeroImage'
 import { PersonaShareCard } from '../components/PersonaShareCard'
 import { SaveButton } from '../components/SaveButton'
 import './PersonaMatchPage.css'
@@ -46,33 +49,48 @@ function ResultView({
   deepLinkPath: string
   onRetake?: () => void
 }) {
+  const image = getPersonalityImage(personality.id)
+  const flag = personality.originCountry ? getCountryFlag(personality.originCountry) : undefined
+
   return (
     <div className="persona-result">
-      <p className="persona-result-eyebrow">Your cake personality is</p>
-      <h1>{personality.name}</h1>
-      <p className="persona-result-title">{personality.personalityTitle}</p>
-      <SaveButton type="personality" id={personality.id} />
-
-      <div className="card persona-result-radar-card">
-        <FlavorRadarChart profile={personality.targetFlavorProfile} colorHex={personality.colorHex} />
+      <div className="persona-result-hero">
+        {image && <img src={image.url} alt="" className="persona-result-hero-image" />}
+        <div
+          className={image ? 'persona-result-hero-content' : 'persona-result-hero-content no-image'}
+          style={{ background: image ? undefined : personality.colorHex }}
+        >
+          <p className="persona-result-eyebrow">Your cake personality is</p>
+          <h1>
+            {personality.name}
+            {flag && <span className="persona-result-flag"> {flag}</span>}
+          </h1>
+          <p className="persona-result-title">{personality.personalityTitle}</p>
+        </div>
       </div>
 
-      <p className="persona-result-description">{personality.description}</p>
+      <blockquote className="persona-result-quote">{personality.description}</blockquote>
+
+      <SaveButton type="personality" id={personality.id} />
 
       <h2 className="persona-section-heading">The Story</h2>
       <p>{personality.culturalStory}</p>
 
+      <h2 className="persona-section-heading">Flavor Notes</h2>
+      <div className="card persona-result-flavor-card">
+        <FlavorProfileBars profile={personality.targetFlavorProfile} colorVar={personality.colorHex} />
+        <span className="tag persona-result-texture-tag">{personality.targetTexture}</span>
+      </div>
+
       <h2 className="persona-section-heading">Cakes For You</h2>
       <div className="persona-results">
         {recommendedCakes.map((cake) => (
-          <div key={cake.id} className="card persona-result-card">
+          <Link key={cake.id} to={`/cake/${cake.id}`} className="card persona-result-card">
+            <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
             <h3>{cake.name}</h3>
             <p>{cake.description}</p>
             <p className="persona-notes">Notes: {cake.flavorNotes.join(', ')}</p>
-            <Link to={`/cake/${cake.id}`} className="encyclopedia-link">
-              View full encyclopedia entry →
-            </Link>
-          </div>
+          </Link>
         ))}
       </div>
 

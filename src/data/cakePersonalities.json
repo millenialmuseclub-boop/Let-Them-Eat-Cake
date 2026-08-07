@@ -8,6 +8,7 @@
     "targetFlavorProfile": { "sweetness": 3, "fatRichness": 5, "acidity": 1, "intensity": 5 },
     "targetTexture": "dense",
     "colorHex": "#3C2415",
+    "originCountry": "France",
     "moodAffinity": ["celebration"],
     "aestheticAffinity": ["dark-academia"]
   },
@@ -20,6 +21,7 @@
     "targetFlavorProfile": { "sweetness": 5, "fatRichness": 2, "acidity": 3, "intensity": 2 },
     "targetTexture": "creamy",
     "colorHex": "#F7DCE0",
+    "originCountry": "Australia / New Zealand",
     "moodAffinity": ["celebration", "pure-hype"],
     "aestheticAffinity": ["cottagecore"]
   },
@@ -32,6 +34,7 @@
     "targetFlavorProfile": { "sweetness": 4, "fatRichness": 4, "acidity": 1, "intensity": 3 },
     "targetTexture": "crumbly",
     "colorHex": "#D4A574",
+    "originCountry": "France",
     "moodAffinity": ["celebration"],
     "aestheticAffinity": ["y2k-maximalist"]
   },
@@ -44,6 +47,7 @@
     "targetFlavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 1, "intensity": 2 },
     "targetTexture": "crumbly",
     "colorHex": "#F5E6D3",
+    "originCountry": "France",
     "moodAffinity": ["cozy-sunday"],
     "aestheticAffinity": ["minimalist-k-style"]
   },
@@ -56,6 +60,7 @@
     "targetFlavorProfile": { "sweetness": 5, "fatRichness": 3, "acidity": 1, "intensity": 4 },
     "targetTexture": "sponge",
     "colorHex": "#E8734A",
+    "originCountry": "United States",
     "moodAffinity": ["pure-hype"],
     "aestheticAffinity": ["y2k-maximalist"]
   },
@@ -68,6 +73,7 @@
     "targetFlavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 1, "intensity": 2 },
     "targetTexture": "crumbly",
     "colorHex": "#C9A66B",
+    "originCountry": "France",
     "moodAffinity": ["celebration"],
     "aestheticAffinity": ["dark-academia"]
   },
@@ -80,6 +86,7 @@
     "targetFlavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 3, "intensity": 2 },
     "targetTexture": "sponge",
     "colorHex": "#E8A0BF",
+    "originCountry": "United Kingdom",
     "moodAffinity": ["homesick", "cozy-sunday"],
     "aestheticAffinity": ["coquette-vintage"]
   },
@@ -92,6 +99,7 @@
     "targetFlavorProfile": { "sweetness": 2, "fatRichness": 4, "acidity": 1, "intensity": 3 },
     "targetTexture": "creamy",
     "colorHex": "#4A3728",
+    "originCountry": "France",
     "moodAffinity": ["lazy-weekend"],
     "aestheticAffinity": ["dark-academia"]
   },
@@ -104,6 +112,7 @@
     "targetFlavorProfile": { "sweetness": 3, "fatRichness": 4, "acidity": 3, "intensity": 4 },
     "targetTexture": "sponge",
     "colorHex": "#5C1A1A",
+    "originCountry": "Germany",
     "moodAffinity": ["breakup-catharsis", "homesick"],
     "aestheticAffinity": ["dark-academia"]
   },
@@ -116,6 +125,7 @@
     "targetFlavorProfile": { "sweetness": 4, "fatRichness": 2, "acidity": 5, "intensity": 3 },
     "targetTexture": "creamy",
     "colorHex": "#F5D547",
+    "originCountry": "United States",
     "moodAffinity": ["pure-hype", "lazy-weekend"],
     "aestheticAffinity": ["cottagecore", "coquette-vintage"]
   }
