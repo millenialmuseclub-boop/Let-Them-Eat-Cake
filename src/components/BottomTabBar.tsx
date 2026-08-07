@@ -7,6 +7,12 @@ export function BottomTabBar() {
 
   return (
     <nav className="bottom-tab-bar" aria-label="Primary">
+      <Link to="/" className={pathname === '/' ? 'tab-bar-item active' : 'tab-bar-item'}>
+        <span className="tab-bar-icon" aria-hidden="true">
+          🏠
+        </span>
+        <span className="tab-bar-label">Home</span>
+      </Link>
       {HUBS.map((hub) => (
         <Link key={hub.path} to={hub.path} className={isHubActive(hub, pathname) ? 'tab-bar-item active' : 'tab-bar-item'}>
           <span className="tab-bar-icon" aria-hidden="true">

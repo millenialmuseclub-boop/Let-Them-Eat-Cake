@@ -29,6 +29,11 @@ function cakeWithPhoto(candidates: CakeProfile[]): CakeProfile | undefined {
   return candidates.find((c) => getCakeImage(c.id)) ?? candidates[0]
 }
 
+/** Unlike cakeWithPhoto, never falls back to a photo-less pick — callers hide the card instead. */
+function cakeWithPhotoStrict(candidates: CakeProfile[]): CakeProfile | undefined {
+  return candidates.find((c) => getCakeImage(c.id))
+}
+
 function dayOfYear(): number {
   const now = new Date()
   const start = new Date(now.getFullYear(), 0, 0)
@@ -51,9 +56,20 @@ export function HomePage() {
     return primaryCakeId ? { country, primaryCakeId, cakeNames } : null
   }).filter((c) => c !== null)
 
-  const isEvenDay = dayOfYear() % 2 === 0
-  const newestCake = cakes[cakes.length - 1]
-  const spotlightIngredient = getAllIngredients().find((ing) => ing.cakeIds.length >= 3)
+  const newThisWeekCake = cakeWithPhotoStrict([...cakes].reverse())
+
+  const otherCountryPrimaryCakes = regions
+    .filter((r) => r.isPrimary && !WORLD_CARD_COUNTRIES.includes(r.country))
+    .map((r) => ({ country: r.country, cake: cakes.find((c) => c.id === r.cakeId) }))
+    .filter((entry): entry is { country: string; cake: CakeProfile } => !!entry.cake && !!getCakeImage(entry.cake.id))
+  const aroundWorldEntry = otherCountryPrimaryCakes.length > 0 ? otherCountryPrimaryCakes[dayOfYear() % otherCountryPrimaryCakes.length] : undefined
+
+  const spotlightIngredient = getAllIngredients().find(
+    (ing) => ing.cakeIds.length >= 3 && cakeWithPhotoStrict(ing.cakeIds.map((id) => cakes.find((c) => c.id === id)).filter((c): c is CakeProfile => !!c)),
+  )
+  const spotlightCake = spotlightIngredient
+    ? cakeWithPhotoStrict(spotlightIngredient.cakeIds.map((id) => cakes.find((c) => c.id === id)).filter((c): c is CakeProfile => !!c))
+    : undefined
 
   return (
     <main className="page home-page">
@@ -126,29 +142,44 @@ export function HomePage() {
         </Link>
       </section>
 
-      <section className="home-section">
-        <h2>🔎 Fresh Discovery</h2>
-        {isEvenDay && spotlightIngredient ? (
-          <Link to={`/ingredient/${spotlightIngredient.slug}`} className="card home-photo-card home-discovery-card">
-            {(() => {
-              const cake = cakeWithPhoto(spotlightIngredient.cakeIds.map((id) => cakes.find((c) => c.id === id)).filter((c): c is CakeProfile => !!c))
-              return cake && <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={spotlightIngredient.displayName} />
-            })()}
-            <div className="home-photo-card-label">
-              🧂 Ingredient Spotlight: {spotlightIngredient.displayName}
-              <p className="home-world-card-cakes">Used in {spotlightIngredient.cakeIds.length} cakes</p>
-            </div>
-          </Link>
-        ) : (
-          <Link to={`/cake/${newestCake.id}`} className="card home-photo-card home-discovery-card">
-            <CakeHeroImage cakeId={newestCake.id} variant="thumbnail" alt={newestCake.name} />
-            <div className="home-photo-card-label">
-              🆕 Newly Added: {newestCake.name}
-              <p className="home-world-card-cakes">{newestCake.description}</p>
-            </div>
-          </Link>
-        )}
-      </section>
+      {(newThisWeekCake || aroundWorldEntry || spotlightCake) && (
+        <section className="home-section">
+          <h2>🔎 Fresh Discovery</h2>
+          <div className="home-photo-row">
+            {newThisWeekCake && (
+              <Link to={`/cake/${newThisWeekCake.id}`} className="card home-photo-card home-discovery-card">
+                <CakeHeroImage cakeId={newThisWeekCake.id} variant="thumbnail" alt={newThisWeekCake.name} />
+                <div className="home-photo-card-label">
+                  🆕 New This Week
+                  <p className="home-world-card-cakes">{newThisWeekCake.name}</p>
+                </div>
+              </Link>
+            )}
+            {aroundWorldEntry && (
+              <Link to={`/cake/${aroundWorldEntry.cake.id}`} className="card home-photo-card home-discovery-card">
+                <CakeHeroImage cakeId={aroundWorldEntry.cake.id} variant="thumbnail" alt={aroundWorldEntry.cake.name} />
+                <div className="home-photo-card-label">
+                  🌍 Around the World
+                  <p className="home-world-card-cakes">
+                    {aroundWorldEntry.cake.name} — {aroundWorldEntry.country}
+                  </p>
+                </div>
+              </Link>
+            )}
+            {spotlightIngredient && spotlightCake && (
+              <Link to={`/ingredient/${spotlightIngredient.slug}`} className="card home-photo-card home-discovery-card">
+                <CakeHeroImage cakeId={spotlightCake.id} variant="thumbnail" alt={spotlightIngredient.displayName} />
+                <div className="home-photo-card-label">
+                  🧂 Ingredient Spotlight
+                  <p className="home-world-card-cakes">
+                    {spotlightIngredient.displayName} — used in {spotlightIngredient.cakeIds.length} cakes
+                  </p>
+                </div>
+              </Link>
+            )}
+          </div>
+        </section>
+      )}
 
       <section className="home-section">
         <h2>🍂 Seasonal Inspiration</h2>
