@@ -5,6 +5,8 @@ import { CakeBlueprintDiagram } from '../components/CakeBlueprintDiagram'
 import { CakeAnatomyExplainer } from '../components/CakeAnatomyExplainer'
 import { TechniqueLibrary } from '../components/TechniqueLibrary'
 import { CakeScienceExplainer } from '../components/CakeScienceExplainer'
+import { BlueprintExamples } from '../components/BlueprintExamples'
+import { CakeFailureLab } from '../components/CakeFailureLab'
 import { FlavorProfileBars } from '../components/FlavorProfileBars'
 import { RecipeCard } from '../components/RecipeCard'
 import type { FillingWeight, StabilityTemperature, TransportCondition } from '../types/stabilityCalculator'
@@ -195,6 +197,16 @@ export function AssemblyLabPage() {
       <p>The baking science behind why each ingredient and technique does what it does.</p>
       <div className="card">
         <CakeScienceExplainer />
+      </div>
+
+      <h2 className="assembly-section-heading">🏛️ Real Cake Blueprints</h2>
+      <p>How real, well-known cake families are actually engineered, layer by layer.</p>
+      <BlueprintExamples />
+
+      <h2 className="assembly-section-heading">🚨 Cake Failure Lab</h2>
+      <p>Something went wrong? Pick the symptom to see likely causes and how to fix it.</p>
+      <div className="card">
+        <CakeFailureLab />
       </div>
     </main>
   )

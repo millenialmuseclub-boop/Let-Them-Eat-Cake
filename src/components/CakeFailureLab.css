@@ -1,0 +1,47 @@
+.cake-failure-lab {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.failure-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.failure-chip {
+  font: inherit;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.failure-chip.active {
+  background: var(--raspberry);
+  border-color: var(--raspberry);
+  color: white;
+}
+
+.failure-detail h4 {
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+.failure-detail ul {
+  padding-left: 20px;
+  margin: 0 0 8px;
+}
+
+.failure-detail li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.failure-fixes {
+  color: var(--cocoa-strong);
+}
