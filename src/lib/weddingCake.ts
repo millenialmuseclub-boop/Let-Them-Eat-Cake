@@ -2,7 +2,8 @@ import { weddingCultures, weddingAesthetics, weddingSeasons, weddingDecorationSt
 import { generateTierPlan, buildCuttingGuide, ARCHITECTURE_FROSTING_MAP } from './weddingArchitecture'
 import { pickTiers } from './weddingFlavor'
 import { auditAllergens } from './weddingAllergens'
-import type { ArchitectureType, CakeShape, FrostingType, TierRole, WeddingPlanInput, WeddingPlanResult } from '../types/weddingCake'
+import { estimateBudget } from './celebrationBudget'
+import type { ArchitectureType, CakeShape, CelebrationOccasion, FrostingType, TierRole, WeddingPlanInput, WeddingPlanResult } from '../types/weddingCake'
 
 const ALLERGEN_FOOTER_NOTE =
   'Consider a small nut-free/dairy-free mini cutting tier for allergic guests rather than substituting the whole design.'
@@ -28,6 +29,8 @@ export function generateWeddingPlan(input: WeddingPlanInput): WeddingPlanResult 
 
   const allergenAudit = auditAllergens(pickedRecipes, input.diet)
   const cuttingGuide = buildCuttingGuide(architecturePlan.tiers)
+  const totalPartySlices = architecturePlan.tiers.reduce((sum, tier) => sum + tier.partySlices, 0)
+  const budgetEstimate = estimateBudget(totalPartySlices, decorationStyle.category)
 
   return {
     input,
@@ -42,7 +45,21 @@ export function generateWeddingPlan(input: WeddingPlanInput): WeddingPlanResult 
     allergenFooterNote: ALLERGEN_FOOTER_NOTE,
     cuttingGuide,
     decorationStyle,
+    budgetEstimate,
   }
+}
+
+const OCCASION_LABELS: Record<CelebrationOccasion, string> = {
+  wedding: 'Wedding',
+  birthday: 'Birthday',
+  'baby-shower': 'Baby Shower',
+  holiday: 'Holiday',
+  graduation: 'Graduation',
+  anniversary: 'Anniversary',
+}
+
+export function formatOccasionLabel(occasion: CelebrationOccasion): string {
+  return OCCASION_LABELS[occasion]
 }
 
 const ARCHITECTURE_LABELS: Record<ArchitectureType, string> = {
@@ -85,13 +102,13 @@ export function formatRoleLabel(role: TierRole): string {
 }
 
 export function toMarkdown(result: WeddingPlanResult): string {
-  const { culture, aesthetic, seasonEntry, architecturePlan, tierPicks, allergenAudit, allergenFooterNote, cuttingGuide, chosenFrosting, frostingGuidance, decorationStyle, input } = result
+  const { culture, aesthetic, seasonEntry, architecturePlan, tierPicks, allergenAudit, allergenFooterNote, cuttingGuide, chosenFrosting, frostingGuidance, decorationStyle, budgetEstimate, input } = result
   const lines: string[] = []
 
-  lines.push('# Wedding Cake Profile & Master Planning Sheet')
+  lines.push(`# ${formatOccasionLabel(input.occasion)} Cake Profile & Master Planning Sheet`)
   lines.push('')
   lines.push(
-    `**Location/Culture:** ${culture.name} · **Guests:** ${input.guestCount} · **Season:** ${seasonEntry.name} (${input.variant}) · **Aesthetic:** ${aesthetic.name} · **Shape:** ${formatShapeLabel(input.shape)} · **Dietary:** ${input.diet}`,
+    `**Occasion:** ${formatOccasionLabel(input.occasion)} · **Location/Culture:** ${culture.name} · **Guests:** ${input.guestCount} · **Season:** ${seasonEntry.name} (${input.variant}) · **Aesthetic:** ${aesthetic.name} · **Shape:** ${formatShapeLabel(input.shape)} · **Dietary:** ${input.diet}`,
   )
   lines.push('')
 
@@ -165,6 +182,13 @@ export function toMarkdown(result: WeddingPlanResult): string {
   for (const line of cuttingGuide) {
     lines.push(`- ${line}`)
   }
+  lines.push('')
+
+  lines.push('## 💰 Budget Estimate')
+  lines.push('')
+  lines.push(`**Estimated range:** $${budgetEstimate.low}–$${budgetEstimate.high} (roughly $${budgetEstimate.perServingLow}–$${budgetEstimate.perServingHigh} per serving)`)
+  lines.push('')
+  lines.push(budgetEstimate.note)
 
   return lines.join('\n')
 }

@@ -7583,5 +7583,808 @@
       "Add the next colored layer directly on top and repeat, building up 10-15 thin layers in a deliberate pattern.",
       "Cool completely before slicing to reveal the layered pattern inside."
     ]
+  },
+  {
+    "id": "recipe_melktert",
+    "cakeId": "cake_melktert",
+    "baseServings": 8,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour (crust)", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 1.6, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "butter", "name": "Butter, cold (crust)", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.44, "unit": "cup"} },
+      { "id": "milk", "name": "Whole milk", "metric": {"qty": 750, "unit": "ml"}, "imperial": {"qty": 3, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "oat milk"}] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 0.75, "unit": "cup"} },
+      { "id": "cornstarch", "name": "Cornstarch", "metric": {"qty": 50, "unit": "g"}, "imperial": {"qty": 6, "unit": "tbsp"} },
+      { "id": "eggs", "name": "Eggs, large", "metric": {"qty": 3, "unit": "count"}, "imperial": {"qty": 3, "unit": "count"} },
+      { "id": "cinnamon", "name": "Ground cinnamon (topping)", "metric": {"qty": 5, "unit": "g"}, "imperial": {"qty": 2, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Rub cold butter into flour to form a shortcrust dough, press into a tart pan, and blind-bake at 190°C (375°F) for 12 minutes.",
+      "Heat milk with sugar until just simmering. Whisk cornstarch and eggs together, then temper with the hot milk.",
+      "Return to the pan and cook, stirring, until thick and custard-like.",
+      "Pour into the baked crust and dust generously with cinnamon.",
+      "Chill at least 2 hours until fully set before slicing."
+    ]
+  },
+  {
+    "id": "recipe_koeksisters",
+    "cakeId": "cake_koeksisters",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 400, "unit": "g"}, "imperial": {"qty": 3.2, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "baking-powder", "name": "Baking powder", "metric": {"qty": 10, "unit": "g"}, "imperial": {"qty": 2, "unit": "tsp"} },
+      { "id": "butter", "name": "Butter", "metric": {"qty": 30, "unit": "g"}, "imperial": {"qty": 2, "unit": "tbsp"} },
+      { "id": "milk", "name": "Milk", "metric": {"qty": 200, "unit": "ml"}, "imperial": {"qty": 0.8, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "oat milk"}] },
+      { "id": "sugar", "name": "Granulated sugar (syrup)", "metric": {"qty": 600, "unit": "g"}, "imperial": {"qty": 3, "unit": "cup"} },
+      { "id": "ginger", "name": "Ground ginger (syrup)", "metric": {"qty": 5, "unit": "g"}, "imperial": {"qty": 2, "unit": "tsp"} },
+      { "id": "oil", "name": "Vegetable oil (frying)", "metric": {"qty": 500, "unit": "ml"}, "imperial": {"qty": 2, "unit": "cup"} }
+    ],
+    "steps": [
+      "Make a sugar syrup by boiling sugar, ginger, and water together, then chill it completely (ideally overnight).",
+      "Rub butter into flour and baking powder, then bind with milk into a soft dough. Roll out and cut into small rectangles.",
+      "Cut three slits into each rectangle and plait into a loose twist.",
+      "Deep-fry in hot oil until golden, about 2-3 minutes.",
+      "Immediately plunge the hot fried dough into the ice-cold syrup for a few seconds, then drain."
+    ]
+  },
+  {
+    "id": "recipe_gateau_patate",
+    "cakeId": "cake_gateau_patate",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "sweet-potato", "name": "Sweet potato, boiled and mashed", "metric": {"qty": 500, "unit": "g"}, "imperial": {"qty": 2, "unit": "cup"} },
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 1.2, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "rice flour, 1:1"}] },
+      { "id": "coconut", "name": "Desiccated coconut", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.5, "unit": "cup"} },
+      { "id": "cardamom", "name": "Ground cardamom", "metric": {"qty": 3, "unit": "g"}, "imperial": {"qty": 1, "unit": "tsp"} },
+      { "id": "oil", "name": "Vegetable oil (frying)", "metric": {"qty": 500, "unit": "ml"}, "imperial": {"qty": 2, "unit": "cup"} }
+    ],
+    "steps": [
+      "Mix mashed sweet potato with flour, coconut, sugar, and cardamom into a firm dough.",
+      "Shape into small flattened rounds and press a little extra coconut filling into the center of each.",
+      "Heat oil to medium and deep-fry the rounds in batches until golden brown on both sides.",
+      "Drain on paper towels and serve warm."
+    ]
+  },
+  {
+    "id": "recipe_sans_rival",
+    "cakeId": "cake_sans_rival",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "egg-whites", "name": "Egg whites", "metric": {"qty": 8, "unit": "count"}, "imperial": {"qty": 8, "unit": "count"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 1.25, "unit": "cup"} },
+      { "id": "cashew", "name": "Ground cashews", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 2.5, "unit": "cup"}, "substitutions": [{"diet": "nut-free", "replacement": "toasted sunflower seeds, ground"}] },
+      { "id": "butter", "name": "Butter, softened (buttercream)", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 1.3, "unit": "cup"} },
+      { "id": "egg-yolks", "name": "Egg yolks (buttercream)", "metric": {"qty": 6, "unit": "count"}, "imperial": {"qty": 6, "unit": "count"} },
+      { "id": "condensed-milk", "name": "Sweetened condensed milk (buttercream)", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 0.66, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "dairy-free condensed coconut milk"}] },
+      { "id": "cashew-topping", "name": "Chopped cashews (topping)", "metric": {"qty": 80, "unit": "g"}, "imperial": {"qty": 0.66, "unit": "cup"}, "substitutions": [{"diet": "nut-free", "replacement": "toasted coconut flakes"}] }
+    ],
+    "steps": [
+      "Whip egg whites with sugar to stiff peaks, then fold in ground cashews. Spread into thin rounds and bake at 160°C (325°F) for 20-25 minutes until crisp. Cool completely.",
+      "Whisk egg yolks and condensed milk over a double boiler until thick, then cool and beat into softened butter to make the buttercream.",
+      "Layer the cashew meringue rounds with buttercream between each.",
+      "Coat the top and sides with more buttercream and press chopped cashews over the whole exterior.",
+      "Chill at least 4 hours before slicing — it cuts best cold."
+    ]
+  },
+  {
+    "id": "recipe_kue_lapis",
+    "cakeId": "cake_kue_lapis",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "rice-flour", "name": "Rice flour", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 1.6, "unit": "cup"} },
+      { "id": "tapioca-flour", "name": "Tapioca flour", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.8, "unit": "cup"} },
+      { "id": "coconut-milk", "name": "Coconut milk", "metric": {"qty": 700, "unit": "ml"}, "imperial": {"qty": 2.9, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 1.25, "unit": "cup"} },
+      { "id": "pandan", "name": "Pandan extract", "metric": {"qty": 5, "unit": "ml"}, "imperial": {"qty": 1, "unit": "tsp"} },
+      { "id": "food-coloring", "name": "Food coloring (assorted, for layers)", "metric": {"qty": 5, "unit": "ml"}, "imperial": {"qty": 1, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Whisk rice flour, tapioca flour, sugar, and coconut milk into a smooth batter. Divide into portions and tint each a different color (leave one pandan-green).",
+      "Grease a heatproof pan and set up a steamer.",
+      "Ladle a thin layer of one color into the pan and steam 5 minutes until just set.",
+      "Add the next colored layer directly on top and steam again; repeat until all batter is used, building 8-10 layers.",
+      "Cool completely before unmolding and slicing to reveal the layered colors."
+    ]
+  },
+  {
+    "id": "recipe_bolo_de_fuba",
+    "cakeId": "cake_bolo_de_fuba",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "cornmeal", "name": "Fine cornmeal", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 1.3, "unit": "cup"} },
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.8, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 1.25, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large", "metric": {"qty": 3, "unit": "count"}, "imperial": {"qty": 3, "unit": "count"} },
+      { "id": "milk", "name": "Milk", "metric": {"qty": 250, "unit": "ml"}, "imperial": {"qty": 1, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "coconut milk"}] },
+      { "id": "oil", "name": "Vegetable oil", "metric": {"qty": 100, "unit": "ml"}, "imperial": {"qty": 0.4, "unit": "cup"} },
+      { "id": "coconut", "name": "Shredded coconut", "metric": {"qty": 60, "unit": "g"}, "imperial": {"qty": 0.66, "unit": "cup"} },
+      { "id": "baking-powder", "name": "Baking powder", "metric": {"qty": 10, "unit": "g"}, "imperial": {"qty": 2, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease a round pan.",
+      "Blend eggs, milk, oil, and sugar together until smooth.",
+      "Stir in cornmeal, flour, coconut, and baking powder until just combined.",
+      "Pour into the pan and bake 35-40 minutes until golden and a toothpick comes out clean."
+    ]
+  },
+  {
+    "id": "recipe_sakotis",
+    "cakeId": "cake_sakotis",
+    "baseServings": 14,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 2.4, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "eggs", "name": "Eggs, large", "metric": {"qty": 10, "unit": "count"}, "imperial": {"qty": 10, "unit": "count"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "cup"} },
+      { "id": "butter", "name": "Butter, melted", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 1.3, "unit": "cup"} },
+      { "id": "cream", "name": "Heavy cream", "metric": {"qty": 200, "unit": "ml"}, "imperial": {"qty": 0.8, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "coconut cream"}] },
+      { "id": "lemon-zest", "name": "Lemon zest", "metric": {"qty": 10, "unit": "g"}, "imperial": {"qty": 2, "unit": "tsp"} },
+      { "id": "vanilla", "name": "Vanilla extract", "metric": {"qty": 10, "unit": "ml"}, "imperial": {"qty": 2, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Whisk eggs and sugar until thick and pale, then whisk in melted butter, cream, lemon zest, and vanilla.",
+      "Fold in flour to make a smooth, pourable batter.",
+      "Heat a rotating spit or vertical rotisserie near a grill or open flame. Brush with a thin layer of batter and let it set into a golden ring.",
+      "Continue brushing on thin layers one at a time, letting each set before adding the next, building up branch-like spikes as it turns.",
+      "Once the desired size is reached, cool completely before slicing crosswise."
+    ]
+  },
+  {
+    "id": "recipe_kremsnita",
+    "cakeId": "cake_kremsnita",
+    "baseServings": 9,
+    "ingredients": [
+      { "id": "puff-pastry", "name": "Puff pastry sheets", "metric": {"qty": 2, "unit": "count"}, "imperial": {"qty": 2, "unit": "count"} },
+      { "id": "milk", "name": "Whole milk", "metric": {"qty": 750, "unit": "ml"}, "imperial": {"qty": 3, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "oat milk"}] },
+      { "id": "egg-yolks", "name": "Egg yolks", "metric": {"qty": 6, "unit": "count"}, "imperial": {"qty": 6, "unit": "count"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 180, "unit": "g"}, "imperial": {"qty": 0.9, "unit": "cup"} },
+      { "id": "cornstarch", "name": "Cornstarch", "metric": {"qty": 60, "unit": "g"}, "imperial": {"qty": 7, "unit": "tbsp"} },
+      { "id": "vanilla", "name": "Vanilla extract", "metric": {"qty": 10, "unit": "ml"}, "imperial": {"qty": 2, "unit": "tsp"} },
+      { "id": "icing-sugar", "name": "Powdered sugar (dusting)", "metric": {"qty": 20, "unit": "g"}, "imperial": {"qty": 2, "unit": "tbsp"} }
+    ],
+    "steps": [
+      "Bake both puff pastry sheets flat according to package instructions until golden and crisp. Cool completely.",
+      "Whisk egg yolks, sugar, and cornstarch, then temper with hot milk and cook until very thick. Stir in vanilla and cool slightly.",
+      "Place one pastry sheet in a baking dish and pour the warm custard over it.",
+      "Top with the second pastry sheet, pressing down gently, and chill at least 4 hours until fully set.",
+      "Dust with powdered sugar and cut into squares to serve."
+    ]
+  },
+  {
+    "id": "recipe_nazook",
+    "cakeId": "cake_nazook",
+    "baseServings": 16,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 500, "unit": "g"}, "imperial": {"qty": 4, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "butter", "name": "Butter, cold", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 1.1, "unit": "cup"} },
+      { "id": "sour-cream", "name": "Sour cream", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 0.9, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "dairy-free sour cream"}] },
+      { "id": "yeast", "name": "Active dry yeast", "metric": {"qty": 7, "unit": "g"}, "imperial": {"qty": 2, "unit": "tsp"} },
+      { "id": "walnuts", "name": "Ground walnuts (filling)", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 3, "unit": "cup"}, "substitutions": [{"diet": "nut-free", "replacement": "ground toasted oats with brown sugar"}] },
+      { "id": "sugar", "name": "Granulated sugar (filling)", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 0.75, "unit": "cup"} },
+      { "id": "vanilla", "name": "Vanilla extract", "metric": {"qty": 5, "unit": "ml"}, "imperial": {"qty": 1, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Cut butter into flour, then work in sour cream and yeast to form a soft dough. Chill at least 2 hours.",
+      "Mix ground walnuts, sugar, and vanilla into a sandy filling.",
+      "Divide dough into portions, roll each into a thin rectangle, sprinkle with filling, and roll up tightly into a log.",
+      "Coil each log into a spiral and place on a baking sheet.",
+      "Bake at 180°C (350°F) for 20-25 minutes until golden."
+    ]
+  },
+  {
+    "id": "recipe_galaktoboureko",
+    "cakeId": "cake_galaktoboureko",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "milk", "name": "Whole milk", "metric": {"qty": 1000, "unit": "ml"}, "imperial": {"qty": 4, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "oat milk"}] },
+      { "id": "semolina", "name": "Fine semolina", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar (custard)", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large", "metric": {"qty": 4, "unit": "count"}, "imperial": {"qty": 4, "unit": "count"} },
+      { "id": "phyllo", "name": "Phyllo sheets", "metric": {"qty": 12, "unit": "count"}, "imperial": {"qty": 12, "unit": "count"} },
+      { "id": "butter", "name": "Butter, melted", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 0.66, "unit": "cup"} },
+      { "id": "lemon-syrup", "name": "Lemon-sugar syrup", "metric": {"qty": 300, "unit": "ml"}, "imperial": {"qty": 1.25, "unit": "cup"} }
+    ],
+    "steps": [
+      "Heat milk, whisk in semolina and sugar, and cook until thickened into a custard. Cool slightly, then whisk in eggs.",
+      "Layer half the phyllo sheets in a buttered baking dish, brushing each with melted butter.",
+      "Pour in the custard, then top with the remaining phyllo sheets, again brushing each with butter.",
+      "Score the top layer into squares and bake at 175°C (350°F) for 45-50 minutes until deep golden.",
+      "Pour cold lemon syrup over the hot cake immediately after baking and let it soak in fully before serving."
+    ]
+  },
+  {
+    "id": "recipe_bizcocho_de_ron",
+    "cakeId": "cake_bizcocho_de_ron",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 280, "unit": "g"}, "imperial": {"qty": 2.25, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "butter", "name": "Butter, softened", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 0.88, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large", "metric": {"qty": 4, "unit": "count"}, "imperial": {"qty": 4, "unit": "count"} },
+      { "id": "rum", "name": "Dark rum", "metric": {"qty": 120, "unit": "ml"}, "imperial": {"qty": 0.5, "unit": "cup"} },
+      { "id": "baking-powder", "name": "Baking powder", "metric": {"qty": 10, "unit": "g"}, "imperial": {"qty": 2, "unit": "tsp"} },
+      { "id": "rum-glaze", "name": "Rum-butter glaze", "metric": {"qty": 100, "unit": "ml"}, "imperial": {"qty": 0.4, "unit": "cup"} }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease a bundt pan.",
+      "Cream butter and sugar, beat in eggs one at a time, then stir in half the rum.",
+      "Fold in flour and baking powder until just combined.",
+      "Pour into the pan and bake 45-50 minutes until a toothpick comes out clean.",
+      "While warm, poke holes in the top and brush generously with the rum-butter glaze until fully absorbed."
+    ]
+  },
+  {
+    "id": "recipe_great_cake",
+    "cakeId": "cake_great_cake",
+    "baseServings": 16,
+    "ingredients": [
+      { "id": "dried-fruit", "name": "Mixed dried fruit, soaked in rum and wine", "metric": {"qty": 1000, "unit": "g"}, "imperial": {"qty": 6, "unit": "cup"} },
+      { "id": "rum", "name": "Dark rum", "metric": {"qty": 250, "unit": "ml"}, "imperial": {"qty": 1, "unit": "cup"} },
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 400, "unit": "g"}, "imperial": {"qty": 3.2, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "butter", "name": "Butter, softened", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 1.3, "unit": "cup"} },
+      { "id": "brown-sugar", "name": "Brown sugar", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large", "metric": {"qty": 6, "unit": "count"}, "imperial": {"qty": 6, "unit": "count"} },
+      { "id": "browning", "name": "Burnt sugar browning", "metric": {"qty": 30, "unit": "ml"}, "imperial": {"qty": 2, "unit": "tbsp"} },
+      { "id": "mixed-spice", "name": "Mixed spice", "metric": {"qty": 10, "unit": "g"}, "imperial": {"qty": 4, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Soak dried fruit in rum and wine for at least 2 weeks in a sealed jar, stirring occasionally.",
+      "Blend the soaked fruit into a coarse paste. Cream butter and brown sugar, beat in eggs, then fold in flour and mixed spice.",
+      "Fold in the fruit paste and burnt sugar browning.",
+      "Bake at 150°C (300°F) for about 2 hours in a lined pan, tenting with foil once deeply browned, until a skewer comes out clean.",
+      "Cool completely and feed with a little more rum every few days if making ahead."
+    ]
+  },
+  {
+    "id": "recipe_vinarterta",
+    "cakeId": "cake_vinarterta",
+    "baseServings": 14,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 500, "unit": "g"}, "imperial": {"qty": 4, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "butter", "name": "Butter, softened", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 1.1, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 1.25, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large", "metric": {"qty": 3, "unit": "count"}, "imperial": {"qty": 3, "unit": "count"} },
+      { "id": "cardamom", "name": "Ground cardamom", "metric": {"qty": 6, "unit": "g"}, "imperial": {"qty": 2, "unit": "tsp"} },
+      { "id": "prunes", "name": "Dried prunes (filling)", "metric": {"qty": 500, "unit": "g"}, "imperial": {"qty": 3, "unit": "cup"} },
+      { "id": "almond-extract", "name": "Almond extract (filling)", "metric": {"qty": 5, "unit": "ml"}, "imperial": {"qty": 1, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Simmer prunes in water until soft, then blend with almond extract into a thick jam-like filling.",
+      "Cream butter and sugar, beat in eggs and cardamom, then work in flour to form a firm dough.",
+      "Divide the dough into 5-7 portions and roll each into a thin round layer, baking each separately at 190°C (375°F) for 8-10 minutes.",
+      "Stack the baked layers with prune filling spread between each.",
+      "Wrap and rest overnight so the layers soften slightly before slicing."
+    ]
+  },
+  {
+    "id": "recipe_trinidad_black_cake",
+    "cakeId": "cake_trinidad_black_cake",
+    "baseServings": 16,
+    "ingredients": [
+      { "id": "dried-fruit", "name": "Mixed dried fruit, soaked in rum and wine", "metric": {"qty": 900, "unit": "g"}, "imperial": {"qty": 5, "unit": "cup"} },
+      { "id": "rum", "name": "Dark rum", "metric": {"qty": 250, "unit": "ml"}, "imperial": {"qty": 1, "unit": "cup"} },
+      { "id": "red-wine", "name": "Red wine", "metric": {"qty": 200, "unit": "ml"}, "imperial": {"qty": 0.8, "unit": "cup"} },
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 350, "unit": "g"}, "imperial": {"qty": 2.8, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "butter", "name": "Butter, softened", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 1.1, "unit": "cup"} },
+      { "id": "brown-sugar", "name": "Brown sugar", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 1.25, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large", "metric": {"qty": 5, "unit": "count"}, "imperial": {"qty": 5, "unit": "count"} },
+      { "id": "browning", "name": "Burnt sugar browning", "metric": {"qty": 30, "unit": "ml"}, "imperial": {"qty": 2, "unit": "tbsp"} },
+      { "id": "mixed-spice", "name": "Mixed spice", "metric": {"qty": 8, "unit": "g"}, "imperial": {"qty": 3, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Soak dried fruit in rum and red wine for at least 1 week, ideally months, in a sealed jar.",
+      "Blend the soaked fruit into a coarse paste. Cream butter and brown sugar, beat in eggs, then fold in flour, mixed spice, and the fruit paste.",
+      "Stir in burnt sugar browning until the batter is deep brown.",
+      "Bake at 150°C (300°F) for about 2 hours in a lined pan, tenting with foil once deeply browned, until a skewer comes out clean.",
+      "Cool completely and feed with more rum periodically before serving."
+    ]
+  },
+  {
+    "id": "recipe_torta_caprese",
+    "cakeId": "cake_torta_caprese",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "dark-chocolate", "name": "Dark chocolate", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "cup"} },
+      { "id": "butter", "name": "Butter", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 0.88, "unit": "cup"} },
+      { "id": "almond-flour", "name": "Ground almonds", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 2.5, "unit": "cup"}, "substitutions": [{"diet": "nut-free", "replacement": "sunflower seed flour"}] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large, separated", "metric": {"qty": 5, "unit": "count"}, "imperial": {"qty": 5, "unit": "count"} },
+      { "id": "icing-sugar", "name": "Powdered sugar (dusting)", "metric": {"qty": 20, "unit": "g"}, "imperial": {"qty": 2, "unit": "tbsp"} }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease a round pan. Melt chocolate and butter together, then cool slightly.",
+      "Whisk egg yolks with half the sugar until pale, then stir in the chocolate mixture and ground almonds.",
+      "Whip egg whites with the remaining sugar to soft peaks, then fold into the chocolate batter in stages.",
+      "Pour into the pan and bake 35-40 minutes until the top is cracked but the center stays fudgy.",
+      "Cool completely and dust with powdered sugar before serving."
+    ]
+  },
+  {
+    "id": "recipe_panforte",
+    "cakeId": "cake_panforte",
+    "baseServings": 16,
+    "ingredients": [
+      { "id": "almonds", "name": "Whole almonds, toasted", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "cup"}, "substitutions": [{"diet": "nut-free", "replacement": "toasted pepitas"}] },
+      { "id": "dried-fruit", "name": "Candied citrus peel and dried figs", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "cup"} },
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 80, "unit": "g"}, "imperial": {"qty": 0.66, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "cocoa", "name": "Cocoa powder", "metric": {"qty": 20, "unit": "g"}, "imperial": {"qty": 0.25, "unit": "cup"} },
+      { "id": "spice", "name": "Mixed spice (cinnamon, clove, nutmeg)", "metric": {"qty": 8, "unit": "g"}, "imperial": {"qty": 3, "unit": "tsp"} },
+      { "id": "honey", "name": "Honey", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 0.5, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 0.75, "unit": "cup"} }
+    ],
+    "steps": [
+      "Preheat oven to 150°C (300°F) and line a round pan with rice paper or parchment.",
+      "Toss toasted almonds and dried fruit with flour, cocoa, and spice.",
+      "Heat honey and sugar together until it reaches a soft-ball stage (approximately 115°C/240°F).",
+      "Stir the hot syrup into the fruit-nut mixture quickly, then press firmly into the pan before it sets.",
+      "Bake 30-35 minutes, cool completely in the pan, and dust with powdered sugar before slicing thin."
+    ]
+  },
+  {
+    "id": "recipe_bolo_de_arroz",
+    "cakeId": "cake_bolo_de_arroz",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "rice-flour", "name": "Rice flour", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 1.2, "unit": "cup"} },
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 1.2, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "butter", "name": "Butter, softened", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 0.66, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large", "metric": {"qty": 3, "unit": "count"}, "imperial": {"qty": 3, "unit": "count"} },
+      { "id": "milk", "name": "Milk", "metric": {"qty": 100, "unit": "ml"}, "imperial": {"qty": 0.4, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "oat milk"}] },
+      { "id": "lemon-zest", "name": "Lemon zest", "metric": {"qty": 5, "unit": "g"}, "imperial": {"qty": 1, "unit": "tsp"} },
+      { "id": "baking-powder", "name": "Baking powder", "metric": {"qty": 8, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Preheat oven to 190°C (375°F) and line a muffin tin with paper cups.",
+      "Cream butter and sugar, beat in eggs one at a time, then stir in milk and lemon zest.",
+      "Fold in rice flour, flour, and baking powder until just combined.",
+      "Divide between the paper cups, filling nearly to the top.",
+      "Bake 20-25 minutes until domed and golden."
+    ]
+  },
+  {
+    "id": "recipe_financier",
+    "cakeId": "cake_financier",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "butter", "name": "Butter (browned)", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 0.88, "unit": "cup"} },
+      { "id": "almond-flour", "name": "Almond flour", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"}, "substitutions": [{"diet": "nut-free", "replacement": "sunflower seed flour"}] },
+      { "id": "icing-sugar", "name": "Powdered sugar", "metric": {"qty": 180, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "cup"} },
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 70, "unit": "g"}, "imperial": {"qty": 0.55, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "egg-whites", "name": "Egg whites", "metric": {"qty": 5, "unit": "count"}, "imperial": {"qty": 5, "unit": "count"} },
+      { "id": "honey", "name": "Honey", "metric": {"qty": 20, "unit": "g"}, "imperial": {"qty": 1, "unit": "tbsp"} }
+    ],
+    "steps": [
+      "Melt butter in a pan and continue cooking until it turns golden brown and smells nutty. Cool slightly.",
+      "Whisk almond flour, powdered sugar, and flour together, then whisk in egg whites and honey.",
+      "Stir in the browned butter until the batter is smooth and glossy.",
+      "Pour into greased small rectangular molds or a muffin tin, filling about two-thirds full.",
+      "Bake at 200°C (400°F) for 12-15 minutes until golden at the edges."
+    ]
+  },
+  {
+    "id": "recipe_galette_des_rois",
+    "cakeId": "cake_galette_des_rois",
+    "baseServings": 8,
+    "ingredients": [
+      { "id": "puff-pastry", "name": "Puff pastry sheets", "metric": {"qty": 2, "unit": "count"}, "imperial": {"qty": 2, "unit": "count"} },
+      { "id": "almond-flour", "name": "Almond flour", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "cup"}, "substitutions": [{"diet": "nut-free", "replacement": "sunflower seed flour"}] },
+      { "id": "butter", "name": "Butter, softened", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.44, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.5, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large", "metric": {"qty": 2, "unit": "count"}, "imperial": {"qty": 2, "unit": "count"} },
+      { "id": "almond-extract", "name": "Almond extract", "metric": {"qty": 5, "unit": "ml"}, "imperial": {"qty": 1, "unit": "tsp"} },
+      { "id": "egg-wash", "name": "Egg (for egg wash)", "metric": {"qty": 1, "unit": "count"}, "imperial": {"qty": 1, "unit": "count"} }
+    ],
+    "steps": [
+      "Beat butter and sugar together, then beat in eggs and almond extract, and fold in almond flour to make the frangipane filling.",
+      "Lay one puff pastry sheet down, spread the frangipane in the center leaving a border, and tuck in a small charm or dried bean.",
+      "Brush the border with water, top with the second pastry sheet, and press the edges to seal.",
+      "Score a decorative pattern on top and brush with egg wash.",
+      "Bake at 200°C (400°F) for 25-30 minutes until deeply golden and puffed."
+    ]
+  },
+  {
+    "id": "recipe_boterkoek",
+    "cakeId": "cake_boterkoek",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 2.4, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "butter", "name": "Butter, softened", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 1.1, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"} },
+      { "id": "egg", "name": "Egg, large", "metric": {"qty": 1, "unit": "count"}, "imperial": {"qty": 1, "unit": "count"} },
+      { "id": "almond-extract", "name": "Almond extract", "metric": {"qty": 5, "unit": "ml"}, "imperial": {"qty": 1, "unit": "tsp"} },
+      { "id": "egg-wash", "name": "Egg yolk (wash)", "metric": {"qty": 1, "unit": "count"}, "imperial": {"qty": 1, "unit": "count"} }
+    ],
+    "steps": [
+      "Preheat oven to 170°C (340°F) and grease a round pan.",
+      "Cream butter and sugar, beat in egg and almond extract, then fold in flour to form a firm dough.",
+      "Press the dough evenly into the pan and score a crosshatch pattern on top with a fork.",
+      "Brush with egg yolk wash.",
+      "Bake 25-30 minutes until golden — the center should still feel slightly soft, it firms up as it cools."
+    ]
+  },
+  {
+    "id": "recipe_guglhupf",
+    "cakeId": "cake_guglhupf",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 400, "unit": "g"}, "imperial": {"qty": 3.2, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free bread blend"}] },
+      { "id": "yeast", "name": "Active dry yeast", "metric": {"qty": 10, "unit": "g"}, "imperial": {"qty": 2.5, "unit": "tsp"} },
+      { "id": "milk", "name": "Warm milk", "metric": {"qty": 150, "unit": "ml"}, "imperial": {"qty": 0.6, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "warm oat milk"}] },
+      { "id": "butter", "name": "Butter, softened", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 0.66, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.5, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large", "metric": {"qty": 3, "unit": "count"}, "imperial": {"qty": 3, "unit": "count"} },
+      { "id": "raisins", "name": "Raisins, soaked in rum", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.66, "unit": "cup"} },
+      { "id": "icing-sugar", "name": "Powdered sugar (dusting)", "metric": {"qty": 20, "unit": "g"}, "imperial": {"qty": 2, "unit": "tbsp"} }
+    ],
+    "steps": [
+      "Proof yeast in warm milk with a spoonful of sugar. Cream butter and remaining sugar, beat in eggs, then combine with the yeast mixture and flour to form a soft dough.",
+      "Knead in the rum-soaked raisins. Cover and let rise until doubled, about 1.5 hours.",
+      "Grease a bundt (guglhupf) pan well and transfer the dough in, smoothing the top.",
+      "Let rise again 30-40 minutes, then bake at 175°C (350°F) for 40-45 minutes until golden and hollow-sounding when tapped.",
+      "Cool completely before turning out and dusting with powdered sugar."
+    ]
+  },
+  {
+    "id": "recipe_boston_cream_pie",
+    "cakeId": "cake_boston_cream_pie",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 1.6, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "sugar", "name": "Granulated sugar (sponge)", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large", "metric": {"qty": 4, "unit": "count"}, "imperial": {"qty": 4, "unit": "count"} },
+      { "id": "baking-powder", "name": "Baking powder", "metric": {"qty": 8, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "tsp"} },
+      { "id": "milk", "name": "Milk (custard)", "metric": {"qty": 400, "unit": "ml"}, "imperial": {"qty": 1.7, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "oat milk"}] },
+      { "id": "egg-yolks", "name": "Egg yolks (custard)", "metric": {"qty": 4, "unit": "count"}, "imperial": {"qty": 4, "unit": "count"} },
+      { "id": "cornstarch", "name": "Cornstarch (custard)", "metric": {"qty": 30, "unit": "g"}, "imperial": {"qty": 4, "unit": "tbsp"} },
+      { "id": "dark-chocolate", "name": "Dark chocolate (glaze)", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"} }
+    ],
+    "steps": [
+      "Whisk eggs and sugar until pale and thick, fold in flour and baking powder, and bake two thin rounds at 175°C (350°F) for 20 minutes. Cool completely.",
+      "Whisk egg yolks, cornstarch, and a little sugar, temper with hot milk, and cook until thick. Cool completely.",
+      "Sandwich the custard between the two sponge layers.",
+      "Melt dark chocolate and pour over the top, letting it drip down the sides.",
+      "Chill until the glaze sets before slicing."
+    ]
+  },
+  {
+    "id": "recipe_king_cake",
+    "cakeId": "cake_king_cake",
+    "baseServings": 14,
+    "ingredients": [
+      { "id": "flour", "name": "Bread flour", "metric": {"qty": 500, "unit": "g"}, "imperial": {"qty": 4, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free bread blend"}] },
+      { "id": "yeast", "name": "Active dry yeast", "metric": {"qty": 10, "unit": "g"}, "imperial": {"qty": 2.5, "unit": "tsp"} },
+      { "id": "milk", "name": "Warm milk", "metric": {"qty": 200, "unit": "ml"}, "imperial": {"qty": 0.8, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "warm oat milk"}] },
+      { "id": "butter", "name": "Butter, softened", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.44, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.5, "unit": "cup"} },
+      { "id": "cinnamon", "name": "Cinnamon (filling)", "metric": {"qty": 10, "unit": "g"}, "imperial": {"qty": 4, "unit": "tsp"} },
+      { "id": "icing-sugar", "name": "Powdered sugar (icing)", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 1.6, "unit": "cup"} },
+      { "id": "food-coloring", "name": "Purple, green, and gold sanding sugar", "metric": {"qty": 30, "unit": "g"}, "imperial": {"qty": 3, "unit": "tbsp"} }
+    ],
+    "steps": [
+      "Proof yeast in warm milk with a spoonful of sugar. Combine with flour, remaining sugar, and butter to form a soft dough. Knead and let rise until doubled.",
+      "Roll into a large rectangle, sprinkle with cinnamon and sugar, and roll up into a long log.",
+      "Shape into a ring on a baking sheet, pinching the ends together, and let rise again 30-45 minutes.",
+      "Bake at 190°C (375°F) for 25-30 minutes until golden.",
+      "Once cool, drizzle with powdered sugar icing and alternate bands of purple, green, and gold sanding sugar."
+    ]
+  },
+  {
+    "id": "recipe_smith_island",
+    "cakeId": "cake_smith_island",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 350, "unit": "g"}, "imperial": {"qty": 2.8, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "butter", "name": "Butter, softened", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 1.1, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 350, "unit": "g"}, "imperial": {"qty": 1.75, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large", "metric": {"qty": 5, "unit": "count"}, "imperial": {"qty": 5, "unit": "count"} },
+      { "id": "milk", "name": "Milk", "metric": {"qty": 250, "unit": "ml"}, "imperial": {"qty": 1, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "oat milk"}] },
+      { "id": "baking-powder", "name": "Baking powder", "metric": {"qty": 10, "unit": "g"}, "imperial": {"qty": 2, "unit": "tsp"} },
+      { "id": "dark-chocolate", "name": "Dark chocolate (frosting)", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 2, "unit": "cup"} },
+      { "id": "cream", "name": "Heavy cream (frosting)", "metric": {"qty": 300, "unit": "ml"}, "imperial": {"qty": 1.25, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "coconut cream"}] }
+    ],
+    "steps": [
+      "Preheat oven to 190°C (375°F). Cream butter and sugar, beat in eggs, then fold in flour, baking powder, and milk.",
+      "Spread very thin layers of batter into 8-10 greased round pans (or bake in batches) and bake each 8-10 minutes until just set.",
+      "Melt chocolate with cream to make a pourable fudge frosting.",
+      "Stack the thin layers with a thin layer of fudge frosting between each.",
+      "Coat the top and sides with the remaining frosting and chill before slicing."
+    ]
+  },
+  {
+    "id": "recipe_italian_cream_cake",
+    "cakeId": "cake_italian_cream_cake",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 280, "unit": "g"}, "imperial": {"qty": 2.25, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "butter", "name": "Butter, softened", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 0.66, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large, separated", "metric": {"qty": 5, "unit": "count"}, "imperial": {"qty": 5, "unit": "count"} },
+      { "id": "buttermilk", "name": "Buttermilk", "metric": {"qty": 240, "unit": "ml"}, "imperial": {"qty": 1, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "oat milk with 1 tbsp lemon juice"}] },
+      { "id": "pecan", "name": "Chopped pecans", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"}, "substitutions": [{"diet": "nut-free", "replacement": "toasted sunflower seeds"}] },
+      { "id": "coconut", "name": "Shredded coconut", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"} },
+      { "id": "cream-cheese", "name": "Cream cheese (frosting)", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "dairy-free cream cheese"}] }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F). Cream butter and sugar, beat in egg yolks, then fold in flour alternately with buttermilk.",
+      "Stir in pecans and coconut. Whip egg whites to soft peaks and fold in.",
+      "Divide between two pans and bake 25-30 minutes until a toothpick comes out clean. Cool completely.",
+      "Beat cream cheese with powdered sugar and a little butter for the frosting.",
+      "Frost between the layers and over the top and sides, then press extra pecans and coconut onto the surface."
+    ]
+  },
+  {
+    "id": "recipe_german_chocolate",
+    "cakeId": "cake_german_chocolate",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 280, "unit": "g"}, "imperial": {"qty": 2.25, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "dark-chocolate", "name": "Sweet baking chocolate", "metric": {"qty": 130, "unit": "g"}, "imperial": {"qty": 0.75, "unit": "cup"} },
+      { "id": "butter", "name": "Butter, softened", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 0.88, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large, separated", "metric": {"qty": 4, "unit": "count"}, "imperial": {"qty": 4, "unit": "count"} },
+      { "id": "buttermilk", "name": "Buttermilk", "metric": {"qty": 250, "unit": "ml"}, "imperial": {"qty": 1, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "oat milk with 1 tbsp lemon juice"}] },
+      { "id": "coconut", "name": "Shredded coconut (frosting)", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 2, "unit": "cup"} },
+      { "id": "pecan", "name": "Chopped pecans (frosting)", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 2, "unit": "cup"}, "substitutions": [{"diet": "nut-free", "replacement": "toasted sunflower seeds"}] },
+      { "id": "condensed-milk", "name": "Evaporated milk (frosting)", "metric": {"qty": 350, "unit": "ml"}, "imperial": {"qty": 1.5, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "canned coconut milk"}] }
+    ],
+    "steps": [
+      "Melt chocolate and cool slightly. Cream butter and sugar, beat in egg yolks and melted chocolate, then fold in flour alternately with buttermilk.",
+      "Whip egg whites to soft peaks and fold in. Divide between three pans and bake at 175°C (350°F) for 22-25 minutes.",
+      "For the frosting, cook evaporated milk, sugar, and egg yolks over low heat until thickened, then stir in coconut and pecans.",
+      "Cool the frosting until spreadable, then layer it between the cooled cake layers and over the top only (sides stay bare).",
+      "Let set before slicing."
+    ]
+  },
+  {
+    "id": "recipe_chiffon",
+    "cakeId": "cake_chiffon",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 2, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "cup"} },
+      { "id": "baking-powder", "name": "Baking powder", "metric": {"qty": 12, "unit": "g"}, "imperial": {"qty": 2.5, "unit": "tsp"} },
+      { "id": "oil", "name": "Vegetable oil", "metric": {"qty": 120, "unit": "ml"}, "imperial": {"qty": 0.5, "unit": "cup"} },
+      { "id": "egg-yolks", "name": "Egg yolks", "metric": {"qty": 6, "unit": "count"}, "imperial": {"qty": 6, "unit": "count"} },
+      { "id": "water", "name": "Water", "metric": {"qty": 200, "unit": "ml"}, "imperial": {"qty": 0.8, "unit": "cup"} },
+      { "id": "egg-whites", "name": "Egg whites", "metric": {"qty": 8, "unit": "count"}, "imperial": {"qty": 8, "unit": "count"} },
+      { "id": "vanilla", "name": "Vanilla extract", "metric": {"qty": 10, "unit": "ml"}, "imperial": {"qty": 2, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Whisk flour, half the sugar, and baking powder together. Whisk in oil, egg yolks, water, and vanilla until smooth.",
+      "Whip egg whites to soft peaks, gradually adding the remaining sugar, until stiff and glossy.",
+      "Fold the egg whites into the batter in three additions, keeping as much volume as possible.",
+      "Pour into an ungreased tube pan and bake at 165°C (325°F) for 55-60 minutes until golden and springy.",
+      "Invert the pan immediately and let cool completely upside down before unmolding."
+    ]
+  },
+  {
+    "id": "recipe_election_cake",
+    "cakeId": "cake_election_cake",
+    "baseServings": 14,
+    "ingredients": [
+      { "id": "flour", "name": "Bread flour", "metric": {"qty": 500, "unit": "g"}, "imperial": {"qty": 4, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free bread blend"}] },
+      { "id": "yeast", "name": "Active dry yeast", "metric": {"qty": 10, "unit": "g"}, "imperial": {"qty": 2.5, "unit": "tsp"} },
+      { "id": "milk", "name": "Warm milk", "metric": {"qty": 200, "unit": "ml"}, "imperial": {"qty": 0.8, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "warm oat milk"}] },
+      { "id": "butter", "name": "Butter, softened", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 0.66, "unit": "cup"} },
+      { "id": "brown-sugar", "name": "Brown sugar", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 0.75, "unit": "cup"} },
+      { "id": "dried-fruit", "name": "Mixed dried fruit", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 2, "unit": "cup"} },
+      { "id": "cinnamon", "name": "Cinnamon", "metric": {"qty": 5, "unit": "g"}, "imperial": {"qty": 2, "unit": "tsp"} },
+      { "id": "nutmeg", "name": "Ground nutmeg", "metric": {"qty": 3, "unit": "g"}, "imperial": {"qty": 1, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Proof yeast in warm milk with a spoonful of sugar. Combine with flour, remaining sugar, butter, cinnamon, and nutmeg into a soft dough.",
+      "Knead in the dried fruit. Cover and let rise until doubled, about 2 hours.",
+      "Shape into a round loaf on a baking sheet, cover, and let rise again 45 minutes.",
+      "Bake at 175°C (350°F) for 35-40 minutes until golden and hollow-sounding when tapped.",
+      "Cool before slicing — this cake improves after a day or two."
+    ]
+  },
+  {
+    "id": "recipe_angel_food",
+    "cakeId": "cake_angel_food",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "flour", "name": "Cake flour", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.8, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "cup"} },
+      { "id": "egg-whites", "name": "Egg whites", "metric": {"qty": 12, "unit": "count"}, "imperial": {"qty": 12, "unit": "count"} },
+      { "id": "cream-of-tartar", "name": "Cream of tartar", "metric": {"qty": 5, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "tsp"} },
+      { "id": "vanilla", "name": "Vanilla extract", "metric": {"qty": 10, "unit": "ml"}, "imperial": {"qty": 2, "unit": "tsp"} },
+      { "id": "salt", "name": "Salt", "metric": {"qty": 2, "unit": "g"}, "imperial": {"qty": 0.5, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Sift flour with half the sugar and set aside.",
+      "Whip egg whites with cream of tartar and salt to soft peaks, then gradually whip in the remaining sugar until stiff and glossy.",
+      "Fold in vanilla, then gently fold in the flour-sugar mixture in small additions, keeping as much air as possible.",
+      "Pour into an ungreased tube pan and bake at 175°C (350°F) for 35-40 minutes until golden and springy.",
+      "Invert the pan immediately and cool completely upside down before unmolding."
+    ]
+  },
+  {
+    "id": "recipe_clootie_dumpling",
+    "cakeId": "cake_clootie_dumpling",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 2, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "breadcrumbs", "name": "Fresh breadcrumbs", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 1.5, "unit": "cup"} },
+      { "id": "suet", "name": "Shredded suet or cold grated butter", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 0.66, "unit": "cup"} },
+      { "id": "dried-fruit", "name": "Mixed dried fruit", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 2, "unit": "cup"} },
+      { "id": "brown-sugar", "name": "Brown sugar", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 0.75, "unit": "cup"} },
+      { "id": "treacle", "name": "Black treacle", "metric": {"qty": 60, "unit": "g"}, "imperial": {"qty": 3, "unit": "tbsp"} },
+      { "id": "milk", "name": "Milk", "metric": {"qty": 150, "unit": "ml"}, "imperial": {"qty": 0.6, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "oat milk"}] },
+      { "id": "cinnamon", "name": "Cinnamon", "metric": {"qty": 5, "unit": "g"}, "imperial": {"qty": 2, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Mix flour, breadcrumbs, suet, dried fruit, sugar, and cinnamon together.",
+      "Stir in treacle and enough milk to form a firm, moist dough.",
+      "Scald a large cloth, flour it well, and wrap the dough tightly, tying the top with string.",
+      "Lower into a large pot of simmering water and steam for 3-4 hours, topping up water as needed.",
+      "Unwrap carefully and dry the outside briefly in a hot oven before slicing to serve."
+    ]
+  },
+  {
+    "id": "recipe_barmbrack",
+    "cakeId": "cake_barmbrack",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "dried-fruit", "name": "Mixed dried fruit, soaked in tea", "metric": {"qty": 400, "unit": "g"}, "imperial": {"qty": 2.5, "unit": "cup"} },
+      { "id": "tea", "name": "Strong black tea, cooled", "metric": {"qty": 300, "unit": "ml"}, "imperial": {"qty": 1.25, "unit": "cup"} },
+      { "id": "flour", "name": "Self-rising flour", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 2.4, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free self-rising blend"}] },
+      { "id": "brown-sugar", "name": "Brown sugar", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 0.75, "unit": "cup"} },
+      { "id": "egg", "name": "Egg, large", "metric": {"qty": 1, "unit": "count"}, "imperial": {"qty": 1, "unit": "count"} },
+      { "id": "cinnamon", "name": "Mixed spice", "metric": {"qty": 5, "unit": "g"}, "imperial": {"qty": 2, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Soak dried fruit in the cooled tea overnight.",
+      "Stir in brown sugar, egg, flour, and mixed spice until just combined into a thick batter.",
+      "Pour into a lined loaf pan.",
+      "Bake at 160°C (325°F) for 60-70 minutes until a skewer comes out clean, covering loosely with foil if it browns too fast.",
+      "Cool completely, slice, and serve buttered."
+    ]
+  },
+  {
+    "id": "recipe_makowiec",
+    "cakeId": "cake_makowiec",
+    "baseServings": 14,
+    "ingredients": [
+      { "id": "flour", "name": "Bread flour", "metric": {"qty": 450, "unit": "g"}, "imperial": {"qty": 3.6, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free bread blend"}] },
+      { "id": "yeast", "name": "Active dry yeast", "metric": {"qty": 10, "unit": "g"}, "imperial": {"qty": 2.5, "unit": "tsp"} },
+      { "id": "milk", "name": "Warm milk", "metric": {"qty": 200, "unit": "ml"}, "imperial": {"qty": 0.8, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "warm oat milk"}] },
+      { "id": "butter", "name": "Butter, softened", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.44, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.5, "unit": "cup"} },
+      { "id": "poppy-seed", "name": "Ground poppy seeds (filling)", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 2.5, "unit": "cup"} },
+      { "id": "honey", "name": "Honey (filling)", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.33, "unit": "cup"} },
+      { "id": "raisins", "name": "Raisins (filling)", "metric": {"qty": 60, "unit": "g"}, "imperial": {"qty": 0.4, "unit": "cup"} }
+    ],
+    "steps": [
+      "Proof yeast in warm milk with a spoonful of sugar. Combine with flour, remaining sugar, and butter into a soft dough. Let rise until doubled.",
+      "Simmer ground poppy seeds with honey and raisins into a thick, spreadable filling.",
+      "Roll the dough into a large rectangle, spread with the poppy seed filling, and roll up tightly into a log.",
+      "Place seam-side down on a baking sheet, cover, and let rise 30-40 minutes.",
+      "Bake at 180°C (350°F) for 35-40 minutes until deeply golden."
+    ]
+  },
+  {
+    "id": "recipe_rigo_jancsi",
+    "cakeId": "cake_rigo_jancsi",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "dark-chocolate", "name": "Dark chocolate (sponge)", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.6, "unit": "cup"} },
+      { "id": "butter", "name": "Butter (sponge)", "metric": {"qty": 60, "unit": "g"}, "imperial": {"qty": 0.25, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large, separated", "metric": {"qty": 6, "unit": "count"}, "imperial": {"qty": 6, "unit": "count"} },
+      { "id": "sugar", "name": "Granulated sugar (sponge)", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 0.75, "unit": "cup"} },
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 80, "unit": "g"}, "imperial": {"qty": 0.66, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "cream", "name": "Heavy cream (filling)", "metric": {"qty": 500, "unit": "ml"}, "imperial": {"qty": 2, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "whipped coconut cream"}] },
+      { "id": "dark-chocolate-glaze", "name": "Dark chocolate (glaze)", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"} }
+    ],
+    "steps": [
+      "Melt chocolate and butter together and cool slightly. Whisk egg yolks with sugar until pale, then stir in the chocolate mixture and flour.",
+      "Whip egg whites to stiff peaks and fold in. Spread into two thin sheet pans and bake at 190°C (375°F) for 12-15 minutes. Cool completely.",
+      "Whip cream to stiff peaks and spread generously over one sponge layer.",
+      "Top with the second sponge layer and press down gently, then pour melted chocolate glaze evenly over the top.",
+      "Chill until set, then cut into neat squares to serve."
+    ]
+  },
+  {
+    "id": "recipe_mhanncha",
+    "cakeId": "cake_mhanncha",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "almond-flour", "name": "Ground almonds", "metric": {"qty": 400, "unit": "g"}, "imperial": {"qty": 4, "unit": "cup"}, "substitutions": [{"diet": "nut-free", "replacement": "sunflower seed flour"}] },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"} },
+      { "id": "butter", "name": "Butter, melted", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.44, "unit": "cup"} },
+      { "id": "orange-blossom", "name": "Orange blossom water", "metric": {"qty": 15, "unit": "ml"}, "imperial": {"qty": 1, "unit": "tbsp"} },
+      { "id": "phyllo", "name": "Warqa or phyllo sheets", "metric": {"qty": 8, "unit": "count"}, "imperial": {"qty": 8, "unit": "count"} },
+      { "id": "egg-wash", "name": "Egg (for sealing and wash)", "metric": {"qty": 1, "unit": "count"}, "imperial": {"qty": 1, "unit": "count"} },
+      { "id": "honey", "name": "Honey (finishing)", "metric": {"qty": 60, "unit": "g"}, "imperial": {"qty": 3, "unit": "tbsp"} }
+    ],
+    "steps": [
+      "Mix ground almonds, sugar, melted butter, and orange blossom water into a smooth paste.",
+      "Roll the almond paste into a long rope and lay it along the edge of a sheet of phyllo, then roll up into a long, thin log.",
+      "Coil the log into a spiral on a baking sheet, brushing the seams with egg wash to seal. Repeat with remaining sheets, joining logs end to end if needed.",
+      "Brush the whole coil with egg wash and bake at 180°C (350°F) for 25-30 minutes until golden.",
+      "Drizzle with warm honey while still hot and let cool before slicing."
+    ]
+  },
+  {
+    "id": "recipe_mont_blanc",
+    "cakeId": "cake_mont_blanc",
+    "baseServings": 8,
+    "ingredients": [
+      { "id": "egg-whites", "name": "Egg whites (meringue base)", "metric": {"qty": 4, "unit": "count"}, "imperial": {"qty": 4, "unit": "count"} },
+      { "id": "sugar", "name": "Granulated sugar (meringue)", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"} },
+      { "id": "chestnut-puree", "name": "Sweetened chestnut purée", "metric": {"qty": 500, "unit": "g"}, "imperial": {"qty": 2, "unit": "cup"} },
+      { "id": "rum", "name": "Dark rum", "metric": {"qty": 20, "unit": "ml"}, "imperial": {"qty": 4, "unit": "tsp"} },
+      { "id": "cream", "name": "Heavy cream", "metric": {"qty": 400, "unit": "ml"}, "imperial": {"qty": 1.7, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "whipped coconut cream"}] },
+      { "id": "icing-sugar", "name": "Powdered sugar (cream)", "metric": {"qty": 30, "unit": "g"}, "imperial": {"qty": 3, "unit": "tbsp"} }
+    ],
+    "steps": [
+      "Whip egg whites with sugar to stiff, glossy peaks and pipe into small round meringue bases. Bake at 100°C (210°F) for about 1.5 hours until fully dry. Cool completely.",
+      "Loosen chestnut purée with rum until smooth and pipeable.",
+      "Whip cream with powdered sugar to stiff peaks and mound a dome onto each meringue base.",
+      "Pipe the chestnut purée through a ricer or fine piping tip over the cream in thin vermicelli-like strands, covering it completely.",
+      "Chill briefly and dust with a little powdered sugar just before serving."
+    ]
+  },
+  {
+    "id": "recipe_banh_da_lon",
+    "cakeId": "cake_banh_da_lon",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "mung-bean", "name": "Split mung beans, soaked", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"} },
+      { "id": "rice-flour", "name": "Rice flour", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 1.2, "unit": "cup"} },
+      { "id": "tapioca-flour", "name": "Tapioca flour", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.8, "unit": "cup"} },
+      { "id": "coconut-milk", "name": "Coconut milk", "metric": {"qty": 600, "unit": "ml"}, "imperial": {"qty": 2.5, "unit": "cup"} },
+      { "id": "sugar", "name": "Granulated sugar", "metric": {"qty": 250, "unit": "g"}, "imperial": {"qty": 1.25, "unit": "cup"} },
+      { "id": "pandan", "name": "Pandan extract", "metric": {"qty": 5, "unit": "ml"}, "imperial": {"qty": 1, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Steam soaked mung beans until soft, then blend smooth with a little coconut milk to make the yellow layer batter, sweetened lightly.",
+      "Whisk rice flour, tapioca flour, remaining coconut milk, sugar, and pandan extract into the green layer batter.",
+      "Grease a heatproof pan and set up a steamer. Ladle a thin layer of the green batter in and steam 5 minutes until set.",
+      "Add a thin layer of the yellow mung bean batter on top and steam again; alternate layers until the batter is used, about 8-10 layers.",
+      "Cool completely, then slice with an oiled knife to reveal the alternating layers."
+    ]
+  },
+  {
+    "id": "recipe_pan_de_elote",
+    "cakeId": "cake_pan_de_elote",
+    "baseServings": 10,
+    "ingredients": [
+      { "id": "corn", "name": "Corn kernels, fresh or frozen", "metric": {"qty": 400, "unit": "g"}, "imperial": {"qty": 2.5, "unit": "cup"} },
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 150, "unit": "g"}, "imperial": {"qty": 1.2, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "condensed-milk", "name": "Sweetened condensed milk", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 0.66, "unit": "cup"}, "substitutions": [{"diet": "dairy-free", "replacement": "dairy-free condensed coconut milk"}] },
+      { "id": "butter", "name": "Butter, melted", "metric": {"qty": 100, "unit": "g"}, "imperial": {"qty": 0.44, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large", "metric": {"qty": 3, "unit": "count"}, "imperial": {"qty": 3, "unit": "count"} },
+      { "id": "baking-powder", "name": "Baking powder", "metric": {"qty": 10, "unit": "g"}, "imperial": {"qty": 2, "unit": "tsp"} },
+      { "id": "cinnamon", "name": "Ground cinnamon", "metric": {"qty": 3, "unit": "g"}, "imperial": {"qty": 1, "unit": "tsp"} }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease a round pan.",
+      "Blend corn kernels, condensed milk, melted butter, and eggs together until mostly smooth (a little texture is good).",
+      "Fold in flour, baking powder, and cinnamon until just combined.",
+      "Pour into the pan and bake 35-40 minutes until golden and a toothpick comes out clean.",
+      "Cool slightly and serve warm or at room temperature."
+    ]
+  },
+  {
+    "id": "recipe_genoa_cake",
+    "cakeId": "cake_genoa_cake",
+    "baseServings": 12,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 2.4, "unit": "cup"}, "substitutions": [{"diet": "gluten-free", "replacement": "1:1 gluten-free baking blend"}] },
+      { "id": "butter", "name": "Butter, softened", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 0.88, "unit": "cup"} },
+      { "id": "brown-sugar", "name": "Brown sugar", "metric": {"qty": 200, "unit": "g"}, "imperial": {"qty": 1, "unit": "cup"} },
+      { "id": "eggs", "name": "Eggs, large", "metric": {"qty": 4, "unit": "count"}, "imperial": {"qty": 4, "unit": "count"} },
+      { "id": "dried-fruit", "name": "Mixed dried fruit", "metric": {"qty": 300, "unit": "g"}, "imperial": {"qty": 2, "unit": "cup"} },
+      { "id": "lemon-zest", "name": "Lemon zest", "metric": {"qty": 5, "unit": "g"}, "imperial": {"qty": 1, "unit": "tsp"} },
+      { "id": "almonds", "name": "Whole blanched almonds (topping)", "metric": {"qty": 60, "unit": "g"}, "imperial": {"qty": 0.5, "unit": "cup"}, "substitutions": [{"diet": "nut-free", "replacement": "omit"}] }
+    ],
+    "steps": [
+      "Preheat oven to 160°C (325°F) and line a round pan.",
+      "Cream butter and brown sugar, beat in eggs one at a time, then fold in flour, dried fruit, and lemon zest.",
+      "Spread into the pan and arrange whole almonds over the top.",
+      "Bake 55-65 minutes, tenting with foil if it browns too fast, until a skewer comes out clean.",
+      "Cool completely in the pan before slicing."
+    ]
   }
 ]

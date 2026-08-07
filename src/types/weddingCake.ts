@@ -9,6 +9,8 @@ export type ArchitectureType =
   | 'ring-tower-kransekake'
   | 'separated-pillar-display'
 
+export type CelebrationOccasion = 'wedding' | 'birthday' | 'baby-shower' | 'holiday' | 'graduation' | 'anniversary'
+
 export type WeddingSeason = 'spring' | 'summer' | 'fall' | 'winter'
 export type SeasonVariant = 'indoor' | 'outdoor'
 export type FrostingType = 'swiss-meringue-buttercream' | 'fondant' | 'whipped-cream'
@@ -104,6 +106,7 @@ export interface AllergenAuditEntry {
 }
 
 export interface WeddingPlanInput {
+  occasion: CelebrationOccasion
   cultureId: string
   guestCount: number
   season: WeddingSeason
@@ -112,6 +115,14 @@ export interface WeddingPlanInput {
   diet: DietTag | 'none'
   shape: CakeShape
   decorationStyleId: string
+}
+
+export interface BudgetEstimate {
+  low: number
+  high: number
+  perServingLow: number
+  perServingHigh: number
+  note: string
 }
 
 export interface WeddingPlanResult {
@@ -130,4 +141,5 @@ export interface WeddingPlanResult {
   /** one line per physical tier */
   cuttingGuide: string[]
   decorationStyle: WeddingDecorationStyle
+  budgetEstimate: BudgetEstimate
 }

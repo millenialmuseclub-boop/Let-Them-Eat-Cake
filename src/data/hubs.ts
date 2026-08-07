@@ -90,12 +90,12 @@ export const HUBS: Hub[] = [
     navLabel: 'Celebrate',
     navIcon: '🎂',
     title: 'Celebrate',
-    description: 'Plan a full custom cake for your next big event.',
+    description: 'Plan a full custom cake for weddings, birthdays, and every celebration in between.',
     items: [
       {
         to: '/wedding-cake-planner',
-        title: 'Wedding Cake Planner',
-        description: 'Set your culture, guest count, season, and aesthetic to get a full master planning sheet — structure, flavors, allergens, and decor.',
+        title: 'Celebration Cake Planner',
+        description: 'For weddings, birthdays, baby showers, holidays, graduations, and anniversaries — set your culture, guest count, season, and aesthetic to get a full master planning sheet with a budget estimate.',
       },
     ],
   },

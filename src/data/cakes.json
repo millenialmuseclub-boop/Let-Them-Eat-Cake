@@ -744,5 +744,398 @@
     "pronunciation": "kek LAH-pis sah-rah-wahk",
     "difficulty": "hard",
     "occasion": ["Celebration", "Hari Raya"]
+  },
+  {
+    "id": "cake_melktert",
+    "name": "Melktert",
+    "description": "A South African custard tart with a delicate cinnamon-dusted milk filling, baked in a thin pastry shell.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["milk custard", "cinnamon", "vanilla"],
+    "texture": "creamy",
+    "difficulty": "easy",
+    "occasion": ["Everyday"]
+  },
+  {
+    "id": "cake_koeksisters",
+    "name": "Koeksisters",
+    "description": "Twisted, deep-fried Afrikaner dough plunged into cold syrup until sticky-sweet and crisp on the outside.",
+    "flavorProfile": { "sweetness": 5, "fatRichness": 2, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["syrup", "cinnamon", "ginger"],
+    "texture": "dense",
+    "difficulty": "medium",
+    "occasion": ["Everyday", "Celebration"]
+  },
+  {
+    "id": "cake_gateau_patate",
+    "name": "Gateau Patate",
+    "description": "A Mauritian fried sweet potato and coconut cake, traditionally sold as a street snack during Eid.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["sweet potato", "coconut", "cardamom"],
+    "texture": "dense",
+    "difficulty": "medium",
+    "occasion": ["Eid"]
+  },
+  {
+    "id": "cake_sans_rival",
+    "name": "Sans Rival",
+    "description": "A Filipino cake of crisp cashew meringue layers bound with French buttercream — its name means 'without rival'.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 5, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["cashew", "buttercream", "meringue"],
+    "texture": "crumbly",
+    "difficulty": "hard",
+    "occasion": ["Celebration"]
+  },
+  {
+    "id": "cake_kue_lapis",
+    "name": "Kue Lapis",
+    "description": "A steamed Indonesian rainbow layer cake, its distinct colored bands built up one thin steamed layer at a time.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 2, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["coconut milk", "pandan", "rice flour"],
+    "texture": "dense",
+    "difficulty": "medium",
+    "occasion": ["Celebration", "Everyday"]
+  },
+  {
+    "id": "cake_bolo_de_fuba",
+    "name": "Bolo de Fubá",
+    "description": "A humble Brazilian cornmeal teatime cake, often studded with coconut or a wedge of cheese baked right in.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["cornmeal", "coconut", "cheese"],
+    "texture": "dense",
+    "pronunciation": "BOH-loo jee foo-BAH",
+    "difficulty": "easy",
+    "occasion": ["Everyday"]
+  },
+  {
+    "id": "cake_sakotis",
+    "name": "Šakotis",
+    "description": "A Lithuanian 'tree cake' built by dripping batter onto a rotating spit over an open flame until spiky golden branches form.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 4, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["vanilla", "butter", "lemon zest"],
+    "texture": "dense",
+    "pronunciation": "shah-KOH-tis",
+    "difficulty": "hard",
+    "occasion": ["Wedding", "Celebration"]
+  },
+  {
+    "id": "cake_kremsnita",
+    "name": "Kremšnita",
+    "description": "A Croatian custard cream cake — thick vanilla pastry cream sandwiched between crisp layers of puff pastry.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["vanilla custard", "puff pastry"],
+    "texture": "creamy",
+    "pronunciation": "KREM-shnee-tah",
+    "difficulty": "medium",
+    "occasion": ["Everyday", "Celebration"]
+  },
+  {
+    "id": "cake_nazook",
+    "name": "Nazook",
+    "description": "An Armenian swirled pastry cake filled with a sweet walnut paste, baked until the pattern browns in golden rings.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["walnut", "butter", "vanilla"],
+    "texture": "crumbly",
+    "pronunciation": "nah-ZOOK",
+    "difficulty": "medium",
+    "occasion": ["Everyday", "Celebration"]
+  },
+  {
+    "id": "cake_galaktoboureko",
+    "name": "Galaktoboureko",
+    "description": "A Greek dessert of semolina custard wrapped in crisp phyllo, soaked in citrus-scented syrup once out of the oven.",
+    "flavorProfile": { "sweetness": 5, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["semolina custard", "phyllo", "lemon syrup"],
+    "texture": "creamy",
+    "pronunciation": "gah-lahk-toh-VOO-reh-koh",
+    "difficulty": "medium",
+    "occasion": ["Celebration", "Everyday"]
+  },
+  {
+    "id": "cake_bizcocho_de_ron",
+    "name": "Bizcocho de Ron",
+    "description": "A Puerto Rican rum cake, deeply soaked and fragrant with vanilla — a holiday-table fixture across the island.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["rum", "vanilla", "butter"],
+    "texture": "sponge",
+    "difficulty": "medium",
+    "occasion": ["Christmas", "Celebration"]
+  },
+  {
+    "id": "cake_great_cake",
+    "name": "Great Cake",
+    "description": "A Barbadian black rum fruit cake, its dried fruit soaked for weeks and darkened with burnt sugar, central to Christmas and weddings.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 5 },
+    "flavorNotes": ["rum", "dried fruit", "molasses"],
+    "texture": "dense",
+    "difficulty": "hard",
+    "occasion": ["Christmas", "Wedding"]
+  },
+  {
+    "id": "cake_vinarterta",
+    "name": "Vínarterta",
+    "description": "A tall Icelandic-Canadian layer cake of spiced prune filling between thin cardamom-scented layers, carried abroad by Icelandic immigrants.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 2, "intensity": 3 },
+    "flavorNotes": ["prune", "cardamom", "almond"],
+    "texture": "dense",
+    "pronunciation": "VEE-nar-tare-tah",
+    "difficulty": "hard",
+    "occasion": ["Christmas", "Celebration"]
+  },
+  {
+    "id": "cake_trinidad_black_cake",
+    "name": "Trinidad Black Cake",
+    "description": "Trinidad and Tobago's own rum-and-wine-soaked black fruit cake, a distinct national tradition central to Christmas and weddings.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 5 },
+    "flavorNotes": ["rum", "dried fruit", "molasses"],
+    "texture": "dense",
+    "difficulty": "hard",
+    "occasion": ["Christmas", "Wedding"]
+  },
+  {
+    "id": "cake_torta_caprese",
+    "name": "Torta Caprese",
+    "description": "A flourless Italian chocolate-almond cake from the island of Capri, dense and fudgy with a crackled top.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 5, "acidity": 1, "intensity": 4 },
+    "flavorNotes": ["dark chocolate", "almond", "butter"],
+    "texture": "dense",
+    "pronunciation": "TOR-tah kah-PRAY-zeh",
+    "difficulty": "medium",
+    "occasion": ["Everyday", "Celebration"]
+  },
+  {
+    "id": "cake_panforte",
+    "name": "Panforte",
+    "description": "A dense, chewy spiced fruit-and-nut cake from Siena, cut into thin wedges and dusted with powdered sugar.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 2, "acidity": 1, "intensity": 4 },
+    "flavorNotes": ["honey", "dried fruit", "spice"],
+    "texture": "dense",
+    "pronunciation": "pan-FOR-teh",
+    "difficulty": "medium",
+    "occasion": ["Christmas"]
+  },
+  {
+    "id": "cake_bolo_de_arroz",
+    "name": "Bolo de Arroz",
+    "description": "A Portuguese rice-flour muffin-cake, lightly domed and baked in paper cups, a staple of bakery counters and breakfast tables.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 1, "intensity": 1 },
+    "flavorNotes": ["rice flour", "lemon zest", "vanilla"],
+    "texture": "sponge",
+    "difficulty": "easy",
+    "occasion": ["Everyday"]
+  },
+  {
+    "id": "cake_financier",
+    "name": "Financier",
+    "description": "A small, dense French cake of browned butter and almond flour, named for its gold-bar shape near the Paris stock exchange.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 4, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["brown butter", "almond", "honey"],
+    "texture": "dense",
+    "difficulty": "medium",
+    "occasion": ["Afternoon Tea", "Everyday"]
+  },
+  {
+    "id": "cake_galette_des_rois",
+    "name": "Galette des Rois",
+    "description": "A French puff pastry cake filled with almond frangipane, baked with a hidden charm inside and eaten for Epiphany.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 4, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["almond", "frangipane", "puff pastry"],
+    "texture": "crumbly",
+    "difficulty": "medium",
+    "occasion": ["New Year", "Celebration"]
+  },
+  {
+    "id": "cake_boterkoek",
+    "name": "Boterkoek",
+    "description": "A dense, chewy Dutch butter cake, barely more than butter, sugar, flour, and almond — deliberately simple and deeply buttery.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 5, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["butter", "almond", "vanilla"],
+    "texture": "dense",
+    "pronunciation": "BOH-ter-kook",
+    "difficulty": "easy",
+    "occasion": ["Everyday"]
+  },
+  {
+    "id": "cake_guglhupf",
+    "name": "Guglhupf",
+    "description": "A ring-shaped Austrian yeasted cake, often marbled with cocoa or studded with raisins soaked in rum.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["vanilla", "rum", "raisin"],
+    "texture": "sponge",
+    "pronunciation": "GOO-gel-hoopf",
+    "difficulty": "medium",
+    "occasion": ["Everyday", "Celebration"]
+  },
+  {
+    "id": "cake_boston_cream_pie",
+    "name": "Boston Cream Pie",
+    "description": "Despite the name, a genuine cake — two sponge layers filled with vanilla custard and glazed with dark chocolate, Massachusetts' official state dessert.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["vanilla custard", "dark chocolate"],
+    "texture": "sponge",
+    "difficulty": "medium",
+    "occasion": ["Everyday", "Celebration"]
+  },
+  {
+    "id": "cake_king_cake",
+    "name": "King Cake",
+    "description": "A braided, cinnamon-swirled New Orleans cake iced in purple, green, and gold, with a tiny plastic baby hidden inside for Mardi Gras.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 2, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["cinnamon", "vanilla", "icing"],
+    "texture": "sponge",
+    "difficulty": "medium",
+    "occasion": ["Celebration"]
+  },
+  {
+    "id": "cake_smith_island",
+    "name": "Smith Island Cake",
+    "description": "Maryland's official state dessert — eight to twelve improbably thin yellow layers stacked with rich chocolate fudge frosting.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["dark chocolate", "vanilla"],
+    "texture": "sponge",
+    "difficulty": "hard",
+    "occasion": ["Celebration"]
+  },
+  {
+    "id": "cake_italian_cream_cake",
+    "name": "Italian Cream Cake",
+    "description": "A Southern American layer cake (despite its name, not from Italy) studded with pecans and coconut under cream cheese frosting.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 4, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["pecan", "coconut", "cream cheese"],
+    "texture": "sponge",
+    "difficulty": "medium",
+    "occasion": ["Celebration", "Birthday"]
+  },
+  {
+    "id": "cake_german_chocolate",
+    "name": "German Chocolate Cake",
+    "description": "An American invention named for baker Sam German's mild baking chocolate, not the country — chocolate layers filled with coconut-pecan frosting.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 4, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["dark chocolate", "coconut", "pecan"],
+    "texture": "dense",
+    "difficulty": "medium",
+    "occasion": ["Birthday", "Celebration"]
+  },
+  {
+    "id": "cake_chiffon",
+    "name": "Chiffon Cake",
+    "description": "An American invention from 1927 — vegetable oil in place of butter gives this cake an unusually light, moist crumb that stays soft even cold.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 1, "intensity": 1 },
+    "flavorNotes": ["vanilla", "egg"],
+    "texture": "sponge",
+    "difficulty": "medium",
+    "occasion": ["Everyday"]
+  },
+  {
+    "id": "cake_election_cake",
+    "name": "Election Cake",
+    "description": "A colonial-era New England spiced yeasted fruit cake, once baked for Election Day gatherings and enjoying a modern revival.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["dried fruit", "cinnamon", "nutmeg"],
+    "texture": "dense",
+    "difficulty": "medium",
+    "occasion": ["Celebration"]
+  },
+  {
+    "id": "cake_angel_food",
+    "name": "Angel Food Cake",
+    "description": "A fat-free American sponge leavened entirely by whipped egg whites, prized for its cloud-like, pure white crumb.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 1, "acidity": 1, "intensity": 1 },
+    "flavorNotes": ["vanilla", "egg white"],
+    "texture": "sponge",
+    "difficulty": "medium",
+    "occasion": ["Everyday", "Celebration"]
+  },
+  {
+    "id": "cake_clootie_dumpling",
+    "name": "Clootie Dumpling",
+    "description": "A Scottish steamed spiced fruit pudding-cake, boiled for hours wrapped in a cloth ('cloot') until dense and dark.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["dried fruit", "cinnamon", "treacle"],
+    "texture": "dense",
+    "difficulty": "hard",
+    "occasion": ["Christmas", "Celebration"]
+  },
+  {
+    "id": "cake_barmbrack",
+    "name": "Barmbrack",
+    "description": "An Irish spiced fruit tea loaf, traditionally baked for Halloween with small charms hidden inside to tell each eater's fortune.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 1, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["dried fruit", "tea", "cinnamon"],
+    "texture": "dense",
+    "difficulty": "medium",
+    "occasion": ["Halloween"]
+  },
+  {
+    "id": "cake_makowiec",
+    "name": "Makowiec",
+    "description": "A Polish poppy seed roll cake, its yeasted dough swirled tightly around a dense sweet poppy seed filling for Christmas.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 1, "intensity": 3 },
+    "flavorNotes": ["poppy seed", "honey", "raisin"],
+    "texture": "dense",
+    "pronunciation": "mah-KOH-vyets",
+    "difficulty": "hard",
+    "occasion": ["Christmas"]
+  },
+  {
+    "id": "cake_rigo_jancsi",
+    "name": "Rigó Jancsi",
+    "description": "A Hungarian chocolate sponge and whipped chocolate cream cake, cut into cubes, named for a real Roma violinist swept up in scandal.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 4, "acidity": 1, "intensity": 4 },
+    "flavorNotes": ["dark chocolate", "whipped cream"],
+    "texture": "sponge",
+    "pronunciation": "REE-goh YAHN-chee",
+    "difficulty": "medium",
+    "occasion": ["Celebration", "Everyday"]
+  },
+  {
+    "id": "cake_mhanncha",
+    "name": "M'hanncha",
+    "description": "A Moroccan coiled 'snake cake' of almond paste rolled in warqa pastry, baked golden and dusted with sugar and cinnamon.",
+    "flavorProfile": { "sweetness": 4, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["almond", "orange blossom", "honey"],
+    "texture": "crumbly",
+    "pronunciation": "mm-HAN-shah",
+    "difficulty": "hard",
+    "occasion": ["Celebration", "Everyday"]
+  },
+  {
+    "id": "cake_mont_blanc",
+    "name": "Mont Blanc",
+    "description": "A chestnut cream cake of French origin that became a beloved Japanese patisserie icon, piped into a snowy peak of vermicelli-thin chestnut purée.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["chestnut", "whipped cream", "vanilla"],
+    "texture": "creamy",
+    "difficulty": "hard",
+    "occasion": ["Everyday", "Celebration"]
+  },
+  {
+    "id": "cake_banh_da_lon",
+    "name": "Bánh Da Lợn",
+    "description": "A Vietnamese steamed layer cake alternating pandan and mung bean batters, prized for its distinctive chewy-soft texture.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["pandan", "mung bean", "coconut milk"],
+    "texture": "dense",
+    "difficulty": "medium",
+    "occasion": ["Everyday"]
+  },
+  {
+    "id": "cake_pan_de_elote",
+    "name": "Pan de Elote",
+    "description": "A Mexican fresh corn cake, moist and lightly sweet, often made with whole kernels blended right into the batter.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 2, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["corn", "cinnamon", "condensed milk"],
+    "texture": "dense",
+    "difficulty": "easy",
+    "occasion": ["Everyday"]
+  },
+  {
+    "id": "cake_genoa_cake",
+    "name": "Genoa Cake",
+    "description": "A British light fruit cake topped with whole almonds, milder and less dense than a traditional Christmas fruit cake.",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 3, "acidity": 1, "intensity": 2 },
+    "flavorNotes": ["dried fruit", "almond", "lemon zest"],
+    "texture": "dense",
+    "difficulty": "medium",
+    "occasion": ["Everyday", "Christmas"]
   }
 ]

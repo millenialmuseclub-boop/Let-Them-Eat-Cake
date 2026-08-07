@@ -48,6 +48,29 @@
   align-self: flex-start;
 }
 
+.wedding-occasion-tag {
+  align-self: flex-start;
+}
+
+.budget-range {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--raspberry);
+  margin-bottom: 2px;
+}
+
+.budget-per-serving {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.budget-note {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 0;
+}
+
 .decoration-diagram-wrap {
   display: flex;
   justify-content: center;

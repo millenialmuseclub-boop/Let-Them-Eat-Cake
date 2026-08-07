@@ -1,12 +1,21 @@
 import { useState } from 'react'
 import type { DietTag } from '../types/cake'
-import type { CakeShape, SeasonVariant, WeddingPlanInput, WeddingPlanResult, WeddingSeason } from '../types/weddingCake'
+import type { CakeShape, CelebrationOccasion, SeasonVariant, WeddingPlanInput, WeddingPlanResult, WeddingSeason } from '../types/weddingCake'
 import { weddingCultures, weddingAesthetics, weddingDecorationStyles, getCake, getRecipe } from '../lib/data'
-import { generateWeddingPlan, formatArchitectureLabel, formatFrostingLabel, formatRoleLabel, formatShapeLabel, toMarkdown } from '../lib/weddingCake'
+import { generateWeddingPlan, formatArchitectureLabel, formatFrostingLabel, formatOccasionLabel, formatRoleLabel, formatShapeLabel, toMarkdown } from '../lib/weddingCake'
 import { rankDecorationStyles } from '../lib/weddingDecoration'
 import { RecipeCard } from '../components/RecipeCard'
 import { WeddingCakeDiagram } from '../components/WeddingCakeDiagram'
 import './WeddingCakePlannerPage.css'
+
+const OCCASION_OPTIONS: { value: CelebrationOccasion; label: string }[] = [
+  { value: 'wedding', label: 'Wedding' },
+  { value: 'birthday', label: 'Birthday' },
+  { value: 'baby-shower', label: 'Baby Shower' },
+  { value: 'holiday', label: 'Holiday' },
+  { value: 'graduation', label: 'Graduation' },
+  { value: 'anniversary', label: 'Anniversary' },
+]
 
 const SHAPE_OPTIONS: { value: CakeShape; label: string }[] = [
   { value: 'round', label: 'Round' },
@@ -40,6 +49,7 @@ const ALLERGEN_LABELS: Record<string, string> = {
 }
 
 export function WeddingCakePlannerPage() {
+  const [occasion, setOccasion] = useState<CelebrationOccasion>('wedding')
   const [cultureId, setCultureId] = useState(weddingCultures[0].id)
   const [guestCount, setGuestCount] = useState(100)
   const [season, setSeason] = useState<WeddingSeason>('summer')
@@ -56,7 +66,7 @@ export function WeddingCakePlannerPage() {
   const recommendedDecorationIds = new Set(decorationRanking.filter((r) => r.score === topDecorationScore).map((r) => r.style.id))
 
   function handleGenerate() {
-    const input: WeddingPlanInput = { cultureId, guestCount, season, variant, aestheticId, diet, shape, decorationStyleId }
+    const input: WeddingPlanInput = { occasion, cultureId, guestCount, season, variant, aestheticId, diet, shape, decorationStyleId }
     setResult(generateWeddingPlan(input))
     setCopied(false)
   }
@@ -70,10 +80,21 @@ export function WeddingCakePlannerPage() {
 
   return (
     <main className="page wedding-page">
-      <h1>Wedding Cake Planner</h1>
-      <p>Build a full wedding cake master planning sheet — culture, structure, seasonal flavor, allergens, and decor — in one pass.</p>
+      <h1>Celebration Cake Planner</h1>
+      <p>Build a full master planning sheet for any occasion — weddings, birthdays, baby showers, holidays, graduations, and anniversaries — covering structure, seasonal flavor, allergens, decor, and a budget estimate in one pass.</p>
 
       <div className="card wedding-form">
+        <label>
+          Occasion
+          <select value={occasion} onChange={(e) => setOccasion(e.target.value as CelebrationOccasion)}>
+            {OCCASION_OPTIONS.map((opt) => (
+              <option key={opt.value} value={opt.value}>
+                {opt.label}
+              </option>
+            ))}
+          </select>
+        </label>
+
         <label>
           Location / Culture
           <select value={cultureId} onChange={(e) => setCultureId(e.target.value)}>
@@ -170,6 +191,7 @@ export function WeddingCakePlannerPage() {
 
       {result && (
         <div className="wedding-result">
+          <p className="tag wedding-occasion-tag">{formatOccasionLabel(result.input.occasion)}</p>
           <div className="wedding-result-actions">
             <button className="btn btn-secondary copy-markdown-btn" onClick={handleCopyMarkdown}>
               {copied ? 'Copied!' : 'Copy as Markdown'}
@@ -301,6 +323,17 @@ export function WeddingCakePlannerPage() {
             <p>
               <strong>Technique:</strong> {result.decorationStyle.techniqueNotes}
             </p>
+          </section>
+
+          <section className="card wedding-section">
+            <h2>💰 Budget Estimate</h2>
+            <p className="budget-range">
+              ${result.budgetEstimate.low}–${result.budgetEstimate.high}
+            </p>
+            <p className="budget-per-serving">
+              Roughly ${result.budgetEstimate.perServingLow}–${result.budgetEstimate.perServingHigh} per serving
+            </p>
+            <p className="budget-note">{result.budgetEstimate.note}</p>
           </section>
         </div>
       )}

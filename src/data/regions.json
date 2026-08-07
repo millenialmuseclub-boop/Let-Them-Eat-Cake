@@ -752,5 +752,385 @@
     "shortDescription": "An intricately patterned Malaysian layer cake built from dozens of thin, individually colored layers.",
     "historyNote": "Kek Lapis Sarawak developed in the East Malaysian state of Sarawak, drawing on the layer-cake tradition of neighboring Indonesia but pushing it toward elaborate geometric and floral patterns visible when sliced. Skilled bakers can produce dozens of distinct patterns, and the cake is a prized gift during Hari Raya and other celebrations.",
     "isPrimary": true
+  },
+  {
+    "id": "region_melktert",
+    "region": "Africa",
+    "country": "South Africa",
+    "cakeId": "cake_melktert",
+    "recipeId": "recipe_melktert",
+    "shortDescription": "A South African custard tart with a cinnamon-dusted milk filling in a thin pastry shell.",
+    "historyNote": "Melktert traces back to Dutch and French Huguenot settlers in the Cape, who brought European custard-tart traditions that adapted to the dairy-rich farms of the region. It remains a fixture of Afrikaner home baking, traditionally served at afternoon tea.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_koeksisters",
+    "region": "Africa",
+    "country": "South Africa",
+    "cakeId": "cake_koeksisters",
+    "recipeId": "recipe_koeksisters",
+    "shortDescription": "Twisted, deep-fried Afrikaner dough plunged into cold syrup until sticky and crisp.",
+    "historyNote": "Koeksisters date to early Cape Dutch settler cooking, with the plaited shape and syrup-dunking technique passed down through generations of Afrikaner households. A distinct spiced, coconut-rolled version called koesister also exists in Cape Malay cuisine, reflecting the region's layered culinary history.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_gateau_patate",
+    "region": "Africa",
+    "country": "Mauritius",
+    "cakeId": "cake_gateau_patate",
+    "recipeId": "recipe_gateau_patate",
+    "shortDescription": "A Mauritian fried sweet potato and coconut cake, popular as a street snack, especially around Eid.",
+    "historyNote": "Gateau patate reflects Mauritius's Indian Ocean crossroads history, blending indigenous sweet potato with coconut and spices carried by Indian and East African communities to the island. It's sold widely by street vendors and is especially popular during Eid celebrations.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_sans_rival",
+    "region": "Asia & Middle East",
+    "country": "Philippines",
+    "cakeId": "cake_sans_rival",
+    "recipeId": "recipe_sans_rival",
+    "shortDescription": "Crisp cashew meringue layers bound with French buttercream, a Filipino cake whose name means 'without rival'.",
+    "historyNote": "Sans Rival emerged in the Philippines in the early 20th century, blending French buttercream technique — likely introduced via colonial-era culinary exchange — with locally abundant cashews. It remains one of the most requested cakes for Filipino celebrations, prized for the labor its many thin meringue layers require.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_kue_lapis",
+    "region": "Asia & Middle East",
+    "country": "Indonesia",
+    "cakeId": "cake_kue_lapis",
+    "recipeId": "recipe_kue_lapis",
+    "shortDescription": "A steamed Indonesian rainbow layer cake built one thin colored layer at a time.",
+    "historyNote": "Kue lapis is part of Indonesia's broader kue tradition of steamed rice-based cakes, distinct from the Dutch-influenced baked lapis legit. Its bright bands of color have made it a staple of celebration tables and a favorite treat for children across the archipelago.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_bolo_de_fuba",
+    "region": "Latin America",
+    "country": "Brazil",
+    "cakeId": "cake_bolo_de_fuba",
+    "recipeId": "recipe_bolo_de_fuba",
+    "shortDescription": "A humble Brazilian cornmeal teatime cake, often studded with coconut or a wedge of cheese.",
+    "historyNote": "Bolo de fubá reflects Brazil's long agricultural relationship with corn, adapted from Portuguese cornbread traditions into a sweeter, cake-like form. It's a fixture of Brazilian afternoon coffee (café da tarde), simple enough for daily baking yet always welcome.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_sakotis",
+    "region": "Europe",
+    "country": "Lithuania",
+    "cakeId": "cake_sakotis",
+    "recipeId": "recipe_sakotis",
+    "shortDescription": "A Lithuanian 'tree cake' built by dripping batter onto a rotating spit until spiky golden branches form.",
+    "historyNote": "Šakotis has been a centerpiece of Lithuanian weddings and major celebrations for centuries, its distinctive spiky branches traditionally built by hand over an open flame — a technique demanding real skill, since each thin layer must set before the next is added. It shares a family resemblance with Germany's Baumkuchen but remains distinctly Lithuanian in form and cultural weight.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_kremsnita",
+    "region": "Europe",
+    "country": "Croatia",
+    "cakeId": "cake_kremsnita",
+    "recipeId": "recipe_kremsnita",
+    "shortDescription": "A Croatian custard cream cake — thick vanilla pastry cream between crisp layers of puff pastry.",
+    "historyNote": "Kremšnita is especially associated with the Croatian town of Samobor, where it has been a specialty since the early 20th century, though closely related versions (cremeschnitte, kremna rezina) exist across the former Austro-Hungarian sphere. It's traditionally eaten cold, cut into generous squares.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_nazook",
+    "region": "Asia & Middle East",
+    "country": "Armenia",
+    "cakeId": "cake_nazook",
+    "recipeId": "recipe_nazook",
+    "shortDescription": "An Armenian swirled pastry cake filled with sweet walnut paste, baked in golden coiled rings.",
+    "historyNote": "Nazook is a staple of Armenian home baking, traditionally made in large batches for Christmas and Easter and shared among family and neighbors. Its yeasted, slightly flaky dough and walnut filling reflect Armenia's long tradition of layered nut pastries shared across the Caucasus and Levant.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_galaktoboureko",
+    "region": "Europe",
+    "country": "Greece",
+    "cakeId": "cake_galaktoboureko",
+    "recipeId": "recipe_galaktoboureko",
+    "shortDescription": "Semolina custard wrapped in crisp phyllo and soaked in citrus syrup, a beloved Greek classic.",
+    "historyNote": "Galaktoboureko combines Ottoman-era phyllo-pastry technique with a distinctly Greek semolina custard, syrup-soaked in the same tradition as baklava. It's a fixture of Greek bakeries and tavernas, served chilled or at room temperature after a meal.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_bizcocho_de_ron",
+    "region": "Latin America",
+    "country": "Puerto Rico",
+    "cakeId": "cake_bizcocho_de_ron",
+    "recipeId": "recipe_bizcocho_de_ron",
+    "shortDescription": "A deeply rum-soaked Puerto Rican cake, a holiday-table fixture across the island.",
+    "historyNote": "Bizcocho de ron reflects Puerto Rico's rum-producing heritage, with the spirit soaked generously into the cake rather than used as a mere accent. It's especially popular around Christmas and family celebrations, often served alongside coquito.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_great_cake",
+    "region": "Latin America",
+    "country": "Barbados",
+    "cakeId": "cake_great_cake",
+    "recipeId": "recipe_great_cake",
+    "shortDescription": "A Barbadian black rum fruit cake, dried fruit soaked for weeks and darkened with burnt sugar.",
+    "historyNote": "Great Cake descends from British plum pudding traditions, transformed in Barbados through local rum production and the practice of soaking dried fruit for weeks or months before baking. It's central to Bajan Christmas and wedding celebrations, often given as gifts wrapped in decorative paper.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_vinarterta",
+    "region": "Europe",
+    "country": "Iceland",
+    "cakeId": "cake_vinarterta",
+    "recipeId": "recipe_vinarterta",
+    "shortDescription": "A tall Icelandic layer cake of spiced prune filling between thin cardamom-scented layers.",
+    "historyNote": "Vínarterta traveled with Icelandic immigrants to Canada and the United States in the late 19th century, where it became an even stronger cultural touchstone among the diaspora than in Iceland itself. Families on both sides of the Atlantic still debate the 'correct' number of layers and filling.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_trinidad_black_cake",
+    "region": "Latin America",
+    "country": "Trinidad and Tobago",
+    "cakeId": "cake_trinidad_black_cake",
+    "recipeId": "recipe_trinidad_black_cake",
+    "shortDescription": "Trinidad and Tobago's rum-and-wine-soaked black fruit cake, central to Christmas and weddings.",
+    "historyNote": "Trinidad Black Cake shares roots with other Caribbean black cakes in British plum pudding tradition, but developed its own distinct character through local rum and the practice of soaking fruit for months in advance. Families often guard their own soaking recipes closely, treating them as heirlooms.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_torta_caprese",
+    "region": "Europe",
+    "country": "Italy",
+    "cakeId": "cake_torta_caprese",
+    "recipeId": "recipe_torta_caprese",
+    "shortDescription": "A flourless Italian chocolate-almond cake from the island of Capri, dense and fudgy.",
+    "historyNote": "According to local legend, Torta Caprese was invented by accident in the 1920s when a Capri baker forgot to add flour to a cake for visiting guests. The result — a dense, intensely chocolatey, naturally gluten-free cake — became one of the island's signature exports.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_panforte",
+    "region": "Europe",
+    "country": "Italy",
+    "cakeId": "cake_panforte",
+    "recipeId": "recipe_panforte",
+    "shortDescription": "A dense, chewy spiced fruit-and-nut cake from Siena, cut into thin wedges.",
+    "historyNote": "Panforte dates back to medieval Siena, where spice traders made honey, nuts, and exotic spices available for a dense, long-keeping cake originally associated with monastery kitchens. It remains a Tuscan Christmas staple, protected as a traditional regional specialty.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_bolo_de_arroz",
+    "region": "Europe",
+    "country": "Portugal",
+    "cakeId": "cake_bolo_de_arroz",
+    "recipeId": "recipe_bolo_de_arroz",
+    "shortDescription": "A Portuguese rice-flour muffin-cake, lightly domed and baked in paper cups.",
+    "historyNote": "Bolo de arroz is a staple of Portuguese pastelarias, its rice flour giving a slightly denser, more tender crumb than an all-wheat muffin. It's an everyday breakfast and coffee-break fixture rather than a celebration cake, beloved for its simplicity.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_financier",
+    "region": "Europe",
+    "country": "France",
+    "cakeId": "cake_financier",
+    "recipeId": "recipe_financier",
+    "shortDescription": "A small, dense French cake of browned butter and almond flour, shaped like a gold bar.",
+    "historyNote": "Financiers take their name and rectangular gold-bar shape from their popularity among stockbrokers near the Paris Bourse in the late 19th century, who could eat them quickly without dirtying their gloves. The browned butter technique remains their defining feature.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_galette_des_rois",
+    "region": "Europe",
+    "country": "France",
+    "cakeId": "cake_galette_des_rois",
+    "recipeId": "recipe_galette_des_rois",
+    "shortDescription": "A French puff pastry cake filled with almond frangipane, baked with a hidden charm for Epiphany.",
+    "historyNote": "Galette des Rois has been eaten in France since at least the 14th century to mark Epiphany, with whoever finds the hidden charm (fève) crowned 'king' or 'queen' for the day. It remains one of France's most widely observed food traditions every January.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_boterkoek",
+    "region": "Europe",
+    "country": "Netherlands",
+    "cakeId": "cake_boterkoek",
+    "recipeId": "recipe_boterkoek",
+    "shortDescription": "A dense, chewy Dutch butter cake, deliberately simple and intensely buttery.",
+    "historyNote": "Boterkoek reflects the Netherlands' historic dairy industry, built from little more than butter, sugar, flour, and almond flavoring. Its crosshatch top and dense, fudgy crumb have made it a staple of Dutch bakeries for generations.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_guglhupf",
+    "region": "Europe",
+    "country": "Austria",
+    "cakeId": "cake_guglhupf",
+    "recipeId": "recipe_guglhupf",
+    "shortDescription": "A ring-shaped Austrian yeasted cake, often marbled with cocoa or studded with rum-soaked raisins.",
+    "historyNote": "Guglhupf has been documented in Austrian and Central European baking since at least the 17th century, its distinctive fluted ring pan shape becoming iconic across the region. Variations appear from Alsace to Hungary, but the cake remains a defining feature of Viennese coffeehouse culture.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_boston_cream_pie",
+    "region": "North America",
+    "country": "United States",
+    "cakeId": "cake_boston_cream_pie",
+    "recipeId": "recipe_boston_cream_pie",
+    "shortDescription": "Sponge layers filled with vanilla custard and glazed with dark chocolate — Massachusetts' official state dessert.",
+    "historyNote": "Boston Cream Pie was created at Boston's Parker House Hotel in the 1850s, predating the widespread use of the term 'cake' for such a dessert — hence its enduring 'pie' name despite being unmistakably a cake. Massachusetts named it the official state dessert in 1996.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_king_cake",
+    "region": "North America",
+    "country": "United States",
+    "cakeId": "cake_king_cake",
+    "recipeId": "recipe_king_cake",
+    "shortDescription": "A braided, cinnamon-swirled New Orleans cake iced in purple, green, and gold for Mardi Gras.",
+    "historyNote": "King Cake arrived in New Orleans with French settlers who brought Epiphany king-cake traditions, evolving over time into a Carnival-season fixture with its now-iconic purple, green, and gold sugar and hidden plastic baby. Finding the baby traditionally means hosting next year's party.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_smith_island",
+    "region": "North America",
+    "country": "United States",
+    "cakeId": "cake_smith_island",
+    "recipeId": "recipe_smith_island",
+    "shortDescription": "Eight to twelve improbably thin yellow layers stacked with chocolate fudge frosting — Maryland's official state dessert.",
+    "historyNote": "Smith Island Cake originated on Maryland's remote Chesapeake Bay island community, where watermen's wives baked many-layered cakes that traveled well and could be sliced thin to share widely. Maryland named it the official state dessert in 2008.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_italian_cream_cake",
+    "region": "North America",
+    "country": "United States",
+    "cakeId": "cake_italian_cream_cake",
+    "recipeId": "recipe_italian_cream_cake",
+    "shortDescription": "A Southern American layer cake studded with pecans and coconut under cream cheese frosting.",
+    "historyNote": "Despite its name, Italian Cream Cake has no confirmed Italian origin and is generally considered a 20th-century Southern American creation, likely named to evoke richness and sophistication. It remains a beloved birthday and celebration cake across the American South.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_german_chocolate",
+    "region": "North America",
+    "country": "United States",
+    "cakeId": "cake_german_chocolate",
+    "recipeId": "recipe_german_chocolate",
+    "shortDescription": "Chocolate layers filled with coconut-pecan frosting — an American invention despite the name.",
+    "historyNote": "German Chocolate Cake takes its name from Sam German, an American baker who developed a mild baking chocolate for Baker's Chocolate Company in 1852 — not from Germany the country. A Texas newspaper published a recipe using 'German's chocolate' in 1957, and the cake became a national sensation, later dropping the possessive 's'.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_chiffon",
+    "region": "North America",
+    "country": "United States",
+    "cakeId": "cake_chiffon",
+    "recipeId": "recipe_chiffon",
+    "shortDescription": "An oil-based American cake invented in 1927, prized for its unusually light, moist crumb.",
+    "historyNote": "Chiffon Cake was invented by Los Angeles insurance salesman Harry Baker in 1927, who kept the vegetable-oil technique a secret for 20 years before selling it to Betty Crocker in 1947. It was marketed as the first genuinely new cake type in a century.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_election_cake",
+    "region": "North America",
+    "country": "United States",
+    "cakeId": "cake_election_cake",
+    "recipeId": "recipe_election_cake",
+    "shortDescription": "A colonial-era New England spiced yeasted fruit cake, once baked for Election Day gatherings.",
+    "historyNote": "Election Cake dates to at least the 1770s in New England, where large yeasted fruit cakes were baked to feed crowds gathered for town election days — some recipes called for dozens of eggs and pounds of flour. The tradition faded in the 20th century but has seen a modern revival tied to civic engagement.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_angel_food",
+    "region": "North America",
+    "country": "United States",
+    "cakeId": "cake_angel_food",
+    "recipeId": "recipe_angel_food",
+    "shortDescription": "A fat-free American sponge leavened entirely by whipped egg whites, prized for its cloud-like crumb.",
+    "historyNote": "Angel Food Cake became popular in late 19th-century America partly thanks to the mechanical egg beater, which made whipping the large number of egg whites required far more practical for home cooks. Its stark white color and airy texture gave it the 'angel' name.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_clootie_dumpling",
+    "region": "Europe",
+    "country": "Scotland",
+    "cakeId": "cake_clootie_dumpling",
+    "recipeId": "recipe_clootie_dumpling",
+    "shortDescription": "A Scottish steamed spiced fruit pudding-cake, boiled for hours wrapped in a cloth.",
+    "historyNote": "Clootie dumpling takes its name from the 'cloot' (cloth) it's traditionally boiled in, a technique dating back centuries in Scottish home cooking. It's especially associated with Hogmanay and family gatherings, often sliced and fried in butter the next day.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_barmbrack",
+    "region": "Europe",
+    "country": "Ireland",
+    "cakeId": "cake_barmbrack",
+    "recipeId": "recipe_barmbrack",
+    "shortDescription": "An Irish spiced fruit tea loaf, traditionally baked for Halloween with charms hidden inside.",
+    "historyNote": "Barmbrack has been tied to Irish Halloween (Samhain) divination traditions for generations, with small charms — a ring, a coin, a piece of cloth — baked inside to foretell the finder's fortune for the year ahead. It remains widely sold in Irish bakeries every autumn.",
+    "isPrimary": true
+  },
+  {
+    "id": "region_makowiec",
+    "region": "Europe",
+    "country": "Poland",
+    "cakeId": "cake_makowiec",
+    "recipeId": "recipe_makowiec",
+    "shortDescription": "A Polish poppy seed roll cake, yeasted dough swirled tightly around a dense sweet filling.",
+    "historyNote": "Makowiec is a fixture of Polish Christmas and Easter tables, its poppy seed filling reflecting the crop's long cultivation across Central and Eastern Europe. Preparing the filling — simmering and grinding vast quantities of poppy seed — is considered a mark of a serious home baker.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_rigo_jancsi",
+    "region": "Europe",
+    "country": "Hungary",
+    "cakeId": "cake_rigo_jancsi",
+    "recipeId": "recipe_rigo_jancsi",
+    "shortDescription": "A Hungarian chocolate sponge and whipped chocolate cream cake, cut into neat cubes.",
+    "historyNote": "Rigó Jancsi is named for a real Roma violinist whose scandalous romance with a Belgian princess captivated late-19th-century Europe; the cake was reportedly created in his honor. Its rich chocolate-on-chocolate profile remains one of Hungary's most iconic patisserie exports.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_mhanncha",
+    "region": "Africa",
+    "country": "Morocco",
+    "cakeId": "cake_mhanncha",
+    "recipeId": "recipe_mhanncha",
+    "shortDescription": "A Moroccan coiled 'snake cake' of almond paste rolled in warqa pastry, dusted with sugar and cinnamon.",
+    "historyNote": "M'hanncha ('the snake') is a fixture of Moroccan celebrations and Ramadan tables, its coiled shape and delicate warqa pastry reflecting the country's long tradition of skilled hand-stretched dough work. Almonds, a major Moroccan crop, form the heart of its filling.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_mont_blanc",
+    "region": "Asia & Middle East",
+    "country": "Japan",
+    "cakeId": "cake_mont_blanc",
+    "recipeId": "recipe_mont_blanc",
+    "shortDescription": "A chestnut cream cake of French origin that became a beloved Japanese patisserie icon.",
+    "historyNote": "Mont Blanc originated in the French and Italian Alps but was embraced with particular devotion in Japan starting in the 1930s, where chestnuts (kuri) were already a prized autumn ingredient. Japanese patisseries are now considered among the most refined interpreters of the dessert worldwide.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_banh_da_lon",
+    "region": "Asia & Middle East",
+    "country": "Vietnam",
+    "cakeId": "cake_banh_da_lon",
+    "recipeId": "recipe_banh_da_lon",
+    "shortDescription": "A steamed Vietnamese layer cake alternating pandan and mung bean batters, prized for its chewy texture.",
+    "historyNote": "Bánh da lợn ('pig skin cake', named for its glossy, slightly chewy texture) is a beloved Vietnamese street and home dessert, its layered construction showcasing pandan and mung bean — two staples of Southeast Asian sweets. It's commonly sold at markets, sliced into neat rectangles.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_pan_de_elote",
+    "region": "Latin America",
+    "country": "Mexico",
+    "cakeId": "cake_pan_de_elote",
+    "recipeId": "recipe_pan_de_elote",
+    "shortDescription": "A moist Mexican fresh corn cake, lightly sweet with whole kernels blended into the batter.",
+    "historyNote": "Pan de elote draws on corn's central place in Mexican cuisine, adapting the country's ancient staple crop into a sweet, cake-like form popular for breakfast or an afternoon snack. Recipes vary widely by household, from custardy to more traditionally cake-like.",
+    "isPrimary": false
+  },
+  {
+    "id": "region_genoa_cake",
+    "region": "Europe",
+    "country": "United Kingdom",
+    "cakeId": "cake_genoa_cake",
+    "recipeId": "recipe_genoa_cake",
+    "shortDescription": "A British light fruit cake topped with whole almonds, milder than a traditional Christmas fruit cake.",
+    "historyNote": "Genoa Cake takes its name from the Italian city, though it developed primarily as a British bakery staple — a lighter alternative to a dense Dundee or Christmas cake, suited to everyday tea rather than a single major holiday.",
+    "isPrimary": false
   }
 ]
