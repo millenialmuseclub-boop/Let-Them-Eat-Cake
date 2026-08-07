@@ -26,6 +26,7 @@ export function PantryRaidPage() {
   const [timeFilter, setTimeFilter] = useState('any')
   const [skillFilter, setSkillFilter] = useState<SkillLevel | 'any'>('any')
   const [ownedEquipment, setOwnedEquipment] = useState<Set<Equipment>>(new Set())
+  const [hasSearched, setHasSearched] = useState(false)
 
   function toggleIngredient(ingredient: PantryIngredient) {
     setOnHand((prev) => {
@@ -199,26 +200,38 @@ export function PantryRaidPage() {
         </div>
       </div>
 
-      <h2 className="pantry-section-heading">✨ Best Match</h2>
-      <p className="pantry-section-subtext">You already have everything these cakes need.</p>
-      <div className="pantry-results">
-        {bestMatches.length === 0 && <p className="pantry-empty">Check off a few more ingredients to see a best match.</p>}
-        {bestMatches.map(renderCard)}
-      </div>
+      <button className="btn pantry-find-btn" onClick={() => setHasSearched(true)}>
+        🍰 Find Cakes I Can Make
+      </button>
 
-      <h2 className="pantry-section-heading">👍 Great Match</h2>
-      <p className="pantry-section-subtext">Missing one ingredient — and it substitutes cleanly.</p>
-      <div className="pantry-results">
-        {greatMatches.length === 0 && <p className="pantry-empty">No great matches yet — try adjusting your filters or checking off more ingredients.</p>}
-        {greatMatches.map(renderCard)}
-      </div>
+      {!hasSearched ? (
+        <div className="card pantry-prompt">
+          <p>Check off what's in your kitchen above, then tap <strong>Find Cakes I Can Make</strong> to see your matches.</p>
+        </div>
+      ) : (
+        <>
+          <h2 className="pantry-section-heading">✨ Best Match</h2>
+          <p className="pantry-section-subtext">You already have everything these cakes need.</p>
+          <div className="pantry-results">
+            {bestMatches.length === 0 && <p className="pantry-empty">Check off a few more ingredients to see a best match.</p>}
+            {bestMatches.map(renderCard)}
+          </div>
 
-      <h2 className="pantry-section-heading">💡 Creative Match</h2>
-      <p className="pantry-section-subtext">Missing 1-2 ingredients.</p>
-      <div className="pantry-results">
-        {creativeMatches.length === 0 && <p className="pantry-empty">No creative matches yet — try adjusting your filters or checking off more ingredients.</p>}
-        {creativeMatches.map(renderCard)}
-      </div>
+          <h2 className="pantry-section-heading">👍 Great Match</h2>
+          <p className="pantry-section-subtext">Missing one ingredient — and it substitutes cleanly.</p>
+          <div className="pantry-results">
+            {greatMatches.length === 0 && <p className="pantry-empty">No great matches yet — try adjusting your filters or checking off more ingredients.</p>}
+            {greatMatches.map(renderCard)}
+          </div>
+
+          <h2 className="pantry-section-heading">💡 Creative Match</h2>
+          <p className="pantry-section-subtext">Missing 1-2 ingredients.</p>
+          <div className="pantry-results">
+            {creativeMatches.length === 0 && <p className="pantry-empty">No creative matches yet — try adjusting your filters or checking off more ingredients.</p>}
+            {creativeMatches.map(renderCard)}
+          </div>
+        </>
+      )}
     </main>
   )
 }
