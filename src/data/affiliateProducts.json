@@ -1,0 +1,183 @@
+[
+  {
+    "id": "product_stand_mixer",
+    "name": "Stand Mixer",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77597966",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/workshop"],
+    "editorialNote": "The workhorse behind creaming, whipping, and kneading — worth the counter space."
+  },
+  {
+    "id": "product_revolving_cake_stand",
+    "name": "Revolving Cake Stand",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77598364",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-anatomy", "/technique-library"],
+    "associatedTechniqueIds": ["buttercream_smoothing"],
+    "editorialNote": "Makes smooth sides and even piping dramatically easier — turn the cake, not your wrist."
+  },
+  {
+    "id": "product_cake_pan",
+    "name": "Cake Pan",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77598720",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-stability", "/cake-blueprints"]
+  },
+  {
+    "id": "product_thermapen",
+    "name": "Thermapen",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77601195",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-stability", "/cake-science", "/cake-blueprints", "/cake-failure-lab"],
+    "associatedTechniqueIds": ["ganache"],
+    "editorialNote": "Instant, accurate reads take the guesswork out of ganache, custard, and syrup temperatures."
+  },
+  {
+    "id": "product_marble_pastry_board",
+    "name": "Marble Pastry Board",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77603136",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_measuring_set",
+    "name": "Ultimate Measuring Set",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77603371",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-science"]
+  },
+  {
+    "id": "product_zester",
+    "name": "Zester",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77174896",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_digital_scale",
+    "name": "Digital Scale",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77173367",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-stability", "/cake-science", "/cake-blueprints", "/cake-failure-lab"],
+    "editorialNote": "Weight-based baking is the single biggest upgrade for consistent results, tier after tier."
+  },
+  {
+    "id": "product_scraper",
+    "name": "Scraper",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77172564",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-anatomy", "/technique-library"],
+    "associatedTechniqueIds": ["buttercream_smoothing"]
+  },
+  {
+    "id": "product_cake_leveler",
+    "name": "Cake Leveler",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77102183",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-anatomy", "/cake-failure-lab"],
+    "associatedTechniqueIds": ["leveling"],
+    "editorialNote": "The fastest fix for uneven, domed, or leaning layers."
+  },
+  {
+    "id": "product_decorating_kit",
+    "name": "Decorating Kit",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77100253",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/technique-library"],
+    "associatedTechniqueIds": ["piping"]
+  },
+  {
+    "id": "product_offset_spatula",
+    "name": "Offset Spatula",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77099492",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-anatomy", "/cake-blueprints", "/technique-library"],
+    "associatedTechniqueIds": ["buttercream_smoothing"]
+  },
+  {
+    "id": "product_vanilla",
+    "name": "Vanilla",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77599215",
+    "network": "shopmy",
+    "active": true,
+    "associatedIngredientSlugs": ["vanilla-extract"]
+  },
+  {
+    "id": "product_cake_flour",
+    "name": "Cake Flour",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77599880",
+    "network": "shopmy",
+    "active": true,
+    "associatedIngredientSlugs": ["cake-flour"]
+  },
+  {
+    "id": "product_milk_chocolate",
+    "name": "Baking Milk Chocolate",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77601825",
+    "network": "shopmy",
+    "active": true,
+    "associatedIngredientSlugs": ["dark-chocolate", "sweet-baking-chocolate"]
+  },
+  {
+    "id": "product_earl_grey_tea",
+    "name": "Earl Grey Tea",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77600915",
+    "network": "shopmy",
+    "active": true,
+    "associatedPairingCategories": ["tea"]
+  },
+  {
+    "id": "product_fancy_sprinkles",
+    "name": "Fancy Sprinkles",
+    "category": "ingredient",
+    "url": "https://on.ltk.com/+TFzoOaCIF96-r8OAUCvEfQ",
+    "network": "ltk",
+    "active": true,
+    "associatedTechniqueIds": ["piping"]
+  },
+  {
+    "id": "product_gel_colors",
+    "name": "Gel Colors",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77602673",
+    "network": "shopmy",
+    "active": true,
+    "associatedTechniqueIds": ["piping"]
+  },
+  {
+    "id": "product_espresso_machine",
+    "name": "Espresso Machine",
+    "category": "beverage-equipment",
+    "url": "https://on.ltk.com/+J36FilnB_SaVOx966SJi4A",
+    "network": "ltk",
+    "active": true,
+    "associatedPairingCategories": ["coffee"],
+    "editorialNote": "Completes the experience for any coffee-forward pairing."
+  }
+]

@@ -1,7 +1,9 @@
 import { Link, useParams } from 'react-router-dom'
 import { getIngredient } from '../lib/ingredients'
 import { getCake } from '../lib/data'
+import { getProductsForIngredient } from '../lib/affiliateProducts'
 import { CakeHeroImage } from '../components/CakeHeroImage'
+import { AffiliateProductSet } from '../components/AffiliateProductSet'
 import './IngredientDetailPage.css'
 
 const DIET_LABELS: Record<string, string> = {
@@ -61,6 +63,8 @@ export function IngredientDetailPage() {
           ))}
         </div>
       </section>
+
+      <AffiliateProductSet title="Curator's Recommendation" products={getProductsForIngredient(ingredient.slug)} />
     </main>
   )
 }
