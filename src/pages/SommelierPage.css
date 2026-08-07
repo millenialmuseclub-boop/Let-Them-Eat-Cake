@@ -172,3 +172,7 @@
     display: none;
   }
 }
+
+.pairing-copy-button {
+  margin-top: 8px;
+}

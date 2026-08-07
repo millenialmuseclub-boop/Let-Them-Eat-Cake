@@ -1,0 +1,46 @@
+.my-collection-note {
+  width: 100%;
+  max-width: 480px;
+  min-height: 60px;
+  font: inherit;
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  resize: vertical;
+  margin: 16px 0 28px;
+}
+
+.my-collection-empty {
+  opacity: 0.7;
+}
+
+.my-collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.my-collection-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-collection-card a {
+  text-decoration: none;
+  color: var(--text);
+  flex-grow: 1;
+}
+
+.my-collection-remove {
+  margin-top: 8px;
+  color: var(--raspberry);
+}
+
+.my-collection-share-section {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}

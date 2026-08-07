@@ -1,11 +1,16 @@
+import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getCake, getRecipeForCake } from '../lib/data'
 import { getRegionEntriesForCake, getDecadeForCake, getTopPairings, getRelatedCakes } from '../lib/encyclopedia'
+import { getCakeImage } from '../lib/images'
+import { recordCakeView } from '../lib/recentlyViewed'
 import { FlavorRadarChart } from '../components/FlavorRadarChart'
 import { CakeOriginStory } from '../components/CakeOriginStory'
 import { RecipeCard } from '../components/RecipeCard'
 import { SaveButton } from '../components/SaveButton'
+import { AddToCollectionButton } from '../components/AddToCollectionButton'
 import { CakeHeroImage } from '../components/CakeHeroImage'
+import { SocialShareCard } from '../components/SocialShareCard'
 import './CakeDetailPage.css'
 
 function scoreColor(score: number): string {
@@ -28,6 +33,10 @@ export function CakeDetailPage() {
       </main>
     )
   }
+
+  useEffect(() => {
+    if (cake) recordCakeView(cake.id)
+  }, [cake?.id])
 
   const regionEntries = getRegionEntriesForCake(cake.id)
   const primaryRegion = regionEntries[0]
@@ -62,6 +71,7 @@ export function CakeDetailPage() {
         </h1>
         <p>{cake.description}</p>
         <SaveButton type="cake" id={cake.id} />
+        <AddToCollectionButton cakeId={cake.id} />
       </div>
 
       {originPoints.length > 0 && (
@@ -75,6 +85,20 @@ export function CakeDetailPage() {
         <h2>🍰 Flavor Profile</h2>
         <FlavorRadarChart profile={cake.flavorProfile} />
         <p className="cake-detail-flavor-notes">Notes: {cake.flavorNotes.join(', ')}</p>
+      </section>
+
+      <section className="card cake-detail-section">
+        <h2>📣 Share this Cake</h2>
+        <SocialShareCard
+          eyebrow="Cake Encyclopedia"
+          title={cake.name}
+          subtitle={locationLabel ?? undefined}
+          colorHex="var(--raspberry)"
+          imageUrl={getCakeImage(cake.id)?.url}
+          shareUrl={typeof window !== 'undefined' ? window.location.href : ''}
+          shareText={`${cake.name} — from the Let Them Eat Cake Encyclopedia 🎂`}
+          filename={`${cake.id}-cake`}
+        />
       </section>
 
       {recipe && (

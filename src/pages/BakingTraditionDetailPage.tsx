@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import { bakingTraditions } from '../lib/data'
 import { getTraditionCakes } from '../lib/bakingTraditions'
 import { CakeHeroImage } from '../components/CakeHeroImage'
+import { SocialShareCard } from '../components/SocialShareCard'
 import './BakingTraditionDetailPage.css'
 
 export function BakingTraditionDetailPage() {
@@ -36,6 +37,19 @@ export function BakingTraditionDetailPage() {
           </Link>
         ))}
       </div>
+
+      <section className="tradition-detail-share">
+        <h2>Share this tradition</h2>
+        <SocialShareCard
+          eyebrow="Baking Tradition"
+          title={tradition.title}
+          subtitle={tradition.specialty}
+          colorHex="var(--gold)"
+          shareUrl={typeof window !== 'undefined' ? window.location.href : ''}
+          shareText={`${tradition.title}: ${tradition.description}`}
+          filename={`${tradition.id}-tradition`}
+        />
+      </section>
     </main>
   )
 }

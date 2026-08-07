@@ -1,0 +1,123 @@
+.social-share-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.social-share-card {
+  width: 270px;
+  aspect-ratio: 9 / 16;
+  border-radius: 20px;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.social-share-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+.social-share-title {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.social-share-subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+.social-share-image {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 8px 0;
+}
+
+.social-share-visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.social-share-visual .radar-axis-label {
+  fill: #ffffff;
+  font-size: 9px;
+}
+
+.social-share-visual .radar-grid-ring,
+.social-share-visual .radar-axis-line {
+  stroke: rgba(255, 255, 255, 0.35);
+}
+
+.social-share-url {
+  font-size: 11px;
+  opacity: 0.85;
+  margin: 12px 0 0;
+  word-break: break-all;
+}
+
+.social-share-wordmark {
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.9;
+  margin: 6px 0 0;
+}
+
+.social-share-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-share-error {
+  font-size: 13px;
+  color: var(--raspberry);
+}
+
+.social-share-platform-row {
+  display: flex;
+  gap: 12px;
+}
+
+.social-share-platform-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.social-share-platform-link:hover {
+  border-color: var(--raspberry);
+}
+
+@media (max-width: 480px) {
+  .social-share-card {
+    width: 220px;
+  }
+}

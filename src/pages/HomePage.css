@@ -9,6 +9,57 @@
   margin: 0 auto;
 }
 
+.home-section {
+  margin-bottom: 40px;
+}
+
+.home-section h2 {
+  margin-bottom: 16px;
+}
+
+.home-cake-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.home-cake-card {
+  flex: 0 0 160px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.home-cake-card h3 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.home-cake-of-day {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  max-width: 420px;
+}
+
+.home-cake-of-day p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.home-collections-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.home-collection-card {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 10px 16px;
+}
+
 .home-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

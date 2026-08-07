@@ -117,6 +117,11 @@ export const HUBS: Hub[] = [
         title: 'Pastry Notebook',
         description: 'Save your favorite cakes and cake personalities to come back to anytime — stored right in your browser.',
       },
+      {
+        to: '/my-collections',
+        title: 'My Collections',
+        description: 'Create your own named collections of cakes — organize, add notes, and share them, all stored right in your browser.',
+      },
     ],
   },
 ]

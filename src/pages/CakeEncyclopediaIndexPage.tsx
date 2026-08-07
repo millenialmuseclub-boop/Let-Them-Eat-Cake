@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom'
 import { cakes, collections } from '../lib/data'
 import { getRegionEntriesForCake, getDecadeForCake } from '../lib/encyclopedia'
 import { CakeHeroImage } from '../components/CakeHeroImage'
+import { FEATURED_COLLECTION_IDS } from '../lib/collections'
 import './CakeEncyclopediaIndexPage.css'
-
-const FEATURED_COLLECTION_IDS = ['chocolate-classics', 'coconut-tropical', 'cozy-sunday', 'celebration-worthy']
 
 function getLocationTag(cakeId: string): string | null {
   const region = getRegionEntriesForCake(cakeId)[0]

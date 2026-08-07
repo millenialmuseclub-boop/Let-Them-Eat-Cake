@@ -22,3 +22,9 @@
   flex-grow: 1;
   margin-bottom: 0;
 }
+
+.tradition-detail-share {
+  margin-top: 32px;
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}

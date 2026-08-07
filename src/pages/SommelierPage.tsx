@@ -142,6 +142,7 @@ function CakeFirstView({
                   </div>
 
                   <LifestyleSection category={drink.category} />
+                  <CopyPairingButton cakeName={cake.name} drinkName={drink.name} score={score} />
                 </div>
               )}
             </div>
@@ -245,6 +246,7 @@ function DrinkFirstView({
                   </div>
 
                   <LifestyleSection category={drink.category} />
+                  <CopyPairingButton cakeName={cake.name} drinkName={drink.name} score={score} />
 
                   <Link to={`/cake/${cake.id}`} className="encyclopedia-link">
                     View full encyclopedia entry →
@@ -279,6 +281,24 @@ function LifestyleSection({ category }: { category: DrinkCategory }) {
         <strong>Best for:</strong> {lifestyle.occasion}
       </p>
     </div>
+  )
+}
+
+function CopyPairingButton({ cakeName, drinkName, score }: { cakeName: string; drinkName: string; score: number }) {
+  const [copied, setCopied] = useState(false)
+
+  async function handleCopy() {
+    await navigator.clipboard.writeText(
+      `${cakeName} + ${drinkName} — a ${score}/100 pairing 🍰🥂 #LetThemEatCake ${typeof window !== 'undefined' ? window.location.href : ''}`,
+    )
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
+  return (
+    <button className="btn btn-secondary pairing-copy-button" onClick={handleCopy}>
+      {copied ? 'Copied!' : '📣 Copy this pairing'}
+    </button>
   )
 }
 

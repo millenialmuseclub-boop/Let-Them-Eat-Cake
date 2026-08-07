@@ -2,6 +2,9 @@ import { cakes } from './data'
 import type { Collection } from '../types/collection'
 import type { CakeProfile } from '../types/cake'
 
+/** Shared across the Encyclopedia index and HomePage so the featured set stays in sync. */
+export const FEATURED_COLLECTION_IDS = ['chocolate-classics', 'coconut-tropical', 'cozy-sunday', 'celebration-worthy']
+
 function matchesRule(cake: CakeProfile, rule: Collection['rule']): boolean {
   switch (rule.type) {
     case 'flavorNote':

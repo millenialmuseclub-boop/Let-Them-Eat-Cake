@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import { getCollection } from '../lib/data'
 import { getCollectionCakes } from '../lib/collections'
 import { CakeHeroImage } from '../components/CakeHeroImage'
+import { SocialShareCard } from '../components/SocialShareCard'
 import './CollectionDetailPage.css'
 
 export function CollectionDetailPage() {
@@ -38,6 +39,19 @@ export function CollectionDetailPage() {
           </Link>
         ))}
       </div>
+
+      <section className="collection-detail-share">
+        <h2>Share this collection</h2>
+        <SocialShareCard
+          eyebrow="Curated Collection"
+          title={collection.title}
+          subtitle={`${cakes.length} cakes`}
+          colorHex="var(--gold)"
+          shareUrl={typeof window !== 'undefined' ? window.location.href : ''}
+          shareText={`${collection.title}: ${collection.description}`}
+          filename={`${collection.id}-collection`}
+        />
+      </section>
     </main>
   )
 }

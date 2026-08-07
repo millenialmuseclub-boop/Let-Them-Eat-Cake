@@ -1,0 +1,72 @@
+.my-collections-create {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0 28px;
+  flex-wrap: wrap;
+}
+
+.my-collections-create input {
+  flex: 1;
+  min-width: 220px;
+  font: inherit;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.my-collections-empty {
+  opacity: 0.7;
+}
+
+.my-collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.my-collections-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-collections-name {
+  cursor: pointer;
+}
+
+.my-collections-name:hover {
+  color: var(--raspberry);
+}
+
+.my-collections-rename-input {
+  font: inherit;
+  font-size: 19px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--raspberry);
+  background: var(--bg-card);
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.my-collections-card p {
+  font-size: 13px;
+  color: var(--raspberry);
+  flex-grow: 1;
+}
+
+.my-collections-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.my-collections-card-actions .btn {
+  flex: 1;
+  text-align: center;
+}
+
+.my-collections-delete {
+  color: var(--raspberry);
+}
