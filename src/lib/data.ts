@@ -14,6 +14,7 @@ import cakePersonalitiesJson from '../data/cakePersonalities.json'
 import weddingDecorationStylesJson from '../data/weddingDecorationStyles.json'
 import collectionsJson from '../data/collections.json'
 import lifestylePairingsJson from '../data/lifestylePairings.json'
+import cakeImagesJson from '../data/cakeImages.json'
 import bakingTraditionsJson from '../data/bakingTraditions.json'
 import type { CakeProfile, Recipe } from '../types/cake'
 import type { HistoricalCakeEntry } from '../types/timeMachine'
@@ -27,6 +28,7 @@ import type { CakeAnatomyStage } from '../types/cakeAnatomy'
 import type { CakePersonality } from '../types/personaMatch'
 import type { Collection } from '../types/collection'
 import type { LifestylePairing } from '../types/lifestylePairing'
+import type { CakeImage } from '../types/cakeImage'
 import type { BakingTradition } from '../types/bakingTradition'
 
 export const cakes = cakesJson as CakeProfile[]
@@ -45,6 +47,7 @@ export const cakePersonalities = cakePersonalitiesJson as CakePersonality[]
 export const weddingDecorationStyles = weddingDecorationStylesJson as WeddingDecorationStyle[]
 export const collections = collectionsJson as Collection[]
 export const lifestylePairings = lifestylePairingsJson as LifestylePairing[]
+export const cakeImages = cakeImagesJson as Record<string, CakeImage>
 export const bakingTraditions = bakingTraditionsJson as BakingTradition[]
 
 function toMap<T extends { id: string }>(items: T[]): Map<string, T> {

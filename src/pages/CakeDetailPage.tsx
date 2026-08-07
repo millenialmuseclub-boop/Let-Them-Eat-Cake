@@ -5,6 +5,7 @@ import { FlavorRadarChart } from '../components/FlavorRadarChart'
 import { CakeOriginStory } from '../components/CakeOriginStory'
 import { RecipeCard } from '../components/RecipeCard'
 import { SaveButton } from '../components/SaveButton'
+import { CakeHeroImage } from '../components/CakeHeroImage'
 import './CakeDetailPage.css'
 
 function scoreColor(score: number): string {
@@ -44,6 +45,7 @@ export function CakeDetailPage() {
   return (
     <main className="page cake-detail-page">
       <div className="card cake-detail-hero">
+        <CakeHeroImage cakeId={cake.id} variant="hero" alt={cake.name} />
         <div className="cake-detail-tags">
           {locationLabel && <span className="tag">{locationLabel}</span>}
           <span className="tag cake-detail-texture-tag">{cake.texture}</span>
@@ -88,6 +90,7 @@ export function CakeDetailPage() {
           <div className="cake-detail-related-grid">
             {relatedCakes.map(({ cake: related, reason }) => (
               <Link key={related.id} to={`/cake/${related.id}`} className="card cake-detail-related-card">
+                <CakeHeroImage cakeId={related.id} variant="thumbnail" alt={related.name} />
                 <h3>{related.name}</h3>
                 <p>{reason}</p>
               </Link>

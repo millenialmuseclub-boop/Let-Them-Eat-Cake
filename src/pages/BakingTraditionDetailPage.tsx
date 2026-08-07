@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { bakingTraditions } from '../lib/data'
 import { getTraditionCakes } from '../lib/bakingTraditions'
+import { CakeHeroImage } from '../components/CakeHeroImage'
 import './BakingTraditionDetailPage.css'
 
 export function BakingTraditionDetailPage() {
@@ -29,6 +30,7 @@ export function BakingTraditionDetailPage() {
       <div className="tradition-detail-grid">
         {cakes.map((cake) => (
           <Link key={cake.id} to={`/cake/${cake.id}`} className="card tradition-detail-card">
+            <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
             <h3>{cake.name}</h3>
             <p>{cake.description}</p>
           </Link>

@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { cakes, collections } from '../lib/data'
 import { getRegionEntriesForCake, getDecadeForCake } from '../lib/encyclopedia'
+import { CakeHeroImage } from '../components/CakeHeroImage'
 import './CakeEncyclopediaIndexPage.css'
 
 const FEATURED_COLLECTION_IDS = ['chocolate-classics', 'coconut-tropical', 'cozy-sunday', 'celebration-worthy']
@@ -71,6 +72,7 @@ export function CakeEncyclopediaIndexPage() {
           const locationTag = getLocationTag(cake.id)
           return (
             <Link key={cake.id} to={`/cake/${cake.id}`} className="card encyclopedia-card">
+              <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
               <div className="encyclopedia-card-tags">
                 {locationTag && <span className="tag">{locationTag}</span>}
                 <span className="tag encyclopedia-texture-tag">{cake.texture}</span>
