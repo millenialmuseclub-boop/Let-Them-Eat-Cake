@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { cakes, collections } from '../lib/data'
-import { getRecentlyViewed } from '../lib/recentlyViewed'
 import { getUserCollections } from '../lib/userCollections'
 import { FEATURED_COLLECTION_IDS } from '../lib/collections'
 import { getHeroCake } from '../lib/discovery'
@@ -28,10 +27,6 @@ export function HomePage() {
   const heroOrigin = getRegionEntriesForCake(heroCake.id)[0]?.country
   const topPairing = getTopPairings(heroCake, 1)[0]
 
-  const recentCakes = getRecentlyViewed(6)
-    .map((id) => cakes.find((c) => c.id === id))
-    .filter((c) => c !== undefined)
-
   const featuredCollections = FEATURED_COLLECTION_IDS.map((id) => collections.find((c) => c.id === id)).filter((c) => c !== undefined)
 
   return (
@@ -45,20 +40,6 @@ export function HomePage() {
           <span className="btn home-hero-cta">Explore →</span>
         </div>
       </Link>
-
-      {recentCakes.length > 0 && (
-        <section className="home-section">
-          <h2>Continue Exploring</h2>
-          <div className="home-cake-row">
-            {recentCakes.map((cake) => (
-              <Link key={cake.id} to={`/cake/${cake.id}`} className="card home-cake-card">
-                <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
-                <h3>{cake.name}</h3>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
 
       {topPairing && (
         <section className="home-section">

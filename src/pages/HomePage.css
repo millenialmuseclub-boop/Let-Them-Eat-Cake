@@ -60,24 +60,6 @@
   margin-bottom: 16px;
 }
 
-.home-cake-row {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  padding-bottom: 4px;
-}
-
-.home-cake-card {
-  flex: 0 0 160px;
-  text-decoration: none;
-  color: var(--text);
-}
-
-.home-cake-card h3 {
-  font-size: 15px;
-  margin: 0;
-}
-
 .home-visual-row {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
