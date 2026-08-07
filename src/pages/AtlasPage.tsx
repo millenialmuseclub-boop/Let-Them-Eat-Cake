@@ -1,10 +1,11 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getCake, getRecipe, regions, collections } from '../lib/data'
-import { getAllCountries, getCountryEntries, getPrimaryEntry } from '../lib/atlas'
+import { getAllCountries, getCountryEntries, getPrimaryEntry, getRelatedCountries } from '../lib/atlas'
 import { FEATURED_COLLECTION_IDS } from '../lib/collections'
 import { RecipeCard } from '../components/RecipeCard'
 import { AtlasWorldMap } from '../components/AtlasWorldMap'
+import { CakeHeroImage } from '../components/CakeHeroImage'
 import type { AtlasRegion } from '../types/atlas'
 import './AtlasPage.css'
 
@@ -38,6 +39,7 @@ export function AtlasPage() {
   const selectedCake = selectedEntry ? getCake(selectedEntry.cakeId) : null
   const selectedRecipe = selectedEntry ? getRecipe(selectedEntry.recipeId) : null
   const otherEntries = countryEntries.filter((e) => e.id !== selectedEntryId)
+  const relatedCountries = country ? getRelatedCountries(country) : []
 
   return (
     <main className="page atlas-page">
@@ -66,6 +68,7 @@ export function AtlasPage() {
       {selectedEntry && selectedCake && selectedRecipe && (
         <section className="atlas-result">
           <div className="card">
+            <CakeHeroImage cakeId={selectedCake.id} variant="hero" alt={selectedCake.name} />
             <span className="tag">{country}</span>
             {selectedEntry.cityMicroRegion && <span className="tag atlas-city-tag">{selectedEntry.cityMicroRegion}</span>}
             <h2>{selectedCake.name}</h2>
@@ -94,6 +97,19 @@ export function AtlasPage() {
                     </button>
                   )
                 })}
+              </div>
+            </>
+          )}
+
+          {relatedCountries.length > 0 && (
+            <>
+              <h2 className="recipe-heading">Related Countries</h2>
+              <div className="atlas-chip-row">
+                {relatedCountries.map((c) => (
+                  <button key={c} className="atlas-chip" onClick={() => handleSearch(c)}>
+                    {c}
+                  </button>
+                ))}
               </div>
             </>
           )}

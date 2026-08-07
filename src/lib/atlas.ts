@@ -13,3 +13,21 @@ export function getPrimaryEntry(country: string): RegionalCakeEntry | undefined 
   const entries = getCountryEntries(country)
   return entries.find((e) => e.isPrimary) ?? entries[0]
 }
+
+/** Other countries sharing the same AtlasRegion — no separate "related countries" data needed. */
+export function getRelatedCountries(country: string, limit = 4): string[] {
+  const primary = getPrimaryEntry(country)
+  if (!primary) return []
+
+  const seen = new Set<string>([country.toLowerCase()])
+  const related: string[] = []
+  for (const entry of regions) {
+    if (entry.region !== primary.region) continue
+    const key = entry.country.toLowerCase()
+    if (seen.has(key)) continue
+    seen.add(key)
+    related.push(entry.country)
+    if (related.length >= limit) break
+  }
+  return related
+}
