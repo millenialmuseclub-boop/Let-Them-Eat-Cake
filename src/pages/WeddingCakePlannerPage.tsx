@@ -1,21 +1,32 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import type { DietTag } from '../types/cake'
 import type { CakeShape, CelebrationOccasion, SeasonVariant, WeddingPlanInput, WeddingPlanResult, WeddingSeason } from '../types/weddingCake'
 import { weddingCultures, weddingAesthetics, weddingDecorationStyles, getCake, getRecipe } from '../lib/data'
 import { generateWeddingPlan, formatArchitectureLabel, formatFrostingLabel, formatOccasionLabel, formatRoleLabel, formatShapeLabel, toMarkdown } from '../lib/weddingCake'
 import { rankDecorationStyles } from '../lib/weddingDecoration'
+import { getTopPairings } from '../lib/encyclopedia'
 import { RecipeCard } from '../components/RecipeCard'
 import { WeddingCakeDiagram } from '../components/WeddingCakeDiagram'
 import './WeddingCakePlannerPage.css'
 
-const OCCASION_OPTIONS: { value: CelebrationOccasion; label: string }[] = [
-  { value: 'wedding', label: 'Wedding' },
-  { value: 'birthday', label: 'Birthday' },
-  { value: 'baby-shower', label: 'Baby Shower' },
-  { value: 'holiday', label: 'Holiday' },
-  { value: 'graduation', label: 'Graduation' },
-  { value: 'anniversary', label: 'Anniversary' },
+const OCCASION_OPTIONS: { value: CelebrationOccasion; label: string; swatchHex: string }[] = [
+  { value: 'wedding', label: 'Wedding', swatchHex: '#f6cbe0' },
+  { value: 'birthday', label: 'Birthday', swatchHex: '#ffd54f' },
+  { value: 'baby-shower', label: 'Baby Shower', swatchHex: '#cfe8f3' },
+  { value: 'holiday', label: 'Holiday', swatchHex: '#8b1e2b' },
+  { value: 'graduation', label: 'Graduation', swatchHex: '#1c1c1c' },
+  { value: 'anniversary', label: 'Anniversary', swatchHex: '#d9c2a3' },
 ]
+
+/** Picks readable tile text color against an arbitrary swatch background. */
+function tileTextColor(hex: string): string {
+  const r = parseInt(hex.slice(1, 3), 16)
+  const g = parseInt(hex.slice(3, 5), 16)
+  const b = parseInt(hex.slice(5, 7), 16)
+  const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255
+  return luminance > 0.6 ? '#1c1c1c' : '#ffffff'
+}
 
 const SHAPE_OPTIONS: { value: CakeShape; label: string }[] = [
   { value: 'round', label: 'Round' },
@@ -60,7 +71,13 @@ export function WeddingCakePlannerPage() {
   const [decorationStyleId, setDecorationStyleId] = useState(weddingDecorationStyles[0].id)
   const [result, setResult] = useState<WeddingPlanResult | null>(null)
   const [copied, setCopied] = useState(false)
+  const [occasionChosen, setOccasionChosen] = useState(false)
   const [inspirationChosen, setInspirationChosen] = useState(false)
+
+  function chooseOccasion(value: CelebrationOccasion) {
+    setOccasion(value)
+    setOccasionChosen(true)
+  }
 
   function chooseInspiration(id: string) {
     setAestheticId(id)
@@ -89,13 +106,48 @@ export function WeddingCakePlannerPage() {
       <h1>Celebration Cake Planner</h1>
       <p>Build a full master planning sheet for any occasion — weddings, birthdays, baby showers, holidays, graduations, and anniversaries — covering structure, seasonal flavor, allergens, decor, and a budget estimate in one pass.</p>
 
-      {!inspirationChosen ? (
+      {!occasionChosen ? (
         <>
+          <h2 className="inspiration-heading">What are you celebrating?</h2>
+          <p className="inspiration-subtext">Start with the occasion — everything after is tailored to it.</p>
+          <div className="inspiration-grid">
+            {OCCASION_OPTIONS.map((opt) => (
+              <button
+                key={opt.value}
+                className="inspiration-tile"
+                style={{ background: opt.swatchHex, color: tileTextColor(opt.swatchHex) }}
+                onClick={() => chooseOccasion(opt.value)}
+              >
+                <span className="inspiration-tile-name">{opt.label}</span>
+              </button>
+            ))}
+          </div>
+          <button
+            className="btn btn-secondary inspiration-skip"
+            onClick={() => {
+              setOccasionChosen(true)
+              setInspirationChosen(true)
+            }}
+          >
+            Skip — I'll pick later
+          </button>
+        </>
+      ) : !inspirationChosen ? (
+        <>
+          <button className="inspiration-change-link" onClick={() => setOccasionChosen(false)}>
+            ← Change occasion
+          </button>
+
           <h2 className="inspiration-heading">What's your vibe?</h2>
           <p className="inspiration-subtext">Start with a look that feels like you — you can fine-tune every detail after.</p>
           <div className="inspiration-grid">
             {weddingAesthetics.map((a) => (
-              <button key={a.id} className="inspiration-tile" style={{ background: a.swatchHex }} onClick={() => chooseInspiration(a.id)}>
+              <button
+                key={a.id}
+                className="inspiration-tile"
+                style={{ background: a.swatchHex, color: tileTextColor(a.swatchHex) }}
+                onClick={() => chooseInspiration(a.id)}
+              >
                 <span className="inspiration-tile-name">{a.name}</span>
                 <span className="inspiration-tile-description">{a.description}</span>
               </button>
@@ -229,6 +281,8 @@ export function WeddingCakePlannerPage() {
             </button>
           </div>
 
+          <CelebrationConcept result={result} />
+
           <section className="card wedding-section">
             <h2>💍 Cultural History &amp; Traditions</h2>
             <p>
@@ -288,7 +342,7 @@ export function WeddingCakePlannerPage() {
               return (
                 <div key={`${pick.role}-${pick.cakeId}`} className="tier-pick">
                   <h3>
-                    {formatRoleLabel(pick.role)}: {cake.name}
+                    {formatRoleLabel(pick.role)}: <Link to={`/cake/${cake.id}`}>{cake.name}</Link>
                   </h3>
                   <ul>
                     {pick.reason.map((reason, i) => (
@@ -300,6 +354,9 @@ export function WeddingCakePlannerPage() {
                 </div>
               )
             })}
+            <Link to="/assembly-lab" className="encyclopedia-link">
+              🧁 Build a custom tier in Assembly Lab →
+            </Link>
           </section>
 
           <section className="card wedding-section">
@@ -368,5 +425,36 @@ export function WeddingCakePlannerPage() {
         </>
       )}
     </main>
+  )
+}
+
+function CelebrationConcept({ result }: { result: WeddingPlanResult }) {
+  const tierCount = result.architecturePlan.tiers.length
+  const totalServings = result.architecturePlan.tiers.reduce((sum, tier) => sum + tier.partySlices, 0)
+  const flavorNames = result.tierPicks.map((pick) => getCake(pick.cakeId)?.name).filter((name): name is string => !!name)
+  const baseCake = result.tierPicks.find((pick) => pick.role === 'base') ?? result.tierPicks[0]
+  const baseCakeProfile = baseCake ? getCake(baseCake.cakeId) : undefined
+  const topPairing = baseCakeProfile ? getTopPairings(baseCakeProfile, 1)[0] : undefined
+
+  return (
+    <section className="card wedding-section wedding-concept-card">
+      <h2>✨ Your Celebration Cake</h2>
+      <p className="wedding-concept-title">
+        {tierCount}-Tier {result.aesthetic.name} {formatOccasionLabel(result.input.occasion)} Cake
+      </p>
+      <p className="wedding-concept-flavors">{flavorNames.join(' · ')}</p>
+      <p className="wedding-concept-line">Serves {totalServings}</p>
+      <p className="wedding-concept-line">
+        <strong>Recommended finish:</strong> {result.decorationStyle.name}
+      </p>
+      {topPairing && (
+        <p className="wedding-concept-line">
+          <strong>Pairing:</strong> {topPairing.drink.name} —{' '}
+          <Link to="/sommelier" className="encyclopedia-link">
+            Explore in the Sommelier →
+          </Link>
+        </p>
+      )}
+    </section>
   )
 }
