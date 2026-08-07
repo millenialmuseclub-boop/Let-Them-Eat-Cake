@@ -7,4 +7,6 @@ export interface HistoricalCakeEntry {
   eraContext: string
   recipeId: string
   socialCardAssetUrl?: string
+  modernInterpretation?: string
+  funFact?: string
 }

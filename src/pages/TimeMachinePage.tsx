@@ -3,10 +3,19 @@ import { Link } from 'react-router-dom'
 import { getCakeForBirthYear } from '../lib/timeMachine'
 import { getYearVariant } from '../lib/yearVintage'
 import { getCake, getRecipe, decades } from '../lib/data'
+import { getRelatedCakes, getTopPairings } from '../lib/encyclopedia'
 import { RecipeCard } from '../components/RecipeCard'
 import { ShareCard } from '../components/ShareCard'
 import { TimeMachineTimeline } from '../components/TimeMachineTimeline'
+import { CakeHeroImage } from '../components/CakeHeroImage'
+import { SaveButton } from '../components/SaveButton'
 import './TimeMachinePage.css'
+
+function scoreColor(score: number): string {
+  if (score >= 70) return 'var(--gold)'
+  if (score >= 45) return 'var(--raspberry)'
+  return 'var(--border)'
+}
 
 export function TimeMachinePage() {
   const [dobInput, setDobInput] = useState('')
@@ -30,6 +39,8 @@ export function TimeMachinePage() {
   const cake = entry ? getCake(entry.cakeId) : null
   const recipe = entry ? getRecipe(entry.recipeId) : null
   const variant = cake && birthYear !== null ? getYearVariant(birthYear, cake.name) : null
+  const relatedCakes = cake ? getRelatedCakes(cake) : []
+  const pairings = cake ? getTopPairings(cake) : []
 
   return (
     <main className="page time-machine-page">
@@ -55,11 +66,25 @@ export function TimeMachinePage() {
           )}
 
           <div className="card">
+            <CakeHeroImage cakeId={cake.id} variant="hero" alt={cake.name} />
             <span className="tag">{entry.decadeLabel}</span>
             <h2>{cake.name}</h2>
             <p>{cake.description}</p>
             <h3>Why this cake?</h3>
             <p>{entry.eraContext}</p>
+            {entry.funFact && (
+              <>
+                <h3>A fun fact</h3>
+                <p>{entry.funFact}</p>
+              </>
+            )}
+            {entry.modernInterpretation && (
+              <>
+                <h3>The modern interpretation</h3>
+                <p>{entry.modernInterpretation}</p>
+              </>
+            )}
+            <SaveButton type="cake" id={cake.id} />
             <Link to={`/cake/${cake.id}`} className="encyclopedia-link">
               View full encyclopedia entry →
             </Link>
@@ -76,6 +101,40 @@ export function TimeMachinePage() {
 
           <h2 className="recipe-heading">Base Recipe</h2>
           <RecipeCard key={recipe.id} recipe={recipe} />
+
+          {relatedCakes.length > 0 && (
+            <section className="cake-detail-section">
+              <h2>🔗 Related Cakes</h2>
+              <div className="cake-detail-related-grid">
+                {relatedCakes.map(({ cake: related, reason }) => (
+                  <Link key={related.id} to={`/cake/${related.id}`} className="card cake-detail-related-card">
+                    <CakeHeroImage cakeId={related.id} variant="thumbnail" alt={related.name} />
+                    <h3>{related.name}</h3>
+                    <p>{reason}</p>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {pairings.length > 0 && (
+            <section className="card cake-detail-section">
+              <h2>🥂 Pairings</h2>
+              <ul className="cake-detail-pairing-list">
+                {pairings.map(({ drink, score }) => (
+                  <li key={drink.id}>
+                    <span className="cake-detail-pairing-score" style={{ background: scoreColor(score) }}>
+                      {score}
+                    </span>
+                    {drink.name}
+                  </li>
+                ))}
+              </ul>
+              <Link to="/sommelier" className="btn btn-secondary cake-detail-sommelier-link">
+                Explore all pairings in the Sommelier →
+              </Link>
+            </section>
+          )}
         </section>
       )}
     </main>
