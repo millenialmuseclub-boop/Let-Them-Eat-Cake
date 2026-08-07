@@ -29,17 +29,26 @@ export interface PantrySubstitution {
   difficultyNote: string
 }
 
+export interface BakersNotes {
+  commonMistakes: string
+  makeAhead: string
+  storage: string
+  freezing: string
+}
+
 export interface EmergencyRecipe {
   id: string
   name: string
   description: string
   requiredIngredients: PantryIngredient[]
-  steps: string[]
+  /** Points into the shared `recipes` array — carries exact quantities, units, and detailed steps via the existing Recipe schema. */
+  recipeId: string
   yield: number
   timeMinutes: number
   skillLevel: SkillLevel
   equipment: Equipment[]
   substitutions?: PantrySubstitution[]
+  bakersNotes?: BakersNotes
 }
 
 export type MatchTier = 'best' | 'great' | 'creative' | 'far'

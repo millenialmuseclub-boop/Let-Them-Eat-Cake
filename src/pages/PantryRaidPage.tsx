@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { Equipment, PantryIngredient, PantryMatch, SkillLevel } from '../types/pantry'
 import { ALL_EQUIPMENT, ALL_PANTRY_INGREDIENTS, EQUIPMENT_LABELS, PANTRY_INGREDIENT_LABELS, SKILL_LEVEL_LABELS, applyPantryFilters, matchEmergencyRecipes } from '../lib/pantry'
-import { emergencyRecipes } from '../lib/data'
+import { emergencyRecipes, getRecipe } from '../lib/data'
+import { RecipeCard } from '../components/RecipeCard'
 import './PantryRaidPage.css'
 
 const TIME_OPTIONS = [
@@ -56,6 +57,8 @@ export function PantryRaidPage() {
 
   function renderCard(match: PantryMatch) {
     const { recipe, missing, applicableSubstitutions, matchReason } = match
+    const haveCount = recipe.requiredIngredients.length - missing.length
+    const detailRecipe = getRecipe(recipe.recipeId)
     return (
       <div key={recipe.id} className="card pantry-result-card">
         <div className="pantry-result-header">
@@ -68,6 +71,9 @@ export function PantryRaidPage() {
             </span>
           )}
         </div>
+        <p className="pantry-have-count">
+          You have {haveCount} of {recipe.requiredIngredients.length} ingredients
+        </p>
         <p className="pantry-match-reason">{matchReason}</p>
         <p>{recipe.description}</p>
 
@@ -104,14 +110,29 @@ export function PantryRaidPage() {
         )}
 
         <button className="btn btn-secondary" onClick={() => setExpandedId(expandedId === recipe.id ? null : recipe.id)}>
-          {expandedId === recipe.id ? 'Hide steps' : 'Show steps'}
+          {expandedId === recipe.id ? 'Hide full recipe' : 'Show full recipe'}
         </button>
-        {expandedId === recipe.id && (
-          <ol className="pantry-steps">
-            {recipe.steps.map((step, i) => (
-              <li key={i}>{step}</li>
-            ))}
-          </ol>
+        {expandedId === recipe.id && detailRecipe && (
+          <>
+            <RecipeCard recipe={detailRecipe} />
+            {recipe.bakersNotes && (
+              <div className="pantry-bakers-notes">
+                <h4>Baker's Notes</h4>
+                <p>
+                  <strong>Common mistakes:</strong> {recipe.bakersNotes.commonMistakes}
+                </p>
+                <p>
+                  <strong>Make ahead:</strong> {recipe.bakersNotes.makeAhead}
+                </p>
+                <p>
+                  <strong>Storage:</strong> {recipe.bakersNotes.storage}
+                </p>
+                <p>
+                  <strong>Freezing:</strong> {recipe.bakersNotes.freezing}
+                </p>
+              </div>
+            )}
+          </>
         )}
 
         <div className="pantry-workshop-links">

@@ -8386,5 +8386,151 @@
       "Bake 55-65 minutes, tenting with foil if it browns too fast, until a skewer comes out clean.",
       "Cool completely in the pan before slicing."
     ]
+  },
+  {
+    "id": "recipe_emergency_wacky_cake",
+    "cakeId": "cake_emergency_wacky_cake",
+    "baseServings": 9,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 190, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "cocoa-powder", "name": "Cocoa powder", "metric": { "qty": 20, "unit": "g" }, "imperial": { "qty": 3, "unit": "tbsp" } },
+      { "id": "baking-soda", "name": "Baking soda", "metric": { "qty": 5, "unit": "g" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "salt", "name": "Salt", "metric": { "qty": 5, "unit": "g" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "vegetable-oil", "name": "Vegetable oil", "metric": { "qty": 75, "unit": "ml" }, "imperial": { "qty": 0.33, "unit": "cup" } },
+      { "id": "vinegar", "name": "White vinegar", "metric": { "qty": 15, "unit": "ml" }, "imperial": { "qty": 1, "unit": "tbsp" } },
+      { "id": "water", "name": "Cold water", "metric": { "qty": 240, "unit": "ml" }, "imperial": { "qty": 1, "unit": "cup" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F). In an ungreased 8-inch square pan, whisk flour, sugar, cocoa powder, baking soda, and salt directly together.",
+      "Make three wells in the dry mixture with a spoon: pour oil into one, vinegar into the second, and the cold water into the third.",
+      "Whisk everything together right in the pan until no dry streaks remain and the batter is smooth — it should look like thin chocolate mud.",
+      "Bake 30-35 minutes. It's done when the top springs back lightly to the touch and a toothpick inserted in the center comes out clean or with a few moist crumbs.",
+      "Cool in the pan on a rack for at least 20 minutes before slicing — it's fragile while warm since there's no egg structure yet."
+    ]
+  },
+  {
+    "id": "recipe_emergency_mug_cake",
+    "cakeId": "cake_emergency_mug_cake",
+    "baseServings": 1,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 30, "unit": "g" }, "imperial": { "qty": 4, "unit": "tbsp" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 50, "unit": "g" }, "imperial": { "qty": 4, "unit": "tbsp" } },
+      { "id": "cocoa-powder", "name": "Cocoa powder", "metric": { "qty": 10, "unit": "g" }, "imperial": { "qty": 2, "unit": "tbsp" } },
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 1, "unit": "g" }, "imperial": { "qty": 0.25, "unit": "tsp" } },
+      { "id": "milk", "name": "Milk", "metric": { "qty": 45, "unit": "ml" }, "imperial": { "qty": 3, "unit": "tbsp" } },
+      { "id": "vegetable-oil", "name": "Vegetable oil", "metric": { "qty": 45, "unit": "ml" }, "imperial": { "qty": 3, "unit": "tbsp" } }
+    ],
+    "steps": [
+      "In a large (12oz+) microwave-safe mug, whisk the flour, sugar, cocoa powder, and baking powder together with a fork until no lumps remain.",
+      "Pour in the milk and oil, then stir just until the batter is smooth — a few small bubbles on top are normal, but don't overmix or the crumb turns rubbery.",
+      "Microwave on high for 90 seconds to 2 minutes (microwaves vary — start at 90 seconds and add 15-second bursts). It's done when the top looks set and dry, not glossy or wet.",
+      "Let it rest in the mug for 1 minute — it keeps cooking briefly from residual heat — then eat straight from the mug while warm."
+    ]
+  },
+  {
+    "id": "recipe_emergency_yogurt_pot_cake",
+    "cakeId": "cake_emergency_yogurt_pot_cake",
+    "baseServings": 8,
+    "ingredients": [
+      { "id": "yogurt", "name": "Plain yogurt", "metric": { "qty": 125, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 180, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "vegetable-oil", "name": "Vegetable oil", "metric": { "qty": 65, "unit": "ml" }, "imperial": { "qty": 0.25, "unit": "cup" } },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 3, "unit": "count" }, "imperial": { "qty": 3, "unit": "count" } },
+      { "id": "vanilla-extract", "name": "Vanilla extract", "metric": { "qty": 5, "unit": "ml" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 280, "unit": "g" }, "imperial": { "qty": 2, "unit": "cup" } },
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 8, "unit": "g" }, "imperial": { "qty": 2, "unit": "tsp" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease a loaf pan.",
+      "Empty the yogurt into a mixing bowl, then whisk in the sugar and oil until combined.",
+      "Whisk in the eggs one at a time, then the vanilla, until the mixture is smooth and slightly pale.",
+      "Sift the flour and baking powder over the wet mixture and fold in gently with a spatula until just combined — a few small lumps are fine, overmixing makes it tough.",
+      "Pour into the pan and bake 40-45 minutes, until the top is golden and a toothpick comes out clean.",
+      "Cool in the pan 10 minutes, then turn out onto a rack to cool completely before slicing."
+    ]
+  },
+  {
+    "id": "recipe_emergency_applesauce_cake",
+    "cakeId": "cake_emergency_applesauce_cake",
+    "baseServings": 9,
+    "ingredients": [
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 250, "unit": "g" }, "imperial": { "qty": 2, "unit": "cup" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "applesauce", "name": "Unsweetened applesauce", "metric": { "qty": 240, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "vegetable-oil", "name": "Vegetable oil", "metric": { "qty": 120, "unit": "ml" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "baking-soda", "name": "Baking soda", "metric": { "qty": 5, "unit": "g" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "cinnamon", "name": "Ground cinnamon", "metric": { "qty": 5, "unit": "g" }, "imperial": { "qty": 1, "unit": "tsp" } },
+      { "id": "salt", "name": "Salt", "metric": { "qty": 3, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "tsp" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease an 8-inch square pan.",
+      "Whisk the flour, sugar, baking soda, cinnamon, and salt together in a large bowl.",
+      "Add the applesauce and oil, then stir with a spatula until just combined and no dry streaks remain — the batter will be thick, like a muffin batter.",
+      "Spread into the pan and smooth the top. Bake 28-32 minutes, until the top springs back when lightly pressed and a toothpick comes out clean.",
+      "Cool in the pan on a rack for at least 15 minutes before slicing."
+    ]
+  },
+  {
+    "id": "recipe_emergency_self_rising_pound_cake",
+    "cakeId": "cake_emergency_self_rising_pound_cake",
+    "baseServings": 8,
+    "ingredients": [
+      { "id": "self-rising-flour", "name": "Self-rising flour", "metric": { "qty": 300, "unit": "g" }, "imperial": { "qty": 2.5, "unit": "cup" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 300, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" } },
+      { "id": "butter", "name": "Butter, softened", "metric": { "qty": 227, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 4, "unit": "count" }, "imperial": { "qty": 4, "unit": "count" } },
+      { "id": "vanilla-extract", "name": "Vanilla extract", "metric": { "qty": 5, "unit": "ml" }, "imperial": { "qty": 1, "unit": "tsp" } }
+    ],
+    "steps": [
+      "Preheat oven to 160°C (325°F) and grease a loaf pan.",
+      "Cream the butter and sugar with a hand mixer on medium-high for 3-4 minutes until pale and fluffy — this is what gives the cake its texture, so don't rush it.",
+      "Beat in the eggs one at a time, fully incorporating each before adding the next, then mix in the vanilla.",
+      "Fold in the self-rising flour by hand in two additions, mixing only until no dry streaks remain — overmixing at this stage makes the crumb tough.",
+      "Pour into the pan and smooth the top. Bake 50-55 minutes, tenting loosely with foil after 30 minutes if the top is browning too fast; it's done when a toothpick comes out clean.",
+      "Cool in the pan 15 minutes, then turn out onto a rack to cool completely before slicing."
+    ]
+  },
+  {
+    "id": "recipe_emergency_condensed_milk_sponge",
+    "cakeId": "cake_emergency_condensed_milk_sponge",
+    "baseServings": 8,
+    "ingredients": [
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 4, "unit": "count" }, "imperial": { "qty": 4, "unit": "count" } },
+      { "id": "self-rising-flour", "name": "Self-rising flour", "metric": { "qty": 190, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" } },
+      { "id": "condensed-milk", "name": "Sweetened condensed milk", "metric": { "qty": 395, "unit": "g" }, "imperial": { "qty": 1, "unit": "can" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease a round 8-inch pan.",
+      "Whisk the eggs on their own for about a minute until frothy and slightly pale.",
+      "Whisk in the condensed milk until fully smooth and glossy.",
+      "Sift the self-rising flour over the top and fold in gently until no dry streaks remain — the batter will be thick and glossy.",
+      "Pour into the pan and bake 25-30 minutes, until deeply golden and a toothpick comes out clean.",
+      "Cool in the pan 10 minutes, then turn out onto a rack to finish cooling."
+    ]
+  },
+  {
+    "id": "recipe_emergency_lemon_yogurt_drizzle",
+    "cakeId": "cake_emergency_lemon_yogurt_drizzle",
+    "baseServings": 8,
+    "ingredients": [
+      { "id": "yogurt", "name": "Plain yogurt", "metric": { "qty": 125, "unit": "g" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "flour", "name": "All-purpose flour", "metric": { "qty": 190, "unit": "g" }, "imperial": { "qty": 1.5, "unit": "cup" } },
+      { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
+      { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 3, "unit": "count" }, "imperial": { "qty": 3, "unit": "count" } },
+      { "id": "vegetable-oil", "name": "Vegetable oil", "metric": { "qty": 120, "unit": "ml" }, "imperial": { "qty": 0.5, "unit": "cup" } },
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 8, "unit": "g" }, "imperial": { "qty": 2, "unit": "tsp" } },
+      { "id": "lemon-juice", "name": "Lemon juice (drizzle)", "metric": { "qty": 45, "unit": "ml" }, "imperial": { "qty": 3, "unit": "tbsp" } },
+      { "id": "sugar-drizzle", "name": "Granulated sugar (drizzle)", "metric": { "qty": 50, "unit": "g" }, "imperial": { "qty": 0.25, "unit": "cup" } }
+    ],
+    "steps": [
+      "Preheat oven to 175°C (350°F) and grease a loaf pan.",
+      "Whisk the yogurt, sugar, eggs, and oil together in a bowl until smooth.",
+      "Sift in the flour and baking powder, then fold together until just combined — a few small lumps are fine.",
+      "Pour into the pan and bake 38-42 minutes, until golden and a toothpick comes out clean.",
+      "While the cake bakes, stir the lemon juice and drizzle sugar together (the sugar won't fully dissolve — that's fine).",
+      "As soon as the cake comes out of the oven, poke holes all over the top with a skewer, then slowly pour the lemon drizzle over so it soaks in while the cake is still hot.",
+      "Cool completely in the pan before slicing — the drizzle needs time to set into a thin sugary crust."
+    ]
   }
 ]

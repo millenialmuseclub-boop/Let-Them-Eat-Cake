@@ -4,12 +4,13 @@
     "name": "Depression-Era Wacky Cake",
     "description": "A one-bowl (or rather, one-pan) chocolate cake with no eggs and no dairy, mixed and baked in the same dish. Swap the water for cold coffee for a deeper flavor.",
     "requiredIngredients": ["flour", "sugar", "cocoa-powder", "baking-soda", "salt", "vegetable-oil", "vinegar"],
-    "steps": [
-      "Preheat oven to 175°C (350°F). In the pan you'll bake in, whisk together flour, sugar, cocoa powder, baking soda, and salt.",
-      "Make three wells in the dry mixture: pour oil into one, vinegar into another, and 1 cup cold water into the third.",
-      "Whisk everything together directly in the pan until smooth — no eggs, no extra bowl needed.",
-      "Bake 30-35 minutes until a toothpick comes out clean."
-    ],
+    "recipeId": "recipe_emergency_wacky_cake",
+    "bakersNotes": {
+      "commonMistakes": "Skipping the wells and dumping everything in at once — the vinegar needs to hit the baking soda directly to get its full lift.",
+      "makeAhead": "Best baked fresh, but the dry mix (flour, sugar, cocoa, soda, salt) can be pre-measured and stored airtight for weeks.",
+      "storage": "Keeps at room temperature, covered, for 3 days — it's an oil cake, so it stays moist longer than a butter cake.",
+      "freezing": "Freezes well for up to 2 months, wrapped tightly; thaw at room temperature."
+    },
     "yield": 9,
     "timeMinutes": 40,
     "skillLevel": "beginner",
@@ -40,12 +41,13 @@
     "name": "3-Minute Microwave Mug Cake",
     "description": "A single-serving chocolate cake mixed and baked in a mug, ready before the kettle would've boiled.",
     "requiredIngredients": ["flour", "sugar", "cocoa-powder", "milk", "vegetable-oil", "baking-powder"],
-    "steps": [
-      "In a large mug, whisk flour, sugar, cocoa powder, and baking powder together.",
-      "Stir in milk and oil until smooth.",
-      "Microwave on high for 90 seconds to 2 minutes until risen and set.",
-      "Let cool for 1 minute, then eat straight from the mug."
-    ],
+    "recipeId": "recipe_emergency_mug_cake",
+    "bakersNotes": {
+      "commonMistakes": "Overmicrowaving — even 30 extra seconds turns it rubbery and dry. Pull it as soon as the top looks set.",
+      "makeAhead": "Not really make-ahead by design — it's meant to be mixed and eaten in one sitting.",
+      "storage": "Best eaten immediately; it toughens quickly once cool.",
+      "freezing": "Doesn't freeze or reheat well — the texture doesn't survive a second microwave pass."
+    },
     "yield": 1,
     "timeMinutes": 5,
     "skillLevel": "beginner",
@@ -76,12 +78,13 @@
     "name": "Yogurt Pot Cake (Gâteau au Yaourt)",
     "description": "The classic French kids'-first-recipe cake — you measure everything using the empty yogurt container, no scale required.",
     "requiredIngredients": ["yogurt", "sugar", "vegetable-oil", "eggs", "flour", "baking-powder", "vanilla-extract"],
-    "steps": [
-      "Preheat oven to 175°C (350°F) and grease a loaf pan. Empty one pot of yogurt into a bowl, then rinse and keep the pot as your measuring cup.",
-      "Whisk in 2 pots of sugar, 1/2 pot of oil, the eggs, and vanilla.",
-      "Stir in 3 pots of flour and 1 pot's worth of baking powder (about 2 teaspoons) until just combined.",
-      "Pour into the pan and bake 40-45 minutes until a toothpick comes out clean."
-    ],
+    "recipeId": "recipe_emergency_yogurt_pot_cake",
+    "bakersNotes": {
+      "commonMistakes": "Overfolding the flour once it's added — this is a tender cake, so stop as soon as the streaks disappear.",
+      "makeAhead": "Can be baked a day ahead — the crumb actually improves slightly overnight, wrapped at room temperature.",
+      "storage": "Keeps well covered at room temperature for 3-4 days.",
+      "freezing": "Freezes nicely for up to 2 months; thaw wrapped at room temperature to avoid condensation on the crumb."
+    },
     "yield": 8,
     "timeMinutes": 55,
     "skillLevel": "beginner",
@@ -112,12 +115,13 @@
     "name": "No-Eggs Applesauce Snack Cake",
     "description": "A moist, eggless spice cake that leans on applesauce for both moisture and binding.",
     "requiredIngredients": ["flour", "sugar", "applesauce", "vegetable-oil", "baking-soda", "cinnamon", "salt"],
-    "steps": [
-      "Preheat oven to 175°C (350°F) and grease an 8-inch pan.",
-      "Whisk flour, sugar, baking soda, cinnamon, and salt together.",
-      "Stir in applesauce and oil until just combined.",
-      "Pour into the pan and bake 30 minutes until a toothpick comes out clean."
-    ],
+    "recipeId": "recipe_emergency_applesauce_cake",
+    "bakersNotes": {
+      "commonMistakes": "Using sweetened applesauce without adjusting sugar — it'll come out overly sweet and slightly gummy.",
+      "makeAhead": "Improves after resting a few hours, covered, as the spices settle in.",
+      "storage": "Keeps covered at room temperature for up to 4 days — the applesauce keeps it moist longer than most snack cakes.",
+      "freezing": "Freezes well for up to 3 months, wrapped tightly."
+    },
     "yield": 9,
     "timeMinutes": 40,
     "skillLevel": "beginner",
@@ -142,12 +146,13 @@
     "name": "Self-Rising Emergency Pound Cake",
     "description": "A dense, buttery pound cake that only needs five ingredients if your flour is already self-rising.",
     "requiredIngredients": ["self-rising-flour", "sugar", "butter", "eggs", "vanilla-extract"],
-    "steps": [
-      "Preheat oven to 160°C (325°F) and grease a loaf pan.",
-      "Cream butter and sugar until fluffy, then beat in eggs one at a time and the vanilla.",
-      "Fold in self-rising flour until just combined.",
-      "Pour into the pan and bake 50-55 minutes until a toothpick comes out clean."
-    ],
+    "recipeId": "recipe_emergency_self_rising_pound_cake",
+    "bakersNotes": {
+      "commonMistakes": "Under-creaming the butter and sugar — this cake's whole texture depends on that step, so don't rush past 3-4 minutes.",
+      "makeAhead": "Tastes better a day after baking once the crumb settles — wrap tightly once fully cool.",
+      "storage": "Keeps at room temperature, well wrapped, for up to a week — dense pound cakes hold up longer than most.",
+      "freezing": "Freezes excellently for up to 3 months; a classic make-ahead cake."
+    },
     "yield": 8,
     "timeMinutes": 65,
     "skillLevel": "intermediate",
@@ -172,12 +177,13 @@
     "name": "Three-Ingredient Condensed Milk Sponge",
     "description": "About as close to a true emergency cake as it gets — sweetness and richness both come from the condensed milk.",
     "requiredIngredients": ["eggs", "self-rising-flour", "condensed-milk"],
-    "steps": [
-      "Preheat oven to 175°C (350°F) and grease a round pan.",
-      "Whisk eggs until frothy, then whisk in the condensed milk.",
-      "Fold in self-rising flour until just combined with no dry streaks.",
-      "Pour into the pan and bake 25-30 minutes until golden and a toothpick comes out clean."
-    ],
+    "recipeId": "recipe_emergency_condensed_milk_sponge",
+    "bakersNotes": {
+      "commonMistakes": "Overfolding once the flour is added — the condensed milk makes the batter dense already, so a light hand matters.",
+      "makeAhead": "Best within a day or two of baking — it's a simple sponge without much shelf-stabilizing fat.",
+      "storage": "Keeps covered at room temperature for 2-3 days.",
+      "freezing": "Freezes acceptably for up to a month, though texture is best fresh."
+    },
     "yield": 8,
     "timeMinutes": 35,
     "skillLevel": "beginner",
@@ -202,12 +208,13 @@
     "name": "Lemon Yogurt Drizzle Cake",
     "description": "A brighter cousin of the yogurt pot cake, finished with a tangy lemon drizzle instead of frosting.",
     "requiredIngredients": ["yogurt", "flour", "sugar", "eggs", "vegetable-oil", "baking-powder", "lemon-juice"],
-    "steps": [
-      "Preheat oven to 175°C (350°F) and grease a loaf pan.",
-      "Whisk yogurt, sugar, eggs, and oil together, then stir in flour and baking powder until just combined.",
-      "Pour into the pan and bake 40 minutes until a toothpick comes out clean.",
-      "While still warm, whisk lemon juice with a little extra sugar and poke holes in the top of the cake, then pour the drizzle over so it soaks in."
-    ],
+    "recipeId": "recipe_emergency_lemon_yogurt_drizzle",
+    "bakersNotes": {
+      "commonMistakes": "Pouring the drizzle over a fully cooled cake — it needs to go on while the cake is still hot so it actually soaks in instead of pooling on top.",
+      "makeAhead": "Can be made a day ahead — the drizzle keeps it moist and the lemon flavor deepens overnight.",
+      "storage": "Keeps covered at room temperature for 3-4 days thanks to the syrup soak.",
+      "freezing": "Freezes well for up to 2 months; the drizzle crust holds up fine after thawing."
+    },
     "yield": 8,
     "timeMinutes": 50,
     "skillLevel": "beginner",

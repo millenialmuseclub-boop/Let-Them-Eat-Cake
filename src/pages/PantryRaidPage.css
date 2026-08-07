@@ -108,11 +108,44 @@
   color: var(--raspberry);
 }
 
+.pantry-have-count {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--raspberry);
+  margin: 4px 0 0;
+}
+
 .pantry-match-reason {
   font-size: 14px;
   font-style: italic;
   opacity: 0.85;
   margin: 4px 0 0;
+}
+
+.pantry-bakers-notes {
+  margin: 12px 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.pantry-bakers-notes h4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--raspberry);
+  margin-bottom: 8px;
+}
+
+.pantry-bakers-notes p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 6px;
+}
+
+.pantry-bakers-notes p:last-child {
+  margin-bottom: 0;
 }
 
 .pantry-badges {
@@ -157,16 +190,6 @@
   font-size: 14px;
   line-height: 1.5;
   margin: 0 0 2px;
-}
-
-.pantry-steps {
-  margin-top: 12px;
-  padding-left: 20px;
-}
-
-.pantry-steps li {
-  margin-bottom: 6px;
-  line-height: 1.5;
 }
 
 .pantry-workshop-links {
