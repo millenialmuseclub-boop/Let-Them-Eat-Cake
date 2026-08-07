@@ -108,6 +108,13 @@
   color: var(--raspberry);
 }
 
+.pantry-match-reason {
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.85;
+  margin: 4px 0 0;
+}
+
 .pantry-badges {
   display: flex;
   flex-wrap: wrap;
@@ -138,15 +145,18 @@
   margin-bottom: 8px;
 }
 
-.pantry-substitutions ul {
-  margin: 0;
-  padding-left: 18px;
+.pantry-substitution-entry {
+  margin-bottom: 10px;
 }
 
-.pantry-substitutions li {
+.pantry-substitution-entry:last-child {
+  margin-bottom: 0;
+}
+
+.pantry-substitution-entry p {
   font-size: 14px;
   line-height: 1.5;
-  margin-bottom: 6px;
+  margin: 0 0 2px;
 }
 
 .pantry-steps {

@@ -39,14 +39,36 @@ export const EQUIPMENT_LABELS: Record<Equipment, string> = {
 
 export const ALL_EQUIPMENT = Object.keys(EQUIPMENT_LABELS) as Equipment[]
 
+function reasonFor(tier: MatchTier, hasSubs: boolean): string {
+  switch (tier) {
+    case 'best':
+      return 'You already have everything this recipe needs — no shopping required.'
+    case 'great':
+      return "You're missing just one ingredient, and it substitutes cleanly with what's likely already in your kitchen."
+    case 'creative':
+      return hasSubs
+        ? 'A couple of ingredients are missing, but real substitutions can bridge the gap.'
+        : "A couple of ingredients are missing — a quick trip to fill the gap and you're set."
+    case 'far':
+      return ''
+  }
+}
+
 export function matchEmergencyRecipes(onHand: PantryIngredient[], recipes: EmergencyRecipe[]): PantryMatch[] {
   const onHandSet = new Set(onHand)
   return recipes.map((recipe) => {
     const missing = recipe.requiredIngredients.filter((ingredient) => !onHandSet.has(ingredient))
-    const tier: MatchTier = missing.length === 0 ? 'exact' : missing.length <= 2 ? 'close' : 'far'
     const missingSet = new Set(missing)
     const applicableSubstitutions = (recipe.substitutions ?? []).filter((sub) => missingSet.has(sub.missingIngredient))
-    return { recipe, missing, tier, applicableSubstitutions }
+    const allMissingHaveSubs = missing.length > 0 && missing.every((m) => applicableSubstitutions.some((sub) => sub.missingIngredient === m))
+
+    let tier: MatchTier
+    if (missing.length === 0) tier = 'best'
+    else if (missing.length === 1 && allMissingHaveSubs) tier = 'great'
+    else if (missing.length <= 2) tier = 'creative'
+    else tier = 'far'
+
+    return { recipe, missing, tier, applicableSubstitutions, matchReason: reasonFor(tier, applicableSubstitutions.length > 0) }
   })
 }
 

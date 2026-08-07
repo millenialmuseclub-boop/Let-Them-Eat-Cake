@@ -50,11 +50,12 @@ export function PantryRaidPage() {
     skillLevel: skillFilter === 'any' ? undefined : skillFilter,
     requiredEquipment: ownedEquipment,
   })
-  const exactMatches = filtered.filter((m) => m.tier === 'exact')
-  const closeMatches = filtered.filter((m) => m.tier === 'close')
+  const bestMatches = filtered.filter((m) => m.tier === 'best')
+  const greatMatches = filtered.filter((m) => m.tier === 'great')
+  const creativeMatches = filtered.filter((m) => m.tier === 'creative')
 
   function renderCard(match: PantryMatch) {
-    const { recipe, missing, applicableSubstitutions } = match
+    const { recipe, missing, applicableSubstitutions, matchReason } = match
     return (
       <div key={recipe.id} className="card pantry-result-card">
         <div className="pantry-result-header">
@@ -67,6 +68,7 @@ export function PantryRaidPage() {
             </span>
           )}
         </div>
+        <p className="pantry-match-reason">{matchReason}</p>
         <p>{recipe.description}</p>
 
         <div className="pantry-badges">
@@ -85,13 +87,19 @@ export function PantryRaidPage() {
         {applicableSubstitutions.length > 0 && (
           <div className="pantry-substitutions">
             <h4>Substitutions</h4>
-            <ul>
-              {applicableSubstitutions.map((sub) => (
-                <li key={sub.missingIngredient}>
-                  <strong>No {PANTRY_INGREDIENT_LABELS[sub.missingIngredient]}?</strong> Use {sub.replacement}. {sub.flavorImpact} {sub.difficultyNote}
-                </li>
-              ))}
-            </ul>
+            {applicableSubstitutions.map((sub) => (
+              <div key={sub.missingIngredient} className="pantry-substitution-entry">
+                <p>
+                  <strong>Missing:</strong> {PANTRY_INGREDIENT_LABELS[sub.missingIngredient]}
+                </p>
+                <p>
+                  <strong>Substitute:</strong> {sub.replacement}
+                </p>
+                <p>
+                  <strong>Impact:</strong> {sub.flavorImpact} {sub.difficultyNote}
+                </p>
+              </div>
+            ))}
           </div>
         )}
 
@@ -170,18 +178,25 @@ export function PantryRaidPage() {
         </div>
       </div>
 
-      <h2 className="pantry-section-heading">Exact Match</h2>
-      <p className="pantry-section-subtext">These cakes can be made with your pantry.</p>
+      <h2 className="pantry-section-heading">✨ Best Match</h2>
+      <p className="pantry-section-subtext">You already have everything these cakes need.</p>
       <div className="pantry-results">
-        {exactMatches.length === 0 && <p className="pantry-empty">Check off a few more ingredients to see an exact match.</p>}
-        {exactMatches.map(renderCard)}
+        {bestMatches.length === 0 && <p className="pantry-empty">Check off a few more ingredients to see a best match.</p>}
+        {bestMatches.map(renderCard)}
       </div>
 
-      <h2 className="pantry-section-heading">Close Match</h2>
+      <h2 className="pantry-section-heading">👍 Great Match</h2>
+      <p className="pantry-section-subtext">Missing one ingredient — and it substitutes cleanly.</p>
+      <div className="pantry-results">
+        {greatMatches.length === 0 && <p className="pantry-empty">No great matches yet — try adjusting your filters or checking off more ingredients.</p>}
+        {greatMatches.map(renderCard)}
+      </div>
+
+      <h2 className="pantry-section-heading">💡 Creative Match</h2>
       <p className="pantry-section-subtext">Missing 1-2 ingredients.</p>
       <div className="pantry-results">
-        {closeMatches.length === 0 && <p className="pantry-empty">No close matches yet — try adjusting your filters or checking off more ingredients.</p>}
-        {closeMatches.map(renderCard)}
+        {creativeMatches.length === 0 && <p className="pantry-empty">No creative matches yet — try adjusting your filters or checking off more ingredients.</p>}
+        {creativeMatches.map(renderCard)}
       </div>
     </main>
   )

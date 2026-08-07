@@ -42,7 +42,7 @@ export interface EmergencyRecipe {
   substitutions?: PantrySubstitution[]
 }
 
-export type MatchTier = 'exact' | 'close' | 'far'
+export type MatchTier = 'best' | 'great' | 'creative' | 'far'
 
 export interface PantryMatch {
   recipe: EmergencyRecipe
@@ -50,6 +50,8 @@ export interface PantryMatch {
   tier: MatchTier
   /** only the substitutions relevant to what this pantry is actually missing */
   applicableSubstitutions: PantrySubstitution[]
+  /** short, generic explanation of why this result is a good match for the given tier */
+  matchReason: string
 }
 
 export interface PantryFilters {
