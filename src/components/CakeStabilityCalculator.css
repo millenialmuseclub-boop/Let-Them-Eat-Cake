@@ -1,0 +1,73 @@
+.stability-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.stability-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.stability-form input,
+.stability-form select {
+  font: inherit;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.stability-form input[type='number'] {
+  width: 80px;
+}
+
+.stability-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.stability-result-group h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--raspberry);
+  margin-bottom: 8px;
+}
+
+.stability-result-group ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.stability-result-group li {
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.stability-servings {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .stability-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .stability-form input[type='number'] {
+    width: 100%;
+  }
+}

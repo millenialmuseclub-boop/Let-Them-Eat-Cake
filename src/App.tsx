@@ -8,6 +8,12 @@ import { PersonaMatchPage } from './pages/PersonaMatchPage'
 import { PantryRaidPage } from './pages/PantryRaidPage'
 import { WeddingCakePlannerPage } from './pages/WeddingCakePlannerPage'
 import { AssemblyLabPage } from './pages/AssemblyLabPage'
+import { CakeAnatomyPage } from './pages/CakeAnatomyPage'
+import { CakeStabilityPage } from './pages/CakeStabilityPage'
+import { TechniqueLibraryPage } from './pages/TechniqueLibraryPage'
+import { CakeSciencePage } from './pages/CakeSciencePage'
+import { CakeBlueprintsPage } from './pages/CakeBlueprintsPage'
+import { CakeFailureLabPage } from './pages/CakeFailureLabPage'
 import { BakeOffPage } from './pages/BakeOffPage'
 import { CakeEncyclopediaIndexPage } from './pages/CakeEncyclopediaIndexPage'
 import { CakeDetailPage } from './pages/CakeDetailPage'
@@ -40,6 +46,12 @@ function App() {
         <Route path="/pantry-raid" element={<PantryRaidPage />} />
         <Route path="/wedding-cake-planner" element={<WeddingCakePlannerPage />} />
         <Route path="/assembly-lab" element={<AssemblyLabPage />} />
+        <Route path="/cake-anatomy" element={<CakeAnatomyPage />} />
+        <Route path="/cake-stability" element={<CakeStabilityPage />} />
+        <Route path="/technique-library" element={<TechniqueLibraryPage />} />
+        <Route path="/cake-science" element={<CakeSciencePage />} />
+        <Route path="/cake-blueprints" element={<CakeBlueprintsPage />} />
+        <Route path="/cake-failure-lab" element={<CakeFailureLabPage />} />
         <Route path="/bake-off" element={<BakeOffPage />} />
         <Route path="/encyclopedia" element={<CakeEncyclopediaIndexPage />} />
         <Route path="/cake/:id" element={<CakeDetailPage />} />

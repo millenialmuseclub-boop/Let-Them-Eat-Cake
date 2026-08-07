@@ -64,6 +64,36 @@ export const HUBS: Hub[] = [
         description: 'Pick a sponge, filling, frosting, and garnish, watch your cake come together live, and get the full recipe to bake it.',
       },
       {
+        to: '/cake-anatomy',
+        title: 'Cake Anatomy',
+        description: 'How professional layer cakes are actually built, stage by stage — tap a stage to see its role.',
+      },
+      {
+        to: '/cake-stability',
+        title: 'Cake Stability',
+        description: 'Figure out supports, chill time, and display guidance for your build before you start baking.',
+      },
+      {
+        to: '/technique-library',
+        title: 'Technique Library',
+        description: 'The hands-on techniques behind every stage of construction — what each one is, common mistakes, and a chef\'s tip.',
+      },
+      {
+        to: '/cake-science',
+        title: 'Cake Science',
+        description: 'The baking science behind why each ingredient and technique does what it does.',
+      },
+      {
+        to: '/cake-blueprints',
+        title: 'Real Cake Blueprints',
+        description: 'How real, well-known cake families are actually engineered, layer by layer.',
+      },
+      {
+        to: '/cake-failure-lab',
+        title: 'Cake Failure Lab',
+        description: 'Something went wrong? Pick the symptom to see likely causes and how to fix it.',
+      },
+      {
         to: '/pantry-raid',
         title: 'Pantry Raid',
         description: "Check off what's in your kitchen and find the emergency cake that needs the least shopping.",
