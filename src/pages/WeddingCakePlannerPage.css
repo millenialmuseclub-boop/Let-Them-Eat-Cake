@@ -1,3 +1,60 @@
+.inspiration-heading {
+  margin-top: 8px;
+}
+
+.inspiration-subtext {
+  opacity: 0.75;
+  margin-bottom: 20px;
+}
+
+.inspiration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.inspiration-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  text-align: left;
+  padding: 20px;
+  border-radius: 14px;
+  border: none;
+  min-height: 140px;
+  color: #1c1c1c;
+  box-shadow: var(--shadow);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.35);
+}
+
+.inspiration-tile-name {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.inspiration-tile-description {
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.inspiration-skip {
+  margin-bottom: 12px;
+}
+
+.inspiration-change-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--raspberry);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
 .wedding-form {
   display: flex;
   flex-wrap: wrap;

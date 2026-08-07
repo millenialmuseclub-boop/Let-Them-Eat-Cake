@@ -60,6 +60,12 @@ export function WeddingCakePlannerPage() {
   const [decorationStyleId, setDecorationStyleId] = useState(weddingDecorationStyles[0].id)
   const [result, setResult] = useState<WeddingPlanResult | null>(null)
   const [copied, setCopied] = useState(false)
+  const [inspirationChosen, setInspirationChosen] = useState(false)
+
+  function chooseInspiration(id: string) {
+    setAestheticId(id)
+    setInspirationChosen(true)
+  }
 
   const decorationRanking = rankDecorationStyles(aestheticId)
   const topDecorationScore = decorationRanking[0]?.score
@@ -83,7 +89,29 @@ export function WeddingCakePlannerPage() {
       <h1>Celebration Cake Planner</h1>
       <p>Build a full master planning sheet for any occasion — weddings, birthdays, baby showers, holidays, graduations, and anniversaries — covering structure, seasonal flavor, allergens, decor, and a budget estimate in one pass.</p>
 
-      <div className="card wedding-form">
+      {!inspirationChosen ? (
+        <>
+          <h2 className="inspiration-heading">What's your vibe?</h2>
+          <p className="inspiration-subtext">Start with a look that feels like you — you can fine-tune every detail after.</p>
+          <div className="inspiration-grid">
+            {weddingAesthetics.map((a) => (
+              <button key={a.id} className="inspiration-tile" style={{ background: a.swatchHex }} onClick={() => chooseInspiration(a.id)}>
+                <span className="inspiration-tile-name">{a.name}</span>
+                <span className="inspiration-tile-description">{a.description}</span>
+              </button>
+            ))}
+          </div>
+          <button className="btn btn-secondary inspiration-skip" onClick={() => setInspirationChosen(true)}>
+            Skip — I'll pick later
+          </button>
+        </>
+      ) : (
+        <>
+          <button className="inspiration-change-link" onClick={() => setInspirationChosen(false)}>
+            ← Change inspiration
+          </button>
+
+          <div className="card wedding-form">
         <label>
           Occasion
           <select value={occasion} onChange={(e) => setOccasion(e.target.value as CelebrationOccasion)}>
@@ -336,6 +364,8 @@ export function WeddingCakePlannerPage() {
             <p className="budget-note">{result.budgetEstimate.note}</p>
           </section>
         </div>
+      )}
+        </>
       )}
     </main>
   )
