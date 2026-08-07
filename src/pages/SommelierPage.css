@@ -63,6 +63,44 @@
   gap: 12px;
 }
 
+.sommelier-section-heading {
+  margin: 28px 0 12px;
+}
+
+.sommelier-category-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.sommelier-category-chip {
+  font: inherit;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sommelier-category-chip:hover {
+  border-color: var(--raspberry);
+}
+
+.sommelier-back-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--raspberry);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 16px;
+  margin-bottom: 4px;
+}
+
 .pairing-card {
   padding: 0;
   overflow: hidden;
