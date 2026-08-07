@@ -44,10 +44,9 @@ export const HUBS: Hub[] = [
           'Click a pin on an interactive world map — or search directly — for any country’s most popular cake, complete with a full recipe and background story.',
       },
       {
-        to: '/time-machine',
-        title: 'Birthday Time Machine',
-        description:
-          'Enter your date of birth — or scroll the decade timeline — to discover the cake that defined an era, with its history and full recipe.',
+        to: '/persona-match',
+        title: 'Cake Personality',
+        description: 'Answer a few quick questions and get matched to a cake personality, complete with its cultural story and a shareable card.',
       },
     ],
   },
@@ -97,6 +96,11 @@ export const HUBS: Hub[] = [
         title: 'Celebration Cake Planner',
         description: 'For weddings, birthdays, baby showers, holidays, graduations, and anniversaries — set your culture, guest count, season, and aesthetic to get a full master planning sheet with a budget estimate.',
       },
+      {
+        to: '/time-machine',
+        title: 'Birthday Time Machine',
+        description: 'Enter your date of birth — or scroll the decade timeline — to find the cake that defined your birth year, like a personal birthday keepsake.',
+      },
     ],
   },
   {
@@ -107,11 +111,6 @@ export const HUBS: Hub[] = [
     title: 'My Cakes',
     description: 'Your personal cake identity and saved collection.',
     items: [
-      {
-        to: '/persona-match',
-        title: 'Cake Personality Quiz',
-        description: 'Answer four quick questions and get matched to a cake personality, complete with a flavor radar chart and a shareable card.',
-      },
       {
         to: '/notebook',
         title: 'Pastry Notebook',
