@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { cakes, collections } from '../lib/data'
 import { getRegionEntriesForCake, getDecadeForCake } from '../lib/encyclopedia'
 import { getCakeOfTheDay } from '../lib/discovery'
@@ -52,8 +52,13 @@ function CakeCard({ cake }: { cake: (typeof cakes)[number] }) {
 }
 
 export function CakeEncyclopediaIndexPage() {
+  const [searchParams] = useSearchParams()
+  const occasionParam = searchParams.get('occasion')
+
   const [query, setQuery] = useState('')
-  const [activeChip, setActiveChip] = useState<{ type: 'texture' | 'flavor' | 'occasion'; value: string } | null>(null)
+  const [activeChip, setActiveChip] = useState<{ type: 'texture' | 'flavor' | 'occasion'; value: string } | null>(
+    occasionParam ? { type: 'occasion', value: occasionParam } : null,
+  )
 
   const featuredCollections = FEATURED_COLLECTION_IDS.map((id) => collections.find((c) => c.id === id)).filter((c) => c !== undefined)
   const cakeOfTheDay = getCakeOfTheDay()

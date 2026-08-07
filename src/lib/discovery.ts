@@ -1,4 +1,5 @@
 import { cakes } from './data'
+import { getCakeImage } from './images'
 import type { CakeProfile } from '../types/cake'
 
 function dayOfYear(): number {
@@ -11,4 +12,12 @@ function dayOfYear(): number {
 /** Deterministic — the same cake all day, no backend/randomness. */
 export function getCakeOfTheDay(): CakeProfile {
   return cakes[dayOfYear() % cakes.length]
+}
+
+const CAKES_WITH_PHOTOS = cakes.filter((c) => getCakeImage(c.id))
+
+/** Same day-of-year determinism as getCakeOfTheDay, but only rotates through cakes with a real fetched photo — guarantees a photo hero never has a gap. */
+export function getHeroCake(): CakeProfile {
+  if (CAKES_WITH_PHOTOS.length === 0) return getCakeOfTheDay()
+  return CAKES_WITH_PHOTOS[dayOfYear() % CAKES_WITH_PHOTOS.length]
 }
