@@ -6,6 +6,7 @@ import { getCakeOfTheDay } from '../lib/discovery'
 import { CakeHeroImage } from '../components/CakeHeroImage'
 import { FEATURED_COLLECTION_IDS } from '../lib/collections'
 import type { CakeTexture } from '../types/cake'
+import type { MoodTag } from '../types/persona'
 import './CakeEncyclopediaIndexPage.css'
 
 const TEXTURES: CakeTexture[] = ['sponge', 'dense', 'creamy', 'crumbly']
@@ -54,10 +55,11 @@ function CakeCard({ cake }: { cake: (typeof cakes)[number] }) {
 export function CakeEncyclopediaIndexPage() {
   const [searchParams] = useSearchParams()
   const occasionParam = searchParams.get('occasion')
+  const moodParam = searchParams.get('mood')
 
   const [query, setQuery] = useState('')
-  const [activeChip, setActiveChip] = useState<{ type: 'texture' | 'flavor' | 'occasion'; value: string } | null>(
-    occasionParam ? { type: 'occasion', value: occasionParam } : null,
+  const [activeChip, setActiveChip] = useState<{ type: 'texture' | 'flavor' | 'occasion' | 'mood'; value: string } | null>(
+    occasionParam ? { type: 'occasion', value: occasionParam } : moodParam ? { type: 'mood', value: moodParam } : null,
   )
 
   const featuredCollections = FEATURED_COLLECTION_IDS.map((id) => collections.find((c) => c.id === id)).filter((c) => c !== undefined)
@@ -72,6 +74,7 @@ export function CakeEncyclopediaIndexPage() {
     if (activeChip?.type === 'texture') result = result.filter((c) => c.texture === activeChip.value)
     if (activeChip?.type === 'flavor') result = result.filter((c) => c.flavorNotes.includes(activeChip.value))
     if (activeChip?.type === 'occasion') result = result.filter((c) => c.occasion?.includes(activeChip.value))
+    if (activeChip?.type === 'mood') result = result.filter((c) => c.personaTags?.moods?.includes(activeChip.value as MoodTag))
     if (q) {
       result = result.filter(
         (cake) =>

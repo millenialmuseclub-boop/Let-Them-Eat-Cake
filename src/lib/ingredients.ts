@@ -1,4 +1,4 @@
-import { recipes } from './data'
+import { cakes, recipes } from './data'
 import type { CanonicalIngredient } from '../types/ingredient'
 
 /** Strips trailing ", softened"-style qualifiers and "(frosting)"-style parentheticals, then lowercases/trims. */
@@ -25,8 +25,10 @@ function toDisplayName(normalized: string): string {
 
 function buildIngredientIndex(): Map<string, CanonicalIngredient> {
   const index = new Map<string, CanonicalIngredient>()
+  const realCakeIds = new Set(cakes.map((c) => c.id))
 
   for (const recipe of recipes) {
+    if (!realCakeIds.has(recipe.cakeId)) continue
     for (const ingredient of recipe.ingredients) {
       const slug = slugify(ingredient.name)
       if (!slug) continue

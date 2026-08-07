@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { getCake, getRecipe, regions, collections } from '../lib/data'
 import { getAllCountries, getCountryEntries, getPrimaryEntry, getRelatedCountries } from '../lib/atlas'
 import { FEATURED_COLLECTION_IDS } from '../lib/collections'
@@ -13,9 +13,13 @@ const ATLAS_REGIONS: AtlasRegion[] = ['Africa', 'Asia & Middle East', 'Europe', 
 
 export function AtlasPage() {
   const allCountries = useMemo(() => getAllCountries(), [])
-  const [query, setQuery] = useState('')
-  const [country, setCountry] = useState<string | null>(null)
-  const [selectedEntryId, setSelectedEntryId] = useState<string | null>(null)
+  const [searchParams] = useSearchParams()
+  const countryParam = searchParams.get('country')
+  const initialCountry = countryParam ? allCountries.find((c) => c.toLowerCase() === countryParam.toLowerCase()) ?? null : null
+
+  const [query, setQuery] = useState(initialCountry ?? '')
+  const [country, setCountry] = useState<string | null>(initialCountry)
+  const [selectedEntryId, setSelectedEntryId] = useState<string | null>(initialCountry ? getPrimaryEntry(initialCountry)?.id ?? null : null)
   const [selectedRegion, setSelectedRegion] = useState<AtlasRegion | null>(null)
 
   function handleSearch(value: string) {
