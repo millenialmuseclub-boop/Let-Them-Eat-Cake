@@ -1,6 +1,16 @@
 import { useState } from 'react'
 import { cakeFailures } from '../lib/data'
+import { getProductsByIds } from '../lib/affiliateProducts'
+import { CuratorsToolDrawer } from './CuratorsToolDrawer'
 import './CakeFailureLab.css'
+
+/** Grounded in what each failure's own `fixes` text actually recommends — not every failure has a genuine product fit. */
+const FAILURE_PRODUCT_IDS: Record<string, string[]> = {
+  failure_sliding: ['product_cake_leveler'],
+  failure_domed_layers: ['product_cake_leveler'],
+  failure_ganache_split: ['product_thermapen'],
+  failure_mousse_wont_set: ['product_thermapen'],
+}
 
 export function CakeFailureLab() {
   const [expandedId, setExpandedId] = useState<string | null>(null)
@@ -37,6 +47,7 @@ export function CakeFailureLab() {
                   <li key={i}>{fix}</li>
                 ))}
               </ul>
+              <CuratorsToolDrawer products={getProductsByIds(FAILURE_PRODUCT_IDS[failure.id] ?? [])} />
             </div>
           )
         })()}

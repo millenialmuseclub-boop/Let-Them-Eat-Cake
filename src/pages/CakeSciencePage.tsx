@@ -1,4 +1,6 @@
 import { CakeScienceExplainer } from '../components/CakeScienceExplainer'
+import { CuratorsToolDrawer } from '../components/CuratorsToolDrawer'
+import { getProductsForHubPath } from '../lib/affiliateProducts'
 
 export function CakeSciencePage() {
   return (
@@ -8,6 +10,7 @@ export function CakeSciencePage() {
       <div className="card">
         <CakeScienceExplainer />
       </div>
+      <CuratorsToolDrawer products={getProductsForHubPath('/cake-science')} />
     </main>
   )
 }

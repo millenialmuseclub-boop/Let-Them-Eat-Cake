@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { techniques } from '../lib/data'
+import { getProductsForTechnique } from '../lib/affiliateProducts'
+import { CuratorsToolDrawer } from './CuratorsToolDrawer'
 import './TechniqueLibrary.css'
 
 export function TechniqueLibrary() {
@@ -37,6 +39,7 @@ export function TechniqueLibrary() {
               <p className="technique-tip">
                 <strong>👩‍🍳 Chef tip:</strong> {technique.chefTip}
               </p>
+              <CuratorsToolDrawer products={getProductsForTechnique(technique.id)} />
             </div>
           )
         })()}

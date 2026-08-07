@@ -25,3 +25,8 @@ export function getProductsForPairingCategory(category: DrinkCategory): Affiliat
 export function getProductsForCakeId(cakeId: string): AffiliateProduct[] {
   return activeProducts().filter((p) => p.associatedCakeIds?.includes(cakeId))
 }
+
+export function getProductsByIds(ids: string[]): AffiliateProduct[] {
+  const idSet = new Set(ids)
+  return activeProducts().filter((p) => idSet.has(p.id))
+}

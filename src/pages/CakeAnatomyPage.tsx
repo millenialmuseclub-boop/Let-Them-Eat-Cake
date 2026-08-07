@@ -1,4 +1,6 @@
 import { CakeAnatomyExplainer } from '../components/CakeAnatomyExplainer'
+import { CuratorsToolDrawer } from '../components/CuratorsToolDrawer'
+import { getProductsForHubPath } from '../lib/affiliateProducts'
 
 export function CakeAnatomyPage() {
   return (
@@ -8,6 +10,7 @@ export function CakeAnatomyPage() {
       <div className="card">
         <CakeAnatomyExplainer />
       </div>
+      <CuratorsToolDrawer products={getProductsForHubPath('/cake-anatomy')} />
     </main>
   )
 }

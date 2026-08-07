@@ -1,0 +1,36 @@
+.curators-tool-drawer {
+  margin-top: 28px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.curators-tool-drawer summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  list-style: none;
+}
+
+.curators-tool-drawer summary::-webkit-details-marker {
+  display: none;
+}
+
+.curators-tool-drawer summary::before {
+  content: '▸ ';
+}
+
+.curators-tool-drawer[open] summary::before {
+  content: '▾ ';
+}
+
+.curators-tool-drawer-content {
+  margin-top: 14px;
+}
+
+.curators-tool-drawer-note {
+  font-size: 13px;
+  opacity: 0.8;
+  margin: 0 0 12px;
+}
