@@ -2,6 +2,9 @@ export interface HubSubItem {
   to: string
   title: string
   description: string
+  /** Real, defensible cake association for a full-bleed photo card — omit if no genuine link exists (e.g. Bake Off). */
+  cakeId?: string
+  cta?: string
 }
 
 export type Hub =
@@ -36,17 +39,23 @@ export const HUBS: Hub[] = [
         to: '/encyclopedia',
         title: 'Cake Encyclopedia',
         description: 'Browse the full archive of 50 cakes — history, flavor profile, traditional recipe, and related finds for every entry.',
+        cakeId: 'cake_black_forest',
+        cta: 'Explore Encyclopedia →',
       },
       {
         to: '/atlas',
         title: 'Global Cake Atlas',
         description:
           'Click a pin on an interactive world map — or search directly — for any country’s most popular cake, complete with a full recipe and background story.',
+        cakeId: 'cake_tres_leches',
+        cta: 'Open Atlas →',
       },
       {
         to: '/persona-match',
         title: 'Cake Personality',
         description: 'Answer a few quick questions and get matched to a cake personality, complete with its cultural story and a shareable card.',
+        cakeId: 'cake_rainbow_drip_2010s',
+        cta: 'Take the Quiz →',
       },
     ],
   },
@@ -62,41 +71,57 @@ export const HUBS: Hub[] = [
         to: '/assembly-lab',
         title: 'Assembly Lab',
         description: 'Pick a sponge, filling, frosting, and garnish, watch your cake come together live, and get the full recipe to bake it.',
+        cakeId: 'cake_victoria_sponge',
+        cta: 'Start Building →',
       },
       {
         to: '/cake-anatomy',
         title: 'Cake Anatomy',
         description: 'How professional layer cakes are actually built, stage by stage — tap a stage to see its role.',
+        cakeId: 'cake_carrot_cream_cheese_1980s',
+        cta: 'Explore Anatomy →',
       },
       {
         to: '/cake-stability',
         title: 'Cake Stability',
         description: 'Figure out supports, chill time, and display guidance for your build before you start baking.',
+        cakeId: 'cake_kransekake',
+        cta: 'Explore Stability →',
       },
       {
         to: '/technique-library',
         title: 'Technique Library',
         description: 'The hands-on techniques behind every stage of construction — what each one is, common mistakes, and a chef\'s tip.',
+        cakeId: 'cake_rainbow_drip_2010s',
+        cta: 'Learn Techniques →',
       },
       {
         to: '/cake-science',
         title: 'Cake Science',
         description: 'The baking science behind why each ingredient and technique does what it does.',
+        cakeId: 'cake_basque_burnt_cheesecake',
+        cta: 'Explore the Science →',
       },
       {
         to: '/cake-blueprints',
         title: 'Real Cake Blueprints',
         description: 'How real, well-known cake families are actually engineered, layer by layer.',
+        cakeId: 'cake_sachertorte',
+        cta: 'View Blueprints →',
       },
       {
         to: '/cake-failure-lab',
         title: 'Cake Failure Lab',
         description: 'Something went wrong? Pick the symptom to see likely causes and how to fix it.',
+        cakeId: 'cake_molten_lava_1990s',
+        cta: 'Diagnose a Cake →',
       },
       {
         to: '/pantry-raid',
         title: 'Pantry Raid',
         description: "Check off what's in your kitchen and find the emergency cake that needs the least shopping.",
+        cakeId: 'cake_kladdkaka',
+        cta: 'Create a Recipe →',
       },
       {
         to: '/bake-off',
