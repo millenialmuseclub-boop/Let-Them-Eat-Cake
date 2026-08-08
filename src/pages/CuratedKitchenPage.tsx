@@ -14,9 +14,21 @@ const CORE_BAKING_IDS = [
 
 const DECORATING_IDS = ['product_revolving_cake_stand', 'product_scraper', 'product_decorating_kit', 'product_offset_spatula', 'product_fancy_sprinkles', 'product_gel_colors']
 
-const INGREDIENT_IDS = ['product_vanilla', 'product_cake_flour', 'product_milk_chocolate']
+const INGREDIENT_IDS = [
+  'product_vanilla',
+  'product_cake_flour',
+  'product_milk_chocolate',
+  'product_cocoa_powder',
+  'product_bourbon_vanilla_paste',
+  'product_chestnut_paste',
+  'product_almond_paste',
+  'product_passion_fruit_flavoring',
+  'product_gold_leaf',
+]
 
 const COFFEE_TEA_IDS = ['product_earl_grey_tea', 'product_espresso_machine']
+
+const PRESENTATION_IDS = ['product_cake_knife_set', 'product_floral_cake_stand', 'product_cabbage_cake_stand', 'product_glass_cake_stand', 'product_heart_bundt_pan']
 
 export function CuratedKitchenPage() {
   return (
@@ -27,6 +39,7 @@ export function CuratedKitchenPage() {
       <AffiliateProductSet title="Decorating" products={getProductsByIds(DECORATING_IDS)} />
       <AffiliateProductSet title="Ingredients" products={getProductsByIds(INGREDIENT_IDS)} />
       <AffiliateProductSet title="Coffee & Tea" products={getProductsByIds(COFFEE_TEA_IDS)} />
+      <AffiliateProductSet title="Presentation" products={getProductsByIds(PRESENTATION_IDS)} />
     </main>
   )
 }

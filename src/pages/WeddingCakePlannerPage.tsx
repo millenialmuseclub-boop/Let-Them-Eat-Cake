@@ -22,6 +22,11 @@ const DECORATION_STYLE_PRODUCT_IDS: Record<string, string[]> = {
   decor_metallic_drip: ['product_offset_spatula'],
 }
 
+/** Occasion/vibe-driven presentation picks — distinct from the decoration-style tool picks above. */
+const WEDDING_PRESENTATION_IDS = ['product_cake_knife_set', 'product_floral_cake_stand', 'product_glass_cake_stand']
+const PLAYFUL_BIRTHDAY_PRESENTATION_IDS = ['product_fancy_sprinkles', 'product_gel_colors', 'product_heart_bundt_pan']
+const ELEGANT_PRESENTATION_IDS = ['product_gold_leaf', 'product_cabbage_cake_stand', 'product_cake_knife_set']
+
 const OCCASION_OPTIONS: { value: CelebrationOccasion; label: string; swatchHex: string }[] = [
   { value: 'wedding', label: 'Wedding', swatchHex: '#f6cbe0' },
   { value: 'birthday', label: 'Birthday', swatchHex: '#ffd54f' },
@@ -469,6 +474,24 @@ export function WeddingCakePlannerPage({
             return (
               <section className="card wedding-section wedding-styling-section">
                 <AffiliateProductSet title="Curator's Styling Picks" products={stylingProducts} />
+              </section>
+            )
+          })()}
+
+          {(() => {
+            const presentationIds =
+              result.input.occasion === 'wedding'
+                ? WEDDING_PRESENTATION_IDS
+                : result.input.occasion === 'birthday' && result.input.aestheticId === 'aesthetic_whimsical_pastel_piping'
+                  ? PLAYFUL_BIRTHDAY_PRESENTATION_IDS
+                  : result.input.aestheticId === 'aesthetic_traditional_luxury'
+                    ? ELEGANT_PRESENTATION_IDS
+                    : []
+            const presentationProducts = getProductsByIds(presentationIds)
+            if (presentationProducts.length === 0) return null
+            return (
+              <section className="card wedding-section wedding-styling-section">
+                <AffiliateProductSet title="Styling & Presentation" products={presentationProducts} />
               </section>
             )
           })()}
