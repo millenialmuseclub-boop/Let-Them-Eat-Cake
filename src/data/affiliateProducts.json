@@ -132,7 +132,8 @@
     "url": "https://go.shopmy.us/p-77599880",
     "network": "shopmy",
     "active": true,
-    "associatedIngredientSlugs": ["cake-flour"]
+    "associatedIngredientSlugs": ["cake-flour"],
+    "associatedHubPaths": ["/cake-science"]
   },
   {
     "id": "product_milk_chocolate",
@@ -179,5 +180,106 @@
     "active": true,
     "associatedPairingCategories": ["coffee"],
     "editorialNote": "Completes the experience for any coffee-forward pairing."
+  },
+  {
+    "id": "product_cocoa_powder",
+    "name": "Cocoa Powder",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77634268",
+    "network": "shopmy",
+    "active": true,
+    "associatedIngredientSlugs": ["cocoa-powder"]
+  },
+  {
+    "id": "product_bourbon_vanilla_paste",
+    "name": "Bourbon Vanilla Paste",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77637631",
+    "network": "shopmy",
+    "active": true,
+    "associatedIngredientSlugs": ["vanilla-extract"]
+  },
+  {
+    "id": "product_gold_leaf",
+    "name": "Edible Gold Leaf",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77638287",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_chestnut_paste",
+    "name": "Agrimontana Candied Chestnut Paste",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77638959",
+    "network": "shopmy",
+    "active": true,
+    "associatedCakeIds": ["cake_mont_blanc"]
+  },
+  {
+    "id": "product_almond_paste",
+    "name": "Almond Paste",
+    "category": "ingredient",
+    "url": "https://on.ltk.com/+3kwTgnpWXc1RMpvpDe6Q4Q",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_passion_fruit_flavoring",
+    "name": "Passion Fruit Flavoring",
+    "category": "ingredient",
+    "url": "https://on.ltk.com/+kJ-JuYybHbGmmKftuwC0lQ",
+    "network": "ltk",
+    "active": true,
+    "associatedCakeIds": ["cake_pavlova"]
+  },
+  {
+    "id": "product_champagne_flutes",
+    "name": "Champagne Flutes",
+    "category": "beverage-equipment",
+    "url": "https://go.shopmy.us/p-77634550",
+    "network": "shopmy",
+    "active": true,
+    "associatedPairingCategories": ["champagne"]
+  },
+  {
+    "id": "product_cake_knife_set",
+    "name": "Cake Knife Set",
+    "category": "presentation",
+    "url": "https://go.shopmy.us/p-77634801",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_floral_cake_stand",
+    "name": "14-Inch Floral Cake Stand",
+    "category": "presentation",
+    "url": "https://go.shopmy.us/p-77635295",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_cabbage_cake_stand",
+    "name": "12-Inch Cabbage Cake Stand",
+    "category": "presentation",
+    "url": "https://go.shopmy.us/p-77635455",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_glass_cake_stand",
+    "name": "Covered Glass Cake Stand",
+    "category": "presentation",
+    "url": "https://go.shopmy.us/p-77635581",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_heart_bundt_pan",
+    "name": "Nordic Ware Heart Bundt Pan",
+    "category": "presentation",
+    "url": "https://go.shopmy.us/p-77636156",
+    "network": "shopmy",
+    "active": true
   }
 ]

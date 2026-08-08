@@ -2,7 +2,7 @@ import type { DrinkCategory } from './sommelier'
 
 export type AffiliateNetwork = 'shopmy' | 'ltk'
 
-export type AffiliateProductCategory = 'equipment' | 'ingredient' | 'beverage-equipment'
+export type AffiliateProductCategory = 'equipment' | 'ingredient' | 'beverage-equipment' | 'presentation'
 
 export interface AffiliateProduct {
   id: string
@@ -17,7 +17,11 @@ export interface AffiliateProduct {
   associatedIngredientSlugs?: string[]
   associatedCakeIds?: string[]
   associatedPairingCategories?: DrinkCategory[]
+  associatedOccasion?: string[]
   imageUrl?: string
   editorialNote?: string
   price?: number
+  salePrice?: number
+  retailer?: string
+  seasonalFlag?: boolean
 }
