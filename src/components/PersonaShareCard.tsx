@@ -11,6 +11,7 @@ export function PersonaShareCard({ personality, deepLinkPath }: { personality: C
       eyebrow="My Cake Personality Is"
       title={personality.name}
       subtitle={personality.personalityTitle}
+      bodyText={personality.description}
       colorHex={personality.colorHex}
       imageUrl={getPersonalityImage(personality.id)?.url}
       shareUrl={shareUrl}

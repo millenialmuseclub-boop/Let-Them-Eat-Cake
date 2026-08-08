@@ -4,6 +4,7 @@ import { getCakeForBirthYear } from '../lib/timeMachine'
 import { getYearVariant } from '../lib/yearVintage'
 import { getCake, getRecipe, decades } from '../lib/data'
 import { getRelatedCakes, getTopPairings } from '../lib/encyclopedia'
+import { getCakeImage } from '../lib/images'
 import { RecipeCard } from '../components/RecipeCard'
 import { ShareCard } from '../components/ShareCard'
 import { TimeMachineTimeline } from '../components/TimeMachineTimeline'
@@ -62,7 +63,13 @@ export function TimeMachinePage() {
       {entry && cake && recipe && (
         <section className="time-machine-result">
           {birthYear !== null && variant && (
-            <ShareCard year={birthYear} cakeName={variant.variantName} subtitle={`a ${entry.decadeLabel} ${cake.name}`} />
+            <ShareCard
+              year={birthYear}
+              cakeName={variant.variantName}
+              subtitle={`a ${entry.decadeLabel} ${cake.name}`}
+              bodyText={entry.funFact ?? entry.modernInterpretation}
+              imageUrl={getCakeImage(cake.id)?.url}
+            />
           )}
 
           <div className="card">

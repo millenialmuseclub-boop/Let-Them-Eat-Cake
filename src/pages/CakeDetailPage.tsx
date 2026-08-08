@@ -104,6 +104,7 @@ export function CakeDetailPage() {
           eyebrow="Cake Encyclopedia"
           title={cake.name}
           subtitle={locationLabel ?? undefined}
+          bodyText={cake.description}
           colorHex="var(--raspberry)"
           imageUrl={getCakeImage(cake.id)?.url}
           shareUrl={typeof window !== 'undefined' ? window.location.href : ''}

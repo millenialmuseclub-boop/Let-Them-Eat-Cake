@@ -40,6 +40,13 @@
   margin-bottom: 12px;
 }
 
+.social-share-body {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0.85;
+  margin-bottom: 12px;
+}
+
 .social-share-image {
   width: 100%;
   flex: 1;
@@ -81,11 +88,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-}
-
-.social-share-error {
-  font-size: 13px;
-  color: var(--raspberry);
 }
 
 .social-share-platform-row {
