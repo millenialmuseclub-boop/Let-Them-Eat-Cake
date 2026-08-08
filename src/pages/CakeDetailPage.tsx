@@ -4,7 +4,7 @@ import { getCake, getRecipeForCake } from '../lib/data'
 import { getRegionEntriesForCake, getDecadeForCake, getTopPairings, getRelatedCakes } from '../lib/encyclopedia'
 import { getCakeImage } from '../lib/images'
 import { recordCakeView } from '../lib/recentlyViewed'
-import { getProductsForHubPath, getProductsForIngredient } from '../lib/affiliateProducts'
+import { getProductsForHubPath, getProductsForIngredient, getProductsForCakeId, getProductsByIds } from '../lib/affiliateProducts'
 import { FlavorProfileBars } from '../components/FlavorProfileBars'
 import { CakeOriginStory } from '../components/CakeOriginStory'
 import { RecipeCard } from '../components/RecipeCard'
@@ -56,6 +56,11 @@ export function CakeDetailPage() {
   const bakingTools = getProductsForHubPath('/encyclopedia')
   const vanillaMatch = cake.flavorNotes.some((n) => /vanilla/i.test(n)) ? getProductsForIngredient('vanilla-extract') : []
   const chocolateMatch = cake.flavorNotes.some((n) => /chocolate|cocoa/i.test(n)) ? getProductsForIngredient('dark-chocolate') : []
+  const almondMatch = cake.flavorNotes.some((n) => /marzipan|almond/i.test(n)) ? getProductsByIds(['product_almond_paste']) : []
+  const cakeSpecificMatch = getProductsForCakeId(cake.id)
+
+  const isOrnate = cake.difficulty === 'hard' && (cake.occasion?.includes('Celebration') ?? false)
+  const celebrationFinishes = isOrnate ? getProductsByIds(['product_gel_colors', 'product_gold_leaf', 'product_fancy_sprinkles']) : []
 
   return (
     <main className="page cake-detail-page">
@@ -148,7 +153,8 @@ export function CakeDetailPage() {
         </section>
       )}
 
-      <AffiliateProductSet title="Baking This Cake?" products={[...vanillaMatch, ...chocolateMatch, ...bakingTools]} />
+      <AffiliateProductSet title="Baking This Cake?" products={[...vanillaMatch, ...chocolateMatch, ...almondMatch, ...cakeSpecificMatch, ...bakingTools]} />
+      <AffiliateProductSet title="Celebration Finishes" products={celebrationFinishes} />
     </main>
   )
 }
