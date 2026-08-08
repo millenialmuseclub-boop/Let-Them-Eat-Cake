@@ -29,6 +29,7 @@ import { BakingTraditionsIndexPage } from './pages/BakingTraditionsIndexPage'
 import { BakingTraditionDetailPage } from './pages/BakingTraditionDetailPage'
 import { MyCollectionsIndexPage } from './pages/MyCollectionsIndexPage'
 import { MyCollectionDetailPage } from './pages/MyCollectionDetailPage'
+import { CuratedKitchenPage } from './pages/CuratedKitchenPage'
 import { HubPage } from './components/HubPage'
 import { BottomTabBar } from './components/BottomTabBar'
 import { HUBS } from './data/hubs'
@@ -70,6 +71,7 @@ function App() {
         <Route path="/traditions/:id" element={<BakingTraditionDetailPage />} />
         <Route path="/my-collections" element={<MyCollectionsIndexPage />} />
         <Route path="/my-collections/:id" element={<MyCollectionDetailPage />} />
+        <Route path="/curated-kitchen" element={<CuratedKitchenPage />} />
       </Routes>
       <BottomTabBar />
     </>

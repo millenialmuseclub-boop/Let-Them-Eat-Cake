@@ -161,6 +161,11 @@ export const HUBS: Hub[] = [
         title: 'My Collections',
         description: 'Create your own named collections of cakes — organize, add notes, and share them, all stored right in your browser.',
       },
+      {
+        to: '/curated-kitchen',
+        title: 'Curated Kitchen',
+        description: 'The tools, equipment, and ingredients we reach for again and again — organized by what you\'re doing.',
+      },
     ],
   },
 ]
