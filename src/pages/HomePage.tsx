@@ -1,75 +1,26 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { cakes, collections, regions } from '../lib/data'
-import { getUserCollections } from '../lib/userCollections'
-import { FEATURED_COLLECTION_IDS, getCollectionCakes } from '../lib/collections'
-import { MOOD_OPTIONS } from '../lib/persona'
-import { getHeroCake } from '../lib/discovery'
+import { cakes, regions } from '../lib/data'
+import { getHeroCake, getDiscoveryOfTheDay, getTechniqueOfTheDay } from '../lib/discovery'
 import { getRegionEntriesForCake, getTopPairings } from '../lib/encyclopedia'
-import { getCakeImage } from '../lib/images'
-import { getAllIngredients } from '../lib/ingredients'
 import { CakeHeroImage } from '../components/CakeHeroImage'
 import { PairingComparisonCard } from '../components/PairingComparisonCard'
-import type { CakeProfile } from '../types/cake'
 import './HomePage.css'
-
-const SEASONAL_CARDS: { icon: string; title: string; occasion: string }[] = [
-  { icon: '💍', title: 'Wedding Season', occasion: 'Wedding' },
-  { icon: '🎄', title: 'Holiday Cakes', occasion: 'Christmas' },
-  { icon: '🎈', title: 'Birthday Favorites', occasion: 'Birthday' },
-]
 
 const WORLD_CARD_COUNTRIES = ['Mexico', 'Japan', 'Brazil']
 
-function representativeCake(occasion: string): CakeProfile | undefined {
-  return cakes.find((c) => c.occasion?.includes(occasion))
-}
-
-function cakeWithPhoto(candidates: CakeProfile[]): CakeProfile | undefined {
-  return candidates.find((c) => getCakeImage(c.id)) ?? candidates[0]
-}
-
-/** Unlike cakeWithPhoto, never falls back to a photo-less pick — callers hide the card instead. */
-function cakeWithPhotoStrict(candidates: CakeProfile[]): CakeProfile | undefined {
-  return candidates.find((c) => getCakeImage(c.id))
-}
-
-function dayOfYear(): number {
-  const now = new Date()
-  const start = new Date(now.getFullYear(), 0, 0)
-  return Math.floor((now.getTime() - start.getTime()) / (1000 * 60 * 60 * 24))
-}
-
 export function HomePage() {
-  const [userCollections] = useState(() => getUserCollections())
-
   const heroCake = getHeroCake()
   const heroOrigin = getRegionEntriesForCake(heroCake.id)[0]?.country
   const topPairing = getTopPairings(heroCake, 1)[0]
-
-  const featuredCollections = FEATURED_COLLECTION_IDS.map((id) => collections.find((c) => c.id === id)).filter((c) => c !== undefined)
+  const discovery = getDiscoveryOfTheDay()
+  const technique = getTechniqueOfTheDay()
 
   const worldCards = WORLD_CARD_COUNTRIES.map((country) => {
     const entries = regions.filter((r) => r.country === country)
     const primaryCakeId = entries.find((e) => e.isPrimary)?.cakeId ?? entries[0]?.cakeId
     const cakeNames = entries.map((e) => cakes.find((c) => c.id === e.cakeId)?.name).filter((n): n is string => !!n)
     return primaryCakeId ? { country, primaryCakeId, cakeNames } : null
-  }).filter((c) => c !== null)
-
-  const newThisWeekCake = cakeWithPhotoStrict([...cakes].reverse())
-
-  const otherCountryPrimaryCakes = regions
-    .filter((r) => r.isPrimary && !WORLD_CARD_COUNTRIES.includes(r.country))
-    .map((r) => ({ country: r.country, cake: cakes.find((c) => c.id === r.cakeId) }))
-    .filter((entry): entry is { country: string; cake: CakeProfile } => !!entry.cake && !!getCakeImage(entry.cake.id))
-  const aroundWorldEntry = otherCountryPrimaryCakes.length > 0 ? otherCountryPrimaryCakes[dayOfYear() % otherCountryPrimaryCakes.length] : undefined
-
-  const spotlightIngredient = getAllIngredients().find(
-    (ing) => ing.cakeIds.length >= 3 && cakeWithPhotoStrict(ing.cakeIds.map((id) => cakes.find((c) => c.id === id)).filter((c): c is CakeProfile => !!c)),
-  )
-  const spotlightCake = spotlightIngredient
-    ? cakeWithPhotoStrict(spotlightIngredient.cakeIds.map((id) => cakes.find((c) => c.id === id)).filter((c): c is CakeProfile => !!c))
-    : undefined
+  }).filter((c): c is { country: string; primaryCakeId: string; cakeNames: string[] } => c !== null)
 
   return (
     <main className="page home-page">
@@ -85,47 +36,29 @@ export function HomePage() {
 
       {topPairing && (
         <section className="home-section">
-          <h2>🥂 Today's Perfect Pairing</h2>
+          <h2>🥂 Perfect Pairing</h2>
           <PairingComparisonCard cake={heroCake} drink={topPairing.drink} score={topPairing.score} />
+          <Link to="/sommelier" className="encyclopedia-link">
+            Explore Pairing →
+          </Link>
+        </section>
+      )}
+
+      {discovery && (
+        <section className="home-section">
+          <h2>{discovery.label}</h2>
+          <Link to={discovery.linkTo} className="card home-photo-card home-discovery-card">
+            {discovery.cake && <CakeHeroImage cakeId={discovery.cake.id} variant="thumbnail" alt={discovery.title} />}
+            <div className="home-photo-card-label">
+              {discovery.title}
+              <p className="home-world-card-cakes">{discovery.teaser}</p>
+            </div>
+          </Link>
         </section>
       )}
 
       <section className="home-section">
-        <h2>✨ Explore the Encyclopedia</h2>
-        <div className="home-photo-row">
-          {featuredCollections.map((collection) => {
-            const cake = cakeWithPhoto(getCollectionCakes(collection))
-            return (
-              <Link key={collection.id} to={`/collections/${collection.id}`} className="card home-photo-card">
-                {cake && <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={collection.title} />}
-                <div className="home-photo-card-label">
-                  <span aria-hidden="true">{collection.icon}</span> {collection.title}
-                </div>
-              </Link>
-            )
-          })}
-        </div>
-      </section>
-
-      <section className="home-section">
-        <h2>🎭 Discover by Mood</h2>
-        <div className="home-photo-row">
-          {MOOD_OPTIONS.map((mood) => {
-            const matches = cakes.filter((c) => c.personaTags?.moods?.includes(mood.value))
-            const cake = cakeWithPhoto(matches)
-            if (!cake) return null
-            return (
-              <Link key={mood.value} to={`/encyclopedia?mood=${encodeURIComponent(mood.value)}`} className="card home-photo-card">
-                <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={mood.label} />
-                <div className="home-photo-card-label">{mood.label}</div>
-              </Link>
-            )
-          })}
-        </div>
-      </section>
-
-      <section className="home-section">
-        <h2>🌍 Explore the World</h2>
+        <h2>🌍 Around the World</h2>
         <div className="home-photo-row">
           {worldCards.map((card) => (
             <Link key={card.country} to={`/atlas?country=${encodeURIComponent(card.country)}`} className="card home-photo-card">
@@ -142,76 +75,18 @@ export function HomePage() {
         </Link>
       </section>
 
-      {(newThisWeekCake || aroundWorldEntry || spotlightCake) && (
+      {technique && (
         <section className="home-section">
-          <h2>🔎 Fresh Discovery</h2>
-          <div className="home-photo-row">
-            {newThisWeekCake && (
-              <Link to={`/cake/${newThisWeekCake.id}`} className="card home-photo-card home-discovery-card">
-                <CakeHeroImage cakeId={newThisWeekCake.id} variant="thumbnail" alt={newThisWeekCake.name} />
-                <div className="home-photo-card-label">
-                  🆕 New This Week
-                  <p className="home-world-card-cakes">{newThisWeekCake.name}</p>
-                </div>
-              </Link>
-            )}
-            {aroundWorldEntry && (
-              <Link to={`/cake/${aroundWorldEntry.cake.id}`} className="card home-photo-card home-discovery-card">
-                <CakeHeroImage cakeId={aroundWorldEntry.cake.id} variant="thumbnail" alt={aroundWorldEntry.cake.name} />
-                <div className="home-photo-card-label">
-                  🌍 Around the World
-                  <p className="home-world-card-cakes">
-                    {aroundWorldEntry.cake.name} — {aroundWorldEntry.country}
-                  </p>
-                </div>
-              </Link>
-            )}
-            {spotlightIngredient && spotlightCake && (
-              <Link to={`/ingredient/${spotlightIngredient.slug}`} className="card home-photo-card home-discovery-card">
-                <CakeHeroImage cakeId={spotlightCake.id} variant="thumbnail" alt={spotlightIngredient.displayName} />
-                <div className="home-photo-card-label">
-                  🧂 Ingredient Spotlight
-                  <p className="home-world-card-cakes">
-                    {spotlightIngredient.displayName} — used in {spotlightIngredient.cakeIds.length} cakes
-                  </p>
-                </div>
-              </Link>
-            )}
-          </div>
-        </section>
-      )}
-
-      <section className="home-section">
-        <h2>🍂 Seasonal Inspiration</h2>
-        <div className="home-visual-row">
-          {SEASONAL_CARDS.map((seasonal) => {
-            const cake = representativeCake(seasonal.occasion)
-            if (!cake) return null
-            return (
-              <Link key={seasonal.occasion} to={`/encyclopedia?occasion=${encodeURIComponent(seasonal.occasion)}`} className="card home-seasonal-card">
-                <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
-                <div className="home-seasonal-card-label">
-                  <span aria-hidden="true">{seasonal.icon}</span> {seasonal.title}
-                </div>
-              </Link>
-            )
-          })}
-        </div>
-      </section>
-
-      {userCollections.length > 0 && (
-        <section className="home-section">
-          <h2>📁 Your Collections</h2>
-          <div className="home-visual-row">
-            {userCollections.slice(0, 4).map((collection) => (
-              <Link key={collection.id} to={`/my-collections/${collection.id}`} className="card home-visual-card">
-                <h3>{collection.name}</h3>
-                <p>
-                  {collection.cakeIds.length} {collection.cakeIds.length === 1 ? 'cake' : 'cakes'} saved
-                </p>
-              </Link>
-            ))}
-          </div>
+          <h2>👩‍🍳 From the Workshop</h2>
+          <Link to="/technique-library" className="card home-photo-card home-discovery-card home-technique-card">
+            <div className="home-photo-card-label">
+              {technique.name}
+              <p className="home-world-card-cakes">{technique.whatItIs}</p>
+            </div>
+          </Link>
+          <Link to="/technique-library" className="encyclopedia-link">
+            Learn Techniques →
+          </Link>
         </section>
       )}
     </main>
