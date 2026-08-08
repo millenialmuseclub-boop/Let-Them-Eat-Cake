@@ -6,6 +6,8 @@ import { getLifestylePairing } from '../lib/lifestylePairings'
 import { PairingComparisonCard } from '../components/PairingComparisonCard'
 import { DrinkImage } from '../components/DrinkImage'
 import { CakeHeroImage } from '../components/CakeHeroImage'
+import { AffiliateProductSet } from '../components/AffiliateProductSet'
+import { getProductsForPairingCategory } from '../lib/affiliateProducts'
 import type { DrinkCategory } from '../types/sommelier'
 import './SommelierPage.css'
 
@@ -124,6 +126,7 @@ function CakeFirstView({
             </div>
 
             <LifestyleSection category={drink.category} />
+            <AffiliateProductSet title="Complete the Experience" products={getProductsForPairingCategory(drink.category)} />
             <CopyPairingButton cakeName={cake.name} drinkName={drink.name} score={score} />
           </div>
         )}
@@ -288,6 +291,7 @@ function DrinkFirstView({
                   </div>
 
                   <LifestyleSection category={drink.category} />
+                  <AffiliateProductSet title="Complete the Experience" products={getProductsForPairingCategory(drink.category)} />
                   <CopyPairingButton cakeName={cake.name} drinkName={drink.name} score={score} />
 
                   <Link to={`/cake/${cake.id}`} className="encyclopedia-link">
