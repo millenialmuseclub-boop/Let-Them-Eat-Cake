@@ -7,7 +7,7 @@ import { SommelierPage } from './pages/SommelierPage'
 import { PersonaMatchPage } from './pages/PersonaMatchPage'
 import { PantryRaidPage } from './pages/PantryRaidPage'
 import { WeddingCakePlannerPage } from './pages/WeddingCakePlannerPage'
-import { WeddingPlannerPage } from './pages/WeddingPlannerPage'
+import { WeddingJourneyPage } from './pages/WeddingJourneyPage'
 import { BirthdayPlannerPage } from './pages/BirthdayPlannerPage'
 import { OtherCelebrationsPage } from './pages/OtherCelebrationsPage'
 import { AssemblyLabPage } from './pages/AssemblyLabPage'
@@ -51,7 +51,7 @@ function App() {
         <Route path="/persona-match" element={<PersonaMatchPage />} />
         <Route path="/pantry-raid" element={<PantryRaidPage />} />
         <Route path="/wedding-cake-planner" element={<WeddingCakePlannerPage />} />
-        <Route path="/wedding-planner" element={<WeddingPlannerPage />} />
+        <Route path="/wedding-planner" element={<WeddingJourneyPage />} />
         <Route path="/birthday-planner" element={<BirthdayPlannerPage />} />
         <Route path="/other-celebrations" element={<OtherCelebrationsPage />} />
         <Route path="/assembly-lab" element={<AssemblyLabPage />} />

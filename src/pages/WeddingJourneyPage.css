@@ -1,0 +1,11 @@
+.wedding-journey-progress {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 16px;
+}
+
+.wedding-flavor-tile {
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}

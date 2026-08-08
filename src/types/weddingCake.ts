@@ -105,6 +105,13 @@ export interface AllergenAuditEntry {
   guidance: string
 }
 
+export interface WeddingFlavorDirection {
+  id: string
+  name: string
+  description: string
+  keywords: string[]
+}
+
 export interface WeddingPlanInput {
   occasion: CelebrationOccasion
   cultureId: string

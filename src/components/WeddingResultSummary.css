@@ -1,0 +1,52 @@
+.wedding-result-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wedding-hero {
+  text-align: center;
+}
+
+.wedding-hero h1 {
+  margin: 8px 0 4px;
+}
+
+.wedding-hero-description {
+  opacity: 0.8;
+}
+
+.wedding-primary-card h2 {
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.wedding-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 4px 0 8px;
+}
+
+.wedding-details-section {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: var(--bg-card);
+}
+
+.wedding-details-section summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.wedding-details-content {
+  margin-top: 12px;
+}
+
+@media print {
+  .wedding-action-row {
+    display: none !important;
+  }
+}

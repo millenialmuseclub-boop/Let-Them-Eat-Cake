@@ -49,6 +49,21 @@ export function generateWeddingPlan(input: WeddingPlanInput): WeddingPlanResult 
   }
 }
 
+/** Picks the real wedding culture whose own flavorNotes overlap most with a flavor direction's keywords, so "Cultural History" stays a genuine match rather than an arbitrary default. */
+export function pickCultureForFlavorDirection(keywords: string[]): string {
+  const keywordSet = new Set(keywords.map((k) => k.toLowerCase()))
+  let best = weddingCultures[0]
+  let bestScore = -1
+  for (const culture of weddingCultures) {
+    const score = culture.flavorNotes.filter((note) => keywordSet.has(note.toLowerCase())).length
+    if (score > bestScore) {
+      best = culture
+      bestScore = score
+    }
+  }
+  return best.id
+}
+
 const OCCASION_LABELS: Record<CelebrationOccasion, string> = {
   wedding: 'Wedding',
   birthday: 'Birthday',
