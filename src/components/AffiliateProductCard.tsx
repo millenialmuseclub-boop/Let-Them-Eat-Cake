@@ -1,4 +1,5 @@
 import type { AffiliateProduct } from '../types/affiliateProduct'
+import { trackAffiliateClicked } from '../lib/analytics'
 import './AffiliateProductCard.css'
 
 const NETWORK_LABELS: Record<AffiliateProduct['network'], string> = {
@@ -6,13 +7,19 @@ const NETWORK_LABELS: Record<AffiliateProduct['network'], string> = {
   ltk: 'LTK',
 }
 
-export function AffiliateProductCard({ product }: { product: AffiliateProduct }) {
+export function AffiliateProductCard({ product, context }: { product: AffiliateProduct; context?: string }) {
   return (
     <div className="card affiliate-product-card">
       {product.imageUrl && <img src={product.imageUrl} alt={product.name} className="affiliate-product-image" />}
       <h4 className="affiliate-product-name">{product.name}</h4>
       {product.editorialNote && <p className="affiliate-product-note">{product.editorialNote}</p>}
-      <a href={product.url} target="_blank" rel="noreferrer sponsored" className="affiliate-product-link">
+      <a
+        href={product.url}
+        target="_blank"
+        rel="noreferrer sponsored"
+        className="affiliate-product-link"
+        onClick={() => trackAffiliateClicked(product, context ?? 'unknown')}
+      >
         View Recommendation →
       </a>
       <span className="affiliate-product-network">via {NETWORK_LABELS[product.network]}</span>
