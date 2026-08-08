@@ -1,3 +1,24 @@
+.sommelier-landing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 24px 0;
+}
+
+.sommelier-landing-grid .hub-photo-card {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.sommelier-landing-grid .cake-hero-image-hero img,
+.sommelier-landing-grid .drink-image-hero img {
+  height: 320px;
+}
+
 .mode-toggle {
   display: flex;
   gap: 8px;

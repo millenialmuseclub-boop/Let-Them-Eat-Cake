@@ -26,6 +26,7 @@ const DRINK_GROUPS: { id: string; label: string; categories: DrinkCategory[] }[]
 
 export function SommelierPage() {
   const [mode, setMode] = useState<Mode>('cake-first')
+  const [modeChosen, setModeChosen] = useState(false)
   const [cakeId, setCakeId] = useState(cakes[0].id)
   const [drinkId, setDrinkId] = useState(drinks[0].id)
   const [expandedId, setExpandedId] = useState<string | null>(null)
@@ -35,24 +36,52 @@ export function SommelierPage() {
     setExpandedId(null)
   }
 
+  function chooseMode(next: Mode) {
+    setMode(next)
+    setModeChosen(true)
+  }
+
   return (
     <main className="page sommelier-page">
       <h1>Cake Sommelier</h1>
       <p>Pick a cake to find its best drink pairings, or start from a drink to find the cakes that match it — all scored by flavor science.</p>
 
-      <div className="mode-toggle">
-        <button className={mode === 'cake-first' ? 'active' : ''} onClick={() => switchMode('cake-first')}>
-          Start from a cake
-        </button>
-        <button className={mode === 'drink-first' ? 'active' : ''} onClick={() => switchMode('drink-first')}>
-          Start from a drink
-        </button>
-      </div>
-
-      {mode === 'cake-first' ? (
-        <CakeFirstView cakeId={cakeId} setCakeId={setCakeId} expandedId={expandedId} setExpandedId={setExpandedId} />
+      {!modeChosen ? (
+        <div className="sommelier-landing-grid">
+          <button className="hub-photo-card" onClick={() => chooseMode('cake-first')}>
+            <CakeHeroImage cakeId="cake_pavlova" variant="hero" alt="Pair by Cake" />
+            <div className="hub-photo-card-content">
+              <h2>Pair by Cake</h2>
+              <p>Choose a cake and discover what belongs beside it.</p>
+              <span className="btn hub-photo-card-cta">Start With Cake →</span>
+            </div>
+          </button>
+          <button className="hub-photo-card" onClick={() => chooseMode('drink-first')}>
+            <DrinkImage drinkId="drink_espresso" variant="hero" alt="Pair by Drink" />
+            <div className="hub-photo-card-content">
+              <h2>Pair by Drink</h2>
+              <p>Choose your drink and discover its perfect cakes.</p>
+              <span className="btn hub-photo-card-cta">Start With Drink →</span>
+            </div>
+          </button>
+        </div>
       ) : (
-        <DrinkFirstView drinkId={drinkId} setDrinkId={setDrinkId} expandedId={expandedId} setExpandedId={setExpandedId} />
+        <>
+          <div className="mode-toggle">
+            <button className={mode === 'cake-first' ? 'active' : ''} onClick={() => switchMode('cake-first')}>
+              Start from a cake
+            </button>
+            <button className={mode === 'drink-first' ? 'active' : ''} onClick={() => switchMode('drink-first')}>
+              Start from a drink
+            </button>
+          </div>
+
+          {mode === 'cake-first' ? (
+            <CakeFirstView cakeId={cakeId} setCakeId={setCakeId} expandedId={expandedId} setExpandedId={setExpandedId} />
+          ) : (
+            <DrinkFirstView drinkId={drinkId} setDrinkId={setDrinkId} expandedId={expandedId} setExpandedId={setExpandedId} />
+          )}
+        </>
       )}
     </main>
   )
