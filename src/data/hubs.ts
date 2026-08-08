@@ -123,11 +123,6 @@ export const HUBS: Hub[] = [
         cakeId: 'cake_kladdkaka',
         cta: 'Create a Recipe →',
       },
-      {
-        to: '/bake-off',
-        title: 'Bake Off',
-        description: "Submit your Assembly Lab creation, vote on the community's favorites, and compete under this month's theme.",
-      },
     ],
   },
   {

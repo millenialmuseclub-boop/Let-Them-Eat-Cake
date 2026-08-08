@@ -1,20 +1,18 @@
 .bottom-tab-bar {
-  display: none;
-}
-
-@media (max-width: 640px) {
-  .bottom-tab-bar {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 20;
-    background: var(--bg-card);
-    border-top: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
-  }
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
 }
 
 .tab-bar-item {

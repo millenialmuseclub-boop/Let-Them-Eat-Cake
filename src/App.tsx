@@ -1,6 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
-import { NavBar } from './components/NavBar'
-import { HomePage } from './pages/HomePage'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { TimeMachinePage } from './pages/TimeMachinePage'
 import { AtlasPage } from './pages/AtlasPage'
 import { SommelierPage } from './pages/SommelierPage'
@@ -17,7 +15,6 @@ import { TechniqueLibraryPage } from './pages/TechniqueLibraryPage'
 import { CakeSciencePage } from './pages/CakeSciencePage'
 import { CakeBlueprintsPage } from './pages/CakeBlueprintsPage'
 import { CakeFailureLabPage } from './pages/CakeFailureLabPage'
-import { BakeOffPage } from './pages/BakeOffPage'
 import { CakeEncyclopediaIndexPage } from './pages/CakeEncyclopediaIndexPage'
 import { CakeDetailPage } from './pages/CakeDetailPage'
 import { PastryNotebookPage } from './pages/PastryNotebookPage'
@@ -39,9 +36,8 @@ import { HUBS } from './data/hubs'
 function App() {
   return (
     <>
-      <NavBar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Navigate to="/discover" replace />} />
         <Route path="/celebrate" element={<CelebrateLandingPage />} />
         <Route path="/my-cakes" element={<MyCakesLandingPage />} />
         {HUBS.filter(
@@ -66,7 +62,6 @@ function App() {
         <Route path="/cake-science" element={<CakeSciencePage />} />
         <Route path="/cake-blueprints" element={<CakeBlueprintsPage />} />
         <Route path="/cake-failure-lab" element={<CakeFailureLabPage />} />
-        <Route path="/bake-off" element={<BakeOffPage />} />
         <Route path="/encyclopedia" element={<CakeEncyclopediaIndexPage />} />
         <Route path="/cake/:id" element={<CakeDetailPage />} />
         <Route path="/notebook" element={<PastryNotebookPage />} />

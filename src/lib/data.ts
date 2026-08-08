@@ -8,7 +8,6 @@ import weddingCulturesJson from '../data/weddingCultures.json'
 import weddingAestheticsJson from '../data/weddingAesthetics.json'
 import weddingSeasonsJson from '../data/weddingSeasons.json'
 import assemblyComponentsJson from '../data/assemblyComponents.json'
-import bakeOffChallengesJson from '../data/bakeOffChallenges.json'
 import cakeAnatomyJson from '../data/cakeAnatomy.json'
 import cakePersonalitiesJson from '../data/cakePersonalities.json'
 import weddingDecorationStylesJson from '../data/weddingDecorationStyles.json'
@@ -31,7 +30,6 @@ import type { DrinkProfile } from '../types/sommelier'
 import type { EmergencyRecipe } from '../types/pantry'
 import type { WeddingCulture, WeddingAesthetic, WeddingSeasonEntry, WeddingDecorationStyle, WeddingFlavorDirection } from '../types/weddingCake'
 import type { AssemblyComponent } from '../types/assemblyLab'
-import type { BakeOffChallenge } from '../types/bakeOff'
 import type { CakeAnatomyStage } from '../types/cakeAnatomy'
 import type { CakePersonality } from '../types/personaMatch'
 import type { Collection } from '../types/collection'
@@ -56,7 +54,6 @@ export const weddingCultures = weddingCulturesJson as WeddingCulture[]
 export const weddingAesthetics = weddingAestheticsJson as WeddingAesthetic[]
 export const weddingSeasons = weddingSeasonsJson as WeddingSeasonEntry[]
 export const assemblyComponents = assemblyComponentsJson as AssemblyComponent[]
-export const bakeOffChallenges = bakeOffChallengesJson as BakeOffChallenge[]
 export const cakeAnatomyStages = cakeAnatomyJson as CakeAnatomyStage[]
 export const cakePersonalities = cakePersonalitiesJson as CakePersonality[]
 export const weddingDecorationStyles = weddingDecorationStylesJson as WeddingDecorationStyle[]
