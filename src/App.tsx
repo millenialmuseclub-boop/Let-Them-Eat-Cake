@@ -31,6 +31,7 @@ import { MyCollectionsIndexPage } from './pages/MyCollectionsIndexPage'
 import { MyCollectionDetailPage } from './pages/MyCollectionDetailPage'
 import { CuratedKitchenPage } from './pages/CuratedKitchenPage'
 import { CelebrateLandingPage } from './pages/CelebrateLandingPage'
+import { MyCakesLandingPage } from './pages/MyCakesLandingPage'
 import { HubPage } from './components/HubPage'
 import { BottomTabBar } from './components/BottomTabBar'
 import { HUBS } from './data/hubs'
@@ -42,7 +43,11 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/celebrate" element={<CelebrateLandingPage />} />
-        {HUBS.filter((hub): hub is Extract<typeof hub, { kind: 'landing' }> => hub.kind === 'landing' && hub.path !== '/celebrate').map((hub) => (
+        <Route path="/my-cakes" element={<MyCakesLandingPage />} />
+        {HUBS.filter(
+          (hub): hub is Extract<typeof hub, { kind: 'landing' }> =>
+            hub.kind === 'landing' && hub.path !== '/celebrate' && hub.path !== '/my-cakes',
+        ).map((hub) => (
           <Route key={hub.path} path={hub.path} element={<HubPage hub={hub} />} />
         ))}
         <Route path="/time-machine" element={<TimeMachinePage />} />
