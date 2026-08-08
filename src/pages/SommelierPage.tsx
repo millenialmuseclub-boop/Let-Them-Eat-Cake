@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { cakes, drinks } from '../lib/data'
 import { explainPairing, rankCakesForDrink, rankPairings } from '../lib/sommelier'
 import { getLifestylePairing } from '../lib/lifestylePairings'
+import { getRegionEntriesForCake, getDecadeForCake } from '../lib/encyclopedia'
 import { PairingComparisonCard } from '../components/PairingComparisonCard'
 import { DrinkImage } from '../components/DrinkImage'
 import { CakeHeroImage } from '../components/CakeHeroImage'
@@ -207,27 +208,121 @@ function DrinkFirstView({
   expandedId: string | null
   setExpandedId: (id: string | null) => void
 }) {
+  const [categoryId, setCategoryId] = useState<string | null>(null)
+  const [drinkChosen, setDrinkChosen] = useState(false)
+  const [showAllMatches, setShowAllMatches] = useState(false)
+
+  const activeGroup = DRINK_GROUPS.find((g) => g.id === categoryId)
+
+  function chooseCategory(id: string) {
+    setCategoryId(id)
+    setDrinkChosen(false)
+  }
+
+  function chooseDrink(id: string) {
+    setDrinkId(id)
+    setDrinkChosen(true)
+    setExpandedId(null)
+    setShowAllMatches(false)
+  }
+
+  if (!activeGroup) {
+    return (
+      <>
+        <h2 className="sommelier-section-heading">Choose a beverage category</h2>
+        <div className="sommelier-category-chips">
+          {DRINK_GROUPS.map((group) => (
+            <button key={group.id} className="sommelier-category-chip" onClick={() => chooseCategory(group.id)}>
+              {group.label}
+            </button>
+          ))}
+        </div>
+      </>
+    )
+  }
+
+  if (!drinkChosen) {
+    const categoryDrinks = drinks.filter((d) => activeGroup.categories.includes(d.category))
+    return (
+      <>
+        <button className="sommelier-back-link" onClick={() => setCategoryId(null)}>
+          ← Back to categories
+        </button>
+        <h2 className="sommelier-section-heading">{activeGroup.label}</h2>
+        <div className="sommelier-category-chips">
+          {categoryDrinks.map((d) => (
+            <button key={d.id} className="sommelier-category-chip" onClick={() => chooseDrink(d.id)}>
+              {d.name}
+            </button>
+          ))}
+        </div>
+      </>
+    )
+  }
+
   const drink = drinks.find((d) => d.id === drinkId)!
   const matches = rankCakesForDrink(drink, cakes)
+  const bestMatch = matches.slice(0, 1)
+  const strongMatches = matches.slice(1, 4)
+  const moreMatches = matches.slice(4)
+
+  function renderMatchRow(match: ReturnType<typeof rankCakesForDrink>[number]) {
+    const { cake, score, breakdown } = match
+    const isExpanded = expandedId === cake.id
+    const origin = getRegionEntriesForCake(cake.id)[0]?.country ?? getDecadeForCake(cake.id)?.decadeLabel
+    const reason = explainPairing(cake, drink, match)[0]
+    return (
+      <div key={cake.id} className="card pairing-card">
+        <button className="pairing-row" onClick={() => setExpandedId(isExpanded ? null : cake.id)}>
+          <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
+          <div className="pairing-score" style={{ background: scoreColor(score) }}>
+            {score}
+          </div>
+          <div className="pairing-details">
+            <h3>{cake.name}</h3>
+            {origin && <p className="pairing-bridge">{origin}</p>}
+            <p className="pairing-bridge">
+              {matchQualityLabel(score)} — {reason}
+            </p>
+            {breakdown.sharedNotes.length > 0 && <p className="pairing-bridge">Shared notes: {breakdown.sharedNotes.join(', ')}</p>}
+          </div>
+          <span className="pairing-toggle">{isExpanded ? 'Hide Pairing' : 'Explore Pairing →'}</span>
+        </button>
+
+        {isExpanded && (
+          <div className="pairing-expanded">
+            <div className="pairing-expanded-section">
+              <h4>Why this pairing works</h4>
+              <ul>
+                {explainPairing(cake, drink, match).map((sentence, i) => (
+                  <li key={i}>{sentence}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="pairing-expanded-section">
+              <h4>Flavor profile comparison</h4>
+              <PairingComparisonCard cake={cake} drink={drink} score={score} />
+            </div>
+
+            <LifestyleSection category={drink.category} />
+            <AffiliateProductSet title="Complete the Experience" products={getProductsForPairingCategory(drink.category)} />
+            <CopyPairingButton cakeName={cake.name} drinkName={drink.name} score={score} />
+
+            <Link to={`/cake/${cake.id}`} className="encyclopedia-link">
+              View full encyclopedia entry →
+            </Link>
+          </div>
+        )}
+      </div>
+    )
+  }
 
   return (
     <>
-      <label className="cake-select">
-        Drink
-        <select
-          value={drinkId}
-          onChange={(e) => {
-            setDrinkId(e.target.value)
-            setExpandedId(null)
-          }}
-        >
-          {drinks.map((d) => (
-            <option key={d.id} value={d.id}>
-              {d.name}
-            </option>
-          ))}
-        </select>
-      </label>
+      <button className="sommelier-back-link" onClick={() => setDrinkChosen(false)}>
+        ← Back to drinks
+      </button>
 
       <div className="card cake-summary">
         <DrinkImage drinkId={drink.id} variant="hero" alt={drink.name} />
@@ -253,58 +348,36 @@ function DrinkFirstView({
         </div>
       </div>
 
-      <div className="pairing-list">
-        {matches.map((match) => {
-          const { cake, score, breakdown } = match
-          const isExpanded = expandedId === cake.id
-          return (
-            <div key={cake.id} className="card pairing-card">
-              <button className="pairing-row" onClick={() => setExpandedId(isExpanded ? null : cake.id)}>
-                <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
-                <div className="pairing-score" style={{ background: scoreColor(score) }}>
-                  {score}
-                </div>
-                <div className="pairing-details">
-                  <h3>{cake.name}</h3>
-                  {breakdown.sharedNotes.length > 0 && (
-                    <p className="pairing-bridge">Shared notes: {breakdown.sharedNotes.join(', ')}</p>
-                  )}
-                  {breakdown.cleansingBonus > 0 && <p className="pairing-bridge">This drink cuts through the richness of this cake</p>}
-                </div>
-                <span className="pairing-toggle">{isExpanded ? 'Hide details' : 'Show details'}</span>
-              </button>
+      <h2 className="sommelier-section-heading">🥇 Best Match</h2>
+      <div className="pairing-list">{bestMatch.map(renderMatchRow)}</div>
 
-              {isExpanded && (
-                <div className="pairing-expanded">
-                  <div className="pairing-expanded-section">
-                    <h4>Why this pairing works</h4>
-                    <ul>
-                      {explainPairing(cake, drink, match).map((sentence, i) => (
-                        <li key={i}>{sentence}</li>
-                      ))}
-                    </ul>
-                  </div>
+      {strongMatches.length > 0 && (
+        <>
+          <h2 className="sommelier-section-heading">Strong Matches</h2>
+          <div className="pairing-list">{strongMatches.map(renderMatchRow)}</div>
+        </>
+      )}
 
-                  <div className="pairing-expanded-section">
-                    <h4>Flavor profile comparison</h4>
-                    <PairingComparisonCard cake={cake} drink={drink} score={score} />
-                  </div>
+      {moreMatches.length > 0 && !showAllMatches && (
+        <button className="btn btn-secondary" onClick={() => setShowAllMatches(true)}>
+          View More Matches
+        </button>
+      )}
 
-                  <LifestyleSection category={drink.category} />
-                  <AffiliateProductSet title="Complete the Experience" products={getProductsForPairingCategory(drink.category)} />
-                  <CopyPairingButton cakeName={cake.name} drinkName={drink.name} score={score} />
-
-                  <Link to={`/cake/${cake.id}`} className="encyclopedia-link">
-                    View full encyclopedia entry →
-                  </Link>
-                </div>
-              )}
-            </div>
-          )
-        })}
-      </div>
+      {moreMatches.length > 0 && showAllMatches && (
+        <>
+          <h2 className="sommelier-section-heading">More Matches</h2>
+          <div className="pairing-list">{moreMatches.map(renderMatchRow)}</div>
+        </>
+      )}
     </>
   )
+}
+
+function matchQualityLabel(score: number): string {
+  if (score >= 70) return 'Excellent Match'
+  if (score >= 45) return 'Good Match'
+  return 'Playful Pairing'
 }
 
 function LifestyleSection({ category }: { category: DrinkCategory }) {
