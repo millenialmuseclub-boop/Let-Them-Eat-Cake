@@ -27,7 +27,7 @@
     "url": "https://go.shopmy.us/p-77598720",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-stability", "/cake-blueprints"]
+    "associatedHubPaths": ["/cake-stability", "/cake-blueprints", "/encyclopedia"]
   },
   {
     "id": "product_thermapen",
@@ -36,7 +36,7 @@
     "url": "https://go.shopmy.us/p-77601195",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-stability", "/cake-science", "/cake-blueprints", "/cake-failure-lab"],
+    "associatedHubPaths": ["/cake-stability", "/cake-science", "/cake-blueprints", "/cake-failure-lab", "/encyclopedia"],
     "associatedTechniqueIds": ["ganache"],
     "editorialNote": "Instant, accurate reads take the guesswork out of ganache, custard, and syrup temperatures."
   },
@@ -72,7 +72,7 @@
     "url": "https://go.shopmy.us/p-77173367",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-stability", "/cake-science", "/cake-blueprints", "/cake-failure-lab"],
+    "associatedHubPaths": ["/cake-stability", "/cake-science", "/cake-blueprints", "/cake-failure-lab", "/encyclopedia"],
     "editorialNote": "Weight-based baking is the single biggest upgrade for consistent results, tier after tier."
   },
   {
@@ -113,7 +113,7 @@
     "url": "https://go.shopmy.us/p-77099492",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-anatomy", "/cake-blueprints", "/technique-library"],
+    "associatedHubPaths": ["/cake-anatomy", "/cake-blueprints", "/technique-library", "/encyclopedia"],
     "associatedTechniqueIds": ["buttercream_smoothing"]
   },
   {

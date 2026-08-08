@@ -4,6 +4,7 @@ import { getCake, getRecipeForCake } from '../lib/data'
 import { getRegionEntriesForCake, getDecadeForCake, getTopPairings, getRelatedCakes } from '../lib/encyclopedia'
 import { getCakeImage } from '../lib/images'
 import { recordCakeView } from '../lib/recentlyViewed'
+import { getProductsForHubPath, getProductsForIngredient } from '../lib/affiliateProducts'
 import { FlavorProfileBars } from '../components/FlavorProfileBars'
 import { CakeOriginStory } from '../components/CakeOriginStory'
 import { RecipeCard } from '../components/RecipeCard'
@@ -11,6 +12,7 @@ import { SaveButton } from '../components/SaveButton'
 import { AddToCollectionButton } from '../components/AddToCollectionButton'
 import { CakeHeroImage } from '../components/CakeHeroImage'
 import { SocialShareCard } from '../components/SocialShareCard'
+import { AffiliateProductSet } from '../components/AffiliateProductSet'
 import './CakeDetailPage.css'
 
 function scoreColor(score: number): string {
@@ -50,6 +52,10 @@ export function CakeDetailPage() {
     ...(primaryRegion ? [{ label: primaryRegion.country, text: primaryRegion.historyNote }] : []),
     ...(decade ? [{ label: decade.decadeLabel, text: decade.eraContext }] : []),
   ]
+
+  const bakingTools = getProductsForHubPath('/encyclopedia')
+  const vanillaMatch = cake.flavorNotes.some((n) => /vanilla/i.test(n)) ? getProductsForIngredient('vanilla-extract') : []
+  const chocolateMatch = cake.flavorNotes.some((n) => /chocolate|cocoa/i.test(n)) ? getProductsForIngredient('dark-chocolate') : []
 
   return (
     <main className="page cake-detail-page">
@@ -141,6 +147,8 @@ export function CakeDetailPage() {
           </Link>
         </section>
       )}
+
+      <AffiliateProductSet title="Baking This Cake?" products={[...vanillaMatch, ...chocolateMatch, ...bakingTools]} />
     </main>
   )
 }
