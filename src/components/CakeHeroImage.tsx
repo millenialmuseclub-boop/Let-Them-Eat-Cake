@@ -9,15 +9,9 @@ export function CakeHeroImage({ cakeId, variant, alt }: { cakeId: string; varian
     <div className={`cake-hero-image cake-hero-image-${variant}`}>
       <img src={image.url} alt={alt} loading="lazy" />
       {variant === 'hero' && (
-        <p className="cake-hero-image-credit" title={`Photo by ${image.photographer} on Unsplash`}>
-          <a href={image.photographerUrl} target="_blank" rel="noreferrer">
-            {image.photographer}
-          </a>{' '}
-          /{' '}
-          <a href={image.unsplashUrl} target="_blank" rel="noreferrer">
-            Unsplash
-          </a>
-        </p>
+        <span className="cake-hero-image-credit" title={`Photo by ${image.photographer} on Unsplash`}>
+          {image.photographer} / Unsplash
+        </span>
       )}
     </div>
   )
