@@ -9,6 +9,7 @@ import { getTopPairings } from '../lib/encyclopedia'
 import { RecipeCard } from '../components/RecipeCard'
 import { WeddingCakeDiagram } from '../components/WeddingCakeDiagram'
 import { AffiliateProductSet } from '../components/AffiliateProductSet'
+import { CelebrateShareCard } from '../components/CelebrateShareCard'
 import { getProductsByIds } from '../lib/affiliateProducts'
 import './WeddingCakePlannerPage.css'
 
@@ -329,6 +330,7 @@ export function WeddingCakePlannerPage({
           </div>
 
           <CelebrationConcept result={result} />
+          <CelebrateShareCard result={result} />
 
           <section className="card wedding-section">
             <h2>💍 Cultural History &amp; Traditions</h2>

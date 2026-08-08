@@ -8,6 +8,7 @@ import { PairingComparisonCard } from '../components/PairingComparisonCard'
 import { DrinkImage } from '../components/DrinkImage'
 import { CakeHeroImage } from '../components/CakeHeroImage'
 import { AffiliateProductSet } from '../components/AffiliateProductSet'
+import { SommelierShareCard } from '../components/SommelierShareCard'
 import { getProductsForPairingCategory } from '../lib/affiliateProducts'
 import type { DrinkCategory } from '../types/sommelier'
 import './SommelierPage.css'
@@ -128,7 +129,7 @@ function CakeFirstView({
 
             <LifestyleSection category={drink.category} />
             <AffiliateProductSet title="Complete the Experience" products={getProductsForPairingCategory(drink.category)} />
-            <CopyPairingButton cakeName={cake.name} drinkName={drink.name} score={score} />
+            <SommelierShareCard cake={cake} drink={drink} score={score} reason={explainPairing(cake, drink, pairing)[0]} />
           </div>
         )}
       </div>
@@ -307,7 +308,7 @@ function DrinkFirstView({
 
             <LifestyleSection category={drink.category} />
             <AffiliateProductSet title="Complete the Experience" products={getProductsForPairingCategory(drink.category)} />
-            <CopyPairingButton cakeName={cake.name} drinkName={drink.name} score={score} />
+            <SommelierShareCard cake={cake} drink={drink} score={score} reason={reason} />
 
             <Link to={`/cake/${cake.id}`} className="encyclopedia-link">
               View full encyclopedia entry →
@@ -400,24 +401,6 @@ function LifestyleSection({ category }: { category: DrinkCategory }) {
         <strong>Best for:</strong> {lifestyle.occasion}
       </p>
     </div>
-  )
-}
-
-function CopyPairingButton({ cakeName, drinkName, score }: { cakeName: string; drinkName: string; score: number }) {
-  const [copied, setCopied] = useState(false)
-
-  async function handleCopy() {
-    await navigator.clipboard.writeText(
-      `${cakeName} + ${drinkName} — a ${score}/100 pairing 🍰🥂 #LetThemEatCake ${typeof window !== 'undefined' ? window.location.href : ''}`,
-    )
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-
-  return (
-    <button className="btn btn-secondary pairing-copy-button" onClick={handleCopy}>
-      {copied ? 'Copied!' : '📣 Copy this pairing'}
-    </button>
   )
 }
 
