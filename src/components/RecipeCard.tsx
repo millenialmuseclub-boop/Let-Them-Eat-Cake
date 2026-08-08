@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import type { DietTag, Recipe } from '../types/cake'
 import { scaleRecipe, type UnitSystem } from '../lib/units'
 import { slugify } from '../lib/ingredients'
+import { getCake } from '../lib/data'
+import { RecipeShareCard } from './RecipeShareCard'
 import './RecipeCard.css'
 
 const DIET_OPTIONS: { value: DietTag | 'none'; label: string }[] = [
@@ -18,8 +20,10 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
   const [servings, setServings] = useState(recipe.baseServings)
   const [unitSystem, setUnitSystem] = useState<UnitSystem>('metric')
   const [diet, setDiet] = useState<DietTag | 'none'>('none')
+  const [showShare, setShowShare] = useState(false)
 
   const ingredients = scaleRecipe(recipe, servings, unitSystem, diet === 'none' ? undefined : diet)
+  const cake = getCake(recipe.cakeId)
 
   return (
     <div className="card recipe-card">
@@ -73,6 +77,15 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
           <li key={i}>{step}</li>
         ))}
       </ol>
+
+      {cake && (
+        <>
+          <button className="btn btn-secondary" onClick={() => setShowShare((s) => !s)}>
+            Share Recipe
+          </button>
+          {showShare && <RecipeShareCard cake={cake} />}
+        </>
+      )}
     </div>
   )
 }

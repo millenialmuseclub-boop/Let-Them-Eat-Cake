@@ -1,5 +1,4 @@
 import type { CakePersonality } from '../types/personaMatch'
-import { getPersonalityImage } from '../lib/personalityImages'
 import { SocialShareCard } from './SocialShareCard'
 
 export function PersonaShareCard({ personality, deepLinkPath }: { personality: CakePersonality; deepLinkPath: string }) {
@@ -12,8 +11,7 @@ export function PersonaShareCard({ personality, deepLinkPath }: { personality: C
       title={personality.name}
       subtitle={personality.personalityTitle}
       bodyText={personality.description}
-      colorHex={personality.colorHex}
-      imageUrl={getPersonalityImage(personality.id)?.url}
+      cta="Take the Cake Personality Quiz"
       shareUrl={shareUrl}
       shareText={shareText}
       filename={`${personality.id}-cake-personality`}

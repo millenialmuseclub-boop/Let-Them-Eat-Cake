@@ -77,7 +77,8 @@ export function MyCollectionDetailPage() {
             eyebrow="My Collection"
             title={collection.name}
             subtitle={`${cakes.length} ${cakes.length === 1 ? 'cake' : 'cakes'}`}
-            colorHex="var(--gold)"
+            detailLines={cakes.map((c) => c.name)}
+            cta="Save your own collection"
             shareUrl={shareUrl}
             shareText={`Check out my "${collection.name}" collection: ${cakeNames} 🎂 #LetThemEatCake`}
             filename={`${collection.id}-collection`}

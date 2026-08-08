@@ -10,77 +10,90 @@
   width: 270px;
   aspect-ratio: 9 / 16;
   border-radius: 20px;
-  padding: 28px 20px;
+  padding: 32px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  color: white;
+  gap: 10px;
+  color: #f6ead9;
+  background: linear-gradient(165deg, #3d2314 0%, #2a1710 100%);
+  border: 1px solid rgba(246, 234, 217, 0.15);
   box-shadow: var(--shadow);
   overflow: hidden;
+}
+
+.social-share-brand {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.75;
 }
 
 .social-share-eyebrow {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-size: 12px;
-  opacity: 0.85;
-  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--raspberry, #e88d9e);
+  margin-top: 4px;
 }
 
 .social-share-title {
-  color: white;
-  font-size: 24px;
-  margin-bottom: 4px;
+  color: #f6ead9;
+  font-size: 26px;
+  line-height: 1.15;
+  margin: 2px 0;
 }
 
 .social-share-subtitle {
   font-size: 14px;
+  opacity: 0.85;
+}
+
+.social-share-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0;
+  font-size: 13px;
+  line-height: 1.6;
   opacity: 0.9;
-  margin-bottom: 12px;
+}
+
+.social-share-body-block {
+  margin: 4px 0;
+}
+
+.social-share-body-label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--raspberry, #e88d9e);
+  margin-bottom: 4px;
 }
 
 .social-share-body {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: 0.85;
-  margin-bottom: 12px;
+  font-size: 13px;
+  line-height: 1.45;
+  opacity: 0.9;
 }
 
-.social-share-image {
-  width: 100%;
-  flex: 1;
-  min-height: 0;
-  object-fit: cover;
-  border-radius: 12px;
-  margin: 8px 0;
-}
-
-.social-share-fallback-visual {
-  flex: 1;
-  min-height: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 96px;
-  opacity: 0.35;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
-}
-
-.social-share-visual {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+.social-share-cta {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--raspberry, #e88d9e);
+  margin-top: 6px;
 }
 
 .social-share-wordmark {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  opacity: 0.9;
-  margin: 6px 0 0;
+  letter-spacing: 0.5px;
+  opacity: 0.6;
+  margin-top: 8px;
 }
 
 .social-share-actions {
@@ -88,29 +101,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-}
-
-.social-share-platform-row {
-  display: flex;
-  gap: 12px;
-}
-
-.social-share-platform-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  color: var(--text);
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.social-share-platform-link:hover {
-  border-color: var(--raspberry);
 }
 
 @media (max-width: 480px) {

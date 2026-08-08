@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getCake, getRecipeForCake } from '../lib/data'
 import { getRegionEntriesForCake, getDecadeForCake, getTopPairings, getRelatedCakes } from '../lib/encyclopedia'
-import { getCakeImage } from '../lib/images'
 import { recordCakeView } from '../lib/recentlyViewed'
 import { getProductsForHubPath, getProductsForIngredient, getProductsForCakeId, getProductsByIds } from '../lib/affiliateProducts'
 import { FlavorProfileBars } from '../components/FlavorProfileBars'
@@ -101,12 +100,12 @@ export function CakeDetailPage() {
       <section className="card cake-detail-section">
         <h2>📣 Share this Cake</h2>
         <SocialShareCard
-          eyebrow="Cake Encyclopedia"
+          eyebrow="From the Cake Encyclopedia"
           title={cake.name}
           subtitle={locationLabel ?? undefined}
+          detailLines={cake.flavorNotes}
           bodyText={cake.description}
-          colorHex="var(--raspberry)"
-          imageUrl={getCakeImage(cake.id)?.url}
+          cta="Discover its story"
           shareUrl={typeof window !== 'undefined' ? window.location.href : ''}
           shareText={`${cake.name} — from the Let Them Eat Cake Encyclopedia 🎂`}
           filename={`${cake.id}-cake`}

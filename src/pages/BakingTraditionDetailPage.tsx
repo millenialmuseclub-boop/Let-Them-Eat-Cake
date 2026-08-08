@@ -44,7 +44,8 @@ export function BakingTraditionDetailPage() {
           eyebrow="Baking Tradition"
           title={tradition.title}
           subtitle={tradition.specialty}
-          colorHex="var(--gold)"
+          bodyText={tradition.description}
+          cta="Explore the tradition"
           shareUrl={typeof window !== 'undefined' ? window.location.href : ''}
           shareText={`${tradition.title}: ${tradition.description}`}
           filename={`${tradition.id}-tradition`}

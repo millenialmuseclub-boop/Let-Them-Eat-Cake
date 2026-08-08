@@ -46,7 +46,8 @@ export function CollectionDetailPage() {
           eyebrow="Curated Collection"
           title={collection.title}
           subtitle={`${cakes.length} cakes`}
-          colorHex="var(--gold)"
+          bodyText={collection.description}
+          cta="Explore the collection"
           shareUrl={typeof window !== 'undefined' ? window.location.href : ''}
           shareText={`${collection.title}: ${collection.description}`}
           filename={`${collection.id}-collection`}
