@@ -245,3 +245,14 @@
     max-width: 280px;
   }
 }
+
+.wedding-styling-section {
+  background: var(--bg);
+  border-style: dashed;
+}
+
+.wedding-styling-section .affiliate-product-set {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}

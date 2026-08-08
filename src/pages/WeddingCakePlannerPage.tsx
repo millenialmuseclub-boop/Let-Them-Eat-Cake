@@ -8,7 +8,19 @@ import { rankDecorationStyles } from '../lib/weddingDecoration'
 import { getTopPairings } from '../lib/encyclopedia'
 import { RecipeCard } from '../components/RecipeCard'
 import { WeddingCakeDiagram } from '../components/WeddingCakeDiagram'
+import { AffiliateProductSet } from '../components/AffiliateProductSet'
+import { getProductsByIds } from '../lib/affiliateProducts'
 import './WeddingCakePlannerPage.css'
+
+/** Only decoration styles with a genuine, defensible product connection get a mapping — not every style is forced to match. */
+const DECORATION_STYLE_PRODUCT_IDS: Record<string, string[]> = {
+  decor_classic_buttercream_rosettes: ['product_decorating_kit', 'product_revolving_cake_stand'],
+  decor_fondant_lace: ['product_decorating_kit'],
+  decor_watercolor_painted: ['product_gel_colors'],
+  decor_sugar_flower_sculptural: ['product_gel_colors', 'product_marble_pastry_board'],
+  decor_modern_geometric: ['product_scraper', 'product_offset_spatula'],
+  decor_metallic_drip: ['product_offset_spatula'],
+}
 
 const OCCASION_OPTIONS: { value: CelebrationOccasion; label: string; swatchHex: string }[] = [
   { value: 'wedding', label: 'Wedding', swatchHex: '#f6cbe0' },
@@ -450,6 +462,16 @@ export function WeddingCakePlannerPage({
             </p>
             <p className="budget-note">{result.budgetEstimate.note}</p>
           </section>
+
+          {(() => {
+            const stylingProducts = getProductsByIds(DECORATION_STYLE_PRODUCT_IDS[result.decorationStyle.id] ?? [])
+            if (stylingProducts.length === 0) return null
+            return (
+              <section className="card wedding-section wedding-styling-section">
+                <AffiliateProductSet title="Curator's Styling Picks" products={stylingProducts} />
+              </section>
+            )
+          })()}
         </div>
       )}
         </>
