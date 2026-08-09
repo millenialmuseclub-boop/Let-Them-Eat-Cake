@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom'
 import { CakeHeroImage } from './CakeHeroImage'
 import './DiscoverFeatureCard.css'
 
-export function DiscoverFeatureCard({
-  to,
+function DiscoverFeatureCardBody({
   title,
   description,
   cta,
@@ -12,10 +11,7 @@ export function DiscoverFeatureCard({
   imageUrl,
   imageAlt,
   photographer,
-  photographerUrl,
-  unsplashUrl,
 }: {
-  to: string
   title: string
   description: string
   cta: string
@@ -28,20 +24,14 @@ export function DiscoverFeatureCard({
   unsplashUrl?: string
 }) {
   return (
-    <Link to={to} className="discover-feature-card">
+    <>
       {cakeId && <CakeHeroImage cakeId={cakeId} variant="hero" alt={imageAlt ?? title} />}
       {imageUrl && (
         <div className="discover-feature-card-image">
           <img src={imageUrl} alt={imageAlt ?? title} loading="lazy" />
-          {photographer && photographerUrl && unsplashUrl && (
+          {photographer && (
             <p className="discover-feature-card-credit" title={`Photo by ${photographer} on Unsplash`}>
-              <a href={photographerUrl} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
-                {photographer}
-              </a>{' '}
-              /{' '}
-              <a href={unsplashUrl} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
-                Unsplash
-              </a>
+              {photographer} / Unsplash
             </p>
           )}
         </div>
@@ -52,6 +42,37 @@ export function DiscoverFeatureCard({
         {meta && <span className="discover-feature-card-meta">{meta}</span>}
         <span className="btn discover-feature-card-cta">{cta}</span>
       </div>
-    </Link>
+    </>
+  )
+}
+
+type DiscoverFeatureCardProps = {
+  title: string
+  description: string
+  cta: string
+  meta?: string
+  cakeId?: string
+  imageUrl?: string
+  imageAlt?: string
+  photographer?: string
+  photographerUrl?: string
+  unsplashUrl?: string
+} & ({ to: string; onClick?: never } | { to?: never; onClick: () => void })
+
+export function DiscoverFeatureCard(props: DiscoverFeatureCardProps) {
+  const { to, onClick, ...body } = props
+
+  if (to) {
+    return (
+      <Link to={to} className="discover-feature-card">
+        <DiscoverFeatureCardBody {...body} />
+      </Link>
+    )
+  }
+
+  return (
+    <button className="discover-feature-card" onClick={onClick}>
+      <DiscoverFeatureCardBody {...body} />
+    </button>
   )
 }

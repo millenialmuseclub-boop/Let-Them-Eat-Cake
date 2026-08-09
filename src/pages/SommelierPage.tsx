@@ -11,7 +11,9 @@ import { DrinkImage } from '../components/DrinkImage'
 import { CakeHeroImage } from '../components/CakeHeroImage'
 import { AffiliateProductSet } from '../components/AffiliateProductSet'
 import { SommelierShareCard } from '../components/SommelierShareCard'
+import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
 import { getProductsForPairingCategory } from '../lib/affiliateProducts'
+import { getDrinkImage } from '../lib/drinkImages'
 import type { DrinkCategory } from '../types/sommelier'
 import './SommelierPage.css'
 
@@ -49,23 +51,25 @@ export function SommelierPage() {
       <p>Pick a cake to find its best drink pairings, or start from a drink to find the cakes that match it — all scored by flavor science.</p>
 
       {!modeChosen ? (
-        <div className="sommelier-landing-grid">
-          <button className="hub-photo-card" onClick={() => chooseMode('cake-first')}>
-            <CakeHeroImage cakeId="cake_pavlova" variant="hero" alt="Pair by Cake" />
-            <div className="hub-photo-card-content">
-              <h2>Pair by Cake</h2>
-              <p>Choose a cake and discover what belongs beside it.</p>
-              <span className="btn hub-photo-card-cta">Start With Cake →</span>
-            </div>
-          </button>
-          <button className="hub-photo-card" onClick={() => chooseMode('drink-first')}>
-            <DrinkImage drinkId="drink_espresso" variant="hero" alt="Pair by Drink" />
-            <div className="hub-photo-card-content">
-              <h2>Pair by Drink</h2>
-              <p>Choose your drink and discover its perfect cakes.</p>
-              <span className="btn hub-photo-card-cta">Start With Drink →</span>
-            </div>
-          </button>
+        <div className="discover-feature-grid">
+          <DiscoverFeatureCard
+            onClick={() => chooseMode('cake-first')}
+            title="Pair by Cake"
+            description="Choose a cake and discover what belongs beside it."
+            cta="Start With Cake →"
+            cakeId="cake_pavlova"
+          />
+          <DiscoverFeatureCard
+            onClick={() => chooseMode('drink-first')}
+            title="Pair by Drink"
+            description="Choose your drink and discover its perfect cakes."
+            cta="Start With Drink →"
+            imageUrl={getDrinkImage('drink_espresso')?.url}
+            imageAlt="Pair by Drink"
+            photographer={getDrinkImage('drink_espresso')?.photographer}
+            photographerUrl={getDrinkImage('drink_espresso')?.photographerUrl}
+            unsplashUrl={getDrinkImage('drink_espresso')?.unsplashUrl}
+          />
         </div>
       ) : (
         <>
