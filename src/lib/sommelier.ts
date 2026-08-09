@@ -97,3 +97,23 @@ export function explainPairing(cake: CakeProfile, drink: DrinkProfile, result: P
 
   return sentences
 }
+
+/** Restructures the same real score breakdown into the 3 named pairing-science concepts — no new scoring, just relabeling existing signals. */
+export function explainPairingScience(cake: CakeProfile, drink: DrinkProfile, result: PairingResult): { bridging?: string; cutting?: string; echoing?: string } {
+  const { breakdown } = result
+  const science: { bridging?: string; cutting?: string; echoing?: string } = {}
+
+  if (breakdown.sharedNotes.length > 0) {
+    science.bridging = `${cake.name} and ${drink.name} share ${breakdown.sharedNotes.join(', ')} flavor notes, creating a direct bridge between the two.`
+  }
+
+  if (breakdown.cleansingBonus > 0) {
+    science.cutting = `${drink.name}'s acidity, carbonation, or tannin cuts through the cake's richness and resets your palate between bites.`
+  }
+
+  if (breakdown.intensityPenalty === 0) {
+    science.echoing = `${cake.name} and ${drink.name} are closely matched in intensity, so each one echoes and reinforces the other rather than one overwhelming it.`
+  }
+
+  return science
+}

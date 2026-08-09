@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { cakes, drinks } from '../lib/data'
-import { explainPairing, rankCakesForDrink, rankPairings } from '../lib/sommelier'
+import { explainPairing, explainPairingScience, rankCakesForDrink, rankPairings } from '../lib/sommelier'
+import type { CakeProfile } from '../types/cake'
+import type { DrinkProfile, PairingResult } from '../types/sommelier'
 import { getLifestylePairing } from '../lib/lifestylePairings'
 import { getRegionEntriesForCake, getDecadeForCake } from '../lib/encyclopedia'
 import { PairingComparisonCard } from '../components/PairingComparisonCard'
@@ -132,6 +134,8 @@ function CakeFirstView({
                 ))}
               </ul>
             </div>
+
+            <PairingScienceSection cake={cake} drink={drink} result={pairing} />
 
             <div className="pairing-expanded-section">
               <h4>Serving guidance</h4>
@@ -315,6 +319,7 @@ function DrinkFirstView({
               {matchQualityLabel(score)} — {reason}
             </p>
             {breakdown.sharedNotes.length > 0 && <p className="pairing-bridge">Shared notes: {breakdown.sharedNotes.join(', ')}</p>}
+            {breakdown.cleansingBonus > 0 && <p className="pairing-bridge">Cuts through the richness of this cake</p>}
           </div>
           <span className="pairing-toggle">{isExpanded ? 'Hide Pairing' : 'Explore Pairing →'}</span>
         </button>
@@ -329,6 +334,8 @@ function DrinkFirstView({
                 ))}
               </ul>
             </div>
+
+            <PairingScienceSection cake={cake} drink={drink} result={match} />
 
             <div className="pairing-expanded-section">
               <h4>Flavor profile comparison</h4>
@@ -378,25 +385,25 @@ function DrinkFirstView({
         </div>
       </div>
 
-      <h2 className="sommelier-section-heading">🥇 Best Match</h2>
+      <h2 className="sommelier-section-heading">🥇 Top Pairing</h2>
       <div className="pairing-list">{bestMatch.map(renderMatchRow)}</div>
 
       {strongMatches.length > 0 && (
         <>
-          <h2 className="sommelier-section-heading">Strong Matches</h2>
+          <h2 className="sommelier-section-heading">Also Excellent</h2>
           <div className="pairing-list">{strongMatches.map(renderMatchRow)}</div>
         </>
       )}
 
       {moreMatches.length > 0 && !showAllMatches && (
         <button className="btn btn-secondary" onClick={() => setShowAllMatches(true)}>
-          View More Matches
+          View More Pairings →
         </button>
       )}
 
       {moreMatches.length > 0 && showAllMatches && (
         <>
-          <h2 className="sommelier-section-heading">More Matches</h2>
+          <h2 className="sommelier-section-heading">Also Excellent</h2>
           <div className="pairing-list">{moreMatches.map(renderMatchRow)}</div>
         </>
       )}
@@ -408,6 +415,32 @@ function matchQualityLabel(score: number): string {
   if (score >= 70) return 'Excellent Match'
   if (score >= 45) return 'Good Match'
   return 'Playful Pairing'
+}
+
+function PairingScienceSection({ cake, drink, result }: { cake: CakeProfile; drink: DrinkProfile; result: PairingResult }) {
+  const science = explainPairingScience(cake, drink, result)
+  if (!science.bridging && !science.cutting && !science.echoing) return null
+
+  return (
+    <div className="pairing-expanded-section">
+      <h4>🔬 Pairing Science</h4>
+      {science.bridging && (
+        <p>
+          <strong>Bridging:</strong> {science.bridging}
+        </p>
+      )}
+      {science.cutting && (
+        <p>
+          <strong>Cutting:</strong> {science.cutting}
+        </p>
+      )}
+      {science.echoing && (
+        <p>
+          <strong>Echoing:</strong> {science.echoing}
+        </p>
+      )}
+    </div>
+  )
 }
 
 function LifestyleSection({ category }: { category: DrinkCategory }) {
