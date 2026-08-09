@@ -1,0 +1,10 @@
+.other-celebration-progress {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 16px;
+}
+
+.birthday-tile.active {
+  border-color: var(--raspberry);
+  box-shadow: 0 0 0 2px var(--raspberry);
+}

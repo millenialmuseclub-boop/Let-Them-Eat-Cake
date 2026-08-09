@@ -1,5 +1,5 @@
-import { WeddingCakePlannerPage } from './WeddingCakePlannerPage'
+import { OtherCelebrationJourneyPage } from './OtherCelebrationJourneyPage'
 
 export function OtherCelebrationsPage() {
-  return <WeddingCakePlannerPage occasionChoices={['baby-shower', 'holiday', 'graduation', 'anniversary']} />
+  return <OtherCelebrationJourneyPage />
 }

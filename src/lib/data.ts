@@ -25,6 +25,8 @@ import blueprintExamplesJson from '../data/blueprintExamples.json'
 import cakeFailuresJson from '../data/cakeFailures.json'
 import birthdayEnergiesJson from '../data/birthdayEnergies.json'
 import birthdayFlavorsJson from '../data/birthdayFlavors.json'
+import otherCelebrationOccasionsJson from '../data/otherCelebrationOccasions.json'
+import otherCelebrationMoodsJson from '../data/otherCelebrationMoods.json'
 import type { CakeProfile, Recipe } from '../types/cake'
 import type { HistoricalCakeEntry } from '../types/timeMachine'
 import type { RegionalCakeEntry } from '../types/atlas'
@@ -46,6 +48,7 @@ import type { CakeScienceTopic } from '../types/cakeScience'
 import type { BlueprintExample } from '../types/blueprintExample'
 import type { CakeFailure } from '../types/cakeFailure'
 import type { BirthdayEnergy, BirthdayFlavor } from '../types/birthday'
+import type { OtherCelebrationOccasion } from '../types/otherCelebration'
 
 export const cakes = cakesJson as CakeProfile[]
 export const decades = decadesJson as HistoricalCakeEntry[]
@@ -74,6 +77,8 @@ export const blueprintExamples = blueprintExamplesJson as BlueprintExample[]
 export const cakeFailures = cakeFailuresJson as CakeFailure[]
 export const birthdayEnergies = birthdayEnergiesJson as BirthdayEnergy[]
 export const birthdayFlavors = birthdayFlavorsJson as BirthdayFlavor[]
+export const otherCelebrationOccasions = otherCelebrationOccasionsJson as OtherCelebrationOccasion[]
+export const otherCelebrationMoods = otherCelebrationMoodsJson as BirthdayEnergy[]
 
 function toMap<T extends { id: string }>(items: T[]): Map<string, T> {
   return new Map(items.map((item) => [item.id, item]))

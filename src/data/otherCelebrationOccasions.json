@@ -1,0 +1,11 @@
+[
+  { "id": "occasion_anniversary", "name": "Anniversary" },
+  { "id": "occasion_baby_shower", "name": "Baby Shower" },
+  { "id": "occasion_engagement", "name": "Engagement" },
+  { "id": "occasion_graduation", "name": "Graduation" },
+  { "id": "occasion_dinner_party", "name": "Dinner Party" },
+  { "id": "occasion_retirement", "name": "Retirement" },
+  { "id": "occasion_holiday", "name": "Holiday" },
+  { "id": "occasion_corporate", "name": "Corporate" },
+  { "id": "occasion_just_because", "name": "Just Because" }
+]
