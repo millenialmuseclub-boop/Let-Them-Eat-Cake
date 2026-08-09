@@ -1,0 +1,11 @@
+.birthday-result-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.birthday-diet-note {
+  font-size: 13px;
+  opacity: 0.75;
+  margin-top: 8px;
+}

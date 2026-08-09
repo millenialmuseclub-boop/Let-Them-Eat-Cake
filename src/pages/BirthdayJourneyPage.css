@@ -1,0 +1,11 @@
+.birthday-journey-progress {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 16px;
+}
+
+.birthday-tile {
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
