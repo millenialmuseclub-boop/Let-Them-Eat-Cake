@@ -38,7 +38,7 @@ export const HUBS: Hub[] = [
       {
         to: '/encyclopedia',
         title: 'Cake Encyclopedia',
-        description: 'Browse the full archive of 50 cakes — history, flavor profile, traditional recipe, and related finds for every entry.',
+        description: 'The stories, flavors, techniques and traditions behind the world\'s cakes — history, flavor profile, traditional recipe, and related finds for every entry.',
         cakeId: 'cake_black_forest',
         cta: 'Explore Encyclopedia →',
       },

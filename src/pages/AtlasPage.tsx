@@ -1,8 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { getCake, getRecipe, regions, collections } from '../lib/data'
+import { getCake, getRecipe, regions } from '../lib/data'
 import { getAllCountries, getCountryEntries, getPrimaryEntry, getRelatedCountries } from '../lib/atlas'
-import { FEATURED_COLLECTION_IDS } from '../lib/collections'
 import { RecipeCard } from '../components/RecipeCard'
 import { AtlasWorldMap } from '../components/AtlasWorldMap'
 import { CakeHeroImage } from '../components/CakeHeroImage'
@@ -35,8 +34,8 @@ export function AtlasPage() {
     }
   }
 
-  const featuredCollections = FEATURED_COLLECTION_IDS.map((id) => collections.find((c) => c.id === id)).filter((c) => c !== undefined)
   const regionEntries = selectedRegion ? regions.filter((r) => r.isPrimary && r.region === selectedRegion) : []
+  const alphabeticalCountries = useMemo(() => [...allCountries].sort((a, b) => a.localeCompare(b)), [allCountries])
 
   const countryEntries = country ? getCountryEntries(country) : []
   const selectedEntry = countryEntries.find((e) => e.id === selectedEntryId) ?? null
@@ -153,17 +152,12 @@ export function AtlasPage() {
           )}
 
           <section className="atlas-row">
-            <div className="atlas-row-header">
-              <h2>✨ Explore a Collection</h2>
-              <Link to="/collections" className="encyclopedia-link">
-                See all →
-              </Link>
-            </div>
+            <h2>🔤 Browse by Country</h2>
             <div className="atlas-chip-row">
-              {featuredCollections.map((collection) => (
-                <Link key={collection.id} to={`/collections/${collection.id}`} className="card atlas-collection-card">
-                  <span aria-hidden="true">{collection.icon}</span> {collection.title}
-                </Link>
+              {alphabeticalCountries.map((c) => (
+                <button key={c} className="atlas-chip" onClick={() => handleSearch(c)}>
+                  {c}
+                </button>
               ))}
             </div>
           </section>

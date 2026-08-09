@@ -1,16 +1,14 @@
 import { useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { cakes, collections } from '../lib/data'
+import { cakes } from '../lib/data'
 import { getRegionEntriesForCake, getDecadeForCake } from '../lib/encyclopedia'
 import { getCakeOfTheDay } from '../lib/discovery'
 import { CakeHeroImage } from '../components/CakeHeroImage'
-import { FEATURED_COLLECTION_IDS } from '../lib/collections'
 import type { CakeTexture } from '../types/cake'
 import type { MoodTag } from '../types/persona'
 import './CakeEncyclopediaIndexPage.css'
 
 const TEXTURES: CakeTexture[] = ['sponge', 'dense', 'creamy', 'crumbly']
-const RECENTLY_ADDED_COUNT = 8
 
 function getLocationTag(cakeId: string): string | null {
   const region = getRegionEntriesForCake(cakeId)[0]
@@ -62,9 +60,7 @@ export function CakeEncyclopediaIndexPage() {
     occasionParam ? { type: 'occasion', value: occasionParam } : moodParam ? { type: 'mood', value: moodParam } : null,
   )
 
-  const featuredCollections = FEATURED_COLLECTION_IDS.map((id) => collections.find((c) => c.id === id)).filter((c) => c !== undefined)
   const cakeOfTheDay = getCakeOfTheDay()
-  const recentlyAdded = cakes.slice(-RECENTLY_ADDED_COUNT).reverse()
 
   const q = query.trim().toLowerCase()
   const isBrowsing = q.length > 0 || activeChip !== null
@@ -94,7 +90,7 @@ export function CakeEncyclopediaIndexPage() {
   return (
     <main className="page encyclopedia-index-page">
       <h1>Cake Encyclopedia</h1>
-      <p>The world's cake museum — search directly, or browse by what sounds good.</p>
+      <p>The stories, flavors, techniques and traditions behind the world's cakes.</p>
 
       <div className="encyclopedia-search">
         <input
@@ -137,34 +133,6 @@ export function CakeEncyclopediaIndexPage() {
           </section>
 
           <section className="encyclopedia-row">
-            <div className="encyclopedia-row-header">
-              <h2>✨ Curated Collections</h2>
-              <Link to="/collections" className="encyclopedia-link">
-                See all →
-              </Link>
-            </div>
-            <div className="encyclopedia-collections-grid">
-              {featuredCollections.map((collection) => (
-                <Link key={collection.id} to={`/collections/${collection.id}`} className="card encyclopedia-collection-card">
-                  <span aria-hidden="true">{collection.icon}</span> {collection.title}
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          <section className="encyclopedia-row">
-            <h2>🆕 Recently Added</h2>
-            <div className="encyclopedia-cake-row">
-              {recentlyAdded.map((cake) => (
-                <Link key={cake.id} to={`/cake/${cake.id}`} className="card encyclopedia-cake-row-card">
-                  <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
-                  <h3>{cake.name}</h3>
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          <section className="encyclopedia-row">
             <h2>🍮 Browse by Texture</h2>
             <div className="encyclopedia-chip-row">
               {TEXTURES.map((t) => (
@@ -203,9 +171,6 @@ export function CakeEncyclopediaIndexPage() {
             </Link>
             <Link to="/traditions" className="encyclopedia-link">
               🌍 Baking Traditions →
-            </Link>
-            <Link to="/atlas" className="encyclopedia-link">
-              🗺️ Browse by Country →
             </Link>
           </section>
         </>
