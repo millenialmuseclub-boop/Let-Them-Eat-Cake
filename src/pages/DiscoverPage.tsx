@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom'
 import { HUBS } from '../data/hubs'
 import { getCake } from '../lib/data'
 import { getSavedCakeIds } from '../lib/notebook'
-import { getCakeImage } from '../lib/images'
+import { getRegionEntriesForCake } from '../lib/encyclopedia'
+import { getSceneImage } from '../lib/sceneImages'
 import { CakeHeroImage } from '../components/CakeHeroImage'
+import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
 import './DiscoverPage.css'
 
 const discoverHub = HUBS.find((hub) => hub.path === '/discover')!
@@ -15,37 +17,43 @@ export function DiscoverPage() {
     .filter((cake): cake is NonNullable<typeof cake> => Boolean(cake))
     .slice(0, 8)
 
+  const collectionsScene = getSceneImage('curated-collections')
+  const kitchenScene = getSceneImage('curated-kitchen')
+
   return (
     <main className="page discover-page">
       <h1>{discoverHub.title}</h1>
       <p>{discoverHub.description}</p>
 
-      <div className="hub-grid">
-        {discoverItems.map((item) => {
-          const hasPhoto = item.cakeId && !!getCakeImage(item.cakeId)
-          return (
-            <Link key={item.to} to={item.to} className={hasPhoto ? 'hub-photo-card' : 'card hub-card'}>
-              {hasPhoto && <CakeHeroImage cakeId={item.cakeId!} variant="hero" alt={item.title} />}
-              <div className={hasPhoto ? 'hub-photo-card-content' : undefined}>
-                <h2>{item.title}</h2>
-                <p>{item.description}</p>
-                {hasPhoto && <span className="btn hub-photo-card-cta">{item.cta ?? 'Explore →'}</span>}
-              </div>
-            </Link>
-          )
-        })}
+      <div className="discover-feature-grid">
+        {discoverItems.map((item) => (
+          <DiscoverFeatureCard
+            key={item.to}
+            to={item.to}
+            title={item.title}
+            description={item.description}
+            cta={item.cta ?? 'Explore →'}
+            cakeId={item.cakeId}
+          />
+        ))}
       </div>
 
       <section className="discover-section">
         <h2>🍰 Saved Cakes</h2>
         {savedCakes.length > 0 ? (
-          <div className="home-photo-row">
-            {savedCakes.map((cake) => (
-              <Link key={cake.id} to={`/cake/${cake.id}`} className="card home-photo-card">
-                <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
-                <div className="home-photo-card-label">{cake.name}</div>
-              </Link>
-            ))}
+          <div className="discover-saved-row">
+            {savedCakes.map((cake) => {
+              const origin = getRegionEntriesForCake(cake.id)[0]?.country
+              return (
+                <Link key={cake.id} to={`/cake/${cake.id}`} className="discover-saved-card">
+                  <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
+                  <div className="discover-saved-card-label">
+                    {cake.name}
+                    {origin && <span className="discover-saved-card-origin">{origin}</span>}
+                  </div>
+                </Link>
+              )
+            })}
           </div>
         ) : (
           <p className="discover-empty">
@@ -55,15 +63,29 @@ export function DiscoverPage() {
         )}
       </section>
 
-      <div className="hub-grid discover-section">
-        <Link to="/collections" className="card hub-card">
-          <h2>Curated Collections</h2>
-          <p>Chocolate Classics, Coconut & Tropical, Celebration-Worthy, and more — hand-picked groupings across the Encyclopedia.</p>
-        </Link>
-        <Link to="/curated-kitchen" className="card hub-card">
-          <h2>Curated Kitchen</h2>
-          <p>The tools, equipment, and ingredients we reach for again and again — organized by what you're doing.</p>
-        </Link>
+      <div className="discover-feature-grid discover-section">
+        <DiscoverFeatureCard
+          to="/collections"
+          title="Curated Collections"
+          description="Explore hand-picked cake collections organized by flavor, mood, tradition, and occasion."
+          cta="Explore Collections →"
+          imageUrl={collectionsScene?.url}
+          imageAlt="Curated Collections"
+          photographer={collectionsScene?.photographer}
+          photographerUrl={collectionsScene?.photographerUrl}
+          unsplashUrl={collectionsScene?.unsplashUrl}
+        />
+        <DiscoverFeatureCard
+          to="/curated-kitchen"
+          title="Curated Kitchen"
+          description="A considered edit of the tools, equipment, and ingredients worth keeping close."
+          cta="Enter the Kitchen →"
+          imageUrl={kitchenScene?.url}
+          imageAlt="Curated Kitchen"
+          photographer={kitchenScene?.photographer}
+          photographerUrl={kitchenScene?.photographerUrl}
+          unsplashUrl={kitchenScene?.unsplashUrl}
+        />
       </div>
     </main>
   )

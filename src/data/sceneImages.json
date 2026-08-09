@@ -1,0 +1,14 @@
+{
+  "curated-collections": {
+    "url": "https://images.unsplash.com/photo-1630507103234-00d3e621cae2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8cGFzdHJ5JTIwZGVzc2VydCUyMHRhYmxlJTIwZWRpdG9yaWFsfGVufDB8MHx8fDE3ODYyODExNzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Alexey Demidov",
+    "photographerUrl": "https://unsplash.com/@alexeydemidov",
+    "unsplashUrl": "https://unsplash.com/photos/person-holding-sliced-strawberries-on-white-ceramic-plate-vAEw0hvNbaE"
+  },
+  "curated-kitchen": {
+    "url": "https://images.unsplash.com/photo-1596002937504-1246a49fba48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8YmFraW5nJTIwdG9vbHMlMjBraXRjaGVuJTIwZmxhdGxheXxlbnwwfDB8fHwxNzg2MjgxMTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Jennefer Zacarias",
+    "photographerUrl": "https://unsplash.com/@zenchic",
+    "unsplashUrl": "https://unsplash.com/photos/white-and-brown-slide-sandals-_9aBsUKxTkc"
+  }
+}

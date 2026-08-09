@@ -15,6 +15,7 @@ import weddingFlavorDirectionsJson from '../data/weddingFlavorDirections.json'
 import collectionsJson from '../data/collections.json'
 import lifestylePairingsJson from '../data/lifestylePairings.json'
 import cakeImagesJson from '../data/cakeImages.json'
+import sceneImagesJson from '../data/sceneImages.json'
 import personalityImagesJson from '../data/personalityImages.json'
 import drinkImagesJson from '../data/drinkImages.json'
 import affiliateProductsJson from '../data/affiliateProducts.json'
@@ -39,6 +40,7 @@ import type { CakePersonality } from '../types/personaMatch'
 import type { Collection } from '../types/collection'
 import type { LifestylePairing } from '../types/lifestylePairing'
 import type { CakeImage } from '../types/cakeImage'
+import type { SceneImage } from '../types/sceneImage'
 import type { PersonalityImage } from '../types/personalityImage'
 import type { DrinkImage } from '../types/drinkImage'
 import type { AffiliateProduct } from '../types/affiliateProduct'
@@ -67,6 +69,7 @@ export const weddingFlavorDirections = weddingFlavorDirectionsJson as WeddingFla
 export const collections = collectionsJson as Collection[]
 export const lifestylePairings = lifestylePairingsJson as LifestylePairing[]
 export const cakeImages = cakeImagesJson as Record<string, CakeImage>
+export const sceneImages = sceneImagesJson as Record<string, SceneImage>
 export const personalityImages = personalityImagesJson as Record<string, PersonalityImage>
 export const drinkImages = drinkImagesJson as Record<string, DrinkImage>
 export const affiliateProducts = affiliateProductsJson as AffiliateProduct[]
