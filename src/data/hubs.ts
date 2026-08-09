@@ -163,31 +163,6 @@ export const HUBS: Hub[] = [
       },
     ],
   },
-  {
-    kind: 'landing',
-    path: '/my-cakes',
-    navLabel: 'My Cakes',
-    navIcon: '❤️',
-    title: 'My Cakes',
-    description: 'Your personal cake identity and saved collection.',
-    items: [
-      {
-        to: '/notebook',
-        title: 'Pastry Notebook',
-        description: 'Save your favorite cakes and cake personalities to come back to anytime — stored right in your browser.',
-      },
-      {
-        to: '/my-collections',
-        title: 'My Collections',
-        description: 'Create your own named collections of cakes — organize, add notes, and share them, all stored right in your browser.',
-      },
-      {
-        to: '/curated-kitchen',
-        title: 'Curated Kitchen',
-        description: 'The tools, equipment, and ingredients we reach for again and again — organized by what you\'re doing.',
-      },
-    ],
-  },
 ]
 
 /** True if `pathname` is this hub's own path, or (for landing hubs) one of its sub-item paths. */

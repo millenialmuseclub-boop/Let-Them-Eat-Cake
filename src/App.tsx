@@ -24,11 +24,9 @@ import { CollectionsIndexPage } from './pages/CollectionsIndexPage'
 import { CollectionDetailPage } from './pages/CollectionDetailPage'
 import { BakingTraditionsIndexPage } from './pages/BakingTraditionsIndexPage'
 import { BakingTraditionDetailPage } from './pages/BakingTraditionDetailPage'
-import { MyCollectionsIndexPage } from './pages/MyCollectionsIndexPage'
-import { MyCollectionDetailPage } from './pages/MyCollectionDetailPage'
 import { CuratedKitchenPage } from './pages/CuratedKitchenPage'
 import { CelebrateLandingPage } from './pages/CelebrateLandingPage'
-import { MyCakesLandingPage } from './pages/MyCakesLandingPage'
+import { DiscoverPage } from './pages/DiscoverPage'
 import { HubPage } from './components/HubPage'
 import { BottomTabBar } from './components/BottomTabBar'
 import { HUBS } from './data/hubs'
@@ -39,10 +37,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/discover" replace />} />
         <Route path="/celebrate" element={<CelebrateLandingPage />} />
-        <Route path="/my-cakes" element={<MyCakesLandingPage />} />
+        <Route path="/discover" element={<DiscoverPage />} />
+        <Route path="/my-cakes" element={<Navigate to="/discover" replace />} />
+        <Route path="/my-collections" element={<Navigate to="/discover" replace />} />
         {HUBS.filter(
           (hub): hub is Extract<typeof hub, { kind: 'landing' }> =>
-            hub.kind === 'landing' && hub.path !== '/celebrate' && hub.path !== '/my-cakes',
+            hub.kind === 'landing' && hub.path !== '/celebrate' && hub.path !== '/discover',
         ).map((hub) => (
           <Route key={hub.path} path={hub.path} element={<HubPage hub={hub} />} />
         ))}
@@ -71,8 +71,6 @@ function App() {
         <Route path="/collections/:id" element={<CollectionDetailPage />} />
         <Route path="/traditions" element={<BakingTraditionsIndexPage />} />
         <Route path="/traditions/:id" element={<BakingTraditionDetailPage />} />
-        <Route path="/my-collections" element={<MyCollectionsIndexPage />} />
-        <Route path="/my-collections/:id" element={<MyCollectionDetailPage />} />
         <Route path="/curated-kitchen" element={<CuratedKitchenPage />} />
       </Routes>
       <BottomTabBar />

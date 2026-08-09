@@ -8,7 +8,6 @@ import { FlavorProfileBars } from '../components/FlavorProfileBars'
 import { CakeOriginStory } from '../components/CakeOriginStory'
 import { RecipeCard } from '../components/RecipeCard'
 import { SaveButton } from '../components/SaveButton'
-import { AddToCollectionButton } from '../components/AddToCollectionButton'
 import { CakeHeroImage } from '../components/CakeHeroImage'
 import { SocialShareCard } from '../components/SocialShareCard'
 import { AffiliateProductSet } from '../components/AffiliateProductSet'
@@ -81,7 +80,6 @@ export function CakeDetailPage() {
         </h1>
         <p>{cake.description}</p>
         <SaveButton type="cake" id={cake.id} />
-        <AddToCollectionButton cakeId={cake.id} />
       </div>
 
       {originPoints.length > 0 && (
