@@ -36,7 +36,7 @@ export function DiscoverPage() {
         })}
       </div>
 
-      <section className="home-section discover-section">
+      <section className="discover-section">
         <h2>🍰 Saved Cakes</h2>
         {savedCakes.length > 0 ? (
           <div className="home-photo-row">
