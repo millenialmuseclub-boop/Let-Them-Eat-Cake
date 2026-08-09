@@ -5,7 +5,7 @@ import { ALL_EQUIPMENT, ALL_PANTRY_INGREDIENTS, EQUIPMENT_LABELS, PANTRY_INGREDI
 import { emergencyRecipes, getRecipe } from '../lib/data'
 import { getProductsForIngredient } from '../lib/affiliateProducts'
 import { RecipeCard } from '../components/RecipeCard'
-import { AffiliateProductSet } from '../components/AffiliateProductSet'
+import { CuratorsToolDrawer } from '../components/CuratorsToolDrawer'
 import './PantryRaidPage.css'
 
 const TIME_OPTIONS = [
@@ -112,7 +112,7 @@ export function PantryRaidPage() {
           </div>
         )}
 
-        <AffiliateProductSet title="Recommended" products={missing.flatMap((m) => getProductsForIngredient(m))} />
+        <CuratorsToolDrawer products={missing.flatMap((m) => getProductsForIngredient(m))} />
 
         <button className="btn btn-secondary" onClick={() => setExpandedId(expandedId === recipe.id ? null : recipe.id)}>
           {expandedId === recipe.id ? 'Hide full recipe' : 'Show full recipe'}

@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { getComponentsByCategory, buildAssembledRecipe, combineFlavorProfile, describeCombo } from '../lib/assemblyLab'
+import { getProductsForHubPath } from '../lib/affiliateProducts'
 import { CakeBlueprintDiagram } from '../components/CakeBlueprintDiagram'
 import { FlavorProfileBars } from '../components/FlavorProfileBars'
 import { RecipeCard } from '../components/RecipeCard'
+import { CuratorsToolDrawer } from '../components/CuratorsToolDrawer'
 import './AssemblyLabPage.css'
 
 const sponges = getComponentsByCategory('sponge')
@@ -90,6 +92,8 @@ export function AssemblyLabPage() {
 
       <h2 className="recipe-heading">Full Recipe</h2>
       <RecipeCard key={assembledRecipe.id} recipe={assembledRecipe} />
+
+      <CuratorsToolDrawer products={getProductsForHubPath('/assembly-lab')} />
     </main>
   )
 }

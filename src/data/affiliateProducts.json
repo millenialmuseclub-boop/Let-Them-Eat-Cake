@@ -16,7 +16,7 @@
     "url": "https://go.shopmy.us/p-77598364",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-anatomy", "/technique-library"],
+    "associatedHubPaths": ["/cake-anatomy", "/technique-library", "/assembly-lab"],
     "associatedTechniqueIds": ["buttercream_smoothing"],
     "editorialNote": "Makes smooth sides and even piping dramatically easier — turn the cake, not your wrist."
   },
@@ -36,7 +36,7 @@
     "url": "https://go.shopmy.us/p-77601195",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-stability", "/cake-science", "/cake-blueprints", "/cake-failure-lab", "/encyclopedia"],
+    "associatedHubPaths": ["/cake-stability", "/cake-science", "/cake-blueprints", "/cake-failure-lab", "/encyclopedia", "/assembly-lab"],
     "associatedTechniqueIds": ["ganache"],
     "editorialNote": "Instant, accurate reads take the guesswork out of ganache, custard, and syrup temperatures."
   },
@@ -72,7 +72,7 @@
     "url": "https://go.shopmy.us/p-77173367",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-stability", "/cake-science", "/cake-blueprints", "/cake-failure-lab", "/encyclopedia"],
+    "associatedHubPaths": ["/cake-stability", "/cake-science", "/cake-blueprints", "/cake-failure-lab", "/encyclopedia", "/assembly-lab"],
     "editorialNote": "Weight-based baking is the single biggest upgrade for consistent results, tier after tier."
   },
   {
@@ -82,7 +82,7 @@
     "url": "https://go.shopmy.us/p-77172564",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-anatomy", "/technique-library"],
+    "associatedHubPaths": ["/cake-anatomy", "/technique-library", "/assembly-lab"],
     "associatedTechniqueIds": ["buttercream_smoothing"]
   },
   {
@@ -92,7 +92,7 @@
     "url": "https://go.shopmy.us/p-77102183",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-anatomy", "/cake-failure-lab"],
+    "associatedHubPaths": ["/cake-anatomy", "/cake-failure-lab", "/assembly-lab"],
     "associatedTechniqueIds": ["leveling"],
     "editorialNote": "The fastest fix for uneven, domed, or leaning layers."
   },
@@ -113,7 +113,7 @@
     "url": "https://go.shopmy.us/p-77099492",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-anatomy", "/cake-blueprints", "/technique-library", "/encyclopedia"],
+    "associatedHubPaths": ["/cake-anatomy", "/cake-blueprints", "/technique-library", "/encyclopedia", "/assembly-lab"],
     "associatedTechniqueIds": ["buttercream_smoothing"]
   },
   {
