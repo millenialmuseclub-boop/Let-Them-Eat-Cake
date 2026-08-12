@@ -35,11 +35,16 @@ jobs:
       - name: Build web app
         run: npm run build
 
-      - name: Set up JDK 17
+      - name: Set up JDK 21
+        # Capacitor's own generated capacitor-cordova-android-plugins module
+        # sets sourceCompatibility/targetCompatibility to JavaVersion.VERSION_21
+        # (android/capacitor-cordova-android-plugins/build.gradle) — JDK 17
+        # fails with "invalid source release: 21" since javac can't target a
+        # release newer than the JDK running it.
         uses: actions/setup-java@v4
         with:
           distribution: "temurin"
-          java-version: "17"
+          java-version: "21"
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
