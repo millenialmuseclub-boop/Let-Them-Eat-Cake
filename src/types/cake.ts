@@ -50,10 +50,26 @@ export interface RecipeIngredient {
   substitutions?: IngredientSubstitution[]
 }
 
+/** Either a real, populated component (filling or frosting/finish) or an explicit declaration that none is traditionally used. */
+export type RecipeComponent =
+  | { name: string; ingredients: RecipeIngredient[]; prep: string; textureGoal?: string; applicationNotes?: string; chillGuidance?: string }
+  | { none: true; note: string }
+
 export interface Recipe {
   id: string
   cakeId: string
   baseServings: number
   ingredients: RecipeIngredient[]
   steps: string[]
+  yield?: number
+  prepTimeMinutes?: number
+  bakeTimeMinutes?: number
+  totalTimeMinutes?: number
+  ovenTempC?: number
+  ovenTempF?: number
+  panSize?: string
+  equipment?: string[]
+  storage?: string
+  filling?: RecipeComponent
+  frostingFinish?: RecipeComponent
 }

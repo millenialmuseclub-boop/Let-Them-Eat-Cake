@@ -8407,7 +8407,18 @@
       "Whisk everything together right in the pan until no dry streaks remain and the batter is smooth — it should look like thin chocolate mud.",
       "Bake 30-35 minutes. It's done when the top springs back lightly to the touch and a toothpick inserted in the center comes out clean or with a few moist crumbs.",
       "Cool in the pan on a rack for at least 20 minutes before slicing — it's fragile while warm since there's no egg structure yet."
-    ]
+    ],
+    "yield": 9,
+    "prepTimeMinutes": 8,
+    "bakeTimeMinutes": 32,
+    "totalTimeMinutes": 40,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "panSize": "8-inch square pan (ungreased)",
+    "equipment": ["Oven", "8-inch square baking pan"],
+    "storage": "Keeps at room temperature, covered, for 3 days — it's an oil cake, so it stays moist longer than a butter cake.",
+    "filling": { "none": true, "note": "No separate filling is traditionally used." },
+    "frostingFinish": { "none": true, "note": "Traditionally served without frosting." }
   },
   {
     "id": "recipe_emergency_mug_cake",
@@ -8426,7 +8437,16 @@
       "Pour in the milk and oil, then stir just until the batter is smooth — a few small bubbles on top are normal, but don't overmix or the crumb turns rubbery.",
       "Microwave on high for 90 seconds to 2 minutes (microwaves vary — start at 90 seconds and add 15-second bursts). It's done when the top looks set and dry, not glossy or wet.",
       "Let it rest in the mug for 1 minute — it keeps cooking briefly from residual heat — then eat straight from the mug while warm."
-    ]
+    ],
+    "yield": 1,
+    "prepTimeMinutes": 3,
+    "bakeTimeMinutes": 2,
+    "totalTimeMinutes": 5,
+    "panSize": "12oz+ microwave-safe mug",
+    "equipment": ["Microwave"],
+    "storage": "Best eaten immediately; it toughens quickly once cool.",
+    "filling": { "none": true, "note": "No separate filling is traditionally used." },
+    "frostingFinish": { "none": true, "note": "Traditionally served without frosting." }
   },
   {
     "id": "recipe_emergency_yogurt_pot_cake",
@@ -8448,7 +8468,18 @@
       "Sift the flour and baking powder over the wet mixture and fold in gently with a spatula until just combined — a few small lumps are fine, overmixing makes it tough.",
       "Pour into the pan and bake 40-45 minutes, until the top is golden and a toothpick comes out clean.",
       "Cool in the pan 10 minutes, then turn out onto a rack to cool completely before slicing."
-    ]
+    ],
+    "yield": 8,
+    "prepTimeMinutes": 12,
+    "bakeTimeMinutes": 43,
+    "totalTimeMinutes": 55,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "panSize": "Loaf pan",
+    "equipment": ["Oven", "Loaf pan"],
+    "storage": "Keeps well covered at room temperature for 3-4 days.",
+    "filling": { "none": true, "note": "No separate filling is traditionally used." },
+    "frostingFinish": { "none": true, "note": "Traditionally served without frosting." }
   },
   {
     "id": "recipe_emergency_applesauce_cake",
@@ -8469,7 +8500,18 @@
       "Add the applesauce and oil, then stir with a spatula until just combined and no dry streaks remain — the batter will be thick, like a muffin batter.",
       "Spread into the pan and smooth the top. Bake 28-32 minutes, until the top springs back when lightly pressed and a toothpick comes out clean.",
       "Cool in the pan on a rack for at least 15 minutes before slicing."
-    ]
+    ],
+    "yield": 9,
+    "prepTimeMinutes": 10,
+    "bakeTimeMinutes": 30,
+    "totalTimeMinutes": 40,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "panSize": "8-inch square pan",
+    "equipment": ["Oven", "8-inch square baking pan"],
+    "storage": "Keeps covered at room temperature for up to 4 days — the applesauce keeps it moist longer than most snack cakes.",
+    "filling": { "none": true, "note": "No separate filling is traditionally used." },
+    "frostingFinish": { "none": true, "note": "Traditionally served without frosting." }
   },
   {
     "id": "recipe_emergency_self_rising_pound_cake",
@@ -8489,7 +8531,18 @@
       "Fold in the self-rising flour by hand in two additions, mixing only until no dry streaks remain — overmixing at this stage makes the crumb tough.",
       "Pour into the pan and smooth the top. Bake 50-55 minutes, tenting loosely with foil after 30 minutes if the top is browning too fast; it's done when a toothpick comes out clean.",
       "Cool in the pan 15 minutes, then turn out onto a rack to cool completely before slicing."
-    ]
+    ],
+    "yield": 8,
+    "prepTimeMinutes": 12,
+    "bakeTimeMinutes": 53,
+    "totalTimeMinutes": 65,
+    "ovenTempC": 160,
+    "ovenTempF": 325,
+    "panSize": "Loaf pan",
+    "equipment": ["Oven", "Hand mixer", "Loaf pan"],
+    "storage": "Keeps at room temperature, well wrapped, for up to a week — dense pound cakes hold up longer than most.",
+    "filling": { "none": true, "note": "No separate filling is traditionally used." },
+    "frostingFinish": { "none": true, "note": "Traditionally served without frosting." }
   },
   {
     "id": "recipe_emergency_condensed_milk_sponge",
@@ -8507,7 +8560,18 @@
       "Sift the self-rising flour over the top and fold in gently until no dry streaks remain — the batter will be thick and glossy.",
       "Pour into the pan and bake 25-30 minutes, until deeply golden and a toothpick comes out clean.",
       "Cool in the pan 10 minutes, then turn out onto a rack to finish cooling."
-    ]
+    ],
+    "yield": 8,
+    "prepTimeMinutes": 7,
+    "bakeTimeMinutes": 28,
+    "totalTimeMinutes": 35,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "panSize": "Round 8-inch pan",
+    "equipment": ["Oven", "Round 8-inch cake pan"],
+    "storage": "Keeps covered at room temperature for 2-3 days.",
+    "filling": { "none": true, "note": "No separate filling is traditionally used." },
+    "frostingFinish": { "none": true, "note": "Traditionally served without frosting." }
   },
   {
     "id": "recipe_emergency_lemon_yogurt_drizzle",
@@ -8519,9 +8583,7 @@
       { "id": "sugar", "name": "Granulated sugar", "metric": { "qty": 200, "unit": "g" }, "imperial": { "qty": 1, "unit": "cup" } },
       { "id": "eggs", "name": "Eggs, large", "metric": { "qty": 3, "unit": "count" }, "imperial": { "qty": 3, "unit": "count" } },
       { "id": "vegetable-oil", "name": "Vegetable oil", "metric": { "qty": 120, "unit": "ml" }, "imperial": { "qty": 0.5, "unit": "cup" } },
-      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 8, "unit": "g" }, "imperial": { "qty": 2, "unit": "tsp" } },
-      { "id": "lemon-juice", "name": "Lemon juice (drizzle)", "metric": { "qty": 45, "unit": "ml" }, "imperial": { "qty": 3, "unit": "tbsp" } },
-      { "id": "sugar-drizzle", "name": "Granulated sugar (drizzle)", "metric": { "qty": 50, "unit": "g" }, "imperial": { "qty": 0.25, "unit": "cup" } }
+      { "id": "baking-powder", "name": "Baking powder", "metric": { "qty": 8, "unit": "g" }, "imperial": { "qty": 2, "unit": "tsp" } }
     ],
     "steps": [
       "Preheat oven to 175°C (350°F) and grease a loaf pan.",
@@ -8531,6 +8593,27 @@
       "While the cake bakes, stir the lemon juice and drizzle sugar together (the sugar won't fully dissolve — that's fine).",
       "As soon as the cake comes out of the oven, poke holes all over the top with a skewer, then slowly pour the lemon drizzle over so it soaks in while the cake is still hot.",
       "Cool completely in the pan before slicing — the drizzle needs time to set into a thin sugary crust."
-    ]
+    ],
+    "yield": 8,
+    "prepTimeMinutes": 10,
+    "bakeTimeMinutes": 40,
+    "totalTimeMinutes": 50,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "panSize": "Loaf pan",
+    "equipment": ["Oven", "Loaf pan"],
+    "storage": "Keeps covered at room temperature for 3-4 days thanks to the syrup soak.",
+    "filling": { "none": true, "note": "No separate filling is traditionally used." },
+    "frostingFinish": {
+      "name": "Lemon Drizzle",
+      "ingredients": [
+        { "id": "lemon-juice", "name": "Lemon juice", "metric": { "qty": 45, "unit": "ml" }, "imperial": { "qty": 3, "unit": "tbsp" } },
+        { "id": "sugar-drizzle", "name": "Granulated sugar", "metric": { "qty": 50, "unit": "g" }, "imperial": { "qty": 0.25, "unit": "cup" } }
+      ],
+      "prep": "Stir the lemon juice and drizzle sugar together until combined — the sugar won't fully dissolve, and that's fine.",
+      "textureGoal": "A loose, pourable syrup with undissolved sugar grains that set into a thin crust once soaked in.",
+      "applicationNotes": "As soon as the cake comes out of the oven, poke holes all over the top with a skewer, then slowly pour the drizzle over so it soaks in while the cake is still hot.",
+      "chillGuidance": "Cool completely in the pan before slicing — the drizzle needs time to set into a thin sugary crust."
+    }
   }
 ]

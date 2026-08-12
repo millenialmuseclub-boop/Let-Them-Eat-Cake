@@ -1,4 +1,4 @@
-import type { DietTag, IngredientSubstitution, Recipe, RecipeIngredient } from '../types/cake'
+import type { DietTag, IngredientSubstitution, Recipe, RecipeComponent, RecipeIngredient } from '../types/cake'
 
 export type UnitSystem = 'metric' | 'imperial'
 
@@ -44,4 +44,17 @@ export function scaleRecipe(
 ): ScaledIngredient[] {
   const ratio = targetServings / recipe.baseServings
   return recipe.ingredients.map((ingredient) => scaleIngredient(ingredient, ratio, system, activeDiet))
+}
+
+/** Scales a Filling/Frosting & Finish component's own ingredient list — returns null for a real "none" declaration (nothing to scale). */
+export function scaleRecipeComponent(
+  component: RecipeComponent,
+  recipe: Recipe,
+  targetServings: number,
+  system: UnitSystem,
+  activeDiet?: DietTag,
+): ScaledIngredient[] | null {
+  if ('none' in component) return null
+  const ratio = targetServings / recipe.baseServings
+  return component.ingredients.map((ingredient) => scaleIngredient(ingredient, ratio, system, activeDiet))
 }
