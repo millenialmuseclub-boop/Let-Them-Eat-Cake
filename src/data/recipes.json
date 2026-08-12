@@ -969,7 +969,15 @@
       "Oven",
       "Four ramekins"
     ],
-    "storage": "Best served immediately; unbaked batter can be refrigerated in the ramekins up to 1 day ahead."
+    "storage": "Best served immediately; unbaked batter can be refrigerated in the ramekins up to 1 day ahead.",
+    "filling": {
+      "none": true,
+      "note": "A single-batter individual dessert with a molten center that forms during baking — there is no separate filling to add."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Served straight from the ramekin with no applied frosting or glaze."
+    }
   },
   {
     "id": "recipe_red_velvet_cupcake_2000s",
@@ -2029,66 +2037,6 @@
           "qty": 0.5,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "syrup-sugar",
-        "name": "Granulated sugar (syrup)",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "syrup-water",
-        "name": "Water (syrup)",
-        "metric": {
-          "qty": 120,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "egg-whites",
-        "name": "Egg whites",
-        "metric": {
-          "qty": 4,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 4,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "frosting-sugar",
-        "name": "Granulated sugar (frosting)",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "frosting-butter",
-        "name": "Butter (frosting)",
-        "metric": {
-          "qty": 340,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.5,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -2098,7 +2046,91 @@
       "Simmer syrup sugar and water into a light syrup, then brush over each cooled layer.",
       "Whisk egg whites and frosting sugar over a double boiler until warm, then whip to stiff peaks. Beat in frosting butter a little at a time until smooth meringue buttercream forms.",
       "Frost between layers and over the outside of the cake."
-    ]
+    ],
+    "filling": {
+      "name": "Simple Syrup Soak",
+      "ingredients": [
+        {
+          "id": "syrup-sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "syrup-water",
+          "name": "Water",
+          "metric": {
+            "qty": 120,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Simmer the syrup sugar and water into a light syrup.",
+      "applicationNotes": "Brush over each cooled cake layer before frosting."
+    },
+    "frostingFinish": {
+      "name": "Meringue Buttercream",
+      "ingredients": [
+        {
+          "id": "egg-whites",
+          "name": "Egg whites",
+          "metric": {
+            "qty": 4,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 4,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "frosting-sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "frosting-butter",
+          "name": "Butter",
+          "metric": {
+            "qty": 340,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.5,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Whisk egg whites and sugar over a double boiler until warm, then whip to stiff peaks. Beat in the butter a little at a time until a smooth buttercream forms.",
+      "applicationNotes": "Frost between the syrup-soaked layers and over the outside."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 22,
+    "panSize": "Three 8-inch round pans",
+    "equipment": [
+      "Oven",
+      "Three 8-inch round pans"
+    ],
+    "storage": "Refrigerate, covered, up to 4 days."
   },
   {
     "id": "recipe_kladdkaka",
@@ -2457,7 +2489,26 @@
       "Roll out the dough and enclose the cold butter block, then fold and roll repeatedly as you would puff pastry, sprinkling sugar between folds and chilling between each to keep the butter firm.",
       "After the final fold, roll out and cut into squares, fold the corners into the center, and place in a muffin tin, sprinkling more sugar on top.",
       "Proof 45 minutes, then bake at 220°C (425°F) for 20-25 minutes until deeply caramelized and shattering-crisp on the outside."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The sugar is folded directly into the laminated layers during lamination, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "The caramelized, shattering-crisp exterior comes from the sugar caramelizing during baking, not from an applied glaze."
+    },
+    "yield": 8,
+    "ovenTempC": 220,
+    "ovenTempF": 425,
+    "bakeTimeMinutes": 22,
+    "panSize": "Muffin tin",
+    "equipment": [
+      "Oven",
+      "Rolling pin",
+      "Muffin tin"
+    ],
+    "storage": "Best eaten the day it's baked; keeps at room temperature, loosely covered, for 1 day."
   },
   {
     "id": "recipe_sachertorte",
@@ -2726,7 +2777,25 @@
       "Cream butter, sugar, and mawa together until smooth, then beat in eggs one at a time.",
       "Fold in flour, baking powder, cardamom, and nutmeg, alternating with milk.",
       "Pour into the pan and bake 40-45 minutes until a toothpick comes out clean."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single loaf cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing or glaze."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 42,
+    "panSize": "Loaf pan",
+    "equipment": [
+      "Oven",
+      "Loaf pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 3-4 days."
   },
   {
     "id": "recipe_pandan_chiffon",
@@ -2848,7 +2917,25 @@
       "In a separate bowl, whip egg whites with cream of tartar, gradually adding the remaining sugar, to stiff peaks.",
       "Fold the egg whites into the batter in three additions, then pour into an ungreased tube pan.",
       "Bake 45-50 minutes until springy to the touch. Invert the pan immediately and cool completely upside down before releasing."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single chiffon cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, unfrosted, to let the pandan flavor and airy texture speak for themselves."
+    },
+    "yield": 10,
+    "ovenTempC": 165,
+    "ovenTempF": 325,
+    "bakeTimeMinutes": 47,
+    "panSize": "Ungreased tube pan",
+    "equipment": [
+      "Oven",
+      "Ungreased tube pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 2-3 days."
   },
   {
     "id": "recipe_basbousa",
@@ -2950,54 +3037,6 @@
             "replacement": "omit"
           }
         ]
-      },
-      {
-        "id": "syrup-sugar",
-        "name": "Granulated sugar (syrup)",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "syrup-water",
-        "name": "Water (syrup)",
-        "metric": {
-          "qty": 180,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 0.75,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "lemon-juice",
-        "name": "Lemon juice",
-        "metric": {
-          "qty": 5,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "tsp"
-        }
-      },
-      {
-        "id": "orange-blossom-water",
-        "name": "Orange blossom water",
-        "metric": {
-          "qty": 5,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "tsp"
-        }
       }
     ],
     "steps": [
@@ -3006,7 +3045,76 @@
       "Spread into the pan, score into diamonds, and press an almond into the center of each piece.",
       "Bake 30-35 minutes until golden.",
       "Simmer syrup sugar, water, lemon juice, and orange blossom water into a syrup, then pour the hot syrup over the cake as soon as it comes out of the oven."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single-layer semolina cake, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Syrup Soak",
+      "ingredients": [
+        {
+          "id": "syrup-sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "syrup-water",
+          "name": "Water",
+          "metric": {
+            "qty": 180,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 0.75,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "lemon-juice",
+          "name": "Lemon juice",
+          "metric": {
+            "qty": 5,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "tsp"
+          }
+        },
+        {
+          "id": "orange-blossom-water",
+          "name": "Orange blossom water",
+          "metric": {
+            "qty": 5,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "tsp"
+          }
+        }
+      ],
+      "prep": "Simmer the syrup sugar, water, lemon juice, and orange blossom water into a syrup.",
+      "applicationNotes": "Pour the hot syrup over the cake as soon as it comes out of the oven, letting it soak in fully."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 32,
+    "panSize": "Baking pan",
+    "equipment": [
+      "Oven",
+      "Baking pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 4-5 days — the syrup keeps it moist."
   },
   {
     "id": "recipe_japanese_souffle_cheesecake",
@@ -3147,7 +3255,26 @@
       "Fold the egg whites into the cheese mixture in three additions.",
       "Pour into a lined pan, place in the water bath, and bake 65-70 minutes until golden and just set.",
       "Turn off the oven and let the cake cool inside with the door ajar to prevent sinking."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single soufflé-style cheesecake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing or topping, to showcase its jiggly texture."
+    },
+    "yield": 8,
+    "ovenTempC": 160,
+    "ovenTempF": 320,
+    "bakeTimeMinutes": 67,
+    "panSize": "Lined round pan + water bath",
+    "equipment": [
+      "Oven",
+      "Round cake pan",
+      "Roasting pan for water bath"
+    ],
+    "storage": "Refrigerate, covered, up to 3 days — best eaten within a day for peak jiggle."
   },
   {
     "id": "recipe_castella",
@@ -3221,7 +3348,26 @@
       "Whisk in honey and milk, then fold in the bread flour in three additions.",
       "Pour into the pan, tap firmly on the counter to release air bubbles, and bake 50-55 minutes.",
       "Drop the pan from a small height as soon as it comes out of the oven to prevent shrinking, then cool wrapped in plastic to keep it moist."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single loaf cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing or glaze."
+    },
+    "yield": 10,
+    "ovenTempC": 160,
+    "ovenTempF": 320,
+    "bakeTimeMinutes": 52,
+    "panSize": "Loaf pan, parchment-lined above the rim",
+    "equipment": [
+      "Oven",
+      "Loaf pan",
+      "Water bath setup"
+    ],
+    "storage": "Keeps at room temperature, wrapped in plastic, for 2-3 days — the wrap keeps it moist."
   },
   {
     "id": "recipe_gooey_butter_cake",
@@ -3293,66 +3439,6 @@
           "qty": 1,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "cream-cheese",
-        "name": "Cream cheese",
-        "metric": {
-          "qty": 227,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 8,
-          "unit": "oz"
-        }
-      },
-      {
-        "id": "topping-butter",
-        "name": "Butter, softened (topping)",
-        "metric": {
-          "qty": 113,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "topping-eggs",
-        "name": "Eggs, large (topping)",
-        "metric": {
-          "qty": 2,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "vanilla",
-        "name": "Vanilla extract",
-        "metric": {
-          "qty": 5,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "tsp"
-        }
-      },
-      {
-        "id": "powdered-sugar",
-        "name": "Powdered sugar",
-        "metric": {
-          "qty": 480,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 4,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -3362,7 +3448,88 @@
       "Pour the topping over the base.",
       "Bake 40-45 minutes until the edges are golden but the center still jiggles slightly — it should never fully set.",
       "Cool completely before slicing; dust with powdered sugar."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single buttery base with a topping baked directly on top, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "name": "Cream Cheese Topping",
+      "ingredients": [
+        {
+          "id": "cream-cheese",
+          "name": "Cream cheese",
+          "metric": {
+            "qty": 227,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 8,
+            "unit": "oz"
+          }
+        },
+        {
+          "id": "topping-butter",
+          "name": "Butter, softened",
+          "metric": {
+            "qty": 113,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "topping-eggs",
+          "name": "Eggs, large",
+          "metric": {
+            "qty": 2,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "vanilla",
+          "name": "Vanilla extract",
+          "metric": {
+            "qty": 5,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "tsp"
+          }
+        },
+        {
+          "id": "powdered-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 480,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 4,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Beat the cream cheese and topping butter until smooth, add the topping eggs and vanilla, then beat in the powdered sugar until smooth.",
+      "applicationNotes": "Pour over the pressed-in base before baking together; dust with powdered sugar once cooled."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 42,
+    "panSize": "9x13-inch pan",
+    "equipment": [
+      "Oven",
+      "9x13-inch pan"
+    ],
+    "storage": "Refrigerate, covered, up to 4 days."
   },
   {
     "id": "recipe_brooklyn_blackout",
@@ -3918,42 +4085,6 @@
           "qty": 0.5,
           "unit": "cup"
         }
-      },
-      {
-        "id": "sauce-cream",
-        "name": "Heavy cream (sauce)",
-        "metric": {
-          "qty": 120,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "sauce-butter",
-        "name": "Butter (sauce)",
-        "metric": {
-          "qty": 57,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.25,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "sauce-sugar",
-        "name": "Granulated sugar (sauce)",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -3962,7 +4093,64 @@
       "Whisk baking soda into vinegar — it will fizz — then add to the batter alternately with flour and milk.",
       "Pour into the dish and bake 35-40 minutes until golden and set.",
       "Warm sauce cream, sauce butter, and sauce sugar together until the butter melts, then pour the hot sauce evenly over the pudding as soon as it comes out of the oven, letting it soak in."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single baked pudding with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Hot Butter Sauce",
+      "ingredients": [
+        {
+          "id": "sauce-cream",
+          "name": "Heavy cream",
+          "metric": {
+            "qty": 120,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "sauce-butter",
+          "name": "Butter",
+          "metric": {
+            "qty": 57,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.25,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "sauce-sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Warm the sauce cream, sauce butter, and sauce sugar together until the butter melts.",
+      "applicationNotes": "Pour the hot sauce evenly over the pudding as soon as it comes out of the oven, letting it soak in completely."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 37,
+    "panSize": "Baking dish",
+    "equipment": [
+      "Oven",
+      "Baking dish"
+    ],
+    "storage": "Keeps refrigerated, covered, for 3-4 days — best served warm."
   },
   {
     "id": "recipe_pavlova",
@@ -4028,30 +4216,6 @@
           "qty": 1,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "heavy-cream",
-        "name": "Heavy cream, whipped",
-        "metric": {
-          "qty": 300,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1.25,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "passionfruit",
-        "name": "Passionfruit pulp (or seasonal fruit)",
-        "metric": {
-          "qty": 4,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 4,
-          "unit": "count"
-        }
       }
     ],
     "steps": [
@@ -4060,7 +4224,53 @@
       "Fold in cornstarch, vinegar, and vanilla, then mound onto the parchment within the circle, smoothing the sides and creating a slight well in the center.",
       "Bake 60-75 minutes, then turn off the oven and let it cool completely inside with the door closed to prevent cracking.",
       "Top with whipped cream and passionfruit (or other fresh fruit) just before serving."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single meringue base with no internal filling."
+    },
+    "frostingFinish": {
+      "name": "Whipped Cream & Passionfruit",
+      "ingredients": [
+        {
+          "id": "heavy-cream",
+          "name": "Heavy cream",
+          "metric": {
+            "qty": 300,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1.25,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "passionfruit",
+          "name": "Passionfruit pulp (or seasonal fruit)",
+          "metric": {
+            "qty": 4,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 4,
+            "unit": "count"
+          }
+        }
+      ],
+      "prep": "Whip the cream to soft peaks.",
+      "applicationNotes": "Top with whipped cream and passionfruit (or other fresh fruit) just before serving."
+    },
+    "yield": 8,
+    "ovenTempC": 150,
+    "ovenTempF": 300,
+    "bakeTimeMinutes": 68,
+    "panSize": "Baking sheet (9-inch circle)",
+    "equipment": [
+      "Oven",
+      "Baking sheet",
+      "Parchment paper"
+    ],
+    "storage": "Assemble just before serving — the meringue softens once topped."
   },
   {
     "id": "recipe_lamington",
@@ -5153,7 +5363,25 @@
       "Mix in cornstarch, vanilla, and lemon zest until smooth.",
       "Pour over the crust and bake 60-65 minutes until just set with a slight jiggle in the center.",
       "Cool in the oven with the door ajar, then chill at least 4 hours before slicing."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The cheese custard is the cake itself, poured directly over the crust rather than sandwiched as a separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing or topping."
+    },
+    "yield": 12,
+    "ovenTempC": 165,
+    "ovenTempF": 330,
+    "bakeTimeMinutes": 62,
+    "panSize": "9-inch springform pan",
+    "equipment": [
+      "Oven",
+      "9-inch springform pan"
+    ],
+    "storage": "Refrigerate, covered, up to 5 days."
   },
   {
     "id": "recipe_dobos_torte",
@@ -5399,42 +5627,6 @@
           "qty": 0.33,
           "unit": "cup"
         }
-      },
-      {
-        "id": "syrup-sugar",
-        "name": "Granulated sugar (syrup)",
-        "metric": {
-          "qty": 300,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "syrup-water",
-        "name": "Water (syrup)",
-        "metric": {
-          "qty": 300,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1.25,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "lemon-juice",
-        "name": "Lemon juice",
-        "metric": {
-          "qty": 15,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "tbsp"
-        }
       }
     ],
     "steps": [
@@ -5443,7 +5635,64 @@
       "Fold in flour, semolina, baking powder, and coconut until just combined.",
       "Pour into the pan and bake 30-35 minutes until golden. Meanwhile, simmer syrup sugar, water, and lemon juice into a syrup.",
       "Pour the cooled syrup over the hot cake as soon as it comes out of the oven and let it fully absorb before slicing."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single semolina cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Lemon Syrup Soak",
+      "ingredients": [
+        {
+          "id": "syrup-sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 300,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.5,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "syrup-water",
+          "name": "Water",
+          "metric": {
+            "qty": 300,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1.25,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "lemon-juice",
+          "name": "Lemon juice",
+          "metric": {
+            "qty": 15,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "Simmer the syrup sugar, water, and lemon juice into a syrup.",
+      "applicationNotes": "Pour the cooled syrup over the hot cake as soon as it comes out of the oven and let it fully absorb before slicing."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 32,
+    "panSize": "Baking pan",
+    "equipment": [
+      "Oven",
+      "Baking pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 4-5 days — the syrup keeps it moist."
   },
   {
     "id": "recipe_karydopita",
@@ -5557,54 +5806,6 @@
           "qty": 0.5,
           "unit": "cup"
         }
-      },
-      {
-        "id": "syrup-sugar",
-        "name": "Granulated sugar (syrup)",
-        "metric": {
-          "qty": 250,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.25,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "syrup-water",
-        "name": "Water (syrup)",
-        "metric": {
-          "qty": 250,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "honey",
-        "name": "Honey (syrup)",
-        "metric": {
-          "qty": 50,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2.5,
-          "unit": "tbsp"
-        }
-      },
-      {
-        "id": "cinnamon-stick",
-        "name": "Cinnamon stick (syrup)",
-        "metric": {
-          "qty": 1,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "count"
-        }
       }
     ],
     "steps": [
@@ -5613,7 +5814,76 @@
       "Fold in flour, ground walnuts, breadcrumbs, baking powder, and cinnamon.",
       "Pour into the pan and bake 35-40 minutes until deep golden. Meanwhile, simmer syrup sugar, water, honey, and cinnamon stick into a syrup.",
       "Pour the warm syrup over the hot cake and let it soak in fully before serving."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single walnut cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Spiced Honey Syrup",
+      "ingredients": [
+        {
+          "id": "syrup-sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 250,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.25,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "syrup-water",
+          "name": "Water",
+          "metric": {
+            "qty": 250,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "honey",
+          "name": "Honey",
+          "metric": {
+            "qty": 50,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2.5,
+            "unit": "tbsp"
+          }
+        },
+        {
+          "id": "cinnamon-stick",
+          "name": "Cinnamon stick",
+          "metric": {
+            "qty": 1,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "count"
+          }
+        }
+      ],
+      "prep": "Simmer the syrup sugar, water, honey, and cinnamon stick into a syrup.",
+      "applicationNotes": "Pour the warm syrup over the hot cake and let it soak in fully before serving."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 37,
+    "panSize": "Baking pan",
+    "equipment": [
+      "Oven",
+      "Baking pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 5-6 days — the syrup keeps it moist."
   },
   {
     "id": "recipe_moroccan_orange_almond",
@@ -5705,7 +5975,26 @@
       "Whisk eggs and sugar until pale, fold in the orange purée, then almond flour, baking powder, and cardamom.",
       "Pour into the pan and bake 50-55 minutes until golden and set (this cake stays moist — a toothpick may come out slightly damp).",
       "Cool completely in the pan before releasing, as it's delicate while warm."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single flourless cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing or glaze."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 52,
+    "panSize": "9-inch springform pan",
+    "equipment": [
+      "Oven",
+      "9-inch springform pan",
+      "Food processor"
+    ],
+    "storage": "Refrigerate, covered, up to 4 days — it stays moist thanks to the orange purée."
   },
   {
     "id": "recipe_persian_love_cake",
@@ -5825,24 +6114,6 @@
           "qty": 1,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "pistachios",
-        "name": "Pistachios, chopped (topping)",
-        "metric": {
-          "qty": 30,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.25,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "nut-free",
-            "replacement": "omit"
-          }
-        ]
       }
     ],
     "steps": [
@@ -5851,7 +6122,46 @@
       "Fold in almond flour, semolina, baking powder, and cardamom.",
       "Pour into the pan and bake 35-40 minutes until golden and a toothpick comes out clean.",
       "Cool, then scatter chopped pistachios and dried rose petals (if available) over the top before serving."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Pistachio Topping",
+      "ingredients": [
+        {
+          "id": "pistachios",
+          "name": "Pistachios, chopped",
+          "metric": {
+            "qty": 30,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.25,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "nut-free",
+              "replacement": "omit"
+            }
+          ]
+        }
+      ],
+      "prep": "No preparation needed.",
+      "applicationNotes": "Scatter over the cooled cake along with dried rose petals, if available, before serving."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 37,
+    "panSize": "9-inch round pan",
+    "equipment": [
+      "Oven",
+      "9-inch round pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 3-4 days."
   },
   {
     "id": "recipe_mooncake",
@@ -5905,54 +6215,6 @@
           "qty": 1,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "lotus-paste",
-        "name": "Lotus seed paste",
-        "metric": {
-          "qty": 500,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "lb"
-        }
-      },
-      {
-        "id": "salted-egg-yolks",
-        "name": "Salted egg yolks",
-        "metric": {
-          "qty": 6,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 6,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "egg-wash-yolk",
-        "name": "Egg yolk (wash)",
-        "metric": {
-          "qty": 1,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "egg-wash-water",
-        "name": "Water (wash)",
-        "metric": {
-          "qty": 15,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "tbsp"
-        }
       }
     ],
     "steps": [
@@ -5961,7 +6223,80 @@
       "Divide the dough into smaller portions, flatten, and wrap around each lotus paste ball, sealing completely.",
       "Press each into a mooncake mold to shape, then place on a lined baking sheet.",
       "Bake at 190°C (375°F) for 5 minutes, cool slightly, brush with egg wash, then bake another 15 minutes until golden."
-    ]
+    ],
+    "filling": {
+      "name": "Lotus Paste & Salted Egg Yolk",
+      "ingredients": [
+        {
+          "id": "lotus-paste",
+          "name": "Lotus seed paste",
+          "metric": {
+            "qty": 500,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "lb"
+          }
+        },
+        {
+          "id": "salted-egg-yolks",
+          "name": "Salted egg yolks",
+          "metric": {
+            "qty": 6,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 6,
+            "unit": "count"
+          }
+        }
+      ],
+      "prep": "Divide the lotus seed paste into portions and wrap each around a salted egg yolk.",
+      "applicationNotes": "Wrap the dough completely around each lotus-paste ball, sealing fully before pressing into the mold."
+    },
+    "frostingFinish": {
+      "name": "Egg Wash",
+      "ingredients": [
+        {
+          "id": "egg-wash-yolk",
+          "name": "Egg yolk",
+          "metric": {
+            "qty": 1,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "egg-wash-water",
+          "name": "Water",
+          "metric": {
+            "qty": 15,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "Whisk the egg yolk and water together.",
+      "applicationNotes": "Brush over the shaped mooncakes partway through baking for a glossy finish."
+    },
+    "yield": 12,
+    "ovenTempC": 190,
+    "ovenTempF": 375,
+    "bakeTimeMinutes": 20,
+    "panSize": "Mooncake mold + baking sheet",
+    "equipment": [
+      "Oven",
+      "Mooncake mold",
+      "Baking sheet"
+    ],
+    "storage": "Keeps at room temperature, wrapped, for about a week — flavor improves after 1-2 days as the crust softens."
   },
   {
     "id": "recipe_korean_strawberry_cream",
@@ -6039,42 +6374,6 @@
           "qty": 1,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "cream",
-        "name": "Heavy cream",
-        "metric": {
-          "qty": 500,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "cream-sugar",
-        "name": "Sugar (for cream)",
-        "metric": {
-          "qty": 50,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.25,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "strawberries",
-        "name": "Fresh strawberries",
-        "metric": {
-          "qty": 500,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "lb"
-        }
       }
     ],
     "steps": [
@@ -6083,7 +6382,64 @@
       "Fold in milk, oil, and vanilla, then pour into the pan and bake 25-28 minutes. Cool completely.",
       "Whip cream and sugar to stiff peaks. Slice the sponge into three layers.",
       "Stack layers with whipped cream and sliced strawberries between each, then frost the outside smooth and decorate with whole strawberries."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The whipped cream and strawberries are used both between the layers and over the outside, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "name": "Whipped Cream & Strawberries",
+      "ingredients": [
+        {
+          "id": "cream",
+          "name": "Heavy cream",
+          "metric": {
+            "qty": 500,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "cream-sugar",
+          "name": "Sugar",
+          "metric": {
+            "qty": 50,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.25,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "strawberries",
+          "name": "Fresh strawberries",
+          "metric": {
+            "qty": 500,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "lb"
+          }
+        }
+      ],
+      "prep": "Whip the cream and sugar to stiff peaks.",
+      "applicationNotes": "Stack the sliced layers with whipped cream and sliced strawberries between each, then frost the outside smooth and decorate with whole strawberries."
+    },
+    "yield": 10,
+    "ovenTempC": 165,
+    "ovenTempF": 330,
+    "bakeTimeMinutes": 26,
+    "panSize": "8-inch round pan",
+    "equipment": [
+      "Oven",
+      "8-inch round pan"
+    ],
+    "storage": "Refrigerate, covered, up to 3 days — fresh strawberries mean it doesn't keep as long as most layer cakes."
   },
   {
     "id": "recipe_ube_cake",
@@ -6191,42 +6547,6 @@
           "qty": 1,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "frosting-butter",
-        "name": "Butter (frosting)",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.66,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "powdered-sugar",
-        "name": "Powdered sugar",
-        "metric": {
-          "qty": 300,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "frosting-ube",
-        "name": "Ube halaya (frosting)",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -6235,7 +6555,64 @@
       "Fold in flour and baking powder until just combined.",
       "Divide between pans and bake 28-32 minutes until a toothpick comes out clean. Cool completely.",
       "Beat frosting butter, powdered sugar, and ube halaya together and frost between layers and over the outside."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The ube buttercream is spread between the layers as well as over the outside, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Ube Buttercream",
+      "ingredients": [
+        {
+          "id": "frosting-butter",
+          "name": "Butter",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.66,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "powdered-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 300,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2.5,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "frosting-ube",
+          "name": "Ube halaya",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Beat the frosting butter, powdered sugar, and ube halaya together until smooth and evenly colored.",
+      "applicationNotes": "Frost between the layers and over the outside."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 30,
+    "panSize": "Two 8-inch round pans",
+    "equipment": [
+      "Oven",
+      "Two 8-inch round pans"
+    ],
+    "storage": "Refrigerate, covered, up to 4 days."
   },
   {
     "id": "recipe_banh_bo_nuong",
@@ -6345,7 +6722,25 @@
       "Stir in the yeast mixture and let the batter rest 2 hours until bubbly.",
       "Pour into a greased pan and bake at 200°C (400°F) for 30-35 minutes until deep golden with a honeycomb of holes inside.",
       "Cool before slicing — the texture should be chewy and springy."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single honeycomb-textured cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing or topping."
+    },
+    "yield": 10,
+    "ovenTempC": 200,
+    "ovenTempF": 400,
+    "bakeTimeMinutes": 32,
+    "panSize": "Greased baking pan",
+    "equipment": [
+      "Oven",
+      "Baking pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 2-3 days."
   },
   {
     "id": "recipe_khanom_chan",
@@ -6443,7 +6838,22 @@
       "Pour a thin layer of the green batter on top and steam another 3-4 minutes; repeat, alternating layers, until the batter is used (traditionally 9 layers).",
       "Steam the final layer for 10 minutes to fully set.",
       "Cool completely before slicing into diamonds — the layers should peel apart slightly when eaten."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The alternating pandan and plain layers are steamed directly on top of one another from the same batter, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing or topping."
+    },
+    "yield": 12,
+    "panSize": "Square steaming pan",
+    "equipment": [
+      "Steamer",
+      "Square pan"
+    ],
+    "storage": "Refrigerate, covered, up to 4 days — the layers hold together best chilled."
   },
   {
     "id": "recipe_lapis_legit",
@@ -6535,7 +6945,25 @@
       "Whisk egg yolks separately until thick, then fold into the butter mixture along with flour and mixed spice.",
       "Pour a very thin layer of batter into the pan and broil 2-3 minutes until golden; repeat, adding thin layers and broiling each, until the batter is used (15-20 layers).",
       "Cool completely before slicing thin — the finished cake should show dozens of fine spiced layers."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The cake is built entirely from dozens of thin broiled layers of its own batter, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing, to show off the fine layered cross-section."
+    },
+    "yield": 16,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 3,
+    "panSize": "8-inch square pan",
+    "equipment": [
+      "Oven with broiler",
+      "8-inch square pan"
+    ],
+    "storage": "Keeps at room temperature, wrapped, for 1-2 weeks — it's traditionally made ahead."
   },
   {
     "id": "recipe_brigadeiro_cake",
@@ -6631,54 +7059,6 @@
           "qty": 2.5,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "condensed-milk",
-        "name": "Sweetened condensed milk",
-        "metric": {
-          "qty": 800,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "cans"
-        }
-      },
-      {
-        "id": "frosting-cocoa",
-        "name": "Cocoa powder (frosting)",
-        "metric": {
-          "qty": 60,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "frosting-butter",
-        "name": "Butter (frosting)",
-        "metric": {
-          "qty": 30,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "tbsp"
-        }
-      },
-      {
-        "id": "sprinkles",
-        "name": "Chocolate sprinkles",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -6687,7 +7067,76 @@
       "Divide between pans and bake 25-28 minutes until a toothpick comes out clean. Cool completely.",
       "Cook condensed milk, frosting cocoa, and frosting butter over low heat, stirring constantly, until thick enough to coat a spoon, about 10 minutes; cool slightly.",
       "Spread the brigadeiro frosting between layers and over the outside, then cover generously with chocolate sprinkles."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The brigadeiro frosting is spread between the layers as well as over the outside, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Brigadeiro Frosting & Sprinkles",
+      "ingredients": [
+        {
+          "id": "condensed-milk",
+          "name": "Sweetened condensed milk",
+          "metric": {
+            "qty": 800,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "cans"
+          }
+        },
+        {
+          "id": "frosting-cocoa",
+          "name": "Cocoa powder",
+          "metric": {
+            "qty": 60,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "frosting-butter",
+          "name": "Butter",
+          "metric": {
+            "qty": 30,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "tbsp"
+          }
+        },
+        {
+          "id": "sprinkles",
+          "name": "Chocolate sprinkles",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Cook the condensed milk, frosting cocoa, and frosting butter over low heat, stirring constantly, until thick enough to coat a spoon, about 10 minutes. Cool slightly before spreading.",
+      "applicationNotes": "Spread between the layers and over the outside, then cover generously with chocolate sprinkles."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 26,
+    "panSize": "Two 8-inch pans",
+    "equipment": [
+      "Oven",
+      "Two 8-inch round pans"
+    ],
+    "storage": "Refrigerate, covered, up to 4 days."
   },
   {
     "id": "recipe_nanaimo_bar",
@@ -6946,42 +7395,6 @@
           "qty": 1,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "dulce-de-leche",
-        "name": "Dulce de leche",
-        "metric": {
-          "qty": 600,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "egg-whites",
-        "name": "Egg whites",
-        "metric": {
-          "qty": 4,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 4,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "meringue-sugar",
-        "name": "Granulated sugar (meringue)",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -6990,7 +7403,68 @@
       "Stack the baked wafer layers with dulce de leche spread between each.",
       "Whip egg whites and meringue sugar over a double boiler until warm, then whip to stiff, glossy peaks.",
       "Pile the meringue over the top and sides, and lightly torch or broil until golden in spots."
-    ]
+    ],
+    "filling": {
+      "name": "Dulce de Leche",
+      "ingredients": [
+        {
+          "id": "dulce-de-leche",
+          "name": "Dulce de leche",
+          "metric": {
+            "qty": 600,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2.5,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "No cooking required — the dulce de leche is used as-is.",
+      "applicationNotes": "Stack the baked wafer layers with dulce de leche spread between each."
+    },
+    "frostingFinish": {
+      "name": "Torched Meringue",
+      "ingredients": [
+        {
+          "id": "egg-whites",
+          "name": "Egg whites",
+          "metric": {
+            "qty": 4,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 4,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "meringue-sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Whip the egg whites and meringue sugar over a double boiler until warm, then whip to stiff, glossy peaks.",
+      "applicationNotes": "Pile over the top and sides, then lightly torch or broil until golden in spots."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 7,
+    "panSize": "Baking sheet (6-8 thin wafers)",
+    "equipment": [
+      "Oven",
+      "Baking sheet",
+      "Kitchen torch or broiler"
+    ],
+    "storage": "Refrigerate, covered, up to 3 days."
   },
   {
     "id": "recipe_torta_mil_hojas",
@@ -7008,30 +7482,6 @@
           "qty": 3,
           "unit": "sheets"
         }
-      },
-      {
-        "id": "manjar",
-        "name": "Dulce de leche (manjar)",
-        "metric": {
-          "qty": 600,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "powdered-sugar",
-        "name": "Powdered sugar (dusting)",
-        "metric": {
-          "qty": 30,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.25,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -7040,7 +7490,55 @@
       "Stack the sheets with a generous layer of dulce de leche spread between each.",
       "Dust the top layer heavily with powdered sugar.",
       "Chill at least 1 hour before slicing so the layers hold together cleanly."
-    ]
+    ],
+    "filling": {
+      "name": "Dulce de Leche",
+      "ingredients": [
+        {
+          "id": "manjar",
+          "name": "Dulce de leche",
+          "metric": {
+            "qty": 600,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2.5,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "No cooking required — the dulce de leche is used as-is.",
+      "applicationNotes": "Stack the cooled, trimmed pastry sheets with a generous layer of dulce de leche between each."
+    },
+    "frostingFinish": {
+      "name": "Powdered Sugar Dusting",
+      "ingredients": [
+        {
+          "id": "powdered-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 30,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.25,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "No preparation needed.",
+      "applicationNotes": "Dust the top layer heavily just before serving."
+    },
+    "yield": 12,
+    "ovenTempC": 200,
+    "ovenTempF": 400,
+    "bakeTimeMinutes": 17,
+    "panSize": "Baking sheets",
+    "equipment": [
+      "Oven",
+      "Two baking sheets"
+    ],
+    "storage": "Refrigerate, covered, up to 2 days — best eaten within a day for the crispest layers."
   },
   {
     "id": "recipe_louise_cake",
@@ -7112,54 +7610,6 @@
           "qty": 1,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "jam",
-        "name": "Raspberry jam",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "egg-whites",
-        "name": "Egg whites",
-        "metric": {
-          "qty": 3,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "meringue-sugar",
-        "name": "Granulated sugar (meringue)",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.75,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "coconut",
-        "name": "Desiccated coconut",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -7168,7 +7618,79 @@
       "Spread raspberry jam evenly over the base.",
       "Whip egg whites to soft peaks, gradually add meringue sugar and whip to stiff peaks, then fold in coconut.",
       "Spread the coconut meringue over the jam layer and bake 30-35 minutes until golden. Cool completely before slicing."
-    ]
+    ],
+    "filling": {
+      "name": "Raspberry Jam",
+      "ingredients": [
+        {
+          "id": "jam",
+          "name": "Raspberry jam",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "No cooking required — the jam is used as-is.",
+      "applicationNotes": "Spread evenly over the pressed-in shortbread base."
+    },
+    "frostingFinish": {
+      "name": "Coconut Meringue",
+      "ingredients": [
+        {
+          "id": "egg-whites",
+          "name": "Egg whites",
+          "metric": {
+            "qty": 3,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "meringue-sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.75,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "coconut",
+          "name": "Desiccated coconut",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Whip the egg whites to soft peaks, gradually add the meringue sugar and whip to stiff peaks, then fold in the coconut.",
+      "applicationNotes": "Spread over the jam layer and bake together until golden."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 32,
+    "panSize": "9-inch square pan",
+    "equipment": [
+      "Oven",
+      "9-inch square pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 4-5 days."
   },
   {
     "id": "recipe_kransekake",
@@ -7216,42 +7738,6 @@
           "qty": 4,
           "unit": "count"
         }
-      },
-      {
-        "id": "icing-egg-white",
-        "name": "Egg white (icing)",
-        "metric": {
-          "qty": 1,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "icing-sugar",
-        "name": "Powdered sugar (icing)",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.6,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "lemon-juice",
-        "name": "Lemon juice (icing)",
-        "metric": {
-          "qty": 5,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "tsp"
-        }
       }
     ],
     "steps": [
@@ -7260,7 +7746,65 @@
       "Bake at 175°C (350°F) for 10-12 minutes until lightly golden; cool completely on the molds.",
       "Whisk the icing egg white, icing sugar, and lemon juice into a stiff royal icing.",
       "Stack the rings from largest to smallest into a tower, piping icing in zigzags between each layer to secure and decorate."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A tower of stacked almond rings with no internal filling."
+    },
+    "frostingFinish": {
+      "name": "Royal Icing",
+      "ingredients": [
+        {
+          "id": "icing-egg-white",
+          "name": "Egg white",
+          "metric": {
+            "qty": 1,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "icing-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.6,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "lemon-juice",
+          "name": "Lemon juice",
+          "metric": {
+            "qty": 5,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "tsp"
+          }
+        }
+      ],
+      "prep": "Whisk the icing egg white, icing sugar, and lemon juice into a stiff royal icing.",
+      "applicationNotes": "Stack the cooled rings from largest to smallest into a tower, piping icing in zigzags between each layer to secure and decorate."
+    },
+    "yield": 20,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 11,
+    "panSize": "Graduated ring molds",
+    "equipment": [
+      "Oven",
+      "Graduated kransekake ring molds",
+      "Piping bag"
+    ],
+    "storage": "Keeps at room temperature, uncovered, for about a week — it's meant to dry slightly and firm up."
   },
   {
     "id": "recipe_runeberg_torte",
@@ -7386,42 +7930,6 @@
           "qty": 1,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "jam",
-        "name": "Raspberry jam (topping)",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.33,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "icing-sugar",
-        "name": "Powdered sugar (icing)",
-        "metric": {
-          "qty": 50,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.4,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "icing-water",
-        "name": "Water (icing)",
-        "metric": {
-          "qty": 10,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "tsp"
-        }
       }
     ],
     "steps": [
@@ -7430,7 +7938,64 @@
       "Fold in flour, almond flour, breadcrumbs, and baking powder.",
       "Divide into the molds and bake 20-25 minutes until golden. Cool completely.",
       "Top each cake with a small dollop of raspberry jam surrounded by a thin ring of powdered sugar icing."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "Small individual cakes with no internal filling."
+    },
+    "frostingFinish": {
+      "name": "Raspberry Jam & Icing Ring",
+      "ingredients": [
+        {
+          "id": "jam",
+          "name": "Raspberry jam",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.33,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "icing-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 50,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.4,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "icing-water",
+          "name": "Water",
+          "metric": {
+            "qty": 10,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "tsp"
+          }
+        }
+      ],
+      "prep": "Whisk the icing sugar and water into a thin icing.",
+      "applicationNotes": "Top each cooled cake with a small dollop of raspberry jam surrounded by a thin ring of icing."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 22,
+    "panSize": "Small cylindrical molds or muffin tin",
+    "equipment": [
+      "Oven",
+      "Cylindrical molds or muffin tin"
+    ],
+    "storage": "Keeps at room temperature, covered, for 3-4 days."
   },
   {
     "id": "recipe_paris_brest",
@@ -8195,7 +8760,25 @@
       "Knead in the soaked fruit. Cover and let rise until doubled, about 1.5 hours.",
       "Shape into a ring on a baking sheet, cover, and let rise again 45 minutes.",
       "Bake at 190°C (375°F) for 30-35 minutes until deeply golden. Brush with warm jam or egg wash to finish."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The port-soaked fruit is kneaded directly into the dough, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally brushed with warm jam or egg wash for shine, but this data does not track a separate finish ingredient beyond what's already in the dough."
+    },
+    "yield": 10,
+    "ovenTempC": 190,
+    "ovenTempF": 375,
+    "bakeTimeMinutes": 32,
+    "panSize": "Baking sheet (ring-shaped)",
+    "equipment": [
+      "Oven",
+      "Baking sheet"
+    ],
+    "storage": "Keeps at room temperature, wrapped, for 4-5 days."
   },
   {
     "id": "recipe_tarta_de_santiago",
@@ -8741,7 +9324,24 @@
       "Roll out to about 1cm thick and cut into rounds.",
       "Cook on a lightly greased griddle or heavy skillet over medium heat, 3 minutes per side until golden.",
       "Dust with a little extra sugar while still warm."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "Individual griddle cakes with no filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally finished with just a dusting of the dough's own sugar while warm, rather than a separate icing."
+    },
+    "yield": 12,
+    "bakeTimeMinutes": 6,
+    "panSize": "Griddle or heavy skillet",
+    "equipment": [
+      "Griddle or heavy skillet",
+      "Rolling pin",
+      "Round cutter"
+    ],
+    "storage": "Keeps at room temperature, covered, for 3-4 days."
   },
   {
     "id": "recipe_drommekage",
@@ -8843,42 +9443,6 @@
           "qty": 1,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "coconut",
-        "name": "Shredded coconut (topping)",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "brown-sugar",
-        "name": "Brown sugar (topping)",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "topping-butter",
-        "name": "Butter (topping)",
-        "metric": {
-          "qty": 75,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.33,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -8887,7 +9451,64 @@
       "Meanwhile, melt topping butter with brown sugar and coconut into a spreadable paste.",
       "Spread the coconut topping evenly over the warm cake.",
       "Return to the oven under the broiler for 2-3 minutes until the topping is bubbling and caramelized. Cool before slicing."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single sponge cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Coconut Caramel Topping",
+      "ingredients": [
+        {
+          "id": "coconut",
+          "name": "Shredded coconut",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.5,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "brown-sugar",
+          "name": "Brown sugar",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "topping-butter",
+          "name": "Butter",
+          "metric": {
+            "qty": 75,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.33,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Melt the topping butter with the brown sugar and coconut into a spreadable paste.",
+      "applicationNotes": "Spread over the warm cake, then broil for 2-3 minutes until bubbling and caramelized."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 27,
+    "panSize": "Greased baking pan",
+    "equipment": [
+      "Oven with broiler",
+      "Baking pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 3-4 days."
   },
   {
     "id": "recipe_bublanina",
@@ -9001,18 +9622,6 @@
           "qty": 2,
           "unit": "cup"
         }
-      },
-      {
-        "id": "icing-sugar",
-        "name": "Powdered sugar (dusting)",
-        "metric": {
-          "qty": 20,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "tbsp"
-        }
       }
     ],
     "steps": [
@@ -9021,7 +9630,40 @@
       "Fold in flour and baking powder to make a thick batter.",
       "Pour into the dish and scatter cherries evenly over the top — they will sink slightly as it bakes.",
       "Bake 35-40 minutes until golden and a skewer comes out clean. Dust with powdered sugar to serve."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The cherries are scattered directly over the poured batter and sink in as it bakes, rather than being layered in as a separate filling."
+    },
+    "frostingFinish": {
+      "name": "Powdered Sugar Dusting",
+      "ingredients": [
+        {
+          "id": "icing-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 20,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "No preparation needed.",
+      "applicationNotes": "Dust over the cooled cake before serving."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 37,
+    "panSize": "Baking dish",
+    "equipment": [
+      "Oven",
+      "Baking dish"
+    ],
+    "storage": "Keeps at room temperature, covered, for 2-3 days — best eaten fresh while the cherries are juicy."
   },
   {
     "id": "recipe_cozonac",
@@ -9113,36 +9755,6 @@
         }
       },
       {
-        "id": "walnuts",
-        "name": "Ground walnuts (filling)",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "nut-free",
-            "replacement": "sweetened cocoa paste, no walnuts"
-          }
-        ]
-      },
-      {
-        "id": "cocoa",
-        "name": "Cocoa powder (filling)",
-        "metric": {
-          "qty": 30,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.33,
-          "unit": "cup"
-        }
-      },
-      {
         "id": "orange-zest",
         "name": "Orange zest",
         "metric": {
@@ -9153,18 +9765,6 @@
           "qty": 2,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "rum",
-        "name": "Rum",
-        "metric": {
-          "qty": 20,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 4,
-          "unit": "tsp"
-        }
       }
     ],
     "steps": [
@@ -9173,7 +9773,71 @@
       "Mix ground walnuts, cocoa powder, and rum into a spreadable filling.",
       "Roll the dough into a rectangle, spread with filling, and roll up tightly. Place in a loaf pan, cover, and let rise 45 minutes.",
       "Bake at 175°C (350°F) for 40-45 minutes, tenting with foil if it browns too fast."
-    ]
+    ],
+    "filling": {
+      "name": "Walnut-Cocoa Filling",
+      "ingredients": [
+        {
+          "id": "walnuts",
+          "name": "Ground walnuts",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "nut-free",
+              "replacement": "sweetened cocoa paste, no walnuts"
+            }
+          ]
+        },
+        {
+          "id": "cocoa",
+          "name": "Cocoa powder",
+          "metric": {
+            "qty": 30,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.33,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "rum",
+          "name": "Rum",
+          "metric": {
+            "qty": 20,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 4,
+            "unit": "tsp"
+          }
+        }
+      ],
+      "prep": "Mix the ground walnuts, cocoa powder, and rum into a spreadable filling.",
+      "applicationNotes": "Roll the dough into a rectangle, spread with the filling, and roll up tightly before placing in the loaf pan."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally left plain, with no icing or glaze."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 42,
+    "panSize": "Loaf pan",
+    "equipment": [
+      "Oven",
+      "Loaf pan",
+      "Rolling pin"
+    ],
+    "storage": "Keeps at room temperature, wrapped, for 4-5 days."
   },
   {
     "id": "recipe_kyiv_cake",
@@ -9377,60 +10041,6 @@
           "qty": 1,
           "unit": "cup"
         }
-      },
-      {
-        "id": "butter",
-        "name": "Butter, softened (cream)",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.88,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "chocolate",
-        "name": "Dark chocolate (cream)",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.75,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "cream",
-        "name": "Heavy cream",
-        "metric": {
-          "qty": 100,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 0.4,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "coconut cream"
-          }
-        ]
-      },
-      {
-        "id": "icing-sugar",
-        "name": "Powdered sugar (cream)",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.8,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -9439,7 +10049,83 @@
       "Melt chocolate with cream and cool slightly. Beat butter with powdered sugar, then beat in the cooled chocolate mixture.",
       "Spread chocolate cream between the layers and over the top and sides.",
       "Chill at least 3 hours before slicing to let the cream set."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The chocolate cream is spread between the layers as well as over the top and sides, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Chocolate Cream",
+      "ingredients": [
+        {
+          "id": "butter",
+          "name": "Butter, softened",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.88,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "chocolate",
+          "name": "Dark chocolate",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.75,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "cream",
+          "name": "Heavy cream",
+          "metric": {
+            "qty": 100,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 0.4,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "coconut cream"
+            }
+          ]
+        },
+        {
+          "id": "icing-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.8,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Melt the chocolate with the cream and cool slightly. Beat the butter with powdered sugar, then beat in the cooled chocolate mixture.",
+      "applicationNotes": "Spread between the layers and over the top and sides.",
+      "chillGuidance": "Chill at least 3 hours before slicing to let the cream set."
+    },
+    "yield": 10,
+    "ovenTempC": 160,
+    "ovenTempF": 325,
+    "bakeTimeMinutes": 22,
+    "panSize": "Two or three thin round pans",
+    "equipment": [
+      "Oven",
+      "Two or three round pans"
+    ],
+    "storage": "Refrigerate, covered, up to 5 days."
   },
   {
     "id": "recipe_napoleon_torte",
@@ -9811,48 +10497,6 @@
           "qty": 1,
           "unit": "cup"
         }
-      },
-      {
-        "id": "cream",
-        "name": "Heavy cream, whipped",
-        "metric": {
-          "qty": 400,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1.7,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "whipped coconut cream"
-          }
-        ]
-      },
-      {
-        "id": "icing-sugar",
-        "name": "Powdered sugar (cream)",
-        "metric": {
-          "qty": 30,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "tbsp"
-        }
-      },
-      {
-        "id": "chocolate",
-        "name": "Dark chocolate shavings",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -9861,7 +10505,71 @@
       "Whip cream with powdered sugar to stiff peaks.",
       "Sandwich two meringue disks together with whipped cream, then coat the entire outside generously in more whipped cream.",
       "Roll the whole cream-coated cake in dark chocolate shavings until fully covered."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The whipped cream is used both to sandwich the meringue disks and to coat the entire outside, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Whipped Cream & Chocolate Shavings",
+      "ingredients": [
+        {
+          "id": "cream",
+          "name": "Heavy cream",
+          "metric": {
+            "qty": 400,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1.7,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "whipped coconut cream"
+            }
+          ]
+        },
+        {
+          "id": "icing-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 30,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "tbsp"
+          }
+        },
+        {
+          "id": "chocolate",
+          "name": "Dark chocolate shavings",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Whip the cream with powdered sugar to stiff peaks.",
+      "applicationNotes": "Sandwich two meringue disks together with whipped cream, coat the entire outside generously in more whipped cream, then roll in dark chocolate shavings until fully covered."
+    },
+    "yield": 8,
+    "ovenTempC": 100,
+    "ovenTempF": 210,
+    "bakeTimeMinutes": 90,
+    "panSize": "Baking sheet (piped meringue disks)",
+    "equipment": [
+      "Oven",
+      "Baking sheet",
+      "Piping bag"
+    ],
+    "storage": "Refrigerate, covered, up to 1 day — best eaten fresh before the meringue softens."
   },
   {
     "id": "recipe_appeltaart",
@@ -9923,54 +10631,6 @@
         }
       },
       {
-        "id": "apples",
-        "name": "Apples, peeled and sliced",
-        "metric": {
-          "qty": 1000,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 8,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "cinnamon",
-        "name": "Cinnamon",
-        "metric": {
-          "qty": 8,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "tsp"
-        }
-      },
-      {
-        "id": "raisins",
-        "name": "Raisins",
-        "metric": {
-          "qty": 80,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "lemon-juice",
-        "name": "Lemon juice",
-        "metric": {
-          "qty": 15,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "tbsp"
-        }
-      },
-      {
         "id": "breadcrumbs",
         "name": "Breadcrumbs",
         "metric": {
@@ -9989,7 +10649,77 @@
       "Press two-thirds of the dough into a tall springform pan, going up the sides. Sprinkle the base with breadcrumbs.",
       "Fill with the apple mixture, mounding it high, and top with a lattice or crumbled cap of the remaining dough.",
       "Bake at 175°C (350°F) for 60-70 minutes until deeply golden. Cool before unmolding."
-    ]
+    ],
+    "filling": {
+      "name": "Spiced Apple Filling",
+      "ingredients": [
+        {
+          "id": "apples",
+          "name": "Apples, peeled and sliced",
+          "metric": {
+            "qty": 1000,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 8,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "cinnamon",
+          "name": "Cinnamon",
+          "metric": {
+            "qty": 8,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "tsp"
+          }
+        },
+        {
+          "id": "raisins",
+          "name": "Raisins",
+          "metric": {
+            "qty": 80,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "lemon-juice",
+          "name": "Lemon juice",
+          "metric": {
+            "qty": 15,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "Toss the sliced apples with cinnamon, raisins, and lemon juice.",
+      "applicationNotes": "Mound high into the pastry-lined pan before topping with a lattice or crumbled cap of the remaining dough."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Finished with its own lattice pastry top rather than a separate frosting or glaze."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 65,
+    "panSize": "Tall springform pan",
+    "equipment": [
+      "Oven",
+      "Tall springform pan",
+      "Rolling pin"
+    ],
+    "storage": "Keeps at room temperature, covered, for 3-4 days."
   },
   {
     "id": "recipe_zuger_kirschtorte",
@@ -10055,72 +10785,6 @@
           "qty": 4,
           "unit": "count"
         }
-      },
-      {
-        "id": "kirsch",
-        "name": "Kirsch (cherry brandy)",
-        "metric": {
-          "qty": 100,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 0.4,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "butter",
-        "name": "Butter, softened (buttercream)",
-        "metric": {
-          "qty": 250,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.1,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "icing-sugar",
-        "name": "Powdered sugar (buttercream)",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.6,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "sliced-almonds",
-        "name": "Sliced almonds (topping)",
-        "metric": {
-          "qty": 80,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.66,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "nut-free",
-            "replacement": "toasted coconut flakes"
-          }
-        ]
-      },
-      {
-        "id": "sugar-syrup",
-        "name": "Sugar syrup for soaking",
-        "metric": {
-          "qty": 100,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 0.4,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -10129,7 +10793,110 @@
       "Mix sugar syrup with half the kirsch. Beat butter with powdered sugar and the remaining kirsch for the buttercream.",
       "Brush the sponge layers generously with the kirsch syrup. Layer meringue, then sponge and buttercream, alternating, finishing with buttercream on top and sides.",
       "Press sliced almonds onto the sides and chill at least 2 hours before slicing."
-    ]
+    ],
+    "filling": {
+      "name": "Kirsch Syrup Soak",
+      "ingredients": [
+        {
+          "id": "sugar-syrup",
+          "name": "Sugar syrup",
+          "metric": {
+            "qty": 100,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 0.4,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "kirsch-soak",
+          "name": "Kirsch (cherry brandy)",
+          "metric": {
+            "qty": 50,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 0.2,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Mix the sugar syrup with half the kirsch.",
+      "applicationNotes": "Brush generously over the sponge layers before stacking with the meringue crunch layer and buttercream."
+    },
+    "frostingFinish": {
+      "name": "Kirsch Buttercream",
+      "ingredients": [
+        {
+          "id": "butter",
+          "name": "Butter, softened",
+          "metric": {
+            "qty": 250,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.1,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "icing-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.6,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "kirsch-buttercream",
+          "name": "Kirsch (cherry brandy)",
+          "metric": {
+            "qty": 50,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 0.2,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "sliced-almonds",
+          "name": "Sliced almonds",
+          "metric": {
+            "qty": 80,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.66,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "nut-free",
+              "replacement": "toasted coconut flakes"
+            }
+          ]
+        }
+      ],
+      "prep": "Beat the butter with powdered sugar and the remaining kirsch.",
+      "applicationNotes": "Alternate meringue, sponge, and buttercream layers, finishing with buttercream on top and sides, then press sliced almonds onto the sides.",
+      "chillGuidance": "Chill at least 2 hours before slicing."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 20,
+    "panSize": "Round pans (2 sponge + 1 meringue layer)",
+    "equipment": [
+      "Oven",
+      "Round cake pans"
+    ],
+    "storage": "Refrigerate, covered, up to 4 days."
   },
   {
     "id": "recipe_bolo_de_rolo",
@@ -10189,18 +10956,6 @@
           "qty": 2,
           "unit": "tbsp"
         }
-      },
-      {
-        "id": "guava-paste",
-        "name": "Guava paste",
-        "metric": {
-          "qty": 400,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.5,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -10209,7 +10964,42 @@
       "While still warm, spread the sponge evenly with softened guava paste.",
       "Starting from one short edge, roll the sponge tightly into a spiral using the parchment paper to guide it.",
       "Wrap tightly and chill at least 1 hour before slicing into thin spirals."
-    ]
+    ],
+    "filling": {
+      "name": "Guava Paste",
+      "ingredients": [
+        {
+          "id": "guava-paste",
+          "name": "Guava paste",
+          "metric": {
+            "qty": 400,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.5,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Soften the guava paste so it spreads easily.",
+      "applicationNotes": "Spread evenly over the warm thin sponge, then roll tightly from one short edge into a spiral.",
+      "chillGuidance": "Wrap tightly and chill at least 1 hour before slicing into thin spirals."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Finished simply by the rolled spiral itself, with no icing or glaze."
+    },
+    "yield": 10,
+    "ovenTempC": 200,
+    "ovenTempF": 400,
+    "bakeTimeMinutes": 7,
+    "panSize": "Lined baking sheet",
+    "equipment": [
+      "Oven",
+      "Baking sheet",
+      "Parchment paper"
+    ],
+    "storage": "Refrigerate, wrapped, up to 5 days."
   },
   {
     "id": "recipe_paneton",
@@ -10343,7 +11133,25 @@
       "Cover and let rise until doubled, about 2 hours.",
       "Shape into a tall round loaf, place in a paper panettone mold, and let rise again 1 hour.",
       "Bake at 175°C (350°F) for 40-45 minutes, tenting with foil if it browns too quickly. Cool upside down if possible to keep its tall shape."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The candied fruit and raisins are kneaded directly into the dough, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally left plain, with no icing or glaze."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 42,
+    "panSize": "Tall paper panettone mold",
+    "equipment": [
+      "Oven",
+      "Paper panettone mold"
+    ],
+    "storage": "Keeps at room temperature, wrapped, for about a week."
   },
   {
     "id": "recipe_chaja",
@@ -10739,48 +11547,6 @@
             "replacement": "oat milk"
           }
         ]
-      },
-      {
-        "id": "guava-paste",
-        "name": "Guava paste",
-        "metric": {
-          "qty": 300,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "cream-cheese",
-        "name": "Cream cheese, softened (frosting)",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.9,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "dairy-free cream cheese"
-          }
-        ]
-      },
-      {
-        "id": "icing-sugar",
-        "name": "Powdered sugar (frosting)",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.2,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -10789,7 +11555,73 @@
       "Warm the guava paste slightly until spreadable and layer it between the two cake rounds.",
       "Beat cream cheese with powdered sugar until smooth for the frosting.",
       "Frost the top and sides, and finish with a few small cubes of guava paste on top."
-    ]
+    ],
+    "filling": {
+      "name": "Guava Paste",
+      "ingredients": [
+        {
+          "id": "guava-paste",
+          "name": "Guava paste",
+          "metric": {
+            "qty": 300,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Warm the guava paste slightly until spreadable.",
+      "applicationNotes": "Layer between the two cake rounds."
+    },
+    "frostingFinish": {
+      "name": "Cream Cheese Frosting",
+      "ingredients": [
+        {
+          "id": "cream-cheese",
+          "name": "Cream cheese, softened",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.9,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "dairy-free cream cheese"
+            }
+          ]
+        },
+        {
+          "id": "icing-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.2,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Beat the cream cheese with powdered sugar until smooth.",
+      "applicationNotes": "Frost the top and sides, and finish with a few small cubes of guava paste on top."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 27,
+    "panSize": "Two round pans",
+    "equipment": [
+      "Oven",
+      "Two round cake pans"
+    ],
+    "storage": "Refrigerate, covered, up to 4 days."
   },
   {
     "id": "recipe_jamaican_black_cake",
@@ -11233,7 +12065,25 @@
       "Stir in oil and milk until just combined into a thick batter.",
       "Pour into the pan, scatter pine nuts over the top, and bake 30-35 minutes until golden and a skewer comes out clean.",
       "Cool completely and cut into diamond-shaped pieces to serve."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single turmeric-spiced cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Finished with pine nuts pressed onto the top before baking, rather than a separate icing or glaze."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 32,
+    "panSize": "Square baking pan",
+    "equipment": [
+      "Oven",
+      "Square baking pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 4-5 days."
   },
   {
     "id": "recipe_ma_lai_go",
@@ -11331,7 +12181,23 @@
       "Pour into a greased heatproof cake pan that fits inside a steamer.",
       "Steam over vigorously boiling water for 25-30 minutes until a skewer comes out clean, keeping the lid vented slightly to stop condensation dripping onto the cake.",
       "Cool slightly before turning out and slicing into wedges."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single steamed sponge with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing or topping."
+    },
+    "yield": 8,
+    "bakeTimeMinutes": 27,
+    "panSize": "Heatproof pan that fits inside a steamer",
+    "equipment": [
+      "Steamer",
+      "Heatproof cake pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 2-3 days."
   },
   {
     "id": "recipe_kerala_plum_cake",
@@ -11447,7 +12313,25 @@
       "Cream butter with the caramel syrup, beat in eggs, then fold in flour, baking powder, and mixed spice.",
       "Fold in the soaked fruit and any remaining liquid.",
       "Bake at 150°C (300°F) for 1.5-2 hours in a lined pan, tenting with foil once deeply browned, until a skewer comes out clean."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The rum-soaked dried fruit is folded directly into the batter, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally left unfrosted, relying on the caramel and rum for flavor rather than an applied finish."
+    },
+    "yield": 12,
+    "ovenTempC": 150,
+    "ovenTempF": 300,
+    "bakeTimeMinutes": 105,
+    "panSize": "Lined round pan",
+    "equipment": [
+      "Oven",
+      "Round cake pan"
+    ],
+    "storage": "Wrapped tightly, keeps for 2-3 weeks at room temperature and improves with age."
   },
   {
     "id": "recipe_kek_lapis_sarawak",
@@ -11557,7 +12441,22 @@
       "Spread a thin layer of one color into a greased pan and bake or broil briefly until just set.",
       "Add the next colored layer directly on top and repeat, building up 10-15 thin layers in a deliberate pattern.",
       "Cool completely before slicing to reveal the layered pattern inside."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The cake is built entirely from many thin broiled layers of its own colored batter, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing, to show off the layered pattern inside."
+    },
+    "yield": 16,
+    "panSize": "Greased pan (10-15 thin layers)",
+    "equipment": [
+      "Oven or broiler",
+      "Baking pan"
+    ],
+    "storage": "Keeps at room temperature, wrapped, for about a week — it's traditionally made ahead."
   },
   {
     "id": "recipe_melktert",
@@ -11912,7 +12811,21 @@
       "Shape into small flattened rounds and press a little extra coconut filling into the center of each.",
       "Heat oil to medium and deep-fry the rounds in batches until golden brown on both sides.",
       "Drain on paper towels and serve warm."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A portion of the same sweet potato dough is pressed into the center of each round as a denser core, rather than a separately tracked filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Deep-fried and served warm with no applied icing or glaze."
+    },
+    "yield": 10,
+    "panSize": "Deep pot for frying",
+    "equipment": [
+      "Deep pot or fryer"
+    ],
+    "storage": "Best eaten warm the day they're fried."
   },
   {
     "id": "recipe_sans_rival",
@@ -11960,66 +12873,6 @@
             "replacement": "toasted sunflower seeds, ground"
           }
         ]
-      },
-      {
-        "id": "butter",
-        "name": "Butter, softened (buttercream)",
-        "metric": {
-          "qty": 300,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.3,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "egg-yolks",
-        "name": "Egg yolks (buttercream)",
-        "metric": {
-          "qty": 6,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 6,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "condensed-milk",
-        "name": "Sweetened condensed milk (buttercream)",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.66,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "dairy-free condensed coconut milk"
-          }
-        ]
-      },
-      {
-        "id": "cashew-topping",
-        "name": "Chopped cashews (topping)",
-        "metric": {
-          "qty": 80,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.66,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "nut-free",
-            "replacement": "toasted coconut flakes"
-          }
-        ]
       }
     ],
     "steps": [
@@ -12028,7 +12881,89 @@
       "Layer the cashew meringue rounds with buttercream between each.",
       "Coat the top and sides with more buttercream and press chopped cashews over the whole exterior.",
       "Chill at least 4 hours before slicing — it cuts best cold."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The cashew buttercream is spread between the meringue layers as well as over the outside, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Cashew Buttercream & Cashew Coating",
+      "ingredients": [
+        {
+          "id": "butter",
+          "name": "Butter, softened",
+          "metric": {
+            "qty": 300,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.3,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "egg-yolks",
+          "name": "Egg yolks",
+          "metric": {
+            "qty": 6,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 6,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "condensed-milk",
+          "name": "Sweetened condensed milk",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.66,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "dairy-free condensed coconut milk"
+            }
+          ]
+        },
+        {
+          "id": "cashew-topping",
+          "name": "Chopped cashews",
+          "metric": {
+            "qty": 80,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.66,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "nut-free",
+              "replacement": "toasted coconut flakes"
+            }
+          ]
+        }
+      ],
+      "prep": "Whisk the egg yolks and condensed milk over a double boiler until thick, then cool and beat into the softened butter.",
+      "applicationNotes": "Layer the cashew meringue rounds with buttercream between each, coat the top and sides with more buttercream, then press chopped cashews over the whole exterior.",
+      "chillGuidance": "Chill at least 4 hours before slicing — it cuts best cold."
+    },
+    "yield": 10,
+    "ovenTempC": 160,
+    "ovenTempF": 325,
+    "bakeTimeMinutes": 22,
+    "panSize": "Baking sheet (thin meringue rounds)",
+    "equipment": [
+      "Oven",
+      "Baking sheet"
+    ],
+    "storage": "Refrigerate, covered, up to 5 days."
   },
   {
     "id": "recipe_kue_lapis",
@@ -12114,7 +13049,22 @@
       "Ladle a thin layer of one color into the pan and steam 5 minutes until just set.",
       "Add the next colored layer directly on top and steam again; repeat until all batter is used, building 8-10 layers.",
       "Cool completely before unmolding and slicing to reveal the layered colors."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The colored layers are steamed directly on top of one another from the same batter, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing or topping."
+    },
+    "yield": 12,
+    "panSize": "Heatproof steaming pan",
+    "equipment": [
+      "Steamer",
+      "Heatproof pan"
+    ],
+    "storage": "Refrigerate, covered, up to 4 days."
   },
   {
     "id": "recipe_bolo_de_fuba",
@@ -12235,7 +13185,25 @@
       "Blend eggs, milk, oil, and sugar together until smooth.",
       "Stir in cornmeal, flour, coconut, and baking powder until just combined.",
       "Pour into the pan and bake 35-40 minutes until golden and a toothpick comes out clean."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single cornmeal cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing or topping."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 37,
+    "panSize": "Round cake pan",
+    "equipment": [
+      "Oven",
+      "Round cake pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 3-4 days."
   },
   {
     "id": "recipe_sakotis",
@@ -12345,7 +13313,22 @@
       "Heat a rotating spit or vertical rotisserie near a grill or open flame. Brush with a thin layer of batter and let it set into a golden ring.",
       "Continue brushing on thin layers one at a time, letting each set before adding the next, building up branch-like spikes as it turns.",
       "Once the desired size is reached, cool completely before slicing crosswise."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The cake is built entirely from thin layers of its own batter brushed onto a turning spit, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing, to show off its branch-like spiked exterior."
+    },
+    "yield": 14,
+    "panSize": "Rotating spit near a grill or open flame",
+    "equipment": [
+      "Rotating spit or vertical rotisserie",
+      "Pastry brush"
+    ],
+    "storage": "Keeps at room temperature, wrapped, for about a week."
   },
   {
     "id": "recipe_kremsnita",
@@ -12363,84 +13346,6 @@
           "qty": 2,
           "unit": "count"
         }
-      },
-      {
-        "id": "milk",
-        "name": "Whole milk",
-        "metric": {
-          "qty": 750,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "oat milk"
-          }
-        ]
-      },
-      {
-        "id": "egg-yolks",
-        "name": "Egg yolks",
-        "metric": {
-          "qty": 6,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 6,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "sugar",
-        "name": "Granulated sugar",
-        "metric": {
-          "qty": 180,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.9,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "cornstarch",
-        "name": "Cornstarch",
-        "metric": {
-          "qty": 60,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 7,
-          "unit": "tbsp"
-        }
-      },
-      {
-        "id": "vanilla",
-        "name": "Vanilla extract",
-        "metric": {
-          "qty": 10,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "tsp"
-        }
-      },
-      {
-        "id": "icing-sugar",
-        "name": "Powdered sugar (dusting)",
-        "metric": {
-          "qty": 20,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "tbsp"
-        }
       }
     ],
     "steps": [
@@ -12449,7 +13354,107 @@
       "Place one pastry sheet in a baking dish and pour the warm custard over it.",
       "Top with the second pastry sheet, pressing down gently, and chill at least 4 hours until fully set.",
       "Dust with powdered sugar and cut into squares to serve."
-    ]
+    ],
+    "filling": {
+      "name": "Vanilla Custard",
+      "ingredients": [
+        {
+          "id": "milk",
+          "name": "Whole milk",
+          "metric": {
+            "qty": 750,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "oat milk"
+            }
+          ]
+        },
+        {
+          "id": "egg-yolks",
+          "name": "Egg yolks",
+          "metric": {
+            "qty": 6,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 6,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 180,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.9,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "cornstarch",
+          "name": "Cornstarch",
+          "metric": {
+            "qty": 60,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 7,
+            "unit": "tbsp"
+          }
+        },
+        {
+          "id": "vanilla",
+          "name": "Vanilla extract",
+          "metric": {
+            "qty": 10,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "tsp"
+          }
+        }
+      ],
+      "prep": "Whisk the egg yolks, sugar, and cornstarch, then temper with hot milk and cook until very thick. Stir in vanilla and cool slightly.",
+      "applicationNotes": "Pour the warm custard over the first pastry sheet, then top with the second sheet, pressing down gently.",
+      "chillGuidance": "Chill at least 4 hours until fully set before cutting into squares."
+    },
+    "frostingFinish": {
+      "name": "Powdered Sugar Dusting",
+      "ingredients": [
+        {
+          "id": "icing-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 20,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "No preparation needed.",
+      "applicationNotes": "Dust over the top just before serving."
+    },
+    "yield": 9,
+    "panSize": "Baking dish",
+    "equipment": [
+      "Oven (for the pastry)",
+      "Baking dish"
+    ],
+    "storage": "Refrigerate, covered, up to 3 days."
   },
   {
     "id": "recipe_nazook",
@@ -12515,48 +13520,6 @@
           "qty": 2,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "walnuts",
-        "name": "Ground walnuts (filling)",
-        "metric": {
-          "qty": 300,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "nut-free",
-            "replacement": "ground toasted oats with brown sugar"
-          }
-        ]
-      },
-      {
-        "id": "sugar",
-        "name": "Granulated sugar (filling)",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.75,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "vanilla",
-        "name": "Vanilla extract",
-        "metric": {
-          "qty": 5,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "tsp"
-        }
       }
     ],
     "steps": [
@@ -12565,67 +13528,77 @@
       "Divide dough into portions, roll each into a thin rectangle, sprinkle with filling, and roll up tightly into a log.",
       "Coil each log into a spiral and place on a baking sheet.",
       "Bake at 180°C (350°F) for 20-25 minutes until golden."
-    ]
+    ],
+    "filling": {
+      "name": "Walnut Filling",
+      "ingredients": [
+        {
+          "id": "walnuts",
+          "name": "Ground walnuts",
+          "metric": {
+            "qty": 300,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "nut-free",
+              "replacement": "ground toasted oats with brown sugar"
+            }
+          ]
+        },
+        {
+          "id": "sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.75,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "vanilla",
+          "name": "Vanilla extract",
+          "metric": {
+            "qty": 5,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "tsp"
+          }
+        }
+      ],
+      "prep": "Mix the ground walnuts, sugar, and vanilla into a sandy filling.",
+      "applicationNotes": "Sprinkle over each rolled-out dough rectangle, then roll up tightly into a log and coil into a spiral before baking."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally left plain once golden, with no icing or glaze."
+    },
+    "yield": 16,
+    "ovenTempC": 180,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 22,
+    "panSize": "Baking sheet",
+    "equipment": [
+      "Oven",
+      "Rolling pin",
+      "Baking sheet"
+    ],
+    "storage": "Keeps at room temperature, covered, for 4-5 days."
   },
   {
     "id": "recipe_galaktoboureko",
     "cakeId": "cake_galaktoboureko",
     "baseServings": 12,
     "ingredients": [
-      {
-        "id": "milk",
-        "name": "Whole milk",
-        "metric": {
-          "qty": 1000,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 4,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "oat milk"
-          }
-        ]
-      },
-      {
-        "id": "semolina",
-        "name": "Fine semolina",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "sugar",
-        "name": "Granulated sugar (custard)",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "eggs",
-        "name": "Eggs, large",
-        "metric": {
-          "qty": 4,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 4,
-          "unit": "count"
-        }
-      },
       {
         "id": "phyllo",
         "name": "Phyllo sheets",
@@ -12649,18 +13622,6 @@
           "qty": 0.66,
           "unit": "cup"
         }
-      },
-      {
-        "id": "lemon-syrup",
-        "name": "Lemon-sugar syrup",
-        "metric": {
-          "qty": 300,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1.25,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -12669,7 +13630,98 @@
       "Pour in the custard, then top with the remaining phyllo sheets, again brushing each with butter.",
       "Score the top layer into squares and bake at 175°C (350°F) for 45-50 minutes until deep golden.",
       "Pour cold lemon syrup over the hot cake immediately after baking and let it soak in fully before serving."
-    ]
+    ],
+    "filling": {
+      "name": "Semolina Custard",
+      "ingredients": [
+        {
+          "id": "milk",
+          "name": "Whole milk",
+          "metric": {
+            "qty": 1000,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 4,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "oat milk"
+            }
+          ]
+        },
+        {
+          "id": "semolina",
+          "name": "Fine semolina",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "eggs",
+          "name": "Eggs, large",
+          "metric": {
+            "qty": 4,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 4,
+            "unit": "count"
+          }
+        }
+      ],
+      "prep": "Heat the milk, whisk in semolina and sugar, and cook until thickened into a custard. Cool slightly, then whisk in the eggs.",
+      "applicationNotes": "Pour over the first layer of buttered phyllo sheets before topping with the remaining phyllo."
+    },
+    "frostingFinish": {
+      "name": "Lemon Syrup",
+      "ingredients": [
+        {
+          "id": "lemon-syrup",
+          "name": "Lemon-sugar syrup",
+          "metric": {
+            "qty": 300,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1.25,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Keep the syrup cold until ready to use.",
+      "applicationNotes": "Pour the cold syrup over the hot cake immediately after baking and let it soak in fully before serving."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 47,
+    "panSize": "Buttered baking dish",
+    "equipment": [
+      "Oven",
+      "Baking dish",
+      "Pastry brush"
+    ],
+    "storage": "Keeps at room temperature, covered, for 3-4 days — the syrup keeps it moist."
   },
   {
     "id": "recipe_bizcocho_de_ron",
@@ -12753,18 +13805,6 @@
           "qty": 2,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "rum-glaze",
-        "name": "Rum-butter glaze",
-        "metric": {
-          "qty": 100,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 0.4,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -12773,7 +13813,40 @@
       "Fold in flour and baking powder until just combined.",
       "Pour into the pan and bake 45-50 minutes until a toothpick comes out clean.",
       "While warm, poke holes in the top and brush generously with the rum-butter glaze until fully absorbed."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single bundt cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Rum-Butter Glaze",
+      "ingredients": [
+        {
+          "id": "rum-glaze",
+          "name": "Rum-butter glaze",
+          "metric": {
+            "qty": 100,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 0.4,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Have the glaze ready while the cake is still warm.",
+      "applicationNotes": "Poke holes in the top of the warm cake and brush generously with the glaze until fully absorbed."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 47,
+    "panSize": "Bundt pan",
+    "equipment": [
+      "Oven",
+      "Bundt pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 4-5 days — the glaze keeps it moist."
   },
   {
     "id": "recipe_great_cake",
@@ -12889,7 +13962,26 @@
       "Fold in the fruit paste and burnt sugar browning.",
       "Bake at 150°C (300°F) for about 2 hours in a lined pan, tenting with foil once deeply browned, until a skewer comes out clean.",
       "Cool completely and feed with a little more rum every few days if making ahead."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The rum-and-wine-soaked dried fruit is blended into a paste and folded directly into the batter, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally left unfrosted — sometimes 'fed' with more rum after baking, but never iced."
+    },
+    "yield": 16,
+    "ovenTempC": 150,
+    "ovenTempF": 300,
+    "bakeTimeMinutes": 120,
+    "panSize": "Lined round pan",
+    "equipment": [
+      "Oven",
+      "Round cake pan",
+      "Blender"
+    ],
+    "storage": "Wrapped tightly, keeps for weeks at room temperature and improves with age."
   },
   {
     "id": "recipe_vinarterta",
@@ -12961,30 +14053,6 @@
           "qty": 2,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "prunes",
-        "name": "Dried prunes (filling)",
-        "metric": {
-          "qty": 500,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "almond-extract",
-        "name": "Almond extract (filling)",
-        "metric": {
-          "qty": 5,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "tsp"
-        }
       }
     ],
     "steps": [
@@ -12993,7 +14061,54 @@
       "Divide the dough into 5-7 portions and roll each into a thin round layer, baking each separately at 190°C (375°F) for 8-10 minutes.",
       "Stack the baked layers with prune filling spread between each.",
       "Wrap and rest overnight so the layers soften slightly before slicing."
-    ]
+    ],
+    "filling": {
+      "name": "Prune Filling",
+      "ingredients": [
+        {
+          "id": "prunes",
+          "name": "Dried prunes",
+          "metric": {
+            "qty": 500,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "almond-extract",
+          "name": "Almond extract",
+          "metric": {
+            "qty": 5,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "tsp"
+          }
+        }
+      ],
+      "prep": "Simmer the prunes in water until soft, then blend with almond extract into a thick, jam-like filling.",
+      "applicationNotes": "Stack the baked layers with prune filling spread between each.",
+      "chillGuidance": "Wrap and rest overnight so the layers soften slightly before slicing."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally left unfrosted, wrapped and rested rather than iced."
+    },
+    "yield": 14,
+    "ovenTempC": 190,
+    "ovenTempF": 375,
+    "bakeTimeMinutes": 9,
+    "panSize": "Baking sheet (5-7 thin rounds)",
+    "equipment": [
+      "Oven",
+      "Baking sheet",
+      "Rolling pin"
+    ],
+    "storage": "Keeps at room temperature, wrapped, for about a week — it's traditionally made ahead so the layers soften."
   },
   {
     "id": "recipe_trinidad_black_cake",
@@ -13121,7 +14236,26 @@
       "Stir in burnt sugar browning until the batter is deep brown.",
       "Bake at 150°C (300°F) for about 2 hours in a lined pan, tenting with foil once deeply browned, until a skewer comes out clean.",
       "Cool completely and feed with more rum periodically before serving."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The rum-and-wine-soaked dried fruit is blended into a paste and folded directly into the batter, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally left unfrosted — sometimes 'fed' with more rum after baking, but never iced."
+    },
+    "yield": 16,
+    "ovenTempC": 150,
+    "ovenTempF": 300,
+    "bakeTimeMinutes": 120,
+    "panSize": "Lined round pan",
+    "equipment": [
+      "Oven",
+      "Round cake pan",
+      "Blender"
+    ],
+    "storage": "Wrapped tightly, keeps for weeks at room temperature and improves with age."
   },
   {
     "id": "recipe_torta_caprese",
@@ -13485,7 +14619,25 @@
       "Fold in rice flour, flour, and baking powder until just combined.",
       "Divide between the paper cups, filling nearly to the top.",
       "Bake 20-25 minutes until domed and golden."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "Individual cupcake-style cakes with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing or topping."
+    },
+    "yield": 12,
+    "ovenTempC": 190,
+    "ovenTempF": 375,
+    "bakeTimeMinutes": 22,
+    "panSize": "Muffin tin",
+    "equipment": [
+      "Oven",
+      "Muffin tin"
+    ],
+    "storage": "Keeps at room temperature, covered, for 2-3 days."
   },
   {
     "id": "recipe_financier",
@@ -13583,7 +14735,25 @@
       "Stir in the browned butter until the batter is smooth and glossy.",
       "Pour into greased small rectangular molds or a muffin tin, filling about two-thirds full.",
       "Bake at 200°C (400°F) for 12-15 minutes until golden at the edges."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "Individual small cakes with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing or topping."
+    },
+    "yield": 12,
+    "ovenTempC": 200,
+    "ovenTempF": 400,
+    "bakeTimeMinutes": 13,
+    "panSize": "Small rectangular molds or muffin tin",
+    "equipment": [
+      "Oven",
+      "Financier molds or muffin tin"
+    ],
+    "storage": "Keeps at room temperature, covered, for 3-4 days."
   },
   {
     "id": "recipe_galette_des_rois",
@@ -13784,18 +14954,6 @@
           "qty": 1,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "egg-wash",
-        "name": "Egg yolk (wash)",
-        "metric": {
-          "qty": 1,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "count"
-        }
       }
     ],
     "steps": [
@@ -13804,7 +14962,40 @@
       "Press the dough evenly into the pan and score a crosshatch pattern on top with a fork.",
       "Brush with egg yolk wash.",
       "Bake 25-30 minutes until golden — the center should still feel slightly soft, it firms up as it cools."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single dense butter cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Egg Wash",
+      "ingredients": [
+        {
+          "id": "egg-wash",
+          "name": "Egg yolk",
+          "metric": {
+            "qty": 1,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "count"
+          }
+        }
+      ],
+      "prep": "No preparation needed beyond separating the yolk.",
+      "applicationNotes": "Brush over the scored dough before baking for a glossy, golden top."
+    },
+    "yield": 12,
+    "ovenTempC": 170,
+    "ovenTempF": 340,
+    "bakeTimeMinutes": 27,
+    "panSize": "Round pan",
+    "equipment": [
+      "Oven",
+      "Round cake pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 5-6 days — it's a dense, keeping cake."
   },
   {
     "id": "recipe_guglhupf",
@@ -13906,18 +15097,6 @@
           "qty": 0.66,
           "unit": "cup"
         }
-      },
-      {
-        "id": "icing-sugar",
-        "name": "Powdered sugar (dusting)",
-        "metric": {
-          "qty": 20,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "tbsp"
-        }
       }
     ],
     "steps": [
@@ -13926,7 +15105,40 @@
       "Grease a bundt (guglhupf) pan well and transfer the dough in, smoothing the top.",
       "Let rise again 30-40 minutes, then bake at 175°C (350°F) for 40-45 minutes until golden and hollow-sounding when tapped.",
       "Cool completely before turning out and dusting with powdered sugar."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The rum-soaked raisins are kneaded directly into the dough, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "name": "Powdered Sugar Dusting",
+      "ingredients": [
+        {
+          "id": "icing-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 20,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "No preparation needed.",
+      "applicationNotes": "Dust over the cooled, unmolded cake."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 42,
+    "panSize": "Bundt (guglhupf) pan",
+    "equipment": [
+      "Oven",
+      "Bundt pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 4-5 days."
   },
   {
     "id": "recipe_boston_cream_pie",
@@ -14809,7 +16021,25 @@
       "Fold the egg whites into the batter in three additions, keeping as much volume as possible.",
       "Pour into an ungreased tube pan and bake at 165°C (325°F) for 55-60 minutes until golden and springy.",
       "Invert the pan immediately and let cool completely upside down before unmolding."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single tube cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, unfrosted, to let its light, airy texture speak for itself."
+    },
+    "yield": 12,
+    "ovenTempC": 165,
+    "ovenTempF": 325,
+    "bakeTimeMinutes": 57,
+    "panSize": "Ungreased tube pan",
+    "equipment": [
+      "Oven",
+      "Ungreased tube pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 3-4 days."
   },
   {
     "id": "recipe_election_cake",
@@ -14931,7 +16161,25 @@
       "Shape into a round loaf on a baking sheet, cover, and let rise again 45 minutes.",
       "Bake at 175°C (350°F) for 35-40 minutes until golden and hollow-sounding when tapped.",
       "Cool before slicing — this cake improves after a day or two."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The dried fruit is kneaded directly into the yeasted dough, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally left plain, with no icing or glaze."
+    },
+    "yield": 14,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 37,
+    "panSize": "Baking sheet (round loaf)",
+    "equipment": [
+      "Oven",
+      "Baking sheet"
+    ],
+    "storage": "Keeps at room temperature, covered, for 4-5 days — it improves after a day or two."
   },
   {
     "id": "recipe_angel_food",
@@ -15023,7 +16271,25 @@
       "Fold in vanilla, then gently fold in the flour-sugar mixture in small additions, keeping as much air as possible.",
       "Pour into an ungreased tube pan and bake at 175°C (350°F) for 35-40 minutes until golden and springy.",
       "Invert the pan immediately and cool completely upside down before unmolding."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single tube cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, unfrosted — often alongside fresh fruit or whipped cream on the side rather than as an applied finish."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 37,
+    "panSize": "Ungreased tube pan",
+    "equipment": [
+      "Oven",
+      "Ungreased tube pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 2-3 days."
   },
   {
     "id": "recipe_clootie_dumpling",
@@ -15145,7 +16411,24 @@
       "Scald a large cloth, flour it well, and wrap the dough tightly, tying the top with string.",
       "Lower into a large pot of simmering water and steam for 3-4 hours, topping up water as needed.",
       "Unwrap carefully and dry the outside briefly in a hot oven before slicing to serve."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The dried fruit is mixed directly into the dough, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing or glaze."
+    },
+    "yield": 10,
+    "bakeTimeMinutes": 210,
+    "panSize": "Cloth-wrapped bundle, steamed in a large pot",
+    "equipment": [
+      "Large pot",
+      "Pudding cloth",
+      "String"
+    ],
+    "storage": "Keeps at room temperature, wrapped, for about a week; also freezes well."
   },
   {
     "id": "recipe_barmbrack",
@@ -15237,7 +16520,25 @@
       "Pour into a lined loaf pan.",
       "Bake at 160°C (325°F) for 60-70 minutes until a skewer comes out clean, covering loosely with foil if it browns too fast.",
       "Cool completely, slice, and serve buttered."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The tea-soaked dried fruit is folded directly into the batter, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, sliced and buttered rather than iced."
+    },
+    "yield": 12,
+    "ovenTempC": 160,
+    "ovenTempF": 325,
+    "bakeTimeMinutes": 65,
+    "panSize": "Loaf pan",
+    "equipment": [
+      "Oven",
+      "Loaf pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 4-5 days."
   },
   {
     "id": "recipe_makowiec",
@@ -15315,42 +16616,6 @@
           "qty": 0.5,
           "unit": "cup"
         }
-      },
-      {
-        "id": "poppy-seed",
-        "name": "Ground poppy seeds (filling)",
-        "metric": {
-          "qty": 300,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "honey",
-        "name": "Honey (filling)",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.33,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "raisins",
-        "name": "Raisins (filling)",
-        "metric": {
-          "qty": 60,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.4,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -15359,7 +16624,65 @@
       "Roll the dough into a large rectangle, spread with the poppy seed filling, and roll up tightly into a log.",
       "Place seam-side down on a baking sheet, cover, and let rise 30-40 minutes.",
       "Bake at 180°C (350°F) for 35-40 minutes until deeply golden."
-    ]
+    ],
+    "filling": {
+      "name": "Poppy Seed Filling",
+      "ingredients": [
+        {
+          "id": "poppy-seed",
+          "name": "Ground poppy seeds",
+          "metric": {
+            "qty": 300,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2.5,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "honey",
+          "name": "Honey",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.33,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "raisins",
+          "name": "Raisins",
+          "metric": {
+            "qty": 60,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.4,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Simmer the ground poppy seeds with honey and raisins into a thick, spreadable filling.",
+      "applicationNotes": "Spread over the rolled-out dough rectangle, then roll up tightly into a log before baking."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally left plain once golden, with no icing or glaze."
+    },
+    "yield": 14,
+    "ovenTempC": 180,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 37,
+    "panSize": "Baking sheet",
+    "equipment": [
+      "Oven",
+      "Rolling pin",
+      "Baking sheet"
+    ],
+    "storage": "Keeps at room temperature, covered, for 4-5 days."
   },
   {
     "id": "recipe_rigo_jancsi",
@@ -15431,36 +16754,6 @@
             "replacement": "1:1 gluten-free baking blend"
           }
         ]
-      },
-      {
-        "id": "cream",
-        "name": "Heavy cream (filling)",
-        "metric": {
-          "qty": 500,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "whipped coconut cream"
-          }
-        ]
-      },
-      {
-        "id": "dark-chocolate-glaze",
-        "name": "Dark chocolate (glaze)",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -15469,67 +16762,68 @@
       "Whip cream to stiff peaks and spread generously over one sponge layer.",
       "Top with the second sponge layer and press down gently, then pour melted chocolate glaze evenly over the top.",
       "Chill until set, then cut into neat squares to serve."
-    ]
+    ],
+    "filling": {
+      "name": "Whipped Cream",
+      "ingredients": [
+        {
+          "id": "cream",
+          "name": "Heavy cream",
+          "metric": {
+            "qty": 500,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "whipped coconut cream"
+            }
+          ]
+        }
+      ],
+      "prep": "Whip the cream to stiff peaks.",
+      "applicationNotes": "Spread generously over one sponge layer before topping with the second."
+    },
+    "frostingFinish": {
+      "name": "Chocolate Glaze",
+      "ingredients": [
+        {
+          "id": "dark-chocolate-glaze",
+          "name": "Dark chocolate",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Melt the chocolate until smooth and pourable.",
+      "applicationNotes": "Pour evenly over the top layer after pressing it down gently.",
+      "chillGuidance": "Chill until set before cutting into neat squares."
+    },
+    "yield": 12,
+    "ovenTempC": 190,
+    "ovenTempF": 375,
+    "bakeTimeMinutes": 14,
+    "panSize": "Two thin sheet pans",
+    "equipment": [
+      "Oven",
+      "Two sheet pans"
+    ],
+    "storage": "Refrigerate, covered, up to 3 days."
   },
   {
     "id": "recipe_mhanncha",
     "cakeId": "cake_mhanncha",
     "baseServings": 12,
     "ingredients": [
-      {
-        "id": "almond-flour",
-        "name": "Ground almonds",
-        "metric": {
-          "qty": 400,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 4,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "nut-free",
-            "replacement": "sunflower seed flour"
-          }
-        ]
-      },
-      {
-        "id": "sugar",
-        "name": "Granulated sugar",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "butter",
-        "name": "Butter, melted",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.44,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "orange-blossom",
-        "name": "Orange blossom water",
-        "metric": {
-          "qty": 15,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "tbsp"
-        }
-      },
       {
         "id": "phyllo",
         "name": "Warqa or phyllo sheets",
@@ -15541,30 +16835,6 @@
           "qty": 8,
           "unit": "count"
         }
-      },
-      {
-        "id": "egg-wash",
-        "name": "Egg (for sealing and wash)",
-        "metric": {
-          "qty": 1,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "honey",
-        "name": "Honey (finishing)",
-        "metric": {
-          "qty": 60,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "tbsp"
-        }
       }
     ],
     "steps": [
@@ -15573,7 +16843,110 @@
       "Coil the log into a spiral on a baking sheet, brushing the seams with egg wash to seal. Repeat with remaining sheets, joining logs end to end if needed.",
       "Brush the whole coil with egg wash and bake at 180°C (350°F) for 25-30 minutes until golden.",
       "Drizzle with warm honey while still hot and let cool before slicing."
-    ]
+    ],
+    "filling": {
+      "name": "Almond Paste",
+      "ingredients": [
+        {
+          "id": "almond-flour",
+          "name": "Ground almonds",
+          "metric": {
+            "qty": 400,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 4,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "nut-free",
+              "replacement": "sunflower seed flour"
+            }
+          ]
+        },
+        {
+          "id": "sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "butter",
+          "name": "Butter, melted",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.44,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "orange-blossom",
+          "name": "Orange blossom water",
+          "metric": {
+            "qty": 15,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "Mix the ground almonds, sugar, melted butter, and orange blossom water into a smooth paste.",
+      "applicationNotes": "Roll into a long rope, lay along the edge of a phyllo sheet, and roll up into a long, thin log before coiling into a spiral."
+    },
+    "frostingFinish": {
+      "name": "Egg Wash & Honey Drizzle",
+      "ingredients": [
+        {
+          "id": "egg-wash",
+          "name": "Egg",
+          "metric": {
+            "qty": 1,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "honey",
+          "name": "Honey",
+          "metric": {
+            "qty": 60,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "Beat the egg for the wash; warm the honey slightly so it drizzles easily.",
+      "applicationNotes": "Brush the coiled log with egg wash before baking (also used to seal the seams), then drizzle with warm honey while still hot from the oven."
+    },
+    "yield": 12,
+    "ovenTempC": 180,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 27,
+    "panSize": "Baking sheet (coiled spiral)",
+    "equipment": [
+      "Oven",
+      "Baking sheet",
+      "Pastry brush"
+    ],
+    "storage": "Keeps at room temperature, covered, for 4-5 days."
   },
   {
     "id": "recipe_mont_blanc",
@@ -15774,7 +17147,23 @@
       "Grease a heatproof pan and set up a steamer. Ladle a thin layer of the green batter in and steam 5 minutes until set.",
       "Add a thin layer of the yellow mung bean batter on top and steam again; alternate layers until the batter is used, about 8-10 layers.",
       "Cool completely, then slice with an oiled knife to reveal the alternating layers."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The alternating pandan and mung bean layers are steamed directly on top of one another, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain, with no icing or topping."
+    },
+    "yield": 10,
+    "panSize": "Heatproof steaming pan",
+    "equipment": [
+      "Steamer",
+      "Heatproof pan",
+      "Blender"
+    ],
+    "storage": "Refrigerate, covered, up to 4 days."
   },
   {
     "id": "recipe_pan_de_elote",
@@ -15884,7 +17273,26 @@
       "Fold in flour, baking powder, and cinnamon until just combined.",
       "Pour into the pan and bake 35-40 minutes until golden and a toothpick comes out clean.",
       "Cool slightly and serve warm or at room temperature."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single corn cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally served plain and warm, with no icing or topping."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 37,
+    "panSize": "Round cake pan",
+    "equipment": [
+      "Oven",
+      "Round cake pan",
+      "Blender"
+    ],
+    "storage": "Keeps at room temperature, covered, for 2-3 days."
   },
   {
     "id": "recipe_genoa_cake",
@@ -15994,7 +17402,25 @@
       "Spread into the pan and arrange whole almonds over the top.",
       "Bake 55-65 minutes, tenting with foil if it browns too fast, until a skewer comes out clean.",
       "Cool completely in the pan before slicing."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The dried fruit is folded directly into the batter, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Finished with whole almonds pressed onto the top before baking, rather than a separate icing."
+    },
+    "yield": 12,
+    "ovenTempC": 160,
+    "ovenTempF": 325,
+    "bakeTimeMinutes": 60,
+    "panSize": "Lined round pan",
+    "equipment": [
+      "Oven",
+      "Round cake pan"
+    ],
+    "storage": "Keeps at room temperature, wrapped, for about a week — it improves with a couple of days' rest."
   },
   {
     "id": "recipe_emergency_wacky_cake",
