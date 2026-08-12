@@ -55,7 +55,9 @@ export function CakeDetailPage() {
   const vanillaMatch = cake.flavorNotes.some((n) => /vanilla/i.test(n)) ? getProductsForIngredient('vanilla-extract') : []
   const chocolateMatch = cake.flavorNotes.some((n) => /chocolate|cocoa/i.test(n)) ? getProductsForIngredient('dark-chocolate') : []
   const almondMatch = cake.flavorNotes.some((n) => /marzipan|almond/i.test(n)) ? getProductsByIds(['product_almond_paste']) : []
-  const cakeSpecificMatch = getProductsForCakeId(cake.id)
+  const cakeSpecificAll = getProductsForCakeId(cake.id)
+  const cakeSpecificMatch = cakeSpecificAll.filter((p) => p.category !== 'featured-cake')
+  const tasteThisCake = cakeSpecificAll.filter((p) => p.category === 'featured-cake')
 
   const isOrnate = cake.difficulty === 'hard' && (cake.occasion?.includes('Celebration') ?? false)
   const celebrationFinishes = isOrnate ? getProductsByIds(['product_gel_colors', 'product_gold_leaf', 'product_fancy_sprinkles']) : []
@@ -153,6 +155,7 @@ export function CakeDetailPage() {
 
       <AffiliateProductSet title="Baking This Cake?" products={[...vanillaMatch, ...chocolateMatch, ...almondMatch, ...cakeSpecificMatch, ...bakingTools]} />
       <AffiliateProductSet title="Celebration Finishes" products={celebrationFinishes} />
+      <AffiliateProductSet title="Taste This Cake" products={tasteThisCake} />
     </main>
   )
 }

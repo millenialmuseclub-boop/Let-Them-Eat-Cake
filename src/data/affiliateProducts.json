@@ -281,5 +281,129 @@
     "url": "https://go.shopmy.us/p-77636156",
     "network": "shopmy",
     "active": true
+  },
+  {
+    "id": "product_cake_brooklyn_blackout",
+    "name": "Brooklyn Blackout Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+qzWg2QNWqhU1_ut04UNldQ",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_inas_coconut",
+    "name": "Ina's Coconut Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+SznFLlHX1juPkI9-KEbVKA",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_chocolate",
+    "name": "Chocolate Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+ptzGNa2OL9EpO24liMpuWA",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_jfk_wedding",
+    "name": "JFK Wedding Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+E9KvbO4mcobsDyMoVOzVPw",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_carrot",
+    "name": "Carrot Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+sm2PoAfzDnGTwaVL2Bqp-Q",
+    "network": "ltk",
+    "active": true,
+    "associatedCakeIds": ["cake_carrot_cream_cheese_1980s"]
+  },
+  {
+    "id": "product_cake_seven_layer_caramel",
+    "name": "Seven-Layer Caramel Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+PvO31uN38ia9dLW5QwU6FA",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_confetti",
+    "name": "Confetti Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+pgNpRvEenxjW4uBl7O1oLQ",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_strawberry_guava_entremet",
+    "name": "Strawberry Guava Entremet",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+3zfssRlJtKIErCov9n-8PQ",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_red_velvet",
+    "name": "Red Velvet Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+WfjNkGaaZfEPgktnWTY4Jg",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_smith_island",
+    "name": "Smith Island Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+8ZSLQ5-97OCojTnWxQEiTg",
+    "network": "ltk",
+    "active": true,
+    "associatedCakeIds": ["cake_smith_island"]
+  },
+  {
+    "id": "product_cake_molten_lava",
+    "name": "Molten Chocolate Lava Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+1TdjGQdQTuyRVMBSSQC8bw",
+    "network": "ltk",
+    "active": true,
+    "associatedCakeIds": ["cake_molten_lava_1990s"]
+  },
+  {
+    "id": "product_cake_hummingbird",
+    "name": "Hummingbird Cake",
+    "category": "featured-cake",
+    "url": "https://go.shopmy.us/p-78607094",
+    "network": "shopmy",
+    "active": true,
+    "associatedCakeIds": ["cake_hummingbird"]
+  },
+  {
+    "id": "product_cake_bridgerton_lemon_lavender",
+    "name": "Bridgerton x Williams Sonoma Four-Layer Floral Lemon Lavender Cake",
+    "category": "featured-cake",
+    "url": "https://go.shopmy.us/p-78607251",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_cake_gateau_basque",
+    "name": "Cacao-Fruit Gâteau Basque",
+    "category": "featured-cake",
+    "url": "https://go.shopmy.us/p-78607636",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_cake_earls_court_chocolate",
+    "name": "Gwendolyn's Famous Earl's Court Three-Layer Chocolate Cake",
+    "category": "featured-cake",
+    "url": "https://go.shopmy.us/p-78613803",
+    "network": "shopmy",
+    "active": true
   }
 ]
