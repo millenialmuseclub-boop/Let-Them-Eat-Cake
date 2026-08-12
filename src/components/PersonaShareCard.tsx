@@ -10,8 +10,7 @@ export function PersonaShareCard({ personality, deepLinkPath }: { personality: C
       eyebrow="My Cake Personality Is"
       title={personality.name}
       subtitle={personality.personalityTitle}
-      bodyText={personality.description}
-      cta="Take the Cake Personality Quiz"
+      cta="What's your cake?"
       shareUrl={shareUrl}
       shareText={shareText}
       filename={`${personality.id}-cake-personality`}

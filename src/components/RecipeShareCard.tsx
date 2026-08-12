@@ -9,8 +9,8 @@ export function RecipeShareCard({ cake }: { cake: CakeProfile }) {
     <SocialShareCard
       eyebrow="Tonight We're Baking"
       title={cake.name}
-      bodyText={cake.description}
-      cta="Save the recipe"
+      bodyText={cake.flavorNotes.slice(0, 3).join(' · ')}
+      cta="Bake it"
       shareUrl={shareUrl}
       shareText={shareText}
       filename={`${cake.id}-recipe`}

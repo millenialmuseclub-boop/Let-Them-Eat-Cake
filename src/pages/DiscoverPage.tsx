@@ -22,8 +22,13 @@ export function DiscoverPage() {
 
   return (
     <main className="page discover-page">
-      <h1>{discoverHub.title}</h1>
-      <p>{discoverHub.description}</p>
+      <div className="discover-brand">
+        <h1>Let Them Eat Cake</h1>
+        <p>
+          The definitive Cake Encyclopedia and Cake Sommelier — explore cake culture, master pastry, discover perfect
+          pairings, and create cakes for life's celebrations.
+        </p>
+      </div>
 
       <div className="discover-feature-grid">
         {discoverItems.map((item) => (

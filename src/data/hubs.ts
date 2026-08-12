@@ -30,7 +30,7 @@ export const HUBS: Hub[] = [
   {
     kind: 'landing',
     path: '/discover',
-    navLabel: 'Discover',
+    navLabel: 'Main',
     navIcon: '📚',
     title: 'Discover',
     description: "Explore the world's cakes through history and geography.",

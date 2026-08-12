@@ -1,3 +1,18 @@
+.discover-brand {
+  margin-bottom: 24px;
+}
+
+.discover-brand h1 {
+  font-size: 1.9rem;
+  margin-bottom: 6px;
+}
+
+.discover-brand p {
+  max-width: 52ch;
+  opacity: 0.85;
+  margin: 0;
+}
+
 .discover-section {
   margin-top: 40px;
 }
