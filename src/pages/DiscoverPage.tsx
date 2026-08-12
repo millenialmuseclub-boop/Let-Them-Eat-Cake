@@ -38,31 +38,6 @@ export function DiscoverPage() {
         ))}
       </div>
 
-      <section className="discover-section">
-        <h2>🍰 Saved Cakes</h2>
-        {savedCakes.length > 0 ? (
-          <div className="discover-saved-row">
-            {savedCakes.map((cake) => {
-              const origin = getRegionEntriesForCake(cake.id)[0]?.country
-              return (
-                <Link key={cake.id} to={`/cake/${cake.id}`} className="discover-saved-card">
-                  <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
-                  <div className="discover-saved-card-label">
-                    {cake.name}
-                    {origin && <span className="discover-saved-card-origin">{origin}</span>}
-                  </div>
-                </Link>
-              )
-            })}
-          </div>
-        ) : (
-          <p className="discover-empty">
-            Your cake library starts here. Save cakes as you explore the Encyclopedia, Atlas, Sommelier, recipes, and Celebrate.{' '}
-            <Link to="/encyclopedia">Explore Cakes →</Link>
-          </p>
-        )}
-      </section>
-
       <div className="discover-feature-grid discover-section">
         <DiscoverFeatureCard
           to="/collections"
@@ -87,6 +62,31 @@ export function DiscoverPage() {
           unsplashUrl={kitchenScene?.unsplashUrl}
         />
       </div>
+
+      <section className="discover-section">
+        <h2>🍰 Saved Cakes</h2>
+        {savedCakes.length > 0 ? (
+          <div className="discover-saved-row">
+            {savedCakes.map((cake) => {
+              const origin = getRegionEntriesForCake(cake.id)[0]?.country
+              return (
+                <Link key={cake.id} to={`/cake/${cake.id}`} className="discover-saved-card">
+                  <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
+                  <div className="discover-saved-card-label">
+                    {cake.name}
+                    {origin && <span className="discover-saved-card-origin">{origin}</span>}
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        ) : (
+          <p className="discover-empty">
+            Your cake library starts here. Save cakes as you explore the Encyclopedia, Atlas, Sommelier, recipes, and Celebrate.{' '}
+            <Link to="/encyclopedia">Explore Cakes →</Link>
+          </p>
+        )}
+      </section>
     </main>
   )
 }
