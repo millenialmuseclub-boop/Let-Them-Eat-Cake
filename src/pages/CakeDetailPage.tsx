@@ -1,8 +1,6 @@
-import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getCake, getRecipeForCake } from '../lib/data'
 import { getRegionEntriesForCake, getDecadeForCake, getTopPairings, getRelatedCakes } from '../lib/encyclopedia'
-import { recordCakeView } from '../lib/recentlyViewed'
 import { getProductsForHubPath, getProductsForIngredient, getProductsForCakeId, getProductsByIds } from '../lib/affiliateProducts'
 import { FlavorProfileBars } from '../components/FlavorProfileBars'
 import { CakeOriginStory } from '../components/CakeOriginStory'
@@ -33,10 +31,6 @@ export function CakeDetailPage() {
       </main>
     )
   }
-
-  useEffect(() => {
-    if (cake) recordCakeView(cake.id)
-  }, [cake?.id])
 
   const regionEntries = getRegionEntriesForCake(cake.id)
   const primaryRegion = regionEntries[0]
