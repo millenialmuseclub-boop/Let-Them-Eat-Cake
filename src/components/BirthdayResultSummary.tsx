@@ -3,10 +3,21 @@ import { Link } from 'react-router-dom'
 import type { DietTag } from '../types/cake'
 import { getCake, getRecipeForCake } from '../lib/data'
 import { getTopPairings } from '../lib/encyclopedia'
+import { getProductsByIds } from '../lib/affiliateProducts'
 import { CakeHeroImage } from './CakeHeroImage'
 import { SaveButton } from './SaveButton'
 import { BirthdayShareCard } from './BirthdayShareCard'
+import { AffiliateProductSet } from './AffiliateProductSet'
 import './BirthdayResultSummary.css'
+
+/** Only flavor/energy combos with a genuine, defensible cake-inspiration connection get a mapping. */
+const BIRTHDAY_CAKE_PRODUCT_IDS_BY_FLAVOR: Record<string, string[]> = {
+  Funfetti: ['product_cake_confetti'],
+  Chocolate: ['product_cake_brooklyn_blackout', 'product_cake_earls_court_chocolate', 'product_cake_molten_lava'],
+}
+const BIRTHDAY_CAKE_PRODUCT_IDS_BY_ENERGY: Record<string, string[]> = {
+  Romantic: ['product_cake_bridgerton_lemon_lavender'],
+}
 
 export function BirthdayResultSummary({
   cakeId,
@@ -36,6 +47,10 @@ export function BirthdayResultSummary({
   const whoLabel = who === 'Me' ? 'your birthday' : `${who === 'Milestone Birthday' ? 'a milestone birthday' : `a ${who.toLowerCase()}'s birthday`}`
   const article = /^[aeiou]/i.test(energyName) ? 'An' : 'A'
   const whyItFits = `${article} ${energyName.toLowerCase()} ${flavorName.toLowerCase()} cake, matched for ${whoLabel}${theme ? ` with a ${theme} theme` : ''}.`
+  const cakeInspirationProducts = getProductsByIds([
+    ...(BIRTHDAY_CAKE_PRODUCT_IDS_BY_FLAVOR[flavorName] ?? []),
+    ...(BIRTHDAY_CAKE_PRODUCT_IDS_BY_ENERGY[energyName] ?? []),
+  ])
 
   return (
     <div className="birthday-result-summary">
@@ -73,6 +88,8 @@ export function BirthdayResultSummary({
           </Link>
         </section>
       )}
+
+      <AffiliateProductSet title="Cake Inspiration" products={cakeInspirationProducts} />
 
       <Link to="/time-machine" className="card birthday-time-machine-link">
         🎂 Curious what cake defined your birth year? Try the Birthday Time Machine →

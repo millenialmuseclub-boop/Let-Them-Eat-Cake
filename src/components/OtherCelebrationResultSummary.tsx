@@ -3,10 +3,21 @@ import { Link } from 'react-router-dom'
 import type { DietTag } from '../types/cake'
 import { getCake, getRecipeForCake } from '../lib/data'
 import { getTopPairings } from '../lib/encyclopedia'
+import { getProductsByIds } from '../lib/affiliateProducts'
 import { CakeHeroImage } from './CakeHeroImage'
 import { SaveButton } from './SaveButton'
 import { OtherCelebrationShareCard } from './OtherCelebrationShareCard'
+import { AffiliateProductSet } from './AffiliateProductSet'
 import './OtherCelebrationResultSummary.css'
+
+/** Only mood/flavor combos with a genuine, defensible cake-inspiration connection get a mapping. */
+const OTHER_CAKE_PRODUCT_IDS_BY_MOOD: Record<string, string[]> = {
+  Romantic: ['product_cake_bridgerton_lemon_lavender'],
+  Traditional: ['product_cake_red_velvet', 'product_cake_hummingbird', 'product_cake_seven_layer_caramel'],
+}
+const OTHER_CAKE_PRODUCT_IDS_BY_FLAVOR: Record<string, string[]> = {
+  Chocolate: ['product_cake_brooklyn_blackout', 'product_cake_earls_court_chocolate', 'product_cake_molten_lava'],
+}
 
 export function OtherCelebrationResultSummary({
   cakeId,
@@ -33,6 +44,10 @@ export function OtherCelebrationResultSummary({
   const topPairing = getTopPairings(cake, 1)[0]
   const article = /^[aeiou]/i.test(moodName) ? 'an' : 'a'
   const whyItFits = `A ${flavorNames.join(' & ').toLowerCase()} cake with ${article} ${moodName.toLowerCase()} finish, matched for your ${occasionName.toLowerCase()}.`
+  const cakeInspirationProducts = getProductsByIds([
+    ...(OTHER_CAKE_PRODUCT_IDS_BY_MOOD[moodName] ?? []),
+    ...flavorNames.flatMap((f) => OTHER_CAKE_PRODUCT_IDS_BY_FLAVOR[f] ?? []),
+  ])
 
   return (
     <div className="other-celebration-result-summary">
@@ -68,6 +83,8 @@ export function OtherCelebrationResultSummary({
           </Link>
         </section>
       )}
+
+      <AffiliateProductSet title="Cake Inspiration" products={cakeInspirationProducts} />
 
       <div className="wedding-action-row">
         <Link to={`/cake/${cake.id}`} className="btn btn-secondary">

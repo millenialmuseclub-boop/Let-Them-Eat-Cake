@@ -29,6 +29,12 @@ const DECORATION_STYLE_PRODUCT_IDS: Record<string, string[]> = {
 }
 const WEDDING_PRESENTATION_IDS = ['product_cake_knife_set', 'product_floral_cake_stand', 'product_glass_cake_stand']
 
+/** Only aesthetics with a genuine, defensible cake-inspiration connection get a mapping. */
+const WEDDING_CAKE_PRODUCT_IDS: Record<string, string[]> = {
+  'Black Tie': ['product_cake_jfk_wedding'],
+  'Garden Romantic': ['product_cake_bridgerton_lemon_lavender'],
+}
+
 const ALLERGEN_LABELS: Record<string, string> = {
   dairy: 'Dairy',
   eggs: 'Eggs',
@@ -67,6 +73,7 @@ export function WeddingResultSummary({ result, venueType, onRefine }: { result: 
 
   const stylingProducts = getProductsByIds(DECORATION_STYLE_PRODUCT_IDS[result.decorationStyle.id] ?? [])
   const presentationProducts = getProductsByIds(WEDDING_PRESENTATION_IDS)
+  const cakeInspirationProducts = getProductsByIds(WEDDING_CAKE_PRODUCT_IDS[result.aesthetic.name] ?? [])
 
   return (
     <div className="wedding-result-summary">
@@ -261,6 +268,7 @@ export function WeddingResultSummary({ result, venueType, onRefine }: { result: 
           </p>
           {stylingProducts.length > 0 && <AffiliateProductSet title="Curator's Styling Picks" products={stylingProducts} />}
           {presentationProducts.length > 0 && <AffiliateProductSet title="Styling & Presentation" products={presentationProducts} />}
+          {cakeInspirationProducts.length > 0 && <AffiliateProductSet title="Cake Inspiration" products={cakeInspirationProducts} />}
         </div>
       </details>
     </div>
