@@ -31,11 +31,12 @@ None of this depends on browser history state beyond what React Router gives for
 
 ## Saved-State / Storage
 
-Two `localStorage` keys, both flat JSON arrays, both in `src/lib/`:
+One `localStorage` key, in `src/lib/`:
 - `pastryNotebookItems` (`lib/notebook.ts`) — `{ type: 'cake' | 'personality', id, savedAt }[]`. This is **the** save mechanism — "Saved Cakes" on Discover and the Pastry Notebook page (`/notebook`, saved personalities) both read from it. `SaveButton.tsx` is the only write path (`toggleSaved`).
-- `recentlyViewedCakeIds` (`lib/recentlyViewed.ts`) — plain string array, max 12, most-recent-first. Written once per cake-detail view (`recordCakeView`, called from `CakeDetailPage.tsx`'s `useEffect`). Not currently surfaced anywhere in the UI (was built for Discover, not wired — a real, small, ready-to-use loose end if a future pass wants a "Recently Viewed" section back).
 
-No `sessionStorage` usage anywhere. No cookies. This is a small, well-contained surface — a native `storageService` wrapping `AsyncStorage`/`UserDefaults`/whatever with the same 2-key shape is a direct port, not a redesign.
+(A second key, `recentlyViewedCakeIds`, existed earlier but was write-only dead code — nothing ever read it. Removed during the final pre-native completion pass, along with a latent Rules-of-Hooks bug its removal exposed on `CakeDetailPage.tsx`.)
+
+No `sessionStorage` usage anywhere. No cookies. This is a small, well-contained surface — a native `storageService` wrapping `AsyncStorage`/`UserDefaults`/whatever with the same single-key shape is a direct port, not a redesign.
 
 ## Share Architecture
 
@@ -69,11 +70,20 @@ All photography is pre-fetched from Unsplash at **build time**, never at runtime
 
 ## Known Technical Debt
 
-- `components/ShareCard.tsx` (old, text-only) vs. the newer `SocialShareCard.tsx` system — Time Machine's exact-birth-year flow still uses the old one. Not urgent, but the two share systems shouldn't both exist long-term.
-- `lib/recentlyViewed.ts` is written but never read by any UI — dead weight unless a future pass surfaces it (it was originally built for Home, which was later removed).
+- `components/ShareCard.tsx` (old, text-only) vs. the newer `SocialShareCard.tsx` system — Time Machine's exact-birth-year flow still uses the old one. On inspection during the final pre-native pass, `ShareCard.tsx` turned out to already be a thin wrapper *around* `SocialShareCard.tsx` (not a duplicate system) — the only real difference is a birth-year-specific preset, which is a legitimate use case, not drift. Left as-is; not a blocker.
 - `netlify.toml` still declares a `functions` directory and an `/api/*` redirect from the now-deleted Bake Off backend. Inert, not cleaned up.
 - `AffiliateProductSet`'s hardcoded 5-card cap silently truncates longer product lists (e.g. Curated Kitchen's "Cakes to Order" section has 15 real products, only 5 show). This is an accepted, deliberate tradeoff for "curated favorites" framing, not a bug — but worth a real decision (pagination? "view all"?) before native, since a hard cap feels more like a bug on a phone screen with room to scroll.
-- The global recipe **Filling/Frosting/Finish restructuring** (Master Refinement spec, still unstarted) — every recipe's `Recipe` type today is a flat ingredient list + a plain `steps: string[]`, with no distinct Filling/Frosting/Assembly/Bake/Serving structure. This is a real, large content-authoring project (118 cakes), not a quick schema tweak — budget it as its own multi-session effort, not a native-conversion blocker.
+- The bundle is a single ~1.18MB (317KB gzip) JS chunk — Vite's own build warning flags this. Not addressed this pass (no code-splitting introduced); worth revisiting with route-based `React.lazy()` splitting before or during native web-view fallback work, though it's not a blocker for native since native builds don't ship this bundle at all.
+
+## Recipe Data Model (Global Recipe Standard — complete)
+
+Every recipe in `data/recipes.json` (125 of 125) now carries a full structured shape, not just a flat ingredient list:
+- Optional Overview fields: `yield`, `prepTimeMinutes`, `bakeTimeMinutes`, `totalTimeMinutes`, `ovenTempC`/`ovenTempF`, `panSize`, `equipment`, `storage`.
+- `filling` and `frostingFinish`, each a `RecipeComponent` — either a real component (`name`, `ingredients`, `prep`, and optional `textureGoal`/`applicationNotes`/`chillGuidance`) or an explicit `{ none: true, note }` declaration. Every recipe has one of the two for both fields — never left undefined.
+- All fields are additive on top of the original flat `ingredients`/`steps` shape, so nothing else in the app needed to change to support this — `RecipeCard.tsx` renders each section only when present.
+- Real culinary judgment was applied throughout rather than a mechanical schema fill: cream-cheese-style frostings that are spread both between layers and on the outside are declared as "no separate filling" (the frosting does both jobs); cakes where fruit is folded directly into the batter (fruitcakes, panettone-style breads) get honest none/none rather than an invented component; syrup soaks, glazes, and dustings are treated as the real `frostingFinish` when that's genuinely the only finish a recipe has.
+- Verified end-to-end: every recipe has both fields explicitly set, and a full-catalog ingredient-quantity-sum comparison against the pre-migration data confirmed zero ingredients were lost or duplicated during restructuring (one recipe, Zuger Kirschtorte, deliberately splits a single tracked ingredient into two structured entries per the recipe's own "half the kirsch" instructions — verified the split sums back exactly).
+- This is pure data — no new types, components, or routes were needed beyond what batch 1 of this work already added. Nothing here is a native blocker; it's just richer JSON.
 
 ## Areas That Should NOT Be Rewritten During Native Conversion
 
