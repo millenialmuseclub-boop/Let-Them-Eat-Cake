@@ -2,6 +2,10 @@
   command = "npm run build"
   publish = "dist"
   functions = "netlify/functions"
+  # Skip the build when the only changes are to native-app-only paths that
+  # never affect the deployed web build: the Capacitor iOS/Android projects,
+  # capacitor.config.ts, and the separate React Native workspace in /mobile.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)ios' ':(exclude)android' ':(exclude)mobile' ':(exclude)capacitor.config.ts'"
 
 [[redirects]]
   from = "/api/*"

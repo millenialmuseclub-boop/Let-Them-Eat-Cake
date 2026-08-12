@@ -1,0 +1,58 @@
+[
+  {
+    "id": "mood_elegant",
+    "name": "Elegant",
+    "description": "A refined, grown-up finish.",
+    "texture": "creamy",
+    "mood": "celebration",
+    "aesthetic": "coquette-vintage"
+  },
+  {
+    "id": "mood_romantic",
+    "name": "Romantic",
+    "description": "Soft, dreamy, and a little indulgent.",
+    "texture": "creamy",
+    "mood": "cozy-sunday",
+    "aesthetic": "coquette-vintage"
+  },
+  {
+    "id": "mood_modern",
+    "name": "Modern",
+    "description": "Clean lines, quietly confident.",
+    "texture": "sponge",
+    "mood": "cozy-sunday",
+    "aesthetic": "minimalist-k-style"
+  },
+  {
+    "id": "mood_fun",
+    "name": "Fun",
+    "description": "Bright, playful, full of energy.",
+    "texture": "sponge",
+    "mood": "pure-hype",
+    "aesthetic": "y2k-maximalist"
+  },
+  {
+    "id": "mood_seasonal",
+    "name": "Seasonal",
+    "description": "Cozy and rooted in the moment.",
+    "texture": "dense",
+    "mood": "homesick",
+    "aesthetic": "cottagecore"
+  },
+  {
+    "id": "mood_traditional",
+    "name": "Traditional",
+    "description": "Classic and dependably crowd-pleasing.",
+    "texture": "dense",
+    "mood": "celebration",
+    "aesthetic": "coquette-vintage"
+  },
+  {
+    "id": "mood_unexpected",
+    "name": "Unexpected",
+    "description": "Something nobody saw coming.",
+    "texture": "crumbly",
+    "mood": "lazy-weekend",
+    "aesthetic": "y2k-maximalist"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "flavor_dir_chocolate_coffee",
+    "name": "Chocolate & Coffee",
+    "description": "Deep, rich, and dessert-forward — dark chocolate layers with espresso notes throughout.",
+    "keywords": ["chocolate", "dark chocolate", "cocoa", "espresso", "chocolate buttercream"]
+  },
+  {
+    "id": "flavor_dir_vanilla_caramel",
+    "name": "Vanilla & Caramel",
+    "description": "Warm and classic — vanilla bean sponge layered with caramel and brown-butter notes.",
+    "keywords": ["vanilla", "caramel", "caramelized sugar", "dulce de leche", "butter", "brown butter"]
+  },
+  {
+    "id": "flavor_dir_citrus_berry",
+    "name": "Citrus & Berry",
+    "description": "Bright and fresh — lemon or orange sponge with a raspberry or berry filling.",
+    "keywords": ["lemon", "orange", "raspberry", "strawberry", "candied citrus", "lemon zest", "orange zest"]
+  },
+  {
+    "id": "flavor_dir_almond_stone_fruit",
+    "name": "Almond & Stone Fruit",
+    "description": "Nutty and orchard-fresh — marzipan and almond alongside peach, apricot, or cherry.",
+    "keywords": ["almond", "marzipan", "peach", "apricot", "cherry"]
+  },
+  {
+    "id": "flavor_dir_tropical",
+    "name": "Tropical",
+    "description": "Bright and vacation-forward — coconut, passionfruit, and pineapple.",
+    "keywords": ["coconut", "pineapple", "passionfruit", "guava", "pandan", "ube"]
+  },
+  {
+    "id": "flavor_dir_pistachio_rose",
+    "name": "Pistachio & Rose",
+    "description": "Fragrant and jewel-toned — pistachio and rosewater with warm cardamom notes.",
+    "keywords": ["pistachio", "rose water", "cardamom"]
+  }
+]

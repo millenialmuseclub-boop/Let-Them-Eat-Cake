@@ -1,0 +1,409 @@
+[
+  {
+    "id": "product_stand_mixer",
+    "name": "Stand Mixer",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77597966",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/workshop"],
+    "editorialNote": "The workhorse behind creaming, whipping, and kneading — worth the counter space."
+  },
+  {
+    "id": "product_revolving_cake_stand",
+    "name": "Revolving Cake Stand",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77598364",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-anatomy", "/technique-library", "/assembly-lab"],
+    "associatedTechniqueIds": ["buttercream_smoothing"],
+    "editorialNote": "Makes smooth sides and even piping dramatically easier — turn the cake, not your wrist."
+  },
+  {
+    "id": "product_cake_pan",
+    "name": "Cake Pan",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77598720",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-stability", "/cake-blueprints", "/encyclopedia"]
+  },
+  {
+    "id": "product_thermapen",
+    "name": "Thermapen",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77601195",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-stability", "/cake-science", "/cake-blueprints", "/cake-failure-lab", "/encyclopedia", "/assembly-lab"],
+    "associatedTechniqueIds": ["ganache"],
+    "editorialNote": "Instant, accurate reads take the guesswork out of ganache, custard, and syrup temperatures."
+  },
+  {
+    "id": "product_marble_pastry_board",
+    "name": "Marble Pastry Board",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77603136",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_measuring_set",
+    "name": "Ultimate Measuring Set",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77603371",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-science"]
+  },
+  {
+    "id": "product_zester",
+    "name": "Zester",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77174896",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_digital_scale",
+    "name": "Digital Scale",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77173367",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-stability", "/cake-science", "/cake-blueprints", "/cake-failure-lab", "/encyclopedia", "/assembly-lab"],
+    "editorialNote": "Weight-based baking is the single biggest upgrade for consistent results, tier after tier."
+  },
+  {
+    "id": "product_scraper",
+    "name": "Scraper",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77172564",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-anatomy", "/technique-library", "/assembly-lab"],
+    "associatedTechniqueIds": ["buttercream_smoothing"]
+  },
+  {
+    "id": "product_cake_leveler",
+    "name": "Cake Leveler",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77102183",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-anatomy", "/cake-failure-lab", "/assembly-lab"],
+    "associatedTechniqueIds": ["leveling"],
+    "editorialNote": "The fastest fix for uneven, domed, or leaning layers."
+  },
+  {
+    "id": "product_decorating_kit",
+    "name": "Decorating Kit",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77100253",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/technique-library"],
+    "associatedTechniqueIds": ["piping"]
+  },
+  {
+    "id": "product_offset_spatula",
+    "name": "Offset Spatula",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-77099492",
+    "network": "shopmy",
+    "active": true,
+    "associatedHubPaths": ["/cake-anatomy", "/cake-blueprints", "/technique-library", "/encyclopedia", "/assembly-lab"],
+    "associatedTechniqueIds": ["buttercream_smoothing"]
+  },
+  {
+    "id": "product_vanilla",
+    "name": "Vanilla",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77599215",
+    "network": "shopmy",
+    "active": true,
+    "associatedIngredientSlugs": ["vanilla-extract"]
+  },
+  {
+    "id": "product_cake_flour",
+    "name": "Cake Flour",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77599880",
+    "network": "shopmy",
+    "active": true,
+    "associatedIngredientSlugs": ["cake-flour"],
+    "associatedHubPaths": ["/cake-science"]
+  },
+  {
+    "id": "product_milk_chocolate",
+    "name": "Baking Milk Chocolate",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77601825",
+    "network": "shopmy",
+    "active": true,
+    "associatedIngredientSlugs": ["dark-chocolate", "sweet-baking-chocolate"]
+  },
+  {
+    "id": "product_earl_grey_tea",
+    "name": "Earl Grey Tea",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77600915",
+    "network": "shopmy",
+    "active": true,
+    "associatedPairingCategories": ["tea"]
+  },
+  {
+    "id": "product_fancy_sprinkles",
+    "name": "Fancy Sprinkles",
+    "category": "ingredient",
+    "url": "https://on.ltk.com/+TFzoOaCIF96-r8OAUCvEfQ",
+    "network": "ltk",
+    "active": true,
+    "associatedTechniqueIds": ["piping"]
+  },
+  {
+    "id": "product_gel_colors",
+    "name": "Gel Colors",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77602673",
+    "network": "shopmy",
+    "active": true,
+    "associatedTechniqueIds": ["piping"]
+  },
+  {
+    "id": "product_espresso_machine",
+    "name": "Espresso Machine",
+    "category": "beverage-equipment",
+    "url": "https://on.ltk.com/+J36FilnB_SaVOx966SJi4A",
+    "network": "ltk",
+    "active": true,
+    "associatedPairingCategories": ["coffee"],
+    "editorialNote": "Completes the experience for any coffee-forward pairing."
+  },
+  {
+    "id": "product_cocoa_powder",
+    "name": "Cocoa Powder",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77634268",
+    "network": "shopmy",
+    "active": true,
+    "associatedIngredientSlugs": ["cocoa-powder"]
+  },
+  {
+    "id": "product_bourbon_vanilla_paste",
+    "name": "Bourbon Vanilla Paste",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77637631",
+    "network": "shopmy",
+    "active": true,
+    "associatedIngredientSlugs": ["vanilla-extract"]
+  },
+  {
+    "id": "product_gold_leaf",
+    "name": "Edible Gold Leaf",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77638287",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_chestnut_paste",
+    "name": "Agrimontana Candied Chestnut Paste",
+    "category": "ingredient",
+    "url": "https://go.shopmy.us/p-77638959",
+    "network": "shopmy",
+    "active": true,
+    "associatedCakeIds": ["cake_mont_blanc"]
+  },
+  {
+    "id": "product_almond_paste",
+    "name": "Almond Paste",
+    "category": "ingredient",
+    "url": "https://on.ltk.com/+3kwTgnpWXc1RMpvpDe6Q4Q",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_passion_fruit_flavoring",
+    "name": "Passion Fruit Flavoring",
+    "category": "ingredient",
+    "url": "https://on.ltk.com/+kJ-JuYybHbGmmKftuwC0lQ",
+    "network": "ltk",
+    "active": true,
+    "associatedCakeIds": ["cake_pavlova"]
+  },
+  {
+    "id": "product_champagne_flutes",
+    "name": "Champagne Flutes",
+    "category": "beverage-equipment",
+    "url": "https://go.shopmy.us/p-77634550",
+    "network": "shopmy",
+    "active": true,
+    "associatedPairingCategories": ["champagne"]
+  },
+  {
+    "id": "product_cake_knife_set",
+    "name": "Cake Knife Set",
+    "category": "presentation",
+    "url": "https://go.shopmy.us/p-77634801",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_floral_cake_stand",
+    "name": "14-Inch Floral Cake Stand",
+    "category": "presentation",
+    "url": "https://go.shopmy.us/p-77635295",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_cabbage_cake_stand",
+    "name": "12-Inch Cabbage Cake Stand",
+    "category": "presentation",
+    "url": "https://go.shopmy.us/p-77635455",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_glass_cake_stand",
+    "name": "Covered Glass Cake Stand",
+    "category": "presentation",
+    "url": "https://go.shopmy.us/p-77635581",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_heart_bundt_pan",
+    "name": "Nordic Ware Heart Bundt Pan",
+    "category": "presentation",
+    "url": "https://go.shopmy.us/p-77636156",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_cake_brooklyn_blackout",
+    "name": "Brooklyn Blackout Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+qzWg2QNWqhU1_ut04UNldQ",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_inas_coconut",
+    "name": "Ina's Coconut Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+SznFLlHX1juPkI9-KEbVKA",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_chocolate",
+    "name": "Chocolate Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+ptzGNa2OL9EpO24liMpuWA",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_jfk_wedding",
+    "name": "JFK Wedding Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+E9KvbO4mcobsDyMoVOzVPw",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_carrot",
+    "name": "Carrot Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+sm2PoAfzDnGTwaVL2Bqp-Q",
+    "network": "ltk",
+    "active": true,
+    "associatedCakeIds": ["cake_carrot_cream_cheese_1980s"]
+  },
+  {
+    "id": "product_cake_seven_layer_caramel",
+    "name": "Seven-Layer Caramel Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+PvO31uN38ia9dLW5QwU6FA",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_confetti",
+    "name": "Confetti Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+pgNpRvEenxjW4uBl7O1oLQ",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_strawberry_guava_entremet",
+    "name": "Strawberry Guava Entremet",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+3zfssRlJtKIErCov9n-8PQ",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_red_velvet",
+    "name": "Red Velvet Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+WfjNkGaaZfEPgktnWTY4Jg",
+    "network": "ltk",
+    "active": true
+  },
+  {
+    "id": "product_cake_smith_island",
+    "name": "Smith Island Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+8ZSLQ5-97OCojTnWxQEiTg",
+    "network": "ltk",
+    "active": true,
+    "associatedCakeIds": ["cake_smith_island"]
+  },
+  {
+    "id": "product_cake_molten_lava",
+    "name": "Molten Chocolate Lava Cake",
+    "category": "featured-cake",
+    "url": "https://on.ltk.com/+1TdjGQdQTuyRVMBSSQC8bw",
+    "network": "ltk",
+    "active": true,
+    "associatedCakeIds": ["cake_molten_lava_1990s"]
+  },
+  {
+    "id": "product_cake_hummingbird",
+    "name": "Hummingbird Cake",
+    "category": "featured-cake",
+    "url": "https://go.shopmy.us/p-78607094",
+    "network": "shopmy",
+    "active": true,
+    "associatedCakeIds": ["cake_hummingbird"]
+  },
+  {
+    "id": "product_cake_bridgerton_lemon_lavender",
+    "name": "Bridgerton x Williams Sonoma Four-Layer Floral Lemon Lavender Cake",
+    "category": "featured-cake",
+    "url": "https://go.shopmy.us/p-78607251",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_cake_gateau_basque",
+    "name": "Cacao-Fruit Gâteau Basque",
+    "category": "featured-cake",
+    "url": "https://go.shopmy.us/p-78607636",
+    "network": "shopmy",
+    "active": true
+  },
+  {
+    "id": "product_cake_earls_court_chocolate",
+    "name": "Gwendolyn's Famous Earl's Court Three-Layer Chocolate Cake",
+    "category": "featured-cake",
+    "url": "https://go.shopmy.us/p-78613803",
+    "network": "shopmy",
+    "active": true
+  }
+]

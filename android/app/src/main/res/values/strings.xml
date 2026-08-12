@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Let Them Eat Cake</string>
+    <string name="title_activity_main">Let Them Eat Cake</string>
+    <string name="package_name">REPLACE_ME.letthemeatcake</string>
+    <string name="custom_url_scheme">REPLACE_ME.letthemeatcake</string>
+</resources>
