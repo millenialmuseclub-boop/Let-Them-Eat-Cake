@@ -66,7 +66,7 @@ export function TimeMachinePage() {
               year={birthYear}
               cakeName={variant.variantName}
               subtitle={`a ${entry.decadeLabel} ${cake.name}`}
-              bodyText={entry.funFact ?? entry.modernInterpretation}
+              bodyText={`${cake.flavorNotes.slice(0, 2).join(' & ')} from the ${entry.decadeLabel}.`}
             />
           )}
 

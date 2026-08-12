@@ -1,18 +1,17 @@
 import type { CakeProfile } from '../types/cake'
 import { SocialShareCard } from './SocialShareCard'
 
-export function BirthdayShareCard({ cake, energyName, flavorName, whyItFits }: { cake: CakeProfile; energyName: string; flavorName: string; whyItFits: string }) {
+export function BirthdayShareCard({ cake, energyName, flavorName }: { cake: CakeProfile; energyName: string; flavorName: string; whyItFits?: string }) {
   const shareUrl = typeof window !== 'undefined' ? `${window.location.origin}/cake/${cake.id}` : ''
   const shareText = `My birthday cake is ${cake.name} 🎂 #LetThemEatCake`
 
   return (
     <SocialShareCard
-      eyebrow="Let Them Eat Cake — Birthday"
+      eyebrow="Your Birthday Cake"
       title={cake.name}
       subtitle={`${energyName} · ${flavorName}`}
-      bodyLabel="Why it fits"
-      bodyText={whyItFits}
-      cta="Create your own birthday cake"
+      bodyText="Made for the moment."
+      cta="Create your own"
       shareUrl={shareUrl}
       shareText={shareText}
       filename={`${cake.id}-birthday-cake`}
