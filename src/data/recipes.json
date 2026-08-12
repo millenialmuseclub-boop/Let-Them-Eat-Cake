@@ -131,70 +131,6 @@
           "qty": 0.5,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "frosting-butter",
-        "name": "Butter (frosting)",
-        "metric": {
-          "qty": 113,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "dairy-free butter block"
-          },
-          {
-            "diet": "vegan",
-            "replacement": "dairy-free butter block"
-          }
-        ]
-      },
-      {
-        "id": "cocoa",
-        "name": "Cocoa powder",
-        "metric": {
-          "qty": 60,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "powdered-sugar",
-        "name": "Powdered sugar",
-        "metric": {
-          "qty": 360,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "frosting-milk",
-        "name": "Milk (frosting)",
-        "metric": {
-          "qty": 60,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 0.25,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "oat milk"
-          }
-        ]
       }
     ],
     "steps": [
@@ -203,7 +139,92 @@
       "Whisk flour, baking powder, and salt together; add to the batter alternately with milk until just combined.",
       "Divide batter between pans and bake 25-30 minutes until a toothpick comes out clean. Cool completely.",
       "Beat frosting butter, cocoa, powdered sugar, and milk together until fluffy, then frost between layers and over the top."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The chocolate frosting is spread between the layers as well as over the top, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Chocolate Buttercream",
+      "ingredients": [
+        {
+          "id": "frosting-butter",
+          "name": "Butter",
+          "metric": {
+            "qty": 113,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "dairy-free butter block"
+            },
+            {
+              "diet": "vegan",
+              "replacement": "dairy-free butter block"
+            }
+          ]
+        },
+        {
+          "id": "cocoa",
+          "name": "Cocoa powder",
+          "metric": {
+            "qty": 60,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "powdered-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 360,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "frosting-milk",
+          "name": "Milk",
+          "metric": {
+            "qty": 60,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 0.25,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "oat milk"
+            }
+          ]
+        }
+      ],
+      "prep": "Beat the frosting butter, cocoa, powdered sugar, and milk together until fluffy.",
+      "applicationNotes": "Frost between the layers and over the top."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 27,
+    "panSize": "Two 9-inch round pans",
+    "equipment": [
+      "Oven",
+      "Two 9-inch round pans"
+    ],
+    "storage": "Keeps at room temperature, covered, for 3-4 days."
   },
   {
     "id": "recipe_tunnel_fudge_1960s",
@@ -293,36 +314,6 @@
             "replacement": "toasted sunflower seeds, or omit"
           }
         ]
-      },
-      {
-        "id": "powdered-sugar",
-        "name": "Powdered sugar (glaze)",
-        "metric": {
-          "qty": 120,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "glaze-milk",
-        "name": "Milk (glaze)",
-        "metric": {
-          "qty": 30,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "tbsp"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "oat milk"
-          }
-        ]
       }
     ],
     "steps": [
@@ -331,7 +322,58 @@
       "Fold in flour and cocoa powder until just combined, then stir in walnuts.",
       "Pour into the bundt pan and bake 50-60 minutes — the center should look slightly underdone. Do not overbake or the tunnel disappears.",
       "Cool in the pan 1-2 hours, invert onto a plate, then drizzle with a milk-thinned powdered sugar glaze."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single bundt cake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Milk Glaze",
+      "ingredients": [
+        {
+          "id": "powdered-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 120,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "glaze-milk",
+          "name": "Milk",
+          "metric": {
+            "qty": 30,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "tbsp"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "oat milk"
+            }
+          ]
+        }
+      ],
+      "prep": "Whisk the powdered sugar with the milk until smooth and pourable.",
+      "applicationNotes": "Drizzle over the cooled, inverted cake."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 55,
+    "panSize": "10-cup bundt pan",
+    "equipment": [
+      "Oven",
+      "10-cup bundt pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 4-5 days."
   },
   {
     "id": "recipe_hummingbird",
@@ -917,7 +959,17 @@
       "Whisk eggs, egg yolks, and sugar until pale and thick, then fold in the melted chocolate.",
       "Fold in flour and salt just until combined, then divide among the ramekins.",
       "Bake 10-12 minutes until the edges are set but the center still jiggles. Unmold immediately and serve."
-    ]
+    ],
+    "yield": 4,
+    "ovenTempC": 220,
+    "ovenTempF": 425,
+    "bakeTimeMinutes": 11,
+    "panSize": "Four ramekins",
+    "equipment": [
+      "Oven",
+      "Four ramekins"
+    ],
+    "storage": "Best served immediately; unbaked batter can be refrigerated in the ramekins up to 1 day ahead."
   },
   {
     "id": "recipe_red_velvet_cupcake_2000s",
@@ -1276,66 +1328,6 @@
           "qty": 8,
           "unit": "drops"
         }
-      },
-      {
-        "id": "white-chocolate",
-        "name": "White chocolate (ganache)",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 7,
-          "unit": "oz"
-        }
-      },
-      {
-        "id": "cream",
-        "name": "Heavy cream (ganache)",
-        "metric": {
-          "qty": 100,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 0.33,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "coconut cream"
-          }
-        ]
-      },
-      {
-        "id": "frosting-butter",
-        "name": "Butter (buttercream)",
-        "metric": {
-          "qty": 340,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.5,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "dairy-free butter block"
-          }
-        ]
-      },
-      {
-        "id": "powdered-sugar",
-        "name": "Powdered sugar (buttercream)",
-        "metric": {
-          "qty": 600,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 5,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -1344,7 +1336,89 @@
       "Divide batter evenly and tint each portion a different color, then pour into pans and bake 22-25 minutes.",
       "Cool completely, then stack and crumb-coat the layers with vanilla buttercream, chilling between coats.",
       "Warm the cream and pour over the white chocolate to make ganache; once slightly cooled, drip it down the sides of the chilled cake."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The vanilla buttercream is spread between the layers as a crumb coat, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Vanilla Buttercream & Ganache Drip",
+      "ingredients": [
+        {
+          "id": "white-chocolate",
+          "name": "White chocolate",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 7,
+            "unit": "oz"
+          }
+        },
+        {
+          "id": "cream",
+          "name": "Heavy cream",
+          "metric": {
+            "qty": 100,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 0.33,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "coconut cream"
+            }
+          ]
+        },
+        {
+          "id": "frosting-butter",
+          "name": "Butter",
+          "metric": {
+            "qty": 340,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.5,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "dairy-free butter block"
+            }
+          ]
+        },
+        {
+          "id": "powdered-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 600,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 5,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Beat the buttercream butter and powdered sugar together until smooth. Separately, warm the cream and pour over the white chocolate, stirring until glossy.",
+      "applicationNotes": "Crumb-coat and frost the stacked, chilled layers with buttercream first, chilling again. Once the ganache has cooled slightly, drip it down the sides.",
+      "chillGuidance": "Chill between the crumb coat and final coat, and again before adding the drip, so it holds a clean edge."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 24,
+    "panSize": "Four 6-inch round pans",
+    "equipment": [
+      "Oven",
+      "Four 6-inch round pans"
+    ],
+    "storage": "Refrigerate, covered, up to 4 days."
   },
   {
     "id": "recipe_basque_burnt_cheesecake",
@@ -3344,78 +3418,6 @@
           "qty": 1,
           "unit": "cup"
         }
-      },
-      {
-        "id": "pudding-sugar",
-        "name": "Granulated sugar (pudding)",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.75,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "pudding-cocoa",
-        "name": "Cocoa powder (pudding)",
-        "metric": {
-          "qty": 30,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.25,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "cornstarch",
-        "name": "Cornstarch",
-        "metric": {
-          "qty": 30,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "tbsp"
-        }
-      },
-      {
-        "id": "pudding-milk",
-        "name": "Milk (pudding)",
-        "metric": {
-          "qty": 480,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "pudding-egg-yolks",
-        "name": "Egg yolks (pudding)",
-        "metric": {
-          "qty": 2,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "pudding-butter",
-        "name": "Butter (pudding)",
-        "metric": {
-          "qty": 30,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "tbsp"
-        }
       }
     ],
     "steps": [
@@ -3425,7 +3427,101 @@
       "Divide between pans and bake 22-25 minutes. Cool completely, then crumble one layer into fine crumbs for coating.",
       "Whisk pudding sugar, pudding cocoa, and cornstarch in a saucepan, whisk in pudding milk and egg yolks, and cook over medium heat, stirring constantly, until thickened into a pudding. Stir in pudding butter, then chill.",
       "Stack the two remaining cake layers with pudding filling between them and on top, then press the reserved crumbs over the entire outside."
-    ]
+    ],
+    "filling": {
+      "name": "Chocolate Pudding",
+      "ingredients": [
+        {
+          "id": "pudding-sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.75,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "pudding-cocoa",
+          "name": "Cocoa powder",
+          "metric": {
+            "qty": 30,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.25,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "cornstarch",
+          "name": "Cornstarch",
+          "metric": {
+            "qty": 30,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "tbsp"
+          }
+        },
+        {
+          "id": "pudding-milk",
+          "name": "Milk",
+          "metric": {
+            "qty": 480,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "pudding-egg-yolks",
+          "name": "Egg yolks",
+          "metric": {
+            "qty": 2,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "pudding-butter",
+          "name": "Butter",
+          "metric": {
+            "qty": 30,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "Whisk the pudding sugar, pudding cocoa, and cornstarch in a saucepan, whisk in the pudding milk and egg yolks, and cook over medium heat, stirring constantly, until thickened. Stir in the pudding butter, then chill.",
+      "applicationNotes": "Spread between the two remaining cake layers and over the top.",
+      "chillGuidance": "Chill the pudding fully before assembling so it holds its shape."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Finished with crumbs from the crumbled third cake layer pressed over the outside, rather than a separate frosting."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 24,
+    "panSize": "Three 8-inch pans",
+    "equipment": [
+      "Oven",
+      "Three 8-inch round pans"
+    ],
+    "storage": "Refrigerate, covered, up to 4 days — the pudding filling needs to stay chilled."
   },
   {
     "id": "recipe_lane_cake",
@@ -3521,84 +3617,6 @@
           "qty": 1,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "filling-egg-yolks",
-        "name": "Egg yolks (filling)",
-        "metric": {
-          "qty": 8,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 8,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "filling-sugar",
-        "name": "Granulated sugar (filling)",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "filling-butter",
-        "name": "Butter (filling)",
-        "metric": {
-          "qty": 113,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "bourbon",
-        "name": "Bourbon",
-        "metric": {
-          "qty": 45,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "tbsp"
-        }
-      },
-      {
-        "id": "pecans",
-        "name": "Chopped pecans",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.5,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "nut-free",
-            "replacement": "omit"
-          }
-        ]
-      },
-      {
-        "id": "cherries",
-        "name": "Candied cherries, chopped",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -3607,7 +3625,107 @@
       "Divide between pans and bake 20-25 minutes. Cool completely.",
       "Cook filling egg yolks, filling sugar, and filling butter over low heat, stirring constantly, until thickened. Remove from heat and stir in bourbon, pecans, and cherries.",
       "Spread the filling between the layers only, leaving the outside of the cake bare in the traditional style. Let set before slicing."
-    ]
+    ],
+    "filling": {
+      "name": "Bourbon-Pecan-Cherry Filling",
+      "ingredients": [
+        {
+          "id": "filling-egg-yolks",
+          "name": "Egg yolks",
+          "metric": {
+            "qty": 8,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 8,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "filling-sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "filling-butter",
+          "name": "Butter",
+          "metric": {
+            "qty": 113,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "bourbon",
+          "name": "Bourbon",
+          "metric": {
+            "qty": 45,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "tbsp"
+          }
+        },
+        {
+          "id": "pecans",
+          "name": "Chopped pecans",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.5,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "nut-free",
+              "replacement": "omit"
+            }
+          ]
+        },
+        {
+          "id": "cherries",
+          "name": "Candied cherries, chopped",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Cook the filling egg yolks, filling sugar, and filling butter over low heat, stirring constantly, until thickened. Remove from heat and stir in the bourbon, pecans, and cherries.",
+      "applicationNotes": "Spread between the layers only.",
+      "chillGuidance": "Let set before slicing."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally left bare on the outside — only the filling shows between the layers."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 22,
+    "panSize": "Three 9-inch pans",
+    "equipment": [
+      "Oven",
+      "Three 9-inch round pans"
+    ],
+    "storage": "Keeps at room temperature, covered, for 3-4 days."
   },
   {
     "id": "recipe_malva_pudding",
@@ -4711,42 +4829,6 @@
           "qty": 1.5,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "cream-cheese",
-        "name": "Cream cheese",
-        "metric": {
-          "qty": 300,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 10.5,
-          "unit": "oz"
-        }
-      },
-      {
-        "id": "powdered-sugar",
-        "name": "Powdered sugar",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.6,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "frosting-cream",
-        "name": "Heavy cream (frosting)",
-        "metric": {
-          "qty": 60,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 0.25,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -4755,7 +4837,64 @@
       "Whisk in sour cream, eggs, and vanilla, then fold in flour and baking soda.",
       "Pour into the pan and bake 45-50 minutes until a toothpick comes out clean. Cool completely.",
       "Beat cream cheese, powdered sugar, and cream together and spread over the cooled cake — traditionally left white like the head of a stout."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single-layer cake, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Cream Cheese Frosting",
+      "ingredients": [
+        {
+          "id": "cream-cheese",
+          "name": "Cream cheese",
+          "metric": {
+            "qty": 300,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 10.5,
+            "unit": "oz"
+          }
+        },
+        {
+          "id": "powdered-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.6,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "frosting-cream",
+          "name": "Heavy cream",
+          "metric": {
+            "qty": 60,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 0.25,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Beat the cream cheese, powdered sugar, and cream together until smooth.",
+      "applicationNotes": "Spread over the top only, traditionally left white like the head of a stout."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 47,
+    "panSize": "9-inch springform pan",
+    "equipment": [
+      "Oven",
+      "9-inch springform pan"
+    ],
+    "storage": "Refrigerate, covered, up to 4 days."
   },
   {
     "id": "recipe_sernik",
@@ -4925,54 +5064,6 @@
           "qty": 2,
           "unit": "tbsp"
         }
-      },
-      {
-        "id": "buttercream-butter",
-        "name": "Butter (buttercream)",
-        "metric": {
-          "qty": 300,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.33,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "powdered-sugar",
-        "name": "Powdered sugar",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.6,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "dark-chocolate",
-        "name": "Dark chocolate, melted",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 5,
-          "unit": "oz"
-        }
-      },
-      {
-        "id": "caramel-sugar",
-        "name": "Granulated sugar (caramel)",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -4981,7 +5072,77 @@
       "Beat buttercream butter, powdered sugar, and melted chocolate together into a smooth buttercream.",
       "Stack five layers with buttercream between each and over the outside.",
       "Melt the caramel sugar, pour over the sixth layer, quickly cut into wedges before it hardens, and arrange on top as a garnish."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The chocolate buttercream is spread between the layers as well as over the outside, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Chocolate Buttercream & Caramel Wedges",
+      "ingredients": [
+        {
+          "id": "buttercream-butter",
+          "name": "Butter",
+          "metric": {
+            "qty": 300,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.33,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "powdered-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.6,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "dark-chocolate",
+          "name": "Dark chocolate, melted",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 5,
+            "unit": "oz"
+          }
+        },
+        {
+          "id": "caramel-sugar",
+          "name": "Granulated sugar (for caramel)",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Beat the buttercream butter, powdered sugar, and melted chocolate together into a smooth buttercream. Separately, melt the caramel sugar until amber.",
+      "applicationNotes": "Stack five layers with buttercream between each and over the outside. Pour the caramel over the sixth layer, quickly cut into wedges before it hardens, and arrange on top as a garnish."
+    },
+    "yield": 12,
+    "ovenTempC": 200,
+    "ovenTempF": 400,
+    "bakeTimeMinutes": 6,
+    "panSize": "Baking sheet (6 thin layers)",
+    "equipment": [
+      "Oven",
+      "Baking sheet",
+      "Offset spatula"
+    ],
+    "storage": "Keeps at room temperature, covered, for 3 days."
   },
   {
     "id": "recipe_revani",
@@ -7175,90 +7336,6 @@
             "replacement": "omit"
           }
         ]
-      },
-      {
-        "id": "praline-paste",
-        "name": "Hazelnut praline paste",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.75,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "nut-free",
-            "replacement": "vanilla pastry cream, no praline"
-          }
-        ]
-      },
-      {
-        "id": "milk",
-        "name": "Whole milk",
-        "metric": {
-          "qty": 250,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "oat milk"
-          }
-        ]
-      },
-      {
-        "id": "egg-yolks",
-        "name": "Egg yolks",
-        "metric": {
-          "qty": 3,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "cream-sugar",
-        "name": "Granulated sugar (cream)",
-        "metric": {
-          "qty": 60,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.3,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "cornstarch",
-        "name": "Cornstarch",
-        "metric": {
-          "qty": 25,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "tbsp"
-        }
-      },
-      {
-        "id": "icing-sugar",
-        "name": "Powdered sugar (dusting)",
-        "metric": {
-          "qty": 20,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "tbsp"
-        }
       }
     ],
     "steps": [
@@ -7267,7 +7344,117 @@
       "Make pastry cream: whisk egg yolks, sugar, and cornstarch, then temper in hot milk. Cook until thickened, then whisk in praline paste. Chill fully.",
       "Split the choux ring horizontally. Pipe the praline cream generously into the bottom half.",
       "Replace the top half and dust with powdered sugar before serving."
-    ]
+    ],
+    "filling": {
+      "name": "Praline Pastry Cream",
+      "ingredients": [
+        {
+          "id": "praline-paste",
+          "name": "Hazelnut praline paste",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.75,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "nut-free",
+              "replacement": "vanilla pastry cream, no praline"
+            }
+          ]
+        },
+        {
+          "id": "milk",
+          "name": "Whole milk",
+          "metric": {
+            "qty": 250,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "oat milk"
+            }
+          ]
+        },
+        {
+          "id": "egg-yolks",
+          "name": "Egg yolks",
+          "metric": {
+            "qty": 3,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "cream-sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 60,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.3,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "cornstarch",
+          "name": "Cornstarch",
+          "metric": {
+            "qty": 25,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "Whisk the egg yolks, sugar, and cornstarch, then temper with hot milk. Cook until thickened, then whisk in the praline paste. Chill fully.",
+      "applicationNotes": "Split the choux ring horizontally and pipe the cream generously into the bottom half.",
+      "chillGuidance": "Chill the pastry cream completely before piping so it holds its shape."
+    },
+    "frostingFinish": {
+      "name": "Powdered Sugar Dusting",
+      "ingredients": [
+        {
+          "id": "icing-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 20,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "No preparation needed.",
+      "applicationNotes": "Dust over the top just before serving."
+    },
+    "yield": 8,
+    "ovenTempC": 200,
+    "ovenTempF": 400,
+    "bakeTimeMinutes": 32,
+    "panSize": "Baking sheet (piped ring)",
+    "equipment": [
+      "Oven",
+      "Piping bag",
+      "Baking sheet"
+    ],
+    "storage": "Refrigerate, assembled, up to 1 day — choux softens quickly once filled."
   },
   {
     "id": "recipe_cassata_siciliana",
@@ -7285,102 +7472,6 @@
           "qty": 1,
           "unit": "cake"
         }
-      },
-      {
-        "id": "ricotta",
-        "name": "Ricotta cheese",
-        "metric": {
-          "qty": 500,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "dairy-free ricotta-style cheese"
-          }
-        ]
-      },
-      {
-        "id": "sugar",
-        "name": "Powdered sugar",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.2,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "candied-fruit",
-        "name": "Candied citrus peel",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.66,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "chocolate-chips",
-        "name": "Mini chocolate chips",
-        "metric": {
-          "qty": 60,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.33,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "marzipan",
-        "name": "Green marzipan",
-        "metric": {
-          "qty": 300,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.5,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "nut-free",
-            "replacement": "rolled fondant, tinted green"
-          }
-        ]
-      },
-      {
-        "id": "icing",
-        "name": "White icing",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "lemon-zest",
-        "name": "Lemon zest",
-        "metric": {
-          "qty": 5,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "tsp"
-        }
       }
     ],
     "steps": [
@@ -7389,7 +7480,125 @@
       "Fill with the ricotta mixture and top with more sponge. Chill for at least 4 hours.",
       "Unmold and wrap the sides in rolled-out green marzipan.",
       "Top with white icing and decorate with additional candied fruit."
-    ]
+    ],
+    "filling": {
+      "name": "Sweet Ricotta",
+      "ingredients": [
+        {
+          "id": "ricotta",
+          "name": "Ricotta cheese",
+          "metric": {
+            "qty": 500,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "dairy-free ricotta-style cheese"
+            }
+          ]
+        },
+        {
+          "id": "sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.2,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "candied-fruit",
+          "name": "Candied citrus peel",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.66,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "chocolate-chips",
+          "name": "Mini chocolate chips",
+          "metric": {
+            "qty": 60,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.33,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "lemon-zest",
+          "name": "Lemon zest",
+          "metric": {
+            "qty": 5,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "tsp"
+          }
+        }
+      ],
+      "prep": "Beat the ricotta with powdered sugar until smooth, then fold in the candied fruit, chocolate chips, and lemon zest.",
+      "applicationNotes": "Fill the sponge-lined mold with the ricotta mixture and top with more sponge.",
+      "chillGuidance": "Chill for at least 4 hours so the filling sets before unmolding."
+    },
+    "frostingFinish": {
+      "name": "Marzipan & Icing",
+      "ingredients": [
+        {
+          "id": "marzipan",
+          "name": "Green marzipan",
+          "metric": {
+            "qty": 300,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.5,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "nut-free",
+              "replacement": "rolled fondant, tinted green"
+            }
+          ]
+        },
+        {
+          "id": "icing",
+          "name": "White icing",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Roll the marzipan out to wrap the sides.",
+      "applicationNotes": "Wrap the unmolded cassata in marzipan, then top with white icing and decorate with additional candied fruit."
+    },
+    "yield": 10,
+    "panSize": "Bowl or cassata mold",
+    "equipment": [
+      "Cassata mold or bowl",
+      "Rolling pin"
+    ],
+    "storage": "Refrigerate, covered, up to 3 days — the ricotta filling needs to stay chilled."
   },
   {
     "id": "recipe_baumkuchen",
@@ -7980,36 +8189,6 @@
           "qty": 0.5,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "jam",
-        "name": "Apricot jam",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.33,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "marzipan",
-        "name": "Marzipan",
-        "metric": {
-          "qty": 400,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "nut-free",
-            "replacement": "rolled fondant"
-          }
-        ]
       }
     ],
     "steps": [
@@ -8018,7 +8197,61 @@
       "Trim and cut each sponge into two long strips of equal size.",
       "Brush strips with warm apricot jam and assemble into a checkerboard pattern, gluing with more jam.",
       "Wrap the whole assembled cake in a sheet of rolled marzipan, trimming the seam neatly."
-    ]
+    ],
+    "filling": {
+      "name": "Apricot Jam",
+      "ingredients": [
+        {
+          "id": "jam",
+          "name": "Apricot jam",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.33,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Warm the jam until spreadable.",
+      "applicationNotes": "Brush over the trimmed sponge strips and use it to glue them into the checkerboard pattern."
+    },
+    "frostingFinish": {
+      "name": "Marzipan Wrap",
+      "ingredients": [
+        {
+          "id": "marzipan",
+          "name": "Marzipan",
+          "metric": {
+            "qty": 400,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "nut-free",
+              "replacement": "rolled fondant"
+            }
+          ]
+        }
+      ],
+      "prep": "Roll the marzipan out into a sheet large enough to wrap the assembled cake.",
+      "applicationNotes": "Wrap the checkerboard cake in the marzipan sheet, trimming the seam neatly."
+    },
+    "yield": 8,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 27,
+    "panSize": "Divided loaf pan (two sections)",
+    "equipment": [
+      "Oven",
+      "Divided loaf pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 4-5 days."
   },
   {
     "id": "recipe_dundee_cake",
@@ -13441,42 +13674,6 @@
           "qty": 0.5,
           "unit": "cup"
         }
-      },
-      {
-        "id": "cinnamon",
-        "name": "Cinnamon (filling)",
-        "metric": {
-          "qty": 10,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 4,
-          "unit": "tsp"
-        }
-      },
-      {
-        "id": "icing-sugar",
-        "name": "Powdered sugar (icing)",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.6,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "food-coloring",
-        "name": "Purple, green, and gold sanding sugar",
-        "metric": {
-          "qty": 30,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "tbsp"
-        }
       }
     ],
     "steps": [
@@ -13485,7 +13682,68 @@
       "Shape into a ring on a baking sheet, pinching the ends together, and let rise again 30-45 minutes.",
       "Bake at 190°C (375°F) for 25-30 minutes until golden.",
       "Once cool, drizzle with powdered sugar icing and alternate bands of purple, green, and gold sanding sugar."
-    ]
+    ],
+    "filling": {
+      "name": "Cinnamon Sugar",
+      "ingredients": [
+        {
+          "id": "cinnamon",
+          "name": "Cinnamon",
+          "metric": {
+            "qty": 10,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 4,
+            "unit": "tsp"
+          }
+        }
+      ],
+      "prep": "No cooking required — the cinnamon is sprinkled directly onto the rolled dough along with a portion of the reserved sugar.",
+      "applicationNotes": "Roll up into a long log before shaping into a ring."
+    },
+    "frostingFinish": {
+      "name": "Icing & Sanding Sugar",
+      "ingredients": [
+        {
+          "id": "icing-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.6,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "food-coloring",
+          "name": "Purple, green, and gold sanding sugar",
+          "metric": {
+            "qty": 30,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "Whisk the powdered sugar with a splash of milk or water until smooth and pourable.",
+      "applicationNotes": "Drizzle over the cooled ring, then immediately alternate bands of purple, green, and gold sanding sugar before the icing sets."
+    },
+    "yield": 14,
+    "ovenTempC": 190,
+    "ovenTempF": 375,
+    "bakeTimeMinutes": 27,
+    "panSize": "Baking sheet (ring-shaped)",
+    "equipment": [
+      "Oven",
+      "Baking sheet",
+      "Stand mixer or hands for kneading"
+    ],
+    "storage": "Keeps at room temperature, covered, for 2-3 days — it is a yeasted bread, best fresh."
   },
   {
     "id": "recipe_smith_island",
