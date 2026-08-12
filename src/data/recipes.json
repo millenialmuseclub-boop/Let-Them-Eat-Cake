@@ -2242,42 +2242,6 @@
             "replacement": "1:1 gluten-free baking blend"
           }
         ]
-      },
-      {
-        "id": "sour-cream",
-        "name": "Sour cream",
-        "metric": {
-          "qty": 480,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "frosting-sugar",
-        "name": "Powdered sugar",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.25,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "heavy-cream",
-        "name": "Heavy cream",
-        "metric": {
-          "qty": 120,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -2287,7 +2251,66 @@
       "Whip sour cream, powdered sugar, and heavy cream together into a frosting.",
       "Stack the layers with frosting between each, frost the outside, then press the reserved crumbs onto the sides.",
       "Refrigerate at least 8 hours, ideally overnight, so the layers soften into a torte before serving."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The sour cream frosting is spread between the layers as well as over the outside, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Sour Cream Frosting",
+      "ingredients": [
+        {
+          "id": "sour-cream",
+          "name": "Sour cream",
+          "metric": {
+            "qty": 480,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "frosting-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.25,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "heavy-cream",
+          "name": "Heavy cream",
+          "metric": {
+            "qty": 120,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Whip the sour cream, powdered sugar, and heavy cream together into a smooth frosting.",
+      "applicationNotes": "Stack the layers with frosting between each, frost the outside, then press the reserved baked crumbs onto the sides.",
+      "chillGuidance": "Refrigerate at least 8 hours, ideally overnight, so the layers soften into a torte before serving."
+    },
+    "yield": 12,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 5,
+    "panSize": "Baking sheet (8 thin layers)",
+    "equipment": [
+      "Oven",
+      "Rolling pin",
+      "Baking sheet"
+    ],
+    "storage": "Refrigerate, covered, up to 5 days — it improves as it sits."
   },
   {
     "id": "recipe_kouign_amann",
@@ -6634,78 +6657,6 @@
             "replacement": "omit"
           }
         ]
-      },
-      {
-        "id": "filling-butter",
-        "name": "Butter (filling)",
-        "metric": {
-          "qty": 60,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.25,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "custard-powder",
-        "name": "Custard powder",
-        "metric": {
-          "qty": 30,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "tbsp"
-        }
-      },
-      {
-        "id": "filling-sugar",
-        "name": "Powdered sugar (filling)",
-        "metric": {
-          "qty": 250,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "filling-milk",
-        "name": "Milk (filling)",
-        "metric": {
-          "qty": 30,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "tbsp"
-        }
-      },
-      {
-        "id": "topping-chocolate",
-        "name": "Dark chocolate (topping)",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 5,
-          "unit": "oz"
-        }
-      },
-      {
-        "id": "topping-butter",
-        "name": "Butter (topping)",
-        "metric": {
-          "qty": 15,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "tbsp"
-        }
       }
     ],
     "steps": [
@@ -6714,7 +6665,102 @@
       "Spread the filling over the chilled base and chill again until firm.",
       "Melt the topping chocolate and butter together, then pour over the filling layer, tilting to cover evenly.",
       "Chill until the chocolate sets, then cut into small bars."
-    ]
+    ],
+    "filling": {
+      "name": "Custard Filling",
+      "ingredients": [
+        {
+          "id": "filling-butter",
+          "name": "Butter",
+          "metric": {
+            "qty": 60,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.25,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "custard-powder",
+          "name": "Custard powder",
+          "metric": {
+            "qty": 30,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "tbsp"
+          }
+        },
+        {
+          "id": "filling-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 250,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "filling-milk",
+          "name": "Milk",
+          "metric": {
+            "qty": 30,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "Beat the filling butter, custard powder, filling sugar, and filling milk together until smooth and spreadable.",
+      "applicationNotes": "Spread over the chilled crumb base.",
+      "chillGuidance": "Chill again until firm before adding the chocolate topping."
+    },
+    "frostingFinish": {
+      "name": "Chocolate Topping",
+      "ingredients": [
+        {
+          "id": "topping-chocolate",
+          "name": "Dark chocolate",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 5,
+            "unit": "oz"
+          }
+        },
+        {
+          "id": "topping-butter",
+          "name": "Butter",
+          "metric": {
+            "qty": 15,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "Melt the topping chocolate and butter together.",
+      "applicationNotes": "Pour over the set custard layer, tilting to cover evenly.",
+      "chillGuidance": "Chill until the chocolate sets before cutting into bars."
+    },
+    "yield": 16,
+    "panSize": "9-inch square pan",
+    "equipment": [
+      "9-inch square pan",
+      "Saucepan"
+    ],
+    "storage": "Refrigerate, covered, up to 2 weeks — best kept cold since it never gets baked."
   },
   {
     "id": "recipe_torta_rogel",
@@ -7847,18 +7893,6 @@
           "qty": 1,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "jam",
-        "name": "Redcurrant jam",
-        "metric": {
-          "qty": 300,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -7867,7 +7901,41 @@
       "Preheat oven to 175°C (350°F). Press two-thirds of the dough into a tart pan and spread with redcurrant jam.",
       "Roll the remaining dough into strips and arrange in a lattice over the jam.",
       "Bake 35-40 minutes until the lattice is golden. Cool completely before slicing."
-    ]
+    ],
+    "filling": {
+      "name": "Redcurrant Jam",
+      "ingredients": [
+        {
+          "id": "jam",
+          "name": "Redcurrant jam",
+          "metric": {
+            "qty": 300,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "No cooking required — the jam is used as-is.",
+      "applicationNotes": "Spread over the pressed-in dough before topping with the lattice."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Finished simply with its own pastry lattice on top rather than a separate frosting or glaze."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 37,
+    "panSize": "Tart pan",
+    "equipment": [
+      "Oven",
+      "Tart pan",
+      "Rolling pin"
+    ],
+    "storage": "Keeps at room temperature, covered, for 4-5 days — traditionally made a day ahead."
   },
   {
     "id": "recipe_bolo_rei",
@@ -8073,18 +8141,6 @@
           "qty": 2,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "icing-sugar",
-        "name": "Powdered sugar (dusting)",
-        "metric": {
-          "qty": 30,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "tbsp"
-        }
       }
     ],
     "steps": [
@@ -8093,7 +8149,41 @@
       "Fold in almond flour, lemon zest, and cinnamon until just combined.",
       "Pour into the pan and bake 35-40 minutes until golden and set. Cool completely.",
       "Lay a Cross of Saint James stencil over the top and dust generously with powdered sugar, then lift the stencil away."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single-layer almond cake, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Powdered Sugar Stencil",
+      "ingredients": [
+        {
+          "id": "icing-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 30,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "No preparation needed.",
+      "applicationNotes": "Lay a Cross of Saint James stencil over the top and dust generously with powdered sugar, then lift the stencil away."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 37,
+    "panSize": "Round cake pan",
+    "equipment": [
+      "Oven",
+      "Round cake pan",
+      "Cross of Saint James stencil"
+    ],
+    "storage": "Keeps at room temperature, covered, for 4-5 days."
   },
   {
     "id": "recipe_battenberg",
@@ -8385,7 +8475,25 @@
       "Fold in the dried fruit until evenly distributed.",
       "Spread into the pan and arrange whole almonds in concentric circles over the top.",
       "Bake 1.5-2 hours until a skewer comes out clean, covering loosely with foil if it browns too quickly."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single fruitcake with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Finished with a ring of whole almonds pressed onto the top before baking, rather than a separate icing — traditional Dundee cake is never iced."
+    },
+    "yield": 12,
+    "ovenTempC": 150,
+    "ovenTempF": 300,
+    "bakeTimeMinutes": 105,
+    "panSize": "Deep round cake pan",
+    "equipment": [
+      "Oven",
+      "Deep round cake pan"
+    ],
+    "storage": "Keeps at room temperature, wrapped, for 2-3 weeks — it improves with age like most fruitcakes."
   },
   {
     "id": "recipe_welsh_cakes",
@@ -9401,96 +9509,6 @@
           "qty": 1.5,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "milk",
-        "name": "Milk (pastry cream)",
-        "metric": {
-          "qty": 300,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1.25,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "oat milk"
-          }
-        ]
-      },
-      {
-        "id": "egg-yolks",
-        "name": "Egg yolks (pastry cream)",
-        "metric": {
-          "qty": 3,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "cream-sugar",
-        "name": "Granulated sugar (pastry cream)",
-        "metric": {
-          "qty": 60,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.3,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "heavy-cream",
-        "name": "Heavy cream, whipped",
-        "metric": {
-          "qty": 400,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1.7,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "whipped coconut cream"
-          }
-        ]
-      },
-      {
-        "id": "jam",
-        "name": "Raspberry jam",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.33,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "marzipan",
-        "name": "Green marzipan",
-        "metric": {
-          "qty": 500,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2.5,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "nut-free",
-            "replacement": "rolled fondant, tinted green"
-          }
-        ]
       }
     ],
     "steps": [
@@ -9499,7 +9517,123 @@
       "Assemble: bottom sponge layer with raspberry jam, middle layer with pastry cream, top layer mounded with whipped cream into a dome shape.",
       "Chill the domed cake until firm, then drape with a large circle of rolled marzipan, smoothing down the sides.",
       "Trim the base neatly and finish with a small pink marzipan rose on top."
-    ]
+    ],
+    "filling": {
+      "name": "Jam & Pastry Cream",
+      "ingredients": [
+        {
+          "id": "milk",
+          "name": "Milk",
+          "metric": {
+            "qty": 300,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1.25,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "oat milk"
+            }
+          ]
+        },
+        {
+          "id": "egg-yolks",
+          "name": "Egg yolks",
+          "metric": {
+            "qty": 3,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "cream-sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 60,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.3,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "jam",
+          "name": "Raspberry jam",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.33,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Whisk the egg yolks and sugar, temper with hot milk, and cook until thick. Cool completely before assembling.",
+      "applicationNotes": "Spread jam over the bottom sponge layer, then spread pastry cream over the middle layer."
+    },
+    "frostingFinish": {
+      "name": "Whipped Cream Dome & Marzipan",
+      "ingredients": [
+        {
+          "id": "heavy-cream",
+          "name": "Heavy cream",
+          "metric": {
+            "qty": 400,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1.7,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "whipped coconut cream"
+            }
+          ]
+        },
+        {
+          "id": "marzipan",
+          "name": "Green marzipan",
+          "metric": {
+            "qty": 500,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2.5,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "nut-free",
+              "replacement": "rolled fondant, tinted green"
+            }
+          ]
+        }
+      ],
+      "prep": "Whip the cream to stiff peaks. Roll the marzipan into a large circle.",
+      "applicationNotes": "Mound the whipped cream over the top layer into a dome shape, chill until firm, then drape the marzipan over the dome, smoothing down the sides and trimming the base. Finish with a small marzipan rose on top.",
+      "chillGuidance": "Chill the domed cake until firm before draping with marzipan."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 25,
+    "panSize": "Round cake pan",
+    "equipment": [
+      "Oven",
+      "Round cake pan",
+      "Rolling pin"
+    ],
+    "storage": "Refrigerate, covered, up to 2 days."
   },
   {
     "id": "recipe_merveilleux",
@@ -10603,7 +10737,26 @@
       "Fold in the fruit paste and burnt sugar browning for color and depth.",
       "Pour into a lined round pan and bake at 150°C (300°F) for about 2 hours, tenting with foil once deeply browned.",
       "Cool completely and, if desired, feed with a little more rum every few days before serving."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The soaked fruit is blended into a paste and folded directly into the batter, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally left unfrosted — sometimes 'fed' with a little more rum after baking, but never iced."
+    },
+    "yield": 14,
+    "ovenTempC": 150,
+    "ovenTempF": 300,
+    "bakeTimeMinutes": 120,
+    "panSize": "Round cake pan",
+    "equipment": [
+      "Oven",
+      "Round cake pan",
+      "Blender"
+    ],
+    "storage": "Wrapped tightly, keeps for weeks at room temperature and improves with age — often 'fed' with rum every few days."
   },
   {
     "id": "recipe_simnel_cake",
@@ -12781,18 +12934,6 @@
           "qty": 5,
           "unit": "count"
         }
-      },
-      {
-        "id": "icing-sugar",
-        "name": "Powdered sugar (dusting)",
-        "metric": {
-          "qty": 20,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "tbsp"
-        }
       }
     ],
     "steps": [
@@ -12801,7 +12942,40 @@
       "Whip egg whites with the remaining sugar to soft peaks, then fold into the chocolate batter in stages.",
       "Pour into the pan and bake 35-40 minutes until the top is cracked but the center stays fudgy.",
       "Cool completely and dust with powdered sugar before serving."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single flourless chocolate-almond cake, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Powdered Sugar Dusting",
+      "ingredients": [
+        {
+          "id": "icing-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 20,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "No preparation needed.",
+      "applicationNotes": "Dust over the cooled cake just before serving."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 37,
+    "panSize": "Round cake pan",
+    "equipment": [
+      "Oven",
+      "Round cake pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 3-4 days."
   },
   {
     "id": "recipe_panforte",
@@ -12911,7 +13085,26 @@
       "Heat honey and sugar together until it reaches a soft-ball stage (approximately 115°C/240°F).",
       "Stir the hot syrup into the fruit-nut mixture quickly, then press firmly into the pan before it sets.",
       "Bake 30-35 minutes, cool completely in the pan, and dust with powdered sugar before slicing thin."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A dense, sliceable confection with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally finished with a dusting of powdered sugar rather than a frosting."
+    },
+    "yield": 16,
+    "ovenTempC": 150,
+    "ovenTempF": 300,
+    "bakeTimeMinutes": 32,
+    "panSize": "Round pan, lined with rice paper or parchment",
+    "equipment": [
+      "Oven",
+      "Candy thermometer",
+      "Round pan"
+    ],
+    "storage": "Keeps at room temperature, wrapped, for several weeks — it only improves with age."
   },
   {
     "id": "recipe_bolo_de_arroz",
@@ -13149,84 +13342,6 @@
           "qty": 2,
           "unit": "count"
         }
-      },
-      {
-        "id": "almond-flour",
-        "name": "Almond flour",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.5,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "nut-free",
-            "replacement": "sunflower seed flour"
-          }
-        ]
-      },
-      {
-        "id": "butter",
-        "name": "Butter, softened",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.44,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "sugar",
-        "name": "Granulated sugar",
-        "metric": {
-          "qty": 100,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "eggs",
-        "name": "Eggs, large",
-        "metric": {
-          "qty": 2,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "almond-extract",
-        "name": "Almond extract",
-        "metric": {
-          "qty": 5,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "tsp"
-        }
-      },
-      {
-        "id": "egg-wash",
-        "name": "Egg (for egg wash)",
-        "metric": {
-          "qty": 1,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "count"
-        }
       }
     ],
     "steps": [
@@ -13235,7 +13350,110 @@
       "Brush the border with water, top with the second pastry sheet, and press the edges to seal.",
       "Score a decorative pattern on top and brush with egg wash.",
       "Bake at 200°C (400°F) for 25-30 minutes until deeply golden and puffed."
-    ]
+    ],
+    "filling": {
+      "name": "Frangipane",
+      "ingredients": [
+        {
+          "id": "almond-flour",
+          "name": "Almond flour",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.5,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "nut-free",
+              "replacement": "sunflower seed flour"
+            }
+          ]
+        },
+        {
+          "id": "butter",
+          "name": "Butter, softened",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.44,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 100,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.5,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "eggs",
+          "name": "Eggs, large",
+          "metric": {
+            "qty": 2,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "almond-extract",
+          "name": "Almond extract",
+          "metric": {
+            "qty": 5,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "tsp"
+          }
+        }
+      ],
+      "prep": "Beat the butter and sugar together, then beat in the eggs and almond extract, and fold in the almond flour.",
+      "applicationNotes": "Spread in the center of the first pastry sheet, leaving a border, and tuck in a small charm or dried bean before sealing with the second sheet."
+    },
+    "frostingFinish": {
+      "name": "Egg Wash",
+      "ingredients": [
+        {
+          "id": "egg-wash",
+          "name": "Egg",
+          "metric": {
+            "qty": 1,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "count"
+          }
+        }
+      ],
+      "prep": "Beat the egg.",
+      "applicationNotes": "Brush over the top before baking, after scoring a decorative pattern."
+    },
+    "yield": 8,
+    "ovenTempC": 200,
+    "ovenTempF": 400,
+    "bakeTimeMinutes": 27,
+    "panSize": "Baking sheet",
+    "equipment": [
+      "Oven",
+      "Baking sheet",
+      "Pastry brush"
+    ],
+    "storage": "Best eaten the day it's baked; keeps at room temperature, loosely covered, for 1-2 days."
   },
   {
     "id": "recipe_boterkoek",
@@ -13833,36 +14051,6 @@
           "qty": 2,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "dark-chocolate",
-        "name": "Dark chocolate (frosting)",
-        "metric": {
-          "qty": 300,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "cream",
-        "name": "Heavy cream (frosting)",
-        "metric": {
-          "qty": 300,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1.25,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "coconut cream"
-          }
-        ]
       }
     ],
     "steps": [
@@ -13871,7 +14059,59 @@
       "Melt chocolate with cream to make a pourable fudge frosting.",
       "Stack the thin layers with a thin layer of fudge frosting between each.",
       "Coat the top and sides with the remaining frosting and chill before slicing."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The fudge frosting is spread thinly between every layer as well as over the outside, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Chocolate Fudge Frosting",
+      "ingredients": [
+        {
+          "id": "dark-chocolate",
+          "name": "Dark chocolate",
+          "metric": {
+            "qty": 300,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "cream",
+          "name": "Heavy cream",
+          "metric": {
+            "qty": 300,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1.25,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "coconut cream"
+            }
+          ]
+        }
+      ],
+      "prep": "Melt the chocolate with the cream until smooth and pourable.",
+      "applicationNotes": "Stack the thin layers with a thin coat of frosting between each, then coat the top and sides with the remaining frosting.",
+      "chillGuidance": "Chill before slicing so the many thin layers hold together cleanly."
+    },
+    "yield": 12,
+    "ovenTempC": 190,
+    "ovenTempF": 375,
+    "bakeTimeMinutes": 9,
+    "panSize": "8-10 thin round pans (or baked in batches)",
+    "equipment": [
+      "Oven",
+      "Multiple round pans or one reused pan"
+    ],
+    "storage": "Refrigerate, covered, up to 5 days."
   },
   {
     "id": "recipe_italian_cream_cake",
@@ -15104,60 +15344,6 @@
           "qty": 1,
           "unit": "cup"
         }
-      },
-      {
-        "id": "chestnut-puree",
-        "name": "Sweetened chestnut purée",
-        "metric": {
-          "qty": 500,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "rum",
-        "name": "Dark rum",
-        "metric": {
-          "qty": 20,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 4,
-          "unit": "tsp"
-        }
-      },
-      {
-        "id": "cream",
-        "name": "Heavy cream",
-        "metric": {
-          "qty": 400,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1.7,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "whipped coconut cream"
-          }
-        ]
-      },
-      {
-        "id": "icing-sugar",
-        "name": "Powdered sugar (cream)",
-        "metric": {
-          "qty": 30,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "tbsp"
-        }
       }
     ],
     "steps": [
@@ -15166,7 +15352,84 @@
       "Whip cream with powdered sugar to stiff peaks and mound a dome onto each meringue base.",
       "Pipe the chestnut purée through a ricer or fine piping tip over the cream in thin vermicelli-like strands, covering it completely.",
       "Chill briefly and dust with a little powdered sugar just before serving."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "An assembled individual dessert with no internal filling — the meringue base is topped, not filled."
+    },
+    "frostingFinish": {
+      "name": "Whipped Cream & Chestnut Vermicelli",
+      "ingredients": [
+        {
+          "id": "chestnut-puree",
+          "name": "Sweetened chestnut purée",
+          "metric": {
+            "qty": 500,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "rum",
+          "name": "Dark rum",
+          "metric": {
+            "qty": 20,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 4,
+            "unit": "tsp"
+          }
+        },
+        {
+          "id": "cream",
+          "name": "Heavy cream",
+          "metric": {
+            "qty": 400,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1.7,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "whipped coconut cream"
+            }
+          ]
+        },
+        {
+          "id": "icing-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 30,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "tbsp"
+          }
+        }
+      ],
+      "prep": "Loosen the chestnut purée with rum until smooth and pipeable. Whip the cream with powdered sugar to stiff peaks.",
+      "applicationNotes": "Mound a dome of whipped cream onto each meringue base, then pipe the chestnut purée through a ricer or fine piping tip over the cream in thin vermicelli-like strands, covering it completely.",
+      "chillGuidance": "Chill briefly and dust with a little powdered sugar just before serving."
+    },
+    "yield": 8,
+    "ovenTempC": 100,
+    "ovenTempF": 210,
+    "bakeTimeMinutes": 90,
+    "panSize": "Baking sheet (piped meringue rounds)",
+    "equipment": [
+      "Oven",
+      "Piping bag",
+      "Potato ricer or fine piping tip"
+    ],
+    "storage": "Assemble just before serving — the meringue softens quickly once topped."
   },
   {
     "id": "recipe_banh_da_lon",
