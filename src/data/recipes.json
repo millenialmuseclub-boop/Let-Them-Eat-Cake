@@ -1510,7 +1510,25 @@
       "Mix in heavy cream, salt, and flour until just combined — do not overmix.",
       "Pour into the pan and bake 50-55 minutes until deeply browned on top and the center still wobbles.",
       "Cool at room temperature, then chill at least 4 hours before releasing from the pan."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single baked custard with no layers, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "The deeply browned top comes from the high oven heat during baking, not from an applied frosting or glaze."
+    },
+    "yield": 10,
+    "ovenTempC": 230,
+    "ovenTempF": 450,
+    "bakeTimeMinutes": 52,
+    "panSize": "9-inch springform pan",
+    "equipment": [
+      "Oven",
+      "9-inch springform pan"
+    ],
+    "storage": "Refrigerate, covered, up to 5 days."
   },
   {
     "id": "recipe_tres_leches",
@@ -1696,78 +1714,6 @@
     "baseServings": 12,
     "ingredients": [
       {
-        "id": "caramel-sugar",
-        "name": "Granulated sugar (for caramel)",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.75,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "condensed-milk",
-        "name": "Sweetened condensed milk",
-        "metric": {
-          "qty": 396,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 14,
-          "unit": "oz"
-        }
-      },
-      {
-        "id": "evaporated-milk",
-        "name": "Evaporated milk",
-        "metric": {
-          "qty": 354,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 12,
-          "unit": "oz"
-        }
-      },
-      {
-        "id": "cream-cheese",
-        "name": "Cream cheese",
-        "metric": {
-          "qty": 113,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 4,
-          "unit": "oz"
-        }
-      },
-      {
-        "id": "flan-eggs",
-        "name": "Eggs, large (flan)",
-        "metric": {
-          "qty": 3,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "vanilla",
-        "name": "Vanilla extract",
-        "metric": {
-          "qty": 5,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "tsp"
-        }
-      },
-      {
         "id": "flour",
         "name": "All-purpose flour",
         "metric": {
@@ -1877,7 +1823,105 @@
       "Pour the cake batter over the caramel in the pan, then gently pour the flan batter on top without stirring — they'll swap places as they bake.",
       "Cover tightly with foil and set the pan in a larger roasting pan filled with hot water halfway up the sides. Bake 60-70 minutes until set.",
       "Cool completely, then chill at least 4 hours before inverting onto a plate."
-    ]
+    ],
+    "filling": {
+      "name": "Flan Layer",
+      "ingredients": [
+        {
+          "id": "condensed-milk",
+          "name": "Sweetened condensed milk",
+          "metric": {
+            "qty": 396,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 14,
+            "unit": "oz"
+          }
+        },
+        {
+          "id": "evaporated-milk",
+          "name": "Evaporated milk",
+          "metric": {
+            "qty": 354,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 12,
+            "unit": "oz"
+          }
+        },
+        {
+          "id": "cream-cheese",
+          "name": "Cream cheese",
+          "metric": {
+            "qty": 113,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 4,
+            "unit": "oz"
+          }
+        },
+        {
+          "id": "flan-eggs",
+          "name": "Eggs, large",
+          "metric": {
+            "qty": 3,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "vanilla",
+          "name": "Vanilla extract",
+          "metric": {
+            "qty": 5,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "tsp"
+          }
+        }
+      ],
+      "prep": "Blend the condensed milk, evaporated milk, cream cheese, flan eggs, and vanilla until smooth.",
+      "applicationNotes": "Pour gently over the cake batter without stirring — the two layers swap places as they bake in a water bath.",
+      "chillGuidance": "Chill at least 4 hours before inverting so both layers hold their shape when unmolded."
+    },
+    "frostingFinish": {
+      "name": "Caramel",
+      "ingredients": [
+        {
+          "id": "caramel-sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.75,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Melt the sugar in a saucepan until deep amber.",
+      "applicationNotes": "Pour into the bottom of the bundt pan and swirl to coat before adding the batters — it becomes the glossy top once the cake is inverted."
+    },
+    "yield": 12,
+    "ovenTempC": 160,
+    "ovenTempF": 325,
+    "bakeTimeMinutes": 65,
+    "panSize": "Bundt pan + water bath",
+    "equipment": [
+      "Oven",
+      "Bundt pan",
+      "Larger roasting pan for the water bath"
+    ],
+    "storage": "Refrigerate, covered, up to 4 days."
   },
   {
     "id": "recipe_bizcocho_dominicano",
@@ -2158,7 +2202,25 @@
       "Fold in flour, cocoa, and salt until just combined.",
       "Pour into the pan and bake 20 minutes — the center should still be very soft and underbaked.",
       "Cool slightly, dust with powdered sugar, and serve with whipped cream."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A single dense, fudgy layer with no filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally finished with a dusting of powdered sugar and served alongside whipped cream, rather than a spread-on frosting."
+    },
+    "yield": 8,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 20,
+    "panSize": "8-inch springform pan",
+    "equipment": [
+      "Oven",
+      "8-inch springform pan"
+    ],
+    "storage": "Keeps at room temperature, covered, for 2-3 days — best eaten while still slightly gooey."
   },
   {
     "id": "recipe_medovik",
@@ -4094,54 +4156,6 @@
           "qty": 1,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "icing-sugar",
-        "name": "Powdered sugar (icing)",
-        "metric": {
-          "qty": 300,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2.5,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "icing-cocoa",
-        "name": "Cocoa powder (icing)",
-        "metric": {
-          "qty": 30,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.25,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "icing-milk",
-        "name": "Milk (icing)",
-        "metric": {
-          "qty": 90,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 0.375,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "coconut",
-        "name": "Desiccated coconut",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2.5,
-          "unit": "cup"
-        }
       }
     ],
     "steps": [
@@ -4151,7 +4165,78 @@
       "Whisk icing sugar, icing cocoa, and icing milk into a thin chocolate icing.",
       "Dip each square in the icing, letting excess drip off, then roll in desiccated coconut.",
       "Let set on a wire rack before serving."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A plain sponge cut into squares, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Chocolate Icing & Coconut",
+      "ingredients": [
+        {
+          "id": "icing-sugar",
+          "name": "Powdered sugar",
+          "metric": {
+            "qty": 300,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2.5,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "icing-cocoa",
+          "name": "Cocoa powder",
+          "metric": {
+            "qty": 30,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.25,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "icing-milk",
+          "name": "Milk",
+          "metric": {
+            "qty": 90,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 0.375,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "coconut",
+          "name": "Desiccated coconut",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2.5,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "Whisk the icing sugar, icing cocoa, and icing milk into a thin chocolate icing.",
+      "applicationNotes": "Dip each sponge square in the icing, letting excess drip off, then roll in desiccated coconut.",
+      "chillGuidance": "Let set on a wire rack before serving."
+    },
+    "yield": 16,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 27,
+    "panSize": "Square pan",
+    "equipment": [
+      "Oven",
+      "Square pan",
+      "Wire rack"
+    ],
+    "storage": "Keeps at room temperature, covered, for 3-4 days."
   },
   {
     "id": "recipe_black_forest",
@@ -4485,7 +4570,26 @@
       "Knead in the butter a little at a time until fully incorporated, then fold in candied peel and raisins.",
       "Place in a tall round mold and proof until doubled, about 3-4 hours.",
       "Bake at 170°C (340°F) for 45-50 minutes until deep golden and a skewer comes out clean; cool upside down to keep its tall shape."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The candied peel and raisins are kneaded directly into the dough, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally left plain, with no icing or glaze."
+    },
+    "yield": 12,
+    "ovenTempC": 170,
+    "ovenTempF": 340,
+    "bakeTimeMinutes": 47,
+    "panSize": "Tall round panettone mold",
+    "equipment": [
+      "Oven",
+      "Tall round mold",
+      "Stand mixer or hands for kneading"
+    ],
+    "storage": "Keeps at room temperature, wrapped, for about a week."
   },
   {
     "id": "recipe_pastel_de_nata",
@@ -4503,90 +4607,6 @@
           "qty": 1,
           "unit": "sheet"
         }
-      },
-      {
-        "id": "egg-yolks",
-        "name": "Egg yolks",
-        "metric": {
-          "qty": 6,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 6,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "sugar",
-        "name": "Granulated sugar",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.75,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "cornstarch",
-        "name": "Cornstarch",
-        "metric": {
-          "qty": 20,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "tbsp"
-        }
-      },
-      {
-        "id": "milk",
-        "name": "Milk",
-        "metric": {
-          "qty": 300,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1.25,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "cream",
-        "name": "Heavy cream",
-        "metric": {
-          "qty": 100,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 0.4,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "cinnamon-stick",
-        "name": "Cinnamon stick",
-        "metric": {
-          "qty": 1,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "lemon-peel",
-        "name": "Lemon peel strip",
-        "metric": {
-          "qty": 1,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "count"
-        }
       }
     ],
     "steps": [
@@ -4595,7 +4615,113 @@
       "Remove the cinnamon and lemon peel, then whisk the hot mixture into the egg yolks.",
       "Fill the pastry cups with custard and bake at 245°C (475°F) for 15-18 minutes until deeply spotted and caramelized on top.",
       "Cool slightly and dust with cinnamon before serving."
-    ]
+    ],
+    "filling": {
+      "name": "Egg Custard",
+      "ingredients": [
+        {
+          "id": "egg-yolks",
+          "name": "Egg yolks",
+          "metric": {
+            "qty": 6,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 6,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.75,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "cornstarch",
+          "name": "Cornstarch",
+          "metric": {
+            "qty": 20,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "tbsp"
+          }
+        },
+        {
+          "id": "milk",
+          "name": "Milk",
+          "metric": {
+            "qty": 300,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1.25,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "cream",
+          "name": "Heavy cream",
+          "metric": {
+            "qty": 100,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 0.4,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "cinnamon-stick",
+          "name": "Cinnamon stick",
+          "metric": {
+            "qty": 1,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "lemon-peel",
+          "name": "Lemon peel strip",
+          "metric": {
+            "qty": 1,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "count"
+          }
+        }
+      ],
+      "prep": "Whisk sugar and cornstarch, then whisk in milk, cream, cinnamon stick, and lemon peel; simmer until slightly thickened. Remove the cinnamon and lemon peel, then whisk the hot mixture into the egg yolks.",
+      "applicationNotes": "Fill the pastry cups with the custard before baking at very high heat until deeply spotted and caramelized on top."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally finished with a light dusting of ground cinnamon rather than a frosting."
+    },
+    "yield": 12,
+    "ovenTempC": 245,
+    "ovenTempF": 475,
+    "bakeTimeMinutes": 17,
+    "panSize": "Muffin tin",
+    "equipment": [
+      "Oven",
+      "Muffin tin",
+      "Rolling pin"
+    ],
+    "storage": "Best eaten the day they're baked; keeps refrigerated up to 2 days."
   },
   {
     "id": "recipe_victoria_sponge",
@@ -9113,48 +9239,6 @@
             "replacement": "1:1 gluten-free baking blend"
           }
         ]
-      },
-      {
-        "id": "butter",
-        "name": "Butter, softened (buttercream)",
-        "metric": {
-          "qty": 250,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1.1,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "condensed-milk",
-        "name": "Sweetened condensed milk",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.66,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "dairy-free condensed coconut milk"
-          }
-        ]
-      },
-      {
-        "id": "vanilla",
-        "name": "Vanilla extract",
-        "metric": {
-          "qty": 5,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "tsp"
-        }
       }
     ],
     "steps": [
@@ -9163,7 +9247,71 @@
       "Beat butter until fluffy, then gradually beat in condensed milk and vanilla until smooth.",
       "Spread buttercream between the two meringue layers and over the top and sides.",
       "Chill for at least 6 hours (overnight is best) so the meringue softens slightly before slicing."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The condensed-milk buttercream is spread between the meringue layers as well as over the top and sides, so no separate filling is used."
+    },
+    "frostingFinish": {
+      "name": "Condensed Milk Buttercream",
+      "ingredients": [
+        {
+          "id": "butter",
+          "name": "Butter, softened",
+          "metric": {
+            "qty": 250,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1.1,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "condensed-milk",
+          "name": "Sweetened condensed milk",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.66,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "dairy-free condensed coconut milk"
+            }
+          ]
+        },
+        {
+          "id": "vanilla",
+          "name": "Vanilla extract",
+          "metric": {
+            "qty": 5,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "tsp"
+          }
+        }
+      ],
+      "prep": "Beat the butter until fluffy, then gradually beat in the condensed milk and vanilla until smooth.",
+      "applicationNotes": "Spread between the two meringue layers and over the top and sides.",
+      "chillGuidance": "Chill for at least 6 hours, ideally overnight, so the meringue softens slightly before slicing."
+    },
+    "yield": 12,
+    "ovenTempC": 150,
+    "ovenTempF": 300,
+    "bakeTimeMinutes": 60,
+    "panSize": "Baking sheet (2 meringue rounds)",
+    "equipment": [
+      "Oven",
+      "Baking sheet"
+    ],
+    "storage": "Refrigerate, covered, up to 5 days."
   },
   {
     "id": "recipe_garash",
@@ -10255,72 +10403,6 @@
           "qty": 1.5,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "dulce-de-leche",
-        "name": "Dulce de leche",
-        "metric": {
-          "qty": 300,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "peaches",
-        "name": "Peaches, sliced",
-        "metric": {
-          "qty": 300,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "egg-whites",
-        "name": "Egg whites (meringue)",
-        "metric": {
-          "qty": 4,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 4,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "meringue-sugar",
-        "name": "Granulated sugar (meringue)",
-        "metric": {
-          "qty": 200,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 1,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "cream",
-        "name": "Heavy cream, whipped",
-        "metric": {
-          "qty": 300,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 1.25,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "whipped coconut cream"
-          }
-        ]
       }
     ],
     "steps": [
@@ -10329,7 +10411,99 @@
       "Crumble a portion of the sponge into small pieces for texture.",
       "Assemble in a bowl or tall glass: sponge, dulce de leche, peaches, whipped cream, meringue, crumbled sponge — repeat the layers.",
       "Finish with a final layer of whipped cream and meringue on top, and chill before serving."
-    ]
+    ],
+    "filling": {
+      "name": "Dulce de Leche & Peaches",
+      "ingredients": [
+        {
+          "id": "dulce-de-leche",
+          "name": "Dulce de leche",
+          "metric": {
+            "qty": 300,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "peaches",
+          "name": "Peaches, sliced",
+          "metric": {
+            "qty": 300,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "cup"
+          }
+        }
+      ],
+      "prep": "No cooking required beyond slicing the peaches — the dulce de leche is used as-is.",
+      "applicationNotes": "Layer with the sponge in a bowl or tall glass, alternating sponge, dulce de leche, and peaches."
+    },
+    "frostingFinish": {
+      "name": "Whipped Cream & Meringue",
+      "ingredients": [
+        {
+          "id": "egg-whites",
+          "name": "Egg whites",
+          "metric": {
+            "qty": 4,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 4,
+            "unit": "count"
+          }
+        },
+        {
+          "id": "meringue-sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 200,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 1,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "cream",
+          "name": "Heavy cream",
+          "metric": {
+            "qty": 300,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 1.25,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "whipped coconut cream"
+            }
+          ]
+        }
+      ],
+      "prep": "Whip the egg whites with sugar over a double boiler until stiff and glossy, then continue whipping off heat until cooled. Whip the cream separately to soft peaks.",
+      "applicationNotes": "Layer whipped cream and meringue between the sponge layers along with the filling, then finish with a final layer of both on top.",
+      "chillGuidance": "Chill before serving."
+    },
+    "yield": 10,
+    "ovenTempC": 175,
+    "ovenTempF": 350,
+    "bakeTimeMinutes": 22,
+    "panSize": "Round pan, then assembled in a bowl or glass",
+    "equipment": [
+      "Oven",
+      "Round cake pan",
+      "Double boiler"
+    ],
+    "storage": "Refrigerate, covered, up to 2 days."
   },
   {
     "id": "recipe_torta_negra",
@@ -10457,7 +10631,25 @@
       "Fold in the soaked fruit along with any remaining rum.",
       "Pour into a lined round pan and bake at 160°C (325°F) for 60-70 minutes, tenting with foil if it browns too fast.",
       "Cool completely in the pan before turning out — the cake firms up and deepens in flavor as it sits."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "The rum-soaked dried fruit is folded directly into the batter, so there is no separate filling."
+    },
+    "frostingFinish": {
+      "none": true,
+      "note": "Traditionally left unfrosted — the cake firms up and deepens in flavor as it sits rather than being iced."
+    },
+    "yield": 12,
+    "ovenTempC": 160,
+    "ovenTempF": 325,
+    "bakeTimeMinutes": 65,
+    "panSize": "Round cake pan",
+    "equipment": [
+      "Oven",
+      "Round cake pan"
+    ],
+    "storage": "Wrapped tightly, keeps for 1-2 weeks at room temperature and improves with age."
   },
   {
     "id": "recipe_torta_de_guayaba",
@@ -10852,24 +11044,6 @@
           "qty": 2,
           "unit": "tsp"
         }
-      },
-      {
-        "id": "marzipan",
-        "name": "Marzipan",
-        "metric": {
-          "qty": 500,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2.5,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "nut-free",
-            "replacement": "rolled fondant"
-          }
-        ]
       }
     ],
     "steps": [
@@ -10878,7 +11052,48 @@
       "Lay a thin marzipan disk over the batter, then top with the remaining batter.",
       "Bake 1.5-2 hours until a skewer comes out clean. Cool completely.",
       "Top with another marzipan disk and eleven marzipan balls arranged around the edge, then lightly toast the top under the broiler."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A thin disk of marzipan is pressed inside as a hidden layer, using part of the marzipan listed under Frosting & Finish below."
+    },
+    "frostingFinish": {
+      "name": "Marzipan",
+      "ingredients": [
+        {
+          "id": "marzipan",
+          "name": "Marzipan",
+          "metric": {
+            "qty": 500,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2.5,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "nut-free",
+              "replacement": "rolled fondant"
+            }
+          ]
+        }
+      ],
+      "prep": "Divide the marzipan and roll into a thin disk for the hidden inner layer, plus a top disk and eleven marzipan balls (traditionally one for each of the eleven faithful apostles).",
+      "applicationNotes": "Press one disk into the batter partway through filling the pan before baking. After baking, top with the second disk and the eleven balls, then lightly toast under the broiler."
+    },
+    "yield": 10,
+    "ovenTempC": 150,
+    "ovenTempF": 300,
+    "bakeTimeMinutes": 105,
+    "panSize": "Round cake pan",
+    "equipment": [
+      "Oven",
+      "Round cake pan",
+      "Rolling pin",
+      "Broiler"
+    ],
+    "storage": "Keeps at room temperature, wrapped, for 2-3 weeks."
   },
   {
     "id": "recipe_sfouf",
@@ -11378,72 +11593,6 @@
           "qty": 0.44,
           "unit": "cup"
         }
-      },
-      {
-        "id": "milk",
-        "name": "Whole milk",
-        "metric": {
-          "qty": 750,
-          "unit": "ml"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "cup"
-        },
-        "substitutions": [
-          {
-            "diet": "dairy-free",
-            "replacement": "oat milk"
-          }
-        ]
-      },
-      {
-        "id": "sugar",
-        "name": "Granulated sugar",
-        "metric": {
-          "qty": 150,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 0.75,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "cornstarch",
-        "name": "Cornstarch",
-        "metric": {
-          "qty": 50,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 6,
-          "unit": "tbsp"
-        }
-      },
-      {
-        "id": "eggs",
-        "name": "Eggs, large",
-        "metric": {
-          "qty": 3,
-          "unit": "count"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "count"
-        }
-      },
-      {
-        "id": "cinnamon",
-        "name": "Ground cinnamon (topping)",
-        "metric": {
-          "qty": 5,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "tsp"
-        }
       }
     ],
     "steps": [
@@ -11452,7 +11601,98 @@
       "Return to the pan and cook, stirring, until thick and custard-like.",
       "Pour into the baked crust and dust generously with cinnamon.",
       "Chill at least 2 hours until fully set before slicing."
-    ]
+    ],
+    "filling": {
+      "name": "Milk Custard",
+      "ingredients": [
+        {
+          "id": "milk",
+          "name": "Whole milk",
+          "metric": {
+            "qty": 750,
+            "unit": "ml"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "cup"
+          },
+          "substitutions": [
+            {
+              "diet": "dairy-free",
+              "replacement": "oat milk"
+            }
+          ]
+        },
+        {
+          "id": "sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 150,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 0.75,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "cornstarch",
+          "name": "Cornstarch",
+          "metric": {
+            "qty": 50,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 6,
+            "unit": "tbsp"
+          }
+        },
+        {
+          "id": "eggs",
+          "name": "Eggs, large",
+          "metric": {
+            "qty": 3,
+            "unit": "count"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "count"
+          }
+        }
+      ],
+      "prep": "Heat the milk with sugar until just simmering. Whisk the cornstarch and eggs together, then temper with the hot milk. Return to the pan and cook, stirring, until thick and custard-like.",
+      "applicationNotes": "Pour into the blind-baked crust while still warm.",
+      "chillGuidance": "Chill at least 2 hours until fully set before slicing."
+    },
+    "frostingFinish": {
+      "name": "Cinnamon Dusting",
+      "ingredients": [
+        {
+          "id": "cinnamon",
+          "name": "Ground cinnamon",
+          "metric": {
+            "qty": 5,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "tsp"
+          }
+        }
+      ],
+      "prep": "No preparation needed.",
+      "applicationNotes": "Dust generously over the custard while it is still warm, before chilling."
+    },
+    "yield": 8,
+    "ovenTempC": 190,
+    "ovenTempF": 375,
+    "bakeTimeMinutes": 12,
+    "panSize": "Tart pan",
+    "equipment": [
+      "Oven",
+      "Tart pan"
+    ],
+    "storage": "Refrigerate, covered, up to 3 days."
   },
   {
     "id": "recipe_koeksisters",
@@ -11520,30 +11760,6 @@
         ]
       },
       {
-        "id": "sugar",
-        "name": "Granulated sugar (syrup)",
-        "metric": {
-          "qty": 600,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 3,
-          "unit": "cup"
-        }
-      },
-      {
-        "id": "ginger",
-        "name": "Ground ginger (syrup)",
-        "metric": {
-          "qty": 5,
-          "unit": "g"
-        },
-        "imperial": {
-          "qty": 2,
-          "unit": "tsp"
-        }
-      },
-      {
         "id": "oil",
         "name": "Vegetable oil (frying)",
         "metric": {
@@ -11562,7 +11778,50 @@
       "Cut three slits into each rectangle and plait into a loose twist.",
       "Deep-fry in hot oil until golden, about 2-3 minutes.",
       "Immediately plunge the hot fried dough into the ice-cold syrup for a few seconds, then drain."
-    ]
+    ],
+    "filling": {
+      "none": true,
+      "note": "A twisted fried dough with no internal filling."
+    },
+    "frostingFinish": {
+      "name": "Ginger Syrup Soak",
+      "ingredients": [
+        {
+          "id": "sugar",
+          "name": "Granulated sugar",
+          "metric": {
+            "qty": 600,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 3,
+            "unit": "cup"
+          }
+        },
+        {
+          "id": "ginger",
+          "name": "Ground ginger",
+          "metric": {
+            "qty": 5,
+            "unit": "g"
+          },
+          "imperial": {
+            "qty": 2,
+            "unit": "tsp"
+          }
+        }
+      ],
+      "prep": "Boil the sugar, ginger, and water together into a syrup, then chill completely — ideally overnight, so it is ice-cold when the hot dough hits it.",
+      "applicationNotes": "Plunge the hot fried dough into the ice-cold syrup for a few seconds immediately after frying, then drain.",
+      "chillGuidance": "The syrup must be fully chilled before use — the hot-to-cold contrast is what gives koeksisters their crisp shell and syrupy center."
+    },
+    "yield": 12,
+    "panSize": "Deep pot for frying",
+    "equipment": [
+      "Deep pot or fryer",
+      "Rolling pin"
+    ],
+    "storage": "Refrigerate, covered, up to 1 week — they hold their syrupy texture well chilled."
   },
   {
     "id": "recipe_gateau_patate",
