@@ -5,7 +5,7 @@ import { SocialShareCard } from './SocialShareCard'
 
 export function CelebrateShareCard({ result }: { result: WeddingPlanResult }) {
   const flavorNames = result.tierPicks.map((pick) => getCake(pick.cakeId)?.name).filter((name): name is string => !!name)
-  const [leadFlavor, ...restFlavors] = flavorNames
+  const leadFlavor = flavorNames[0]
   const occasionLabel = formatOccasionLabel(result.input.occasion)
 
   const title = `${result.aesthetic.name} ${occasionLabel} Cake`
@@ -16,7 +16,8 @@ export function CelebrateShareCard({ result }: { result: WeddingPlanResult }) {
     <SocialShareCard
       eyebrow={`Our ${occasionLabel} Cake`}
       title={leadFlavor ?? title}
-      detailLines={[...restFlavors, result.decorationStyle.name]}
+      subtitle={occasionLabel}
+      bodyText={result.decorationStyle.name}
       cta="Designed with Let Them Eat Cake"
       shareUrl={shareUrl}
       shareText={shareText}

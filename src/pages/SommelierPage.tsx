@@ -306,18 +306,25 @@ interface DiscoveryValue {
   label: string
 }
 
+const DISCOVERY_CATEGORIES: { type: DiscoveryType; label: string; description: string; icon: string; repCakeId: string }[] = [
+  { type: 'flavor', label: 'Flavor', description: 'Explore cakes by flavor', icon: '🍫', repCakeId: 'cake_black_forest' },
+  { type: 'texture', label: 'Texture', description: 'Explore cakes by texture', icon: '🍮', repCakeId: 'cake_pavlova' },
+  { type: 'ingredient', label: 'Ingredient', description: 'Explore cakes by ingredient', icon: '🧂', repCakeId: 'cake_moroccan_orange_almond' },
+]
+
 /**
  * Secondary discovery path for Pair by Cake -- answers "what cakes are
- * chocolate-forward / contain coffee / are light and airy" etc. Three
- * always-visible photo-card rows (Flavor/Ingredient/Texture), matching
- * Curated Collections' own stacked-carousel pattern rather than a
- * click-through type picker. Reuses the same cake/ingredient data and
- * filter logic as everywhere else in the app (no duplicated dataset);
- * picking a cake here feeds straight into the same onPickCake handler the
- * search box uses, so it continues naturally into the normal pairing
- * results.
+ * chocolate-forward / contain coffee / are light and airy" etc. A 3-level
+ * drill-down (category card -> that category's options -> matching cakes)
+ * instead of dumping every Flavor/Texture/Ingredient option on the page at
+ * once, which is what made the Start-From-Cake screen too long. Reuses the
+ * same cake/ingredient data and filter logic as everywhere else in the app;
+ * picking a cake at the bottom feeds straight into the same onPickCake
+ * handler the search box uses, so it continues naturally into the normal
+ * pairing results.
  */
 function CakeDiscoveryPicker({ onPickCake }: { onPickCake: (cakeId: string) => void }) {
+  const [type, setType] = useState<DiscoveryType | null>(null)
   const [active, setActive] = useState<DiscoveryValue | null>(null)
   const ingredients = useMemo(() => getAllIngredients(), [])
 
@@ -352,74 +359,87 @@ function CakeDiscoveryPicker({ onPickCake }: { onPickCake: (cakeId: string) => v
     )
   }
 
-  const flavorCards = TOP_FLAVORS.map((flavor) => ({
-    flavor,
-    repCakeId: getFirstPhotographedCakeId(cakes.filter((c) => c.flavorNotes.includes(flavor)).map((c) => c.id)),
-  }))
-  const textureCards = CAKE_TEXTURES.map((texture) => ({
-    texture,
-    repCakeId: getFirstPhotographedCakeId(cakes.filter((c) => c.texture === texture).map((c) => c.id)),
-  }))
-  const topIngredients = ingredients.slice(0, 8)
-
-  return (
-    <>
-      <div className="sommelier-discovery-row">
-        <h3>🍫 Flavor</h3>
-        <div className="encyclopedia-feature-scroll">
+  if (type === 'flavor') {
+    const flavorCards = TOP_FLAVORS.map((flavor) => ({
+      flavor,
+      repCakeId: getFirstPhotographedCakeId(cakes.filter((c) => c.flavorNotes.includes(flavor)).map((c) => c.id)),
+    }))
+    return (
+      <>
+        <button className="sommelier-back-link" onClick={() => setType(null)}>
+          ← Back
+        </button>
+        <h3 className="sommelier-discovery-value-heading">🍫 Flavor</h3>
+        <div className="discover-feature-grid">
           {flavorCards.map(
             ({ flavor, repCakeId }) =>
               repCakeId && (
-                <div key={flavor} className="encyclopedia-feature-scroll-item">
-                  <DiscoverFeatureCard
-                    onClick={() => setActive({ type: 'flavor', value: flavor, label: flavor })}
-                    title={flavor}
-                    description="See matching cakes"
-                    cta="Browse →"
-                    cakeId={repCakeId}
-                  />
-                </div>
+                <DiscoverFeatureCard
+                  key={flavor}
+                  onClick={() => setActive({ type: 'flavor', value: flavor, label: flavor })}
+                  title={flavor}
+                  description="See matching cakes"
+                  cta="Browse →"
+                  cakeId={repCakeId}
+                />
               ),
           )}
         </div>
-      </div>
+      </>
+    )
+  }
 
-      <div className="sommelier-discovery-row">
-        <h3>🍮 Texture</h3>
-        <div className="encyclopedia-feature-scroll">
+  if (type === 'texture') {
+    const textureCards = CAKE_TEXTURES.map((texture) => ({
+      texture,
+      repCakeId: getFirstPhotographedCakeId(cakes.filter((c) => c.texture === texture).map((c) => c.id)),
+    }))
+    return (
+      <>
+        <button className="sommelier-back-link" onClick={() => setType(null)}>
+          ← Back
+        </button>
+        <h3 className="sommelier-discovery-value-heading">🍮 Texture</h3>
+        <div className="discover-feature-grid">
           {textureCards.map(
             ({ texture, repCakeId }) =>
               repCakeId && (
-                <div key={texture} className="encyclopedia-feature-scroll-item">
-                  <DiscoverFeatureCard
-                    onClick={() => setActive({ type: 'texture', value: texture, label: texture })}
-                    title={texture}
-                    description="See matching cakes"
-                    cta="Browse →"
-                    cakeId={repCakeId}
-                  />
-                </div>
+                <DiscoverFeatureCard
+                  key={texture}
+                  onClick={() => setActive({ type: 'texture', value: texture, label: texture })}
+                  title={texture}
+                  description="See matching cakes"
+                  cta="Browse →"
+                  cakeId={repCakeId}
+                />
               ),
           )}
         </div>
-      </div>
+      </>
+    )
+  }
 
-      <div className="sommelier-discovery-row">
-        <h3>🧂 Ingredient</h3>
-        <div className="encyclopedia-feature-scroll">
+  if (type === 'ingredient') {
+    const topIngredients = ingredients.slice(0, 8)
+    return (
+      <>
+        <button className="sommelier-back-link" onClick={() => setType(null)}>
+          ← Back
+        </button>
+        <h3 className="sommelier-discovery-value-heading">🧂 Ingredient</h3>
+        <div className="discover-feature-grid">
           {topIngredients.map((ingredient) => {
             const repCakeId = getFirstPhotographedCakeId(ingredient.cakeIds) ?? ingredient.cakeIds[0]
             return (
               repCakeId && (
-                <div key={ingredient.slug} className="encyclopedia-feature-scroll-item">
-                  <DiscoverFeatureCard
-                    onClick={() => setActive({ type: 'ingredient', value: ingredient.slug, label: ingredient.displayName })}
-                    title={ingredient.displayName}
-                    description={`${ingredient.cakeIds.length} ${ingredient.cakeIds.length === 1 ? 'cake' : 'cakes'}`}
-                    cta="Browse →"
-                    cakeId={repCakeId}
-                  />
-                </div>
+                <DiscoverFeatureCard
+                  key={ingredient.slug}
+                  onClick={() => setActive({ type: 'ingredient', value: ingredient.slug, label: ingredient.displayName })}
+                  title={ingredient.displayName}
+                  description={`${ingredient.cakeIds.length} ${ingredient.cakeIds.length === 1 ? 'cake' : 'cakes'}`}
+                  cta="Browse →"
+                  cakeId={repCakeId}
+                />
               )
             )
           })}
@@ -432,8 +452,23 @@ function CakeDiscoveryPicker({ onPickCake }: { onPickCake: (cakeId: string) => v
           placeholder="Search for any ingredient..."
           onSelect={(i) => setActive({ type: 'ingredient', value: i.slug, label: i.displayName })}
         />
-      </div>
-    </>
+      </>
+    )
+  }
+
+  return (
+    <div className="discover-feature-grid">
+      {DISCOVERY_CATEGORIES.map((category) => (
+        <DiscoverFeatureCard
+          key={category.type}
+          onClick={() => setType(category.type)}
+          title={`${category.icon} ${category.label}`}
+          description={category.description}
+          cta="Browse →"
+          cakeId={category.repCakeId}
+        />
+      ))}
+    </div>
   )
 }
 

@@ -98,8 +98,7 @@ export function CakeDetailPage() {
           eyebrow="From the Cake Encyclopedia"
           title={cake.name}
           subtitle={locationLabel ?? undefined}
-          detailLines={cake.flavorNotes}
-          bodyText={cake.description}
+          bodyText={cake.flavorNotes.slice(0, 2).join(' · ')}
           cta="Discover its story"
           shareUrl={typeof window !== 'undefined' ? window.location.href : ''}
           shareText={`${cake.name} — from the Let Them Eat Cake Encyclopedia 🎂`}

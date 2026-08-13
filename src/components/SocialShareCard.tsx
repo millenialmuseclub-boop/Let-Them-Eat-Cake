@@ -1,5 +1,7 @@
 import { useRef, useState } from 'react'
 import { toBlob } from 'html-to-image'
+import { Capacitor } from '@capacitor/core'
+import { Share } from '@capacitor/share'
 import './SocialShareCard.css'
 
 export interface SocialShareCardProps {
@@ -27,7 +29,14 @@ export function SocialShareCard({ eyebrow, title, subtitle, detailLines, bodyLab
   async function handleShare() {
     setSharing(true)
     try {
-      if (cardRef.current && typeof navigator !== 'undefined' && 'share' in navigator) {
+      if (Capacitor.isNativePlatform()) {
+        // Native iOS/Android: navigator.share() is unreliable inside a Capacitor
+        // WebView on both platforms, so this always goes through the real native
+        // share sheet instead. Text + deep link only -- attaching the generated
+        // PNG natively would need @capacitor/filesystem too (native `files` needs
+        // a real file:// URI, not a blob), which isn't installed.
+        await Share.share({ title, text: shareText, url: shareUrl, dialogTitle: title })
+      } else if (cardRef.current && typeof navigator !== 'undefined' && 'share' in navigator) {
         const blob = await withTimeout(toBlob(cardRef.current, { pixelRatio: 4 }))
         const files = blob ? [new File([blob], `${filename}.png`, { type: 'image/png' })] : undefined
         const canShareFiles = files && navigator.canShare?.({ files })
