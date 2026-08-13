@@ -70,6 +70,13 @@
   justify-content: center;
 }
 
+.discover-saved-card .cake-hero-image-placeholder {
+  /* Percentage sizing on the icon below only resolves against a definite
+     height -- without this, the placeholder collapses to the icon's
+     intrinsic size and breaks row alignment with real-photo cards. */
+  height: 180px;
+}
+
 .discover-saved-card .cake-hero-image-placeholder img {
   width: 40%;
   height: 40%;
