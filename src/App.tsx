@@ -28,12 +28,14 @@ import { CuratedKitchenPage } from './pages/CuratedKitchenPage'
 import { CelebrateLandingPage } from './pages/CelebrateLandingPage'
 import { DiscoverPage } from './pages/DiscoverPage'
 import { HubPage } from './components/HubPage'
+import { TopNavBar } from './components/TopNavBar'
 import { BottomTabBar } from './components/BottomTabBar'
 import { HUBS } from './data/hubs'
 
 function App() {
   return (
     <>
+      <TopNavBar />
       <Routes>
         <Route path="/" element={<Navigate to="/discover" replace />} />
         <Route path="/celebrate" element={<CelebrateLandingPage />} />

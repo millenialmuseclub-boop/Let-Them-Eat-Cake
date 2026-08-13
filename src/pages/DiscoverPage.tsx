@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { HUBS } from '../data/hubs'
 import { getCake } from '../lib/data'
+import { getCakeImage } from '../lib/images'
 import { getSavedCakeIds } from '../lib/notebook'
 import { getRegionEntriesForCake } from '../lib/encyclopedia'
 import { getSceneImage } from '../lib/sceneImages'
@@ -73,7 +74,13 @@ export function DiscoverPage() {
               const origin = getRegionEntriesForCake(cake.id)[0]?.country
               return (
                 <Link key={cake.id} to={`/cake/${cake.id}`} className="discover-saved-card">
-                  <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
+                  {getCakeImage(cake.id) ? (
+                    <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
+                  ) : (
+                    <div className="cake-hero-image cake-hero-image-thumbnail cake-hero-image-placeholder">
+                      <img src="/icon-master.svg" alt="" />
+                    </div>
+                  )}
                   <div className="discover-saved-card-label">
                     {cake.name}
                     {origin && <span className="discover-saved-card-origin">{origin}</span>}

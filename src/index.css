@@ -111,7 +111,7 @@ button {
 .page {
   max-width: 960px;
   margin: 0 auto;
-  padding: 32px 24px calc(64px + 76px);
+  padding: calc(56px + env(safe-area-inset-top, 0px) + 32px) 24px calc(64px + 76px);
 }
 
 .tag {
@@ -143,7 +143,7 @@ button {
     font-size: 21px;
   }
   .page {
-    padding: 20px 16px calc(48px + 76px);
+    padding: calc(56px + env(safe-area-inset-top, 0px) + 20px) 16px calc(48px + 76px);
   }
 }
 
