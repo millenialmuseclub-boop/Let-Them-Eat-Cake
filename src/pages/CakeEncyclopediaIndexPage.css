@@ -75,32 +75,15 @@
   font-weight: 600;
 }
 
-.encyclopedia-chip-row {
+.encyclopedia-feature-scroll {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.encyclopedia-chip {
-  padding: 8px 16px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  color: var(--text);
-  font: inherit;
-  font-size: 14px;
-  text-transform: capitalize;
-}
-
-.encyclopedia-chip:hover {
-  border-color: var(--raspberry);
-  color: var(--raspberry);
-}
-
-.encyclopedia-secondary-links {
-  display: flex;
-  flex-wrap: wrap;
   gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.encyclopedia-feature-scroll-item {
+  flex: 0 0 240px;
 }
 
 .encyclopedia-active-filter {

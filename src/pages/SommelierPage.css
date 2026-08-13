@@ -49,26 +49,21 @@
   margin: 28px 0 12px;
 }
 
-.sommelier-category-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.sommelier-discovery-row {
+  margin-bottom: 24px;
+}
+
+.sommelier-discovery-row:last-child {
+  margin-bottom: 0;
+}
+
+.sommelier-discovery-row h3 {
+  font-size: 15px;
   margin-bottom: 8px;
 }
 
-.sommelier-category-chip {
-  font: inherit;
-  padding: 10px 16px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  color: var(--text);
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.sommelier-category-chip:hover {
-  border-color: var(--raspberry);
+.sommelier-discovery-value-heading {
+  margin-bottom: 4px;
 }
 
 .sommelier-discovery {
@@ -120,6 +115,10 @@
   width: 100%;
   height: 90px;
   border-radius: 8px;
+}
+
+.sommelier-discovery-cake .cake-hero-image-placeholder {
+  height: 90px !important;
 }
 
 .sommelier-discovery-cake h4 {
@@ -184,6 +183,11 @@
   width: 56px;
   height: 56px;
   border-radius: 10px;
+}
+
+.pairing-row .cake-hero-image-placeholder,
+.pairing-row .drink-image-placeholder {
+  height: 56px !important;
 }
 
 .pairing-details {
@@ -267,6 +271,10 @@
   .pairing-row .drink-image-thumbnail img {
     width: 44px;
     height: 44px;
+  }
+  .pairing-row .cake-hero-image-placeholder,
+  .pairing-row .drink-image-placeholder {
+    height: 44px !important;
   }
 }
 

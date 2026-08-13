@@ -7,6 +7,7 @@ import { CakeOriginStory } from '../components/CakeOriginStory'
 import { RecipeCard } from '../components/RecipeCard'
 import { SaveButton } from '../components/SaveButton'
 import { CakeHeroImage } from '../components/CakeHeroImage'
+import { CakeThumbnail } from '../components/CakeThumbnail'
 import { SocialShareCard } from '../components/SocialShareCard'
 import { AffiliateProductSet } from '../components/AffiliateProductSet'
 import './CakeDetailPage.css'
@@ -119,7 +120,7 @@ export function CakeDetailPage() {
           <div className="cake-detail-related-grid">
             {relatedCakes.map(({ cake: related, reason }) => (
               <Link key={related.id} to={`/cake/${related.id}`} className="card cake-detail-related-card">
-                <CakeHeroImage cakeId={related.id} variant="thumbnail" alt={related.name} />
+                <CakeThumbnail cakeId={related.id} alt={related.name} />
                 <h3>{related.name}</h3>
                 <p>{reason}</p>
               </Link>

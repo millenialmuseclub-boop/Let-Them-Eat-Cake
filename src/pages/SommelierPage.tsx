@@ -8,14 +8,15 @@ import { getLifestylePairing } from '../lib/lifestylePairings'
 import { getRegionEntriesForCake, getDecadeForCake } from '../lib/encyclopedia'
 import { CAKE_TEXTURES, getTopFlavorNotes } from '../lib/cakeBrowse'
 import { getAllIngredients } from '../lib/ingredients'
+import { getFirstPhotographedCakeId } from '../lib/images'
 import { PairingComparisonCard } from '../components/PairingComparisonCard'
-import { DrinkImage } from '../components/DrinkImage'
-import { CakeHeroImage } from '../components/CakeHeroImage'
+import { DrinkThumbnail } from '../components/DrinkThumbnail'
+import { CakeThumbnail } from '../components/CakeThumbnail'
 import { AffiliateProductSet } from '../components/AffiliateProductSet'
 import { SommelierShareCard } from '../components/SommelierShareCard'
 import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
 import { getProductsForPairingCategory } from '../lib/affiliateProducts'
-import { getDrinkImage } from '../lib/drinkImages'
+import { getDrinkImage, getFirstPhotographedDrinkId } from '../lib/drinkImages'
 import type { DrinkCategory } from '../types/sommelier'
 import { SearchableSelect } from '../components/SearchableSelect'
 import './SommelierPage.css'
@@ -32,6 +33,37 @@ const DRINK_GROUPS: { id: string; label: string; categories: DrinkCategory[] }[]
   { id: 'cocktails', label: 'Cocktails', categories: ['cocktails'] },
   { id: 'non-alcoholic', label: 'Non-Alcoholic', categories: ['non_alcoholic'] },
 ]
+
+/** One representative, ideally-photographed drink per beverage group -- computed once, the groups/catalog are both static. */
+const DRINK_GROUP_IMAGE: Record<string, ReturnType<typeof getDrinkImage>> = Object.fromEntries(
+  DRINK_GROUPS.map((group) => {
+    const groupDrinkIds = drinks.filter((d) => group.categories.includes(d.category)).map((d) => d.id)
+    const repId = getFirstPhotographedDrinkId(groupDrinkIds) ?? groupDrinkIds[0]
+    return [group.id, repId ? getDrinkImage(repId) : undefined]
+  }),
+)
+
+function DrinkGroupCards({ onChoose }: { onChoose: (groupId: string) => void }) {
+  return (
+    <div className="discover-feature-grid">
+      {DRINK_GROUPS.map((group) => {
+        const image = DRINK_GROUP_IMAGE[group.id]
+        return (
+          <DiscoverFeatureCard
+            key={group.id}
+            onClick={() => onChoose(group.id)}
+            title={group.label}
+            description="See top-rated cake pairings"
+            cta="Explore →"
+            imageUrl={image?.url}
+            imageAlt={group.label}
+            photographer={image?.photographer}
+          />
+        )
+      })}
+    </div>
+  )
+}
 
 export function SommelierPage() {
   const [mode, setMode] = useState<Mode>('cake-first')
@@ -142,7 +174,7 @@ function CakeFirstView({
     return (
       <div key={drink.id} className="card pairing-card">
         <button className="pairing-row" onClick={() => setExpandedId(isExpanded ? null : drink.id)}>
-          <DrinkImage drinkId={drink.id} variant="thumbnail" alt={drink.name} />
+          <DrinkThumbnail drinkId={drink.id} alt={drink.name} />
           <div className="pairing-score" style={{ background: scoreColor(score) }}>
             {score}
           </div>
@@ -218,6 +250,7 @@ function CakeFirstView({
       </button>
 
       <div className="card cake-summary">
+        <CakeThumbnail cakeId={cake.id} variant="hero" alt={cake.name} />
         <h3>{cake.name}</h3>
         <p>{cake.description}</p>
         <p className="flavor-notes">Notes: {cake.flavorNotes.join(', ')}</p>
@@ -243,13 +276,7 @@ function CakeFirstView({
           <div className="pairing-list">{pairings.slice(1, 4).map(renderPairingCard)}</div>
 
           <h2 className="sommelier-section-heading">Explore by Category</h2>
-          <div className="sommelier-category-chips">
-            {DRINK_GROUPS.map((group) => (
-              <button key={group.id} className="sommelier-category-chip" onClick={() => setActiveGroupId(group.id)}>
-                {group.label}
-              </button>
-            ))}
-          </div>
+          <DrinkGroupCards onChoose={setActiveGroupId} />
         </>
       )}
     </>
@@ -258,106 +285,139 @@ function CakeFirstView({
 
 type DiscoveryType = 'flavor' | 'ingredient' | 'texture'
 
-const DISCOVERY_TYPE_LABELS: Record<DiscoveryType, string> = {
-  flavor: '🍫 Flavor',
-  ingredient: '🧂 Ingredient',
-  texture: '🍮 Texture',
+interface DiscoveryValue {
+  type: DiscoveryType
+  value: string
+  label: string
 }
 
 /**
  * Secondary discovery path for Pair by Cake -- answers "what cakes are
- * chocolate-forward / contain coffee / are light and airy" etc. Reuses the
- * same cake/ingredient data and filter logic as everywhere else in the app
- * (no duplicated dataset); picking a cake here feeds straight into the same
- * onPickCake handler the search box uses, so it continues naturally into
- * the normal pairing results.
+ * chocolate-forward / contain coffee / are light and airy" etc. Three
+ * always-visible photo-card rows (Flavor/Ingredient/Texture), matching
+ * Curated Collections' own stacked-carousel pattern rather than a
+ * click-through type picker. Reuses the same cake/ingredient data and
+ * filter logic as everywhere else in the app (no duplicated dataset);
+ * picking a cake here feeds straight into the same onPickCake handler the
+ * search box uses, so it continues naturally into the normal pairing
+ * results.
  */
 function CakeDiscoveryPicker({ onPickCake }: { onPickCake: (cakeId: string) => void }) {
-  const [type, setType] = useState<DiscoveryType | null>(null)
-  const [value, setValue] = useState<string | null>(null)
+  const [active, setActive] = useState<DiscoveryValue | null>(null)
   const ingredients = useMemo(() => getAllIngredients(), [])
 
   const matchingCakes: CakeProfile[] = useMemo(() => {
-    if (!type || !value) return []
-    if (type === 'flavor') return cakes.filter((c) => c.flavorNotes.includes(value))
-    if (type === 'texture') return cakes.filter((c) => c.texture === value)
-    const ingredient = ingredients.find((i) => i.slug === value)
+    if (!active) return []
+    if (active.type === 'flavor') return cakes.filter((c) => c.flavorNotes.includes(active.value))
+    if (active.type === 'texture') return cakes.filter((c) => c.texture === active.value)
+    const ingredient = ingredients.find((i) => i.slug === active.value)
     return ingredient ? ingredient.cakeIds.map((id) => cakes.find((c) => c.id === id)).filter((c): c is CakeProfile => !!c) : []
-  }, [type, value, ingredients])
+  }, [active, ingredients])
 
-  if (!type) {
-    return (
-      <div className="sommelier-category-chips">
-        {(Object.keys(DISCOVERY_TYPE_LABELS) as DiscoveryType[]).map((t) => (
-          <button key={t} className="sommelier-category-chip" onClick={() => setType(t)}>
-            {DISCOVERY_TYPE_LABELS[t]}
-          </button>
-        ))}
-      </div>
-    )
-  }
-
-  if (!value) {
+  if (active) {
     return (
       <>
-        <button
-          className="sommelier-back-link"
-          onClick={() => {
-            setType(null)
-            setValue(null)
-          }}
-        >
+        <button className="sommelier-back-link" onClick={() => setActive(null)}>
           ← Back
         </button>
-        {type === 'flavor' && (
-          <div className="sommelier-category-chips">
-            {TOP_FLAVORS.map((f) => (
-              <button key={f} className="sommelier-category-chip" onClick={() => setValue(f)}>
-                {f}
+        <h3 className="sommelier-discovery-value-heading">{active.label}</h3>
+        {matchingCakes.length === 0 ? (
+          <p className="sommelier-discovery-empty">No cakes found.</p>
+        ) : (
+          <div className="sommelier-discovery-grid">
+            {matchingCakes.map((cake) => (
+              <button key={cake.id} className="card sommelier-discovery-cake" onClick={() => onPickCake(cake.id)}>
+                <CakeThumbnail cakeId={cake.id} alt={cake.name} />
+                <h4>{cake.name}</h4>
               </button>
             ))}
           </div>
-        )}
-        {type === 'texture' && (
-          <div className="sommelier-category-chips">
-            {CAKE_TEXTURES.map((t) => (
-              <button key={t} className="sommelier-category-chip" onClick={() => setValue(t)}>
-                {t}
-              </button>
-            ))}
-          </div>
-        )}
-        {type === 'ingredient' && (
-          <SearchableSelect
-            items={ingredients}
-            getId={(i) => i.slug}
-            getLabel={(i) => i.displayName}
-            getSubLabel={(i) => `${i.cakeIds.length} ${i.cakeIds.length === 1 ? 'cake' : 'cakes'}`}
-            placeholder="Search for an ingredient..."
-            onSelect={(i) => setValue(i.slug)}
-          />
         )}
       </>
     )
   }
 
+  const flavorCards = TOP_FLAVORS.map((flavor) => ({
+    flavor,
+    repCakeId: getFirstPhotographedCakeId(cakes.filter((c) => c.flavorNotes.includes(flavor)).map((c) => c.id)),
+  }))
+  const textureCards = CAKE_TEXTURES.map((texture) => ({
+    texture,
+    repCakeId: getFirstPhotographedCakeId(cakes.filter((c) => c.texture === texture).map((c) => c.id)),
+  }))
+  const topIngredients = ingredients.slice(0, 8)
+
   return (
     <>
-      <button className="sommelier-back-link" onClick={() => setValue(null)}>
-        ← Choose a different {type}
-      </button>
-      {matchingCakes.length === 0 ? (
-        <p className="sommelier-discovery-empty">No cakes found for "{value}".</p>
-      ) : (
-        <div className="sommelier-discovery-grid">
-          {matchingCakes.map((cake) => (
-            <button key={cake.id} className="card sommelier-discovery-cake" onClick={() => onPickCake(cake.id)}>
-              <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
-              <h4>{cake.name}</h4>
-            </button>
-          ))}
+      <div className="sommelier-discovery-row">
+        <h3>🍫 Flavor</h3>
+        <div className="encyclopedia-feature-scroll">
+          {flavorCards.map(
+            ({ flavor, repCakeId }) =>
+              repCakeId && (
+                <div key={flavor} className="encyclopedia-feature-scroll-item">
+                  <DiscoverFeatureCard
+                    onClick={() => setActive({ type: 'flavor', value: flavor, label: flavor })}
+                    title={flavor}
+                    description="See matching cakes"
+                    cta="Browse →"
+                    cakeId={repCakeId}
+                  />
+                </div>
+              ),
+          )}
         </div>
-      )}
+      </div>
+
+      <div className="sommelier-discovery-row">
+        <h3>🍮 Texture</h3>
+        <div className="encyclopedia-feature-scroll">
+          {textureCards.map(
+            ({ texture, repCakeId }) =>
+              repCakeId && (
+                <div key={texture} className="encyclopedia-feature-scroll-item">
+                  <DiscoverFeatureCard
+                    onClick={() => setActive({ type: 'texture', value: texture, label: texture })}
+                    title={texture}
+                    description="See matching cakes"
+                    cta="Browse →"
+                    cakeId={repCakeId}
+                  />
+                </div>
+              ),
+          )}
+        </div>
+      </div>
+
+      <div className="sommelier-discovery-row">
+        <h3>🧂 Ingredient</h3>
+        <div className="encyclopedia-feature-scroll">
+          {topIngredients.map((ingredient) => {
+            const repCakeId = getFirstPhotographedCakeId(ingredient.cakeIds) ?? ingredient.cakeIds[0]
+            return (
+              repCakeId && (
+                <div key={ingredient.slug} className="encyclopedia-feature-scroll-item">
+                  <DiscoverFeatureCard
+                    onClick={() => setActive({ type: 'ingredient', value: ingredient.slug, label: ingredient.displayName })}
+                    title={ingredient.displayName}
+                    description={`${ingredient.cakeIds.length} ${ingredient.cakeIds.length === 1 ? 'cake' : 'cakes'}`}
+                    cta="Browse →"
+                    cakeId={repCakeId}
+                  />
+                </div>
+              )
+            )
+          })}
+        </div>
+        <SearchableSelect
+          items={ingredients}
+          getId={(i) => i.slug}
+          getLabel={(i) => i.displayName}
+          getSubLabel={(i) => `${i.cakeIds.length} ${i.cakeIds.length === 1 ? 'cake' : 'cakes'}`}
+          placeholder="Search for any ingredient..."
+          onSelect={(i) => setActive({ type: 'ingredient', value: i.slug, label: i.displayName })}
+        />
+      </div>
     </>
   )
 }
@@ -395,13 +455,7 @@ function DrinkFirstView({
     return (
       <>
         <h2 className="sommelier-section-heading">Choose a beverage category</h2>
-        <div className="sommelier-category-chips">
-          {DRINK_GROUPS.map((group) => (
-            <button key={group.id} className="sommelier-category-chip" onClick={() => chooseCategory(group.id)}>
-              {group.label}
-            </button>
-          ))}
-        </div>
+        <DrinkGroupCards onChoose={chooseCategory} />
       </>
     )
   }
@@ -440,7 +494,7 @@ function DrinkFirstView({
     return (
       <div key={cake.id} className="card pairing-card">
         <button className="pairing-row" onClick={() => setExpandedId(isExpanded ? null : cake.id)}>
-          <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
+          <CakeThumbnail cakeId={cake.id} alt={cake.name} />
           <div className="pairing-score" style={{ background: scoreColor(score) }}>
             {score}
           </div>
@@ -494,7 +548,7 @@ function DrinkFirstView({
       </button>
 
       <div className="card cake-summary">
-        <DrinkImage drinkId={drink.id} variant="hero" alt={drink.name} />
+        <DrinkThumbnail drinkId={drink.id} variant="hero" alt={drink.name} />
         <h3>
           {drink.name} <span className="tag">{drink.category.replace('_', ' ')}</span>
         </h3>

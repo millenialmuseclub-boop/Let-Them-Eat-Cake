@@ -1,10 +1,14 @@
 import { useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { cakes } from '../lib/data'
+import { cakes, bakingTraditions } from '../lib/data'
 import { getRegionEntriesForCake, getDecadeForCake, distinctOrigins } from '../lib/encyclopedia'
+import { getTraditionCakes } from '../lib/bakingTraditions'
 import { distinctOccasions } from '../lib/cakeBrowse'
 import { getCakeOfTheDay } from '../lib/discovery'
+import { getFirstPhotographedCakeId } from '../lib/images'
+import { CakeThumbnail } from '../components/CakeThumbnail'
 import { CakeHeroImage } from '../components/CakeHeroImage'
+import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
 import type { MoodTag } from '../types/persona'
 import './CakeEncyclopediaIndexPage.css'
 
@@ -19,11 +23,15 @@ function getLocationTag(cakeId: string): string | null {
 const OCCASIONS = distinctOccasions()
 const ORIGINS = distinctOrigins()
 
+function cakeCountLabel(count: number): string {
+  return `${count} ${count === 1 ? 'cake' : 'cakes'}`
+}
+
 function CakeCard({ cake }: { cake: (typeof cakes)[number] }) {
   const locationTag = getLocationTag(cake.id)
   return (
     <Link to={`/cake/${cake.id}`} className="card encyclopedia-card">
-      <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
+      <CakeThumbnail cakeId={cake.id} alt={cake.name} />
       <div className="encyclopedia-card-tags">
         {locationTag && <span className="tag">{locationTag}</span>}
         <span className="tag encyclopedia-texture-tag">{cake.texture}</span>
@@ -69,6 +77,33 @@ export function CakeEncyclopediaIndexPage() {
   function selectChip(type: 'origin' | 'occasion', value: string) {
     setActiveChip((prev) => (prev?.type === type && prev.value === value ? null : { type, value }))
   }
+
+  const originGroups = useMemo(
+    () =>
+      ORIGINS.map((region) => {
+        const regionCakes = cakes.filter((c) => getRegionEntriesForCake(c.id).some((r) => r.region === region))
+        return { region, count: regionCakes.length, repCakeId: getFirstPhotographedCakeId(regionCakes.map((c) => c.id)) ?? regionCakes[0]?.id }
+      }),
+    [],
+  )
+
+  const occasionGroups = useMemo(
+    () =>
+      OCCASIONS.map((occasion) => {
+        const occasionCakes = cakes.filter((c) => c.occasion?.includes(occasion))
+        return { occasion, count: occasionCakes.length, repCakeId: getFirstPhotographedCakeId(occasionCakes.map((c) => c.id)) ?? occasionCakes[0]?.id }
+      }),
+    [],
+  )
+
+  const traditionGroups = useMemo(
+    () =>
+      bakingTraditions.map((tradition) => {
+        const traditionCakes = getTraditionCakes(tradition)
+        return { tradition, count: traditionCakes.length, repCakeId: getFirstPhotographedCakeId(traditionCakes.map((c) => c.id)) ?? traditionCakes[0]?.id }
+      }),
+    [],
+  )
 
   return (
     <main className="page encyclopedia-index-page">
@@ -117,30 +152,61 @@ export function CakeEncyclopediaIndexPage() {
 
           <section className="encyclopedia-row">
             <h2>🌍 Browse by Origin</h2>
-            <div className="encyclopedia-chip-row">
-              {ORIGINS.map((o) => (
-                <button key={o} className="encyclopedia-chip" onClick={() => selectChip('origin', o)}>
-                  {o}
-                </button>
-              ))}
+            <div className="discover-feature-grid">
+              {originGroups.map(
+                ({ region, count, repCakeId }) =>
+                  repCakeId && (
+                    <DiscoverFeatureCard
+                      key={region}
+                      onClick={() => selectChip('origin', region)}
+                      title={region}
+                      description={cakeCountLabel(count)}
+                      cta="Explore →"
+                      cakeId={repCakeId}
+                    />
+                  ),
+              )}
             </div>
           </section>
 
           <section className="encyclopedia-row">
             <h2>🎉 Browse by Occasion</h2>
-            <div className="encyclopedia-chip-row">
-              {OCCASIONS.map((o) => (
-                <button key={o} className="encyclopedia-chip" onClick={() => selectChip('occasion', o)}>
-                  {o}
-                </button>
-              ))}
+            <div className="encyclopedia-feature-scroll">
+              {occasionGroups.map(
+                ({ occasion, count, repCakeId }) =>
+                  repCakeId && (
+                    <div key={occasion} className="encyclopedia-feature-scroll-item">
+                      <DiscoverFeatureCard
+                        onClick={() => selectChip('occasion', occasion)}
+                        title={occasion}
+                        description={cakeCountLabel(count)}
+                        cta="Explore →"
+                        cakeId={repCakeId}
+                      />
+                    </div>
+                  ),
+              )}
             </div>
           </section>
 
-          <section className="encyclopedia-row encyclopedia-secondary-links">
-            <Link to="/traditions" className="encyclopedia-link">
-              🌍 Baking Traditions →
-            </Link>
+          <section className="encyclopedia-row">
+            <h2>🌍 Baking Traditions</h2>
+            <div className="discover-feature-grid">
+              {traditionGroups.map(
+                ({ tradition, count, repCakeId }) =>
+                  repCakeId && (
+                    <DiscoverFeatureCard
+                      key={tradition.id}
+                      to={`/traditions/${tradition.id}`}
+                      title={tradition.title}
+                      description={tradition.specialty}
+                      meta={cakeCountLabel(count)}
+                      cta="Explore →"
+                      cakeId={repCakeId}
+                    />
+                  ),
+              )}
+            </div>
           </section>
         </>
       )}

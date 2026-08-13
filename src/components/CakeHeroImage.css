@@ -36,3 +36,28 @@
   display: block;
   border-radius: 12px 12px 0 0;
 }
+
+/* General placeholder sizing for grids that don't override it themselves
+   (e.g. DiscoverPage's Saved Cakes row does, at a taller 180px). */
+.cake-hero-image-placeholder {
+  background: var(--raspberry-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px 12px 0 0;
+}
+
+.cake-hero-image-thumbnail.cake-hero-image-placeholder {
+  height: 140px;
+}
+
+.cake-hero-image-hero.cake-hero-image-placeholder {
+  height: 280px;
+}
+
+.cake-hero-image-placeholder img {
+  width: 40%;
+  height: 40%;
+  object-fit: contain;
+  border-radius: 0;
+}
