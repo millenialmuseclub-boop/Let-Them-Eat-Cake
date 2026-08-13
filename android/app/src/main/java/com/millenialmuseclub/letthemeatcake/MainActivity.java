@@ -1,4 +1,4 @@
-package REPLACE_ME.letthemeatcake;
+package com.millenialmuseclub.letthemeatcake;
 
 import com.getcapacitor.BridgeActivity;
 

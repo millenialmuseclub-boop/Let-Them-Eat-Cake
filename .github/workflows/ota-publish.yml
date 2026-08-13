@@ -1,14 +1,18 @@
-name: Publish OTA Update (Capgo)
+name: Publish OTA Update (zero-server)
 
-# Manual only, on purpose — the app is entering App Store review, so no
-# ordinary commit or push can ever trigger a production OTA release. Every
-# publish (staging or production) requires a human to explicitly run this
-# from the Actions tab and pick the channel.
+# Manual only, on purpose — no ordinary commit or push can ever trigger a
+# production OTA release. Every publish (staging or production) requires a
+# human to explicitly run this from the Actions tab and pick the channel.
+#
+# Zero-server pattern (see OTA_UPDATES.md): there is no Capgo backend. The
+# @capgo/cli commands below run entirely locally/in-CI to zip and encrypt the
+# bundle; the result is pushed straight to our own Cloudflare R2 bucket as
+# static files. The app polls manifest.json on R2 directly.
 on:
   workflow_dispatch:
     inputs:
       channel:
-        description: "Capgo channel to publish to"
+        description: "Channel to publish to"
         required: true
         default: "staging"
         type: choice
@@ -19,6 +23,7 @@ on:
 jobs:
   publish-ota:
     runs-on: ubuntu-latest
+    environment: Production
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,9 +38,59 @@ jobs:
         run: npm ci --legacy-peer-deps
 
       - name: Typecheck + build (must pass before anything ships)
+        # VITE_OTA_CHANNEL is baked into this bundle so that once a device
+        # downloads it, it keeps polling the SAME channel's manifest on
+        # subsequent checks (the channel a device is on is determined by
+        # whatever was compiled into its currently-running bundle, not by
+        # anything server-side — there is no server).
         run: npm run build
-
-      - name: Publish bundle to Capgo
         env:
-          CAPGO_TOKEN: ${{ secrets.CAPGO_TOKEN }}
-        run: npx @capgo/cli@latest bundle upload --channel "${{ inputs.channel }}" --apikey "$CAPGO_TOKEN"
+          VITE_OTA_CHANNEL: ${{ inputs.channel }}
+          VITE_R2_PUBLIC_BASE_URL: ${{ vars.R2_PUBLIC_BASE_URL }}
+
+      - name: Sign, encrypt, and push OTA bundle to R2
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # Base64 of the local .capgo_key_v2 private key file — decoded to a
+          # file below, used only by the local `encrypt` step, never uploaded
+          # or printed, deleted immediately after use.
+          CAPGO_PRIVATE_KEY_B64: ${{ secrets.CAPGO_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+
+          printf '%s' "$CAPGO_PRIVATE_KEY_B64" | base64 -d > capgo_key_v2
+
+          # 1) Zip dist/ (plaintext). Output: .filename, .checksum (plaintext sha256).
+          npx @capgo/cli@latest bundle zip com.millenialmuseclub.letthemeatcake --path ./dist --json > zip.json
+          ZIP=$(jq -r '.filename' zip.json)
+          ZIP_CHECKSUM=$(jq -r '.checksum' zip.json)
+
+          # 2) Encrypt + sign. Output: .filename (NEW *_encrypted.zip), .checksum
+          #    (signed, ~512-hex — NOT the plaintext checksum), .ivSessionKey.
+          npx @capgo/cli@latest bundle encrypt "$ZIP" "$ZIP_CHECKSUM" --key ./capgo_key_v2 --json > enc.json
+          rm -f capgo_key_v2
+          ENC_ZIP=$(jq -r '.filename' enc.json)
+          ENC_CHECKSUM=$(jq -r '.checksum' enc.json)
+          SESSION_KEY=$(jq -r '.ivSessionKey' enc.json)
+
+          # 3) Assemble manifest.json. version = git sha, matching the
+          #    `bundle.version` the plugin compares against on-device.
+          jq -n \
+            --arg v "${{ github.sha }}" \
+            --arg url "${{ vars.R2_PUBLIC_BASE_URL }}/updates/${{ inputs.channel }}/bundles/${{ github.sha }}.zip" \
+            --arg ck "$ENC_CHECKSUM" \
+            --arg sk "$SESSION_KEY" \
+            '{version:$v, url:$url, checksum:$ck, sessionKey:$sk}' > manifest.json
+
+          # 4) Upload encrypted bundle FIRST (immutable), manifest LAST
+          #    (no-cache) — a device must never see a manifest pointing at a
+          #    bundle that isn't there yet. --remote is required: wrangler
+          #    defaults `r2 object put` to a local simulated store.
+          npx wrangler@4 r2 object put \
+            "${{ secrets.R2_BUCKET_NAME }}/updates/${{ inputs.channel }}/bundles/${{ github.sha }}.zip" \
+            --remote --file="$ENC_ZIP" --cache-control "public, max-age=31536000, immutable"
+
+          npx wrangler@4 r2 object put \
+            "${{ secrets.R2_BUCKET_NAME }}/updates/${{ inputs.channel }}/manifest.json" \
+            --remote --file=./manifest.json --cache-control "no-cache, max-age=0"

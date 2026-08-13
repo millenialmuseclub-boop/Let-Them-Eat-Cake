@@ -6,7 +6,7 @@ React Native app built with Expo + Expo Router, sharing pure business logic and 
 
 These are **not** invented — they don't exist yet and must be supplied before running on a real device or submitting to a store:
 
-- **`app.json` → `ios.bundleIdentifier` / `android.package`** — currently `REPLACE_ME.letthemeatcake`. Set to your real reverse-DNS identifier (e.g. `com.letthemeatcake.app`).
+- **`app.json` → `ios.bundleIdentifier` / `android.package`** — set to `com.millenialmuseclub.letthemeatcake`, matching the Capacitor app's real identifier.
 - **Apple / Google signing credentials** — not configured. `eas build` will prompt to create these, or provide your own.
 - **Universal link domain** — no production domain is associated yet (no `apple-app-site-association` / `assetlinks.json`). The app currently deep-links via the custom scheme `letthemeatcake://` only. See `src/services/deepLinks.ts` for the documented path structure.
 - **A real analytics SDK** — `src/services/analyticsService.ts` is a fully-shaped no-op today (logs to console in dev). Wire in whichever SDK is chosen behind that one file.

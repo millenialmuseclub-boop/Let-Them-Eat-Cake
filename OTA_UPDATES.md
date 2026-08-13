@@ -1,46 +1,89 @@
-# OTA Updates (Capgo)
+# OTA Updates (zero-server, on Cloudflare R2)
 
 ## Architecture
 
-`@capgo/capacitor-updater` is installed and configured (`capacitor.config.ts`,
-`plugins.CapacitorUpdater`) with `autoUpdate: true` — the app checks for an
-update in the background and applies it silently on the next launch. No
-"Updating…" screen, no blocking the user.
+There is **no backend** — no Capgo hosted service, no self-hosted server, no
+database. `@capgo/cli` and `@capgo/capacitor-updater` are used purely as
+local/on-device tooling:
 
-`src/lib/otaUpdater.ts` calls `CapacitorUpdater.notifyAppReady()` once on
-every launch, right after the app renders. This is Capgo's crash-safety
-contract: if a bundle never calls this (because it crashed, hung, or
-white-screened), Capgo automatically reverts the device to the last known
-good bundle on the next launch. **A failed OTA update cannot brick the app or
-leave a user stuck** — the store-submitted binary's bundled web assets are
-always the final fallback.
+- `@capgo/cli` runs in CI only, to zip and encrypt the web build. It never
+  calls capgo.app — no account, no API key for the CLI itself.
+- `@capgo/capacitor-updater` runs on-device in **manual mode**
+  (`autoUpdate: false` in `capacitor.config.ts`). It never checks in with a
+  Capgo backend either — it only verifies/decrypts bundles handed to it by our
+  own app code.
+
+The app itself owns the update decision, in `src/lib/otaUpdater.ts`: it polls
+a static `manifest.json` on Cloudflare R2, and if the version differs from
+what's installed, downloads and schedules the new bundle.
+
+```
+CI (ota-publish.yml, manual trigger)
+  1. npm run build                        → hardened dist/
+  2. npx @capgo/cli bundle zip             → plaintext zip + checksum
+  3. npx @capgo/cli bundle encrypt         → signed + encrypted zip, checksum, sessionKey
+  4. wrangler r2 object put (bundle, then manifest.json)
+
+Cloudflare R2 (public bucket)
+  updates/<channel>/bundles/<git-sha>.zip
+  updates/<channel>/manifest.json
+
+Native app (src/lib/otaUpdater.ts, manual mode)
+  On every launch:
+    1. fetch manifest.json (no-store)
+    2. compare manifest.version to CapacitorUpdater.current().bundle.version
+    3. if newer: download() (verifies signature, decrypts) → next({ id })
+       (schedules the swap for the NEXT launch/background — never an
+       in-session reload, which would cause a jarring double-boot)
+    4. notifyAppReady() — disarms the native rollback watchdog
+```
 
 ## Channels
 
-- **production** — what real users receive. Only ever published deliberately (see below).
-- **staging** — for internal testing before promoting to production.
-
-Device-to-channel assignment is configured in the Capgo dashboard (or via
-their API/CLI), not in this repo's code — the app doesn't hardcode a channel.
+- **staging** and **production** are just different paths in the same R2
+  bucket (`updates/staging/...` vs `updates/production/...`), not a backend
+  concept. A device's channel is **whatever `VITE_OTA_CHANNEL` was baked into
+  its currently-running bundle at build time** — there's no server-side
+  assignment. That value carries forward automatically: an OTA update built
+  for the `staging` channel keeps polling `staging` on the next check too.
+- Set at native-build time via the `ota_channel` input on **Actions → "Build
+  Android APK"** (defaults to `staging`, for sideload testing).
+- To move a device from staging to production, it needs a new native build
+  (or store update) with `VITE_OTA_CHANNEL=production` — OTA alone can't
+  switch a device's channel, since that value lives in compiled JS.
 
 ## Publishing an update
 
-Both channels use the same manual workflow: **Actions → "Publish OTA Update
-(Capgo)" → Run workflow → choose `staging` or `production`.**
+**Actions → "Publish OTA Update (zero-server)" → Run workflow → choose
+`staging` or `production`.**
 
 There is no automatic trigger — no push, merge, or tag publishes anything.
-The workflow always runs `npm run build` (which includes the TypeScript
-typecheck) first; if that fails, nothing is published.
+The workflow always runs `npm run build` (TypeScript typecheck included)
+first; if that fails, nothing is published.
 
 **Recommended flow:** publish to `staging` first, verify on a staging-channel
-device/build, then run the same workflow again with `production` once you're
-confident.
+device/build, then run the same workflow again with `production`.
 
-## Required GitHub secret
+## Required GitHub configuration
 
-- `CAPGO_TOKEN` — a Capgo API key with upload permission. Set under
-  **Settings → Secrets and variables → Actions**. Never printed to build logs,
-  never committed to the repo.
+**Secrets** (Settings → Secrets and variables → Actions → Secrets):
+- `CLOUDFLARE_API_TOKEN` — R2 read/write scoped token.
+- `CLOUDFLARE_ACCOUNT_ID` — Cloudflare account ID.
+- `R2_BUCKET_NAME` — the bucket name.
+- `CAPGO_PRIVATE_KEY` — base64 of the local `.capgo_key_v2` file (the RSA
+  private key generated via `npx @capgo/cli key create`). Used only by the CI
+  `encrypt` step; never printed to logs, never committed. **If this leaks,
+  anyone can forge a "signed" update** — treat it like any other signing key.
+
+**Variables** (Settings → Secrets and variables → Actions → Variables):
+- `R2_PUBLIC_BASE_URL` — the bucket's public URL (e.g.
+  `https://pub-xxxx.r2.dev` or a custom domain fronting it). Not secret — it's
+  compiled into every build as `VITE_R2_PUBLIC_BASE_URL` and is the literal
+  URL a device fetches from.
+
+The matching **public** key is already embedded in `capacitor.config.ts`
+(`plugins.CapacitorUpdater.publicKey`) — safe to commit, it only lets the
+plugin verify/decrypt.
 
 ## What can ship OTA vs. what needs a new store build
 
@@ -56,6 +99,8 @@ code):
 - Any change to native permissions or entitlements
 - Any change to `capacitor.config.ts` that affects native behavior, or to
   the `ios/`/`android/` projects themselves
+- Rotating the RSA key pair (the public half is baked into the installed
+  binary — old installs can't verify bundles signed with a new key)
 - Anything Apple's App Review Guidelines or Google Play's policy on
   dynamically loaded code would reasonably expect to see in a fresh binary
   review
@@ -63,30 +108,28 @@ code):
 If in doubt, ship a store update instead of OTA — OTA is for the web layer
 only, never a way to route around review.
 
-## Version compatibility
-
-This app has no native plugin surface beyond `@capacitor/core` +
-`@capacitor/ios`/`android` + `@capgo/capacitor-updater` itself. As long as an
-OTA bundle doesn't assume a plugin or native capability the installed binary
-doesn't have, it's compatible. **If a future change adds a new native
-plugin, that release must ship as a new store binary first** — only bundles
-built against that same native surface should go out as OTA afterward.
-
 ## Rollback
 
-- **Automatic**: any bundle that never calls `notifyAppReady()` (crash,
-  white screen, hang) is auto-reverted by Capgo on next launch — no action
-  needed.
+There is no dashboard button — rollback means re-pointing (or restoring)
+`manifest.json` on R2:
+
+- **Automatic, per-device**: any bundle that never calls `notifyAppReady()`
+  (crash, white screen, hang) is auto-reverted by the plugin on next launch —
+  no action needed. This is purely on-device; there's no fleet-wide detection
+  since there's no backend collecting data across devices.
 - **Manual**: to pull a bad update that "works" but is wrong (e.g. a content
-  or copy mistake), use the Capgo dashboard to mark the previous bundle on
-  that channel as current, or unassign/disable the channel entirely. Devices
-  fall back to the last good bundle they already have cached, then to the
-  store binary if no cached bundle exists.
+  mistake), re-upload the previous release's `manifest.json` (pointing back at
+  the last-good `bundles/<sha>.zip`, which is still in R2 since bundles are
+  never deleted automatically) to `updates/<channel>/manifest.json`. Devices
+  that already applied the bad bundle will "update" back to the good one on
+  their next check.
 
 ## Emergency process
 
-1. Identify the bad bundle in the Capgo dashboard.
-2. Revert the channel to the last known good bundle (or disable the channel).
-3. Fix the issue in the repo, run the OTA workflow again to `staging`, verify, then `production`.
+1. Identify the last-good `bundles/<sha>.zip` (git history of `ota-publish.yml`
+   runs, or R2 bucket contents).
+2. Re-upload that bundle's manifest fields as `updates/<channel>/manifest.json`.
+3. Fix the issue in the repo, run the OTA workflow again to `staging`, verify,
+   then `production`.
 4. If the issue is severe enough that no cached bundle is safe, submit an
    emergency store update instead — OTA should never be the only recovery path.

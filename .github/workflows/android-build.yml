@@ -12,6 +12,14 @@ on:
         type: choice
         options:
           - debug
+      ota_channel:
+        description: "OTA channel this build should poll (see OTA_UPDATES.md)"
+        required: true
+        default: "staging"
+        type: choice
+        options:
+          - staging
+          - production
 
 jobs:
   build-apk:
@@ -34,6 +42,9 @@ jobs:
 
       - name: Build web app
         run: npm run build
+        env:
+          VITE_OTA_CHANNEL: ${{ inputs.ota_channel }}
+          VITE_R2_PUBLIC_BASE_URL: ${{ vars.R2_PUBLIC_BASE_URL }}
 
       - name: Set up JDK 21
         # Capacitor's own generated capacitor-cordova-android-plugins module

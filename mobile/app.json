@@ -10,13 +10,13 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "REPLACE_ME.letthemeatcake",
+      "bundleIdentifier": "com.millenialmuseclub.letthemeatcake",
       "infoPlist": {
         "UIUserInterfaceStyle": "Automatic"
       }
     },
     "android": {
-      "package": "REPLACE_ME.letthemeatcake",
+      "package": "com.millenialmuseclub.letthemeatcake",
       "adaptiveIcon": {
         "backgroundColor": "#3d2314",
         "foregroundImage": "./assets/android-icon-foreground.png"

@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace = "REPLACE_ME.letthemeatcake"
+    namespace = "com.millenialmuseclub.letthemeatcake"
     compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "REPLACE_ME.letthemeatcake"
+        applicationId "com.millenialmuseclub.letthemeatcake"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
