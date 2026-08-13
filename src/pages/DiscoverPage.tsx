@@ -24,10 +24,7 @@ export function DiscoverPage() {
     <main className="page discover-page">
       <div className="discover-brand">
         <h1>Let Them Eat Cake</h1>
-        <p>
-          The definitive Cake Encyclopedia and Cake Sommelier — explore cake culture, master pastry, discover perfect
-          pairings, and create cakes for life's celebrations.
-        </p>
+        <p>Explore cake culture, master pastry, discover perfect pairing and create the best cakes.</p>
       </div>
 
       <div className="discover-feature-grid">
