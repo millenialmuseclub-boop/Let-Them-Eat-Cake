@@ -1,0 +1,71 @@
+.searchable-select {
+  margin-bottom: 16px;
+}
+
+.searchable-select-input {
+  width: 100%;
+  font: inherit;
+  font-size: 16px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+.searchable-select-input:focus {
+  outline: 2px solid var(--raspberry);
+  outline-offset: -1px;
+}
+
+.searchable-select-results {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.searchable-select-result {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.searchable-select-result:last-child {
+  border-bottom: none;
+}
+
+.searchable-select-result:hover,
+.searchable-select-result:focus-visible {
+  background: var(--raspberry-bg);
+}
+
+.searchable-select-result-label {
+  font-weight: 600;
+}
+
+.searchable-select-result-sublabel {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.searchable-select-hint,
+.searchable-select-empty {
+  font-size: 13px;
+  opacity: 0.7;
+  margin: 8px 2px 0;
+}

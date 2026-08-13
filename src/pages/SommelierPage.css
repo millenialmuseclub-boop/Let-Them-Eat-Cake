@@ -30,24 +30,6 @@
   margin-bottom: 4px;
 }
 
-.cake-select {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 14px;
-  max-width: 320px;
-  margin: 20px 0;
-}
-
-.cake-select select {
-  font: inherit;
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  color: var(--text);
-}
-
 .cake-summary {
   margin-bottom: 28px;
 }
@@ -208,9 +190,6 @@
 }
 
 @media (max-width: 480px) {
-  .cake-select {
-    max-width: none;
-  }
   .pairing-row {
     gap: 12px;
     padding: 16px;

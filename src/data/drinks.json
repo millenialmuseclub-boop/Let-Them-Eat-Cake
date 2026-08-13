@@ -126,5 +126,29 @@
     "flavorProfile": { "sweetness": 2, "fatRichness": 1, "acidity": 2, "intensity": 5, "bitternessTannin": 3, "carbonation": 0 },
     "flavorNotes": ["espresso", "dark chocolate", "vanilla"],
     "serving": { "temperature": "Ice-cold, served up", "glassware": "Martini glass", "garnish": "Three whole coffee beans", "prepTip": "Shake hard for a full 15 seconds — that's what builds the signature crema on top." }
+  },
+  {
+    "id": "drink_red_wine",
+    "name": "Red Wine",
+    "category": "wine",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 1, "acidity": 3, "intensity": 4, "bitternessTannin": 4, "carbonation": 0 },
+    "flavorNotes": ["blackberry", "plum", "oak"],
+    "serving": { "temperature": "Slightly below room temperature, 16-18°C (61-64°F)", "glassware": "Red wine glass", "prepTip": "Let it breathe for 20-30 minutes before serving to soften the tannins." }
+  },
+  {
+    "id": "drink_white_wine",
+    "name": "White Wine",
+    "category": "wine",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 1, "acidity": 4, "intensity": 2, "bitternessTannin": 0, "carbonation": 0 },
+    "flavorNotes": ["green apple", "pear", "citrus"],
+    "serving": { "temperature": "Well chilled, 8-10°C (46-50°F)", "glassware": "White wine glass", "prepTip": "Chill for at least an hour — warm white wine loses its crisp edge." }
+  },
+  {
+    "id": "drink_milk",
+    "name": "Milk",
+    "category": "non_alcoholic",
+    "flavorProfile": { "sweetness": 2, "fatRichness": 3, "acidity": 1, "intensity": 1, "bitternessTannin": 0, "carbonation": 0 },
+    "flavorNotes": ["cream"],
+    "serving": { "temperature": "Cold, straight from the fridge", "glassware": "Tall glass", "prepTip": "Serve ice-cold — the classic milk-and-cake contrast works because it's cold against a rich, sweet cake." }
   }
 ]

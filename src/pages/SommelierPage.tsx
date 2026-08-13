@@ -15,6 +15,7 @@ import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
 import { getProductsForPairingCategory } from '../lib/affiliateProducts'
 import { getDrinkImage } from '../lib/drinkImages'
 import type { DrinkCategory } from '../types/sommelier'
+import { SearchableSelect } from '../components/SearchableSelect'
 import './SommelierPage.css'
 
 type Mode = 'cake-first' | 'drink-first'
@@ -31,8 +32,8 @@ const DRINK_GROUPS: { id: string; label: string; categories: DrinkCategory[] }[]
 export function SommelierPage() {
   const [mode, setMode] = useState<Mode>('cake-first')
   const [modeChosen, setModeChosen] = useState(false)
-  const [cakeId, setCakeId] = useState(cakes[0].id)
-  const [drinkId, setDrinkId] = useState(drinks[0].id)
+  const [cakeId, setCakeId] = useState<string | null>(null)
+  const [drinkId, setDrinkId] = useState<string | null>(null)
   const [expandedId, setExpandedId] = useState<string | null>(null)
 
   function switchMode(next: Mode) {
@@ -99,14 +100,34 @@ function CakeFirstView({
   expandedId,
   setExpandedId,
 }: {
-  cakeId: string
-  setCakeId: (id: string) => void
+  cakeId: string | null
+  setCakeId: (id: string | null) => void
   expandedId: string | null
   setExpandedId: (id: string | null) => void
 }) {
+  const [activeGroupId, setActiveGroupId] = useState<string | null>(null)
+
+  if (!cakeId) {
+    return (
+      <>
+        <h2 className="sommelier-section-heading">Search for a cake</h2>
+        <SearchableSelect
+          items={cakes}
+          getId={(c) => c.id}
+          getLabel={(c) => c.name}
+          placeholder="Search for a cake..."
+          onSelect={(c) => {
+            setCakeId(c.id)
+            setExpandedId(null)
+            setActiveGroupId(null)
+          }}
+        />
+      </>
+    )
+  }
+
   const cake = cakes.find((c) => c.id === cakeId)!
   const pairings = rankPairings(cake, drinks)
-  const [activeGroupId, setActiveGroupId] = useState<string | null>(null)
 
   function renderPairingCard(pairing: ReturnType<typeof rankPairings>[number]) {
     const { drink, score, breakdown } = pairing
@@ -178,23 +199,16 @@ function CakeFirstView({
 
   return (
     <>
-      <label className="cake-select">
-        Cake
-        <select
-          value={cakeId}
-          onChange={(e) => {
-            setCakeId(e.target.value)
-            setExpandedId(null)
-            setActiveGroupId(null)
-          }}
-        >
-          {cakes.map((c) => (
-            <option key={c.id} value={c.id}>
-              {c.name}
-            </option>
-          ))}
-        </select>
-      </label>
+      <button
+        className="sommelier-back-link"
+        onClick={() => {
+          setCakeId(null)
+          setExpandedId(null)
+          setActiveGroupId(null)
+        }}
+      >
+        ← Search a different cake
+      </button>
 
       <div className="card cake-summary">
         <h3>{cake.name}</h3>
@@ -241,7 +255,7 @@ function DrinkFirstView({
   expandedId,
   setExpandedId,
 }: {
-  drinkId: string
+  drinkId: string | null
   setDrinkId: (id: string) => void
   expandedId: string | null
   setExpandedId: (id: string | null) => void
@@ -287,13 +301,14 @@ function DrinkFirstView({
           ← Back to categories
         </button>
         <h2 className="sommelier-section-heading">{activeGroup.label}</h2>
-        <div className="sommelier-category-chips">
-          {categoryDrinks.map((d) => (
-            <button key={d.id} className="sommelier-category-chip" onClick={() => chooseDrink(d.id)}>
-              {d.name}
-            </button>
-          ))}
-        </div>
+        <SearchableSelect
+          items={categoryDrinks}
+          getId={(d) => d.id}
+          getLabel={(d) => d.name}
+          placeholder="Search or choose a drink..."
+          showAllThreshold={20}
+          onSelect={(d) => chooseDrink(d.id)}
+        />
       </>
     )
   }
