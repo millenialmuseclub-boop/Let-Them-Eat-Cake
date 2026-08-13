@@ -70,37 +70,6 @@ jobs:
         working-directory: android
         run: ./gradlew assembleDebug --no-daemon
 
-      # TEMPORARY diagnostic (remove once the "cannot find symbol" investigation
-      # is resolved): dumps what SDK platform actually landed on disk and
-      # whether its android.jar contains the API-30 Window methods we expect.
-      # Runs even if the build above failed.
-      - name: Diagnose Android SDK platform
-        if: always()
-        run: |
-          SDK_DIR="${ANDROID_HOME:-$ANDROID_SDK_ROOT}"
-          echo "SDK_DIR=$SDK_DIR"
-          echo "--- platforms ---"
-          ls -la "$SDK_DIR/platforms" 2>/dev/null || echo "(no platforms dir)"
-          echo "--- build-tools ---"
-          ls -la "$SDK_DIR/build-tools" 2>/dev/null || echo "(no build-tools dir)"
-          echo "--- all android.jar files found ---"
-          find "$SDK_DIR" -name "android.jar" 2>/dev/null
-          # Target the EXACT jar compileSdk=36 actually uses, not just the
-          # highest one present on the runner image (which includes preview
-          # platforms like 37.x that aren't what :app compiles against).
-          JAR="$SDK_DIR/platforms/android-36/android.jar"
-          echo "compileSdk=36 android.jar: $JAR"
-          if [ -f "$JAR" ]; then
-            echo "--- javap: android.view.Window members matching decorFits/systemUiVisibility ---"
-            javap -classpath "$JAR" android.view.Window 2>&1 | grep -i "decorFits\|systemUiVisibility\|class android.view.Window"
-            echo "--- javap: android.view.View members matching SYSTEM_UI_FLAG_LAYOUT ---"
-            javap -classpath "$JAR" android.view.View 2>&1 | grep -i "SYSTEM_UI_FLAG_LAYOUT"
-          else
-            echo "android-36/android.jar not found on disk"
-          fi
-          echo "--- androidx.core:core WindowCompat class actually on the compile classpath ---"
-          find ~/.gradle /root/.gradle /home/runner/.gradle -path "*androidx.core/core*" -name "*.aar" -o -path "*androidx.core/core*" -name "*.jar" 2>/dev/null | grep -v sources
-
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
