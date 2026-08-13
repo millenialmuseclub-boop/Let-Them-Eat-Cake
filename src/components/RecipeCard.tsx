@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { DietTag, Recipe, RecipeComponent } from '../types/cake'
-import { scaleRecipe, scaleRecipeComponent, type ScaledIngredient, type UnitSystem } from '../lib/units'
+import { getRecipeIngredients, getRecipeComponentIngredients, type ScaledIngredient, type UnitSystem } from '../lib/units'
 import { slugify } from '../lib/ingredients'
 import { getCake } from '../lib/data'
 import { RecipeShareCard } from './RecipeShareCard'
@@ -76,15 +76,14 @@ const DIET_OPTIONS: { value: DietTag | 'none'; label: string }[] = [
 ]
 
 export function RecipeCard({ recipe }: { recipe: Recipe }) {
-  const [servings, setServings] = useState(recipe.baseServings)
   const [unitSystem, setUnitSystem] = useState<UnitSystem>('metric')
   const [diet, setDiet] = useState<DietTag | 'none'>('none')
   const [showShare, setShowShare] = useState(false)
 
   const activeDiet = diet === 'none' ? undefined : diet
-  const ingredients = scaleRecipe(recipe, servings, unitSystem, activeDiet)
-  const scaledFilling = recipe.filling ? scaleRecipeComponent(recipe.filling, recipe, servings, unitSystem, activeDiet) : null
-  const scaledFrostingFinish = recipe.frostingFinish ? scaleRecipeComponent(recipe.frostingFinish, recipe, servings, unitSystem, activeDiet) : null
+  const ingredients = getRecipeIngredients(recipe, unitSystem, activeDiet)
+  const scaledFilling = recipe.filling ? getRecipeComponentIngredients(recipe.filling, unitSystem, activeDiet) : null
+  const scaledFrostingFinish = recipe.frostingFinish ? getRecipeComponentIngredients(recipe.frostingFinish, unitSystem, activeDiet) : null
   const cake = getCake(recipe.cakeId)
 
   const hasOverview = recipe.yield || recipe.prepTimeMinutes || recipe.bakeTimeMinutes || recipe.totalTimeMinutes || recipe.ovenTempC || recipe.panSize || (recipe.equipment && recipe.equipment.length > 0)
@@ -110,17 +109,9 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
         </div>
       )}
 
+      <p className="recipe-servings">Serves {recipe.baseServings}</p>
+
       <div className="recipe-controls">
-        <label>
-          Servings
-          <input
-            type="number"
-            min={1}
-            max={50}
-            value={servings}
-            onChange={(e) => setServings(Math.max(1, Number(e.target.value) || 1))}
-          />
-        </label>
         <div className="unit-toggle">
           <button className={unitSystem === 'metric' ? 'active' : ''} onClick={() => setUnitSystem('metric')}>
             Metric
