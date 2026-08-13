@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Scaled/centered toward (50,50) so the glyph stays inside the ~66%
+       safe zone Android uses when masking adaptive icons into circles,
+       squircles, etc. -->
+  <g transform="translate(50,50) scale(0.75) translate(-50,-50)">
+    <rect x="20" y="58" width="60" height="22" rx="5" fill="#e88d9e" />
+    <rect x="32" y="38" width="36" height="20" rx="5" fill="#e88d9e" />
+    <rect x="18" y="56" width="64" height="4" rx="2" fill="#3d2314" opacity="0.15" />
+    <rect x="30" y="36" width="40" height="4" rx="2" fill="#3d2314" opacity="0.15" />
+    <rect x="48" y="20" width="4" height="16" rx="2" fill="#3d2314" />
+    <path d="M50 12c3 3 3 6 0 9-3-3-3-6 0-9z" fill="#d4af37" />
+  </g>
+</svg>
