@@ -21,6 +21,11 @@
   font-size: 16px;
 }
 
+.wedding-guest-count-editor {
+  margin: 10px 0 0 !important;
+  align-items: flex-start !important;
+}
+
 .wedding-action-row {
   display: flex;
   flex-wrap: wrap;

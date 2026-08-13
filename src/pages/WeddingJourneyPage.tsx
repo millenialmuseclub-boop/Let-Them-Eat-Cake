@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { DietTag } from '../types/cake'
 import type { CakeShape, SeasonVariant, WeddingPlanInput, WeddingPlanResult, WeddingSeason } from '../types/weddingCake'
 import { weddingCultures, weddingAesthetics, weddingDecorationStyles, weddingFlavorDirections } from '../lib/data'
 import { generateWeddingPlan, pickCultureForFlavorDirection } from '../lib/weddingCake'
 import { rankDecorationStyles } from '../lib/weddingDecoration'
+import { registerBackHandler } from '../lib/backButtonInterceptor'
 import { WeddingResultSummary } from '../components/WeddingResultSummary'
 import './WeddingJourneyPage.css'
 
@@ -64,6 +65,23 @@ export function WeddingJourneyPage() {
 
   const stepIndex = STEP_ORDER.indexOf(step)
 
+  // Wizard steps are plain component state, not history entries, so the
+  // Android back button has nothing to unwind on its own -- claim it here
+  // and step back one screen at a time; only the first step (nothing to
+  // step back to) lets the press fall through to real navigation.
+  const stepRef = useRef(step)
+  stepRef.current = step
+  useEffect(
+    () =>
+      registerBackHandler(() => {
+        const currentIndex = STEP_ORDER.indexOf(stepRef.current)
+        if (currentIndex <= 0) return false
+        setStep(STEP_ORDER[currentIndex - 1])
+        return true
+      }),
+    [],
+  )
+
   function generate(cultureId: string) {
     const input: WeddingPlanInput = { occasion: 'wedding', cultureId, guestCount, season, variant, aestheticId, diet, shape, decorationStyleId }
     setResult(generateWeddingPlan(input))
@@ -81,7 +99,13 @@ export function WeddingJourneyPage() {
   if (step === 'result' && result) {
     return (
       <main className="page wedding-journey-page">
-        <WeddingResultSummary result={result} venueType={venueType} onRefine={() => setStep('style')} />
+        <WeddingResultSummary
+          result={result}
+          venueType={venueType}
+          guestCount={guestCount}
+          onGuestCountChange={setGuestCount}
+          onRefine={() => setStep('style')}
+        />
       </main>
     )
   }

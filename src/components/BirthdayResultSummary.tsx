@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { DietTag } from '../types/cake'
 import { getCake, getRecipeForCake } from '../lib/data'
 import { getTopPairings } from '../lib/encyclopedia'
 import { getProductsByIds } from '../lib/affiliateProducts'
+import { registerBackHandler } from '../lib/backButtonInterceptor'
 import { CakeHeroImage } from './CakeHeroImage'
 import { SaveButton } from './SaveButton'
 import { BirthdayShareCard } from './BirthdayShareCard'
@@ -25,6 +26,7 @@ export function BirthdayResultSummary({
   energyName,
   flavorName,
   guestCount,
+  onGuestCountChange,
   diet,
   theme,
   onRefine,
@@ -34,11 +36,25 @@ export function BirthdayResultSummary({
   energyName: string
   flavorName: string
   guestCount: number
+  onGuestCountChange: (guestCount: number) => void
   diet: DietTag | 'none'
   theme: string
   onRefine: () => void
 }) {
   const [showShare, setShowShare] = useState(false)
+
+  const showShareRef = useRef(showShare)
+  showShareRef.current = showShare
+  useEffect(
+    () =>
+      registerBackHandler(() => {
+        if (!showShareRef.current) return false
+        setShowShare(false)
+        return true
+      }),
+    [],
+  )
+
   const cake = getCake(cakeId)
   if (!cake) return null
 
@@ -71,6 +87,21 @@ export function BirthdayResultSummary({
       <section className="card wedding-primary-card">
         <h2>🎉 Serves</h2>
         <p className="wedding-concept-title">{recipe ? recipe.baseServings : guestCount}</p>
+        {recipe && guestCount > recipe.baseServings && (
+          <p className="wedding-hero-description">
+            Bake {Math.ceil(guestCount / recipe.baseServings)}× this recipe to comfortably serve {guestCount} guests.
+          </p>
+        )}
+        <label className="wedding-form wedding-guest-count-editor">
+          Guest count
+          <input
+            type="number"
+            min={1}
+            max={200}
+            value={guestCount}
+            onChange={(e) => onGuestCountChange(Math.min(200, Math.max(1, Number(e.target.value) || 1)))}
+          />
+        </label>
       </section>
 
       <section className="card wedding-primary-card">

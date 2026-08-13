@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { DietTag } from '../types/cake'
 import { otherCelebrationOccasions, otherCelebrationMoods, birthdayFlavors } from '../lib/data'
 import { pickBirthdayCake } from '../lib/birthdayMatch'
+import { registerBackHandler } from '../lib/backButtonInterceptor'
 import { OtherCelebrationResultSummary } from '../components/OtherCelebrationResultSummary'
 import './OtherCelebrationJourneyPage.css'
 
@@ -32,6 +33,19 @@ export function OtherCelebrationJourneyPage() {
   const mood = otherCelebrationMoods.find((m) => m.id === moodId)!
   const selectedFlavors = birthdayFlavors.filter((f) => flavorIds.includes(f.id))
 
+  const stepRef = useRef(step)
+  stepRef.current = step
+  useEffect(
+    () =>
+      registerBackHandler(() => {
+        const currentIndex = STEP_ORDER.indexOf(stepRef.current)
+        if (currentIndex <= 0) return false
+        setStep(STEP_ORDER[currentIndex - 1])
+        return true
+      }),
+    [],
+  )
+
   function toggleFlavor(id: string) {
     setFlavorIds((prev) => {
       if (prev.includes(id)) return prev.filter((f) => f !== id)
@@ -56,6 +70,7 @@ export function OtherCelebrationJourneyPage() {
           moodName={mood.name}
           flavorNames={selectedFlavors.map((f) => f.name)}
           guestCount={guestCount}
+          onGuestCountChange={setGuestCount}
           diet={diet}
           onRefine={() => setStep('occasion')}
         />

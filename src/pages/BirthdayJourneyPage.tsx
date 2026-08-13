@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { DietTag } from '../types/cake'
 import { birthdayEnergies, birthdayFlavors } from '../lib/data'
 import { pickBirthdayCake } from '../lib/birthdayMatch'
+import { registerBackHandler } from '../lib/backButtonInterceptor'
 import { BirthdayResultSummary } from '../components/BirthdayResultSummary'
 import './BirthdayJourneyPage.css'
 
@@ -36,6 +37,19 @@ export function BirthdayJourneyPage() {
   const energy = birthdayEnergies.find((e) => e.id === energyId)!
   const flavor = birthdayFlavors.find((f) => f.id === flavorId)!
 
+  const stepRef = useRef(step)
+  stepRef.current = step
+  useEffect(
+    () =>
+      registerBackHandler(() => {
+        const currentIndex = STEP_ORDER.indexOf(stepRef.current)
+        if (currentIndex <= 0) return false
+        setStep(STEP_ORDER[currentIndex - 1])
+        return true
+      }),
+    [],
+  )
+
   function generate() {
     const cake = pickBirthdayCake(flavor.keywords, energy.texture, energy.mood)
     setCakeId(cake.id)
@@ -51,6 +65,7 @@ export function BirthdayJourneyPage() {
           energyName={energy.name}
           flavorName={flavor.name}
           guestCount={guestCount}
+          onGuestCountChange={setGuestCount}
           diet={diet}
           theme={theme}
           onRefine={() => setStep('who')}

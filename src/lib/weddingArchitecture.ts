@@ -53,7 +53,12 @@ function selectTierDiameters(guestCount: number): { diameters: number[]; cappedG
     let best: typeof TIER_SERVING_CHART | null = null
     let bestWaste = Infinity
     for (const combo of combos) {
-      const total = combo.reduce((sum, row) => sum + row.venueSlices, 0)
+      // Guarantee against partySlices, not venueSlices -- partySlices (the
+      // larger, more generous cut) is what's shown as "Serves N" everywhere
+      // in the UI and what budget estimates are based on. Guaranteeing
+      // against the thinner venueSlices count let the displayed serving
+      // total fall well under the actual guest count for 100+ guests.
+      const total = combo.reduce((sum, row) => sum + row.partySlices, 0)
       if (total < guestCount) continue
       const waste = total - guestCount
       const baseDiameter = Math.max(...combo.map((row) => row.diameterIn))

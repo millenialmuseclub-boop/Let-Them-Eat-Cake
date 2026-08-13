@@ -1,16 +1,18 @@
-import { useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { WeddingPlanResult } from '../types/weddingCake'
 import { getCake, getRecipe } from '../lib/data'
 import { getTopPairings } from '../lib/encyclopedia'
 import { getProductsByIds } from '../lib/affiliateProducts'
 import {
+  generateWeddingPlan,
   toMarkdown,
   formatArchitectureLabel,
   formatFrostingLabel,
   formatShapeLabel,
   formatRoleLabel,
 } from '../lib/weddingCake'
+import { registerBackHandler } from '../lib/backButtonInterceptor'
 import { CakeHeroImage } from './CakeHeroImage'
 import { RecipeCard } from './RecipeCard'
 import { WeddingCakeDiagram } from './WeddingCakeDiagram'
@@ -44,10 +46,43 @@ const ALLERGEN_LABELS: Record<string, string> = {
   soy: 'Soy',
 }
 
-export function WeddingResultSummary({ result, venueType, onRefine }: { result: WeddingPlanResult; venueType: string; onRefine: () => void }) {
+export function WeddingResultSummary({
+  result: initialResult,
+  venueType,
+  guestCount,
+  onGuestCountChange,
+  onRefine,
+}: {
+  result: WeddingPlanResult
+  venueType: string
+  guestCount: number
+  onGuestCountChange: (guestCount: number) => void
+  onRefine: () => void
+}) {
   const [copied, setCopied] = useState(false)
   const [showShare, setShowShare] = useState(false)
   const structureRef = useRef<HTMLDetailsElement>(null)
+
+  const showShareRef = useRef(showShare)
+  showShareRef.current = showShare
+  useEffect(
+    () =>
+      registerBackHandler(() => {
+        if (!showShareRef.current) return false
+        setShowShare(false)
+        return true
+      }),
+    [],
+  )
+
+  // Recompute the full plan whenever guestCount changes -- tier count/sizing,
+  // recipe picks (more tiers can change which recipes get chosen), budget,
+  // and cutting guide all depend on it, so a partial recalculation would
+  // drift out of sync with what's actually displayed.
+  const result = useMemo(
+    () => (guestCount === initialResult.input.guestCount ? initialResult : generateWeddingPlan({ ...initialResult.input, guestCount })),
+    [initialResult, guestCount],
+  )
 
   const tierCount = result.architecturePlan.tiers.length
   const totalServings = result.architecturePlan.tiers.reduce((sum, tier) => sum + tier.partySlices, 0)
@@ -96,6 +131,16 @@ export function WeddingResultSummary({ result, venueType, onRefine }: { result: 
         <p className="wedding-hero-description">
           {tierCount}-tier {formatArchitectureLabel(result.architecturePlan.architecture).toLowerCase()}.
         </p>
+        <label className="wedding-form wedding-guest-count-editor">
+          Guest count
+          <input
+            type="number"
+            min={10}
+            max={400}
+            value={guestCount}
+            onChange={(e) => onGuestCountChange(Math.min(400, Math.max(10, Number(e.target.value) || 10)))}
+          />
+        </label>
       </section>
 
       <section className="card wedding-primary-card">
