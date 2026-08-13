@@ -1,0 +1,46 @@
+.about-page p {
+  max-width: 62ch;
+}
+
+.about-section {
+  margin-top: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 18px;
+  background: var(--bg-card);
+}
+
+.about-section summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.about-section-body {
+  margin-top: 12px;
+}
+
+.about-section-body p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.about-section-body p:last-child {
+  margin-bottom: 0;
+}
+
+.about-section-body ul {
+  margin: 0 0 10px;
+  padding-left: 20px;
+}
+
+.about-section-body li {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.about-section-body a {
+  color: var(--raspberry);
+}

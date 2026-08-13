@@ -7,7 +7,7 @@ import { getProductsByIds } from '../lib/affiliateProducts'
 import { registerBackHandler } from '../lib/backButtonInterceptor'
 import type { GuestRange } from '../lib/guestRanges'
 import { formatComponentLabel } from '../lib/recipeComponents'
-import { CakeHeroImage } from './CakeHeroImage'
+import { CakeThumbnail } from './CakeThumbnail'
 import { SaveButton } from './SaveButton'
 import { OtherCelebrationShareCard } from './OtherCelebrationShareCard'
 import { AffiliateProductSet } from './AffiliateProductSet'
@@ -71,7 +71,7 @@ export function OtherCelebrationResultSummary({
   return (
     <div className="other-celebration-result-summary">
       <section className="card wedding-hero">
-        <CakeHeroImage cakeId={cake.id} variant="hero" alt={cake.name} />
+        <CakeThumbnail cakeId={cake.id} variant="hero" alt={cake.name} />
         <p className="tag">{occasionName}</p>
         <h1>{cake.name}</h1>
         <p className="wedding-hero-description">Matched for your {occasionName.toLowerCase()}.</p>

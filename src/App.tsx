@@ -27,6 +27,7 @@ import { BakingTraditionDetailPage } from './pages/BakingTraditionDetailPage'
 import { CuratedKitchenPage } from './pages/CuratedKitchenPage'
 import { CelebrateLandingPage } from './pages/CelebrateLandingPage'
 import { DiscoverPage } from './pages/DiscoverPage'
+import { AboutPage } from './pages/AboutPage'
 import { HubPage } from './components/HubPage'
 import { TopNavBar } from './components/TopNavBar'
 import { BottomTabBar } from './components/BottomTabBar'
@@ -74,6 +75,7 @@ function App() {
         <Route path="/traditions" element={<BakingTraditionsIndexPage />} />
         <Route path="/traditions/:id" element={<BakingTraditionDetailPage />} />
         <Route path="/curated-kitchen" element={<CuratedKitchenPage />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
       <BottomTabBar />
     </>

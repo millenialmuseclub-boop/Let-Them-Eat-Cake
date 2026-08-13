@@ -7,7 +7,7 @@ import { getProductsByIds } from '../lib/affiliateProducts'
 import { registerBackHandler } from '../lib/backButtonInterceptor'
 import type { GuestRange } from '../lib/guestRanges'
 import { formatComponentLabel } from '../lib/recipeComponents'
-import { CakeHeroImage } from './CakeHeroImage'
+import { CakeThumbnail } from './CakeThumbnail'
 import { SaveButton } from './SaveButton'
 import { BirthdayShareCard } from './BirthdayShareCard'
 import { AffiliateProductSet } from './AffiliateProductSet'
@@ -63,7 +63,8 @@ export function BirthdayResultSummary({
 
   const recipe = getRecipeForCake(cake.id)
   const topPairing = getTopPairings(cake, 1)[0]
-  const whoLabel = who === 'Me' ? 'your birthday' : `${who === 'Milestone Birthday' ? 'a milestone birthday' : `a ${who.toLowerCase()}'s birthday`}`
+  const whoArticle = /^[aeiou]/i.test(who) ? 'an' : 'a'
+  const whoLabel = who === 'Me' ? 'your birthday' : `${who === 'Milestone Birthday' ? 'a milestone birthday' : `${whoArticle} ${who.toLowerCase()}'s birthday`}`
   const article = /^[aeiou]/i.test(energyName) ? 'An' : 'A'
   const whyItFits = `${article} ${energyName.toLowerCase()} ${flavorName.toLowerCase()} cake, matched for ${whoLabel}${theme ? ` with a ${theme} theme` : ''}.`
   const cakeInspirationProducts = getProductsByIds([
@@ -74,7 +75,7 @@ export function BirthdayResultSummary({
   return (
     <div className="birthday-result-summary">
       <section className="card wedding-hero">
-        <CakeHeroImage cakeId={cake.id} variant="hero" alt={cake.name} />
+        <CakeThumbnail cakeId={cake.id} variant="hero" alt={cake.name} />
         <p className="tag">Birthday</p>
         <h1>{cake.name}</h1>
         <p className="wedding-hero-description">

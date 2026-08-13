@@ -15,7 +15,7 @@ import {
 import { registerBackHandler } from '../lib/backButtonInterceptor'
 import type { GuestRange } from '../lib/guestRanges'
 import { formatComponentLabel } from '../lib/recipeComponents'
-import { CakeHeroImage } from './CakeHeroImage'
+import { CakeThumbnail } from './CakeThumbnail'
 import { RecipeCard } from './RecipeCard'
 import { WeddingCakeDiagram } from './WeddingCakeDiagram'
 import { AffiliateProductSet } from './AffiliateProductSet'
@@ -123,7 +123,7 @@ export function WeddingResultSummary({
   return (
     <div className="wedding-result-summary">
       <section className="card wedding-hero">
-        {baseCakeProfile && <CakeHeroImage cakeId={baseCakeProfile.id} variant="hero" alt={conceptName} />}
+        {baseCakeProfile && <CakeThumbnail cakeId={baseCakeProfile.id} variant="hero" alt={conceptName} />}
         <p className="tag">Wedding</p>
         <h1>{conceptName}</h1>
         <p className="wedding-hero-description">{flavorNames.join(' · ')}</p>

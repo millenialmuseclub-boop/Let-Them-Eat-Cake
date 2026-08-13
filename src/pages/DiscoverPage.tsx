@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { HUBS } from '../data/hubs'
 import { getSceneImage } from '../lib/sceneImages'
 import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
@@ -54,6 +55,10 @@ export function DiscoverPage() {
           unsplashUrl={kitchenScene?.unsplashUrl}
         />
       </div>
+
+      <Link to="/about" className="discover-about-link">
+        About &amp; Legal
+      </Link>
     </main>
   )
 }
