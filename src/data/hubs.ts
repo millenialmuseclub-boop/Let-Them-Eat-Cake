@@ -36,6 +36,13 @@ export const HUBS: Hub[] = [
     description: "Explore the world's cakes through history and geography.",
     items: [
       {
+        to: '/persona-match',
+        title: 'Cake Personality',
+        description: 'Answer a few quick questions and get matched to a cake personality, complete with its cultural story and a shareable card.',
+        cakeId: 'cake_rainbow_drip_2010s',
+        cta: 'Take the Quiz →',
+      },
+      {
         to: '/encyclopedia',
         title: 'Cake Encyclopedia',
         description: 'The stories, flavors, techniques and traditions behind the world\'s cakes — history, flavor profile, traditional recipe, and related finds for every entry.',
@@ -49,13 +56,6 @@ export const HUBS: Hub[] = [
           'Click a pin on an interactive world map — or search directly — for any country’s most popular cake, complete with a full recipe and background story.',
         cakeId: 'cake_tres_leches',
         cta: 'Open Atlas →',
-      },
-      {
-        to: '/persona-match',
-        title: 'Cake Personality',
-        description: 'Answer a few quick questions and get matched to a cake personality, complete with its cultural story and a shareable card.',
-        cakeId: 'cake_rainbow_drip_2010s',
-        cta: 'Take the Quiz →',
       },
     ],
   },

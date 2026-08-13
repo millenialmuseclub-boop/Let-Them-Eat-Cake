@@ -1,14 +1,21 @@
 import { useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { getCake, getRecipe, regions } from '../lib/data'
-import { getAllCountries, getCountryEntries, getPrimaryEntry, getRelatedCountries } from '../lib/atlas'
+import { getCake, getRecipe } from '../lib/data'
+import {
+  ATLAS_DISPLAY_REGIONS,
+  getAllCountries,
+  getCountriesForDisplayRegion,
+  getCountryEntries,
+  getPrimaryEntry,
+  getRelatedCountries,
+  type AtlasDisplayRegion,
+} from '../lib/atlas'
+import { getFirstPhotographedCakeId } from '../lib/images'
 import { RecipeCard } from '../components/RecipeCard'
 import { AtlasWorldMap } from '../components/AtlasWorldMap'
 import { CakeHeroImage } from '../components/CakeHeroImage'
-import type { AtlasRegion } from '../types/atlas'
+import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
 import './AtlasPage.css'
-
-const ATLAS_REGIONS: AtlasRegion[] = ['Africa', 'Asia & Middle East', 'Europe', 'Latin America', 'North America', 'Oceania']
 
 export function AtlasPage() {
   const allCountries = useMemo(() => getAllCountries(), [])
@@ -19,7 +26,7 @@ export function AtlasPage() {
   const [query, setQuery] = useState(initialCountry ?? '')
   const [country, setCountry] = useState<string | null>(initialCountry)
   const [selectedEntryId, setSelectedEntryId] = useState<string | null>(initialCountry ? getPrimaryEntry(initialCountry)?.id ?? null : null)
-  const [selectedRegion, setSelectedRegion] = useState<AtlasRegion | null>(null)
+  const [selectedRegion, setSelectedRegion] = useState<AtlasDisplayRegion | null>(null)
 
   function handleSearch(value: string) {
     setQuery(value)
@@ -34,8 +41,7 @@ export function AtlasPage() {
     }
   }
 
-  const regionEntries = selectedRegion ? regions.filter((r) => r.isPrimary && r.region === selectedRegion) : []
-  const alphabeticalCountries = useMemo(() => [...allCountries].sort((a, b) => a.localeCompare(b)), [allCountries])
+  const regionEntries = useMemo(() => (selectedRegion ? getCountriesForDisplayRegion(selectedRegion) : []), [selectedRegion])
 
   const countryEntries = country ? getCountryEntries(country) : []
   const selectedEntry = countryEntries.find((e) => e.id === selectedEntryId) ?? null
@@ -52,6 +58,7 @@ export function AtlasPage() {
       <AtlasWorldMap countries={allCountries} selectedCountry={country} onSelectCountry={handleSearch} />
 
       <div className="atlas-search">
+        <h2 className="atlas-search-heading">🔎 Search Countries</h2>
         <input
           type="text"
           list="atlas-countries"
@@ -74,39 +81,53 @@ export function AtlasPage() {
             <CakeHeroImage cakeId={selectedCake.id} variant="hero" alt={selectedCake.name} />
             <span className="tag">{country}</span>
             {selectedEntry.cityMicroRegion && <span className="tag atlas-city-tag">{selectedEntry.cityMicroRegion}</span>}
-            <h2>{selectedCake.name}</h2>
+            <h2>🎂 Cake Heritage</h2>
+            <h3>{selectedCake.name}</h3>
             <p>{selectedCake.description}</p>
-            <h3>Background story</h3>
-            <p>{selectedEntry.historyNote}</p>
             <Link to={`/cake/${selectedCake.id}`} className="encyclopedia-link">
               View full encyclopedia entry →
             </Link>
           </div>
 
-          <h2 className="recipe-heading">Recipe</h2>
+          <h2 className="recipe-heading">📖 Signature Cake</h2>
           <RecipeCard key={selectedRecipe.id} recipe={selectedRecipe} />
+          <Link to="/sommelier" className="btn btn-secondary atlas-sommelier-link">
+            Explore pairings in the Sommelier →
+          </Link>
 
           {otherEntries.length > 0 && (
             <>
-              <h2 className="recipe-heading">Other favorites from {country}</h2>
-              <div className="atlas-grid">
+              <h2 className="recipe-heading">More Signature Cakes from {country}</h2>
+              <div className="discover-feature-grid">
                 {otherEntries.map((entry) => {
                   const cake = getCake(entry.cakeId)
                   return (
-                    <button key={entry.id} className="card atlas-card" onClick={() => setSelectedEntryId(entry.id)}>
-                      {entry.cityMicroRegion && <p className="atlas-location">{entry.cityMicroRegion}</p>}
-                      <h3>{cake?.name}</h3>
-                      <p>{entry.shortDescription}</p>
-                    </button>
+                    <DiscoverFeatureCard
+                      key={entry.id}
+                      onClick={() => setSelectedEntryId(entry.id)}
+                      title={cake?.name ?? entry.country}
+                      description={entry.shortDescription}
+                      meta={entry.cityMicroRegion}
+                      cta="View →"
+                      cakeId={getFirstPhotographedCakeId([entry.cakeId]) ?? entry.cakeId}
+                    />
                   )
                 })}
               </div>
             </>
           )}
 
+          <section className="atlas-cultural-story">
+            <h2>📜 Cultural Story</h2>
+            <details>
+              <summary>Read the background story</summary>
+              <p>{selectedEntry.historyNote}</p>
+            </details>
+          </section>
+
           {relatedCountries.length > 0 && (
             <>
-              <h2 className="recipe-heading">Related Countries</h2>
+              <h2 className="recipe-heading">🌍 Regional Variations</h2>
               <div className="atlas-chip-row">
                 {relatedCountries.map((c) => (
                   <button key={c} className="atlas-chip" onClick={() => handleSearch(c)}>
@@ -124,7 +145,7 @@ export function AtlasPage() {
           <section className="atlas-row">
             <h2>🌍 Browse by Region</h2>
             <div className="atlas-chip-row">
-              {ATLAS_REGIONS.map((region) => (
+              {ATLAS_DISPLAY_REGIONS.map((region) => (
                 <button
                   key={region}
                   className={selectedRegion === region ? 'atlas-chip active' : 'atlas-chip'}
@@ -137,30 +158,19 @@ export function AtlasPage() {
           </section>
 
           {selectedRegion && (
-            <div className="atlas-grid atlas-browse">
-              {regionEntries.map((entry) => {
-                const cake = getCake(entry.cakeId)
-                return (
-                  <button key={entry.id} className="card atlas-card" onClick={() => handleSearch(entry.country)}>
-                    <p className="atlas-location">{entry.country}</p>
-                    <h3>{cake?.name}</h3>
-                    <p>{entry.shortDescription}</p>
-                  </button>
-                )
-              })}
-            </div>
-          )}
-
-          <section className="atlas-row">
-            <h2>🔤 Browse by Country</h2>
-            <div className="atlas-chip-row">
-              {alphabeticalCountries.map((c) => (
-                <button key={c} className="atlas-chip" onClick={() => handleSearch(c)}>
-                  {c}
-                </button>
+            <div className="discover-feature-grid atlas-browse">
+              {regionEntries.map((entry) => (
+                <DiscoverFeatureCard
+                  key={entry.id}
+                  onClick={() => handleSearch(entry.country)}
+                  title={entry.country}
+                  description={entry.shortDescription}
+                  cta="Explore →"
+                  cakeId={getFirstPhotographedCakeId([entry.cakeId]) ?? entry.cakeId}
+                />
               ))}
             </div>
-          </section>
+          )}
         </>
       )}
     </main>

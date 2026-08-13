@@ -3,7 +3,6 @@ import { Link, useSearchParams } from 'react-router-dom'
 import { cakes, bakingTraditions } from '../lib/data'
 import { getRegionEntriesForCake, getDecadeForCake, distinctOrigins } from '../lib/encyclopedia'
 import { getTraditionCakes } from '../lib/bakingTraditions'
-import { distinctOccasions } from '../lib/cakeBrowse'
 import { getCakeOfTheDay } from '../lib/discovery'
 import { getFirstPhotographedCakeId } from '../lib/images'
 import { CakeThumbnail } from '../components/CakeThumbnail'
@@ -20,8 +19,8 @@ function getLocationTag(cakeId: string): string | null {
   return null
 }
 
-const OCCASIONS = distinctOccasions()
 const ORIGINS = distinctOrigins()
+const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
 function cakeCountLabel(count: number): string {
   return `${count} ${count === 1 ? 'cake' : 'cakes'}`
@@ -44,13 +43,13 @@ function CakeCard({ cake }: { cake: (typeof cakes)[number] }) {
 
 export function CakeEncyclopediaIndexPage() {
   const [searchParams] = useSearchParams()
-  const occasionParam = searchParams.get('occasion')
   const moodParam = searchParams.get('mood')
 
   const [query, setQuery] = useState('')
-  const [activeChip, setActiveChip] = useState<{ type: 'origin' | 'occasion' | 'mood'; value: string } | null>(
-    occasionParam ? { type: 'occasion', value: occasionParam } : moodParam ? { type: 'mood', value: moodParam } : null,
+  const [activeChip, setActiveChip] = useState<{ type: 'origin' | 'mood'; value: string } | null>(
+    moodParam ? { type: 'mood', value: moodParam } : null,
   )
+  const [selectedLetter, setSelectedLetter] = useState<string | null>(null)
 
   const cakeOfTheDay = getCakeOfTheDay()
 
@@ -60,7 +59,6 @@ export function CakeEncyclopediaIndexPage() {
   const filtered = useMemo(() => {
     let result = cakes
     if (activeChip?.type === 'origin') result = result.filter((c) => getRegionEntriesForCake(c.id).some((r) => r.region === activeChip.value))
-    if (activeChip?.type === 'occasion') result = result.filter((c) => c.occasion?.includes(activeChip.value))
     if (activeChip?.type === 'mood') result = result.filter((c) => c.personaTags?.moods?.includes(activeChip.value as MoodTag))
     if (q) {
       result = result.filter(
@@ -74,7 +72,7 @@ export function CakeEncyclopediaIndexPage() {
     return result
   }, [q, activeChip])
 
-  function selectChip(type: 'origin' | 'occasion', value: string) {
+  function selectChip(type: 'origin', value: string) {
     setActiveChip((prev) => (prev?.type === type && prev.value === value ? null : { type, value }))
   }
 
@@ -87,13 +85,10 @@ export function CakeEncyclopediaIndexPage() {
     [],
   )
 
-  const occasionGroups = useMemo(
-    () =>
-      OCCASIONS.map((occasion) => {
-        const occasionCakes = cakes.filter((c) => c.occasion?.includes(occasion))
-        return { occasion, count: occasionCakes.length, repCakeId: getFirstPhotographedCakeId(occasionCakes.map((c) => c.id)) ?? occasionCakes[0]?.id }
-      }),
-    [],
+  const lettersWithCakes = useMemo(() => new Set(cakes.map((c) => c.name[0]?.toUpperCase())), [])
+  const letterCakes = useMemo(
+    () => (selectedLetter ? cakes.filter((c) => c.name[0]?.toUpperCase() === selectedLetter).sort((a, b) => a.name.localeCompare(b.name)) : []),
+    [selectedLetter],
   )
 
   const traditionGroups = useMemo(
@@ -170,26 +165,6 @@ export function CakeEncyclopediaIndexPage() {
           </section>
 
           <section className="encyclopedia-row">
-            <h2>🎉 Browse by Occasion</h2>
-            <div className="encyclopedia-feature-scroll">
-              {occasionGroups.map(
-                ({ occasion, count, repCakeId }) =>
-                  repCakeId && (
-                    <div key={occasion} className="encyclopedia-feature-scroll-item">
-                      <DiscoverFeatureCard
-                        onClick={() => selectChip('occasion', occasion)}
-                        title={occasion}
-                        description={cakeCountLabel(count)}
-                        cta="Explore →"
-                        cakeId={repCakeId}
-                      />
-                    </div>
-                  ),
-              )}
-            </div>
-          </section>
-
-          <section className="encyclopedia-row">
             <h2>🌍 Baking Traditions</h2>
             <div className="discover-feature-grid">
               {traditionGroups.map(
@@ -207,6 +182,29 @@ export function CakeEncyclopediaIndexPage() {
                   ),
               )}
             </div>
+          </section>
+
+          <section className="encyclopedia-row">
+            <h2>🔤 Browse A–Z</h2>
+            <div className="encyclopedia-az-row">
+              {ALPHABET.map((letter) => (
+                <button
+                  key={letter}
+                  className={selectedLetter === letter ? 'encyclopedia-az-chip active' : 'encyclopedia-az-chip'}
+                  disabled={!lettersWithCakes.has(letter)}
+                  onClick={() => setSelectedLetter((prev) => (prev === letter ? null : letter))}
+                >
+                  {letter}
+                </button>
+              ))}
+            </div>
+            {selectedLetter && (
+              <div className="encyclopedia-grid encyclopedia-az-results">
+                {letterCakes.map((cake) => (
+                  <CakeCard key={cake.id} cake={cake} />
+                ))}
+              </div>
+            )}
           </section>
         </>
       )}

@@ -1,6 +1,7 @@
 .top-nav-bar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -24,6 +25,25 @@
   width: 32px;
   height: 32px;
   border-radius: 8px;
+}
+
+.top-nav-favorites {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--raspberry);
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.top-nav-favorites:hover {
+  background: var(--raspberry-bg);
+  transform: scale(1.05);
 }
 
 @media print {

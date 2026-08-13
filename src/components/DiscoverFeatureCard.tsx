@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { CakeHeroImage } from './CakeHeroImage'
+import { CakeThumbnail } from './CakeThumbnail'
 import './DiscoverFeatureCard.css'
 
 function DiscoverFeatureCardBody({
@@ -25,7 +25,7 @@ function DiscoverFeatureCardBody({
 }) {
   return (
     <>
-      {cakeId && <CakeHeroImage cakeId={cakeId} variant="hero" alt={imageAlt ?? title} />}
+      {cakeId && <CakeThumbnail cakeId={cakeId} variant="hero" alt={imageAlt ?? title} />}
       {imageUrl && (
         <div className="discover-feature-card-image">
           <img src={imageUrl} alt={imageAlt ?? title} loading="lazy" />

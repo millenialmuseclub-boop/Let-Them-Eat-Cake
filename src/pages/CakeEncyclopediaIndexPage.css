@@ -75,15 +75,44 @@
   font-weight: 600;
 }
 
-.encyclopedia-feature-scroll {
+.encyclopedia-az-row {
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 4px;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
-.encyclopedia-feature-scroll-item {
-  flex: 0 0 240px;
+.encyclopedia-az-chip {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.encyclopedia-az-chip:hover:not(:disabled) {
+  border-color: var(--raspberry);
+  color: var(--raspberry);
+}
+
+.encyclopedia-az-chip.active {
+  background: var(--raspberry);
+  border-color: var(--raspberry);
+  color: white;
+}
+
+.encyclopedia-az-chip:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.encyclopedia-az-results {
+  margin-top: 20px;
 }
 
 .encyclopedia-active-filter {

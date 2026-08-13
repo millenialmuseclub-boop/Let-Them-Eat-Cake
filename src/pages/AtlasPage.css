@@ -2,6 +2,10 @@
   margin: 20px 0 32px;
 }
 
+.atlas-search-heading {
+  margin-bottom: 10px;
+}
+
 .atlas-search input {
   width: 100%;
   max-width: 420px;
@@ -11,6 +15,31 @@
   border: 1px solid var(--border);
   background: var(--bg-card);
   color: var(--text);
+}
+
+.atlas-sommelier-link {
+  display: inline-block;
+  margin: 4px 0 8px;
+}
+
+.atlas-cultural-story {
+  margin: 24px 0;
+}
+
+.atlas-cultural-story details {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: var(--bg-card);
+}
+
+.atlas-cultural-story summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.atlas-cultural-story details p {
+  margin: 12px 0 0;
 }
 
 .atlas-empty {
@@ -29,12 +58,6 @@
 
 .recipe-heading {
   margin-top: 8px;
-}
-
-.atlas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 16px;
 }
 
 .atlas-browse {
@@ -89,30 +112,3 @@
   color: white;
 }
 
-.atlas-collection-card {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-}
-
-.atlas-card {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  width: 100%;
-  font: inherit;
-  cursor: pointer;
-}
-
-.atlas-location {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--raspberry);
-  margin-bottom: 4px;
-}
-
-.atlas-card p:not(.atlas-location) {
-  flex-grow: 1;
-  font-size: 15px;
-}

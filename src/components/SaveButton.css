@@ -1,5 +1,23 @@
 .save-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   margin-top: 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.save-button:hover {
+  transform: scale(1.06);
+  border-color: var(--raspberry);
 }
 
 .save-button.saved {

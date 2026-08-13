@@ -11,8 +11,15 @@ export function SaveButton({ type, id }: { type: SavedItemType; id: string }) {
   }
 
   return (
-    <button className={saved ? 'btn btn-secondary save-button saved' : 'btn btn-secondary save-button'} onClick={handleClick}>
-      {saved ? '✓ Saved to Notebook' : '🔖 Save to Notebook'}
+    <button
+      type="button"
+      className={saved ? 'save-button saved' : 'save-button'}
+      onClick={handleClick}
+      aria-pressed={saved}
+      aria-label={saved ? 'Remove from favorites' : 'Save to favorites'}
+      title={saved ? 'Remove from favorites' : 'Save to favorites'}
+    >
+      {saved ? '♥' : '♡'}
     </button>
   )
 }

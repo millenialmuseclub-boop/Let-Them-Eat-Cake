@@ -1,11 +1,5 @@
-import { Link } from 'react-router-dom'
 import { HUBS } from '../data/hubs'
-import { getCake } from '../lib/data'
-import { getCakeImage } from '../lib/images'
-import { getSavedCakeIds } from '../lib/notebook'
-import { getRegionEntriesForCake } from '../lib/encyclopedia'
 import { getSceneImage } from '../lib/sceneImages'
-import { CakeHeroImage } from '../components/CakeHeroImage'
 import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
 import './DiscoverPage.css'
 
@@ -13,11 +7,6 @@ const discoverHub = HUBS.find((hub) => hub.path === '/discover')!
 const discoverItems = discoverHub.kind === 'landing' ? discoverHub.items : []
 
 export function DiscoverPage() {
-  const savedCakes = getSavedCakeIds()
-    .map((id) => getCake(id))
-    .filter((cake): cake is NonNullable<typeof cake> => Boolean(cake))
-    .slice(0, 8)
-
   const collectionsScene = getSceneImage('curated-collections')
   const kitchenScene = getSceneImage('curated-kitchen')
 
@@ -65,37 +54,6 @@ export function DiscoverPage() {
           unsplashUrl={kitchenScene?.unsplashUrl}
         />
       </div>
-
-      <section className="discover-section">
-        <h2>🍰 Saved Cakes</h2>
-        {savedCakes.length > 0 ? (
-          <div className="discover-saved-row">
-            {savedCakes.map((cake) => {
-              const origin = getRegionEntriesForCake(cake.id)[0]?.country
-              return (
-                <Link key={cake.id} to={`/cake/${cake.id}`} className="discover-saved-card">
-                  {getCakeImage(cake.id) ? (
-                    <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
-                  ) : (
-                    <div className="cake-hero-image cake-hero-image-thumbnail cake-hero-image-placeholder">
-                      <img src="/icon-master.svg" alt="" />
-                    </div>
-                  )}
-                  <div className="discover-saved-card-label">
-                    {cake.name}
-                    {origin && <span className="discover-saved-card-origin">{origin}</span>}
-                  </div>
-                </Link>
-              )
-            })}
-          </div>
-        ) : (
-          <p className="discover-empty">
-            Your cake library starts here. Save cakes as you explore the Encyclopedia, Atlas, Sommelier, recipes, and Celebrate.{' '}
-            <Link to="/encyclopedia">Explore Cakes →</Link>
-          </p>
-        )}
-      </section>
     </main>
   )
 }
