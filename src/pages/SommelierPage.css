@@ -66,18 +66,10 @@
   margin-bottom: 4px;
 }
 
-.sommelier-discovery {
-  margin-top: 4px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 12px 16px;
-  background: var(--bg-card);
-}
-
-.sommelier-discovery summary {
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 14px;
+.sommelier-discovery-heading {
+  margin-top: 28px;
+  margin-bottom: 12px;
+  font-size: 16px;
 }
 
 .sommelier-discovery-content {

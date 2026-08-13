@@ -26,7 +26,7 @@ function DiscoverFeatureCardBody({
   return (
     <>
       {cakeId && <CakeThumbnail cakeId={cakeId} variant="hero" alt={imageAlt ?? title} />}
-      {imageUrl && (
+      {!cakeId && imageUrl && (
         <div className="discover-feature-card-image">
           <img src={imageUrl} alt={imageAlt ?? title} loading="lazy" />
           {photographer && (
@@ -34,6 +34,11 @@ function DiscoverFeatureCardBody({
               {photographer} / Unsplash
             </p>
           )}
+        </div>
+      )}
+      {!cakeId && !imageUrl && (
+        <div className="cake-hero-image cake-hero-image-hero cake-hero-image-placeholder">
+          <img src="/icon-master.svg" alt="" />
         </div>
       )}
       <div className="discover-feature-card-content">

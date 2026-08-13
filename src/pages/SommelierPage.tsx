@@ -26,7 +26,9 @@ const TOP_FLAVORS = getTopFlavorNotes(10)
 type Mode = 'cake-first' | 'drink-first'
 
 const DRINK_GROUPS: { id: string; label: string; categories: DrinkCategory[] }[] = [
-  { id: 'wine-champagne', label: 'Wine & Champagne', categories: ['wine', 'port', 'champagne'] },
+  { id: 'red-wine', label: 'Red Wine', categories: ['red_wine'] },
+  { id: 'white-wine', label: 'White Wine', categories: ['white_wine'] },
+  { id: 'sparkling-dessert-wine', label: 'Champagne & Specialty Wine', categories: ['wine', 'port', 'champagne'] },
   { id: 'coffee', label: 'Coffee', categories: ['coffee'] },
   { id: 'tea', label: 'Tea', categories: ['tea'] },
   { id: 'spirits-beer', label: 'Spirits & Beer', categories: ['spirits', 'beer'] },
@@ -142,6 +144,7 @@ function CakeFirstView({
   setExpandedId: (id: string | null) => void
 }) {
   const [activeGroupId, setActiveGroupId] = useState<string | null>(null)
+  const [showAllPairings, setShowAllPairings] = useState(false)
 
   if (!cakeId) {
     function pickCake(id: string) {
@@ -155,12 +158,10 @@ function CakeFirstView({
         <h2 className="sommelier-section-heading">Search for a cake</h2>
         <SearchableSelect items={cakes} getId={(c) => c.id} getLabel={(c) => c.name} placeholder="Search for a cake..." onSelect={(c) => pickCake(c.id)} />
 
-        <details className="sommelier-discovery">
-          <summary>Or discover cakes by flavor, ingredient, or texture</summary>
-          <div className="sommelier-discovery-content">
-            <CakeDiscoveryPicker onPickCake={pickCake} />
-          </div>
-        </details>
+        <h3 className="sommelier-discovery-heading">Or discover cakes by flavor, ingredient, or texture</h3>
+        <div className="sommelier-discovery-content">
+          <CakeDiscoveryPicker onPickCake={pickCake} />
+        </div>
       </>
     )
   }
@@ -199,8 +200,6 @@ function CakeFirstView({
               </ul>
             </div>
 
-            <PairingScienceSection cake={cake} drink={drink} result={pairing} />
-
             <div className="pairing-expanded-section">
               <h4>Serving guidance</h4>
               <p>
@@ -218,6 +217,8 @@ function CakeFirstView({
                 <strong>Prep tip:</strong> {drink.serving.prepTip}
               </p>
             </div>
+
+            <PairingScienceSection cake={cake} drink={drink} result={pairing} />
 
             <div className="pairing-expanded-section">
               <h4>Flavor profile comparison</h4>
@@ -244,6 +245,7 @@ function CakeFirstView({
           setCakeId(null)
           setExpandedId(null)
           setActiveGroupId(null)
+          setShowAllPairings(false)
         }}
       >
         ← Search a different cake
@@ -274,6 +276,19 @@ function CakeFirstView({
 
           <h2 className="sommelier-section-heading">Also Excellent</h2>
           <div className="pairing-list">{pairings.slice(1, 4).map(renderPairingCard)}</div>
+
+          {pairings.length > 4 && !showAllPairings && (
+            <button className="btn btn-secondary" onClick={() => setShowAllPairings(true)}>
+              View More Pairings →
+            </button>
+          )}
+
+          {pairings.length > 4 && showAllPairings && (
+            <>
+              <h2 className="sommelier-section-heading">Also Excellent</h2>
+              <div className="pairing-list">{pairings.slice(4).map(renderPairingCard)}</div>
+            </>
+          )}
 
           <h2 className="sommelier-section-heading">Explore by Category</h2>
           <DrinkGroupCards onChoose={setActiveGroupId} />

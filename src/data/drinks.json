@@ -130,7 +130,7 @@
   {
     "id": "drink_red_wine",
     "name": "Red Wine",
-    "category": "wine",
+    "category": "red_wine",
     "flavorProfile": { "sweetness": 1, "fatRichness": 1, "acidity": 3, "intensity": 4, "bitternessTannin": 4, "carbonation": 0 },
     "flavorNotes": ["blackberry", "plum", "oak"],
     "serving": { "temperature": "Slightly below room temperature, 16-18°C (61-64°F)", "glassware": "Red wine glass", "prepTip": "Let it breathe for 20-30 minutes before serving to soften the tannins." }
@@ -138,7 +138,7 @@
   {
     "id": "drink_white_wine",
     "name": "White Wine",
-    "category": "wine",
+    "category": "white_wine",
     "flavorProfile": { "sweetness": 1, "fatRichness": 1, "acidity": 4, "intensity": 2, "bitternessTannin": 0, "carbonation": 0 },
     "flavorNotes": ["green apple", "pear", "citrus"],
     "serving": { "temperature": "Well chilled, 8-10°C (46-50°F)", "glassware": "White wine glass", "prepTip": "Chill for at least an hour — warm white wine loses its crisp edge." }
@@ -150,5 +150,117 @@
     "flavorProfile": { "sweetness": 2, "fatRichness": 3, "acidity": 1, "intensity": 1, "bitternessTannin": 0, "carbonation": 0 },
     "flavorNotes": ["cream"],
     "serving": { "temperature": "Cold, straight from the fridge", "glassware": "Tall glass", "prepTip": "Serve ice-cold — the classic milk-and-cake contrast works because it's cold against a rich, sweet cake." }
+  },
+  {
+    "id": "drink_cappuccino",
+    "name": "Cappuccino",
+    "category": "coffee",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 3, "acidity": 1, "intensity": 3, "bitternessTannin": 3, "carbonation": 0 },
+    "flavorNotes": ["espresso", "cream", "cocoa"],
+    "serving": { "temperature": "Hot, served immediately", "glassware": "Cappuccino cup", "garnish": "A light dusting of cocoa powder", "prepTip": "Aim for about a 1cm cap of microfoam — too much and it drowns out the espresso." }
+  },
+  {
+    "id": "drink_spiced_rum",
+    "name": "Spiced Rum",
+    "category": "spirits",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 0, "acidity": 0, "intensity": 4, "bitternessTannin": 1, "carbonation": 0 },
+    "flavorNotes": ["rum", "caramel", "vanilla"],
+    "serving": { "temperature": "Neat or on the rocks, room temperature", "glassware": "Rocks glass", "garnish": "An orange peel twist", "prepTip": "Let it sit a minute or two after pouring so the spice and caramel aromatics open up." }
+  },
+  {
+    "id": "drink_dessert_wine",
+    "name": "Sauternes-Style Dessert Wine",
+    "category": "wine",
+    "flavorProfile": { "sweetness": 5, "fatRichness": 0, "acidity": 3, "intensity": 3, "bitternessTannin": 1, "carbonation": 0 },
+    "flavorNotes": ["honey", "apricot", "caramelized sugar"],
+    "serving": { "temperature": "Chilled, 10-12°C (50-54°F)", "glassware": "Small dessert wine glass", "prepTip": "Pour a smaller measure than table wine — its sweetness and intensity go a long way." }
+  },
+  {
+    "id": "drink_cabernet_sauvignon",
+    "name": "Cabernet Sauvignon",
+    "category": "red_wine",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 3, "intensity": 5, "bitternessTannin": 5, "carbonation": 0 },
+    "flavorNotes": ["black currant", "cherry", "vanilla"],
+    "serving": { "temperature": "Room temperature, 16-18°C (61-64°F)", "glassware": "Bordeaux glass", "prepTip": "Decant for 30-60 minutes to soften the tannins and let the dark fruit open up." }
+  },
+  {
+    "id": "drink_merlot",
+    "name": "Merlot",
+    "category": "red_wine",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 2, "intensity": 3, "bitternessTannin": 3, "carbonation": 0 },
+    "flavorNotes": ["plum", "cherry", "chocolate"],
+    "serving": { "temperature": "Room temperature, 16-18°C (61-64°F)", "glassware": "Bordeaux glass", "prepTip": "Give it 15-20 minutes to breathe before serving — its soft tannins open up quickly." }
+  },
+  {
+    "id": "drink_zinfandel",
+    "name": "Zinfandel",
+    "category": "red_wine",
+    "flavorProfile": { "sweetness": 2, "fatRichness": 0, "acidity": 2, "intensity": 4, "bitternessTannin": 3, "carbonation": 0 },
+    "flavorNotes": ["raspberry", "cinnamon", "brown sugar"],
+    "serving": { "temperature": "Slightly below room temperature, 15-17°C (59-63°F)", "glassware": "Burgundy glass", "prepTip": "Serve a touch cooler than other reds — its jammy fruit and spice can feel hot otherwise." }
+  },
+  {
+    "id": "drink_pinot_noir",
+    "name": "Pinot Noir",
+    "category": "red_wine",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 3, "intensity": 2, "bitternessTannin": 2, "carbonation": 0 },
+    "flavorNotes": ["raspberry", "cherry"],
+    "serving": { "temperature": "Slightly chilled, 14-16°C (57-61°F)", "glassware": "Burgundy glass", "prepTip": "Chill for 15 minutes before serving — Pinot Noir shows best a little cooler than other reds." }
+  },
+  {
+    "id": "drink_chardonnay",
+    "name": "Chardonnay",
+    "category": "white_wine",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 2, "acidity": 3, "intensity": 3, "bitternessTannin": 0, "carbonation": 0 },
+    "flavorNotes": ["butter", "vanilla", "apple"],
+    "serving": { "temperature": "Chilled, 10-13°C (50-55°F)", "glassware": "Chardonnay glass", "prepTip": "Let it warm slightly in the glass — a full-bodied Chardonnay opens up as it nears cellar temperature." }
+  },
+  {
+    "id": "drink_sauvignon_blanc",
+    "name": "Sauvignon Blanc",
+    "category": "white_wine",
+    "flavorProfile": { "sweetness": 0, "fatRichness": 0, "acidity": 5, "intensity": 2, "bitternessTannin": 0, "carbonation": 0 },
+    "flavorNotes": ["citrus", "green apple", "lemon zest"],
+    "serving": { "temperature": "Well chilled, 7-10°C (45-50°F)", "glassware": "White wine glass", "prepTip": "Serve cold — its bright acidity is best straight out of the fridge." }
+  },
+  {
+    "id": "drink_pinot_grigio",
+    "name": "Pinot Grigio",
+    "category": "white_wine",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 3, "intensity": 1, "bitternessTannin": 0, "carbonation": 0 },
+    "flavorNotes": ["pear", "citrus"],
+    "serving": { "temperature": "Well chilled, 8-10°C (46-50°F)", "glassware": "White wine glass", "prepTip": "Best served young and cold — it doesn't benefit from breathing time like fuller whites do." }
+  },
+  {
+    "id": "drink_riesling",
+    "name": "Riesling",
+    "category": "white_wine",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 0, "acidity": 4, "intensity": 2, "bitternessTannin": 0, "carbonation": 0 },
+    "flavorNotes": ["honey", "apricot", "citrus"],
+    "serving": { "temperature": "Chilled, 8-10°C (46-50°F)", "glassware": "White wine glass", "prepTip": "Check the label — Rieslings range from bone-dry to dessert-sweet, so match sweetness to the cake." }
+  },
+  {
+    "id": "drink_margarita",
+    "name": "Margarita",
+    "category": "cocktails",
+    "flavorProfile": { "sweetness": 2, "fatRichness": 0, "acidity": 4, "intensity": 3, "bitternessTannin": 1, "carbonation": 0 },
+    "flavorNotes": ["lime", "orange zest"],
+    "serving": { "temperature": "On the rocks or blended, well chilled", "glassware": "Margarita glass (salted rim optional)", "garnish": "Lime wheel", "prepTip": "Use fresh lime juice — bottled juice makes it taste flat." }
+  },
+  {
+    "id": "drink_mojito",
+    "name": "Mojito",
+    "category": "cocktails",
+    "flavorProfile": { "sweetness": 2, "fatRichness": 0, "acidity": 3, "intensity": 2, "bitternessTannin": 0, "carbonation": 4 },
+    "flavorNotes": ["mint", "lime"],
+    "serving": { "temperature": "Over crushed ice", "glassware": "Highball glass", "garnish": "Fresh mint sprig", "prepTip": "Gently muddle the mint — bruising it too hard releases bitter chlorophyll." }
+  },
+  {
+    "id": "drink_negroni",
+    "name": "Negroni",
+    "category": "cocktails",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 1, "intensity": 5, "bitternessTannin": 5, "carbonation": 0 },
+    "flavorNotes": ["orange zest", "bitter herbs"],
+    "serving": { "temperature": "On the rocks", "glassware": "Rocks glass", "garnish": "Orange peel twist", "prepTip": "Stir, don't shake — you want a silky texture, not dilution from ice shards." }
   }
 ]

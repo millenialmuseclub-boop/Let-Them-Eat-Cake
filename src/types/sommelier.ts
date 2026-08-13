@@ -1,6 +1,6 @@
 import type { FlavorProfile } from './cake'
 
-export type DrinkCategory = 'coffee' | 'tea' | 'wine' | 'spirits' | 'beer' | 'non_alcoholic' | 'champagne' | 'port' | 'cocktails'
+export type DrinkCategory = 'coffee' | 'tea' | 'wine' | 'red_wine' | 'white_wine' | 'spirits' | 'beer' | 'non_alcoholic' | 'champagne' | 'port' | 'cocktails'
 
 export interface DrinkFlavorProfile extends FlavorProfile {
   /** 0 (none) to 5 (very tannic/bitter) */
