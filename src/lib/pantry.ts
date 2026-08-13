@@ -23,6 +23,16 @@ export const PANTRY_INGREDIENT_LABELS: Record<PantryIngredient, string> = {
 
 export const ALL_PANTRY_INGREDIENTS = Object.keys(PANTRY_INGREDIENT_LABELS) as PantryIngredient[]
 
+/** Groups the flat pantry-ingredient list by type for a scannable Ingredient Explorer, instead of one long pill wall. */
+export const PANTRY_INGREDIENT_GROUPS: { label: string; ingredients: PantryIngredient[] }[] = [
+  { label: 'Flours & Leaveners', ingredients: ['flour', 'self-rising-flour', 'baking-soda', 'baking-powder'] },
+  { label: 'Dairy & Eggs', ingredients: ['eggs', 'butter', 'milk', 'yogurt', 'condensed-milk'] },
+  { label: 'Sugars & Sweeteners', ingredients: ['sugar'] },
+  { label: 'Fats & Oils', ingredients: ['vegetable-oil'] },
+  { label: 'Flavorings & Spices', ingredients: ['cocoa-powder', 'vanilla-extract', 'cinnamon', 'salt', 'lemon-juice'] },
+  { label: 'Substitutes & Extras', ingredients: ['vinegar', 'applesauce'] },
+]
+
 export const SKILL_LEVEL_LABELS: Record<SkillLevel, string> = {
   beginner: 'Beginner',
   intermediate: 'Intermediate',

@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import type { Equipment, PantryIngredient, PantryMatch, SkillLevel } from '../types/pantry'
-import { ALL_EQUIPMENT, ALL_PANTRY_INGREDIENTS, EQUIPMENT_LABELS, PANTRY_INGREDIENT_LABELS, SKILL_LEVEL_LABELS, applyPantryFilters, matchEmergencyRecipes } from '../lib/pantry'
+import type { PantryIngredient, PantryMatch, SkillLevel } from '../types/pantry'
+import { EQUIPMENT_LABELS, PANTRY_INGREDIENT_GROUPS, PANTRY_INGREDIENT_LABELS, SKILL_LEVEL_LABELS, applyPantryFilters, matchEmergencyRecipes } from '../lib/pantry'
 import { emergencyRecipes, getRecipe } from '../lib/data'
 import { getProductsForIngredient } from '../lib/affiliateProducts'
 import { RecipeCard } from '../components/RecipeCard'
 import { CuratorsToolDrawer } from '../components/CuratorsToolDrawer'
+import { CakeThumbnail } from '../components/CakeThumbnail'
 import './PantryRaidPage.css'
 
 const TIME_OPTIONS = [
@@ -27,7 +28,6 @@ export function PantryRaidPage() {
   const [expandedId, setExpandedId] = useState<string | null>(null)
   const [timeFilter, setTimeFilter] = useState('any')
   const [skillFilter, setSkillFilter] = useState<SkillLevel | 'any'>('any')
-  const [ownedEquipment, setOwnedEquipment] = useState<Set<Equipment>>(new Set())
   const [hasSearched, setHasSearched] = useState(false)
 
   function toggleIngredient(ingredient: PantryIngredient) {
@@ -39,20 +39,11 @@ export function PantryRaidPage() {
     })
   }
 
-  function toggleEquipment(equipment: Equipment) {
-    setOwnedEquipment((prev) => {
-      const next = new Set(prev)
-      if (next.has(equipment)) next.delete(equipment)
-      else next.add(equipment)
-      return next
-    })
-  }
-
   const allMatches = matchEmergencyRecipes(Array.from(onHand), emergencyRecipes)
   const filtered = applyPantryFilters(allMatches, {
     maxTimeMinutes: timeFilter === 'any' ? undefined : Number(timeFilter),
     skillLevel: skillFilter === 'any' ? undefined : skillFilter,
-    requiredEquipment: ownedEquipment,
+    requiredEquipment: new Set(),
   })
   const bestMatches = filtered.filter((m) => m.tier === 'best')
   const greatMatches = filtered.filter((m) => m.tier === 'great')
@@ -64,6 +55,7 @@ export function PantryRaidPage() {
     const detailRecipe = getRecipe(recipe.recipeId)
     return (
       <div key={recipe.id} className="card pantry-result-card">
+        {detailRecipe && <CakeThumbnail cakeId={detailRecipe.cakeId} alt={recipe.name} variant="thumbnail" />}
         <div className="pantry-result-header">
           <h3>{recipe.name}</h3>
           {missing.length === 0 ? (
@@ -157,11 +149,23 @@ export function PantryRaidPage() {
       <h1>Pantry Raid</h1>
       <p>Check off what you have on hand and we'll find the emergency cake that needs the least shopping.</p>
 
-      <div className="pantry-checklist">
-        {ALL_PANTRY_INGREDIENTS.map((ingredient) => (
-          <button key={ingredient} className={onHand.has(ingredient) ? 'pantry-chip active' : 'pantry-chip'} onClick={() => toggleIngredient(ingredient)}>
-            {PANTRY_INGREDIENT_LABELS[ingredient]}
-          </button>
+      <h2 className="pantry-section-heading">🧂 Ingredient Explorer</h2>
+      <div className="pantry-ingredient-explorer">
+        {PANTRY_INGREDIENT_GROUPS.map((group) => (
+          <div key={group.label} className="pantry-ingredient-group">
+            <h3 className="pantry-ingredient-group-label">{group.label}</h3>
+            <div className="pantry-checklist">
+              {group.ingredients.map((ingredient) => (
+                <button
+                  key={ingredient}
+                  className={onHand.has(ingredient) ? 'pantry-chip active' : 'pantry-chip'}
+                  onClick={() => toggleIngredient(ingredient)}
+                >
+                  {PANTRY_INGREDIENT_LABELS[ingredient]}
+                </button>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
 
@@ -187,21 +191,6 @@ export function PantryRaidPage() {
             ))}
           </select>
         </label>
-
-        <div className="pantry-equipment-filter">
-          <span className="pantry-equipment-label">Equipment available</span>
-          <div className="pantry-equipment-chips">
-            {ALL_EQUIPMENT.map((equipment) => (
-              <button
-                key={equipment}
-                className={ownedEquipment.has(equipment) ? 'pantry-chip active' : 'pantry-chip'}
-                onClick={() => toggleEquipment(equipment)}
-              >
-                {EQUIPMENT_LABELS[equipment]}
-              </button>
-            ))}
-          </div>
-        </div>
       </div>
 
       <button className="btn pantry-find-btn" onClick={() => setHasSearched(true)}>

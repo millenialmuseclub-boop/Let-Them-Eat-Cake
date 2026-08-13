@@ -208,5 +208,47 @@
     "photographer": "Aneta Voborilova",
     "photographerUrl": "https://unsplash.com/@anetvob",
     "unsplashUrl": "https://unsplash.com/photos/white-and-brown-cake-on-white-ceramic-plate-mlcm6qi9Bu8"
+  },
+  "cake_emergency_wacky_cake": {
+    "url": "https://images.unsplash.com/photo-1572506281628-02279bf2a194?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8RGVwcmVzc2lvbi1FcmElMjBXYWNreSUyMENha2UlMjBjYWtlfGVufDB8MHx8fDE3ODY2NTQ1NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Amanda Yum",
+    "photographerUrl": "https://unsplash.com/@amandayum",
+    "unsplashUrl": "https://unsplash.com/photos/cake-sliced-PV8dgt0CVEQ"
+  },
+  "cake_emergency_mug_cake": {
+    "url": "https://images.unsplash.com/photo-1782931608916-e47d6972a9de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8My1NaW51dGUlMjBNaWNyb3dhdmUlMjBNdWclMjBDYWtlJTIwY2FrZXxlbnwwfDB8fHwxNzg2NjU0NTQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Janet Ganbold",
+    "photographerUrl": "https://unsplash.com/@j4net999",
+    "unsplashUrl": "https://unsplash.com/photos/yellow-seasoned-rice-served-in-small-red-ramekins-hfcAeAJCaFk"
+  },
+  "cake_emergency_applesauce_cake": {
+    "url": "https://images.unsplash.com/photo-1671115669643-480a64767cad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Tm8tRWdncyUyMEFwcGxlc2F1Y2UlMjBTbmFjayUyMENha2UlMjBjYWtlfGVufDB8MHx8fDE3ODY2NTQ1NDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Flor M. S",
+    "photographerUrl": "https://unsplash.com/@floren_msurace",
+    "unsplashUrl": "https://unsplash.com/photos/a-piece-of-cheesecake-with-a-bite-taken-out-of-it-b7vb4qrHHng"
+  },
+  "cake_emergency_self_rising_pound_cake": {
+    "url": "https://images.unsplash.com/photo-1564677156437-a37dfb30bbf6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8U2VsZi1SaXNpbmclMjBFbWVyZ2VuY3klMjBQb3VuZCUyMENha2UlMjBjYWtlfGVufDB8MHx8fDE3ODY2NTQ1NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Jen Theodore",
+    "photographerUrl": "https://unsplash.com/@jentheodore",
+    "unsplashUrl": "https://unsplash.com/photos/plate-of-cooked-food-buCYPHZuWjg"
+  },
+  "cake_emergency_condensed_milk_sponge": {
+    "url": "https://images.unsplash.com/photo-1760136874876-dc9c957a9396?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8VGhyZWUtSW5ncmVkaWVudCUyMENvbmRlbnNlZCUyME1pbGslMjBTcG9uZ2UlMjBjYWtlfGVufDB8MHx8fDE3ODY2NTQ1NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Wil Carranza",
+    "photographerUrl": "https://unsplash.com/@wilcrza",
+    "unsplashUrl": "https://unsplash.com/photos/three-pastries-dusted-with-powdered-sugar-with-eggs-H_XGX6j6cKo"
+  },
+  "cake_emergency_lemon_yogurt_drizzle": {
+    "url": "https://images.unsplash.com/photo-1691242720281-9269de4d9f86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8TGVtb24lMjBZb2d1cnQlMjBEcml6emxlJTIwQ2FrZSUyMGNha2V8ZW58MHwwfHx8MTc4NjY1NDU0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "The Design Lady",
+    "photographerUrl": "https://unsplash.com/@sarah35",
+    "unsplashUrl": "https://unsplash.com/photos/a-loaf-of-lemon-bread-sitting-on-top-of-a-piece-of-wax-paper-Rhos_ejdrcM"
+  },
+  "cake_emergency_yogurt_pot_cake": {
+    "url": "https://images.unsplash.com/photo-1602663491496-73f07481dbea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8eW9ndXJ0JTIwY2FrZSUyMHNsaWNlfGVufDB8MHx8fDE3ODY2NTQ1NTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Takuya Nagaoka",
+    "photographerUrl": "https://unsplash.com/@takuya_n",
+    "unsplashUrl": "https://unsplash.com/photos/white-and-red-strawberry-cake-fENvSZUzbzU"
   }
 }

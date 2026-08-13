@@ -1,34 +1,38 @@
 .technique-library {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 28px;
 }
 
-.technique-chip-row {
+.technique-category-heading {
+  margin-bottom: 12px;
+}
+
+.technique-category-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 8px;
 }
 
-.technique-chip {
-  font: inherit;
-  padding: 8px 14px;
-  border-radius: 999px;
+.technique-entry {
   border: 1px solid var(--border);
-  background: var(--bg-card);
-  color: var(--text);
+  border-radius: 8px;
+  background: var(--bg);
+  padding: 12px 14px;
+}
+
+.technique-entry summary {
   cursor: pointer;
-  font-size: 14px;
+  font-weight: 600;
 }
 
-.technique-chip.active {
-  background: var(--raspberry);
-  border-color: var(--raspberry);
-  color: white;
+.technique-entry-body {
+  margin-top: 12px;
 }
 
-.technique-detail p {
+.technique-entry-body p {
   font-size: 15px;
+  line-height: 1.6;
 }
 
 .technique-steps {
@@ -38,12 +42,17 @@
 
 .technique-steps li {
   margin-bottom: 6px;
-  line-height: 1.5;
+  line-height: 1.6;
+  font-size: 15px;
 }
 
 .technique-mistake,
 .technique-tip {
   padding: 10px 12px;
   border-radius: 8px;
-  background: var(--bg);
+  background: var(--bg-card);
+}
+
+.technique-mistake {
+  margin-bottom: 8px;
 }

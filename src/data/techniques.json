@@ -1,7 +1,64 @@
 [
   {
+    "id": "creaming_method",
+    "name": "Creaming Method",
+    "category": "Mixing",
+    "whatItIs": "Beating butter and sugar together until light, pale, and fluffy, trapping tiny air bubbles that expand in the oven to leaven the cake.",
+    "steps": [
+      "Start with butter fully softened to room temperature — too cold and it won't trap air; too soft and it won't hold structure.",
+      "Beat butter and sugar on medium-high speed for 3-5 minutes, well past the point it looks combined, until noticeably paler and fluffy.",
+      "Add eggs one at a time, beating fully between each addition so the mixture doesn't split.",
+      "Stop as soon as the last egg is incorporated — overbeating after this point knocks air back out."
+    ],
+    "commonMistake": "Rushing the initial creaming stage — under a minute of beating leaves the mixture dense and under-aerated, so the cake bakes flat and tight-crumbed.",
+    "chefTip": "If the batter looks curdled after adding eggs, beat in a spoonful of the recipe's flour to bring it back together before continuing."
+  },
+  {
+    "id": "folding",
+    "name": "Folding",
+    "category": "Mixing",
+    "whatItIs": "Gently combining a light, aerated mixture — whipped egg whites, whipped cream — into a heavier batter without knocking the air back out.",
+    "steps": [
+      "Add about a third of the light mixture first and stir it in fully to loosen the heavier batter — this portion is sacrificed for ease of mixing.",
+      "Add the rest of the light mixture in one or two additions.",
+      "Cut down through the center with a spatula, sweep along the bottom, and fold up and over in one motion, rotating the bowl as you go.",
+      "Stop the moment no dry streaks remain — a few small lumps are better than a fully smooth, deflated batter."
+    ],
+    "commonMistake": "Stirring in circles instead of folding — it deflates the aerated mixture almost completely, undoing the whole point of whipping it.",
+    "chefTip": "A wide, flexible silicone spatula covers more surface per fold than a spoon, meaning fewer total folds and less air lost."
+  },
+  {
+    "id": "pan_preparation",
+    "name": "Pan Preparation",
+    "category": "Baking",
+    "whatItIs": "Greasing and lining a cake pan so the baked layer releases cleanly instead of tearing or sticking.",
+    "steps": [
+      "Coat the inside of the pan with a thin, even layer of softened butter or pan spray, working into the corners.",
+      "Cut a parchment round to fit the base, press it into the greased bottom, and grease again on top of the paper.",
+      "For tall or fluted pans, dust the greased sides with a light coating of flour, tapping out the excess.",
+      "Fill to no more than two-thirds full to leave room for the batter to rise without overflowing."
+    ],
+    "commonMistake": "Greasing the pan but skipping the parchment round — the base is the part most likely to stick and tear on release.",
+    "chefTip": "Keep a batch of pre-cut parchment rounds in your most-used pan sizes so prep takes seconds, not minutes."
+  },
+  {
+    "id": "doneness_testing",
+    "name": "Testing for Doneness",
+    "category": "Baking",
+    "whatItIs": "Confirming a cake is fully baked through before pulling it from the oven, without relying on time alone.",
+    "steps": [
+      "Start checking a few minutes before the recipe's minimum bake time — ovens vary, and time alone isn't reliable.",
+      "Insert a toothpick or cake tester into the center; it should come out clean or with a few moist crumbs, never wet batter.",
+      "Press the top gently — it should spring back fully; a lasting indent means it needs more time.",
+      "For a fuller check, an instant-read thermometer in the center should read about 200-210°F (93-99°C) for most butter cakes."
+    ],
+    "commonMistake": "Opening the oven door repeatedly to check — the temperature drop can cause the cake to sink in the middle before it's set.",
+    "chefTip": "Set a timer for 5 minutes before the earliest suggested doneness time so you're not guessing when to start checking."
+  },
+  {
     "id": "leveling",
     "name": "Leveling",
+    "category": "Layering & Filling",
     "whatItIs": "Trimming the domed top off a baked layer so it sits flat and stacks evenly.",
     "steps": [
       "Let the layer cool completely — trimming a warm cake tears rather than cuts.",
@@ -15,6 +72,7 @@
   {
     "id": "torting",
     "name": "Torting",
+    "category": "Layering & Filling",
     "whatItIs": "Slicing a single baked layer horizontally into two or more thinner layers to add more filling opportunities.",
     "steps": [
       "Chill the layer first — cold cake tortes far more cleanly than room-temperature cake.",
@@ -28,6 +86,7 @@
   {
     "id": "soaking",
     "name": "Soaking",
+    "category": "Layering & Filling",
     "whatItIs": "Brushing a flavored syrup onto cake layers to add moisture and a secondary flavor note.",
     "steps": [
       "Make sure the syrup is fully cooled — hot syrup can melt the crumb structure.",
@@ -41,6 +100,7 @@
   {
     "id": "filling",
     "name": "Filling",
+    "category": "Layering & Filling",
     "whatItIs": "Spreading the layer between cake tiers that adds moisture, richness, and flavor contrast.",
     "steps": [
       "Pipe a thin dam of firmer frosting or buttercream around the perimeter of the layer.",
@@ -54,6 +114,7 @@
   {
     "id": "crumb_coating",
     "name": "Crumb Coating",
+    "category": "Frosting",
     "whatItIs": "A thin first layer of frosting that seals in loose crumbs before the final finish coat goes on.",
     "steps": [
       "Apply a thin, even layer of frosting over the entire cake — it's fine if some cake shows through.",
@@ -67,6 +128,7 @@
   {
     "id": "ganache",
     "name": "Ganache",
+    "category": "Chocolate",
     "whatItIs": "A mixture of chocolate and hot cream, used as a filling, glaze, or the base for a drip finish depending on its ratio.",
     "steps": [
       "Chop chocolate finely and place in a heatproof bowl.",
@@ -80,6 +142,7 @@
   {
     "id": "buttercream_smoothing",
     "name": "Buttercream Smoothing",
+    "category": "Frosting",
     "whatItIs": "Achieving a clean, even buttercream surface on the sides and top of a frosted cake.",
     "steps": [
       "Apply a generous, even layer of buttercream, slightly overfilling to allow for scraping down.",
@@ -93,6 +156,7 @@
   {
     "id": "sharp_edges",
     "name": "Sharp Edges",
+    "category": "Frosting",
     "whatItIs": "The technique for getting crisp, defined 90-degree corners on a frosted cake's top edge, a hallmark of modern minimalist cakes.",
     "steps": [
       "Overfill the top slightly with buttercream so there's excess to pull inward.",
@@ -106,6 +170,7 @@
   {
     "id": "piping",
     "name": "Piping",
+    "category": "Decorating",
     "whatItIs": "Using a piping bag and tip to apply frosting in controlled shapes — rosettes, borders, shells, and lettering.",
     "steps": [
       "Fit a piping bag with the chosen tip and fill it no more than two-thirds full.",
@@ -119,6 +184,7 @@
   {
     "id": "fondant",
     "name": "Fondant",
+    "category": "Decorating",
     "whatItIs": "A pliable sugar paste rolled into a smooth sheet and draped over a cake for a seamless, sculptural finish.",
     "steps": [
       "Crumb-coat the cake with buttercream or ganache first — fondant needs something to adhere to and won't hide flaws on its own.",
@@ -132,6 +198,7 @@
   {
     "id": "glazing",
     "name": "Glazing",
+    "category": "Finishing",
     "whatItIs": "Pouring a thin, glossy coating — mirror glaze, ganache, or a simple icing — over a chilled cake for a polished exterior.",
     "steps": [
       "Chill the cake thoroughly, ideally frozen, so the glaze sets on contact rather than melting the surface.",
@@ -145,6 +212,7 @@
   {
     "id": "doweling_stacking",
     "name": "Doweling & Stacking",
+    "category": "Finishing",
     "whatItIs": "Inserting internal supports so upper tiers don't sink into the frosting and filling of the tiers beneath them.",
     "steps": [
       "Mark where the next tier's base will sit using its cake board as a template.",
@@ -158,6 +226,7 @@
   {
     "id": "transport",
     "name": "Transport",
+    "category": "Finishing",
     "whatItIs": "Safely moving an assembled cake from kitchen to venue without shifting, melting, or collapsing.",
     "steps": [
       "Chill the cake fully — ideally for at least an hour — right before transport.",

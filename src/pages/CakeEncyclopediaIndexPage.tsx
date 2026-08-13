@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { cakes, bakingTraditions } from '../lib/data'
-import { getRegionEntriesForCake, getDecadeForCake, distinctOrigins } from '../lib/encyclopedia'
+import { getRegionEntriesForCake, getDecadeForCake } from '../lib/encyclopedia'
 import { getTraditionCakes } from '../lib/bakingTraditions'
 import { getCakeOfTheDay } from '../lib/discovery'
 import { getFirstPhotographedCakeId } from '../lib/images'
@@ -19,7 +19,6 @@ function getLocationTag(cakeId: string): string | null {
   return null
 }
 
-const ORIGINS = distinctOrigins()
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
 function cakeCountLabel(count: number): string {
@@ -46,9 +45,7 @@ export function CakeEncyclopediaIndexPage() {
   const moodParam = searchParams.get('mood')
 
   const [query, setQuery] = useState('')
-  const [activeChip, setActiveChip] = useState<{ type: 'origin' | 'mood'; value: string } | null>(
-    moodParam ? { type: 'mood', value: moodParam } : null,
-  )
+  const [activeChip, setActiveChip] = useState<{ type: 'mood'; value: string } | null>(moodParam ? { type: 'mood', value: moodParam } : null)
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null)
 
   const cakeOfTheDay = getCakeOfTheDay()
@@ -58,7 +55,6 @@ export function CakeEncyclopediaIndexPage() {
 
   const filtered = useMemo(() => {
     let result = cakes
-    if (activeChip?.type === 'origin') result = result.filter((c) => getRegionEntriesForCake(c.id).some((r) => r.region === activeChip.value))
     if (activeChip?.type === 'mood') result = result.filter((c) => c.personaTags?.moods?.includes(activeChip.value as MoodTag))
     if (q) {
       result = result.filter(
@@ -71,19 +67,6 @@ export function CakeEncyclopediaIndexPage() {
     }
     return result
   }, [q, activeChip])
-
-  function selectChip(type: 'origin', value: string) {
-    setActiveChip((prev) => (prev?.type === type && prev.value === value ? null : { type, value }))
-  }
-
-  const originGroups = useMemo(
-    () =>
-      ORIGINS.map((region) => {
-        const regionCakes = cakes.filter((c) => getRegionEntriesForCake(c.id).some((r) => r.region === region))
-        return { region, count: regionCakes.length, repCakeId: getFirstPhotographedCakeId(regionCakes.map((c) => c.id)) ?? regionCakes[0]?.id }
-      }),
-    [],
-  )
 
   const lettersWithCakes = useMemo(() => new Set(cakes.map((c) => c.name[0]?.toUpperCase())), [])
   const letterCakes = useMemo(
@@ -143,25 +126,6 @@ export function CakeEncyclopediaIndexPage() {
               <h3>{cakeOfTheDay.name}</h3>
               <p>{cakeOfTheDay.description}</p>
             </Link>
-          </section>
-
-          <section className="encyclopedia-row">
-            <h2>🌍 Browse by Origin</h2>
-            <div className="discover-feature-grid">
-              {originGroups.map(
-                ({ region, count, repCakeId }) =>
-                  repCakeId && (
-                    <DiscoverFeatureCard
-                      key={region}
-                      onClick={() => selectChip('origin', region)}
-                      title={region}
-                      description={cakeCountLabel(count)}
-                      cta="Explore →"
-                      cakeId={repCakeId}
-                    />
-                  ),
-              )}
-            </div>
           </section>
 
           <section className="encyclopedia-row">

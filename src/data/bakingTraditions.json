@@ -26,5 +26,12 @@
     "region": "North America",
     "description": "A tradition shaped by 20th-century home-baking culture — boxed mixes, potluck classics, and bold, generous flavors — alongside regional specialties tied to specific cities and immigrant communities.",
     "specialty": "Bold, generously frosted layer cakes and bundt classics"
+  },
+  {
+    "id": "african-baking",
+    "title": "African Baking Traditions",
+    "region": "Africa",
+    "description": "A continent-wide range of baking shaped by colonial-era home kitchens, spiced syrups, and street-food frying traditions — moist nut and fruit cakes, custard tarts, and syrup-soaked fried doughs, often built around festival and Sunday-lunch traditions passed down through families.",
+    "specialty": "Moist nut cakes, custard tarts, and syrup-soaked fried doughs"
   }
 ]
