@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { cakes, drinks } from '../lib/data'
 import { explainPairing, explainPairingScience, rankCakesForDrink, rankPairings } from '../lib/sommelier'
@@ -6,6 +6,8 @@ import type { CakeProfile } from '../types/cake'
 import type { DrinkProfile, PairingResult } from '../types/sommelier'
 import { getLifestylePairing } from '../lib/lifestylePairings'
 import { getRegionEntriesForCake, getDecadeForCake } from '../lib/encyclopedia'
+import { CAKE_TEXTURES, getTopFlavorNotes } from '../lib/cakeBrowse'
+import { getAllIngredients } from '../lib/ingredients'
 import { PairingComparisonCard } from '../components/PairingComparisonCard'
 import { DrinkImage } from '../components/DrinkImage'
 import { CakeHeroImage } from '../components/CakeHeroImage'
@@ -17,6 +19,8 @@ import { getDrinkImage } from '../lib/drinkImages'
 import type { DrinkCategory } from '../types/sommelier'
 import { SearchableSelect } from '../components/SearchableSelect'
 import './SommelierPage.css'
+
+const TOP_FLAVORS = getTopFlavorNotes(10)
 
 type Mode = 'cake-first' | 'drink-first'
 
@@ -108,20 +112,23 @@ function CakeFirstView({
   const [activeGroupId, setActiveGroupId] = useState<string | null>(null)
 
   if (!cakeId) {
+    function pickCake(id: string) {
+      setCakeId(id)
+      setExpandedId(null)
+      setActiveGroupId(null)
+    }
+
     return (
       <>
         <h2 className="sommelier-section-heading">Search for a cake</h2>
-        <SearchableSelect
-          items={cakes}
-          getId={(c) => c.id}
-          getLabel={(c) => c.name}
-          placeholder="Search for a cake..."
-          onSelect={(c) => {
-            setCakeId(c.id)
-            setExpandedId(null)
-            setActiveGroupId(null)
-          }}
-        />
+        <SearchableSelect items={cakes} getId={(c) => c.id} getLabel={(c) => c.name} placeholder="Search for a cake..." onSelect={(c) => pickCake(c.id)} />
+
+        <details className="sommelier-discovery">
+          <summary>Or discover cakes by flavor, ingredient, or texture</summary>
+          <div className="sommelier-discovery-content">
+            <CakeDiscoveryPicker onPickCake={pickCake} />
+          </div>
+        </details>
       </>
     )
   }
@@ -244,6 +251,112 @@ function CakeFirstView({
             ))}
           </div>
         </>
+      )}
+    </>
+  )
+}
+
+type DiscoveryType = 'flavor' | 'ingredient' | 'texture'
+
+const DISCOVERY_TYPE_LABELS: Record<DiscoveryType, string> = {
+  flavor: '🍫 Flavor',
+  ingredient: '🧂 Ingredient',
+  texture: '🍮 Texture',
+}
+
+/**
+ * Secondary discovery path for Pair by Cake -- answers "what cakes are
+ * chocolate-forward / contain coffee / are light and airy" etc. Reuses the
+ * same cake/ingredient data and filter logic as everywhere else in the app
+ * (no duplicated dataset); picking a cake here feeds straight into the same
+ * onPickCake handler the search box uses, so it continues naturally into
+ * the normal pairing results.
+ */
+function CakeDiscoveryPicker({ onPickCake }: { onPickCake: (cakeId: string) => void }) {
+  const [type, setType] = useState<DiscoveryType | null>(null)
+  const [value, setValue] = useState<string | null>(null)
+  const ingredients = useMemo(() => getAllIngredients(), [])
+
+  const matchingCakes: CakeProfile[] = useMemo(() => {
+    if (!type || !value) return []
+    if (type === 'flavor') return cakes.filter((c) => c.flavorNotes.includes(value))
+    if (type === 'texture') return cakes.filter((c) => c.texture === value)
+    const ingredient = ingredients.find((i) => i.slug === value)
+    return ingredient ? ingredient.cakeIds.map((id) => cakes.find((c) => c.id === id)).filter((c): c is CakeProfile => !!c) : []
+  }, [type, value, ingredients])
+
+  if (!type) {
+    return (
+      <div className="sommelier-category-chips">
+        {(Object.keys(DISCOVERY_TYPE_LABELS) as DiscoveryType[]).map((t) => (
+          <button key={t} className="sommelier-category-chip" onClick={() => setType(t)}>
+            {DISCOVERY_TYPE_LABELS[t]}
+          </button>
+        ))}
+      </div>
+    )
+  }
+
+  if (!value) {
+    return (
+      <>
+        <button
+          className="sommelier-back-link"
+          onClick={() => {
+            setType(null)
+            setValue(null)
+          }}
+        >
+          ← Back
+        </button>
+        {type === 'flavor' && (
+          <div className="sommelier-category-chips">
+            {TOP_FLAVORS.map((f) => (
+              <button key={f} className="sommelier-category-chip" onClick={() => setValue(f)}>
+                {f}
+              </button>
+            ))}
+          </div>
+        )}
+        {type === 'texture' && (
+          <div className="sommelier-category-chips">
+            {CAKE_TEXTURES.map((t) => (
+              <button key={t} className="sommelier-category-chip" onClick={() => setValue(t)}>
+                {t}
+              </button>
+            ))}
+          </div>
+        )}
+        {type === 'ingredient' && (
+          <SearchableSelect
+            items={ingredients}
+            getId={(i) => i.slug}
+            getLabel={(i) => i.displayName}
+            getSubLabel={(i) => `${i.cakeIds.length} ${i.cakeIds.length === 1 ? 'cake' : 'cakes'}`}
+            placeholder="Search for an ingredient..."
+            onSelect={(i) => setValue(i.slug)}
+          />
+        )}
+      </>
+    )
+  }
+
+  return (
+    <>
+      <button className="sommelier-back-link" onClick={() => setValue(null)}>
+        ← Choose a different {type}
+      </button>
+      {matchingCakes.length === 0 ? (
+        <p className="sommelier-discovery-empty">No cakes found for "{value}".</p>
+      ) : (
+        <div className="sommelier-discovery-grid">
+          {matchingCakes.map((cake) => (
+            <button key={cake.id} className="card sommelier-discovery-cake" onClick={() => onPickCake(cake.id)}>
+              <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
+              <h4>{cake.name}</h4>
+            </button>
+          ))}
+        </div>
       )}
     </>
   )

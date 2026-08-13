@@ -1,12 +1,21 @@
 import { cakes, regions, decades, drinks } from './data'
 import { rankPairings } from './sommelier'
 import type { CakeProfile } from '../types/cake'
-import type { RegionalCakeEntry } from '../types/atlas'
+import type { AtlasRegion, RegionalCakeEntry } from '../types/atlas'
 import type { HistoricalCakeEntry } from '../types/timeMachine'
 import type { RelatedCake } from '../types/encyclopedia'
 
 export function getRegionEntriesForCake(cakeId: string): RegionalCakeEntry[] {
   return regions.filter((r) => r.cakeId === cakeId)
+}
+
+/** The 6 broad AtlasRegion groupings actually represented across the cake dataset -- lightweight enough for a browse chip row, unlike the 100+ individual countries. */
+export function distinctOrigins(): AtlasRegion[] {
+  const seen = new Set<AtlasRegion>()
+  for (const cake of cakes) {
+    for (const r of getRegionEntriesForCake(cake.id)) seen.add(r.region)
+  }
+  return [...seen].sort()
 }
 
 export function getDecadeForCake(cakeId: string): HistoricalCakeEntry | undefined {

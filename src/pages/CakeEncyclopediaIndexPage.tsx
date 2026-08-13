@@ -1,14 +1,12 @@
 import { useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { cakes } from '../lib/data'
-import { getRegionEntriesForCake, getDecadeForCake } from '../lib/encyclopedia'
+import { getRegionEntriesForCake, getDecadeForCake, distinctOrigins } from '../lib/encyclopedia'
+import { distinctOccasions } from '../lib/cakeBrowse'
 import { getCakeOfTheDay } from '../lib/discovery'
 import { CakeHeroImage } from '../components/CakeHeroImage'
-import type { CakeTexture } from '../types/cake'
 import type { MoodTag } from '../types/persona'
 import './CakeEncyclopediaIndexPage.css'
-
-const TEXTURES: CakeTexture[] = ['sponge', 'dense', 'creamy', 'crumbly']
 
 function getLocationTag(cakeId: string): string | null {
   const region = getRegionEntriesForCake(cakeId)[0]
@@ -18,22 +16,8 @@ function getLocationTag(cakeId: string): string | null {
   return null
 }
 
-function topFlavorNotes(limit: number): string[] {
-  const counts = new Map<string, number>()
-  for (const cake of cakes) {
-    for (const note of cake.flavorNotes) counts.set(note, (counts.get(note) ?? 0) + 1)
-  }
-  return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, limit).map(([note]) => note)
-}
-
-function distinctOccasions(): string[] {
-  const seen = new Set<string>()
-  for (const cake of cakes) for (const o of cake.occasion ?? []) seen.add(o)
-  return [...seen].sort()
-}
-
-const TOP_FLAVORS = topFlavorNotes(8)
 const OCCASIONS = distinctOccasions()
+const ORIGINS = distinctOrigins()
 
 function CakeCard({ cake }: { cake: (typeof cakes)[number] }) {
   const locationTag = getLocationTag(cake.id)
@@ -56,7 +40,7 @@ export function CakeEncyclopediaIndexPage() {
   const moodParam = searchParams.get('mood')
 
   const [query, setQuery] = useState('')
-  const [activeChip, setActiveChip] = useState<{ type: 'texture' | 'flavor' | 'occasion' | 'mood'; value: string } | null>(
+  const [activeChip, setActiveChip] = useState<{ type: 'origin' | 'occasion' | 'mood'; value: string } | null>(
     occasionParam ? { type: 'occasion', value: occasionParam } : moodParam ? { type: 'mood', value: moodParam } : null,
   )
 
@@ -67,8 +51,7 @@ export function CakeEncyclopediaIndexPage() {
 
   const filtered = useMemo(() => {
     let result = cakes
-    if (activeChip?.type === 'texture') result = result.filter((c) => c.texture === activeChip.value)
-    if (activeChip?.type === 'flavor') result = result.filter((c) => c.flavorNotes.includes(activeChip.value))
+    if (activeChip?.type === 'origin') result = result.filter((c) => getRegionEntriesForCake(c.id).some((r) => r.region === activeChip.value))
     if (activeChip?.type === 'occasion') result = result.filter((c) => c.occasion?.includes(activeChip.value))
     if (activeChip?.type === 'mood') result = result.filter((c) => c.personaTags?.moods?.includes(activeChip.value as MoodTag))
     if (q) {
@@ -83,7 +66,7 @@ export function CakeEncyclopediaIndexPage() {
     return result
   }, [q, activeChip])
 
-  function selectChip(type: 'texture' | 'flavor' | 'occasion', value: string) {
+  function selectChip(type: 'origin' | 'occasion', value: string) {
     setActiveChip((prev) => (prev?.type === type && prev.value === value ? null : { type, value }))
   }
 
@@ -133,22 +116,11 @@ export function CakeEncyclopediaIndexPage() {
           </section>
 
           <section className="encyclopedia-row">
-            <h2>🍮 Browse by Texture</h2>
+            <h2>🌍 Browse by Origin</h2>
             <div className="encyclopedia-chip-row">
-              {TEXTURES.map((t) => (
-                <button key={t} className="encyclopedia-chip" onClick={() => selectChip('texture', t)}>
-                  {t}
-                </button>
-              ))}
-            </div>
-          </section>
-
-          <section className="encyclopedia-row">
-            <h2>🍫 Browse by Flavor</h2>
-            <div className="encyclopedia-chip-row">
-              {TOP_FLAVORS.map((f) => (
-                <button key={f} className="encyclopedia-chip" onClick={() => selectChip('flavor', f)}>
-                  {f}
+              {ORIGINS.map((o) => (
+                <button key={o} className="encyclopedia-chip" onClick={() => selectChip('origin', o)}>
+                  {o}
                 </button>
               ))}
             </div>
@@ -166,9 +138,6 @@ export function CakeEncyclopediaIndexPage() {
           </section>
 
           <section className="encyclopedia-row encyclopedia-secondary-links">
-            <Link to="/ingredients" className="encyclopedia-link">
-              🧂 Browse by Ingredient →
-            </Link>
             <Link to="/traditions" className="encyclopedia-link">
               🌍 Baking Traditions →
             </Link>
