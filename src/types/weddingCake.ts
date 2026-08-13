@@ -140,7 +140,7 @@ export interface WeddingPlanResult {
   chosenFrosting: FrostingType
   frostingGuidance: string
   architecturePlan: TierArchitecturePlan
-  /** 2 entries for a 2-tier cake, 3 otherwise */
+  /** one entry per physical tier -- 1 or 2, matching the 50-guest-max architecture */
   tierPicks: TierFlavorPick[]
   /** always all 6 allergens, present or not */
   allergenAudit: AllergenAuditEntry[]

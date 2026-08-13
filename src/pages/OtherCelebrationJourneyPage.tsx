@@ -3,6 +3,8 @@ import type { DietTag } from '../types/cake'
 import { otherCelebrationOccasions, otherCelebrationMoods, birthdayFlavors } from '../lib/data'
 import { pickBirthdayCake } from '../lib/birthdayMatch'
 import { registerBackHandler } from '../lib/backButtonInterceptor'
+import { GUEST_RANGES, type GuestRange } from '../lib/guestRanges'
+import { GuestRangeSelector } from '../components/GuestRangeSelector'
 import { OtherCelebrationResultSummary } from '../components/OtherCelebrationResultSummary'
 import './OtherCelebrationJourneyPage.css'
 
@@ -24,7 +26,7 @@ export function OtherCelebrationJourneyPage() {
   const [occasionId, setOccasionId] = useState(otherCelebrationOccasions[0].id)
   const [moodId, setMoodId] = useState(otherCelebrationMoods[0].id)
   const [flavorIds, setFlavorIds] = useState<string[]>([])
-  const [guestCount, setGuestCount] = useState(20)
+  const [guestRange, setGuestRange] = useState<GuestRange>(GUEST_RANGES[1])
   const [diet, setDiet] = useState<DietTag | 'none'>('none')
   const [cakeId, setCakeId] = useState<string | null>(null)
 
@@ -69,8 +71,8 @@ export function OtherCelebrationJourneyPage() {
           occasionName={occasion.name}
           moodName={mood.name}
           flavorNames={selectedFlavors.map((f) => f.name)}
-          guestCount={guestCount}
-          onGuestCountChange={setGuestCount}
+          guestRange={guestRange}
+          onGuestRangeChange={setGuestRange}
           diet={diet}
           onRefine={() => setStep('occasion')}
         />
@@ -160,16 +162,10 @@ export function OtherCelebrationJourneyPage() {
           </button>
           <h2 className="inspiration-heading">A couple of details</h2>
           <div className="card wedding-form">
-            <label>
-              Guest count
-              <input
-                type="number"
-                min={1}
-                max={400}
-                value={guestCount}
-                onChange={(e) => setGuestCount(Math.min(400, Math.max(1, Number(e.target.value) || 1)))}
-              />
-            </label>
+            <div className="variant-toggle-wrap">
+              <span>Guest count (max 50)</span>
+              <GuestRangeSelector value={guestRange} onChange={setGuestRange} />
+            </div>
             <label>
               Dietary needs (optional)
               <select value={diet} onChange={(e) => setDiet(e.target.value as DietTag | 'none')}>

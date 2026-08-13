@@ -1,0 +1,24 @@
+.guest-range-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.guest-range-tile {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.guest-range-tile.active {
+  background: var(--raspberry);
+  border-color: var(--raspberry);
+  color: white;
+}

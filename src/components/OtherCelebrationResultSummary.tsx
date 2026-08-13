@@ -5,10 +5,13 @@ import { getCake, getRecipeForCake } from '../lib/data'
 import { getTopPairings } from '../lib/encyclopedia'
 import { getProductsByIds } from '../lib/affiliateProducts'
 import { registerBackHandler } from '../lib/backButtonInterceptor'
+import type { GuestRange } from '../lib/guestRanges'
+import { formatComponentLabel } from '../lib/recipeComponents'
 import { CakeHeroImage } from './CakeHeroImage'
 import { SaveButton } from './SaveButton'
 import { OtherCelebrationShareCard } from './OtherCelebrationShareCard'
 import { AffiliateProductSet } from './AffiliateProductSet'
+import { GuestRangeSelector } from './GuestRangeSelector'
 import './OtherCelebrationResultSummary.css'
 
 /** Only mood/flavor combos with a genuine, defensible cake-inspiration connection get a mapping. */
@@ -25,8 +28,8 @@ export function OtherCelebrationResultSummary({
   occasionName,
   moodName,
   flavorNames,
-  guestCount,
-  onGuestCountChange,
+  guestRange,
+  onGuestRangeChange,
   diet,
   onRefine,
 }: {
@@ -34,8 +37,8 @@ export function OtherCelebrationResultSummary({
   occasionName: string
   moodName: string
   flavorNames: string[]
-  guestCount: number
-  onGuestCountChange: (guestCount: number) => void
+  guestRange: GuestRange
+  onGuestRangeChange: (guestRange: GuestRange) => void
   diet: DietTag | 'none'
   onRefine: () => void
 }) {
@@ -77,26 +80,34 @@ export function OtherCelebrationResultSummary({
       <section className="card wedding-primary-card">
         <h2>🍰 Flavor</h2>
         <p>{cake.flavorNotes.join(' · ')}</p>
+        {formatComponentLabel(recipe?.filling) && (
+          <p className="wedding-hero-description">
+            <strong>Filling:</strong> {formatComponentLabel(recipe?.filling)}
+          </p>
+        )}
+        {formatComponentLabel(recipe?.frostingFinish) && (
+          <p className="wedding-hero-description">
+            <strong>Finish:</strong> {formatComponentLabel(recipe?.frostingFinish)}
+          </p>
+        )}
       </section>
 
       <section className="card wedding-primary-card">
         <h2>🎉 Serves</h2>
-        <p className="wedding-concept-title">{recipe ? recipe.baseServings : guestCount}</p>
-        {recipe && guestCount > recipe.baseServings && (
+        <p className="wedding-concept-title">Serves {guestRange.label}</p>
+        {recipe && (
           <p className="wedding-hero-description">
-            Bake {Math.ceil(guestCount / recipe.baseServings)}× this recipe to comfortably serve {guestCount} guests.
+            {guestRange.max > recipe.baseServings
+              ? `Bake ${Math.ceil(guestRange.max / recipe.baseServings)}× this recipe (~${
+                  Math.ceil(guestRange.max / recipe.baseServings) * recipe.baseServings
+                } servings) to comfortably cover this range.`
+              : `This recipe serves ${recipe.baseServings} on its own — comfortably covers this range.`}
           </p>
         )}
-        <label className="wedding-form wedding-guest-count-editor">
-          Guest count
-          <input
-            type="number"
-            min={1}
-            max={400}
-            value={guestCount}
-            onChange={(e) => onGuestCountChange(Math.min(400, Math.max(1, Number(e.target.value) || 1)))}
-          />
-        </label>
+        <div className="wedding-guest-count-editor">
+          <span>Guest count (max 50)</span>
+          <GuestRangeSelector value={guestRange} onChange={onGuestRangeChange} />
+        </div>
       </section>
 
       <section className="card wedding-primary-card">

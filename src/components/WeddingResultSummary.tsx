@@ -13,11 +13,14 @@ import {
   formatRoleLabel,
 } from '../lib/weddingCake'
 import { registerBackHandler } from '../lib/backButtonInterceptor'
+import type { GuestRange } from '../lib/guestRanges'
+import { formatComponentLabel } from '../lib/recipeComponents'
 import { CakeHeroImage } from './CakeHeroImage'
 import { RecipeCard } from './RecipeCard'
 import { WeddingCakeDiagram } from './WeddingCakeDiagram'
 import { AffiliateProductSet } from './AffiliateProductSet'
 import { CelebrateShareCard } from './CelebrateShareCard'
+import { GuestRangeSelector } from './GuestRangeSelector'
 import './WeddingResultSummary.css'
 
 /** Only decoration styles with a genuine, defensible product connection get a mapping — not every style is forced to match. */
@@ -49,14 +52,14 @@ const ALLERGEN_LABELS: Record<string, string> = {
 export function WeddingResultSummary({
   result: initialResult,
   venueType,
-  guestCount,
-  onGuestCountChange,
+  guestRange,
+  onGuestRangeChange,
   onRefine,
 }: {
   result: WeddingPlanResult
   venueType: string
-  guestCount: number
-  onGuestCountChange: (guestCount: number) => void
+  guestRange: GuestRange
+  onGuestRangeChange: (guestRange: GuestRange) => void
   onRefine: () => void
 }) {
   const [copied, setCopied] = useState(false)
@@ -75,22 +78,29 @@ export function WeddingResultSummary({
     [],
   )
 
-  // Recompute the full plan whenever guestCount changes -- tier count/sizing,
-  // recipe picks (more tiers can change which recipes get chosen), budget,
-  // and cutting guide all depend on it, so a partial recalculation would
-  // drift out of sync with what's actually displayed.
+  // Recompute the full plan whenever the guest range changes -- tier
+  // count/sizing, recipe picks (a 2nd tier can change which recipes get
+  // chosen), budget, and cutting guide all depend on it, so a partial
+  // recalculation would drift out of sync with what's actually displayed.
+  // Always sized against the top of the range, per "comfortably serves the
+  // upper end of that range."
   const result = useMemo(
-    () => (guestCount === initialResult.input.guestCount ? initialResult : generateWeddingPlan({ ...initialResult.input, guestCount })),
-    [initialResult, guestCount],
+    () =>
+      guestRange.max === initialResult.input.guestCount ? initialResult : generateWeddingPlan({ ...initialResult.input, guestCount: guestRange.max }),
+    [initialResult, guestRange],
   )
 
   const tierCount = result.architecturePlan.tiers.length
   const totalServings = result.architecturePlan.tiers.reduce((sum, tier) => sum + tier.partySlices, 0)
+  const tierSizeLabel = result.architecturePlan.tiers.map((tier) => `${tier.diameterIn}"`).join(' + ')
   const flavorNames = result.tierPicks.map((pick) => getCake(pick.cakeId)?.name).filter((name): name is string => !!name)
   const baseCake = result.tierPicks.find((pick) => pick.role === 'base') ?? result.tierPicks[0]
   const baseCakeProfile = baseCake ? getCake(baseCake.cakeId) : undefined
+  const baseCakeRecipe = baseCake ? getRecipe(baseCake.recipeId) : undefined
+  const fillingLabel = formatComponentLabel(baseCakeRecipe?.filling)
+  const finishLabel = formatComponentLabel(baseCakeRecipe?.frostingFinish)
   const topPairing = baseCakeProfile ? getTopPairings(baseCakeProfile, 1)[0] : undefined
-  const conceptName = `${tierCount}-Tier ${result.aesthetic.name} Celebration Cake`
+  const conceptName = `${tierCount === 1 ? 'Single-Tier' : `${tierCount}-Tier`} ${result.aesthetic.name} Celebration Cake`
   const whyItWorks = [result.tierPicks[0]?.reason[0], result.culture.decorHint].filter(Boolean).join(' ')
 
   const presentAllergens = result.allergenAudit.filter((a) => a.present)
@@ -122,25 +132,26 @@ export function WeddingResultSummary({
       <section className="card wedding-primary-card">
         <h2>🍰 Flavor</h2>
         <p>{flavorNames.join(' · ')}</p>
-        <p className="wedding-hero-description">Finished in {result.decorationStyle.name.toLowerCase()}.</p>
+        {fillingLabel && (
+          <p className="wedding-hero-description">
+            <strong>Filling:</strong> {fillingLabel}
+          </p>
+        )}
+        <p className="wedding-hero-description">
+          <strong>Finish:</strong> {finishLabel ?? `Finished in ${result.decorationStyle.name.toLowerCase()}`}.
+        </p>
       </section>
 
       <section className="card wedding-primary-card">
         <h2>🎉 Serving</h2>
-        <p className="wedding-concept-title">Serves {totalServings}</p>
+        <p className="wedding-concept-title">Serves {guestRange.label}</p>
         <p className="wedding-hero-description">
-          {tierCount}-tier {formatArchitectureLabel(result.architecturePlan.architecture).toLowerCase()}.
+          {tierSizeLabel} tier{tierCount > 1 ? 's' : ''} — ~{totalServings} servings total capacity.
         </p>
-        <label className="wedding-form wedding-guest-count-editor">
-          Guest count
-          <input
-            type="number"
-            min={10}
-            max={400}
-            value={guestCount}
-            onChange={(e) => onGuestCountChange(Math.min(400, Math.max(10, Number(e.target.value) || 10)))}
-          />
-        </label>
+        <div className="wedding-guest-count-editor">
+          <span>Guest count (max 50)</span>
+          <GuestRangeSelector value={guestRange} onChange={onGuestRangeChange} />
+        </div>
       </section>
 
       <section className="card wedding-primary-card">

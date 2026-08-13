@@ -151,7 +151,7 @@ export function explainTierPick(cake: CakeProfile, role: TierRole, seasonEntry: 
 export function pickTiers(seasonEntry: WeddingSeasonEntry, culture: WeddingCulture, diet: DietTag | 'none', tierCount: number): TierFlavorPick[] {
   const excludeIds = new Set<string>()
   const picks: TierFlavorPick[] = []
-  const roleOrder: TierRole[] = tierCount === 2 ? ['base', 'top'] : ['base', 'top', 'middle']
+  const roleOrder: TierRole[] = tierCount === 1 ? ['base'] : ['base', 'top']
 
   for (const role of roleOrder) {
     const ranked = rankTierCandidates(role, seasonEntry, culture, diet, excludeIds)

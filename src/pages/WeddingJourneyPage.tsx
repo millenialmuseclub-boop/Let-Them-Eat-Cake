@@ -5,6 +5,8 @@ import { weddingCultures, weddingAesthetics, weddingDecorationStyles, weddingFla
 import { generateWeddingPlan, pickCultureForFlavorDirection } from '../lib/weddingCake'
 import { rankDecorationStyles } from '../lib/weddingDecoration'
 import { registerBackHandler } from '../lib/backButtonInterceptor'
+import { GUEST_RANGES, type GuestRange } from '../lib/guestRanges'
+import { GuestRangeSelector } from '../components/GuestRangeSelector'
 import { WeddingResultSummary } from '../components/WeddingResultSummary'
 import './WeddingJourneyPage.css'
 
@@ -48,7 +50,7 @@ const STEP_ORDER: Step[] = ['style', 'event', 'structure', 'flavor', 'result']
 export function WeddingJourneyPage() {
   const [step, setStep] = useState<Step>('style')
   const [aestheticId, setAestheticId] = useState(weddingAesthetics[0].id)
-  const [guestCount, setGuestCount] = useState(100)
+  const [guestRange, setGuestRange] = useState<GuestRange>(GUEST_RANGES[2])
   const [season, setSeason] = useState<WeddingSeason>('summer')
   const [variant, setVariant] = useState<SeasonVariant>('indoor')
   const [venueType, setVenueType] = useState<string>(VENUE_TYPES[0])
@@ -83,7 +85,17 @@ export function WeddingJourneyPage() {
   )
 
   function generate(cultureId: string) {
-    const input: WeddingPlanInput = { occasion: 'wedding', cultureId, guestCount, season, variant, aestheticId, diet, shape, decorationStyleId }
+    const input: WeddingPlanInput = {
+      occasion: 'wedding',
+      cultureId,
+      guestCount: guestRange.max,
+      season,
+      variant,
+      aestheticId,
+      diet,
+      shape,
+      decorationStyleId,
+    }
     setResult(generateWeddingPlan(input))
     setStep('result')
   }
@@ -102,8 +114,8 @@ export function WeddingJourneyPage() {
         <WeddingResultSummary
           result={result}
           venueType={venueType}
-          guestCount={guestCount}
-          onGuestCountChange={setGuestCount}
+          guestRange={guestRange}
+          onGuestRangeChange={setGuestRange}
           onRefine={() => setStep('style')}
         />
       </main>
@@ -148,16 +160,10 @@ export function WeddingJourneyPage() {
           </button>
           <h2 className="inspiration-heading">Tell us about the event</h2>
           <div className="card wedding-form">
-            <label>
-              Guest count
-              <input
-                type="number"
-                min={10}
-                max={400}
-                value={guestCount}
-                onChange={(e) => setGuestCount(Math.min(400, Math.max(10, Number(e.target.value) || 10)))}
-              />
-            </label>
+            <div className="variant-toggle-wrap">
+              <span>Guest count (max 50)</span>
+              <GuestRangeSelector value={guestRange} onChange={setGuestRange} />
+            </div>
 
             <label>
               Season

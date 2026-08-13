@@ -1,15 +1,16 @@
 import type { ArchitectureType, FrostingType, TierRole, TierSpec, TierArchitecturePlan, WeddingAesthetic, WeddingCulture } from '../types/weddingCake'
 
-/** Wilton-style round-tier serving chart. party = 1"x2" celebratory slice, venue = 1"x1" reception slice. */
+/**
+ * Wilton-style round-tier serving chart. party = 1"x2" celebratory slice,
+ * venue = 1"x1" reception slice. Trimmed to 6"-12" -- the app's guest count
+ * now tops out at 50 (see guestRanges.ts), and a single 12" tier alone
+ * already covers 56 party-slice servings, so nothing larger is ever needed.
+ */
 export const TIER_SERVING_CHART: { diameterIn: number; partySlices: number; venueSlices: number }[] = [
   { diameterIn: 6, partySlices: 12, venueSlices: 24 },
   { diameterIn: 8, partySlices: 24, venueSlices: 32 },
   { diameterIn: 10, partySlices: 38, venueSlices: 56 },
   { diameterIn: 12, partySlices: 56, venueSlices: 78 },
-  { diameterIn: 14, partySlices: 78, venueSlices: 98 },
-  { diameterIn: 16, partySlices: 100, venueSlices: 120 },
-  { diameterIn: 18, partySlices: 122, venueSlices: 144 },
-  { diameterIn: 20, partySlices: 148, venueSlices: 172 },
 ]
 
 export const ARCHITECTURE_FROSTING_MAP: Record<ArchitectureType, FrostingType> = {
@@ -32,10 +33,11 @@ const ARCHITECTURE_STABILITY_NOTES: Record<ArchitectureType, string> = {
 
 const SELF_SUPPORTING_ARCHITECTURES: ArchitectureType[] = ['croquembouche-choux-tower', 'ring-tower-kransekake']
 
-function defaultTierCount(guestCount: number): 2 | 3 | 4 {
-  if (guestCount <= 40) return 2
-  if (guestCount <= 120) return 3
-  return 4
+// App-wide guest count now tops out at 50 (see guestRanges.ts) -- a
+// realistic wedding cake for that size is a single tier or a small 2-tier
+// cake, never more.
+function defaultTierCount(guestCount: number): 1 | 2 {
+  return guestCount <= 10 ? 1 : 2
 }
 
 function combinations<T>(arr: T[], k: number): T[][] {
@@ -48,7 +50,7 @@ function combinations<T>(arr: T[], k: number): T[][] {
 }
 
 function selectTierDiameters(guestCount: number): { diameters: number[]; cappedGuestCountWarning?: string } {
-  for (let n = defaultTierCount(guestCount); n <= 4; n++) {
+  for (let n = defaultTierCount(guestCount); n <= 2; n++) {
     const combos = combinations(TIER_SERVING_CHART, n)
     let best: typeof TIER_SERVING_CHART | null = null
     let bestWaste = Infinity

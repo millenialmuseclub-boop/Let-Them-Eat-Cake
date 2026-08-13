@@ -3,6 +3,8 @@ import type { DietTag } from '../types/cake'
 import { birthdayEnergies, birthdayFlavors } from '../lib/data'
 import { pickBirthdayCake } from '../lib/birthdayMatch'
 import { registerBackHandler } from '../lib/backButtonInterceptor'
+import { GUEST_RANGES, type GuestRange } from '../lib/guestRanges'
+import { GuestRangeSelector } from '../components/GuestRangeSelector'
 import { BirthdayResultSummary } from '../components/BirthdayResultSummary'
 import './BirthdayJourneyPage.css'
 
@@ -26,7 +28,7 @@ export function BirthdayJourneyPage() {
   const [who, setWho] = useState<string>(WHO_OPTIONS[0])
   const [energyId, setEnergyId] = useState(birthdayEnergies[0].id)
   const [flavorId, setFlavorId] = useState(birthdayFlavors[0].id)
-  const [guestCount, setGuestCount] = useState(12)
+  const [guestRange, setGuestRange] = useState<GuestRange>(GUEST_RANGES[1])
   const [age, setAge] = useState('')
   const [theme, setTheme] = useState('')
   const [color, setColor] = useState('')
@@ -64,8 +66,8 @@ export function BirthdayJourneyPage() {
           who={who}
           energyName={energy.name}
           flavorName={flavor.name}
-          guestCount={guestCount}
-          onGuestCountChange={setGuestCount}
+          guestRange={guestRange}
+          onGuestRangeChange={setGuestRange}
           diet={diet}
           theme={theme}
           onRefine={() => setStep('who')}
@@ -155,16 +157,10 @@ export function BirthdayJourneyPage() {
           </button>
           <h2 className="inspiration-heading">A few practical details</h2>
           <div className="card wedding-form">
-            <label>
-              Guest count
-              <input
-                type="number"
-                min={1}
-                max={200}
-                value={guestCount}
-                onChange={(e) => setGuestCount(Math.min(200, Math.max(1, Number(e.target.value) || 1)))}
-              />
-            </label>
+            <div className="variant-toggle-wrap">
+              <span>Guest count (max 50)</span>
+              <GuestRangeSelector value={guestRange} onChange={setGuestRange} />
+            </div>
             <label>
               Age / milestone (optional)
               <input type="text" value={age} onChange={(e) => setAge(e.target.value)} placeholder="e.g. Turning 30" />
