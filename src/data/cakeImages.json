@@ -250,5 +250,137 @@
     "photographer": "Takuya Nagaoka",
     "photographerUrl": "https://unsplash.com/@takuya_n",
     "unsplashUrl": "https://unsplash.com/photos/white-and-red-strawberry-cake-fENvSZUzbzU"
+  },
+  "cake_cassata_siciliana": {
+    "url": "https://images.unsplash.com/photo-1588346518695-76b8117ce269?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Q2Fzc2F0YSUyMFNpY2lsaWFuYSUyMGNha2V8ZW58MHwwfHx8MTc4NjY3MDU0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Valentina Locatelli",
+    "photographerUrl": "https://unsplash.com/@valentina_locatelli",
+    "unsplashUrl": "https://unsplash.com/photos/green-and-white-cake-on-white-ceramic-plate-3_JOuLYtBPQ"
+  },
+  "cake_baumkuchen": {
+    "url": "https://images.unsplash.com/photo-1623888884968-b5a895f882dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8QmF1bWt1Y2hlbiUyMGNha2V8ZW58MHwwfHx8MTc4NjY3MDU0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Douglas Lopez",
+    "photographerUrl": "https://unsplash.com/@dougglaslopez",
+    "unsplashUrl": "https://unsplash.com/photos/chocolate-doughnut-on-white-paper-T4rRtXekRgY"
+  },
+  "cake_tarta_de_santiago": {
+    "url": "https://images.unsplash.com/photo-1516054097154-13a26f4f5d91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8VGFydGElMjBkZSUyMFNhbnRpYWdvJTIwY2FrZXxlbnwwfDB8fHwxNzg2NjcwNTQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "enrico bet",
+    "photographerUrl": "https://unsplash.com/@henry_be",
+    "unsplashUrl": "https://unsplash.com/photos/pie-on-white-ceramic-plate-beside-white-tealight-candle-and-cake-server-fnNfVYDTUZU"
+  },
+  "cake_battenberg": {
+    "url": "https://images.unsplash.com/photo-1590302317018-579c2e813464?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8QmF0dGVuYmVyZyUyMENha2UlMjBjYWtlfGVufDB8MHx8fDE3ODY2NzA1NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "City Church Christchurch",
+    "photographerUrl": "https://unsplash.com/@citychurchchristchurch",
+    "unsplashUrl": "https://unsplash.com/photos/chocolate-cupcake-on-white-ceramic-plate-qy__yBHYeYo"
+  },
+  "cake_cozonac": {
+    "url": "https://images.unsplash.com/photo-1605807646983-377bc5a76493?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Q296b25hYyUyMGNha2V8ZW58MHwwfHx8MTc4NjY3MDU0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Umesh Soni",
+    "photographerUrl": "https://unsplash.com/@umeshsonii",
+    "unsplashUrl": "https://unsplash.com/photos/chocolate-cake-on-white-ceramic-plate-LDnmyOaA-ew"
+  },
+  "cake_kyiv_cake": {
+    "url": "https://images.unsplash.com/photo-1669754712436-f7fe6c72e066?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8S3lpdiUyMENha2UlMjBjYWtlfGVufDB8MHx8fDE3ODY2NzA1NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Vova Kondriianenko",
+    "photographerUrl": "https://unsplash.com/@vodriian",
+    "unsplashUrl": "https://unsplash.com/photos/a-group-of-chocolate-desserts-nAPcwGstWR0"
+  },
+  "cake_napoleon_torte": {
+    "url": "https://images.unsplash.com/photo-1651484396889-5de94b4d2a8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8TmFwb2xlb24lMjBUb3J0ZSUyMGNha2V8ZW58MHwwfHx8MTc4NjY3MDU0OHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Halyna Chemerys",
+    "photographerUrl": "https://unsplash.com/@finstereule",
+    "unsplashUrl": "https://unsplash.com/photos/a-plate-of-food-fWGxcZYRgxQ"
+  },
+  "cake_prinsesstarta": {
+    "url": "https://images.unsplash.com/photo-1615735486329-c61cd40bfcc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8UHJpbnNlc3N0JUMzJUE1cnRhJTIwY2FrZXxlbnwwfDB8fHwxNzg2NjcwNTQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Aneta Voborilova",
+    "photographerUrl": "https://unsplash.com/@anetvob",
+    "unsplashUrl": "https://unsplash.com/photos/white-and-brown-cake-on-white-ceramic-plate-mlcm6qi9Bu8"
+  },
+  "cake_merveilleux": {
+    "url": "https://images.unsplash.com/photo-1611293388250-580b08c4a145?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8TWVydmVpbGxldXglMjBjYWtlfGVufDB8MHx8fDE3ODY2NzA1NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "amirali mirhashemian",
+    "photographerUrl": "https://unsplash.com/@amir_v_ali",
+    "unsplashUrl": "https://unsplash.com/photos/strawberry-cake-on-white-surface-cZFU60dKB6U"
+  },
+  "cake_appeltaart": {
+    "url": "https://images.unsplash.com/photo-1621743478914-cc8a86d7e7b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8QXBwZWx0YWFydCUyMGNha2V8ZW58MHwwfHx8MTc4NjY3MDU0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Kavya P K",
+    "photographerUrl": "https://unsplash.com/@_kavya_p_k_",
+    "unsplashUrl": "https://unsplash.com/photos/red-apple-beside-brown-pie-zQ4jrYelvLs"
+  },
+  "cake_zuger_kirschtorte": {
+    "url": "https://images.unsplash.com/photo-1615735486329-c61cd40bfcc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8WnVnZXIlMjBLaXJzY2h0b3J0ZSUyMGNha2V8ZW58MHwwfHx8MTc4NjY3MDU1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Aneta Voborilova",
+    "photographerUrl": "https://unsplash.com/@anetvob",
+    "unsplashUrl": "https://unsplash.com/photos/white-and-brown-cake-on-white-ceramic-plate-mlcm6qi9Bu8"
+  },
+  "cake_bolo_de_rolo": {
+    "url": "https://images.unsplash.com/photo-1623888884968-b5a895f882dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Qm9sbyUyMGRlJTIwUm9sbyUyMGNha2V8ZW58MHwwfHx8MTc4NjY3MDU1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Douglas Lopez",
+    "photographerUrl": "https://unsplash.com/@dougglaslopez",
+    "unsplashUrl": "https://unsplash.com/photos/chocolate-doughnut-on-white-paper-T4rRtXekRgY"
+  },
+  "cake_paneton": {
+    "url": "https://images.unsplash.com/photo-1588431097413-9416ab687668?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8UGFuZXQlQzMlQjNuJTIwY2FrZXxlbnwwfDB8fHwxNzg2NjcwNTUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Shalev Cohen",
+    "photographerUrl": "https://unsplash.com/@shalevcohen",
+    "unsplashUrl": "https://unsplash.com/photos/brown-bread-on-white-and-red-paper-QLkRf1DLvbA"
+  },
+  "cake_chaja": {
+    "url": "https://images.unsplash.com/photo-1746786792687-f74af2cb04ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Q2hhaiVDMyVBMSUyMGNha2V8ZW58MHwwfHx8MTc4NjY3MDU1MXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Esra Afşar",
+    "photographerUrl": "https://unsplash.com/@esraafsar",
+    "unsplashUrl": "https://unsplash.com/photos/a-slice-of-cake-and-a-cup-are-on-the-table-SYTxBsgnG1o"
+  },
+  "cake_torta_de_guayaba": {
+    "url": "https://images.unsplash.com/photo-1615735486329-c61cd40bfcc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8VG9ydGElMjBkZSUyMEd1YXlhYmElMjBjYWtlfGVufDB8MHx8fDE3ODY2NzA1NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Aneta Voborilova",
+    "photographerUrl": "https://unsplash.com/@anetvob",
+    "unsplashUrl": "https://unsplash.com/photos/white-and-brown-cake-on-white-ceramic-plate-mlcm6qi9Bu8"
+  },
+  "cake_jamaican_black_cake": {
+    "url": "https://images.unsplash.com/photo-1632859509881-f557437f5d33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8SmFtYWljYW4lMjBCbGFjayUyMENha2UlMjBjYWtlfGVufDB8MHx8fDE3ODY2NzA1NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Gabre Cameron",
+    "photographerUrl": "https://unsplash.com/@gabrecameron",
+    "unsplashUrl": "https://unsplash.com/photos/a-white-plate-topped-with-slices-of-cake-next-to-a-glass-of-juice-6Wn8R1FDouA"
+  },
+  "cake_sfouf": {
+    "url": "https://images.unsplash.com/photo-1508737690671-77fe4101791e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8U2ZvdWYlMjBjYWtlfGVufDB8MHx8fDE3ODY2NzA1NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Allen Rad",
+    "photographerUrl": "https://unsplash.com/@allenrad",
+    "unsplashUrl": "https://unsplash.com/photos/egg-near-the-white-ceramic-plate-k-q63hBFSB8"
+  },
+  "cake_ma_lai_go": {
+    "url": "https://images.unsplash.com/photo-1649508865256-a661745afda2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8TWElMjBMYWklMjBHbyUyMGNha2V8ZW58MHwwfHx8MTc4NjY3MDU1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Kouji Tsuru",
+    "photographerUrl": "https://unsplash.com/@pafuxu",
+    "unsplashUrl": "https://unsplash.com/photos/a-piece-of-cake-sitting-on-top-of-a-white-plate-OTmWuGkQLqk"
+  },
+  "cake_melktert": {
+    "url": "https://images.unsplash.com/photo-1604537371539-83849e6f0142?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8TWVsa3RlcnQlMjBjYWtlfGVufDB8MHx8fDE3ODY2NzA1NTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Boxed Water Is Better",
+    "photographerUrl": "https://unsplash.com/@boxedwater",
+    "unsplashUrl": "https://unsplash.com/photos/toasted-bread-on-white-ceramic-plate-beside-stainless-steel-fork-and-knife-TQu7xEV0YOo"
+  },
+  "cake_gateau_patate": {
+    "url": "https://images.unsplash.com/photo-1650844010413-3f24dc1c182b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8R2F0ZWF1JTIwUGF0YXRlJTIwY2FrZXxlbnwwfDB8fHwxNzg2NjcwNTU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Taylor Walling",
+    "photographerUrl": "https://unsplash.com/@taylorwalling",
+    "unsplashUrl": "https://unsplash.com/photos/a-pizza-on-a-plate-t_cbBvwE3aQ"
+  },
+  "cake_sans_rival": {
+    "url": "https://images.unsplash.com/photo-1635888070574-beb32aa9b06d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8U2FucyUyMFJpdmFsJTIwY2FrZXxlbnwwfDB8fHwxNzg2NjcwNTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "12photostory",
+    "photographerUrl": "https://unsplash.com/@12photography",
+    "unsplashUrl": "https://unsplash.com/photos/a-piece-of-cake-sitting-on-top-of-a-white-plate-UAtbg1lfos8"
+  },
+  "cake_kue_lapis": {
+    "url": "https://images.unsplash.com/photo-1768723229124-8783100131f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8S3VlJTIwTGFwaXMlMjBjYWtlfGVufDB8MHx8fDE3ODY2NzA1NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "You Le",
+    "photographerUrl": "https://unsplash.com/@le_y0u",
+    "unsplashUrl": "https://unsplash.com/photos/rows-of-colorful-layered-cakes-on-wooden-trays-WMscq_3YADI"
   }
 }

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { getCake } from '../lib/data'
 import { CakeHeroImage } from '../components/CakeHeroImage'
+import { useDocumentTitle } from '../lib/useDocumentTitle'
 import './CelebrateLandingPage.css'
 
 /**
@@ -20,6 +21,8 @@ const ENTRIES: { to: string; title: string; description: string; cakeId: string 
 ]
 
 export function CelebrateLandingPage() {
+  useDocumentTitle('Celebrate — Birthday & Wedding Cake Ideas | Let Them Eat Cake')
+
   const entryCakes = ENTRIES.map((entry) => ({ entry, cake: getCake(entry.cakeId) }))
 
   return (

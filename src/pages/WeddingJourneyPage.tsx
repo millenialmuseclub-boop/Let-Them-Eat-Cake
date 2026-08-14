@@ -8,6 +8,7 @@ import { registerBackHandler } from '../lib/backButtonInterceptor'
 import { GUEST_RANGES, type GuestRange } from '../lib/guestRanges'
 import { GuestRangeSelector } from '../components/GuestRangeSelector'
 import { WeddingResultSummary } from '../components/WeddingResultSummary'
+import { useDocumentTitle } from '../lib/useDocumentTitle'
 import './WeddingJourneyPage.css'
 
 type Step = 'style' | 'event' | 'structure' | 'flavor' | 'result'
@@ -48,6 +49,8 @@ function tileTextColor(hex: string): string {
 const STEP_ORDER: Step[] = ['style', 'event', 'structure', 'flavor', 'result']
 
 export function WeddingJourneyPage() {
+  useDocumentTitle('Wedding Cake Planner | Let Them Eat Cake')
+
   const [step, setStep] = useState<Step>('style')
   const [aestheticId, setAestheticId] = useState(weddingAesthetics[0].id)
   const [guestRange, setGuestRange] = useState<GuestRange>(GUEST_RANGES[2])

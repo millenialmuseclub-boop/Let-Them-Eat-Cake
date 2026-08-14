@@ -3,11 +3,14 @@ import type { Hub } from '../data/hubs'
 import { getCakeImage } from '../lib/images'
 import { getSceneImage } from '../lib/sceneImages'
 import { DiscoverFeatureCard } from './DiscoverFeatureCard'
+import { useDocumentTitle } from '../lib/useDocumentTitle'
 import './HubPage.css'
 
 type LandingHub = Extract<Hub, { kind: 'landing' }>
 
 export function HubPage({ hub }: { hub: LandingHub }) {
+  useDocumentTitle(`${hub.title} | Let Them Eat Cake`)
+
   return (
     <main className="page hub-page">
       <h1>{hub.title}</h1>

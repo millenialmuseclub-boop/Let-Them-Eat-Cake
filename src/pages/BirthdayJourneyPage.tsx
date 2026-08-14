@@ -6,6 +6,7 @@ import { registerBackHandler } from '../lib/backButtonInterceptor'
 import { GUEST_RANGES, type GuestRange } from '../lib/guestRanges'
 import { GuestRangeSelector } from '../components/GuestRangeSelector'
 import { BirthdayResultSummary } from '../components/BirthdayResultSummary'
+import { useDocumentTitle } from '../lib/useDocumentTitle'
 import './BirthdayJourneyPage.css'
 
 type Step = 'who' | 'energy' | 'flavor' | 'details' | 'result'
@@ -24,6 +25,8 @@ const DIET_OPTIONS: { value: DietTag | 'none'; label: string }[] = [
 const STEP_ORDER: Step[] = ['who', 'energy', 'flavor', 'details', 'result']
 
 export function BirthdayJourneyPage() {
+  useDocumentTitle('Birthday Cake Planner | Let Them Eat Cake')
+
   const [step, setStep] = useState<Step>('who')
   const [who, setWho] = useState<string>(WHO_OPTIONS[0])
   const [energyId, setEnergyId] = useState(birthdayEnergies[0].id)

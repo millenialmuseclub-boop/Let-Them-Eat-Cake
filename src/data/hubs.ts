@@ -67,7 +67,7 @@ export const HUBS: Hub[] = [
     navLabel: 'Workshop',
     navIcon: '👩‍🍳',
     title: 'Workshop',
-    description: 'Build, calculate, and show off your next cake.',
+    description: 'Cake techniques, science, and structure — build, calculate, and perfect your next cake.',
     items: [
       {
         to: '/assembly-lab',

@@ -9,6 +9,7 @@ import { ShareCard } from '../components/ShareCard'
 import { TimeMachineTimeline } from '../components/TimeMachineTimeline'
 import { CakeHeroImage } from '../components/CakeHeroImage'
 import { SaveButton } from '../components/SaveButton'
+import { useDocumentTitle } from '../lib/useDocumentTitle'
 import './TimeMachinePage.css'
 
 function scoreColor(score: number): string {
@@ -18,6 +19,8 @@ function scoreColor(score: number): string {
 }
 
 export function TimeMachinePage() {
+  useDocumentTitle('Birthday Time Machine | Let Them Eat Cake')
+
   const [dobInput, setDobInput] = useState('')
   const [birthYear, setBirthYear] = useState<number | null>(null)
   const [activeDecadeId, setActiveDecadeId] = useState<string | null>(null)

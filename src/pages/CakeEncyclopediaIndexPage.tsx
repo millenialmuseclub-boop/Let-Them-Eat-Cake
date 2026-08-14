@@ -9,6 +9,7 @@ import { CakeThumbnail } from '../components/CakeThumbnail'
 import { CakeHeroImage } from '../components/CakeHeroImage'
 import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
 import type { MoodTag } from '../types/persona'
+import { useDocumentTitle } from '../lib/useDocumentTitle'
 import './CakeEncyclopediaIndexPage.css'
 
 function getLocationTag(cakeId: string): string | null {
@@ -41,6 +42,8 @@ function CakeCard({ cake }: { cake: (typeof cakes)[number] }) {
 }
 
 export function CakeEncyclopediaIndexPage() {
+  useDocumentTitle('Cake Encyclopedia — Recipes, Origins & Flavors | Let Them Eat Cake')
+
   const [searchParams] = useSearchParams()
   const moodParam = searchParams.get('mood')
 
@@ -86,7 +89,7 @@ export function CakeEncyclopediaIndexPage() {
   return (
     <main className="page encyclopedia-index-page">
       <h1>Cake Encyclopedia</h1>
-      <p>The stories, flavors, techniques and traditions behind the world's cakes.</p>
+      <p>Explore cake origins, recipes, flavors and baking traditions from around the world.</p>
 
       <div className="encyclopedia-search">
         <input

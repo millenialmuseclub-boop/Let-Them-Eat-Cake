@@ -10,6 +10,7 @@ import { CakeHeroImage } from '../components/CakeHeroImage'
 import { CakeThumbnail } from '../components/CakeThumbnail'
 import { SocialShareCard } from '../components/SocialShareCard'
 import { AffiliateProductSet } from '../components/AffiliateProductSet'
+import { useDocumentTitle } from '../lib/useDocumentTitle'
 import './CakeDetailPage.css'
 
 function scoreColor(score: number): string {
@@ -21,6 +22,8 @@ function scoreColor(score: number): string {
 export function CakeDetailPage() {
   const { id } = useParams<{ id: string }>()
   const cake = id ? getCake(id) : undefined
+
+  useDocumentTitle(cake ? `${cake.name} — Cake Encyclopedia | Let Them Eat Cake` : 'Cake Not Found | Let Them Eat Cake')
 
   if (!cake) {
     return (

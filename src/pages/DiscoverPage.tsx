@@ -2,12 +2,15 @@ import { Link } from 'react-router-dom'
 import { HUBS } from '../data/hubs'
 import { getSceneImage } from '../lib/sceneImages'
 import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
+import { useDocumentTitle } from '../lib/useDocumentTitle'
 import './DiscoverPage.css'
 
 const discoverHub = HUBS.find((hub) => hub.path === '/discover')!
 const discoverItems = discoverHub.kind === 'landing' ? discoverHub.items : []
 
 export function DiscoverPage() {
+  useDocumentTitle('Let Them Eat Cake — Cake Encyclopedia, Recipes & Sommelier')
+
   const collectionsScene = getSceneImage('curated-collections')
   const kitchenScene = getSceneImage('curated-kitchen')
 

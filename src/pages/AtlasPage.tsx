@@ -15,6 +15,7 @@ import { RecipeCard } from '../components/RecipeCard'
 import { AtlasWorldMap } from '../components/AtlasWorldMap'
 import { CakeHeroImage } from '../components/CakeHeroImage'
 import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
+import { useDocumentTitle } from '../lib/useDocumentTitle'
 import './AtlasPage.css'
 
 export function AtlasPage() {
@@ -27,6 +28,8 @@ export function AtlasPage() {
   const [country, setCountry] = useState<string | null>(initialCountry)
   const [selectedEntryId, setSelectedEntryId] = useState<string | null>(initialCountry ? getPrimaryEntry(initialCountry)?.id ?? null : null)
   const [selectedRegion, setSelectedRegion] = useState<AtlasDisplayRegion | null>(null)
+
+  useDocumentTitle(country ? `${country} — Global Cake Atlas | Let Them Eat Cake` : 'Global Cake Atlas | Let Them Eat Cake')
 
   function handleSearch(value: string) {
     setQuery(value)
@@ -53,7 +56,10 @@ export function AtlasPage() {
   return (
     <main className="page atlas-page">
       <h1>Global Cake Atlas</h1>
-      <p>Click a pin on the map — or search a country below — to find its most popular cake, complete with a full recipe and background story.</p>
+      <p>
+        Discover iconic cakes and baking traditions around the world — click a pin or search a country for a full recipe and background
+        story.
+      </p>
 
       <AtlasWorldMap countries={allCountries} selectedCountry={country} onSelectCountry={handleSearch} />
 

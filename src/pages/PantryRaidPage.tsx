@@ -7,6 +7,7 @@ import { getProductsForIngredient } from '../lib/affiliateProducts'
 import { RecipeCard } from '../components/RecipeCard'
 import { CuratorsToolDrawer } from '../components/CuratorsToolDrawer'
 import { CakeThumbnail } from '../components/CakeThumbnail'
+import { useDocumentTitle } from '../lib/useDocumentTitle'
 import './PantryRaidPage.css'
 
 const TIME_OPTIONS = [
@@ -24,6 +25,8 @@ const SKILL_OPTIONS: { value: SkillLevel | 'any'; label: string }[] = [
 ]
 
 export function PantryRaidPage() {
+  useDocumentTitle('Pantry Raid — Emergency Cake Recipes | Let Them Eat Cake')
+
   const [onHand, setOnHand] = useState<Set<PantryIngredient>>(new Set())
   const [expandedId, setExpandedId] = useState<string | null>(null)
   const [timeFilter, setTimeFilter] = useState('any')

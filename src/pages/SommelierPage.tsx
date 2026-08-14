@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { cakes, drinks } from '../lib/data'
 import { explainPairing, explainPairingScience, rankCakesForDrink, rankPairings } from '../lib/sommelier'
 import type { CakeProfile } from '../types/cake'
@@ -19,6 +19,7 @@ import { getProductsForPairingCategory } from '../lib/affiliateProducts'
 import { getDrinkImage, getFirstPhotographedDrinkId } from '../lib/drinkImages'
 import type { DrinkCategory } from '../types/sommelier'
 import { SearchableSelect } from '../components/SearchableSelect'
+import { useDocumentTitle } from '../lib/useDocumentTitle'
 import './SommelierPage.css'
 
 const TOP_FLAVORS = getTopFlavorNotes(10)
@@ -67,9 +68,19 @@ function DrinkGroupCards({ onChoose }: { onChoose: (groupId: string) => void }) 
   )
 }
 
+function isMode(value: string | null): value is Mode {
+  return value === 'cake-first' || value === 'drink-first'
+}
+
 export function SommelierPage() {
-  const [mode, setMode] = useState<Mode>('cake-first')
-  const [modeChosen, setModeChosen] = useState(false)
+  useDocumentTitle('Cake Sommelier — Wine, Coffee & Tea Pairings | Let Them Eat Cake')
+
+  const [searchParams] = useSearchParams()
+  const modeParam = searchParams.get('mode')
+  const initialMode = isMode(modeParam) ? modeParam : 'cake-first'
+
+  const [mode, setMode] = useState<Mode>(initialMode)
+  const [modeChosen, setModeChosen] = useState(isMode(modeParam))
   const [cakeId, setCakeId] = useState<string | null>(null)
   const [drinkId, setDrinkId] = useState<string | null>(null)
   const [expandedId, setExpandedId] = useState<string | null>(null)
@@ -87,7 +98,10 @@ export function SommelierPage() {
   return (
     <main className="page sommelier-page">
       <h1>Cake Sommelier</h1>
-      <p>Pick a cake to find its best drink pairings, or start from a drink to find the cakes that match it — all scored by flavor science.</p>
+      <p>
+        Pair any cake with wine, coffee, tea, cocktails and more — pick a cake or a drink and we'll score the match with real flavor
+        science.
+      </p>
 
       {!modeChosen ? (
         <div className="discover-feature-grid">
