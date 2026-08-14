@@ -4,6 +4,8 @@ export interface HubSubItem {
   description: string
   /** Real, defensible cake association for a full-bleed photo card — omit if no genuine link exists (e.g. Bake Off). */
   cakeId?: string
+  /** Falls back to this scene-images.json entry when there's no natural cakeId to photograph (e.g. Curated Kitchen). */
+  sceneId?: string
   cta?: string
 }
 
@@ -122,6 +124,13 @@ export const HUBS: Hub[] = [
         description: "Check off what's in your kitchen and find the emergency cake that needs the least shopping.",
         cakeId: 'cake_kladdkaka',
         cta: 'Create a Recipe →',
+      },
+      {
+        to: '/curated-kitchen',
+        title: 'Curated Kitchen',
+        description: 'A considered edit of the tools, equipment, and ingredients worth keeping close.',
+        sceneId: 'curated-kitchen',
+        cta: 'Enter the Kitchen →',
       },
     ],
   },

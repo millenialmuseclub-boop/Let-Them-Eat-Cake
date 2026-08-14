@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import type { Hub } from '../data/hubs'
 import { getCakeImage } from '../lib/images'
+import { getSceneImage } from '../lib/sceneImages'
 import { DiscoverFeatureCard } from './DiscoverFeatureCard'
 import './HubPage.css'
 
@@ -13,8 +14,10 @@ export function HubPage({ hub }: { hub: LandingHub }) {
       <p>{hub.description}</p>
       <div className="hub-grid">
         {hub.items.map((item) => {
-          const hasPhoto = item.cakeId && !!getCakeImage(item.cakeId)
-          if (hasPhoto) {
+          const hasCakePhoto = item.cakeId && !!getCakeImage(item.cakeId)
+          const scene = !hasCakePhoto && item.sceneId ? getSceneImage(item.sceneId) : undefined
+
+          if (hasCakePhoto || scene) {
             return (
               <DiscoverFeatureCard
                 key={item.to}
@@ -22,7 +25,12 @@ export function HubPage({ hub }: { hub: LandingHub }) {
                 title={item.title}
                 description={item.description}
                 cta={item.cta ?? 'Explore →'}
-                cakeId={item.cakeId}
+                cakeId={hasCakePhoto ? item.cakeId : undefined}
+                imageUrl={scene?.url}
+                imageAlt={item.title}
+                photographer={scene?.photographer}
+                photographerUrl={scene?.photographerUrl}
+                unsplashUrl={scene?.unsplashUrl}
               />
             )
           }
