@@ -8,6 +8,7 @@ import {
   getCountryEntries,
   getPrimaryEntry,
   getRelatedCountries,
+  regionToSlug,
   type AtlasDisplayRegion,
 } from '../lib/atlas'
 import { getFirstPhotographedCakeId } from '../lib/images'
@@ -35,7 +36,6 @@ export function AtlasPage() {
   const [query, setQuery] = useState(initialCountry ?? '')
   const [country, setCountry] = useState<string | null>(initialCountry)
   const [selectedEntryId, setSelectedEntryId] = useState<string | null>(initialCountry ? getPrimaryEntry(initialCountry)?.id ?? null : null)
-  const [selectedRegion, setSelectedRegion] = useState<AtlasDisplayRegion | null>(null)
 
   useDocumentTitle(country ? `${country} — Global Cake Atlas | Let Them Eat Cake` : 'Global Cake Atlas | Let Them Eat Cake')
 
@@ -45,14 +45,11 @@ export function AtlasPage() {
     if (match) {
       setCountry(match)
       setSelectedEntryId(getPrimaryEntry(match)?.id ?? null)
-      setSelectedRegion(null)
     } else {
       setCountry(null)
       setSelectedEntryId(null)
     }
   }
-
-  const regionEntries = useMemo(() => (selectedRegion ? getCountriesForDisplayRegion(selectedRegion) : []), [selectedRegion])
 
   const countryEntries = country ? getCountryEntries(country) : []
   const selectedEntry = countryEntries.find((e) => e.id === selectedEntryId) ?? null
@@ -77,6 +74,7 @@ export function AtlasPage() {
           type="text"
           list="atlas-countries"
           placeholder="Search a country (e.g. Japan, Mexico, Sweden)"
+          aria-label="Search a country"
           value={query}
           onChange={(e) => handleSearch(e.target.value)}
         />
@@ -163,38 +161,21 @@ export function AtlasPage() {
       )}
 
       {!country && !query && (
-        <>
-          <section className="atlas-row">
-            <h2>🌍 Browse by Region</h2>
-            <div className="discover-feature-grid">
-              {ATLAS_DISPLAY_REGIONS.map((region) => (
-                <DiscoverFeatureCard
-                  key={region}
-                  onClick={() => setSelectedRegion(selectedRegion === region ? null : region)}
-                  title={region}
-                  description="See cakes from this region"
-                  cta={selectedRegion === region ? 'Selected ✓' : 'Explore →'}
-                  cakeId={REGION_REP_CAKE[region]}
-                />
-              ))}
-            </div>
-          </section>
-
-          {selectedRegion && (
-            <div className="discover-feature-grid atlas-browse">
-              {regionEntries.map((entry) => (
-                <DiscoverFeatureCard
-                  key={entry.id}
-                  onClick={() => handleSearch(entry.country)}
-                  title={entry.country}
-                  description={entry.shortDescription}
-                  cta="Explore →"
-                  cakeId={getFirstPhotographedCakeId([entry.cakeId]) ?? entry.cakeId}
-                />
-              ))}
-            </div>
-          )}
-        </>
+        <section className="atlas-row">
+          <h2>🌍 Browse by Region</h2>
+          <div className="discover-feature-grid">
+            {ATLAS_DISPLAY_REGIONS.map((region) => (
+              <DiscoverFeatureCard
+                key={region}
+                to={`/atlas/region/${regionToSlug(region)}`}
+                title={region}
+                description="See cakes from this region"
+                cta="Explore →"
+                cakeId={REGION_REP_CAKE[region]}
+              />
+            ))}
+          </div>
+        </section>
       )}
     </main>
   )

@@ -1,7 +1,10 @@
 :root {
   --cream: #fff8f0;
   --cocoa: #3d2314;
-  --raspberry: #e88d9e;
+  /* Same hue/saturation as the original pastel raspberry, darkened so raspberry text/buttons
+     meet WCAG AA contrast (4.5:1) against light backgrounds -- the pastel tint lives on in
+     --raspberry-bg and any decorative (non-text) use that doesn't need contrast. */
+  --raspberry: #bf2743;
   --raspberry-bg: rgba(232, 141, 158, 0.15);
   --gold: #d4af37;
 
@@ -30,6 +33,9 @@
     --bg-card: #2a1c15;
     --border: rgba(243, 236, 228, 0.14);
     --shadow: rgba(0, 0, 0, 0.35) 0 4px 16px;
+    /* The original lighter raspberry already has strong contrast against these dark
+       backgrounds, so dark mode keeps the app's original pastel raspberry unchanged. */
+    --raspberry: #e88d9e;
     --raspberry-bg: rgba(232, 141, 158, 0.2);
   }
 }
@@ -70,6 +76,36 @@ p {
 button {
   font: inherit;
   cursor: pointer;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+[tabindex] {
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--raspberry);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .card {

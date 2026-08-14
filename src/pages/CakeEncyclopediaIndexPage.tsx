@@ -95,6 +95,7 @@ export function CakeEncyclopediaIndexPage() {
         <input
           type="text"
           placeholder="Search cakes (e.g. chocolate, dense, Japan)"
+          aria-label="Search cakes"
           value={query}
           onChange={(e) => {
             setQuery(e.target.value)

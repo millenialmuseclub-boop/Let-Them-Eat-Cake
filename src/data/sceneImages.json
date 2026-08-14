@@ -76,5 +76,53 @@
     "photographer": "BehindTheTmuna",
     "photographerUrl": "https://unsplash.com/@behindthetmuna",
     "unsplashUrl": "https://unsplash.com/photos/a-room-filled-with-lots-of-colorful-decorations-1y-HMz1nCKI"
+  },
+  "wedding-aesthetic-rustic-botanical": {
+    "url": "https://images.unsplash.com/photo-1596567836640-3c13eb102106?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8cnVzdGljJTIwZ2FyZGVuJTIwd2VkZGluZyUyMGNha2UlMjBib3RhbmljYWx8ZW58MHwwfHx8MTc4NjczMzY1MXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "David Holifield",
+    "photographerUrl": "https://unsplash.com/@davidholifield",
+    "unsplashUrl": "https://unsplash.com/photos/white-and-brown-cake-with-green-leaf-on-top-sCsjtUwN8LA"
+  },
+  "wedding-aesthetic-modern-minimalist": {
+    "url": "https://images.unsplash.com/photo-1629576690723-bb3a22ae7126?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8bW9kZXJuJTIwbWluaW1hbGlzdCUyMHdlZGRpbmclMjBjYWtlfGVufDB8MHx8fDE3ODY3MzM2NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "David Holifield",
+    "photographerUrl": "https://unsplash.com/@davidholifield",
+    "unsplashUrl": "https://unsplash.com/photos/white-and-green-floral-table-cloth-Jb9WQIvR4YQ"
+  },
+  "wedding-aesthetic-traditional-luxury": {
+    "url": "https://images.unsplash.com/photo-1604702433171-33756f3f3825?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZWxlZ2FudCUyMHdoaXRlJTIwdGllcmVkJTIwd2VkZGluZyUyMGNha2V8ZW58MHwwfHx8MTc4NjczMzY1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "David Holifield",
+    "photographerUrl": "https://unsplash.com/@davidholifield",
+    "unsplashUrl": "https://unsplash.com/photos/white-and-red-floral-cake-on-brown-wooden-stand-7ePjhwxtxCU"
+  },
+  "wedding-aesthetic-cultural-heritage": {
+    "url": "https://images.unsplash.com/photo-1585809738136-3facb9389170?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZnJlbmNoJTIwY3JvcXVlbWJvdWNoZSUyMHdlZGRpbmclMjB0b3dlcnxlbnwwfDB8fHwxNzg2NzMzNjUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Enrico Sottocorna",
+    "photographerUrl": "https://unsplash.com/@enricosottocorna",
+    "unsplashUrl": "https://unsplash.com/photos/white-and-brown-cupcake-on-clear-glass-cake-stand-UycB5hsIEJM"
+  },
+  "wedding-aesthetic-boho-garden": {
+    "url": "https://images.unsplash.com/photo-1565038930214-09566ed2149b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Ym9obyUyMHdpbGRmbG93ZXIlMjB3ZWRkaW5nJTIwZGVjb3J8ZW58MHwwfHx8MTc4NjczMzY1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Hannah Busing",
+    "photographerUrl": "https://unsplash.com/@hannahbusing",
+    "unsplashUrl": "https://unsplash.com/photos/woman-holding-flower-bouquet-6NUUZZ16hJk"
+  },
+  "wedding-aesthetic-glam-art-deco": {
+    "url": "https://images.unsplash.com/photo-1722715917813-fa234efa4a2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8YXJ0JTIwZGVjbyUyMGdvbGQlMjB3ZWRkaW5nJTIwZWxlZ2FudHxlbnwwfDB8fHwxNzg2NzMzNjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "The New York Public Library",
+    "photographerUrl": "https://unsplash.com/@nypl",
+    "unsplashUrl": "https://unsplash.com/photos/art-nouveau-decorative-elements-with-floral-and-star-motifs-ISAGpZlEOsQ"
+  },
+  "wedding-aesthetic-whimsical-pastel-piping": {
+    "url": "https://images.unsplash.com/photo-1525956570400-207225f50dd6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8cGFzdGVsJTIwcGlwZWQlMjB3ZWRkaW5nJTIwY2FrZSUyMHZpbnRhZ2V8ZW58MHwwfHx8MTc4NjczMzY1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Thomas William",
+    "photographerUrl": "https://unsplash.com/@thomasw",
+    "unsplashUrl": "https://unsplash.com/photos/three-assorted-cakes-near-white-framed-mirror-j4n1YIK0e9k"
+  },
+  "wedding-aesthetic-coastal-destination": {
+    "url": "https://images.unsplash.com/photo-1766104796937-5e2f6da078e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y29hc3RhbCUyMGJlYWNoJTIwd2VkZGluZyUyMGRlY29yfGVufDB8MHx8fDE3ODY3MzM2NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Fotógrafo Samuel Cruz",
+    "photographerUrl": "https://unsplash.com/@fotografosamuelcruz",
+    "unsplashUrl": "https://unsplash.com/photos/wedding-ceremony-on-a-sunny-beach-with-guests-enZjCNR807k"
   }
 }

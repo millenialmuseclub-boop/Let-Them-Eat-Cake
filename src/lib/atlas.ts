@@ -5,6 +5,15 @@ export type AtlasDisplayRegion = 'Africa' | 'Americas' | 'Asia' | 'Europe' | 'Mi
 
 export const ATLAS_DISPLAY_REGIONS: AtlasDisplayRegion[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Middle East', 'Oceania']
 
+/** URL-safe slug for a display region -- e.g. "Middle East" <-> "middle-east", used for the /atlas/region/:region route. */
+export function regionToSlug(region: AtlasDisplayRegion): string {
+  return region.toLowerCase().replace(/\s+/g, '-')
+}
+
+export function slugToRegion(slug: string): AtlasDisplayRegion | undefined {
+  return ATLAS_DISPLAY_REGIONS.find((r) => regionToSlug(r) === slug)
+}
+
 /** Countries in the data's combined "Asia & Middle East" bucket that read as Middle East for display grouping; the rest fall under Asia. */
 const MIDDLE_EAST_COUNTRIES = new Set(['Egypt', 'Iran', 'Lebanon', 'Turkey'])
 

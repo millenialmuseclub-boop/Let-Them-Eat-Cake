@@ -65,9 +65,20 @@ export function AtlasWorldMap({ countries, selectedCountry, onSelectCountry }: A
                   r={12}
                   fill="transparent"
                   className="atlas-map-pin-hitarea"
+                  tabIndex={0}
+                  role="button"
+                  aria-label={country}
                   onClick={() => onSelectCountry(country)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      onSelectCountry(country)
+                    }
+                  }}
                   onMouseEnter={() => setHoveredCountry(country)}
                   onMouseLeave={() => setHoveredCountry((prev) => (prev === country ? null : prev))}
+                  onFocus={() => setHoveredCountry(country)}
+                  onBlur={() => setHoveredCountry((prev) => (prev === country ? null : prev))}
                 />
                 <circle
                   r={isSelected ? 7 : 5}

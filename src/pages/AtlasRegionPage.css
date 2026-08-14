@@ -1,0 +1,10 @@
+.atlas-region-back {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--raspberry);
+  font-size: 14px;
+}
+
+.atlas-region-grid {
+  margin-top: 24px;
+}

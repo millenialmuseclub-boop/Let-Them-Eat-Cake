@@ -30,7 +30,7 @@ const QUERY_OVERRIDES = {
   product_scraper: 'bench scraper baking tool',
   product_cake_leveler: 'cake leveler wire tool',
   product_decorating_kit: 'piping tips decorating kit',
-  product_offset_spatula: 'baking spatula frosting tool',
+  product_offset_spatula: 'metal icing spatula smoothing cake',
   product_vanilla: 'vanilla beans extract',
   product_cake_flour: 'flour baking ingredient',
   product_milk_chocolate: 'milk chocolate bars baking',
@@ -45,14 +45,14 @@ const QUERY_OVERRIDES = {
   product_champagne_flutes: 'champagne flutes glasses',
   product_cake_knife_set: 'cake serving knife set',
   product_floral_cake_stand: 'floral cake stand dessert table',
-  product_cabbage_cake_stand: 'decorative ceramic cake stand',
+  product_cabbage_cake_stand: 'cabbage leaf ceramic serving plate',
   product_glass_cake_stand: 'covered glass cake stand',
   product_heart_bundt_pan: 'heart bundt cake pan',
   product_cake_inas_coconut: 'coconut layer cake',
-  product_cake_chocolate: 'chocolate layer cake slice',
+  product_cake_chocolate: 'rich fudge chocolate cake dessert',
   product_cake_jfk_wedding: 'elegant white wedding cake',
   product_cake_seven_layer_caramel: 'caramel layer cake',
-  product_cake_confetti: 'confetti funfetti cake',
+  product_cake_confetti: 'birthday sprinkle cake slice',
   product_cake_strawberry_guava_entremet: 'strawberry entremet dessert',
   product_cake_red_velvet: 'red velvet cake slice',
   product_cake_bridgerton_lemon_lavender: 'lemon lavender floral cake',
@@ -66,12 +66,22 @@ function save() {
   writeFileSync(dataPath, JSON.stringify(products, null, 2) + '\n')
 }
 
+// Unsplash's search sometimes returns the same top result for different queries once a
+// generous share of the hourly quota has been used -- track photo IDs already assigned
+// to another product so a collision doesn't ship as an unrelated duplicate photo. Compare
+// via the URL slug (not the API's `photo.id`) so it's consistent for both existing
+// imageUrls (already saved as a URL) and freshly-fetched candidates (still API objects).
+function urlSlug(url) {
+  return url.match(/photo-([a-zA-Z0-9_-]+)\?/)?.[1]
+}
+const usedPhotoIds = new Set(products.filter((p) => p.imageUrl).map((p) => urlSlug(p.imageUrl)))
+
 for (const product of products) {
   if (product.imageUrl) continue
   if (product.associatedCakeIds?.length) continue
 
   const query = encodeURIComponent(QUERY_OVERRIDES[product.id] ?? product.name)
-  const res = await fetch(`https://api.unsplash.com/search/photos?query=${query}&per_page=1&orientation=squarish`, {
+  const res = await fetch(`https://api.unsplash.com/search/photos?query=${query}&per_page=10&orientation=squarish`, {
     headers: { Authorization: `Client-ID ${accessKey}` },
   })
 
@@ -82,14 +92,15 @@ for (const product of products) {
   }
 
   const data = await res.json()
-  const photo = data.results?.[0]
+  const photo = (data.results ?? []).find((p) => !usedPhotoIds.has(urlSlug(p.urls.regular)))
 
   if (!photo) {
-    console.warn(`No match found for ${product.id}`)
+    console.warn(`No unused match found for ${product.id}`)
     continue
   }
 
   product.imageUrl = photo.urls.regular
+  usedPhotoIds.add(urlSlug(photo.urls.regular))
   console.log(`Fetched image for ${product.id}`)
   save()
 }

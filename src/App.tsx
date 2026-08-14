@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { TimeMachinePage } from './pages/TimeMachinePage'
 import { AtlasPage } from './pages/AtlasPage'
+import { AtlasRegionPage } from './pages/AtlasRegionPage'
 import { SommelierPage } from './pages/SommelierPage'
 import { PersonaMatchPage } from './pages/PersonaMatchPage'
 import { PantryRaidPage } from './pages/PantryRaidPage'
@@ -50,6 +51,7 @@ function App() {
         ))}
         <Route path="/time-machine" element={<TimeMachinePage />} />
         <Route path="/atlas" element={<AtlasPage />} />
+        <Route path="/atlas/region/:region" element={<AtlasRegionPage />} />
         <Route path="/sommelier" element={<SommelierPage />} />
         <Route path="/persona-match" element={<PersonaMatchPage />} />
         <Route path="/pantry-raid" element={<PantryRaidPage />} />

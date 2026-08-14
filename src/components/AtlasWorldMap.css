@@ -42,6 +42,9 @@
   fill: var(--border);
   stroke: var(--bg);
   stroke-width: 0.5;
+  /* Country shapes are mouse/touch-only by design (hundreds of them, not practical as tab
+     stops); the pins and the country search input below give full keyboard-equivalent access
+     to the same selection, so this isn't a real focus target and needs no outline. */
   outline: none;
 }
 
@@ -60,6 +63,11 @@
 
 .atlas-map-pin-hitarea {
   cursor: pointer;
+}
+
+.atlas-map-pin-hitarea:focus-visible {
+  outline: 2px solid var(--raspberry);
+  outline-offset: 2px;
 }
 
 .atlas-map-pin {

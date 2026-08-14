@@ -178,7 +178,8 @@
     ],
     "associatedTechniqueIds": [
       "buttercream_smoothing"
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1672081880854-ea09c1e9ac44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8Mnx8bWV0YWwlMjBpY2luZyUyMHNwYXR1bGElMjBzbW9vdGhpbmclMjBjYWtlfGVufDB8Mnx8fDE3ODY3MzM3NzN8MA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_vanilla",
@@ -290,7 +291,8 @@
     "active": true,
     "associatedIngredientSlugs": [
       "vanilla-extract"
-    ]
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1774569037234-dc63e93a49d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8dmFuaWxsYSUyMGJlYW5zJTIwamFyfGVufDB8Mnx8fDE3ODY3MzM2NjF8MA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_gold_leaf",
@@ -367,8 +369,7 @@
     "category": "presentation",
     "url": "https://go.shopmy.us/p-77635455",
     "network": "shopmy",
-    "active": true,
-    "imageUrl": "https://images.unsplash.com/photo-1708782345056-d526d434a48b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZGVjb3JhdGl2ZSUyMGNlcmFtaWMlMjBjYWtlJTIwc3RhbmR8ZW58MHwyfHx8MTc4NjcyOTU4M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    "active": true
   },
   {
     "id": "product_glass_cake_stand",
@@ -415,7 +416,7 @@
     "url": "https://on.ltk.com/+ptzGNa2OL9EpO24liMpuWA",
     "network": "ltk",
     "active": true,
-    "imageUrl": "https://images.unsplash.com/photo-1621868402792-a5c9fa6866a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y2hvY29sYXRlJTIwbGF5ZXIlMjBjYWtlJTIwc2xpY2V8ZW58MHwyfHx8MTc4NjcyOTU4NXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "imageUrl": "https://images.unsplash.com/photo-1565808229224-264b6fcc5052?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8Mnx8cmljaCUyMGZ1ZGdlJTIwY2hvY29sYXRlJTIwY2FrZSUyMGRlc3NlcnR8ZW58MHwyfHx8MTc4NjczMzc3M3ww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_jfk_wedding",
@@ -453,7 +454,7 @@
     "url": "https://on.ltk.com/+pgNpRvEenxjW4uBl7O1oLQ",
     "network": "ltk",
     "active": true,
-    "imageUrl": "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y29uZmV0dGklMjBmdW5mZXR0aSUyMGNha2V8ZW58MHwyfHx8MTc4NjcyOTU4Nnww&ixlib=rb-4.1.0&q=80&w=1080"
+    "imageUrl": "https://images.unsplash.com/photo-1654797827228-764efe5a514c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8Mnx8YmlydGhkYXklMjBzcHJpbmtsZSUyMGNha2UlMjBzbGljZXxlbnwwfDJ8fHwxNzg2NzMzNzczfDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_strawberry_guava_entremet",
@@ -521,7 +522,8 @@
     "category": "featured-cake",
     "url": "https://go.shopmy.us/p-78607636",
     "network": "shopmy",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1773632996592-e150b9ed5059?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8YmFzcXVlJTIwY2FrZSUyMGRlc3NlcnR8ZW58MHwyfHx8MTc4NjczMzY2MXww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_earls_court_chocolate",

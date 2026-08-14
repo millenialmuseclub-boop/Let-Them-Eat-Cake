@@ -13,7 +13,7 @@ function DiscoverFeatureCardBody({
   photographer,
 }: {
   title: string
-  description: string
+  description?: string
   cta: string
   meta?: string
   cakeId?: string
@@ -43,7 +43,7 @@ function DiscoverFeatureCardBody({
       )}
       <div className="discover-feature-card-content">
         <h2>{title}</h2>
-        <p>{description}</p>
+        {description && <p>{description}</p>}
         {meta && <span className="discover-feature-card-meta">{meta}</span>}
         <span className="btn discover-feature-card-cta">{cta}</span>
       </div>
@@ -53,7 +53,7 @@ function DiscoverFeatureCardBody({
 
 type DiscoverFeatureCardProps = {
   title: string
-  description: string
+  description?: string
   cta: string
   meta?: string
   cakeId?: string
