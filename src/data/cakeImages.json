@@ -382,5 +382,119 @@
     "photographer": "You Le",
     "photographerUrl": "https://unsplash.com/@le_y0u",
     "unsplashUrl": "https://unsplash.com/photos/rows-of-colorful-layered-cakes-on-wooden-trays-WMscq_3YADI"
+  },
+  "cake_kouign_amann": {
+    "url": "https://images.unsplash.com/photo-1647544301386-8a2be03750b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8S291aWduLUFtYW5ufGVufDB8MHx8fDE3ODY2Nzg3NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Bovia & Co. Photography",
+    "photographerUrl": "https://unsplash.com/@boviaco",
+    "unsplashUrl": "https://unsplash.com/photos/a-person-writing-on-a-tablet-next-to-a-pastry-LRmCaRDkW6U"
+  },
+  "cake_mawa_cake": {
+    "url": "https://images.unsplash.com/photo-1659271940584-25589f320198?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8TWF3YSUyMENha2V8ZW58MHwwfHx8MTc4NjY3ODc1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Kash Tandon",
+    "photographerUrl": "https://unsplash.com/@kashtandon",
+    "unsplashUrl": "https://unsplash.com/photos/a-cake-with-flowers-on-top-lqM8r5cg5k4"
+  },
+  "cake_gooey_butter_cake": {
+    "url": "https://images.unsplash.com/photo-1781740500808-da448d0d8415?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8U3QuJTIwTG91aXMlMjBHb29leSUyMEJ1dHRlciUyMENha2V8ZW58MHwwfHx8MTc4NjY3ODc1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Nichole Hamilton",
+    "photographerUrl": "https://unsplash.com/@nicholehamilton",
+    "unsplashUrl": "https://unsplash.com/photos/feet-standing-on-st-louis-tiles-on-a-concrete-sidewalk-CxeiwrrQvDs"
+  },
+  "cake_brooklyn_blackout": {
+    "url": "https://images.unsplash.com/photo-1693501424028-033518786ed7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8QnJvb2tseW4lMjBCbGFja291dCUyMENha2V8ZW58MHwwfHx8MTc4NjY3ODc1NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Jon Tyson",
+    "photographerUrl": "https://unsplash.com/@jontyson",
+    "unsplashUrl": "https://unsplash.com/photos/a-neon-sign-that-says-brooklyn-on-it-n65j_CcPEKk"
+  },
+  "cake_lamington": {
+    "url": "https://images.unsplash.com/photo-1547958481-9753b5467c80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8TGFtaW5ndG9ufGVufDB8MHx8fDE3ODY2Nzg3NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Matt Palmer",
+    "photographerUrl": "https://unsplash.com/@mattpalmer",
+    "unsplashUrl": "https://unsplash.com/photos/brown-mountains-h0l0E9r6xD0"
+  },
+  "cake_persian_love_cake": {
+    "url": "https://images.unsplash.com/photo-1688234098785-13f2d7ee2ed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8UGVyc2lhbiUyMExvdmUlMjBDYWtlfGVufDB8MHx8fDE3ODY2Nzg3NjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Shiva Mardahi",
+    "photographerUrl": "https://unsplash.com/@sshiva",
+    "unsplashUrl": "https://unsplash.com/photos/a-plate-of-food-that-is-on-a-table-B4vm5J-0x2I"
+  },
+  "cake_torta_mil_hojas": {
+    "url": "https://images.unsplash.com/photo-1651484396889-5de94b4d2a8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8VG9ydGElMjBkZSUyME1pbCUyMEhvamFzfGVufDB8MHx8fDE3ODY2Nzg3NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Halyna Chemerys",
+    "photographerUrl": "https://unsplash.com/@finstereule",
+    "unsplashUrl": "https://unsplash.com/photos/a-plate-of-food-fWGxcZYRgxQ"
+  },
+  "cake_linzer_torte": {
+    "url": "https://images.unsplash.com/photo-1594236114270-f5feb79f52a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8TGluemVyJTIwVG9ydGV8ZW58MHwwfHx8MTc4NjY3ODc2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "amirali mirhashemian",
+    "photographerUrl": "https://unsplash.com/@amir_v_ali",
+    "unsplashUrl": "https://unsplash.com/photos/3-brown-donuts-on-brown-wooden-table-cOw_JxasssM"
+  },
+  "cake_bolo_rei": {
+    "url": "https://images.unsplash.com/photo-1694619145270-d0c3baf15099?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Qm9sbyUyMFJlaXxlbnwwfDB8fHwxNzg2Njc4NzY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Pilar Rubio",
+    "photographerUrl": "https://unsplash.com/@rubiopil",
+    "unsplashUrl": "https://unsplash.com/photos/a-building-with-a-sign-and-umbrellas-in-front-of-it-ZzMkf6wD-Ek"
+  },
+  "cake_bolo_de_fuba": {
+    "url": "https://images.unsplash.com/photo-1522336849566-02cbb8bffc4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Qm9sbyUyMGRlJTIwRnViJUMzJUExJTIwY2FrZXxlbnwwfDB8fHwxNzg2Njc4NzczfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "freestocks",
+    "photographerUrl": "https://unsplash.com/@freestocks",
+    "unsplashUrl": "https://unsplash.com/photos/donuts-on-white-saucer-bDAgfJ0iRWM"
+  },
+  "cake_sakotis": {
+    "url": "https://images.unsplash.com/photo-1717518213409-888c93a09e5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8JUM1JUEwYWtvdGlzfGVufDB8MHx8fDE3ODY2Nzg3NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Alexis Presa",
+    "photographerUrl": "https://unsplash.com/@alexispresa",
+    "unsplashUrl": "https://unsplash.com/photos/a-body-of-water-sitting-next-to-a-rocky-shore-UOBpZ3HuS88"
+  },
+  "cake_nazook": {
+    "url": "https://images.unsplash.com/photo-1589656671323-e94044dded33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8TmF6b29rfGVufDB8MHx8fDE3ODY2Nzg3NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Teo Zac",
+    "photographerUrl": "https://unsplash.com/@teo",
+    "unsplashUrl": "https://unsplash.com/photos/a-close-up-of-a-patch-on-a-jacket-q0PJ37kUYY0"
+  },
+  "cake_galaktoboureko": {
+    "url": "https://images.unsplash.com/photo-1783690902391-82e17b0617ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8R2FsYWt0b2JvdXJla298ZW58MHwwfHx8MTc4NjY3ODc3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Zulfugar Karimov",
+    "photographerUrl": "https://unsplash.com/@zulfugarkarimov",
+    "unsplashUrl": "https://unsplash.com/photos/woman-posing-with-a-large-i-love-baku-sign-3aIzy_ZhK_A"
+  },
+  "cake_great_cake": {
+    "url": "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8R3JlYXQlMjBDYWtlJTIwY2FrZXxlbnwwfDB8fHwxNzg2Njc4Nzc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "American Heritage Chocolate",
+    "photographerUrl": "https://unsplash.com/@americanheritagechocolate",
+    "unsplashUrl": "https://unsplash.com/photos/white-cake-with-chocolate-syrup-on-white-ceramic-plate-vdx5hPQhXFk"
+  },
+  "cake_trinidad_black_cake": {
+    "url": "https://images.unsplash.com/photo-1610850775538-2c8c08d16758?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8VHJpbmlkYWQlMjBCbGFjayUyMENha2UlMjBjYWtlfGVufDB8MHx8fDE3ODY2Nzg3ODB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Owen Bruce",
+    "photographerUrl": "https://unsplash.com/@wenography",
+    "unsplashUrl": "https://unsplash.com/photos/red-and-black-round-ornament-ssf2KpGCdmo"
+  },
+  "cake_torta_caprese": {
+    "url": "https://images.unsplash.com/photo-1641898379002-da2fb806de6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8VG9ydGElMjBDYXByZXNlJTIwY2FrZXxlbnwwfDB8fHwxNzg2Njc4NzgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Karyna Panchenko",
+    "photographerUrl": "https://unsplash.com/@karyna_panchenko",
+    "unsplashUrl": "https://unsplash.com/photos/a-piece-of-chocolate-cake-with-powdered-sugar-on-top-8VcpClY6-xY"
+  },
+  "cake_panforte": {
+    "url": "https://images.unsplash.com/photo-1776268927270-15a8a8ec5039?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8UGFuZm9ydGUlMjBjYWtlfGVufDB8MHx8fDE3ODY2Nzg3ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Brett Jordan",
+    "photographerUrl": "https://unsplash.com/@brett_jordan",
+    "unsplashUrl": "https://unsplash.com/photos/close-up-of-a-fruitcake-topped-with-almonds-and-walnuts-Z4uObzjd_3A"
+  },
+  "cake_bolo_de_arroz": {
+    "url": "https://images.unsplash.com/photo-1522336849566-02cbb8bffc4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Qm9sbyUyMGRlJTIwQXJyb3olMjBjYWtlfGVufDB8MHx8fDE3ODY2Nzg3ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "freestocks",
+    "photographerUrl": "https://unsplash.com/@freestocks",
+    "unsplashUrl": "https://unsplash.com/photos/donuts-on-white-saucer-bDAgfJ0iRWM"
+  },
+  "cake_financier": {
+    "url": "https://images.unsplash.com/photo-1513507421387-9d8e65dde479?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8RmluYW5jaWVyJTIwY2FrZXxlbnwwfDB8fHwxNzg2Njc4NzgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Ananth Pai",
+    "photographerUrl": "https://unsplash.com/@ananth22by7",
+    "unsplashUrl": "https://unsplash.com/photos/cooked-food-lot-yvoR0Y86NxY"
   }
 }
