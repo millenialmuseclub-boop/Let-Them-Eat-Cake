@@ -574,5 +574,47 @@
     "photographer": "Umesh Soni",
     "photographerUrl": "https://unsplash.com/@umeshsonii",
     "unsplashUrl": "https://unsplash.com/photos/chocolate-cake-on-white-ceramic-plate-LDnmyOaA-ew"
+  },
+  "cake_angel_food": {
+    "url": "https://images.unsplash.com/photo-1602663491496-73f07481dbea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8QW5nZWwlMjBGb29kJTIwQ2FrZSUyMHNsaWNlfGVufDB8MHx8fDE3ODY3MjY0NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Takuya Nagaoka",
+    "photographerUrl": "https://unsplash.com/@takuya_n",
+    "unsplashUrl": "https://unsplash.com/photos/white-and-red-strawberry-cake-fENvSZUzbzU"
+  },
+  "cake_barmbrack": {
+    "url": "https://images.unsplash.com/photo-1710256409121-48c5d8e22350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8QmFybWJyYWNrJTIwc2xpY2V8ZW58MHwwfHx8MTc4NjcyNjQ3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Brett Jordan",
+    "photographerUrl": "https://unsplash.com/@brett_jordan",
+    "unsplashUrl": "https://unsplash.com/photos/a-close-up-of-a-piece-of-cake-on-a-plate-SfwR4SlW7tE"
+  },
+  "cake_bizcocho_de_ron": {
+    "url": "https://images.unsplash.com/photo-1713603206349-fb641ee90935?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Qml6Y29jaG8lMjBkZSUyMFJvbiUyMGRlc3NlcnR8ZW58MHwwfHx8MTc4NjcyNjQ3OHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Vanburn Gonsalves",
+    "photographerUrl": "https://unsplash.com/@vanburn",
+    "unsplashUrl": "https://unsplash.com/photos/a-bundt-cake-sitting-on-top-of-a-white-plate-hWAojS87K-4"
+  },
+  "cake_boston_cream_pie": {
+    "url": "https://images.unsplash.com/photo-1558324781-7349f1331a35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Qm9zdG9uJTIwQ3JlYW0lMjBQaWUlMjBkZXNzZXJ0fGVufDB8MHx8fDE3ODY3MjY0Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "FilterGrade",
+    "photographerUrl": "https://unsplash.com/@filtergrade",
+    "unsplashUrl": "https://unsplash.com/photos/pile-of-pastries-KOtMKYyaoAg"
+  },
+  "cake_bublanina": {
+    "url": "https://images.unsplash.com/photo-1771250248303-ea1cc06c3288?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8QnVibGFuaW5hJTIwcmVjaXBlfGVufDB8MHx8fDE3ODY3MjY0Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Sergej *****",
+    "photographerUrl": "https://unsplash.com/@skstrannik",
+    "unsplashUrl": "https://unsplash.com/photos/stack-of-golden-crepes-on-a-white-plate-evGpa7bdgl0"
+  },
+  "cake_dobos_torte": {
+    "url": "https://images.unsplash.com/photo-1581357629479-9525d91bba18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8RG9ib3MlMjBUb3J0ZSUyMHJlY2lwZXxlbnwwfDB8fHwxNzg2NzI2NDgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Isac Ciobota",
+    "photographerUrl": "https://unsplash.com/@isacciobota",
+    "unsplashUrl": "https://unsplash.com/photos/brown-and-black-round-plate-0rlcp-np8-Q"
+  },
+  "cake_drommekage": {
+    "url": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8RHIlQzMlQjhtbWVrYWdlJTIwc2xpY2V8ZW58MHwwfHx8MTc4NjcyNjQ4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Mink Mingle",
+    "photographerUrl": "https://unsplash.com/@minkmingle",
+    "unsplashUrl": "https://unsplash.com/photos/slice-blueberry-cheesecake-pie-on-white-ceramic-plate-LGNxQzYmeUk"
   }
 }

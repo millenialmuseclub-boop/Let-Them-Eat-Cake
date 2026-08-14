@@ -262,5 +262,85 @@
     "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 1, "intensity": 5, "bitternessTannin": 5, "carbonation": 0 },
     "flavorNotes": ["orange zest", "bitter herbs"],
     "serving": { "temperature": "On the rocks", "glassware": "Rocks glass", "garnish": "Orange peel twist", "prepTip": "Stir, don't shake — you want a silky texture, not dilution from ice shards." }
+  },
+  {
+    "id": "drink_vodka",
+    "name": "Vodka",
+    "category": "spirits",
+    "flavorProfile": { "sweetness": 0, "fatRichness": 0, "acidity": 0, "intensity": 3, "bitternessTannin": 0, "carbonation": 0 },
+    "flavorNotes": ["citrus"],
+    "serving": { "temperature": "Chilled, neat or over ice", "glassware": "Shot glass or rocks glass", "prepTip": "Keep it in the freezer — vodka's neutral profile is smoothest ice-cold." }
+  },
+  {
+    "id": "drink_gin",
+    "name": "Gin",
+    "category": "spirits",
+    "flavorProfile": { "sweetness": 0, "fatRichness": 0, "acidity": 1, "intensity": 4, "bitternessTannin": 2, "carbonation": 0 },
+    "flavorNotes": ["citrus"],
+    "serving": { "temperature": "Chilled, neat or with tonic", "glassware": "Rocks glass or highball", "garnish": "A twist of citrus peel", "prepTip": "A twist of citrus peel lifts the botanicals more than a wedge dropped in the glass." }
+  },
+  {
+    "id": "drink_tequila",
+    "name": "Tequila",
+    "category": "spirits",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 2, "intensity": 4, "bitternessTannin": 1, "carbonation": 0 },
+    "flavorNotes": ["lime", "citrus"],
+    "serving": { "temperature": "Room temperature, neat or with lime", "glassware": "Tequila glass (caballito)", "prepTip": "A good reposado is worth sipping slowly — it doesn't need salt or a shot glass to be enjoyed." }
+  },
+  {
+    "id": "drink_cognac",
+    "name": "Cognac",
+    "category": "spirits",
+    "flavorProfile": { "sweetness": 2, "fatRichness": 0, "acidity": 1, "intensity": 4, "bitternessTannin": 3, "carbonation": 0 },
+    "flavorNotes": ["dried fruit", "caramel", "vanilla"],
+    "serving": { "temperature": "Room temperature", "glassware": "Snifter", "prepTip": "Warm the glass gently in your hands before sipping to open up the aromatics." }
+  },
+  {
+    "id": "drink_lager",
+    "name": "Lager",
+    "category": "beer",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 1, "intensity": 2, "bitternessTannin": 1, "carbonation": 4 },
+    "flavorNotes": ["caramel"],
+    "serving": { "temperature": "Well chilled", "glassware": "Pilsner glass", "prepTip": "Pour at an angle to build a modest head without going flat too fast." }
+  },
+  {
+    "id": "drink_cold_brew",
+    "name": "Cold Brew Coffee",
+    "category": "coffee",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 1, "intensity": 3, "bitternessTannin": 2, "carbonation": 0 },
+    "flavorNotes": ["caramel", "dark chocolate"],
+    "serving": { "temperature": "Served cold, over ice", "glassware": "Tall glass", "prepTip": "Steep coarse-ground coffee in cold water for 12-24 hours — skipping heat is what keeps it smoother and less acidic than hot-brewed coffee." }
+  },
+  {
+    "id": "drink_sherry",
+    "name": "Sherry",
+    "category": "wine",
+    "flavorProfile": { "sweetness": 2, "fatRichness": 0, "acidity": 2, "intensity": 3, "bitternessTannin": 2, "carbonation": 0 },
+    "flavorNotes": ["caramel", "almond", "dried fruit"],
+    "serving": { "temperature": "Slightly chilled, 12-14°C (54-57°F)", "glassware": "Copita or small wine glass", "prepTip": "Pour a small measure — its fortified strength and concentrated flavor go further than table wine." }
+  },
+  {
+    "id": "drink_orange_juice",
+    "name": "Orange Juice",
+    "category": "non_alcoholic",
+    "flavorProfile": { "sweetness": 3, "fatRichness": 0, "acidity": 4, "intensity": 2, "bitternessTannin": 0, "carbonation": 0 },
+    "flavorNotes": ["orange", "orange zest"],
+    "serving": { "temperature": "Chilled", "glassware": "Juice glass", "prepTip": "Fresh-squeezed makes a real difference — bottled juice is flatter and sweeter." }
+  },
+  {
+    "id": "drink_iced_tea",
+    "name": "Iced Tea",
+    "category": "non_alcoholic",
+    "flavorProfile": { "sweetness": 1, "fatRichness": 0, "acidity": 1, "intensity": 1, "bitternessTannin": 2, "carbonation": 0 },
+    "flavorNotes": ["citrus"],
+    "serving": { "temperature": "Over ice", "glassware": "Tall glass", "prepTip": "Brew it double-strength before icing it down — melting ice dilutes the flavor fast." }
+  },
+  {
+    "id": "drink_sparkling_water",
+    "name": "Sparkling Water",
+    "category": "non_alcoholic",
+    "flavorProfile": { "sweetness": 0, "fatRichness": 0, "acidity": 0, "intensity": 0, "bitternessTannin": 0, "carbonation": 5 },
+    "flavorNotes": [],
+    "serving": { "temperature": "Well chilled", "glassware": "Highball glass", "garnish": "Lime wedge", "prepTip": "A splash of citrus adds brightness without adding sugar." }
   }
 ]
