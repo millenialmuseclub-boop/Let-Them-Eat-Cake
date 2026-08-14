@@ -496,5 +496,83 @@
     "photographer": "Ananth Pai",
     "photographerUrl": "https://unsplash.com/@ananth22by7",
     "unsplashUrl": "https://unsplash.com/photos/cooked-food-lot-yvoR0Y86NxY"
+  },
+  "cake_boterkoek": {
+    "url": "https://images.unsplash.com/photo-1571050045617-cbbd5e68d181?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Qm90ZXJrb2VrJTIwY2FrZXxlbnwwfDB8fHwxNzg2NzI2MTE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Toa Heftiba",
+    "photographerUrl": "https://unsplash.com/@heftiba",
+    "unsplashUrl": "https://unsplash.com/photos/one-layer-cake-with-toppings-RD7x1iITFTU"
+  },
+  "cake_king_cake": {
+    "url": "https://images.unsplash.com/photo-1769025818132-e6e8e42979b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8S2luZyUyMENha2UlMjBjYWtlfGVufDB8MHx8fDE3ODY3MjYxMTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Pasquale Farro",
+    "photographerUrl": "https://unsplash.com/@farrop",
+    "unsplashUrl": "https://unsplash.com/photos/a-round-cake-topped-with-candied-fruit-and-powdered-sugar-plIiannXZiI"
+  },
+  "cake_smith_island": {
+    "url": "https://images.unsplash.com/photo-1586985289906-406988974504?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8U21pdGglMjBJc2xhbmQlMjBDYWtlJTIwY2FrZXxlbnwwfDB8fHwxNzg2NzI2MTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "American Heritage Chocolate",
+    "photographerUrl": "https://unsplash.com/@americanheritagechocolate",
+    "unsplashUrl": "https://unsplash.com/photos/brown-cake-on-clear-glass-cake-stand-Id8BO472TbY"
+  },
+  "cake_italian_cream_cake": {
+    "url": "https://images.unsplash.com/photo-1692623615620-b48b8dba0fc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8SXRhbGlhbiUyMENyZWFtJTIwQ2FrZSUyMGNha2V8ZW58MHwwfHx8MTc4NjcyNjEyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Paulina Kaminska",
+    "photographerUrl": "https://unsplash.com/@paulinaka",
+    "unsplashUrl": "https://unsplash.com/photos/a-close-up-of-a-cake-with-cherries-on-top-ibVD6ZZCwKY"
+  },
+  "cake_german_chocolate": {
+    "url": "https://images.unsplash.com/photo-1518047601542-79f18c655718?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8R2VybWFuJTIwQ2hvY29sYXRlJTIwQ2FrZSUyMGNha2V8ZW58MHwwfHx8MTc4NjcyNjEyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Jacob Schwartz",
+    "photographerUrl": "https://unsplash.com/@rosenberg12",
+    "unsplashUrl": "https://unsplash.com/photos/round-cake-on-brown-wooden-cake-stand-enVg_Vtsw1c"
+  },
+  "cake_chiffon": {
+    "url": "https://images.unsplash.com/photo-1597334131807-b7031c30e2fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Q2hpZmZvbiUyMENha2UlMjBjYWtlfGVufDB8MHx8fDE3ODY3MjYxMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Karen Tsoi",
+    "photographerUrl": "https://unsplash.com/@karentsoiii",
+    "unsplashUrl": "https://unsplash.com/photos/sliced-bread-on-white-ceramic-plate-IfeCiFKDf94"
+  },
+  "cake_election_cake": {
+    "url": "https://images.unsplash.com/photo-1611980740456-f5d7fddab908?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8RWxlY3Rpb24lMjBDYWtlJTIwY2FrZXxlbnwwfDB8fHwxNzg2NzI2MTIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Nick Fewings",
+    "photographerUrl": "https://unsplash.com/@jannerboy62",
+    "unsplashUrl": "https://unsplash.com/photos/brown-bread-on-stainless-steel-plate-9t_v5yHAW-o"
+  },
+  "cake_makowiec": {
+    "url": "https://images.unsplash.com/photo-1775474195944-acd072137c0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8TWFrb3dpZWMlMjBjYWtlfGVufDB8MHx8fDE3ODY3MjYxMjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Babs Gorniak",
+    "photographerUrl": "https://unsplash.com/@babs_gorniak",
+    "unsplashUrl": "https://unsplash.com/photos/easter-table-setting-with-cake-eggs-and-flowers-3cgqPoQv71k"
+  },
+  "cake_mhanncha": {
+    "url": "https://images.unsplash.com/photo-1635349709652-0a109b0edff0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8TSUyN2hhbm5jaGF8ZW58MHwwfHx8MTc4NjcyNjEyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Sanjay Hona",
+    "photographerUrl": "https://unsplash.com/@sssanjaya",
+    "unsplashUrl": "https://unsplash.com/photos/a-sign-in-front-of-a-mountain-with-a-sky-background-3Bb10ctfMKU"
+  },
+  "cake_mont_blanc": {
+    "url": "https://images.unsplash.com/photo-1759503262428-f4ab8a0ddd60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8TW9udCUyMEJsYW5jJTIwY2FrZXxlbnwwfDB8fHwxNzg2NzI2MTI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Gang Hao",
+    "photographerUrl": "https://unsplash.com/@haogang",
+    "unsplashUrl": "https://unsplash.com/photos/sweet-pastries-topped-with-chocolate-and-powdered-sugar-Dgs1BEjk0Mc"
+  },
+  "cake_banh_da_lon": {
+    "url": "https://images.unsplash.com/photo-1706977188122-f06ec60a467a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8QiVDMyVBMW5oJTIwRGElMjBMJUUxJUJCJUEzbiUyMGNha2V8ZW58MHwwfHx8MTc4NjcyNjEyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Jacky Watt",
+    "photographerUrl": "https://unsplash.com/@jackywatt",
+    "unsplashUrl": "https://unsplash.com/photos/a-bowl-filled-with-purple-flowers-and-green-leaves-cKrPdhsl7ZQ"
+  },
+  "cake_pan_de_elote": {
+    "url": "https://images.unsplash.com/photo-1542826438-bd32f43d626f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8UGFuJTIwZGUlMjBFbG90ZSUyMGNha2V8ZW58MHwwfHx8MTc4NjcyNjEyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "SwapnIl Dwivedi",
+    "photographerUrl": "https://unsplash.com/@momentance",
+    "unsplashUrl": "https://unsplash.com/photos/cake-with-slice-strawberry-fruits-Nl8Oa6ZuNcA"
+  },
+  "cake_genoa_cake": {
+    "url": "https://images.unsplash.com/photo-1605807646983-377bc5a76493?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8R2Vub2ElMjBDYWtlJTIwY2FrZXxlbnwwfDB8fHwxNzg2NzI2MTI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Umesh Soni",
+    "photographerUrl": "https://unsplash.com/@umeshsonii",
+    "unsplashUrl": "https://unsplash.com/photos/chocolate-cake-on-white-ceramic-plate-LDnmyOaA-ew"
   }
 }
