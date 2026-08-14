@@ -25,14 +25,23 @@ function saveUnmatched(ids) {
   writeFileSync(unmatchedPath, JSON.stringify([...ids].sort(), null, 2) + '\n')
 }
 
+// Compare via URL slug (not Unsplash's API photo.id) so a narrow query can't silently
+// reuse a photo another cake already has -- bit us once before in this app's other fetch
+// scripts.
+function urlSlug(url) {
+  return url.match(/photo-([a-zA-Z0-9_-]+)\?/)?.[1]
+}
+const usedPhotoIds = new Set(Object.values(existing).map((img) => urlSlug(img.url)))
+
 async function searchUnsplash(query) {
-  const res = await fetch(`https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=1&orientation=landscape`, {
+  const res = await fetch(`https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=10&orientation=landscape`, {
     headers: { Authorization: `Client-ID ${accessKey}` },
   })
   if (res.status === 403) return { rateLimited: true }
   if (!res.ok) return { photo: null, error: res.status }
   const data = await res.json()
-  return { photo: data.results?.[0] ?? null }
+  const photo = (data.results ?? []).find((p) => !usedPhotoIds.has(urlSlug(p.urls.regular)))
+  return { photo: photo ?? null }
 }
 
 let fetched = 0
@@ -73,6 +82,7 @@ for (const id of unmatchedIds) {
     photographerUrl: photo.user.links.html,
     unsplashUrl: photo.links.html,
   }
+  usedPhotoIds.add(urlSlug(photo.urls.regular))
   stillUnmatched.delete(id)
   fetched++
   console.log(`Fetched image for ${cake.name}`)

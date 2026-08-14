@@ -17,6 +17,13 @@ if (!accessKey) {
 const drinks = JSON.parse(readFileSync(drinksPath, 'utf-8'))
 const existing = existsSync(outputPath) ? JSON.parse(readFileSync(outputPath, 'utf-8')) : {}
 
+// Compare via URL slug (not Unsplash's API photo.id) so a generic query can't silently
+// reuse a photo another drink already has.
+function urlSlug(url) {
+  return url.match(/photo-([a-zA-Z0-9_-]+)\?/)?.[1]
+}
+const usedPhotoIds = new Set(Object.values(existing).map((img) => urlSlug(img.url)))
+
 let fetched = 0
 let skipped = 0
 
@@ -27,7 +34,7 @@ for (const drink of drinks) {
   }
 
   const query = encodeURIComponent(`${drink.name} drink`)
-  const res = await fetch(`https://api.unsplash.com/search/photos?query=${query}&per_page=1&orientation=landscape`, {
+  const res = await fetch(`https://api.unsplash.com/search/photos?query=${query}&per_page=10&orientation=landscape`, {
     headers: { Authorization: `Client-ID ${accessKey}` },
   })
 
@@ -42,10 +49,10 @@ for (const drink of drinks) {
   }
 
   const data = await res.json()
-  const photo = data.results?.[0]
+  const photo = (data.results ?? []).find((p) => !usedPhotoIds.has(urlSlug(p.urls.regular)))
 
   if (!photo) {
-    console.warn(`No match found for ${drink.name}`)
+    console.warn(`No unused match found for ${drink.name}`)
     continue
   }
 
@@ -55,6 +62,7 @@ for (const drink of drinks) {
     photographerUrl: photo.user.links.html,
     unsplashUrl: photo.links.html,
   }
+  usedPhotoIds.add(urlSlug(photo.urls.regular))
   fetched++
   console.log(`Fetched image for ${drink.name}`)
 

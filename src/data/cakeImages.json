@@ -616,5 +616,65 @@
     "photographer": "Mink Mingle",
     "photographerUrl": "https://unsplash.com/@minkmingle",
     "unsplashUrl": "https://unsplash.com/photos/slice-blueberry-cheesecake-pie-on-white-ceramic-plate-LGNxQzYmeUk"
+  },
+  "cake_garash": {
+    "url": "https://images.unsplash.com/photo-1623000850229-ad83232ea6c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8R2FyYXNoJTIwZGFyayUyMGNob2NvbGF0ZXxlbnwwfDB8fHwxNzg2NzQzNzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Kier in Sight Archives",
+    "photographerUrl": "https://unsplash.com/@kierinsightarchives",
+    "unsplashUrl": "https://unsplash.com/photos/brown-wooden-table-with-white-and-brown-ceramic-bowl-p7nM5isFN3U"
+  },
+  "cake_guglhupf": {
+    "url": "https://images.unsplash.com/photo-1752495072470-e70b27011898?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8R3VnbGh1cGYlMjB2YW5pbGxhfGVufDB8MHx8fDE3ODY3NDM3MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Ambre Estève",
+    "photographerUrl": "https://unsplash.com/@ambresteve",
+    "unsplashUrl": "https://unsplash.com/photos/vanilla-extract-and-pastries-sit-in-a-still-life-Mjvux0llJBY"
+  },
+  "cake_karydopita": {
+    "url": "https://images.unsplash.com/photo-1564249484723-8303f8ee99e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8S2FyeWRvcGl0YSUyMHNsaWNlfGVufDB8MHx8fDE3ODY3NDM3MTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "amirali mirhashemian",
+    "photographerUrl": "https://unsplash.com/@amir_v_ali",
+    "unsplashUrl": "https://unsplash.com/photos/pepperoni-pizza-r_1JnXTYKnA"
+  },
+  "cake_kek_lapis_sarawak": {
+    "url": "https://images.unsplash.com/photo-1672504015399-621bd23823d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8Mnx8S2VrJTIwTGFwaXMlMjBTYXJhd2FrJTIwZGVzc2VydHxlbnwwfDB8fHwxNzg2NzQzNzE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Babs Gorniak",
+    "photographerUrl": "https://unsplash.com/@babs_gorniak",
+    "unsplashUrl": "https://unsplash.com/photos/a-white-plate-topped-with-four-pieces-of-cake-Usiupnrq6qQ"
+  },
+  "cake_koeksisters": {
+    "url": "https://images.unsplash.com/photo-1708388064790-15ec8ef5d02b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8S29la3Npc3RlcnMlMjByZWNpcGV8ZW58MHwwfHx8MTc4Njc0MzcxOXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Daniel",
+    "photographerUrl": "https://unsplash.com/@unsplashbydan",
+    "unsplashUrl": "https://unsplash.com/photos/a-metal-bowl-filled-with-food-on-top-of-a-black-table-JtyNF1az0OQ"
+  },
+  "cake_kremsnita": {
+    "url": "https://images.unsplash.com/photo-1662230786065-154eafffa3e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8S3JlbSVDNSVBMW5pdGElMjBkZXNzZXJ0fGVufDB8MHx8fDE3ODY3NDM3MTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "melanie boers",
+    "photographerUrl": "https://unsplash.com/@melanieboers",
+    "unsplashUrl": "https://unsplash.com/photos/a-chocolate-cake-in-a-bowl-S4VIRU4gXpM"
+  },
+  "cake_lapis_legit": {
+    "url": "https://images.unsplash.com/photo-1733210439718-349960a13c90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8TGFwaXMlMjBMZWdpdCUyMHNsaWNlfGVufDB8MHx8fDE3ODY3NDM3MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Lee Milo",
+    "photographerUrl": "https://unsplash.com/@miloleetw",
+    "unsplashUrl": "https://unsplash.com/photos/a-close-up-of-a-cake-on-a-wooden-table-9exm0HUQNd4"
+  },
+  "cake_louise_cake": {
+    "url": "https://images.unsplash.com/photo-1683654974368-23a8b4386b41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8M3x8TG91aXNlJTIwQ2FrZSUyMHNsaWNlfGVufDB8MHx8fDE3ODY3NDM3MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Rosa Sepanta",
+    "photographerUrl": "https://unsplash.com/@rosasepanta",
+    "unsplashUrl": "https://unsplash.com/photos/a-piece-of-cake-on-a-white-plate-LzHrmneJJfA"
+  },
+  "cake_rigo_jancsi": {
+    "url": "https://images.unsplash.com/photo-1589152144820-692b189e0b34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8UmlnJUMzJUIzJTIwSmFuY3NpJTIwcmVjaXBlfGVufDB8MHx8fDE3ODY3NDM3Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "James Lee",
+    "photographerUrl": "https://unsplash.com/@picsbyjameslee",
+    "unsplashUrl": "https://unsplash.com/photos/text-Mfjq1hi-lVg"
+  },
+  "cake_runeberg_torte": {
+    "url": "https://images.unsplash.com/photo-1719935508903-77903198bbf6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8Mnx8UnVuZWJlcmclMjBUb3J0ZSUyMGRlc3NlcnR8ZW58MHwwfHx8MTc4Njc0MzcyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "vuk burgic",
+    "photographerUrl": "https://unsplash.com/@vukburga",
+    "unsplashUrl": "https://unsplash.com/photos/a-piece-of-cake-sitting-on-top-of-a-white-plate-F9mg_CbHpxU"
   }
 }
