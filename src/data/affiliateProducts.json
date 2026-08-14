@@ -6,7 +6,9 @@
     "url": "https://go.shopmy.us/p-77597966",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/workshop"],
+    "associatedHubPaths": [
+      "/workshop"
+    ],
     "editorialNote": "The workhorse behind creaming, whipping, and kneading — worth the counter space."
   },
   {
@@ -16,9 +18,16 @@
     "url": "https://go.shopmy.us/p-77598364",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-anatomy", "/technique-library", "/assembly-lab"],
-    "associatedTechniqueIds": ["buttercream_smoothing"],
-    "editorialNote": "Makes smooth sides and even piping dramatically easier — turn the cake, not your wrist."
+    "associatedHubPaths": [
+      "/cake-anatomy",
+      "/technique-library",
+      "/assembly-lab"
+    ],
+    "associatedTechniqueIds": [
+      "buttercream_smoothing"
+    ],
+    "editorialNote": "Makes smooth sides and even piping dramatically easier — turn the cake, not your wrist.",
+    "imageUrl": "https://images.unsplash.com/photo-1708782345056-d526d434a48b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8cmV2b2x2aW5nJTIwY2FrZSUyMGRlY29yYXRpbmclMjB0dXJudGFibGV8ZW58MHwyfHx8MTc4NjcyOTU2OXww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_pan",
@@ -27,7 +36,12 @@
     "url": "https://go.shopmy.us/p-77598720",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-stability", "/cake-blueprints", "/encyclopedia"]
+    "associatedHubPaths": [
+      "/cake-stability",
+      "/cake-blueprints",
+      "/encyclopedia"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8cm91bmQlMjBjYWtlJTIwcGFuJTIwYmFraW5nfGVufDB8Mnx8fDE3ODY3Mjk1NzB8MA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_thermapen",
@@ -36,9 +50,19 @@
     "url": "https://go.shopmy.us/p-77601195",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-stability", "/cake-science", "/cake-blueprints", "/cake-failure-lab", "/encyclopedia", "/assembly-lab"],
-    "associatedTechniqueIds": ["ganache"],
-    "editorialNote": "Instant, accurate reads take the guesswork out of ganache, custard, and syrup temperatures."
+    "associatedHubPaths": [
+      "/cake-stability",
+      "/cake-science",
+      "/cake-blueprints",
+      "/cake-failure-lab",
+      "/encyclopedia",
+      "/assembly-lab"
+    ],
+    "associatedTechniqueIds": [
+      "ganache"
+    ],
+    "editorialNote": "Instant, accurate reads take the guesswork out of ganache, custard, and syrup temperatures.",
+    "imageUrl": "https://images.unsplash.com/photo-1719358156765-bd93d906c06e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZGlnaXRhbCUyMGNvb2tpbmclMjB0aGVybW9tZXRlcnxlbnwwfDJ8fHwxNzg2NzI5NTcwfDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_marble_pastry_board",
@@ -46,7 +70,8 @@
     "category": "equipment",
     "url": "https://go.shopmy.us/p-77603136",
     "network": "shopmy",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1589317169431-124b2fd668e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8bWFyYmxlJTIwcGFzdHJ5JTIwYm9hcmQlMjByb2xsaW5nJTIwcGlufGVufDB8Mnx8fDE3ODY3Mjk1NzF8MA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_measuring_set",
@@ -55,7 +80,10 @@
     "url": "https://go.shopmy.us/p-77603371",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-science"]
+    "associatedHubPaths": [
+      "/cake-science"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1604746207634-2a8e7604a2b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8bWVhc3VyaW5nJTIwY3VwcyUyMHNwb29ucyUyMGJha2luZ3xlbnwwfDJ8fHwxNzg2NzI5NTcxfDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_zester",
@@ -63,7 +91,8 @@
     "category": "equipment",
     "url": "https://go.shopmy.us/p-77174896",
     "network": "shopmy",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1675902836485-28013862afec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y2l0cnVzJTIwemVzdGVyJTIwa2l0Y2hlbiUyMHRvb2x8ZW58MHwyfHx8MTc4NjcyOTU3Mnww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_digital_scale",
@@ -72,8 +101,16 @@
     "url": "https://go.shopmy.us/p-77173367",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-stability", "/cake-science", "/cake-blueprints", "/cake-failure-lab", "/encyclopedia", "/assembly-lab"],
-    "editorialNote": "Weight-based baking is the single biggest upgrade for consistent results, tier after tier."
+    "associatedHubPaths": [
+      "/cake-stability",
+      "/cake-science",
+      "/cake-blueprints",
+      "/cake-failure-lab",
+      "/encyclopedia",
+      "/assembly-lab"
+    ],
+    "editorialNote": "Weight-based baking is the single biggest upgrade for consistent results, tier after tier.",
+    "imageUrl": "https://images.unsplash.com/photo-1698930611790-67bb1522f178?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8a2l0Y2hlbiUyMGRpZ2l0YWwlMjBzY2FsZXxlbnwwfDJ8fHwxNzg2NzI5NTcyfDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_scraper",
@@ -82,8 +119,15 @@
     "url": "https://go.shopmy.us/p-77172564",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-anatomy", "/technique-library", "/assembly-lab"],
-    "associatedTechniqueIds": ["buttercream_smoothing"]
+    "associatedHubPaths": [
+      "/cake-anatomy",
+      "/technique-library",
+      "/assembly-lab"
+    ],
+    "associatedTechniqueIds": [
+      "buttercream_smoothing"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1547483370-bdd86d60c667?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8YmVuY2glMjBzY3JhcGVyJTIwYmFraW5nJTIwdG9vbHxlbnwwfDJ8fHwxNzg2NzI5NTczfDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_leveler",
@@ -92,9 +136,16 @@
     "url": "https://go.shopmy.us/p-77102183",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-anatomy", "/cake-failure-lab", "/assembly-lab"],
-    "associatedTechniqueIds": ["leveling"],
-    "editorialNote": "The fastest fix for uneven, domed, or leaning layers."
+    "associatedHubPaths": [
+      "/cake-anatomy",
+      "/cake-failure-lab",
+      "/assembly-lab"
+    ],
+    "associatedTechniqueIds": [
+      "leveling"
+    ],
+    "editorialNote": "The fastest fix for uneven, domed, or leaning layers.",
+    "imageUrl": "https://images.unsplash.com/photo-1609577737938-fb2139fa4c78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y2FrZSUyMGxldmVsZXIlMjB3aXJlJTIwdG9vbHxlbnwwfDJ8fHwxNzg2NzI5NTc0fDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_decorating_kit",
@@ -103,8 +154,13 @@
     "url": "https://go.shopmy.us/p-77100253",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/technique-library"],
-    "associatedTechniqueIds": ["piping"]
+    "associatedHubPaths": [
+      "/technique-library"
+    ],
+    "associatedTechniqueIds": [
+      "piping"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1659559639439-1f17d55f4042?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8cGlwaW5nJTIwdGlwcyUyMGRlY29yYXRpbmclMjBraXR8ZW58MHwyfHx8MTc4NjcyOTU3NHww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_offset_spatula",
@@ -113,8 +169,16 @@
     "url": "https://go.shopmy.us/p-77099492",
     "network": "shopmy",
     "active": true,
-    "associatedHubPaths": ["/cake-anatomy", "/cake-blueprints", "/technique-library", "/encyclopedia", "/assembly-lab"],
-    "associatedTechniqueIds": ["buttercream_smoothing"]
+    "associatedHubPaths": [
+      "/cake-anatomy",
+      "/cake-blueprints",
+      "/technique-library",
+      "/encyclopedia",
+      "/assembly-lab"
+    ],
+    "associatedTechniqueIds": [
+      "buttercream_smoothing"
+    ]
   },
   {
     "id": "product_vanilla",
@@ -123,7 +187,10 @@
     "url": "https://go.shopmy.us/p-77599215",
     "network": "shopmy",
     "active": true,
-    "associatedIngredientSlugs": ["vanilla-extract"]
+    "associatedIngredientSlugs": [
+      "vanilla-extract"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1785517607507-399732f53dfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8dmFuaWxsYSUyMGJlYW5zJTIwZXh0cmFjdHxlbnwwfDJ8fHwxNzg2NzI5NTc1fDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_flour",
@@ -132,8 +199,13 @@
     "url": "https://go.shopmy.us/p-77599880",
     "network": "shopmy",
     "active": true,
-    "associatedIngredientSlugs": ["cake-flour"],
-    "associatedHubPaths": ["/cake-science"]
+    "associatedIngredientSlugs": [
+      "cake-flour"
+    ],
+    "associatedHubPaths": [
+      "/cake-science"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1581268497089-7a975fb491a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZmxvdXIlMjBiYWtpbmclMjBpbmdyZWRpZW50fGVufDB8Mnx8fDE3ODY3Mjk1NzV8MA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_milk_chocolate",
@@ -142,7 +214,11 @@
     "url": "https://go.shopmy.us/p-77601825",
     "network": "shopmy",
     "active": true,
-    "associatedIngredientSlugs": ["dark-chocolate", "sweet-baking-chocolate"]
+    "associatedIngredientSlugs": [
+      "dark-chocolate",
+      "sweet-baking-chocolate"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1720029106261-0d0396bb270d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8bWlsayUyMGNob2NvbGF0ZSUyMGJhcnMlMjBiYWtpbmd8ZW58MHwyfHx8MTc4NjcyOTU3Nnww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_earl_grey_tea",
@@ -151,7 +227,10 @@
     "url": "https://go.shopmy.us/p-77600915",
     "network": "shopmy",
     "active": true,
-    "associatedPairingCategories": ["tea"]
+    "associatedPairingCategories": [
+      "tea"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1605618826115-fb9e775cfb40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZWFybCUyMGdyZXklMjB0ZWElMjBsb29zZSUyMGxlYWZ8ZW58MHwyfHx8MTc4NjcyOTU3Nnww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_fancy_sprinkles",
@@ -160,7 +239,10 @@
     "url": "https://on.ltk.com/+TFzoOaCIF96-r8OAUCvEfQ",
     "network": "ltk",
     "active": true,
-    "associatedTechniqueIds": ["piping"]
+    "associatedTechniqueIds": [
+      "piping"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1566864399117-22c449669089?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y29sb3JmdWwlMjBzcHJpbmtsZXMlMjBiYWtpbmd8ZW58MHwyfHx8MTc4NjcyOTU3N3ww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_gel_colors",
@@ -169,7 +251,10 @@
     "url": "https://go.shopmy.us/p-77602673",
     "network": "shopmy",
     "active": true,
-    "associatedTechniqueIds": ["piping"]
+    "associatedTechniqueIds": [
+      "piping"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1710488097527-40f2f1bd173f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Zm9vZCUyMGNvbG9yaW5nJTIwZ2VsJTIwYmFraW5nfGVufDB8Mnx8fDE3ODY3Mjk1Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_espresso_machine",
@@ -178,8 +263,11 @@
     "url": "https://on.ltk.com/+J36FilnB_SaVOx966SJi4A",
     "network": "ltk",
     "active": true,
-    "associatedPairingCategories": ["coffee"],
-    "editorialNote": "Completes the experience for any coffee-forward pairing."
+    "associatedPairingCategories": [
+      "coffee"
+    ],
+    "editorialNote": "Completes the experience for any coffee-forward pairing.",
+    "imageUrl": "https://images.unsplash.com/photo-1740803292374-d942a979c5e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZXNwcmVzc28lMjBtYWNoaW5lJTIwa2l0Y2hlbnxlbnwwfDJ8fHwxNzg2NzI5NTc4fDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cocoa_powder",
@@ -188,7 +276,10 @@
     "url": "https://go.shopmy.us/p-77634268",
     "network": "shopmy",
     "active": true,
-    "associatedIngredientSlugs": ["cocoa-powder"]
+    "associatedIngredientSlugs": [
+      "cocoa-powder"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1784983421555-a809e551944b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y29jb2ElMjBwb3dkZXIlMjBiYWtpbmd8ZW58MHwyfHx8MTc4NjcyOTU3OXww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_bourbon_vanilla_paste",
@@ -197,7 +288,9 @@
     "url": "https://go.shopmy.us/p-77637631",
     "network": "shopmy",
     "active": true,
-    "associatedIngredientSlugs": ["vanilla-extract"]
+    "associatedIngredientSlugs": [
+      "vanilla-extract"
+    ]
   },
   {
     "id": "product_gold_leaf",
@@ -205,7 +298,8 @@
     "category": "ingredient",
     "url": "https://go.shopmy.us/p-77638287",
     "network": "shopmy",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1739785938082-92757ce73abe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZWRpYmxlJTIwZ29sZCUyMGxlYWYlMjBkZXNzZXJ0fGVufDB8Mnx8fDE3ODY3Mjk1Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_chestnut_paste",
@@ -214,7 +308,9 @@
     "url": "https://go.shopmy.us/p-77638959",
     "network": "shopmy",
     "active": true,
-    "associatedCakeIds": ["cake_mont_blanc"]
+    "associatedCakeIds": [
+      "cake_mont_blanc"
+    ]
   },
   {
     "id": "product_almond_paste",
@@ -231,7 +327,9 @@
     "url": "https://on.ltk.com/+kJ-JuYybHbGmmKftuwC0lQ",
     "network": "ltk",
     "active": true,
-    "associatedCakeIds": ["cake_pavlova"]
+    "associatedCakeIds": [
+      "cake_pavlova"
+    ]
   },
   {
     "id": "product_champagne_flutes",
@@ -240,7 +338,10 @@
     "url": "https://go.shopmy.us/p-77634550",
     "network": "shopmy",
     "active": true,
-    "associatedPairingCategories": ["champagne"]
+    "associatedPairingCategories": [
+      "champagne"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1565461863445-bc2ae630fc53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y2hhbXBhZ25lJTIwZmx1dGVzJTIwZ2xhc3Nlc3xlbnwwfDJ8fHwxNzg2NzI5NTgwfDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_knife_set",
@@ -248,7 +349,8 @@
     "category": "presentation",
     "url": "https://go.shopmy.us/p-77634801",
     "network": "shopmy",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1621868402792-a5c9fa6866a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y2FrZSUyMHNlcnZpbmclMjBrbmlmZSUyMHNldHxlbnwwfDJ8fHwxNzg2NzI5NTgxfDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_floral_cake_stand",
@@ -256,7 +358,8 @@
     "category": "presentation",
     "url": "https://go.shopmy.us/p-77635295",
     "network": "shopmy",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1556713304-7a0dfeadff38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZmxvcmFsJTIwY2FrZSUyMHN0YW5kJTIwZGVzc2VydCUyMHRhYmxlfGVufDB8Mnx8fDE3ODY3Mjk1ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cabbage_cake_stand",
@@ -264,7 +367,8 @@
     "category": "presentation",
     "url": "https://go.shopmy.us/p-77635455",
     "network": "shopmy",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1708782345056-d526d434a48b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZGVjb3JhdGl2ZSUyMGNlcmFtaWMlMjBjYWtlJTIwc3RhbmR8ZW58MHwyfHx8MTc4NjcyOTU4M3ww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_glass_cake_stand",
@@ -272,7 +376,8 @@
     "category": "presentation",
     "url": "https://go.shopmy.us/p-77635581",
     "network": "shopmy",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1527336938975-6c776d906fd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y292ZXJlZCUyMGdsYXNzJTIwY2FrZSUyMHN0YW5kfGVufDB8Mnx8fDE3ODY3Mjk1ODN8MA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_heart_bundt_pan",
@@ -280,7 +385,8 @@
     "category": "presentation",
     "url": "https://go.shopmy.us/p-77636156",
     "network": "shopmy",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1678229712790-eea4576f4b48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8aGVhcnQlMjBidW5kdCUyMGNha2UlMjBwYW58ZW58MHwyfHx8MTc4NjcyOTU4NHww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_brooklyn_blackout",
@@ -288,7 +394,10 @@
     "category": "featured-cake",
     "url": "https://on.ltk.com/+qzWg2QNWqhU1_ut04UNldQ",
     "network": "ltk",
-    "active": true
+    "active": true,
+    "associatedCakeIds": [
+      "cake_brooklyn_blackout"
+    ]
   },
   {
     "id": "product_cake_inas_coconut",
@@ -296,7 +405,8 @@
     "category": "featured-cake",
     "url": "https://on.ltk.com/+SznFLlHX1juPkI9-KEbVKA",
     "network": "ltk",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1586973944507-dd5e39bf9ca1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y29jb251dCUyMGxheWVyJTIwY2FrZXxlbnwwfDJ8fHwxNzg2NzI5NTg0fDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_chocolate",
@@ -304,7 +414,8 @@
     "category": "featured-cake",
     "url": "https://on.ltk.com/+ptzGNa2OL9EpO24liMpuWA",
     "network": "ltk",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1621868402792-a5c9fa6866a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y2hvY29sYXRlJTIwbGF5ZXIlMjBjYWtlJTIwc2xpY2V8ZW58MHwyfHx8MTc4NjcyOTU4NXww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_jfk_wedding",
@@ -312,7 +423,8 @@
     "category": "featured-cake",
     "url": "https://on.ltk.com/+E9KvbO4mcobsDyMoVOzVPw",
     "network": "ltk",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1503525642560-ecca5e2e49e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZWxlZ2FudCUyMHdoaXRlJTIwd2VkZGluZyUyMGNha2V8ZW58MHwyfHx8MTc4NjcyOTU4NXww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_carrot",
@@ -321,7 +433,9 @@
     "url": "https://on.ltk.com/+sm2PoAfzDnGTwaVL2Bqp-Q",
     "network": "ltk",
     "active": true,
-    "associatedCakeIds": ["cake_carrot_cream_cheese_1980s"]
+    "associatedCakeIds": [
+      "cake_carrot_cream_cheese_1980s"
+    ]
   },
   {
     "id": "product_cake_seven_layer_caramel",
@@ -329,7 +443,8 @@
     "category": "featured-cake",
     "url": "https://on.ltk.com/+PvO31uN38ia9dLW5QwU6FA",
     "network": "ltk",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1685956801990-57ef97b17d45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y2FyYW1lbCUyMGxheWVyJTIwY2FrZXxlbnwwfDJ8fHwxNzg2NzI5NTg2fDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_confetti",
@@ -337,7 +452,8 @@
     "category": "featured-cake",
     "url": "https://on.ltk.com/+pgNpRvEenxjW4uBl7O1oLQ",
     "network": "ltk",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y29uZmV0dGklMjBmdW5mZXR0aSUyMGNha2V8ZW58MHwyfHx8MTc4NjcyOTU4Nnww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_strawberry_guava_entremet",
@@ -345,7 +461,8 @@
     "category": "featured-cake",
     "url": "https://on.ltk.com/+3zfssRlJtKIErCov9n-8PQ",
     "network": "ltk",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1622621746668-59fb299bc4d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8c3RyYXdiZXJyeSUyMGVudHJlbWV0JTIwZGVzc2VydHxlbnwwfDJ8fHwxNzg2NzI5NTg3fDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_red_velvet",
@@ -353,7 +470,8 @@
     "category": "featured-cake",
     "url": "https://on.ltk.com/+WfjNkGaaZfEPgktnWTY4Jg",
     "network": "ltk",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1635117492718-695a17a5977a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8cmVkJTIwdmVsdmV0JTIwY2FrZSUyMHNsaWNlfGVufDB8Mnx8fDE3ODY3Mjk1ODd8MA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_smith_island",
@@ -362,7 +480,9 @@
     "url": "https://on.ltk.com/+8ZSLQ5-97OCojTnWxQEiTg",
     "network": "ltk",
     "active": true,
-    "associatedCakeIds": ["cake_smith_island"]
+    "associatedCakeIds": [
+      "cake_smith_island"
+    ]
   },
   {
     "id": "product_cake_molten_lava",
@@ -371,7 +491,9 @@
     "url": "https://on.ltk.com/+1TdjGQdQTuyRVMBSSQC8bw",
     "network": "ltk",
     "active": true,
-    "associatedCakeIds": ["cake_molten_lava_1990s"]
+    "associatedCakeIds": [
+      "cake_molten_lava_1990s"
+    ]
   },
   {
     "id": "product_cake_hummingbird",
@@ -380,7 +502,9 @@
     "url": "https://go.shopmy.us/p-78607094",
     "network": "shopmy",
     "active": true,
-    "associatedCakeIds": ["cake_hummingbird"]
+    "associatedCakeIds": [
+      "cake_hummingbird"
+    ]
   },
   {
     "id": "product_cake_bridgerton_lemon_lavender",
@@ -388,7 +512,8 @@
     "category": "featured-cake",
     "url": "https://go.shopmy.us/p-78607251",
     "network": "shopmy",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1589648883165-f26ae2f93daa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8bGVtb24lMjBsYXZlbmRlciUyMGZsb3JhbCUyMGNha2V8ZW58MHwyfHx8MTc4NjcyOTU4OHww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_gateau_basque",
@@ -404,6 +529,7 @@
     "category": "featured-cake",
     "url": "https://go.shopmy.us/p-78613803",
     "network": "shopmy",
-    "active": true
+    "active": true,
+    "imageUrl": "https://images.unsplash.com/photo-1662687923931-18c60d75b2fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8dGhyZWUlMjBsYXllciUyMGNob2NvbGF0ZSUyMGNha2V8ZW58MHwyfHx8MTc4NjcyOTU4OXww&ixlib=rb-4.1.0&q=80&w=1080"
   }
 ]

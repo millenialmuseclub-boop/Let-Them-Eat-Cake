@@ -10,5 +10,71 @@
     "photographer": "Jennefer Zacarias",
     "photographerUrl": "https://unsplash.com/@zenchic",
     "unsplashUrl": "https://unsplash.com/photos/white-and-brown-slide-sandals-_9aBsUKxTkc"
+  },
+  "mood-breakup-catharsis": {
+    "url": "https://images.unsplash.com/photo-1476900164809-ff19b8ae5968?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8bW9vZHklMjBzb2xvJTIwY2FuZGxlbGlnaHQlMjBldmVuaW5nfGVufDB8MHx8fDE3ODY3Mjg5MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Mike Labrum",
+    "photographerUrl": "https://unsplash.com/@labrum777",
+    "unsplashUrl": "https://unsplash.com/photos/low-angle-photo-of-lightened-candles-fvl4b1gjpbk"
+  },
+  "mood-cozy-sunday": {
+    "url": "https://images.unsplash.com/photo-1602891867080-1d56348202a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y296eSUyMHN1bmRheSUyMG1vcm5pbmclMjBibGFua2V0JTIwY29mZmVlfGVufDB8MHx8fDE3ODY3Mjg5MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Amin Hasani",
+    "photographerUrl": "https://unsplash.com/@aminhasani",
+    "unsplashUrl": "https://unsplash.com/photos/woman-holding-white-ceramic-mug-BXykPSgROL8"
+  },
+  "mood-pure-hype": {
+    "url": "https://images.unsplash.com/photo-1513151233558-d860c5398176?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y29uZmV0dGklMjBjZWxlYnJhdGlvbiUyMHBhcnR5JTIwZW5lcmd5fGVufDB8MHx8fDE3ODY3Mjg5MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Jason Leung",
+    "photographerUrl": "https://unsplash.com/@ninjason",
+    "unsplashUrl": "https://unsplash.com/photos/selective-focus-photography-of-multicolored-confetti-lot-Xaanw0s0pMk"
+  },
+  "mood-homesick": {
+    "url": "https://images.unsplash.com/photo-1761839258075-585182da7521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZmFtaWx5JTIwa2l0Y2hlbiUyMHRhYmxlJTIwd2FybSUyMG5vc3RhbGdpYXxlbnwwfDB8fHwxNzg2NzI4OTEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Land O'Lakes, Inc.",
+    "photographerUrl": "https://unsplash.com/@landolakesinc",
+    "unsplashUrl": "https://unsplash.com/photos/woman-preparing-food-with-a-girl-watching-sbWDEX4BXmY"
+  },
+  "mood-celebration": {
+    "url": "https://images.unsplash.com/photo-1545672432-284607f52207?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZmVzdGl2ZSUyMGNlbGVicmF0aW9uJTIwdGFibGUlMjBzdHJpbmclMjBsaWdodHN8ZW58MHwwfHx8MTc4NjcyODkxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Anthony Cantin",
+    "photographerUrl": "https://unsplash.com/@arizonanthony",
+    "unsplashUrl": "https://unsplash.com/photos/white-ceramic-plate-JOow1_Wsn-k"
+  },
+  "mood-lazy-weekend": {
+    "url": "https://images.unsplash.com/photo-1626800681383-a069a314d98c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8bGF6eSUyMHdlZWtlbmQlMjBzdW5saWdodCUyMHJlbGF4ZWQlMjBtb3JuaW5nfGVufDB8MHx8fDE3ODY3Mjg5MTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Brandon Cormier",
+    "photographerUrl": "https://unsplash.com/@brandoncormier",
+    "unsplashUrl": "https://unsplash.com/photos/a-bed-with-a-white-comforter-and-a-plant-on-top-of-it-t9eKzG7B14k"
+  },
+  "aesthetic-coquette-vintage": {
+    "url": "https://images.unsplash.com/photo-1652501010397-7b19f1d9edad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8dmludGFnZSUyMHBhc3RlbCUyMGJvdyUyMHJpYmJvbiUyMGFlc3RoZXRpY3xlbnwwfDB8fHwxNzg2NzI4OTE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Izabelly Marques",
+    "photographerUrl": "https://unsplash.com/@izamarques",
+    "unsplashUrl": "https://unsplash.com/photos/a-group-of-pink-and-white-objects-m5IeFFpDatM"
+  },
+  "aesthetic-dark-academia": {
+    "url": "https://images.unsplash.com/photo-1728506972831-193841eb2961?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZGFyayUyMGFjYWRlbWlhJTIwbW9vZHklMjBsaWJyYXJ5JTIwYWVzdGhldGljfGVufDB8MHx8fDE3ODY3Mjg5MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Anastasia Meraki",
+    "photographerUrl": "https://unsplash.com/@turetska09",
+    "unsplashUrl": "https://unsplash.com/photos/a-room-filled-with-lots-of-books-and-a-chandelier-HsHybQQHgWo"
+  },
+  "aesthetic-minimalist-k-style": {
+    "url": "https://images.unsplash.com/photo-1714636608872-048fc9231892?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8bWluaW1hbGlzdCUyMGJlaWdlJTIwYWVzdGhldGljJTIwY2xlYW58ZW58MHwwfHx8MTc4NjcyODkxNXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Pawel Czerwinski",
+    "photographerUrl": "https://unsplash.com/@pawel_czerwinski",
+    "unsplashUrl": "https://unsplash.com/photos/a-white-background-with-a-wavy-design-q-3pnV8MKWE"
+  },
+  "aesthetic-cottagecore": {
+    "url": "https://images.unsplash.com/photo-1491006443886-dab2ec6d0bec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y290dGFnZWNvcmUlMjBmbG9yYWwlMjBydXN0aWMlMjBhZXN0aGV0aWN8ZW58MHwwfHx8MTc4NjcyODkxNXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Muhammed Kara",
+    "photographerUrl": "https://unsplash.com/@muhammedkr",
+    "unsplashUrl": "https://unsplash.com/photos/bed-brown-flowers-4f3LZlUd0vM"
+  },
+  "aesthetic-y2k-maximalist": {
+    "url": "https://images.unsplash.com/photo-1723230435334-f302f30f4743?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8eTJrJTIwY29sb3JmdWwlMjBtYXhpbWFsaXN0JTIwYWVzdGhldGljfGVufDB8MHx8fDE3ODY3Mjg5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "BehindTheTmuna",
+    "photographerUrl": "https://unsplash.com/@behindthetmuna",
+    "unsplashUrl": "https://unsplash.com/photos/a-room-filled-with-lots-of-colorful-decorations-1y-HMz1nCKI"
   }
 }

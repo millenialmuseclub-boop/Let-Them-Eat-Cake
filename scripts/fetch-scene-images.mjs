@@ -16,6 +16,29 @@ if (!accessKey) {
 const scenes = [
   { id: 'curated-collections', query: 'pastry dessert table editorial' },
   { id: 'curated-kitchen', query: 'baking tools kitchen flatlay' },
+  // Cake Personality quiz -- Mood and Aesthetic steps are lifestyle/vibe
+  // concepts, not cake-specific, so they use editorial scene photography
+  // instead of a cake photo (Flavor/Texture use real cake photos instead).
+  { id: 'mood-breakup-catharsis', query: 'moody solo candlelight evening' },
+  { id: 'mood-cozy-sunday', query: 'cozy sunday morning blanket coffee' },
+  { id: 'mood-pure-hype', query: 'confetti celebration party energy' },
+  { id: 'mood-homesick', query: 'family kitchen table warm nostalgia' },
+  { id: 'mood-celebration', query: 'festive celebration table string lights' },
+  { id: 'mood-lazy-weekend', query: 'lazy weekend sunlight relaxed morning' },
+  { id: 'aesthetic-coquette-vintage', query: 'vintage pastel bow ribbon aesthetic' },
+  { id: 'aesthetic-dark-academia', query: 'dark academia moody library aesthetic' },
+  { id: 'aesthetic-minimalist-k-style', query: 'minimalist beige aesthetic clean' },
+  { id: 'aesthetic-cottagecore', query: 'cottagecore floral rustic aesthetic' },
+  { id: 'aesthetic-y2k-maximalist', query: 'y2k colorful maximalist aesthetic' },
+  // Wedding Cake Planner -- style step (weddingAesthetics), editorial wedding-cake scenes.
+  { id: 'wedding-aesthetic-rustic-botanical', query: 'rustic garden wedding cake botanical' },
+  { id: 'wedding-aesthetic-modern-minimalist', query: 'modern minimalist wedding cake' },
+  { id: 'wedding-aesthetic-traditional-luxury', query: 'elegant white tiered wedding cake' },
+  { id: 'wedding-aesthetic-cultural-heritage', query: 'french croquembouche wedding tower' },
+  { id: 'wedding-aesthetic-boho-garden', query: 'boho wildflower wedding decor' },
+  { id: 'wedding-aesthetic-glam-art-deco', query: 'art deco gold wedding elegant' },
+  { id: 'wedding-aesthetic-whimsical-pastel-piping', query: 'pastel piped wedding cake vintage' },
+  { id: 'wedding-aesthetic-coastal-destination', query: 'coastal beach wedding decor' },
 ]
 
 const existing = existsSync(outputPath) ? JSON.parse(readFileSync(outputPath, 'utf-8')) : {}

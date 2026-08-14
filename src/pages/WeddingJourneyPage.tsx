@@ -8,8 +8,22 @@ import { registerBackHandler } from '../lib/backButtonInterceptor'
 import { GUEST_RANGES, type GuestRange } from '../lib/guestRanges'
 import { GuestRangeSelector } from '../components/GuestRangeSelector'
 import { WeddingResultSummary } from '../components/WeddingResultSummary'
+import { InspirationTile } from '../components/InspirationTile'
+import { getRepCakeForKeywords } from '../lib/images'
+import { getSceneImage } from '../lib/sceneImages'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
+import '../styles/celebrateSteps.css'
 import './WeddingJourneyPage.css'
+
+/** Genuinely-matched photographed cake per flavor direction, and an editorial scene photo
+    per wedding aesthetic -- both computed once since the option lists and catalog are static. */
+const FLAVOR_DIRECTION_REP_CAKE: Partial<Record<string, string>> = Object.fromEntries(
+  weddingFlavorDirections.map((d) => [d.id, getRepCakeForKeywords(d.keywords)]),
+)
+
+function weddingAestheticSceneId(aestheticId: string): string {
+  return `wedding-aesthetic-${aestheticId.replace('aesthetic_', '').replace(/_/g, '-')}`
+}
 
 type Step = 'style' | 'event' | 'structure' | 'flavor' | 'result'
 
@@ -138,20 +152,22 @@ export function WeddingJourneyPage() {
           <h2 className="inspiration-heading">What should your wedding cake feel like?</h2>
           <p className="inspiration-subtext">Start with a style — everything after is tailored to it.</p>
           <div className="inspiration-grid">
-            {weddingAesthetics.map((a) => (
-              <button
-                key={a.id}
-                className="inspiration-tile"
-                style={{ background: a.swatchHex, color: tileTextColor(a.swatchHex) }}
-                onClick={() => {
-                  setAestheticId(a.id)
-                  setStep('event')
-                }}
-              >
-                <span className="inspiration-tile-name">{a.name}</span>
-                <span className="inspiration-tile-description">{a.description}</span>
-              </button>
-            ))}
+            {weddingAesthetics.map((a) => {
+              const scene = getSceneImage(weddingAestheticSceneId(a.id))
+              return (
+                <InspirationTile
+                  key={a.id}
+                  name={a.name}
+                  description={a.description}
+                  imageUrl={scene?.url}
+                  style={{ background: a.swatchHex, color: tileTextColor(a.swatchHex) }}
+                  onClick={() => {
+                    setAestheticId(a.id)
+                    setStep('event')
+                  }}
+                />
+              )
+            })}
           </div>
         </>
       )}
@@ -265,15 +281,21 @@ export function WeddingJourneyPage() {
           <p className="inspiration-subtext">Pick the flavor world your cake should live in.</p>
           <div className="inspiration-grid">
             {weddingFlavorDirections.map((d) => (
-              <button key={d.id} className="inspiration-tile wedding-flavor-tile" onClick={() => chooseFlavorDirection(d.id)}>
-                <span className="inspiration-tile-name">{d.name}</span>
-                <span className="inspiration-tile-description">{d.description}</span>
-              </button>
+              <InspirationTile
+                key={d.id}
+                className="wedding-flavor-tile"
+                name={d.name}
+                description={d.description}
+                cakeId={FLAVOR_DIRECTION_REP_CAKE[d.id]}
+                onClick={() => chooseFlavorDirection(d.id)}
+              />
             ))}
-            <button className="inspiration-tile wedding-flavor-tile" onClick={() => chooseFlavorDirection('custom')}>
-              <span className="inspiration-tile-name">Custom</span>
-              <span className="inspiration-tile-description">Pick a cultural tradition to draw flavor from directly.</span>
-            </button>
+            <InspirationTile
+              className="wedding-flavor-tile"
+              name="Custom"
+              description="Pick a cultural tradition to draw flavor from directly."
+              onClick={() => chooseFlavorDirection('custom')}
+            />
           </div>
 
           {flavorDirectionId === 'custom' && (

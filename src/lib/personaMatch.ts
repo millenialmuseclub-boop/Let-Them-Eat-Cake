@@ -28,7 +28,7 @@ const FLAVOR_AXES: (keyof FlavorProfile)[] = ['sweetness', 'fatRichness', 'acidi
 // Every axis is 1-5, so the maximum possible distance across all 4 axes is sqrt(4 * 4^2) = 8.
 const MAX_FLAVOR_DISTANCE = Math.sqrt(FLAVOR_AXES.length * 4 ** 2)
 
-const FLAVOR_PULL_AXIS: Record<FlavorPull, keyof FlavorProfile> = {
+export const FLAVOR_PULL_AXIS: Record<FlavorPull, keyof FlavorProfile> = {
   'bright-tart': 'acidity',
   'rich-buttery': 'fatRichness',
   'bold-intense': 'intensity',

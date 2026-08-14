@@ -18,6 +18,14 @@ import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
 import './AtlasPage.css'
 
+/** One representative, ideally-photographed cake per region -- the region-groups and catalog are both static. */
+const REGION_REP_CAKE: Partial<Record<AtlasDisplayRegion, string>> = Object.fromEntries(
+  ATLAS_DISPLAY_REGIONS.map((region) => {
+    const entries = getCountriesForDisplayRegion(region)
+    return [region, getFirstPhotographedCakeId(entries.map((e) => e.cakeId)) ?? entries[0]?.cakeId]
+  }),
+)
+
 export function AtlasPage() {
   const allCountries = useMemo(() => getAllCountries(), [])
   const [searchParams] = useSearchParams()
@@ -134,12 +142,20 @@ export function AtlasPage() {
           {relatedCountries.length > 0 && (
             <>
               <h2 className="recipe-heading">🌍 Regional Variations</h2>
-              <div className="atlas-chip-row">
-                {relatedCountries.map((c) => (
-                  <button key={c} className="atlas-chip" onClick={() => handleSearch(c)}>
-                    {c}
-                  </button>
-                ))}
+              <div className="discover-feature-grid">
+                {relatedCountries.map((c) => {
+                  const primary = getPrimaryEntry(c)
+                  return (
+                    <DiscoverFeatureCard
+                      key={c}
+                      onClick={() => handleSearch(c)}
+                      title={c}
+                      description={primary?.shortDescription ?? 'See its signature cake'}
+                      cta="Explore →"
+                      cakeId={primary ? (getFirstPhotographedCakeId([primary.cakeId]) ?? primary.cakeId) : undefined}
+                    />
+                  )
+                })}
               </div>
             </>
           )}
@@ -150,15 +166,16 @@ export function AtlasPage() {
         <>
           <section className="atlas-row">
             <h2>🌍 Browse by Region</h2>
-            <div className="atlas-chip-row">
+            <div className="discover-feature-grid">
               {ATLAS_DISPLAY_REGIONS.map((region) => (
-                <button
+                <DiscoverFeatureCard
                   key={region}
-                  className={selectedRegion === region ? 'atlas-chip active' : 'atlas-chip'}
                   onClick={() => setSelectedRegion(selectedRegion === region ? null : region)}
-                >
-                  {region}
-                </button>
+                  title={region}
+                  description="See cakes from this region"
+                  cta={selectedRegion === region ? 'Selected ✓' : 'Explore →'}
+                  cakeId={REGION_REP_CAKE[region]}
+                />
               ))}
             </div>
           </section>

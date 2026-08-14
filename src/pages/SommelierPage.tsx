@@ -532,14 +532,14 @@ function DrinkFirstView({
           ← Back to categories
         </button>
         <h2 className="sommelier-section-heading">{activeGroup.label}</h2>
-        <SearchableSelect
-          items={categoryDrinks}
-          getId={(d) => d.id}
-          getLabel={(d) => d.name}
-          placeholder="Search or choose a drink..."
-          showAllThreshold={20}
-          onSelect={(d) => chooseDrink(d.id)}
-        />
+        <div className="drink-select-list">
+          {categoryDrinks.map((d) => (
+            <button key={d.id} className="card drink-select-row" onClick={() => chooseDrink(d.id)}>
+              <DrinkThumbnail drinkId={d.id} alt={d.name} />
+              <span className="drink-select-name">{d.name}</span>
+            </button>
+          ))}
+        </div>
       </>
     )
   }

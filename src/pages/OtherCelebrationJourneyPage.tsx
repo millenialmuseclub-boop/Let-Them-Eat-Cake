@@ -6,7 +6,20 @@ import { registerBackHandler } from '../lib/backButtonInterceptor'
 import { GUEST_RANGES, type GuestRange } from '../lib/guestRanges'
 import { GuestRangeSelector } from '../components/GuestRangeSelector'
 import { OtherCelebrationResultSummary } from '../components/OtherCelebrationResultSummary'
+import { InspirationTile } from '../components/InspirationTile'
+import { getRepCakeForKeywords } from '../lib/images'
+import { getSceneImage } from '../lib/sceneImages'
+import '../styles/celebrateSteps.css'
 import './OtherCelebrationJourneyPage.css'
+
+/** Editorial scene photo per mood's mood tag, and a genuinely-matched photographed
+    cake per flavor -- both computed once since the option lists and catalog are static. */
+const MOOD_SCENE: Partial<Record<string, string>> = Object.fromEntries(
+  otherCelebrationMoods.map((m) => [m.id, getSceneImage(`mood-${m.mood}`)?.url]),
+)
+const FLAVOR_REP_CAKE: Partial<Record<string, string>> = Object.fromEntries(
+  birthdayFlavors.map((f) => [f.id, getRepCakeForKeywords(f.keywords)]),
+)
 
 type Step = 'occasion' | 'mood' | 'flavor' | 'details' | 'result'
 
@@ -114,17 +127,17 @@ export function OtherCelebrationJourneyPage() {
           <h2 className="inspiration-heading">Mood</h2>
           <div className="inspiration-grid">
             {otherCelebrationMoods.map((m) => (
-              <button
+              <InspirationTile
                 key={m.id}
-                className="inspiration-tile birthday-tile"
+                className="birthday-tile"
+                name={m.name}
+                description={m.description}
+                imageUrl={MOOD_SCENE[m.id]}
                 onClick={() => {
                   setMoodId(m.id)
                   setStep('flavor')
                 }}
-              >
-                <span className="inspiration-tile-name">{m.name}</span>
-                <span className="inspiration-tile-description">{m.description}</span>
-              </button>
+              />
             ))}
           </div>
         </>
@@ -139,14 +152,15 @@ export function OtherCelebrationJourneyPage() {
           <p className="inspiration-subtext">Choose 1-2 flavor directions.</p>
           <div className="inspiration-grid">
             {birthdayFlavors.map((f) => (
-              <button
+              <InspirationTile
                 key={f.id}
-                className={flavorIds.includes(f.id) ? 'inspiration-tile birthday-tile active' : 'inspiration-tile birthday-tile'}
+                className="birthday-tile"
+                active={flavorIds.includes(f.id)}
+                name={f.name}
+                description={f.description}
+                cakeId={FLAVOR_REP_CAKE[f.id]}
                 onClick={() => toggleFlavor(f.id)}
-              >
-                <span className="inspiration-tile-name">{f.name}</span>
-                <span className="inspiration-tile-description">{f.description}</span>
-              </button>
+              />
             ))}
           </div>
           <button className="btn" disabled={flavorIds.length === 0} onClick={() => setStep('details')}>

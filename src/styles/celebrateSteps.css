@@ -1,0 +1,119 @@
+/* Shared step-UI styling for the Wedding/Birthday/Other Celebrations journeys.
+   Previously lived only in WeddingCakePlannerPage.css -- once that page's
+   route was redirected and nothing imported the component anymore, Vite
+   stopped bundling its CSS too, silently unstyling these shared classes
+   across all three journeys. Extracted here as an explicit shared import so
+   that no longer depends on an unrelated page staying reachable. */
+
+.inspiration-heading {
+  margin-top: 8px;
+}
+
+.inspiration-subtext {
+  opacity: 0.75;
+  margin-bottom: 20px;
+}
+
+.inspiration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.inspiration-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  text-align: left;
+  padding: 20px;
+  border-radius: 14px;
+  border: none;
+  min-height: 140px;
+  box-shadow: var(--shadow);
+}
+
+.inspiration-tile .cake-hero-image-thumbnail,
+.inspiration-tile-photo {
+  margin: -20px -20px 12px;
+}
+
+.inspiration-tile-photo img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px 14px 0 0;
+}
+
+.inspiration-tile-name {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.inspiration-tile-description {
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.inspiration-change-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--raspberry);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.wedding-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-end;
+  margin: 20px 0 28px;
+}
+
+.wedding-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.wedding-form input,
+.wedding-form select {
+  font: inherit;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.wedding-form input[type='number'] {
+  width: 90px;
+}
+
+.variant-toggle-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .wedding-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .wedding-form input[type='number'] {
+    width: 100%;
+  }
+}

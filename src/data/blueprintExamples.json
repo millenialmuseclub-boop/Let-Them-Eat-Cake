@@ -18,6 +18,7 @@
     "id": "blueprint_black_forest",
     "name": "Black Forest Cake",
     "description": "A German classic — dark chocolate sponge, cherries, and whipped cream, finished with chocolate shavings and a cherry on top.",
+    "cakeId": "cake_black_forest",
     "layers": [
       { "name": "Chocolate sponge (base)", "note": "A dark cocoa sponge layer, sturdy enough to support the cream and cherries above." },
       { "name": "Kirsch syrup", "note": "A cherry-brandy soak brushed onto the sponge — the source of the cake's signature boozy note." },
@@ -39,6 +40,43 @@
       { "name": "Insert", "note": "A separately frozen component — often a fruit gelée or compote — that stays distinct once sliced." },
       { "name": "Mousse", "note": "The dominant volume of the entremet, piped into the mold around the insert and crémeux, then frozen to set its shape." },
       { "name": "Glaze (top finish)", "note": "Poured over the frozen, unmolded entremet — a mirror glaze or velvet spray gives the finished, glossy professional look." }
+    ]
+  },
+  {
+    "id": "blueprint_sachertorte",
+    "name": "Sachertorte",
+    "description": "A dense Viennese chocolate cake — a single rich sponge split in two, sealed with apricot jam, and finished in a dark chocolate glaze.",
+    "cakeId": "cake_sachertorte",
+    "layers": [
+      { "name": "Chocolate sponge (base)", "note": "A dense, flourless-leaning sponge made from melted chocolate, butter, and whipped egg whites — sturdy enough to slice clean in half." },
+      { "name": "Apricot jam", "note": "Warmed until spreadable and spread between the two sliced layers." },
+      { "name": "Chocolate sponge", "note": "The top half of the same split sponge, stacked back onto the jam." },
+      { "name": "Apricot jam (seal coat)", "note": "A thin coat brushed over the top and sides — this seals in crumbs and gives the glaze something smooth to cling to." },
+      { "name": "Chocolate glaze (top finish)", "note": "Warmed cream poured over chopped dark chocolate, then poured over the whole cake so it drips down the sides and sets glossy." }
+    ]
+  },
+  {
+    "id": "blueprint_kransekake",
+    "name": "Kransekake",
+    "description": "A Scandinavian celebration tower — graduated almond rings piped together with royal icing, with no cake layers or filling at all.",
+    "cakeId": "cake_kransekake",
+    "layers": [
+      { "name": "Almond ring dough", "note": "Almond flour, powdered sugar, and egg whites worked into a firm dough, then shaped into 18 graduated rings from largest to smallest." },
+      { "name": "Baked rings", "note": "Each ring baked separately in its mold until lightly golden, then cooled completely before stacking." },
+      { "name": "Royal icing", "note": "Egg white, powdered sugar, and lemon juice whisked to a stiff icing — piped in zigzags between each ring as the tower is stacked." },
+      { "name": "Stacked tower (top finish)", "note": "Rings stacked largest to smallest, icing zigzags left visible as the decoration — no separate frosting or filling layer." }
+    ]
+  },
+  {
+    "id": "blueprint_baumkuchen",
+    "name": "Baumkuchen",
+    "description": "A German 'tree cake' built entirely from its own batter — dozens of ultra-thin layers broiled on one after another until the tree-ring cross-section appears.",
+    "cakeId": "cake_baumkuchen",
+    "layers": [
+      { "name": "Base batter layer", "note": "A thin layer of butter-egg batter spread over the pan and broiled just until set and golden, 2-3 minutes." },
+      { "name": "Repeated batter layers", "note": "Another thin layer spread directly onto the previous one and broiled again — repeated 10-15 times, with no filling between layers, until the rings are built up." },
+      { "name": "Apricot jam", "note": "Brushed over the cooled, fully-layered cake once broiling is done." },
+      { "name": "Chocolate glaze (top finish)", "note": "An optional finishing glaze over the apricot coat — sliced crosswise, the cake reveals its signature visible tree rings." }
     ]
   }
 ]

@@ -6,8 +6,21 @@ import { registerBackHandler } from '../lib/backButtonInterceptor'
 import { GUEST_RANGES, type GuestRange } from '../lib/guestRanges'
 import { GuestRangeSelector } from '../components/GuestRangeSelector'
 import { BirthdayResultSummary } from '../components/BirthdayResultSummary'
+import { InspirationTile } from '../components/InspirationTile'
+import { getRepCakeForKeywords } from '../lib/images'
+import { getSceneImage } from '../lib/sceneImages'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
+import '../styles/celebrateSteps.css'
 import './BirthdayJourneyPage.css'
+
+/** Editorial scene photo per energy's mood tag, and a genuinely-matched photographed
+    cake per flavor -- both computed once since the option lists and catalog are static. */
+const ENERGY_SCENE: Partial<Record<string, string>> = Object.fromEntries(
+  birthdayEnergies.map((e) => [e.id, getSceneImage(`mood-${e.mood}`)?.url]),
+)
+const FLAVOR_REP_CAKE: Partial<Record<string, string>> = Object.fromEntries(
+  birthdayFlavors.map((f) => [f.id, getRepCakeForKeywords(f.keywords)]),
+)
 
 type Step = 'who' | 'energy' | 'flavor' | 'details' | 'result'
 
@@ -113,17 +126,17 @@ export function BirthdayJourneyPage() {
           <h2 className="inspiration-heading">What kind of birthday are we creating?</h2>
           <div className="inspiration-grid">
             {birthdayEnergies.map((e) => (
-              <button
+              <InspirationTile
                 key={e.id}
-                className="inspiration-tile birthday-tile"
+                className="birthday-tile"
+                name={e.name}
+                description={e.description}
+                imageUrl={ENERGY_SCENE[e.id]}
                 onClick={() => {
                   setEnergyId(e.id)
                   setStep('flavor')
                 }}
-              >
-                <span className="inspiration-tile-name">{e.name}</span>
-                <span className="inspiration-tile-description">{e.description}</span>
-              </button>
+              />
             ))}
           </div>
         </>
@@ -137,17 +150,17 @@ export function BirthdayJourneyPage() {
           <h2 className="inspiration-heading">What will make them happiest?</h2>
           <div className="inspiration-grid">
             {birthdayFlavors.map((f) => (
-              <button
+              <InspirationTile
                 key={f.id}
-                className="inspiration-tile birthday-tile"
+                className="birthday-tile"
+                name={f.name}
+                description={f.description}
+                cakeId={FLAVOR_REP_CAKE[f.id]}
                 onClick={() => {
                   setFlavorId(f.id)
                   setStep('details')
                 }}
-              >
-                <span className="inspiration-tile-name">{f.name}</span>
-                <span className="inspiration-tile-description">{f.description}</span>
-              </button>
+              />
             ))}
           </div>
         </>

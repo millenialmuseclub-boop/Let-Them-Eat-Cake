@@ -85,30 +85,4 @@
   margin: 0;
 }
 
-.atlas-chip-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.atlas-chip {
-  padding: 8px 16px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  color: var(--text);
-  font: inherit;
-  font-size: 14px;
-}
-
-.atlas-chip:hover {
-  border-color: var(--raspberry);
-  color: var(--raspberry);
-}
-
-.atlas-chip.active {
-  background: var(--raspberry);
-  border-color: var(--raspberry);
-  color: white;
-}
 
