@@ -12,6 +12,7 @@ import { SaveButton } from './SaveButton'
 import { OtherCelebrationShareCard } from './OtherCelebrationShareCard'
 import { AffiliateProductSet } from './AffiliateProductSet'
 import { GuestRangeSelector } from './GuestRangeSelector'
+import { useFocusOnMount } from '../lib/useFocusOnMount'
 import './OtherCelebrationResultSummary.css'
 
 /** Only mood/flavor combos with a genuine, defensible cake-inspiration connection get a mapping. */
@@ -56,6 +57,8 @@ export function OtherCelebrationResultSummary({
     [],
   )
 
+  const headingRef = useFocusOnMount<HTMLHeadingElement>()
+
   const cake = getCake(cakeId)
   if (!cake) return null
 
@@ -69,11 +72,13 @@ export function OtherCelebrationResultSummary({
   ])
 
   return (
-    <div className="other-celebration-result-summary">
+    <div className="other-celebration-result-summary ltec-reveal">
       <section className="card wedding-hero">
         <CakeThumbnail cakeId={cake.id} variant="hero" alt={cake.name} />
         <p className="tag">{occasionName}</p>
-        <h1>{cake.name}</h1>
+        <h1 ref={headingRef} tabIndex={-1}>
+          {cake.name}
+        </h1>
         <p className="wedding-hero-description">Matched for your {occasionName.toLowerCase()}.</p>
       </section>
 

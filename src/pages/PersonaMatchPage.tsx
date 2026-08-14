@@ -15,6 +15,8 @@ import { CakeHeroImage } from '../components/CakeHeroImage'
 import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
 import { PersonaShareCard } from '../components/PersonaShareCard'
 import { SaveButton } from '../components/SaveButton'
+import { hapticSuccess } from '../lib/haptics'
+import { useFocusOnMount } from '../lib/useFocusOnMount'
 import './PersonaMatchPage.css'
 
 const FLAVOR_PULL_OPTIONS: { value: FlavorPull; label: string; hint: string }[] = [
@@ -83,9 +85,10 @@ function ResultView({
 }) {
   const image = getPersonalityImage(personality.id)
   const flag = personality.originCountry ? getCountryFlag(personality.originCountry) : undefined
+  const headingRef = useFocusOnMount<HTMLHeadingElement>()
 
   return (
-    <div className="persona-result">
+    <div className="persona-result ltec-reveal">
       <div className="persona-result-hero">
         {image && <img src={image.url} alt="" className="persona-result-hero-image" />}
         <div
@@ -93,7 +96,7 @@ function ResultView({
           style={{ background: image ? undefined : personality.colorHex }}
         >
           <p className="persona-result-eyebrow">Your cake personality is</p>
-          <h1>
+          <h1 ref={headingRef} tabIndex={-1}>
             {personality.name}
             {flag && <span className="persona-result-flag"> {flag}</span>}
           </h1>
@@ -179,6 +182,7 @@ export function PersonaMatchPage() {
   function choose<K extends keyof QuizAnswers>(key: K, value: QuizAnswers[K]) {
     setAnswers((prev) => ({ ...prev, [key]: value }))
     setStep((prev) => (prev < 3 ? ((prev + 1) as Step) : prev))
+    if (isComplete({ ...answers, [key]: value })) hapticSuccess()
   }
 
   if (quizResult) {
@@ -199,11 +203,13 @@ export function PersonaMatchPage() {
       <h1>Cake Personality Quiz</h1>
       <p>Answer four quick questions and we'll match you to a cake personality — plus real cakes to try.</p>
 
-      <p className="persona-step-indicator">Step {step + 1} of 4</p>
+      <p className="persona-step-indicator" role="status" aria-live="polite">
+        Step {step + 1} of 4
+      </p>
       <h2 className="persona-quiz-question">{STEP_QUESTIONS[step]}</h2>
 
       {step === 0 && (
-        <div className="discover-feature-grid">
+        <div className="discover-feature-grid ltec-reveal">
           {MOOD_OPTIONS.map((opt) => {
             const scene = getSceneImage(`mood-${opt.value}`)
             return (
@@ -225,7 +231,7 @@ export function PersonaMatchPage() {
       )}
 
       {step === 1 && (
-        <div className="discover-feature-grid">
+        <div className="discover-feature-grid ltec-reveal">
           {FLAVOR_PULL_OPTIONS.map((opt) => (
             <DiscoverFeatureCard
               key={opt.value}
@@ -240,7 +246,7 @@ export function PersonaMatchPage() {
       )}
 
       {step === 2 && (
-        <div className="discover-feature-grid">
+        <div className="discover-feature-grid ltec-reveal">
           {TEXTURE_OPTIONS.map((opt) => (
             <DiscoverFeatureCard
               key={opt.value}
@@ -255,7 +261,7 @@ export function PersonaMatchPage() {
       )}
 
       {step === 3 && (
-        <div className="discover-feature-grid">
+        <div className="discover-feature-grid ltec-reveal">
           {AESTHETIC_OPTIONS.map((opt) => {
             const scene = getSceneImage(`aesthetic-${opt.value}`)
             return (

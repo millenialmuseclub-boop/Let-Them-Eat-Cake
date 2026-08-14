@@ -10,6 +10,7 @@ import { TimeMachineTimeline } from '../components/TimeMachineTimeline'
 import { CakeHeroImage } from '../components/CakeHeroImage'
 import { SaveButton } from '../components/SaveButton'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
+import { hapticSuccess } from '../lib/haptics'
 import './TimeMachinePage.css'
 
 function scoreColor(score: number): string {
@@ -24,13 +25,19 @@ export function TimeMachinePage() {
   const [dobInput, setDobInput] = useState('')
   const [birthYear, setBirthYear] = useState<number | null>(null)
   const [activeDecadeId, setActiveDecadeId] = useState<string | null>(null)
+  const [dobError, setDobError] = useState(false)
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault()
-    if (!dobInput) return
+    if (!dobInput) {
+      setDobError(true)
+      return
+    }
+    setDobError(false)
     const year = new Date(dobInput).getFullYear()
     setBirthYear(year)
     setActiveDecadeId(getCakeForBirthYear(year).id)
+    hapticSuccess()
   }
 
   function handleTimelineSelect(decadeId: string) {
@@ -52,18 +59,32 @@ export function TimeMachinePage() {
 
       <TimeMachineTimeline decades={decades} activeDecadeId={activeDecadeId} onSelectDecade={handleTimelineSelect} />
 
-      <form className="dob-form" onSubmit={handleSubmit}>
+      <form className="dob-form" onSubmit={handleSubmit} noValidate>
         <label>
           Date of birth
-          <input type="date" value={dobInput} onChange={(e) => setDobInput(e.target.value)} required />
+          <input
+            type="date"
+            value={dobInput}
+            onChange={(e) => {
+              setDobInput(e.target.value)
+              if (dobError) setDobError(false)
+            }}
+            aria-invalid={dobError}
+            aria-describedby={dobError ? 'dob-error' : undefined}
+          />
         </label>
+        {dobError && (
+          <p id="dob-error" className="dob-form-error" role="alert">
+            Enter a date of birth to reveal your cake.
+          </p>
+        )}
         <button type="submit" className="btn">
           Reveal my cake
         </button>
       </form>
 
       {entry && cake && recipe && (
-        <section className="time-machine-result">
+        <section className="time-machine-result ltec-reveal">
           {birthYear !== null && variant && (
             <ShareCard
               year={birthYear}

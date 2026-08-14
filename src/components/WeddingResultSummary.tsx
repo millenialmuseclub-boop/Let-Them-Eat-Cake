@@ -21,6 +21,7 @@ import { WeddingCakeDiagram } from './WeddingCakeDiagram'
 import { AffiliateProductSet } from './AffiliateProductSet'
 import { CelebrateShareCard } from './CelebrateShareCard'
 import { GuestRangeSelector } from './GuestRangeSelector'
+import { useFocusOnMount } from '../lib/useFocusOnMount'
 import './WeddingResultSummary.css'
 
 /** Only decoration styles with a genuine, defensible product connection get a mapping — not every style is forced to match. */
@@ -119,13 +120,16 @@ export function WeddingResultSummary({
   const stylingProducts = getProductsByIds(DECORATION_STYLE_PRODUCT_IDS[result.decorationStyle.id] ?? [])
   const presentationProducts = getProductsByIds(WEDDING_PRESENTATION_IDS)
   const cakeInspirationProducts = getProductsByIds(WEDDING_CAKE_PRODUCT_IDS[result.aesthetic.name] ?? [])
+  const headingRef = useFocusOnMount<HTMLHeadingElement>()
 
   return (
-    <div className="wedding-result-summary">
+    <div className="wedding-result-summary ltec-reveal">
       <section className="card wedding-hero">
         {baseCakeProfile && <CakeThumbnail cakeId={baseCakeProfile.id} variant="hero" alt={conceptName} />}
         <p className="tag">Wedding</p>
-        <h1>{conceptName}</h1>
+        <h1 ref={headingRef} tabIndex={-1}>
+          {conceptName}
+        </h1>
         <p className="wedding-hero-description">{flavorNames.join(' · ')}</p>
       </section>
 

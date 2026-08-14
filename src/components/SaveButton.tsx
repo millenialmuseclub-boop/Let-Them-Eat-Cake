@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { SavedItemType } from '../types/notebook'
 import { isSaved, toggleSaved } from '../lib/notebook'
+import { hapticToggle } from '../lib/haptics'
 import './SaveButton.css'
 
 export function SaveButton({ type, id }: { type: SavedItemType; id: string }) {
@@ -8,6 +9,7 @@ export function SaveButton({ type, id }: { type: SavedItemType; id: string }) {
 
   function handleClick() {
     setSaved(toggleSaved(type, id))
+    hapticToggle()
   }
 
   return (

@@ -13,7 +13,6 @@ export function RecipeShareCard({ cake }: { cake: CakeProfile }) {
       cta="Bake it"
       shareUrl={shareUrl}
       shareText={shareText}
-      filename={`${cake.id}-recipe`}
     />
   )
 }

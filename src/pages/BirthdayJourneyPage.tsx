@@ -10,6 +10,7 @@ import { InspirationTile } from '../components/InspirationTile'
 import { getRepCakeForKeywords } from '../lib/images'
 import { getSceneImage } from '../lib/sceneImages'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
+import { hapticSuccess } from '../lib/haptics'
 import '../styles/celebrateSteps.css'
 import './BirthdayJourneyPage.css'
 
@@ -25,6 +26,14 @@ const FLAVOR_REP_CAKE: Partial<Record<string, string>> = Object.fromEntries(
 type Step = 'who' | 'energy' | 'flavor' | 'details' | 'result'
 
 const WHO_OPTIONS = ['Me', 'Adult', 'Child', 'Teen', 'Milestone Birthday'] as const
+
+const WHO_SCENE: Record<(typeof WHO_OPTIONS)[number], string | undefined> = {
+  Me: getSceneImage('birthday-who-me')?.url,
+  Adult: getSceneImage('birthday-who-adult')?.url,
+  Child: getSceneImage('birthday-who-child')?.url,
+  Teen: getSceneImage('birthday-who-teen')?.url,
+  'Milestone Birthday': getSceneImage('birthday-who-milestone')?.url,
+}
 
 const DIET_OPTIONS: { value: DietTag | 'none'; label: string }[] = [
   { value: 'none', label: 'No constraint' },
@@ -72,6 +81,7 @@ export function BirthdayJourneyPage() {
     const cake = pickBirthdayCake(flavor.keywords, energy.texture, energy.mood)
     setCakeId(cake.id)
     setStep('result')
+    hapticSuccess()
   }
 
   if (step === 'result' && cakeId) {
@@ -96,30 +106,32 @@ export function BirthdayJourneyPage() {
     <main className="page birthday-journey-page">
       <h1>Birthday Cake Planner</h1>
       <p>A personal, playful cake-planning experience — built for the birthday, not a full event plan.</p>
-      <p className="birthday-journey-progress">Step {stepIndex + 1} of 4</p>
+      <p className="birthday-journey-progress" role="status" aria-live="polite">
+        Step {stepIndex + 1} of 4
+      </p>
 
       {step === 'who' && (
-        <>
+        <div className="ltec-reveal">
           <h2 className="inspiration-heading">Who's celebrating?</h2>
           <div className="inspiration-grid">
             {WHO_OPTIONS.map((opt) => (
-              <button
+              <InspirationTile
                 key={opt}
-                className="inspiration-tile birthday-tile"
+                className="birthday-tile"
+                name={opt}
+                imageUrl={WHO_SCENE[opt]}
                 onClick={() => {
                   setWho(opt)
                   setStep('energy')
                 }}
-              >
-                <span className="inspiration-tile-name">{opt}</span>
-              </button>
+              />
             ))}
           </div>
-        </>
+        </div>
       )}
 
       {step === 'energy' && (
-        <>
+        <div className="ltec-reveal">
           <button className="inspiration-change-link" onClick={() => setStep('who')}>
             ← Change who
           </button>
@@ -139,11 +151,11 @@ export function BirthdayJourneyPage() {
               />
             ))}
           </div>
-        </>
+        </div>
       )}
 
       {step === 'flavor' && (
-        <>
+        <div className="ltec-reveal">
           <button className="inspiration-change-link" onClick={() => setStep('energy')}>
             ← Change energy
           </button>
@@ -163,11 +175,11 @@ export function BirthdayJourneyPage() {
               />
             ))}
           </div>
-        </>
+        </div>
       )}
 
       {step === 'details' && (
-        <>
+        <div className="ltec-reveal">
           <button className="inspiration-change-link" onClick={() => setStep('flavor')}>
             ← Change flavor
           </button>
@@ -203,7 +215,7 @@ export function BirthdayJourneyPage() {
               Create My Birthday Cake
             </button>
           </div>
-        </>
+        </div>
       )}
     </main>
   )

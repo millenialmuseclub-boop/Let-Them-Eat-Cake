@@ -9,13 +9,18 @@ import { OtherCelebrationResultSummary } from '../components/OtherCelebrationRes
 import { InspirationTile } from '../components/InspirationTile'
 import { getRepCakeForKeywords } from '../lib/images'
 import { getSceneImage } from '../lib/sceneImages'
+import { hapticSuccess } from '../lib/haptics'
 import '../styles/celebrateSteps.css'
 import './OtherCelebrationJourneyPage.css'
 
-/** Editorial scene photo per mood's mood tag, and a genuinely-matched photographed
-    cake per flavor -- both computed once since the option lists and catalog are static. */
+/** Editorial scene photo per mood's mood tag, per occasion, and a genuinely-matched
+    photographed cake per flavor -- all computed once since the option lists and catalog
+    are static. */
 const MOOD_SCENE: Partial<Record<string, string>> = Object.fromEntries(
   otherCelebrationMoods.map((m) => [m.id, getSceneImage(`mood-${m.mood}`)?.url]),
+)
+const OCCASION_SCENE: Partial<Record<string, string>> = Object.fromEntries(
+  otherCelebrationOccasions.map((o) => [o.id, getSceneImage(`other-${o.id.replace('occasion_', 'occasion-').replace(/_/g, '-')}`)?.url]),
 )
 const FLAVOR_REP_CAKE: Partial<Record<string, string>> = Object.fromEntries(
   birthdayFlavors.map((f) => [f.id, getRepCakeForKeywords(f.keywords)]),
@@ -74,6 +79,7 @@ export function OtherCelebrationJourneyPage() {
     const cake = pickBirthdayCake(keywords, mood.texture, mood.mood)
     setCakeId(cake.id)
     setStep('result')
+    hapticSuccess()
   }
 
   if (step === 'result' && cakeId) {
@@ -97,30 +103,32 @@ export function OtherCelebrationJourneyPage() {
     <main className="page other-celebration-journey-page">
       <h1>Other Celebrations</h1>
       <p>A lighter, faster planning experience for anniversaries, showers, graduations, and more.</p>
-      <p className="other-celebration-progress">Step {stepIndex + 1} of 4</p>
+      <p className="other-celebration-progress" role="status" aria-live="polite">
+        Step {stepIndex + 1} of 4
+      </p>
 
       {step === 'occasion' && (
-        <>
+        <div className="ltec-reveal">
           <h2 className="inspiration-heading">What are you celebrating?</h2>
           <div className="inspiration-grid">
             {otherCelebrationOccasions.map((o) => (
-              <button
+              <InspirationTile
                 key={o.id}
-                className="inspiration-tile birthday-tile"
+                className="birthday-tile"
+                name={o.name}
+                imageUrl={OCCASION_SCENE[o.id]}
                 onClick={() => {
                   setOccasionId(o.id)
                   setStep('mood')
                 }}
-              >
-                <span className="inspiration-tile-name">{o.name}</span>
-              </button>
+              />
             ))}
           </div>
-        </>
+        </div>
       )}
 
       {step === 'mood' && (
-        <>
+        <div className="ltec-reveal">
           <button className="inspiration-change-link" onClick={() => setStep('occasion')}>
             ← Change occasion
           </button>
@@ -140,11 +148,11 @@ export function OtherCelebrationJourneyPage() {
               />
             ))}
           </div>
-        </>
+        </div>
       )}
 
       {step === 'flavor' && (
-        <>
+        <div className="ltec-reveal">
           <button className="inspiration-change-link" onClick={() => setStep('mood')}>
             ← Change mood
           </button>
@@ -166,11 +174,11 @@ export function OtherCelebrationJourneyPage() {
           <button className="btn" disabled={flavorIds.length === 0} onClick={() => setStep('details')}>
             Continue
           </button>
-        </>
+        </div>
       )}
 
       {step === 'details' && (
-        <>
+        <div className="ltec-reveal">
           <button className="inspiration-change-link" onClick={() => setStep('flavor')}>
             ← Change flavor
           </button>
@@ -194,7 +202,7 @@ export function OtherCelebrationJourneyPage() {
               Create My Cake
             </button>
           </div>
-        </>
+        </div>
       )}
     </main>
   )

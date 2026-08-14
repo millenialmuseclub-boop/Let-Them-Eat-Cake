@@ -81,7 +81,10 @@ for (const product of products) {
   if (product.associatedCakeIds?.length) continue
 
   const query = encodeURIComponent(QUERY_OVERRIDES[product.id] ?? product.name)
-  const res = await fetch(`https://api.unsplash.com/search/photos?query=${query}&per_page=10&orientation=squarish`, {
+  // No orientation filter -- narrow multi-word queries frequently return zero results when
+  // combined with orientation=squarish, even though plenty of usable photos exist in other
+  // crops; the card CSS already uses object-fit: cover so any orientation works.
+  const res = await fetch(`https://api.unsplash.com/search/photos?query=${query}&per_page=10`, {
     headers: { Authorization: `Client-ID ${accessKey}` },
   })
 

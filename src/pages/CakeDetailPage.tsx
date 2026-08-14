@@ -105,7 +105,6 @@ export function CakeDetailPage() {
           cta="Discover its story"
           shareUrl={typeof window !== 'undefined' ? window.location.href : ''}
           shareText={`${cake.name} — from the Let Them Eat Cake Encyclopedia 🎂`}
-          filename={`${cake.id}-cake`}
         />
       </section>
 

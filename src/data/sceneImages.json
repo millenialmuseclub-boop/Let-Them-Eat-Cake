@@ -124,5 +124,89 @@
     "photographer": "Fotógrafo Samuel Cruz",
     "photographerUrl": "https://unsplash.com/@fotografosamuelcruz",
     "unsplashUrl": "https://unsplash.com/photos/wedding-ceremony-on-a-sunny-beach-with-guests-enZjCNR807k"
+  },
+  "birthday-who-me": {
+    "url": "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8c29sbyUyMGJpcnRoZGF5JTIwY2FuZGxlJTIwY2VsZWJyYXRpb258ZW58MHwwfHx8MTc4NjczNzU2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Annie Spratt",
+    "photographerUrl": "https://unsplash.com/@anniespratt",
+    "unsplashUrl": "https://unsplash.com/photos/round-fondant-cake-with-happy-birthday-candle-M20ylqCzSZw"
+  },
+  "birthday-who-adult": {
+    "url": "https://images.unsplash.com/photo-1531956531700-dc0ee0f1f9a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8YWR1bHQlMjBiaXJ0aGRheSUyMHBhcnR5JTIwY2VsZWJyYXRpb258ZW58MHwwfHx8MTc4NjczNzU2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Lidya Nada",
+    "photographerUrl": "https://unsplash.com/@lidyanada",
+    "unsplashUrl": "https://unsplash.com/photos/birthday-decor-lot-MD_ha01Bk7c"
+  },
+  "birthday-who-child": {
+    "url": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8a2lkcyUyMGJpcnRoZGF5JTIwcGFydHklMjBiYWxsb29uc3xlbnwwfDB8fHwxNzg2NzM3NTY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Adi Goldstein",
+    "photographerUrl": "https://unsplash.com/@adigold1",
+    "unsplashUrl": "https://unsplash.com/photos/selective-focus-photography-of-assorted-color-balloons-Hli3R6LKibo"
+  },
+  "birthday-who-teen": {
+    "url": "https://images.unsplash.com/photo-1714978444614-7a197c2309ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8dGVlbmFnZXIlMjBiaXJ0aGRheSUyMHBhcnR5JTIwZnJpZW5kc3xlbnwwfDB8fHwxNzg2NzM3NTY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Vitaly Gariev",
+    "photographerUrl": "https://unsplash.com/@silverkblack",
+    "unsplashUrl": "https://unsplash.com/photos/a-group-of-people-standing-around-a-cake-with-candles-on-it-E1qHLWspl-k"
+  },
+  "birthday-who-milestone": {
+    "url": "https://images.unsplash.com/photo-1527540306398-8b8794516f95?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8bWlsZXN0b25lJTIwYmlydGhkYXklMjBnb2xkJTIwYmFsbG9vbnN8ZW58MHwwfHx8MTc4NjczNzU2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Marina Barcelos",
+    "photographerUrl": "https://unsplash.com/@marinahgattuso",
+    "unsplashUrl": "https://unsplash.com/photos/grey-balloons-ahuHrVjcWN0"
+  },
+  "other-occasion-anniversary": {
+    "url": "https://images.unsplash.com/photo-1556125574-d7f27ec36a06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8YW5uaXZlcnNhcnklMjBjZWxlYnJhdGlvbiUyMGNhbmRsZWxpdCUyMHRhYmxlfGVufDB8MHx8fDE3ODY3Mzc1NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Andrea Mininni",
+    "photographerUrl": "https://unsplash.com/@_andreamin",
+    "unsplashUrl": "https://unsplash.com/photos/clear-drinking-glass-on-white-table-VLlkOJdzLG0"
+  },
+  "other-occasion-baby-shower": {
+    "url": "https://images.unsplash.com/photo-1738330943863-0f45d97e3455?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8YmFieSUyMHNob3dlciUyMHBhc3RlbCUyMGRlY29yfGVufDB8MHx8fDE3ODY3Mzc1Njd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Ashwin Tanjore",
+    "photographerUrl": "https://unsplash.com/@ashwintanjore",
+    "unsplashUrl": "https://unsplash.com/photos/a-table-topped-with-plates-and-cups-next-to-a-balloon-PJTPq7_YK20"
+  },
+  "other-occasion-engagement": {
+    "url": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZW5nYWdlbWVudCUyMGNlbGVicmF0aW9uJTIwdG9hc3R8ZW58MHwwfHx8MTc4NjczNzU2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Al Elmes",
+    "photographerUrl": "https://unsplash.com/@alelmes",
+    "unsplashUrl": "https://unsplash.com/photos/people-raising-wine-glass-in-selective-focus-photography-ULHxWq8reao"
+  },
+  "other-occasion-graduation": {
+    "url": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Z3JhZHVhdGlvbiUyMGNlbGVicmF0aW9uJTIwY2FwfGVufDB8MHx8fDE3ODY3Mzc1Njh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Pang Yuhao",
+    "photographerUrl": "https://unsplash.com/@yuhao",
+    "unsplashUrl": "https://unsplash.com/photos/people-throwing-hats-on-air-_kd5cxwZOK4"
+  },
+  "other-occasion-dinner-party": {
+    "url": "https://images.unsplash.com/photo-1603298573248-3e98441a0d6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZWxlZ2FudCUyMGRpbm5lciUyMHBhcnR5JTIwdGFibGUlMjBzZXR0aW5nfGVufDB8MHx8fDE3ODY3Mzc1Njh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Gabriella Clare Marino",
+    "photographerUrl": "https://unsplash.com/@gabiontheroad",
+    "unsplashUrl": "https://unsplash.com/photos/white-table-cloth-with-plates-and-glasses-lcGz6gZsSsk"
+  },
+  "other-occasion-retirement": {
+    "url": "https://images.unsplash.com/photo-1628336707631-68131ca720c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8cmV0aXJlbWVudCUyMGNlbGVicmF0aW9uJTIwdG9hc3R8ZW58MHwwfHx8MTc4NjczNzU2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Quan Nguyen",
+    "photographerUrl": "https://unsplash.com/@skylakestudio",
+    "unsplashUrl": "https://unsplash.com/photos/people-holding-clear-glass-bottles-during-daytime-yDSe7sggb9Q"
+  },
+  "other-occasion-holiday": {
+    "url": "https://images.unsplash.com/photo-1692883982002-35a15de5f695?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8aG9saWRheSUyMGNlbGVicmF0aW9uJTIwZmVzdGl2ZSUyMHRhYmxlfGVufDB8MHx8fDE3ODY3Mzc1NzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Shayla Bruins",
+    "photographerUrl": "https://unsplash.com/@shaylabruins",
+    "unsplashUrl": "https://unsplash.com/photos/a-table-with-a-white-table-cloth-and-a-silver-vase-filled-with-red-flowers-IcE5fO92Gkc"
+  },
+  "other-occasion-corporate": {
+    "url": "https://images.unsplash.com/photo-1758520144658-c87be518b87e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Y29ycG9yYXRlJTIwY2VsZWJyYXRpb24lMjBvZmZpY2UlMjBwYXJ0eXxlbnwwfDB8fHwxNzg2NzM3NTcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Vitaly Gariev",
+    "photographerUrl": "https://unsplash.com/@silverkblack",
+    "unsplashUrl": "https://unsplash.com/photos/people-in-party-hats-dancing-in-an-office-at-work-celebration-Mgja3hOHoL8"
+  },
+  "other-occasion-just-because": {
+    "url": "https://images.unsplash.com/photo-1543168256-8133cc8e3ee4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8c3BvbnRhbmVvdXMlMjBjZWxlYnJhdGlvbiUyMGZyaWVuZHMlMjB0YWJsZXxlbnwwfDB8fHwxNzg2NzM3NTcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Maddi Bazzocco",
+    "photographerUrl": "https://unsplash.com/@maddibazzocco",
+    "unsplashUrl": "https://unsplash.com/photos/fruits-on-table--Wi2owaQcH8"
   }
 }

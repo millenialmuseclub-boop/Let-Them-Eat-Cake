@@ -12,6 +12,7 @@ import { InspirationTile } from '../components/InspirationTile'
 import { getRepCakeForKeywords } from '../lib/images'
 import { getSceneImage } from '../lib/sceneImages'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
+import { hapticSuccess } from '../lib/haptics'
 import '../styles/celebrateSteps.css'
 import './WeddingJourneyPage.css'
 
@@ -115,6 +116,7 @@ export function WeddingJourneyPage() {
     }
     setResult(generateWeddingPlan(input))
     setStep('result')
+    hapticSuccess()
   }
 
   function chooseFlavorDirection(id: string) {
@@ -143,12 +145,12 @@ export function WeddingJourneyPage() {
     <main className="page wedding-journey-page">
       <h1>Wedding Cake Planner</h1>
       <p>A design consultation for your wedding cake — style, structure, and flavor, built specifically for a wedding.</p>
-      <p className="wedding-journey-progress">
+      <p className="wedding-journey-progress" role="status" aria-live="polite">
         Step {stepIndex + 1} of 4
       </p>
 
       {step === 'style' && (
-        <>
+        <div className="ltec-reveal">
           <h2 className="inspiration-heading">What should your wedding cake feel like?</h2>
           <p className="inspiration-subtext">Start with a style — everything after is tailored to it.</p>
           <div className="inspiration-grid">
@@ -169,11 +171,11 @@ export function WeddingJourneyPage() {
               )
             })}
           </div>
-        </>
+        </div>
       )}
 
       {step === 'event' && (
-        <>
+        <div className="ltec-reveal">
           <button className="inspiration-change-link" onClick={() => setStep('style')}>
             ← Change style
           </button>
@@ -222,11 +224,11 @@ export function WeddingJourneyPage() {
               Continue
             </button>
           </div>
-        </>
+        </div>
       )}
 
       {step === 'structure' && (
-        <>
+        <div className="ltec-reveal">
           <button className="inspiration-change-link" onClick={() => setStep('event')}>
             ← Change event details
           </button>
@@ -269,11 +271,11 @@ export function WeddingJourneyPage() {
               Continue
             </button>
           </div>
-        </>
+        </div>
       )}
 
       {step === 'flavor' && (
-        <>
+        <div className="ltec-reveal">
           <button className="inspiration-change-link" onClick={() => setStep('structure')}>
             ← Change structure
           </button>
@@ -315,7 +317,7 @@ export function WeddingJourneyPage() {
               </button>
             </div>
           )}
-        </>
+        </div>
       )}
     </main>
   )

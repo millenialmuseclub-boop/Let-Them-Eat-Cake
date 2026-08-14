@@ -48,7 +48,6 @@ export function BakingTraditionDetailPage() {
           cta="Explore the tradition"
           shareUrl={typeof window !== 'undefined' ? window.location.href : ''}
           shareText={`${tradition.title}: ${tradition.description}`}
-          filename={`${tradition.id}-tradition`}
         />
       </section>
     </main>

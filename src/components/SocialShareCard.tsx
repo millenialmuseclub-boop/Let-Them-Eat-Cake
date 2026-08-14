@@ -1,7 +1,7 @@
-import { useRef, useState } from 'react'
-import { toBlob } from 'html-to-image'
+import { useEffect, useState } from 'react'
 import { Capacitor } from '@capacitor/core'
 import { Share } from '@capacitor/share'
+import { hapticSuccess } from '../lib/haptics'
 import './SocialShareCard.css'
 
 export interface SocialShareCardProps {
@@ -14,48 +14,93 @@ export interface SocialShareCardProps {
   cta: string
   shareUrl: string
   shareText: string
-  filename: string
 }
 
-export function SocialShareCard({ eyebrow, title, subtitle, detailLines, bodyLabel, bodyText, cta, shareUrl, shareText, filename }: SocialShareCardProps) {
-  const cardRef = useRef<HTMLDivElement>(null)
-  const [sharing, setSharing] = useState(false)
-  const [copied, setCopied] = useState(false)
+type ShareState = 'idle' | 'sharing' | 'shared' | 'copied' | 'error'
 
-  async function withTimeout<T>(promise: Promise<T>): Promise<T> {
-    return Promise.race([promise, new Promise<never>((_, reject) => setTimeout(() => reject(new Error('Image generation timed out')), 15000))])
+function isUserCancelled(err: unknown): boolean {
+  if (!(err instanceof Error)) return false
+  return err.name === 'AbortError' || /cancel/i.test(err.message)
+}
+
+/** Tries the modern Clipboard API first, then falls back to the older execCommand
+    approach -- some embedded/locked-down webviews block the async Clipboard API
+    outright, and silently doing nothing in that case is exactly the "sharing doesn't
+    work" bug this replaces. */
+async function copyToClipboard(text: string): Promise<boolean> {
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(text)
+      return true
+    }
+  } catch {
+    // Fall through to the execCommand fallback below.
   }
+  try {
+    const textarea = document.createElement('textarea')
+    textarea.value = text
+    textarea.style.position = 'fixed'
+    textarea.style.opacity = '0'
+    document.body.appendChild(textarea)
+    textarea.select()
+    const ok = document.execCommand('copy')
+    document.body.removeChild(textarea)
+    return ok
+  } catch {
+    return false
+  }
+}
+
+export function SocialShareCard({ eyebrow, title, subtitle, detailLines, bodyLabel, bodyText, cta, shareUrl, shareText }: SocialShareCardProps) {
+  const [state, setState] = useState<ShareState>('idle')
+
+  useEffect(() => {
+    if (state !== 'shared' && state !== 'copied') return
+    const timer = setTimeout(() => setState('idle'), 2500)
+    return () => clearTimeout(timer)
+  }, [state])
 
   async function handleShare() {
-    setSharing(true)
+    setState('sharing')
+    const fullText = `${shareText} ${shareUrl}`
+
     try {
       if (Capacitor.isNativePlatform()) {
         // Native iOS/Android: navigator.share() is unreliable inside a Capacitor
         // WebView on both platforms, so this always goes through the real native
-        // share sheet instead. Text + deep link only -- attaching the generated
-        // PNG natively would need @capacitor/filesystem too (native `files` needs
-        // a real file:// URI, not a blob), which isn't installed.
+        // share sheet instead.
         await Share.share({ title, text: shareText, url: shareUrl, dialogTitle: title })
-      } else if (cardRef.current && typeof navigator !== 'undefined' && 'share' in navigator) {
-        const blob = await withTimeout(toBlob(cardRef.current, { pixelRatio: 4 }))
-        const files = blob ? [new File([blob], `${filename}.png`, { type: 'image/png' })] : undefined
-        const canShareFiles = files && navigator.canShare?.({ files })
-        await navigator.share(canShareFiles ? { files, title, text: shareText, url: shareUrl } : { title, text: shareText, url: shareUrl })
-      } else {
-        await navigator.clipboard.writeText(`${shareText} ${shareUrl}`)
-        setCopied(true)
-        setTimeout(() => setCopied(false), 2000)
+        hapticSuccess()
+        setState('shared')
+        return
       }
-    } catch {
-      // User cancelled the share sheet, or sharing failed — nothing to do.
-    } finally {
-      setSharing(false)
+
+      if (typeof navigator !== 'undefined' && 'share' in navigator) {
+        await navigator.share({ title, text: shareText, url: shareUrl })
+        setState('shared')
+        return
+      }
+
+      const copied = await copyToClipboard(fullText)
+      setState(copied ? 'copied' : 'error')
+    } catch (err) {
+      if (isUserCancelled(err)) {
+        setState('idle')
+        return
+      }
+      // The native or Web Share API failed for a real reason (not a user cancel) --
+      // fall back to clipboard rather than leaving the user with no outcome at all.
+      const copied = await copyToClipboard(fullText)
+      setState(copied ? 'copied' : 'error')
     }
   }
 
+  const buttonLabel =
+    state === 'sharing' ? 'Sharing…' : state === 'shared' ? 'Shared!' : state === 'copied' ? 'Link Copied!' : state === 'error' ? 'Try Again' : cta
+
   return (
-    <div className="social-share-wrap">
-      <div ref={cardRef} className="social-share-card">
+    <div className="social-share-wrap ltec-reveal">
+      <div className="social-share-card">
         <p className="social-share-brand">Let Them Eat Cake</p>
         <p className="social-share-eyebrow">{eyebrow}</p>
         <h2 className="social-share-title">{title}</h2>
@@ -81,9 +126,12 @@ export function SocialShareCard({ eyebrow, title, subtitle, detailLines, bodyLab
       </div>
 
       <div className="social-share-actions">
-        <button className="btn" onClick={handleShare} disabled={sharing}>
-          {sharing ? 'Sharing…' : copied ? 'Copied!' : 'Share'}
+        <button className="btn" onClick={handleShare} disabled={state === 'sharing'}>
+          {buttonLabel}
         </button>
+        <p className="social-share-status" role="status" aria-live="polite">
+          {state === 'error' && `Couldn't share automatically — copy this link: ${shareUrl}`}
+        </p>
       </div>
     </div>
   )

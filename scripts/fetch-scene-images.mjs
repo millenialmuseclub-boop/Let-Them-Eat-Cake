@@ -39,9 +39,33 @@ const scenes = [
   { id: 'wedding-aesthetic-glam-art-deco', query: 'art deco gold wedding elegant' },
   { id: 'wedding-aesthetic-whimsical-pastel-piping', query: 'pastel piped wedding cake vintage' },
   { id: 'wedding-aesthetic-coastal-destination', query: 'coastal beach wedding decor' },
+  // Birthday Cake Planner -- "Who's celebrating?" step, editorial life-stage scenes.
+  { id: 'birthday-who-me', query: 'solo birthday candle celebration' },
+  { id: 'birthday-who-adult', query: 'adult birthday party celebration' },
+  { id: 'birthday-who-child', query: 'kids birthday party balloons' },
+  { id: 'birthday-who-teen', query: 'teenager birthday party friends' },
+  { id: 'birthday-who-milestone', query: 'milestone birthday gold balloons' },
+  // Other Celebrations -- occasion step, editorial scenes per occasion type.
+  { id: 'other-occasion-anniversary', query: 'anniversary celebration candlelit table' },
+  { id: 'other-occasion-baby-shower', query: 'baby shower pastel decor' },
+  { id: 'other-occasion-engagement', query: 'engagement celebration toast' },
+  { id: 'other-occasion-graduation', query: 'graduation celebration cap' },
+  { id: 'other-occasion-dinner-party', query: 'elegant dinner party table setting' },
+  { id: 'other-occasion-retirement', query: 'retirement celebration toast' },
+  { id: 'other-occasion-holiday', query: 'holiday celebration festive table' },
+  { id: 'other-occasion-corporate', query: 'corporate celebration office party' },
+  { id: 'other-occasion-just-because', query: 'spontaneous celebration friends table' },
 ]
 
 const existing = existsSync(outputPath) ? JSON.parse(readFileSync(outputPath, 'utf-8')) : {}
+
+// Track photo IDs already in use so a narrow/overlapping query can't silently ship the
+// same photo under two different scene ids (bit us once already in the affiliate-product
+// fetch script -- same fix here, compared via the URL slug for consistency).
+function urlSlug(url) {
+  return url.match(/photo-([a-zA-Z0-9_-]+)\?/)?.[1]
+}
+const usedPhotoIds = new Set(Object.values(existing).map((img) => urlSlug(img.url)))
 
 for (const scene of scenes) {
   if (existing[scene.id]) {
@@ -50,20 +74,21 @@ for (const scene of scenes) {
   }
 
   const query = encodeURIComponent(scene.query)
-  const res = await fetch(`https://api.unsplash.com/search/photos?query=${query}&per_page=1&orientation=landscape`, {
+  const res = await fetch(`https://api.unsplash.com/search/photos?query=${query}&per_page=10&orientation=landscape`, {
     headers: { Authorization: `Client-ID ${accessKey}` },
   })
 
   if (!res.ok) {
     console.warn(`Skipping ${scene.id}: Unsplash returned ${res.status}`)
+    if (res.status === 403) break
     continue
   }
 
   const data = await res.json()
-  const photo = data.results?.[0]
+  const photo = (data.results ?? []).find((p) => !usedPhotoIds.has(urlSlug(p.urls.regular)))
 
   if (!photo) {
-    console.warn(`No match found for ${scene.id}`)
+    console.warn(`No unused match found for ${scene.id}`)
     continue
   }
 
@@ -73,6 +98,7 @@ for (const scene of scenes) {
     photographerUrl: photo.user.links.html,
     unsplashUrl: photo.links.html,
   }
+  usedPhotoIds.add(urlSlug(photo.urls.regular))
   console.log(`Fetched image for ${scene.id}`)
 
   writeFileSync(outputPath, JSON.stringify(existing, null, 2) + '\n')

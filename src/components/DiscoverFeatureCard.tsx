@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { CakeThumbnail } from './CakeThumbnail'
+import { hapticSelect } from '../lib/haptics'
 import './DiscoverFeatureCard.css'
 
 function DiscoverFeatureCardBody({
@@ -76,7 +77,13 @@ export function DiscoverFeatureCard(props: DiscoverFeatureCardProps) {
   }
 
   return (
-    <button className="discover-feature-card" onClick={onClick}>
+    <button
+      className="discover-feature-card"
+      onClick={() => {
+        hapticSelect()
+        onClick?.()
+      }}
+    >
       <DiscoverFeatureCardBody {...body} />
     </button>
   )

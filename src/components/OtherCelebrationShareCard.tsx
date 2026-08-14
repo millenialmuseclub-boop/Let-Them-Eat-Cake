@@ -23,7 +23,6 @@ export function OtherCelebrationShareCard({
       cta="Plan your own"
       shareUrl={shareUrl}
       shareText={shareText}
-      filename={`${cake.id}-celebration-cake`}
     />
   )
 }

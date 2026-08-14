@@ -62,7 +62,10 @@ export function AtlasWorldMap({ countries, selectedCountry, onSelectCountry }: A
             return (
               <Marker key={country} coordinates={coordinates}>
                 <circle
-                  r={12}
+                  // A larger invisible hit-area than the visible dot (below) -- at the map's
+                  // default zoom on a phone-width viewport the SVG is scaled down enough that
+                  // r=12 rendered under the WCAG 24x24px touch-target minimum.
+                  r={34}
                   fill="transparent"
                   className="atlas-map-pin-hitarea"
                   tabIndex={0}

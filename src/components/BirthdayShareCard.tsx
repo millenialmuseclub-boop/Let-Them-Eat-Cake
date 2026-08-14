@@ -14,7 +14,6 @@ export function BirthdayShareCard({ cake, energyName, flavorName }: { cake: Cake
       cta="Create your own"
       shareUrl={shareUrl}
       shareText={shareText}
-      filename={`${cake.id}-birthday-cake`}
     />
   )
 }

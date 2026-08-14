@@ -22,6 +22,17 @@
   color: var(--text);
 }
 
+.dob-form input[aria-invalid='true'] {
+  border-color: var(--raspberry);
+}
+
+.dob-form-error {
+  flex-basis: 100%;
+  color: var(--raspberry);
+  font-size: 13px;
+  margin: -8px 0 0;
+}
+
 .time-machine-result .card {
   margin-bottom: 24px;
 }

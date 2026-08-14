@@ -50,7 +50,6 @@ export function CollectionDetailPage() {
           cta="Explore the collection"
           shareUrl={typeof window !== 'undefined' ? window.location.href : ''}
           shareText={`${collection.title}: ${collection.description}`}
-          filename={`${collection.id}-collection`}
         />
       </section>
     </main>

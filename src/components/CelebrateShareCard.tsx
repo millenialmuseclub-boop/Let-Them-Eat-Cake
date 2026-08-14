@@ -21,7 +21,6 @@ export function CelebrateShareCard({ result }: { result: WeddingPlanResult }) {
       cta="Designed with Let Them Eat Cake"
       shareUrl={shareUrl}
       shareText={shareText}
-      filename="celebration-cake-concept"
     />
   )
 }

@@ -15,7 +15,6 @@ export function SommelierShareCard({ cake, drink, score }: { cake: CakeProfile; 
       cta="Find your pairing"
       shareUrl={shareUrl}
       shareText={shareText}
-      filename={`${cake.id}-${drink.id}-pairing`}
     />
   )
 }

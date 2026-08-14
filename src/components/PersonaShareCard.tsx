@@ -13,7 +13,6 @@ export function PersonaShareCard({ personality, deepLinkPath }: { personality: C
       cta="What's your cake?"
       shareUrl={shareUrl}
       shareText={shareText}
-      filename={`${personality.id}-cake-personality`}
     />
   )
 }

@@ -12,6 +12,7 @@ import { SaveButton } from './SaveButton'
 import { BirthdayShareCard } from './BirthdayShareCard'
 import { AffiliateProductSet } from './AffiliateProductSet'
 import { GuestRangeSelector } from './GuestRangeSelector'
+import { useFocusOnMount } from '../lib/useFocusOnMount'
 import './BirthdayResultSummary.css'
 
 /** Only flavor/energy combos with a genuine, defensible cake-inspiration connection get a mapping. */
@@ -58,6 +59,8 @@ export function BirthdayResultSummary({
     [],
   )
 
+  const headingRef = useFocusOnMount<HTMLHeadingElement>()
+
   const cake = getCake(cakeId)
   if (!cake) return null
 
@@ -73,11 +76,13 @@ export function BirthdayResultSummary({
   ])
 
   return (
-    <div className="birthday-result-summary">
+    <div className="birthday-result-summary ltec-reveal">
       <section className="card wedding-hero">
         <CakeThumbnail cakeId={cake.id} variant="hero" alt={cake.name} />
         <p className="tag">Birthday</p>
-        <h1>{cake.name}</h1>
+        <h1 ref={headingRef} tabIndex={-1}>
+          {cake.name}
+        </h1>
         <p className="wedding-hero-description">
           Perfect for {whoLabel}.
         </p>

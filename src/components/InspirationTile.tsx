@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react'
 import { CakeThumbnail } from './CakeThumbnail'
+import { hapticSelect } from '../lib/haptics'
 
 /** A choice tile for the Celebrate journeys (Wedding/Birthday/Other Celebrations) --
     shows a real cake photo, editorial scene photo, or falls back to the existing
@@ -27,7 +28,10 @@ export function InspirationTile({
     <button
       className={`inspiration-tile${className ? ` ${className}` : ''}${active ? ' active' : ''}`}
       style={style}
-      onClick={onClick}
+      onClick={() => {
+        hapticSelect()
+        onClick()
+      }}
     >
       {cakeId ? (
         <CakeThumbnail cakeId={cakeId} alt={name} variant="thumbnail" />

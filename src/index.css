@@ -127,10 +127,15 @@ textarea:focus-visible,
   color: white;
   font-weight: 600;
   font-size: 15px;
+  transition: transform 0.12s ease;
 }
 
 .btn:hover {
   filter: brightness(1.05);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
 }
 
 .btn:disabled {
@@ -142,6 +147,39 @@ textarea:focus-visible,
   background: transparent;
   border: 1px solid var(--border);
   color: var(--text);
+}
+
+/* Gentle press feedback for tappable cards/tiles app-wide. */
+.discover-feature-card,
+.inspiration-tile,
+.encyclopedia-card,
+.encyclopedia-collection-card {
+  transition: transform 0.12s ease;
+}
+
+.discover-feature-card:active,
+.inspiration-tile:active,
+.encyclopedia-card:active,
+.encyclopedia-collection-card:active {
+  transform: scale(0.97);
+}
+
+/* A short, subtle reveal for step transitions, generated results, and share-card
+   reveals -- re-triggers whenever React remounts the element (e.g. a `key` change on
+   step). Reduced-motion users get this collapsed to near-zero by the rule above. */
+@keyframes ltec-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ltec-reveal {
+  animation: ltec-reveal 0.28s ease-out;
 }
 
 .page {
