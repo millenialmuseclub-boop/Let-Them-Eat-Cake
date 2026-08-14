@@ -676,5 +676,35 @@
     "photographer": "vuk burgic",
     "photographerUrl": "https://unsplash.com/@vukburga",
     "unsplashUrl": "https://unsplash.com/photos/a-piece-of-cake-sitting-on-top-of-a-white-plate-F9mg_CbHpxU"
+  },
+  "cake_sernik": {
+    "url": "https://images.unsplash.com/photo-1617806501736-fc7cab7c05bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8Mnx8U2VybmlrJTIwcmVjaXBlfGVufDB8MHx8fDE3ODY3NDUxNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Ömer Haktan Bulut",
+    "photographerUrl": "https://unsplash.com/@omerhaktan",
+    "unsplashUrl": "https://unsplash.com/photos/white-cream-on-white-ceramic-plate-MRmFd9YSOUU"
+  },
+  "cake_simnel_cake": {
+    "url": "https://images.unsplash.com/photo-1635341814284-c0d35d542211?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8Mnx8U2ltbmVsJTIwQ2FrZSUyMHJlY2lwZXxlbnwwfDB8fHwxNzg2NzQ1MTYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Tetiana Padurets",
+    "photographerUrl": "https://unsplash.com/@tetianapadurets",
+    "unsplashUrl": "https://unsplash.com/photos/a-bundt-cake-with-icing-and-berries-on-it-yMPGCvSKlvs"
+  },
+  "cake_torta_negra": {
+    "url": "https://images.unsplash.com/photo-1607257882338-70f7dd2ae344?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8VG9ydGElMjBOZWdyYSUyMHJlY2lwZXxlbnwwfDB8fHwxNzg2NzQ1MTYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Ayesha Firdaus",
+    "photographerUrl": "https://unsplash.com/@ayeshafirdaus",
+    "unsplashUrl": "https://unsplash.com/photos/chocolate-cake-with-chocolate-syrup-E8DznhhRm3k"
+  },
+  "cake_torta_rogel": {
+    "url": "https://images.unsplash.com/photo-1713274782299-0b97a3e435f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8M3x8VG9ydGElMjBSb2dlbCUyMHNsaWNlfGVufDB8MHx8fDE3ODY3NDUxNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Olga Petnyunene",
+    "photographerUrl": "https://unsplash.com/@12tones",
+    "unsplashUrl": "https://unsplash.com/photos/a-piece-of-chocolate-cake-sitting-on-top-of-a-white-plate-lNs4gxo2pMw"
+  },
+  "cake_welsh_cakes": {
+    "url": "https://images.unsplash.com/photo-1464941913535-1f37bfb72880?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8Mnx8V2Vsc2glMjBDYWtlcyUyMHNsaWNlfGVufDB8MHx8fDE3ODY3NDUxNjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Toa Heftiba",
+    "photographerUrl": "https://unsplash.com/@heftiba",
+    "unsplashUrl": "https://unsplash.com/photos/sliced-cake-on-white-ceramic-saucer-1Hh57OhkdCc"
   }
 }
