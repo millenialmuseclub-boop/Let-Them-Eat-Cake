@@ -1,7 +1,7 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.millenialmuseclub.letthemeatcake',
+  appId: 'com.letthemeatcake.app',
   appName: 'Let Them Eat Cake',
   webDir: 'dist',
   plugins: {
