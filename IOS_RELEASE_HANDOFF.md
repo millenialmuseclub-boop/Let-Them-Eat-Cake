@@ -16,7 +16,7 @@ Written 2026-08-13, updated 2026-08-14. For whoever picks this up on a Mac — a
 
 ## Steps, in order, on the Mac
 
-1. **Open `ios/App/App.xcworkspace` in Xcode** (not the `.xcodeproj` — Capacitor's SPM setup expects the workspace).
+1. **Open `ios/App/App.xcodeproj` in Xcode** — there's no separate `.xcworkspace`; that only gets created by CocoaPods' `pod install`, and this project uses Swift Package Manager instead, so the `.xcodeproj` is the thing to open.
 2. **Signing & Capabilities tab**: select Team **J48FJJ3ABL** (the account is already enrolled — this just needs picking from the dropdown), leave `CODE_SIGN_STYLE = Automatic` so Xcode provisions the certificate/profile itself.
 3. Run `npx cap sync ios` again right before building, to pick up any web changes made between now and then.
 4. **Native QA pass** (simulator or device) — this hasn't been done at all yet, since it requires Xcode:
