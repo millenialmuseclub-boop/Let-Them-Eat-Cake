@@ -8,7 +8,6 @@ import { RecipeCard } from '../components/RecipeCard'
 import { SaveButton } from '../components/SaveButton'
 import { CakeHeroImage } from '../components/CakeHeroImage'
 import { CakeThumbnail } from '../components/CakeThumbnail'
-import { SocialShareCard } from '../components/SocialShareCard'
 import { AffiliateProductSet } from '../components/AffiliateProductSet'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
 import './CakeDetailPage.css'
@@ -93,19 +92,6 @@ export function CakeDetailPage() {
         <h2>🍰 Flavor Profile</h2>
         <FlavorProfileBars profile={cake.flavorProfile} />
         <p className="cake-detail-flavor-notes">Notes: {cake.flavorNotes.join(', ')}</p>
-      </section>
-
-      <section className="card cake-detail-section">
-        <h2>📣 Share this Cake</h2>
-        <SocialShareCard
-          eyebrow="From the Cake Encyclopedia"
-          title={cake.name}
-          subtitle={locationLabel ?? undefined}
-          bodyText={cake.flavorNotes.slice(0, 2).join(' · ')}
-          cta="Discover its story"
-          shareUrl={typeof window !== 'undefined' ? window.location.href : ''}
-          shareText={`${cake.name} — from the Let Them Eat Cake Encyclopedia 🎂`}
-        />
       </section>
 
       {recipe && (

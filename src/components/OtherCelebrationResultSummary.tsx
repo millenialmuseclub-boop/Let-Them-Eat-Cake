@@ -1,15 +1,12 @@
-import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { DietTag } from '../types/cake'
 import { getCake, getRecipeForCake } from '../lib/data'
 import { getTopPairings } from '../lib/encyclopedia'
 import { getProductsByIds } from '../lib/affiliateProducts'
-import { registerBackHandler } from '../lib/backButtonInterceptor'
 import type { GuestRange } from '../lib/guestRanges'
 import { formatComponentLabel } from '../lib/recipeComponents'
 import { CakeThumbnail } from './CakeThumbnail'
 import { SaveButton } from './SaveButton'
-import { OtherCelebrationShareCard } from './OtherCelebrationShareCard'
 import { AffiliateProductSet } from './AffiliateProductSet'
 import { GuestRangeSelector } from './GuestRangeSelector'
 import { useFocusOnMount } from '../lib/useFocusOnMount'
@@ -43,20 +40,6 @@ export function OtherCelebrationResultSummary({
   diet: DietTag | 'none'
   onRefine: () => void
 }) {
-  const [showShare, setShowShare] = useState(false)
-
-  const showShareRef = useRef(showShare)
-  showShareRef.current = showShare
-  useEffect(
-    () =>
-      registerBackHandler(() => {
-        if (!showShareRef.current) return false
-        setShowShare(false)
-        return true
-      }),
-    [],
-  )
-
   const headingRef = useFocusOnMount<HTMLHeadingElement>()
 
   const cake = getCake(cakeId)
@@ -141,12 +124,7 @@ export function OtherCelebrationResultSummary({
           Refine
         </button>
         <SaveButton type="cake" id={cake.id} />
-        <button className="btn btn-secondary" onClick={() => setShowShare((s) => !s)}>
-          Share
-        </button>
       </div>
-
-      {showShare && <OtherCelebrationShareCard cake={cake} occasionName={occasionName} moodName={moodName} whyItFits={whyItFits} />}
     </div>
   )
 }

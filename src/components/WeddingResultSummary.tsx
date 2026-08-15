@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { WeddingPlanResult } from '../types/weddingCake'
 import { getCake, getRecipe } from '../lib/data'
@@ -12,14 +12,12 @@ import {
   formatShapeLabel,
   formatRoleLabel,
 } from '../lib/weddingCake'
-import { registerBackHandler } from '../lib/backButtonInterceptor'
 import type { GuestRange } from '../lib/guestRanges'
 import { formatComponentLabel } from '../lib/recipeComponents'
 import { CakeThumbnail } from './CakeThumbnail'
 import { RecipeCard } from './RecipeCard'
 import { WeddingCakeDiagram } from './WeddingCakeDiagram'
 import { AffiliateProductSet } from './AffiliateProductSet'
-import { CelebrateShareCard } from './CelebrateShareCard'
 import { GuestRangeSelector } from './GuestRangeSelector'
 import { useFocusOnMount } from '../lib/useFocusOnMount'
 import './WeddingResultSummary.css'
@@ -64,20 +62,7 @@ export function WeddingResultSummary({
   onRefine: () => void
 }) {
   const [copied, setCopied] = useState(false)
-  const [showShare, setShowShare] = useState(false)
   const structureRef = useRef<HTMLDetailsElement>(null)
-
-  const showShareRef = useRef(showShare)
-  showShareRef.current = showShare
-  useEffect(
-    () =>
-      registerBackHandler(() => {
-        if (!showShareRef.current) return false
-        setShowShare(false)
-        return true
-      }),
-    [],
-  )
 
   // Recompute the full plan whenever the guest range changes -- tier
   // count/sizing, recipe picks (a 2nd tier can change which recipes get
@@ -189,12 +174,7 @@ export function WeddingResultSummary({
         <button className="btn btn-secondary" onClick={() => window.print()}>
           Print
         </button>
-        <button className="btn btn-secondary" onClick={() => setShowShare((s) => !s)}>
-          Share
-        </button>
       </div>
-
-      {showShare && <CelebrateShareCard result={result} />}
 
       <details className="wedding-details-section">
         <summary>💍 Cultural History &amp; Traditions</summary>

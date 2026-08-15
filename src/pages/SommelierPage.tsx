@@ -13,7 +13,6 @@ import { PairingComparisonCard } from '../components/PairingComparisonCard'
 import { DrinkThumbnail } from '../components/DrinkThumbnail'
 import { CakeThumbnail } from '../components/CakeThumbnail'
 import { AffiliateProductSet } from '../components/AffiliateProductSet'
-import { SommelierShareCard } from '../components/SommelierShareCard'
 import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
 import { getProductsForPairingCategory } from '../lib/affiliateProducts'
 import { getDrinkImage, getFirstPhotographedDrinkId } from '../lib/drinkImages'
@@ -241,7 +240,6 @@ function CakeFirstView({
 
             <LifestyleSection category={drink.category} />
             <AffiliateProductSet title="Complete the Experience" products={getProductsForPairingCategory(drink.category)} />
-            <SommelierShareCard cake={cake} drink={drink} score={score} reason={explainPairing(cake, drink, pairing)[0]} />
           </div>
         )}
       </div>
@@ -594,7 +592,6 @@ function DrinkFirstView({
 
             <LifestyleSection category={drink.category} />
             <AffiliateProductSet title="Complete the Experience" products={getProductsForPairingCategory(drink.category)} />
-            <SommelierShareCard cake={cake} drink={drink} score={score} reason={reason} />
 
             <Link to={`/cake/${cake.id}`} className="encyclopedia-link">
               View full encyclopedia entry →

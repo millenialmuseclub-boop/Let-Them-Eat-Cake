@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import type { DietTag, Recipe, RecipeComponent } from '../types/cake'
 import { getRecipeIngredients, getRecipeComponentIngredients, type ScaledIngredient, type UnitSystem } from '../lib/units'
 import { slugify } from '../lib/ingredients'
-import { getCake } from '../lib/data'
-import { RecipeShareCard } from './RecipeShareCard'
 import './RecipeCard.css'
 
 function IngredientList({ ingredients }: { ingredients: ScaledIngredient[] }) {
@@ -78,13 +76,11 @@ const DIET_OPTIONS: { value: DietTag | 'none'; label: string }[] = [
 export function RecipeCard({ recipe }: { recipe: Recipe }) {
   const [unitSystem, setUnitSystem] = useState<UnitSystem>('metric')
   const [diet, setDiet] = useState<DietTag | 'none'>('none')
-  const [showShare, setShowShare] = useState(false)
 
   const activeDiet = diet === 'none' ? undefined : diet
   const ingredients = getRecipeIngredients(recipe, unitSystem, activeDiet)
   const scaledFilling = recipe.filling ? getRecipeComponentIngredients(recipe.filling, unitSystem, activeDiet) : null
   const scaledFrostingFinish = recipe.frostingFinish ? getRecipeComponentIngredients(recipe.frostingFinish, unitSystem, activeDiet) : null
-  const cake = getCake(recipe.cakeId)
 
   const hasOverview = recipe.yield || recipe.prepTimeMinutes || recipe.bakeTimeMinutes || recipe.totalTimeMinutes || recipe.ovenTempC || recipe.panSize || (recipe.equipment && recipe.equipment.length > 0)
 
@@ -151,14 +147,6 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
         </p>
       )}
 
-      {cake && (
-        <>
-          <button className="btn btn-secondary" onClick={() => setShowShare((s) => !s)}>
-            Share Recipe
-          </button>
-          {showShare && <RecipeShareCard cake={cake} />}
-        </>
-      )}
     </div>
   )
 }
