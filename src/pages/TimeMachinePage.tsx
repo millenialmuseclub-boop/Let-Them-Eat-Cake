@@ -5,6 +5,7 @@ import { getYearVariant } from '../lib/yearVintage'
 import { getCake, getRecipe, decades } from '../lib/data'
 import { getRelatedCakes, getTopPairings } from '../lib/encyclopedia'
 import { RecipeCard } from '../components/RecipeCard'
+import { ShareCard } from '../components/ShareCard'
 import { TimeMachineTimeline } from '../components/TimeMachineTimeline'
 import { CakeHeroImage } from '../components/CakeHeroImage'
 import { SaveButton } from '../components/SaveButton'
@@ -84,6 +85,15 @@ export function TimeMachinePage() {
 
       {entry && cake && recipe && (
         <section className="time-machine-result ltec-reveal">
+          {birthYear !== null && variant && (
+            <ShareCard
+              year={birthYear}
+              cakeName={variant.variantName}
+              subtitle={`a ${entry.decadeLabel} ${cake.name}`}
+              bodyText={`${cake.flavorNotes.slice(0, 2).join(' & ')} from the ${entry.decadeLabel}.`}
+            />
+          )}
+
           <div className="card">
             <CakeHeroImage cakeId={cake.id} variant="hero" alt={cake.name} />
             <span className="tag">{entry.decadeLabel}</span>
