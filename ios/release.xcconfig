@@ -1,0 +1,12 @@
+// Scoped to the App target's Release configuration only (see
+// baseConfigurationReference in App.xcodeproj/project.pbxproj). Deliberately
+// NOT passed as xcodebuild command-line overrides in ios-release.yml -
+// those apply to every target in the build graph, including auto-generated
+// SPM resource-bundle targets that can't be signed at all, and headless
+// `xcodebuild archive` resolves Automatic signing to "development" purpose
+// for every target regardless of the archive action, causing signing-
+// identity conflicts. Scoping via xcconfig avoids both.
+CODE_SIGN_STYLE = Manual
+CODE_SIGN_IDENTITY = Apple Distribution
+DEVELOPMENT_TEAM = J48FJJ3ABL
+PROVISIONING_PROFILE_SPECIFIER = Let Them Eat Cake App Store
