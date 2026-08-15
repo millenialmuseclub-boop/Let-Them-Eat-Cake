@@ -2,15 +2,17 @@
 
 Written 2026-08-13, last updated 2026-08-15. A signed build is now shipping to TestFlight entirely from GitHub Actions — no Mac was ever used. The one thing still genuinely blocked without a Mac is native QA in a simulator/device (see below); everything about getting a build signed and uploaded is done and repeatable.
 
+**Build 3 (2026-08-15)** ships everything through the accessibility pass, Atlas region screens, photography backfill, and the share-system rewrite + Capacitor Haptics plugin — build 2 predated all of that. OTA-shippable JS/web changes reach any installed build automatically via the production channel; a fresh native build was only needed here because Haptics is a native plugin addition OTA can't deliver.
+
 ## Current State
 
 - Apple Developer account: enrolled, Individual, Team ID **J48FJJ3ABL**, Apple Developer Program active (renews Aug 8 2027). Signed in as enchantedheadwear@gmail.com.
 - App ID registered: `com.letthemeatcake.app`, no capabilities enabled (none needed — the app uses no push notifications, HealthKit, iCloud, Sign In with Apple, etc.).
-- App Store Connect app record: **Apple ID 6801655009**, "Let Them Eat Cake", iOS. **Build 1 (version 1.0) uploaded successfully and is processing/available in TestFlight** as of 2026-08-15 — see `.github/workflows/ios-release.yml` run history for the exact run. Store-listing metadata (screenshots, description, keywords, App Review info) is still **not** filled in — not needed until actual App Store submission, which per the original brief we're deliberately not doing yet.
+- App Store Connect app record: **Apple ID 6801655009**, "Let Them Eat Cake", iOS. **Build 3 (version 1.0) uploaded successfully and is processing/available in TestFlight** as of 2026-08-15 — see `.github/workflows/ios-release.yml` run history for the exact run. Store-listing metadata (screenshots, description, keywords, App Review info) is still **not** filled in — not needed until actual App Store submission, which per the original brief we're deliberately not doing yet.
 - Bundle ID: `com.letthemeatcake.app` — matches Android, `capacitor.config.ts`, the registered App ID, and the App Store Connect app record.
 - App name: "Let Them Eat Cake". Version `1.0`, build `1` (`ios/App/App.xcodeproj/project.pbxproj`).
 - Icon (1024×1024) and splash screen assets are in place (`ios/App/App/Assets.xcassets`).
-- Capacitor plugins synced into the iOS project via SPM (`ios/App/CapApp-SPM/Package.swift`): `@capacitor/app`, `@capacitor/share`, `@capgo/capacitor-updater`.
+- Capacitor plugins synced into the iOS project via SPM (`ios/App/CapApp-SPM/Package.swift`): `@capacitor/app`, `@capacitor/share`, `@capacitor/haptics`, `@capgo/capacitor-updater`.
 - No CocoaPods — this project uses Swift Package Manager for Capacitor's iOS integration, so there's no `Podfile`/`pod install` step. That's expected, not missing.
 
 ## CI signing pipeline (`.github/workflows/ios-release.yml`)
