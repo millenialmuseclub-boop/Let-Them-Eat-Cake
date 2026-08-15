@@ -38,7 +38,11 @@ jobs:
         uses: android-actions/setup-android@v3
 
       - name: Sync Capacitor Android project with the fresh web build
-        run: npx cap sync android
+        # APP_BUILD_VERSION (this commit's timestamp) is baked into the native
+        # bundle's CapacitorUpdater version via capacitor.config.ts, so
+        # src/lib/otaUpdater.ts can tell a genuinely newer OTA manifest from a
+        # merely-different one instead of downgrading a fresh native build.
+        run: APP_BUILD_VERSION=$(git log -1 --format=%ct) npx cap sync android
 
       - name: Make gradlew executable
         run: chmod +x android/gradlew

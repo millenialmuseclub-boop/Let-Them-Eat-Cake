@@ -74,14 +74,19 @@ jobs:
           ENC_CHECKSUM=$(jq -r '.checksum' enc.json)
           SESSION_KEY=$(jq -r '.ivSessionKey' enc.json)
 
-          # 3) Assemble manifest.json. version = git sha, matching the
-          #    `bundle.version` the plugin compares against on-device.
+          # 3) Assemble manifest.json. version = this commit's timestamp (seconds
+          #    since epoch) -- orderable, unlike a git sha, so the app can tell a
+          #    genuinely newer manifest from a merely-different one (see
+          #    src/lib/otaUpdater.ts). sha is kept only to name/debug the bundle.
+          COMMIT_TS=$(git log -1 --format=%ct)
+
           jq -n \
-            --arg v "${{ github.sha }}" \
+            --arg v "$COMMIT_TS" \
+            --arg sha "${{ github.sha }}" \
             --arg url "${{ vars.R2_PUBLIC_BASE_URL }}/updates/${{ inputs.channel }}/bundles/${{ github.sha }}.zip" \
             --arg ck "$ENC_CHECKSUM" \
             --arg sk "$SESSION_KEY" \
-            '{version:$v, url:$url, checksum:$ck, sessionKey:$sk}' > manifest.json
+            '{version:$v, sha:$sha, url:$url, checksum:$ck, sessionKey:$sk}' > manifest.json
 
           # 4) Upload encrypted bundle FIRST (immutable), manifest LAST
           #    (no-cache) — a device must never see a manifest pointing at a

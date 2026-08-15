@@ -31,6 +31,7 @@ import { AboutPage } from './pages/AboutPage'
 import { HubPage } from './components/HubPage'
 import { TopNavBar } from './components/TopNavBar'
 import { BottomTabBar } from './components/BottomTabBar'
+import { FloatingBackButton } from './components/FloatingBackButton'
 import { HUBS } from './data/hubs'
 
 function App() {
@@ -78,6 +79,7 @@ function App() {
         <Route path="/curated-kitchen" element={<CuratedKitchenPage />} />
         <Route path="/about" element={<AboutPage />} />
       </Routes>
+      <FloatingBackButton />
       <BottomTabBar />
     </>
   )

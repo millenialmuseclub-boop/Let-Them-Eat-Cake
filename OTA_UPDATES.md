@@ -31,12 +31,32 @@ Cloudflare R2 (public bucket)
 Native app (src/lib/otaUpdater.ts, manual mode)
   On every launch:
     1. fetch manifest.json (no-store)
-    2. compare manifest.version to CapacitorUpdater.current().bundle.version
+    2. compare manifest.version (a commit timestamp) to
+       CapacitorUpdater.current().bundle.version numerically — only proceeds
+       if the manifest is strictly newer, not just different (see "Version
+       comparison" below)
     3. if newer: download() (verifies signature, decrypts) → next({ id })
        (schedules the swap for the NEXT launch/background — never an
        in-session reload, which would cause a jarring double-boot)
     4. notifyAppReady() — disarms the native rollback watchdog
 ```
+
+### Version comparison
+
+`manifest.version` is a git commit timestamp (seconds since epoch), not a git
+sha — timestamps are orderable, shas aren't. Every native build workflow
+(`ios-release.yml`, `android-release.yml`, `android-build.yml`) sets
+`APP_BUILD_VERSION` to its own commit's timestamp before `npx cap sync`, which
+`capacitor.config.ts` bakes in as the native bundle's own
+`CapacitorUpdater.version`. `otaUpdater.ts` then only applies an OTA update
+when the manifest's timestamp is **strictly greater than** the currently
+running bundle's — a fresh native build (whose baked-in code can be newer
+than the last OTA push, e.g. right after shipping a store build with a new
+native plugin) is never silently downgraded back to an older published
+bundle just because its version string doesn't exactly match.
+
+The manifest's `sha` field is unrelated to this comparison — it's kept only
+to name the bundle file in R2 and for debugging which commit shipped.
 
 ## Channels
 

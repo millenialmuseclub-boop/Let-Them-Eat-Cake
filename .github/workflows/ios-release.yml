@@ -34,7 +34,11 @@ jobs:
           VITE_R2_PUBLIC_BASE_URL: ${{ vars.R2_PUBLIC_BASE_URL }}
 
       - name: Sync Capacitor iOS project with the fresh web build
-        run: npx cap sync ios
+        # APP_BUILD_VERSION (this commit's timestamp) is baked into the native
+        # bundle's CapacitorUpdater version via capacitor.config.ts, so
+        # src/lib/otaUpdater.ts can tell a genuinely newer OTA manifest from a
+        # merely-different one instead of downgrading a fresh native build.
+        run: APP_BUILD_VERSION=$(git log -1 --format=%ct) npx cap sync ios
 
       - name: Create temporary keychain and import distribution certificate
         env:

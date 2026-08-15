@@ -3,10 +3,14 @@ import { CapacitorUpdater } from '@capgo/capacitor-updater'
 import { OTA_MANIFEST_URL } from './otaConfig'
 
 // Shape the CI encrypt step writes into manifest.json (see .github/workflows/ota-publish.yml).
-// All four fields are required: bundles are encrypted, so download() needs
-// checksum + sessionKey (not just url) to verify and decrypt.
+// `version` is a git commit timestamp (seconds since epoch) -- orderable, unlike a git sha --
+// so it can be compared numerically against the running bundle's own version to tell whether
+// the manifest is actually NEWER, not just different. `sha` is kept only for logging/debugging
+// (it names the bundle file in R2). checksum + sessionKey are required for download() to
+// verify and decrypt the encrypted bundle.
 interface OtaManifest {
   version: string
+  sha: string
   url: string
   checksum: string
   sessionKey: string
@@ -38,8 +42,9 @@ export async function markAppReady(): Promise<void> {
 
 /**
  * Zero-server OTA check (see OTA_UPDATES.md): polls a static manifest.json on
- * R2 and, if it names a newer version, downloads the signed+encrypted bundle
- * and schedules it to apply at the *next* launch/background transition.
+ * R2 and, if it names a version numerically newer than what's currently running,
+ * downloads the signed+encrypted bundle and schedules it to apply at the *next*
+ * launch/background transition.
  *
  * Deliberately uses `next()`, not `set()` + `reload()` — an immediate reload
  * mid-session causes a jarring double-boot (open on the old bundle, detect the
@@ -69,7 +74,17 @@ async function doCheck(): Promise<boolean> {
     const manifest = (await res.json()) as OtaManifest
 
     const { bundle } = await CapacitorUpdater.current()
-    if (manifest.version === bundle.version) return false
+
+    // Compare as timestamps, not plain equality -- a fresh native build's own
+    // baked-in version can be numerically newer than the last-published OTA
+    // manifest (e.g. right after shipping a new store build with a native
+    // plugin addition), and blindly treating "different" as "must update"
+    // would silently downgrade it back to the older published bundle.
+    // NaN (a pre-fix install with no comparable version) falls back to 0, so
+    // this still behaves like the old "any difference updates" logic for those.
+    const manifestVersion = Number(manifest.version)
+    const currentVersion = Number(bundle.version) || 0
+    if (!Number.isFinite(manifestVersion) || manifestVersion <= currentVersion) return false
 
     const downloaded = await CapacitorUpdater.download({
       url: manifest.url,

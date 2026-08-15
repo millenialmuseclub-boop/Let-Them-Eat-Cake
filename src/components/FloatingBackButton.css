@@ -1,0 +1,41 @@
+/* Full-width, max-width-960px-centered wrapper -- matches .bottom-tab-bar's own
+   sizing exactly so the button lines up with its right edge on wide (desktop/PWA)
+   viewports instead of floating out at the raw browser edge. pointer-events: none
+   here so the empty space doesn't block taps on page content underneath it. */
+.floating-back-button-wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(60px + env(safe-area-inset-bottom, 0px) + 12px);
+  max-width: 960px;
+  margin: 0 auto;
+  z-index: 20;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 16px;
+  pointer-events: none;
+}
+
+.floating-back-button {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  background: var(--raspberry);
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  box-shadow: var(--shadow);
+  transition: transform 0.12s ease;
+}
+
+.floating-back-button:hover {
+  filter: brightness(1.05);
+}
+
+.floating-back-button:active {
+  transform: scale(0.97);
+}
