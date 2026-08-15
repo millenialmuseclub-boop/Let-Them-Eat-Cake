@@ -65,7 +65,8 @@ jobs:
           echo "Decoded profile: $(wc -c < "$RUNNER_TEMP/profile.mobileprovision") bytes"
           echo "First bytes (hex): $(xxd -l 16 -p "$RUNNER_TEMP/profile.mobileprovision")"
 
-          UUID=$(security cms -D -i "$RUNNER_TEMP/profile.mobileprovision" | /usr/libexec/PlistBuddy -c "Print :UUID" /dev/stdin)
+          security cms -D -i "$RUNNER_TEMP/profile.mobileprovision" > "$RUNNER_TEMP/profile.plist"
+          UUID=$(/usr/libexec/PlistBuddy -c "Print :UUID" "$RUNNER_TEMP/profile.plist")
           cp "$RUNNER_TEMP/profile.mobileprovision" "$PROFILE_DIR/$UUID.mobileprovision"
 
       - name: Archive
