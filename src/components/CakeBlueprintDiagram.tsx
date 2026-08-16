@@ -8,9 +8,22 @@ interface CakeBlueprintDiagramProps {
   garnish?: AssemblyComponent
 }
 
+/** Component names can run long ("Swiss Meringue Buttercream"), so labels wrap onto a
+    second line at a fixed character budget rather than running past the viewBox edge. */
+function wrapLabel(prefix: string, name: string): [string, string | null] {
+  const full = `${prefix} — ${name}`
+  if (full.length <= 24) return [full, null]
+  return [`${prefix} —`, name]
+}
+
 export function CakeBlueprintDiagram({ sponge, filling, frosting, garnish }: CakeBlueprintDiagramProps) {
+  const [frostingLine1, frostingLine2] = wrapLabel('Frosting', frosting.name)
+  const [fillingLine1, fillingLine2] = wrapLabel('Filling', filling.name)
+  const [spongeLine1, spongeLine2] = wrapLabel('Sponge', sponge.name)
+  const [garnishLine1, garnishLine2] = garnish ? wrapLabel('Garnish', garnish.name) : [null, null]
+
   return (
-    <svg viewBox="0 0 460 320" className="blueprint-diagram" role="img" aria-label="Technical diagram of the assembled cake">
+    <svg viewBox="0 0 560 320" className="blueprint-diagram" role="img" aria-label="Technical diagram of the assembled cake">
       {/* centerline */}
       <line x1="230" y1="48" x2="230" y2="262" className="blueprint-centerline" />
 
@@ -35,28 +48,32 @@ export function CakeBlueprintDiagram({ sponge, filling, frosting, garnish }: Cak
       <rect x="139" y="174" width="182" height="20" style={{ fill: filling.colorHex }} className="blueprint-layer" />
       <rect x="139" y="194" width="182" height="40" style={{ fill: sponge.colorHex }} className="blueprint-layer" />
 
-      {garnish && (
+      {garnishLine1 && (
         <>
           <line x1="335" y1="52" x2="365" y2="40" className="blueprint-leader" />
           <text x="368" y="43" className="blueprint-label">
-            Garnish — {garnish.name}
+            {garnishLine1}
+            {garnishLine2 && <tspan x="368" dy="13">{garnishLine2}</tspan>}
           </text>
         </>
       )}
 
       <line x1="335" y1="76" x2="365" y2="76" className="blueprint-leader" />
       <text x="368" y="80" className="blueprint-label">
-        Frosting — {frosting.name}
+        {frostingLine1}
+        {frostingLine2 && <tspan x="368" dy="13">{frostingLine2}</tspan>}
       </text>
 
       <line x1="321" y1="124" x2="365" y2="124" className="blueprint-leader" />
       <text x="368" y="128" className="blueprint-label">
-        Filling — {filling.name}
+        {fillingLine1}
+        {fillingLine2 && <tspan x="368" dy="13">{fillingLine2}</tspan>}
       </text>
 
       <line x1="321" y1="154" x2="365" y2="154" className="blueprint-leader" />
       <text x="368" y="158" className="blueprint-label">
-        Sponge — {sponge.name}
+        {spongeLine1}
+        {spongeLine2 && <tspan x="368" dy="13">{spongeLine2}</tspan>}
       </text>
 
       <line x1="139" y1="205" x2="95" y2="200" className="blueprint-leader" />
