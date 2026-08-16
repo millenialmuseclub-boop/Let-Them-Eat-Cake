@@ -14,5 +14,4 @@ export interface StabilityResult {
   supportNotes: string[]
   chillNotes: string[]
   displayNotes: string[]
-  estimatedServings: number
 }

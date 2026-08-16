@@ -57,10 +57,6 @@ export function CakeStabilityCalculator() {
 
       <div className="stability-results">
         <div className="stability-result-group">
-          <h4>Estimated Servings</h4>
-          <p className="stability-servings">{stability.estimatedServings} party-style slices</p>
-        </div>
-        <div className="stability-result-group">
           <h4>Supports</h4>
           <ul>
             {stability.supportNotes.map((note, i) => (

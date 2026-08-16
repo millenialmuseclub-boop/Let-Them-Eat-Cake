@@ -1,11 +1,7 @@
-import { TIER_SERVING_CHART } from './weddingArchitecture'
 import type { StabilityInput, StabilityResult } from '../types/stabilityCalculator'
 
 export function calculateStability(input: StabilityInput): StabilityResult {
   const { tierCount, diameterIn, fillingWeight, temperature, transport } = input
-
-  const chartRow = TIER_SERVING_CHART.find((row) => row.diameterIn === diameterIn)
-  const estimatedServings = (chartRow?.partySlices ?? 0) * tierCount
 
   const supportNotes: string[] = []
   if (tierCount <= 1) {
@@ -55,5 +51,5 @@ export function calculateStability(input: StabilityInput): StabilityResult {
     displayNotes.push('Consider a fondant or firm ganache exterior over a soft buttercream finish — it holds its shape and shields the cake better in transit and warm-weather display.')
   }
 
-  return { supportNotes, chillNotes, displayNotes, estimatedServings }
+  return { supportNotes, chillNotes, displayNotes }
 }
