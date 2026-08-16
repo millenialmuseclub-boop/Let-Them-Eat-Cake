@@ -4,11 +4,9 @@ import type { CakeProfile } from '../types/cake'
 import type { MoodTag } from '../types/persona'
 import type { CakePersonality, FlavorPull, QuizAnswers } from '../types/personaMatch'
 import { AESTHETIC_OPTIONS, MOOD_OPTIONS } from '../lib/persona'
-import { matchPersonality, matchRecommendedCakes, personalityResult, FLAVOR_PULL_AXIS } from '../lib/personaMatch'
-import { getCakePersonality, cakes } from '../lib/data'
-import { getFirstPhotographedCakeId } from '../lib/images'
+import { matchPersonality, matchRecommendedCakes, personalityResult } from '../lib/personaMatch'
+import { getCakePersonality } from '../lib/data'
 import { getPersonalityImage } from '../lib/personalityImages'
-import { getSceneImage } from '../lib/sceneImages'
 import { getCountryFlag } from '../lib/countryFlags'
 import { FlavorProfileBars } from '../components/FlavorProfileBars'
 import { CakeHeroImage } from '../components/CakeHeroImage'
@@ -50,18 +48,37 @@ const AESTHETIC_DESCRIPTIONS: Record<string, string> = {
   'y2k-maximalist': 'Bold, bright, maximal',
 }
 
-/** One representative, ideally-photographed cake per flavor-pull/texture option -- same computed pattern Sommelier's discovery cards already use. */
-const FLAVOR_PULL_REP_CAKE: Partial<Record<FlavorPull, string>> = Object.fromEntries(
-  FLAVOR_PULL_OPTIONS.map((opt) => {
-    const axis = FLAVOR_PULL_AXIS[opt.value]
-    const sorted = [...cakes].sort((a, b) => b.flavorProfile[axis] - a.flavorProfile[axis])
-    return [opt.value, getFirstPhotographedCakeId(sorted.map((c) => c.id))]
-  }),
-)
+/** Hand-picked, well-photographed cake per quiz answer -- chosen for a clear visual match to the answer, not just the highest flavor-axis score. */
+const FLAVOR_PULL_REP_CAKE: Record<FlavorPull, string> = {
+  'bright-tart': 'cake_korean_strawberry_cream',
+  'rich-buttery': 'cake_gooey_butter_cake',
+  'bold-intense': 'cake_molten_lava_1990s',
+  'simply-sweet': 'cake_yellow_choc_1950s',
+}
 
-const TEXTURE_REP_CAKE: Partial<Record<CakeProfile['texture'], string>> = Object.fromEntries(
-  TEXTURE_OPTIONS.map((opt) => [opt.value, getFirstPhotographedCakeId(cakes.filter((c) => c.texture === opt.value).map((c) => c.id))]),
-)
+const TEXTURE_REP_CAKE: Record<CakeProfile['texture'], string> = {
+  sponge: 'cake_angel_food',
+  dense: 'cake_tunnel_fudge_bundt_1960s',
+  creamy: 'cake_japanese_souffle_cheesecake',
+  crumbly: 'cake_kouign_amann',
+}
+
+const MOOD_REP_CAKE: Record<MoodTag, string> = {
+  'cozy-sunday': 'cake_carrot_cream_cheese_1980s',
+  celebration: 'cake_lane_cake',
+  'pure-hype': 'cake_lamington',
+  homesick: 'cake_tres_leches',
+  'breakup-catharsis': 'cake_brooklyn_blackout',
+  'lazy-weekend': 'cake_castella',
+}
+
+const AESTHETIC_REP_CAKE: Record<string, string> = {
+  'coquette-vintage': 'cake_red_velvet_cupcake_2000s',
+  'dark-academia': 'cake_basque_burnt_cheesecake',
+  'minimalist-k-style': 'cake_pandan_chiffon',
+  cottagecore: 'cake_hummingbird',
+  'y2k-maximalist': 'cake_rainbow_drip_2010s',
+}
 
 type Step = 0 | 1 | 2 | 3
 
@@ -210,23 +227,16 @@ export function PersonaMatchPage() {
 
       {step === 0 && (
         <div className="discover-feature-grid ltec-reveal">
-          {MOOD_OPTIONS.map((opt) => {
-            const scene = getSceneImage(`mood-${opt.value}`)
-            return (
-              <DiscoverFeatureCard
-                key={opt.value}
-                onClick={() => choose('mood', opt.value)}
-                title={opt.label}
-                description={MOOD_DESCRIPTIONS[opt.value]}
-                cta="Choose →"
-                imageUrl={scene?.url}
-                imageAlt={opt.label}
-                photographer={scene?.photographer}
-                photographerUrl={scene?.photographerUrl}
-                unsplashUrl={scene?.unsplashUrl}
-              />
-            )
-          })}
+          {MOOD_OPTIONS.map((opt) => (
+            <DiscoverFeatureCard
+              key={opt.value}
+              onClick={() => choose('mood', opt.value)}
+              title={opt.label}
+              description={MOOD_DESCRIPTIONS[opt.value]}
+              cta="Choose →"
+              cakeId={MOOD_REP_CAKE[opt.value]}
+            />
+          ))}
         </div>
       )}
 
@@ -262,23 +272,16 @@ export function PersonaMatchPage() {
 
       {step === 3 && (
         <div className="discover-feature-grid ltec-reveal">
-          {AESTHETIC_OPTIONS.map((opt) => {
-            const scene = getSceneImage(`aesthetic-${opt.value}`)
-            return (
-              <DiscoverFeatureCard
-                key={opt.value}
-                onClick={() => choose('aesthetic', opt.value)}
-                title={opt.label}
-                description={AESTHETIC_DESCRIPTIONS[opt.value]}
-                cta="Choose →"
-                imageUrl={scene?.url}
-                imageAlt={opt.label}
-                photographer={scene?.photographer}
-                photographerUrl={scene?.photographerUrl}
-                unsplashUrl={scene?.unsplashUrl}
-              />
-            )
-          })}
+          {AESTHETIC_OPTIONS.map((opt) => (
+            <DiscoverFeatureCard
+              key={opt.value}
+              onClick={() => choose('aesthetic', opt.value)}
+              title={opt.label}
+              description={AESTHETIC_DESCRIPTIONS[opt.value]}
+              cta="Choose →"
+              cakeId={AESTHETIC_REP_CAKE[opt.value]}
+            />
+          ))}
         </div>
       )}
     </main>

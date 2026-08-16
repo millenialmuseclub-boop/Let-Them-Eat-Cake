@@ -58,6 +58,63 @@
   opacity: 0.9;
 }
 
+.inspiration-tile.active {
+  border-color: var(--raspberry);
+  box-shadow: 0 0 0 2px var(--raspberry);
+}
+
+/* Compact horizontal row treatment, matching Sommelier's drink-select-row --
+   for simple multiple-choice steps that don't need a full-bleed hero photo. */
+.inspiration-grid.compact {
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.inspiration-tile.compact {
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 12px;
+  min-height: 0;
+}
+
+.inspiration-tile.compact .cake-hero-image-thumbnail,
+.inspiration-tile.compact .inspiration-tile-photo {
+  margin: 0;
+  flex-shrink: 0;
+  width: 56px;
+}
+
+.inspiration-tile.compact .cake-hero-image-thumbnail img,
+.inspiration-tile.compact .inspiration-tile-photo img {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.inspiration-tile.compact .cake-hero-image-thumbnail.cake-hero-image-placeholder {
+  height: 56px;
+  border-radius: 10px;
+}
+
+.inspiration-tile.compact .inspiration-tile-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  text-align: left;
+}
+
+.inspiration-tile.compact .inspiration-tile-name {
+  font-size: 15px;
+}
+
+.inspiration-tile.compact .inspiration-tile-description {
+  font-size: 12.5px;
+  opacity: 0.75;
+}
+
 .inspiration-change-link {
   background: none;
   border: none;

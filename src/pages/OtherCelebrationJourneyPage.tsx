@@ -110,10 +110,11 @@ export function OtherCelebrationJourneyPage() {
       {step === 'occasion' && (
         <div className="ltec-reveal">
           <h2 className="inspiration-heading">What are you celebrating?</h2>
-          <div className="inspiration-grid">
+          <div className="inspiration-grid compact">
             {otherCelebrationOccasions.map((o) => (
               <InspirationTile
                 key={o.id}
+                compact
                 className="birthday-tile"
                 name={o.name}
                 imageUrl={OCCASION_SCENE[o.id]}
@@ -133,10 +134,11 @@ export function OtherCelebrationJourneyPage() {
             ← Change occasion
           </button>
           <h2 className="inspiration-heading">Mood</h2>
-          <div className="inspiration-grid">
+          <div className="inspiration-grid compact">
             {otherCelebrationMoods.map((m) => (
               <InspirationTile
                 key={m.id}
+                compact
                 className="birthday-tile"
                 name={m.name}
                 description={m.description}
@@ -158,10 +160,11 @@ export function OtherCelebrationJourneyPage() {
           </button>
           <h2 className="inspiration-heading">Flavor</h2>
           <p className="inspiration-subtext">Choose 1-2 flavor directions.</p>
-          <div className="inspiration-grid">
+          <div className="inspiration-grid compact">
             {birthdayFlavors.map((f) => (
               <InspirationTile
                 key={f.id}
+                compact
                 className="birthday-tile"
                 active={flavorIds.includes(f.id)}
                 name={f.name}

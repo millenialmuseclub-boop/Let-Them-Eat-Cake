@@ -153,12 +153,13 @@ export function WeddingJourneyPage() {
         <div className="ltec-reveal">
           <h2 className="inspiration-heading">What should your wedding cake feel like?</h2>
           <p className="inspiration-subtext">Start with a style — everything after is tailored to it.</p>
-          <div className="inspiration-grid">
+          <div className="inspiration-grid compact">
             {weddingAesthetics.map((a) => {
               const scene = getSceneImage(weddingAestheticSceneId(a.id))
               return (
                 <InspirationTile
                   key={a.id}
+                  compact
                   name={a.name}
                   description={a.description}
                   imageUrl={scene?.url}
@@ -281,10 +282,11 @@ export function WeddingJourneyPage() {
           </button>
           <h2 className="inspiration-heading">Flavor direction</h2>
           <p className="inspiration-subtext">Pick the flavor world your cake should live in.</p>
-          <div className="inspiration-grid">
+          <div className="inspiration-grid compact">
             {weddingFlavorDirections.map((d) => (
               <InspirationTile
                 key={d.id}
+                compact
                 className="wedding-flavor-tile"
                 name={d.name}
                 description={d.description}
@@ -293,6 +295,7 @@ export function WeddingJourneyPage() {
               />
             ))}
             <InspirationTile
+              compact
               className="wedding-flavor-tile"
               name="Custom"
               description="Pick a cultural tradition to draw flavor from directly."

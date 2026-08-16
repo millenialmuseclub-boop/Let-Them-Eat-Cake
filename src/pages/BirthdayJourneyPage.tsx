@@ -113,10 +113,11 @@ export function BirthdayJourneyPage() {
       {step === 'who' && (
         <div className="ltec-reveal">
           <h2 className="inspiration-heading">Who's celebrating?</h2>
-          <div className="inspiration-grid">
+          <div className="inspiration-grid compact">
             {WHO_OPTIONS.map((opt) => (
               <InspirationTile
                 key={opt}
+                compact
                 className="birthday-tile"
                 name={opt}
                 imageUrl={WHO_SCENE[opt]}
@@ -136,10 +137,11 @@ export function BirthdayJourneyPage() {
             ← Change who
           </button>
           <h2 className="inspiration-heading">What kind of birthday are we creating?</h2>
-          <div className="inspiration-grid">
+          <div className="inspiration-grid compact">
             {birthdayEnergies.map((e) => (
               <InspirationTile
                 key={e.id}
+                compact
                 className="birthday-tile"
                 name={e.name}
                 description={e.description}
@@ -160,10 +162,11 @@ export function BirthdayJourneyPage() {
             ← Change energy
           </button>
           <h2 className="inspiration-heading">What will make them happiest?</h2>
-          <div className="inspiration-grid">
+          <div className="inspiration-grid compact">
             {birthdayFlavors.map((f) => (
               <InspirationTile
                 key={f.id}
+                compact
                 className="birthday-tile"
                 name={f.name}
                 description={f.description}
