@@ -18,6 +18,7 @@ import cakeImagesJson from '../data/cakeImages.json'
 import sceneImagesJson from '../data/sceneImages.json'
 import personalityImagesJson from '../data/personalityImages.json'
 import drinkImagesJson from '../data/drinkImages.json'
+import ingredientImagesJson from '../data/ingredientImages.json'
 import affiliateProductsJson from '../data/affiliateProducts.json'
 import bakingTraditionsJson from '../data/bakingTraditions.json'
 import techniquesJson from '../data/techniques.json'
@@ -43,6 +44,7 @@ import type { CakeImage } from '../types/cakeImage'
 import type { SceneImage } from '../types/sceneImage'
 import type { PersonalityImage } from '../types/personalityImage'
 import type { DrinkImage } from '../types/drinkImage'
+import type { IngredientImage } from '../types/ingredientImage'
 import type { AffiliateProduct } from '../types/affiliateProduct'
 import type { BakingTradition } from '../types/bakingTradition'
 import type { Technique } from '../types/technique'
@@ -72,6 +74,7 @@ export const cakeImages = cakeImagesJson as Record<string, CakeImage>
 export const sceneImages = sceneImagesJson as Record<string, SceneImage>
 export const personalityImages = personalityImagesJson as Record<string, PersonalityImage>
 export const drinkImages = drinkImagesJson as Record<string, DrinkImage>
+export const ingredientImages = ingredientImagesJson as Record<string, IngredientImage>
 export const affiliateProducts = affiliateProductsJson as AffiliateProduct[]
 export const bakingTraditions = bakingTraditionsJson as BakingTradition[]
 export const techniques = techniquesJson as Technique[]

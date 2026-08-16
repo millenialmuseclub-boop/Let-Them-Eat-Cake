@@ -23,6 +23,7 @@ export function ShareCard({
       cta="What cake were you born into?"
       shareUrl={shareUrl}
       shareText={shareText}
+      filename={`born-in-${year}-cake`}
     />
   )
 }

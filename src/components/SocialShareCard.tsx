@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { toPng } from 'html-to-image'
 import { Capacitor } from '@capacitor/core'
 import { Share } from '@capacitor/share'
+import { Filesystem, Directory } from '@capacitor/filesystem'
 import { hapticSuccess } from '../lib/haptics'
 import './SocialShareCard.css'
 
@@ -14,9 +16,11 @@ export interface SocialShareCardProps {
   cta: string
   shareUrl: string
   shareText: string
+  /** Used only for the generated image's filename -- keep it filesystem-safe. */
+  filename: string
 }
 
-type ShareState = 'idle' | 'sharing' | 'shared' | 'copied' | 'error'
+type ShareState = 'idle' | 'generating' | 'sharing' | 'shared' | 'copied' | 'error'
 
 function isUserCancelled(err: unknown): boolean {
   if (!(err instanceof Error)) return false
@@ -51,7 +55,12 @@ async function copyToClipboard(text: string): Promise<boolean> {
   }
 }
 
-export function SocialShareCard({ eyebrow, title, subtitle, detailLines, bodyLabel, bodyText, cta, shareUrl, shareText }: SocialShareCardProps) {
+async function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
+  return Promise.race([promise, new Promise<never>((_, reject) => setTimeout(() => reject(new Error('Image generation timed out')), ms))])
+}
+
+export function SocialShareCard({ eyebrow, title, subtitle, detailLines, bodyLabel, bodyText, cta, shareUrl, shareText, filename }: SocialShareCardProps) {
+  const cardRef = useRef<HTMLDivElement>(null)
   const [state, setState] = useState<ShareState>('idle')
 
   useEffect(() => {
@@ -61,46 +70,83 @@ export function SocialShareCard({ eyebrow, title, subtitle, detailLines, bodyLab
   }, [state])
 
   async function handleShare() {
-    setState('sharing')
-    const fullText = `${shareText} ${shareUrl}`
+    setState('generating')
+
+    // Native apps have no real web origin (window.location is capacitor://localhost/...,
+    // which Instagram/Messages/Mail reject outright), so the URL only makes sense as a
+    // share payload on a real web page -- never pass it to the native share sheet.
+    const fullTextForClipboard = Capacitor.isNativePlatform() ? shareText : `${shareText} ${shareUrl}`
 
     try {
+      // Card design is intentionally image-free/text-only, so this never captures a
+      // photo, chrome, or anything beyond the card itself.
+      const dataUrl = cardRef.current ? await withTimeout(toPng(cardRef.current, { pixelRatio: 3, cacheBust: true }), 15000) : null
+
       if (Capacitor.isNativePlatform()) {
-        // Native iOS/Android: navigator.share() is unreliable inside a Capacitor
-        // WebView on both platforms, so this always goes through the real native
-        // share sheet instead.
-        await Share.share({ title, text: shareText, url: shareUrl, dialogTitle: title })
+        if (!dataUrl) throw new Error('Card image unavailable')
+        const base64 = dataUrl.slice(dataUrl.indexOf(',') + 1)
+        const path = `${filename}-${Date.now()}.png`
+        const written = await Filesystem.writeFile({ path, data: base64, directory: Directory.Cache })
+
+        setState('sharing')
+        // Image file only -- no url, so there's nothing capacitor://-scheme for the
+        // destination app to choke on. text carries the caption instead.
+        await Share.share({ title, text: shareText, files: [written.uri], dialogTitle: title })
         hapticSuccess()
         setState('shared')
         return
       }
 
       if (typeof navigator !== 'undefined' && 'share' in navigator) {
+        if (dataUrl && navigator.canShare) {
+          const blob = await (await fetch(dataUrl)).blob()
+          const file = new File([blob], `${filename}.png`, { type: 'image/png' })
+          if (navigator.canShare({ files: [file] })) {
+            setState('sharing')
+            await navigator.share({ files: [file], title, text: shareText })
+            setState('shared')
+            return
+          }
+        }
+        // No file-share support in this browser -- a real https URL is a legitimate
+        // payload here (this is an actual web page, not a native WebView).
+        setState('sharing')
         await navigator.share({ title, text: shareText, url: shareUrl })
         setState('shared')
         return
       }
 
-      const copied = await copyToClipboard(fullText)
+      const copied = await copyToClipboard(fullTextForClipboard)
       setState(copied ? 'copied' : 'error')
     } catch (err) {
       if (isUserCancelled(err)) {
         setState('idle')
         return
       }
-      // The native or Web Share API failed for a real reason (not a user cancel) --
-      // fall back to clipboard rather than leaving the user with no outcome at all.
-      const copied = await copyToClipboard(fullText)
+      // Image generation or the share sheet failed for a real reason (not a user
+      // cancel) -- fall back to clipboard rather than leaving the user with no outcome.
+      const copied = await copyToClipboard(fullTextForClipboard)
       setState(copied ? 'copied' : 'error')
     }
   }
 
   const buttonLabel =
-    state === 'sharing' ? 'Sharing…' : state === 'shared' ? 'Shared!' : state === 'copied' ? 'Link Copied!' : state === 'error' ? 'Try Again' : cta
+    state === 'generating'
+      ? 'Preparing…'
+      : state === 'sharing'
+        ? 'Sharing…'
+        : state === 'shared'
+          ? 'Shared!'
+          : state === 'copied'
+            ? 'Copied!'
+            : state === 'error'
+              ? 'Try Again'
+              : cta
+  const busy = state === 'generating' || state === 'sharing'
 
   return (
     <div className="social-share-wrap ltec-reveal">
-      <div className="social-share-card">
+      <div ref={cardRef} className="social-share-card">
         <p className="social-share-brand">Let Them Eat Cake</p>
         <p className="social-share-eyebrow">{eyebrow}</p>
         <h2 className="social-share-title">{title}</h2>
@@ -126,11 +172,12 @@ export function SocialShareCard({ eyebrow, title, subtitle, detailLines, bodyLab
       </div>
 
       <div className="social-share-actions">
-        <button className="btn" onClick={handleShare} disabled={state === 'sharing'}>
+        <button className="btn" onClick={handleShare} disabled={busy}>
           {buttonLabel}
         </button>
         <p className="social-share-status" role="status" aria-live="polite">
-          {state === 'error' && `Couldn't share automatically — copy this link: ${shareUrl}`}
+          {state === 'error' &&
+            (Capacitor.isNativePlatform() ? "Couldn't share automatically — copied the caption instead." : `Couldn't share automatically — copy this link: ${shareUrl}`)}
         </p>
       </div>
     </div>

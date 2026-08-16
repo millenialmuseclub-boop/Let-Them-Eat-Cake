@@ -133,26 +133,6 @@ export function CakeEncyclopediaIndexPage() {
           </section>
 
           <section className="encyclopedia-row">
-            <h2>🌍 Baking Traditions</h2>
-            <div className="discover-feature-grid">
-              {traditionGroups.map(
-                ({ tradition, count, repCakeId }) =>
-                  repCakeId && (
-                    <DiscoverFeatureCard
-                      key={tradition.id}
-                      to={`/traditions/${tradition.id}`}
-                      title={tradition.title}
-                      description={tradition.specialty}
-                      meta={cakeCountLabel(count)}
-                      cta="Explore →"
-                      cakeId={repCakeId}
-                    />
-                  ),
-              )}
-            </div>
-          </section>
-
-          <section className="encyclopedia-row">
             <h2>🔤 Browse A–Z</h2>
             <div className="encyclopedia-az-row">
               {ALPHABET.map((letter) => (
@@ -173,6 +153,26 @@ export function CakeEncyclopediaIndexPage() {
                 ))}
               </div>
             )}
+          </section>
+
+          <section className="encyclopedia-row">
+            <h2>🌍 Baking Traditions</h2>
+            <div className="discover-feature-grid">
+              {traditionGroups.map(
+                ({ tradition, count, repCakeId }) =>
+                  repCakeId && (
+                    <DiscoverFeatureCard
+                      key={tradition.id}
+                      to={`/traditions/${tradition.id}`}
+                      title={tradition.title}
+                      description={tradition.specialty}
+                      meta={cakeCountLabel(count)}
+                      cta="Explore →"
+                      cakeId={repCakeId}
+                    />
+                  ),
+              )}
+            </div>
           </section>
         </>
       )}
