@@ -16,24 +16,28 @@
   pointer-events: none;
 }
 
+/* Deliberately lighter than .btn (the app's primary-CTA style: solid raspberry,
+   10px/20px padding, 15px font) -- a translucent surface pill keeps Back
+   visually secondary to whatever primary action a screen has. */
 .floating-back-button {
   pointer-events: auto;
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: 999px;
-  border: none;
-  background: var(--raspberry);
-  color: white;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg-card) 88%, transparent);
+  backdrop-filter: blur(6px);
+  color: var(--raspberry);
   font-weight: 600;
-  font-size: 13px;
+  font-size: 12px;
   box-shadow: var(--shadow);
   transition: transform 0.12s ease;
 }
 
 .floating-back-button:hover {
-  filter: brightness(1.05);
+  background: var(--bg-card);
 }
 
 .floating-back-button:active {
