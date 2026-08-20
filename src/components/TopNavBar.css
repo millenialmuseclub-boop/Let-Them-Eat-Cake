@@ -19,6 +19,8 @@
 .top-nav-brand {
   display: flex;
   align-items: center;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .top-nav-icon {
@@ -31,8 +33,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 999px;
   font-size: 20px;
   line-height: 1;

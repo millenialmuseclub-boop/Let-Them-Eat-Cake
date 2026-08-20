@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { getCake, getCakePersonality } from '../lib/data'
 import { getSavedCakeIds, getSavedPersonalityIds } from '../lib/notebook'
+import { CakeThumbnail } from '../components/CakeThumbnail'
 import './PastryNotebookPage.css'
 
 export function PastryNotebookPage() {
@@ -32,6 +33,7 @@ export function PastryNotebookPage() {
           <div className="notebook-grid">
             {savedCakes.map((cake) => (
               <Link key={cake.id} to={`/cake/${cake.id}`} className="card notebook-card">
+                <CakeThumbnail cakeId={cake.id} alt={cake.name} />
                 <span className="tag notebook-texture-tag">{cake.texture}</span>
                 <h3>{cake.name}</h3>
                 <p>{cake.description}</p>
