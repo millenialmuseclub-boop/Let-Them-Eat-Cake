@@ -11,9 +11,19 @@ node_modules
 dist
 dist-ssr
 *.local
-.env
+.env*
 .netlify
 deno.lock
+
+# Signing credentials — must never be committed, whatever platform
+*.p8
+*.p12
+*.mobileprovision
+*.jks
+*.keystore
+*.certSigningRequest
+ios-signing/
+android-signing/
 
 # Editor directories and files
 .vscode/*
