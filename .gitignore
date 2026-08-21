@@ -52,3 +52,8 @@ android/local.properties
 android/.idea
 android/captures
 android/app/release
+
+# Capgo OTA signing key — never commit; treat like any other private signing key
+.capgo_key_v2
+.capgo_key_v2.pub
+capgo_key_v2
