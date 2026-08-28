@@ -11,7 +11,7 @@ import './PersonalityQuizPage.css'
 // One-question-at-a-time flow, distinct from Sommelier FIND both in tone and mechanism (see
 // lib/personalityQuiz.ts) -- no points/badges/accounts, just a single playful result screen.
 export function PersonalityQuizPage() {
-  useDocumentTitle('Ramen Personality Quiz | Let Them Eat Ramen')
+  useDocumentTitle('Ramen Personality Quiz | Let Them Eat')
 
   const [step, setStep] = useState(0)
   const [answers, setAnswers] = useState<string[]>([])

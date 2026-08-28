@@ -26,7 +26,7 @@ const PROTEIN_OPTIONS: { value: ProteinCategory | 'flexible'; label: string }[] 
 ]
 
 export function SommelierFindPage() {
-  useDocumentTitle('Find My Ramen | Let Them Eat Ramen')
+  useDocumentTitle('Find My Ramen | Let Them Eat')
 
   const [query, setQuery] = useState<FindQuery>({
     richness: 3,

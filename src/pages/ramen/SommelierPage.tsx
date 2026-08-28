@@ -15,7 +15,7 @@ const sommelierHub = HUBS.find((hub) => hub.path === '/sommelier')!
 const activeItems = sommelierHub.kind === 'landing' ? sommelierHub.items : []
 
 export function SommelierPage() {
-  useDocumentTitle('Ramen Sommelier | Let Them Eat Ramen')
+  useDocumentTitle('Ramen Sommelier | Let Them Eat')
 
   const scene = getSceneImage('sommelier')
 

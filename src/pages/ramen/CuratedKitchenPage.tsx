@@ -15,7 +15,7 @@ const CATEGORY_LABEL: Record<ProductCategory, string> = {
 const CATEGORY_ORDER: ProductCategory[] = ['bowls-tableware', 'noodle-tools', 'broth-essentials', 'japanese-pantry', 'cookbooks']
 
 export function CuratedKitchenPage() {
-  useDocumentTitle('Curated Kitchen | Let Them Eat Ramen')
+  useDocumentTitle('Curated Kitchen | Let Them Eat')
 
   return (
     <main className="page">

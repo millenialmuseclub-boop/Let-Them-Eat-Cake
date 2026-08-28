@@ -9,7 +9,7 @@ export function CollectionDetailPage() {
   const { id } = useParams<{ id: string }>()
   const collection = id ? collections.find((c) => c.id === id) : undefined
 
-  useDocumentTitle(collection ? `${collection.title} | Let Them Eat Ramen` : 'Collection Not Found | Let Them Eat Ramen')
+  useDocumentTitle(collection ? `${collection.title} | Let Them Eat` : 'Collection Not Found | Let Them Eat')
 
   if (!collection) {
     return (

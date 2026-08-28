@@ -5,7 +5,7 @@ import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import './TrailsIndexPage.css'
 
 export function TrailsIndexPage() {
-  useDocumentTitle('Ramen Trails | Let Them Eat Ramen')
+  useDocumentTitle('Ramen Trails | Let Them Eat')
 
   return (
     <main className="page">

@@ -6,8 +6,8 @@ export function AboutPage() {
     <main className="page-container guide-article">
       <h1>About &amp; Legal</h1>
       <p>
-        Let Them Eat Cookies is an editorial guide to cookies from around the world -- part of the
-        Let Them Eat family of apps, alongside Let Them Eat Cake and Let Them Eat Ramen.
+        Let Them Eat is an editorial guide to cookies from around the world -- part of the
+        Let Them Eat family of apps, alongside Let Them Eat Cake and Let Them Eat.
       </p>
       <p>
         Some links in this app are affiliate links; we may earn a commission on qualifying

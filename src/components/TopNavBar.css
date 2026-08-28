@@ -57,7 +57,9 @@
 .top-nav-world-switcher {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
+  min-width: 44px;
   min-height: 44px;
   padding: 0 10px;
   border-radius: 999px;

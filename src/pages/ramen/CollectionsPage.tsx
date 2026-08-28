@@ -8,7 +8,7 @@ import './LabPage.css'
 import './CollectionsPage.css'
 
 export function CollectionsPage() {
-  useDocumentTitle('Curated Collections | Let Them Eat Ramen')
+  useDocumentTitle('Curated Collections | Let Them Eat')
 
   const scene = getSceneImage('collections')
 

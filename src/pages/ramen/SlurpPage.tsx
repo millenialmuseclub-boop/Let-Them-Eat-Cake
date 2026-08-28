@@ -13,7 +13,7 @@ const items = slurpHub.kind === 'landing' ? slurpHub.items : []
 const RAMEN_IDS = ['ramen_nagoya_taiwan', 'ramen_hakata_tonkotsu', 'ramen_tokyo_shoyu', 'ramen_imabari_yakiton', 'ramen_kurume', 'ramen_sapporo_miso']
 
 export function SlurpPage() {
-  useDocumentTitle('Slurp | Let Them Eat Ramen')
+  useDocumentTitle('Slurp | Let Them Eat')
 
   const scene = getSceneImage('slurp')
 

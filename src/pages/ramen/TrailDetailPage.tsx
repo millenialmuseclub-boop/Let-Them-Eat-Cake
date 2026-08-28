@@ -11,7 +11,7 @@ export function TrailDetailPage() {
   const trail = id ? getTrail(id) : undefined
   const relatedRamen = trail ? getRamen(trail.relatedRamenId) : undefined
 
-  useDocumentTitle(trail ? `${trail.title} Trail | Let Them Eat Ramen` : 'Trail Not Found | Let Them Eat Ramen')
+  useDocumentTitle(trail ? `${trail.title} Trail | Let Them Eat` : 'Trail Not Found | Let Them Eat')
 
   if (!trail || !relatedRamen) {
     return (

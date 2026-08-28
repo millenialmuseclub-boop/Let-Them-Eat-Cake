@@ -7,13 +7,13 @@ import './AboutPage.css'
 // (e.g. no analytics library is wired up here, so that bullet says so honestly rather than
 // copying Cake's Plausible mention).
 export function AboutPage() {
-  useDocumentTitle('About & Legal | Let Them Eat Ramen')
+  useDocumentTitle('About & Legal | Let Them Eat')
 
   return (
     <main className="page about-page">
       <h1>About &amp; Legal</h1>
       <p>
-        Let Them Eat Ramen is a ramen encyclopedia, world atlas, pairing sommelier, and culinary education app. This page covers how
+        Let Them Eat is a ramen encyclopedia, world atlas, pairing sommelier, and culinary education app. This page covers how
         the app works, what it does (and doesn't do) with your information, and the disclaimers worth knowing before you rely on
         anything here.
       </p>
@@ -21,7 +21,7 @@ export function AboutPage() {
       <details className="about-section">
         <summary>Privacy Policy</summary>
         <div className="about-section-body">
-          <p>Let Them Eat Ramen doesn't require an account, login, or any personal information to use. Here's what actually happens:</p>
+          <p>Let Them Eat doesn't require an account, login, or any personal information to use. Here's what actually happens:</p>
           <ul>
             <li>
               <strong>My Ramen / Favorites:</strong> saving a ramen or a personal note is designed to store that choice only in your
@@ -55,7 +55,7 @@ export function AboutPage() {
       <details className="about-section">
         <summary>Terms of Use</summary>
         <div className="about-section-body">
-          <p>By using Let Them Eat Ramen, you agree to the following:</p>
+          <p>By using Let Them Eat, you agree to the following:</p>
           <ul>
             <li>
               <strong>Educational &amp; editorial content:</strong> ramen history, cultural notes, technique guidance, and pairing
@@ -74,7 +74,7 @@ export function AboutPage() {
               control and aren't responsible for third-party content or practices.
             </li>
             <li>
-              <strong>Intellectual property:</strong> app design, curation, and original written content belong to Let Them Eat Ramen.
+              <strong>Intellectual property:</strong> app design, curation, and original written content belong to Let Them Eat.
               Photography, once sourced, is used under license/attribution from Pexels and its contributing photographers.
             </li>
             <li>
@@ -90,7 +90,7 @@ export function AboutPage() {
         <summary>Affiliate Disclosure</summary>
         <div className="about-section-body">
           <p>
-            Let Them Eat Ramen participates in affiliate programs, including ShopMy and LTK (LiketoKnow.it). Some product
+            Let Them Eat participates in affiliate programs, including ShopMy and LTK (LiketoKnow.it). Some product
             recommendations in Curated Kitchen are affiliate links -- if you make a purchase through one, we may earn a commission at no
             additional cost to you. Products without a verified affiliate link are shown for editorial context only, clearly marked
             "Coming Soon," and will only become clickable once a real, verified link exists for that specific product. We only recommend
@@ -129,7 +129,7 @@ export function AboutPage() {
         <div className="about-section-body">
           <p>
             Some pairing recommendations in Sommelier PAIR include alcoholic beverages such as sake, beer, and whisky. These are
-            intended only for people of legal drinking age in their location. Let Them Eat Ramen does not make any health claims about
+            intended only for people of legal drinking age in their location. Let Them Eat does not make any health claims about
             alcohol consumption, and nothing in this app is medical advice about drinking.
           </p>
         </div>
@@ -140,7 +140,7 @@ export function AboutPage() {
         <div className="about-section-body">
           <p>
             The Ramen Encyclopedia, Atlas, Workshop, Sommelier, and Slurp content in this app are editorial and educational content,
-            researched and curated by the Let Them Eat Ramen team. Regional ramen traditions, variations, and historical details can
+            researched and curated by the Let Them Eat team. Regional ramen traditions, variations, and historical details can
             differ by shop, family, and source -- where we label a bowl "traditional" or attribute it to a region, we mean a
             representative version, not the only correct one. Sommelier FIND/PAIR scores are a flavor-heuristic based on structured
             attributes, not a professional sommelier certification. We aim for accuracy and welcome corrections.

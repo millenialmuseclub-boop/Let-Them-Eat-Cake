@@ -22,7 +22,7 @@ const LETTERS = Array.from(new Set(ramen.map((r) => r.name[0].toUpperCase()))).s
 const AZ_PREVIEW_COUNT = 8
 
 export function RamenEncyclopediaIndexPage() {
-  useDocumentTitle('Ramen Encyclopedia — Origins, Broths & Flavors | Let Them Eat Ramen')
+  useDocumentTitle('Ramen Encyclopedia — Origins, Broths & Flavors | Let Them Eat')
 
   const [query, setQuery] = useState('')
   const [letter, setLetter] = useState<string | null>(null)

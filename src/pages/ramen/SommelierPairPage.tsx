@@ -23,7 +23,7 @@ const CATEGORY_LABEL: Record<PairingCategory, string> = {
 }
 
 export function SommelierPairPage() {
-  useDocumentTitle('Pair My Ramen | Let Them Eat Ramen')
+  useDocumentTitle('Pair My Ramen | Let Them Eat')
 
   const [ramenId, setRamenId] = useState(ramen[0].id)
   const candidate = ramen.find((r) => r.id === ramenId)!

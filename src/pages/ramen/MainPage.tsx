@@ -24,7 +24,7 @@ const RAMEN_IDS: Record<string, string> = {
 }
 
 export function MainPage() {
-  useDocumentTitle('Let Them Eat Ramen — Ramen Encyclopedia, Atlas & Sommelier')
+  useDocumentTitle('Let Them Eat — Ramen Encyclopedia, Atlas & Sommelier')
 
   const scene = getSceneImage('main')
 
@@ -39,7 +39,7 @@ export function MainPage() {
         </div>
       )}
       <div className="discover-brand">
-        <h1>Let Them Eat Ramen</h1>
+        <h1>Let Them Eat</h1>
         <p>Explore ramen culture, master its components, and discover the bowls that define it.</p>
       </div>
 

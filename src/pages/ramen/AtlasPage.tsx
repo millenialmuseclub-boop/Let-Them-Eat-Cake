@@ -22,7 +22,7 @@ export function AtlasPage() {
   const cities = getAllCities()
   const [selectedCity, setSelectedCity] = useState<string | null>(null)
 
-  useDocumentTitle(selectedCity ? `${selectedCity} — Ramen Atlas | Let Them Eat Ramen` : 'Ramen Atlas | Let Them Eat Ramen')
+  useDocumentTitle(selectedCity ? `${selectedCity} — Ramen Atlas | Let Them Eat` : 'Ramen Atlas | Let Them Eat')
 
   const selectedEntry = selectedCity ? getEntryForCity(selectedCity) : null
   const selectedRamen = selectedEntry ? getRamen(selectedEntry.ramenId) : null

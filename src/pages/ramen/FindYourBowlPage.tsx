@@ -21,7 +21,7 @@ const RICHNESS_VALUES: Record<RichnessTier, number> = { light: 1, medium: 3, ric
 const HEAT_VALUES: Record<HeatTier, number> = { mild: 0, medium: 2, spicy: 4 }
 
 export function FindYourBowlPage() {
-  useDocumentTitle('Find Your Bowl | Let Them Eat Ramen')
+  useDocumentTitle('Find Your Bowl | Let Them Eat')
 
   const [richness, setRichness] = useState<RichnessTier>('medium')
   const [brothCharacter, setBrothCharacter] = useState<BrothCharacter>('clear')

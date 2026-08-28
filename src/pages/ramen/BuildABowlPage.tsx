@@ -28,7 +28,7 @@ function TierTag({ tier }: { tier: CompatibilityTier }) {
 }
 
 export function BuildABowlPage() {
-  useDocumentTitle('Build a Bowl | Let Them Eat Ramen')
+  useDocumentTitle('Build a Bowl | Let Them Eat')
 
   const [selectedIds, setSelectedIds] = useState<Record<BowlComponentCategory, string>>(() =>
     Object.fromEntries(STEPS.map((s) => [s.category, OPTIONS_BY_CATEGORY[s.category][0].id])) as Record<BowlComponentCategory, string>,

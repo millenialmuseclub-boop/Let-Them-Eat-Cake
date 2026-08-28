@@ -11,7 +11,7 @@ import './TroubleshooterPage.css'
 // deterministic data (troubleshooter.json), no branching logic engine and no AI -- picking a
 // problem just reveals its full authored breakdown.
 export function TroubleshooterPage() {
-  useDocumentTitle('Troubleshooter | Let Them Eat Ramen')
+  useDocumentTitle('Troubleshooter | Let Them Eat')
 
   const [selectedId, setSelectedId] = useState<string | null>(null)
   const selected = troubleshooterProblems.find((p) => p.id === selectedId)

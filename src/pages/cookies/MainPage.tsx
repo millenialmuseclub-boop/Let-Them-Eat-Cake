@@ -22,7 +22,7 @@ export function MainPage() {
     <main className="page-container">
       <PageHeroBand
         image={getCookieImage('cookie_macaron')}
-        eyebrow="Let Them Eat Cookies"
+        eyebrow="Let Them Eat"
         title="An Editorial Guide to Cookies"
         description="Cookies from around the world -- their history, their craft, and where they actually come from."
       />

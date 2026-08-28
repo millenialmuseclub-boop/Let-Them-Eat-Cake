@@ -2,7 +2,7 @@ import { RamenAnatomyExplainer } from '../../components/ramen/RamenAnatomyExplai
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 
 export function RamenAnatomyPage() {
-  useDocumentTitle('Ramen Anatomy | Let Them Eat Ramen')
+  useDocumentTitle('Ramen Anatomy | Let Them Eat')
 
   return (
     <main className="page">

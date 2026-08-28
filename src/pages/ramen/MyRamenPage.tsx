@@ -10,7 +10,7 @@ import './MyRamenPage.css'
 // mutually exclusive). Reads live via useRamenLibrary, so toggling a state on the Encyclopedia
 // detail page and coming straight back here always reflects the current, correct state.
 export function MyRamenPage() {
-  useDocumentTitle('My Ramen | Let Them Eat Ramen')
+  useDocumentTitle('My Ramen | Let Them Eat')
 
   const library = useRamenLibrary()
 

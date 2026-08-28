@@ -25,7 +25,7 @@ export function RamenDetailPage() {
   const { id } = useParams<{ id: string }>()
   const item = id ? getRamen(id) : undefined
 
-  useDocumentTitle(item ? `${item.name} — Ramen Encyclopedia | Let Them Eat Ramen` : 'Ramen Not Found | Let Them Eat Ramen')
+  useDocumentTitle(item ? `${item.name} — Ramen Encyclopedia | Let Them Eat` : 'Ramen Not Found | Let Them Eat')
 
   if (!item) {
     return (

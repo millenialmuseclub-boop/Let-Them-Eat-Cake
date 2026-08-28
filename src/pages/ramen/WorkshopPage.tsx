@@ -30,7 +30,7 @@ const TILE_RAMEN_ID: Record<string, string> = {
 const COMING_SOON: string[] = []
 
 export function WorkshopPage() {
-  useDocumentTitle('Workshop | Let Them Eat Ramen')
+  useDocumentTitle('Workshop | Let Them Eat')
 
   return (
     <main className="page workshop-page">

@@ -19,7 +19,7 @@ export function LabPage() {
   const lab = getLab(slug)
   const scene = getSceneImage(slug)
 
-  useDocumentTitle(lab ? `${lab.title} | Let Them Eat Ramen` : 'Lab Not Found | Let Them Eat Ramen')
+  useDocumentTitle(lab ? `${lab.title} | Let Them Eat` : 'Lab Not Found | Let Them Eat')
 
   if (!lab) {
     return (

@@ -6,7 +6,7 @@ import './LabPage.css'
 import './VocabularyPage.css'
 
 export function VocabularyPage() {
-  useDocumentTitle('Ramen Vocabulary | Let Them Eat Ramen')
+  useDocumentTitle('Ramen Vocabulary | Let Them Eat')
 
   const scene = getSceneImage('vocabulary')
 

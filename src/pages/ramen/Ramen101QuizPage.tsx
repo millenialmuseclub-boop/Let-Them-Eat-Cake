@@ -7,7 +7,7 @@ import './Ramen101QuizPage.css'
 // immediate per-question feedback, an in-session (not persisted) correct-count at the end, and
 // deliberately no points/streaks/badges/leaderboards (Phase 7 §5).
 export function Ramen101QuizPage() {
-  useDocumentTitle('Ramen 101 Quiz | Let Them Eat Ramen')
+  useDocumentTitle('Ramen 101 Quiz | Let Them Eat')
 
   const [step, setStep] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)

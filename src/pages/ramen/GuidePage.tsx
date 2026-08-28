@@ -8,7 +8,7 @@ export function GuidePage() {
   const { slug } = useParams<{ slug: string }>()
   const guide = slug ? getGuide(slug) : undefined
 
-  useDocumentTitle(guide ? `${guide.title} | Let Them Eat Ramen` : 'Guide Not Found | Let Them Eat Ramen')
+  useDocumentTitle(guide ? `${guide.title} | Let Them Eat` : 'Guide Not Found | Let Them Eat')
 
   if (!guide) {
     return (
