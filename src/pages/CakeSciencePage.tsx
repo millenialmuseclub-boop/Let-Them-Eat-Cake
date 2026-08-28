@@ -1,11 +1,13 @@
 import { CakeScienceExplainer } from '../components/CakeScienceExplainer'
+import { CakeHeroImage } from '../components/CakeHeroImage'
 import { CuratorsToolDrawer } from '../components/CuratorsToolDrawer'
 import { getProductsForHubPath } from '../lib/affiliateProducts'
 
 export function CakeSciencePage() {
   return (
     <main className="page">
-      <h1>🧪 Cake Science</h1>
+      <CakeHeroImage cakeId="cake_castella" variant="hero" alt="A cake whose airy crumb comes down to technique and chemistry" />
+      <h1>Cake Science</h1>
       <p>The baking science behind why each ingredient and technique does what it does.</p>
       <div className="card">
         <CakeScienceExplainer />

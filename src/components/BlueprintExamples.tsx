@@ -7,7 +7,7 @@ export function BlueprintExamples() {
     <div className="blueprint-examples">
       {blueprintExamples.map((example) => (
         <div key={example.id} className="card blueprint-example-card">
-          {example.cakeId && <CakeThumbnail cakeId={example.cakeId} alt={example.name} variant="thumbnail" />}
+          <CakeThumbnail cakeId={example.cakeId ?? example.id} alt={example.name} variant="thumbnail" />
           <h3>{example.name}</h3>
           <p className="blueprint-example-description">{example.description}</p>
           <ol className="blueprint-example-layers">

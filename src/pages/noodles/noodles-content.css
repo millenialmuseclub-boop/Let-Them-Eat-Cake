@@ -23,17 +23,23 @@ a {
 
 
 
+/* Top/bottom padding matches Cake's own `.page` formula (src/index.css) -- this world's
+   fixed TopNavBar (56px + safe-area-inset-top) and BottomTabBar render on every Noodles route
+   same as everywhere else in the shell, so content needs the same clearance or it renders
+   underneath them instead of flowing below/above. Previously this was a flat 24px/48px, which
+   clipped the first ~50-70px of every page under the nav bar and left the last section of every
+   page hidden behind the tab bar. */
 .page-container {
   max-width: 1040px;
   margin: 0 auto;
-  padding: 24px 20px 48px;
+  padding: calc(56px + env(safe-area-inset-top, 0px) + 24px) 20px calc(64px + 76px);
 }
 
 
 
 @media (max-width: 480px) {
   .page-container {
-    padding: 18px 16px 40px;
+    padding: calc(56px + env(safe-area-inset-top, 0px) + 18px) 16px calc(48px + 76px);
   }
 }
 

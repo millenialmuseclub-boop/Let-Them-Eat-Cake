@@ -16,7 +16,7 @@ export function NoodleTypeIndexPage() {
       <div className="grid">
         {noodleTypes.map((type) => (
           <Link key={type.id} to={`/noodles/encyclopedia/type/${type.id}`} className="tile">
-            <PhotoFrame subjectId={type.id} fallbackLabel={type.name} variant="tile" fallbackEmoji="🍥" />
+            <PhotoFrame subjectId={type.id} fallbackLabel={type.name} variant="tile" />
             <div className="tile__scrim" />
             <div className="tile__label">
               <span className="kicker">{type.base.replace('-', ' ')}</span>

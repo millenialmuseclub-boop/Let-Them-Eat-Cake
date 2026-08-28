@@ -721,18 +721,25 @@ a {
 
 
 
+/* Top/bottom padding matches Cake's own `.page` formula (src/index.css) -- this world's fixed
+   TopNavBar (56px + safe-area-inset-top) and BottomTabBar render on every Cookies route same as
+   everywhere else in the shell, so content needs the same clearance or it renders underneath
+   them instead of flowing below/above. Previously this was a flat 20px/40px, which clipped the
+   first ~50-70px of every page under the nav bar and left the last section hidden behind the tab
+   bar. The floating-back-button case got its own bump before; folded into the base value now
+   since every route needs it, not just the ones with that button. */
 .page-container {
   position: relative;
   max-width: 1080px;
   margin: 0 auto;
-  padding: 20px 16px 40px;
+  padding: calc(56px + env(safe-area-inset-top, 0px) + 16px) 16px calc(64px + 76px);
   overflow-x: hidden;
 }
 
 
 
 .page-container:has(> .floating-back-button) {
-  padding-top: 64px;
+  padding-top: calc(56px + env(safe-area-inset-top, 0px) + 24px);
 }
 
 

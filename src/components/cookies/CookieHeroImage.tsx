@@ -5,7 +5,9 @@ export function CookieHeroImage({ cookieId, name }: { cookieId: string; name: st
   if (!image) {
     return (
       <div className="cookie-hero-image-placeholder" role="img" aria-label={`${name} (photo not yet available)`}>
-        <span aria-hidden="true">🍪</span>
+        <span aria-hidden="true" style={{ fontFamily: 'var(--heading)', fontSize: 15, fontWeight: 600, opacity: 0.6, textAlign: 'center', padding: '0 12px' }}>
+          {name}
+        </span>
       </div>
     )
   }
@@ -25,7 +27,9 @@ export function CookieThumbnail({ cookieId, name }: { cookieId: string; name: st
   if (!image) {
     return (
       <div className="cookie-hero-image-placeholder cookie-hero-image-placeholder-thumb" role="img" aria-label={`${name} (photo not yet available)`}>
-        <span aria-hidden="true">🍪</span>
+        <span aria-hidden="true" style={{ fontFamily: 'var(--heading)', fontSize: 11, fontWeight: 600, opacity: 0.6, textAlign: 'center', padding: '0 8px' }}>
+          {name}
+        </span>
       </div>
     )
   }

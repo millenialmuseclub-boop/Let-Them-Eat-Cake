@@ -23,7 +23,7 @@ export function NoodleTypeDetailPage() {
   return (
     <div className="page-container">
       <div className="hero-bleed">
-        <PhotoFrame subjectId={type.id} fallbackLabel={type.name} variant="hero" fallbackEmoji="🍥" />
+        <PhotoFrame subjectId={type.id} fallbackLabel={type.name} variant="hero" />
         <div className="hero-bleed__scrim" />
         <div className="hero-bleed__content">
           <span className="eyebrow">Noodle Type</span>

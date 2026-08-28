@@ -40,15 +40,33 @@
   border-radius: 12px 12px 0 0;
 }
 
-/* Branded placeholder -- shown whenever a record has no photo yet, which is
-   every record in Phase 2 (master spec §31: never collapse into a bare
-   text-only card just because photography is unavailable). */
+/* Editorial placeholder -- shown for the handful of regional styles that don't
+   yet have a sourced photo. Concentric rings evoke a bowl viewed from above
+   rather than dropping the app icon into a card; an honest "photo coming"
+   label beats guessing with an unrelated dish's photo. */
 .ramen-hero-image-placeholder {
-  background: var(--raspberry-bg);
+  background:
+    radial-gradient(circle at 50% 42%, transparent 0%, transparent 22%, var(--raspberry-bg) 23%, var(--raspberry-bg) 34%, transparent 35%, transparent 46%, var(--raspberry-bg) 47%, var(--raspberry-bg) 56%, transparent 57%),
+    var(--raspberry-bg);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   border-radius: 12px 12px 0 0;
+  position: relative;
+}
+
+.ramen-hero-image-placeholder::after {
+  content: 'Photograph coming soon';
+  display: block;
+  width: 100%;
+  padding: 5px 8px 7px;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--raspberry);
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 0 0 12px 12px;
 }
 
 .ramen-hero-image-thumbnail.ramen-hero-image-placeholder {
@@ -60,8 +78,5 @@
 }
 
 .ramen-hero-image-placeholder img {
-  width: 40%;
-  height: 40%;
-  object-fit: contain;
-  border-radius: 0;
+  display: none;
 }

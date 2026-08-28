@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { labs } from '../../data/noodles/workshop';
+import { getImageFor } from '../../data/noodles/images';
 import { useDocumentTitle } from '../../lib/useDocumentTitle';
 
 const GROUPS: { id: (typeof labs)[number]['group']; title: string }[] = [
@@ -29,12 +30,30 @@ export function WorkshopPage() {
               <h2>{group.title}</h2>
             </div>
             <div className="lab-list">
-              {groupLabs.map((lab) => (
-                <Link key={lab.slug} to={`/noodles/workshop/lab/${lab.slug}`} className="lab-item">
-                  <h3 style={{ marginBottom: 3 }}>{lab.title}</h3>
-                  <p style={{ fontSize: 13.5, opacity: 0.75, margin: 0 }}>{lab.summary}</p>
-                </Link>
-              ))}
+              {groupLabs.map((lab) => {
+                const image = lab.relatedDishIds?.[0] ? getImageFor(lab.relatedDishIds[0]) : undefined;
+                return (
+                  <Link
+                    key={lab.slug}
+                    to={`/noodles/workshop/lab/${lab.slug}`}
+                    className="lab-item"
+                    style={{ display: 'flex', alignItems: 'center', gap: 12 }}
+                  >
+                    {image && (
+                      <img
+                        src={image.src}
+                        alt=""
+                        loading="lazy"
+                        style={{ width: 48, height: 48, borderRadius: 10, objectFit: 'cover', flexShrink: 0 }}
+                      />
+                    )}
+                    <div>
+                      <h3 style={{ marginBottom: 3 }}>{lab.title}</h3>
+                      <p style={{ fontSize: 13.5, opacity: 0.75, margin: 0 }}>{lab.summary}</p>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         );

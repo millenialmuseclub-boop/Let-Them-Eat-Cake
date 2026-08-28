@@ -5,6 +5,7 @@ import { CakeBlueprintDiagram } from '../components/CakeBlueprintDiagram'
 import { FlavorProfileBars } from '../components/FlavorProfileBars'
 import { RecipeCard } from '../components/RecipeCard'
 import { CuratorsToolDrawer } from '../components/CuratorsToolDrawer'
+import { CakeHeroImage } from '../components/CakeHeroImage'
 import './AssemblyLabPage.css'
 
 const sponges = getComponentsByCategory('sponge')
@@ -29,6 +30,7 @@ export function AssemblyLabPage() {
 
   return (
     <main className="page assembly-page">
+      <CakeHeroImage cakeId="cake_lane_cake" variant="hero" alt="A cake built up in distinct layers, sponge to frosting" />
       <h1>Assembly Lab</h1>
       <p>Pick a sponge, filling, and frosting — and an optional garnish — to build your own cake from scratch.</p>
 

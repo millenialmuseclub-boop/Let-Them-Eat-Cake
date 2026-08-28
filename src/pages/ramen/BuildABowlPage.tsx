@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { getBowlComponentsByCategory, computeCompatibility, combineBowlRichness, describeBowl, TIER_LABEL } from '../../lib/ramen/workshop'
 import { BowlDiagram } from '../../components/ramen/BowlDiagram'
+import { RamenHeroImage } from '../../components/ramen/RamenHeroImage'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import type { BowlComponent, BowlComponentCategory, CompatibilityTier } from '../../types/ramen/workshop'
 import '../../components/ramen/FlavorProfileBars.css'
@@ -50,6 +51,7 @@ export function BuildABowlPage() {
 
   return (
     <main className="page build-a-bowl-page">
+      <RamenHeroImage ramenId="ramen_hakata_tonkotsu" variant="hero" alt="A finished, fully assembled bowl of ramen" />
       <h1>Build a Bowl</h1>
       <p>Choose a broth, tare, and the rest of the bowl's components -- we'll flag how traditional each pairing is as you go.</p>
 

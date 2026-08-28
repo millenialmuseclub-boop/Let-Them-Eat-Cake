@@ -1,4 +1,5 @@
 import type { NoodleImage } from '../../types/noodles/photo';
+import { dishes } from './dishes';
 
 /* Photography — Phase 2 sourcing pass.
    Per the master spec: "prefer honest fallback over an incorrect photo." Every record below was
@@ -676,5 +677,15 @@ export const images: NoodleImage[] = [
 ];
 
 export function getImageFor(subjectId: string): NoodleImage | undefined {
-  return images.find((img) => img.subjectId === subjectId);
+  const direct = images.find((img) => img.subjectId === subjectId);
+  if (direct) return direct;
+
+  // Noodle types have no photography of their own -- a bowl of plain lamian or udon isn't a
+  // distinct photographable subject. Reuse the photo of a dish that's actually made with this
+  // noodle type (a real, attributed photo of the thing itself) rather than falling back to an
+  // emoji for every single type page.
+  const dishOfType = dishes.find((d) => d.noodleTypeId === subjectId);
+  if (dishOfType) return images.find((img) => img.subjectId === dishOfType.id);
+
+  return undefined;
 }
