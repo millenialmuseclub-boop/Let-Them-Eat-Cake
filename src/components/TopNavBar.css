@@ -87,6 +87,41 @@
   }
 }
 
+/* Home's header: restrained text navigation between magazine departments, not an app switcher --
+   serif type, ink color, a quiet gold underline on hover rather than a pill/button treatment. */
+.top-nav-bar-home {
+  background: var(--cream, var(--bg-card));
+}
+
+.top-nav-departments {
+  display: flex;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.top-nav-departments a {
+  display: inline-block;
+  color: var(--cocoa, var(--text));
+  text-decoration: none;
+  padding: 16px 2px;
+  margin: -16px 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.top-nav-departments a:hover,
+.top-nav-departments a:focus-visible {
+  border-color: var(--gold, var(--raspberry));
+  color: var(--gold, var(--raspberry));
+}
+
+.top-nav-departments-divider {
+  margin: 0 10px;
+  opacity: 0.4;
+}
+
 @media print {
   .top-nav-bar {
     display: none !important;

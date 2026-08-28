@@ -16,13 +16,22 @@ export function TopNavBar() {
   const world = worldFromPathname(pathname)
 
   if (!world) {
-    // On the world-selector home itself, there's nothing to switch away from or save yet.
+    // On the home page, this is secondary navigation between magazine departments -- restrained
+    // text, no icons/emoji/pills -- not an app switcher. The umbrella brand mark speaks for
+    // itself; each world still gets its own full identity once you're inside it.
     return (
-      <header className="top-nav-bar">
+      <header className="top-nav-bar top-nav-bar-home">
         <span className="top-nav-brand" aria-label="Let Them Eat">
           <img src="/icon-master.svg" alt="" className="top-nav-icon" />
         </span>
-        <span />
+        <nav className="top-nav-departments" aria-label="Worlds">
+          {(Object.keys(WORLD_CONFIG) as HubWorld[]).map((w, i) => (
+            <span key={w}>
+              {i > 0 && <span className="top-nav-departments-divider" aria-hidden="true">&middot;</span>}
+              <Link to={WORLD_CONFIG[w].home}>{WORLD_CONFIG[w].label}</Link>
+            </span>
+          ))}
+        </nav>
       </header>
     )
   }
