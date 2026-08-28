@@ -85,20 +85,71 @@ const WORLD_INTROS: WorldIntro[] = [
   },
 ]
 
+// Each image below is the real, specific photo already associated with that exact place/dish in
+// its own world's existing image data (cakeImages.json / ramenImages.json / images.ts) -- not a
+// generic stock substitute.
 const ATLAS_HIGHLIGHTS = [
-  { place: 'Mexico', note: 'Tres leches cake', to: '/atlas' },
-  { place: 'Sapporo, Japan', note: 'Miso ramen', to: '/ramen/atlas' },
-  { place: 'Vietnam', note: 'Phở', to: '/noodles/atlas' },
+  {
+    place: 'Mexico',
+    note: 'Tres leches cake',
+    to: '/atlas',
+    image: 'https://images.unsplash.com/photo-1615735486329-c61cd40bfcc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400',
+  },
+  {
+    place: 'Sapporo, Japan',
+    note: 'Miso ramen',
+    to: '/ramen/atlas',
+    image: 'https://images.pexels.com/photos/16594958/pexels-photo-16594958.jpeg?w=400',
+  },
+  {
+    place: 'Vietnam',
+    note: 'Phở',
+    to: '/noodles/atlas',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Ph%E1%BB%9F_%C4%91%E1%BA%B7c_bi%E1%BB%87t.jpg?width=400',
+  },
 ]
 
+// Each image is that exact page's own hero/scene image where one exists in the ported content
+// (Ramen's Broth Lab, Cookies' dough-lab scene); Cake Science reuses the cake photo hubs.ts
+// already associates with that hub tile; Noodle Workshop uses a real hand-pulled-noodle dish
+// photo (Lanzhou lamian) from Noodles' own image set, since Noodles has no dedicated workshop
+// scene photo of its own.
 const WORKSHOP_HIGHLIGHTS = [
-  { world: 'Cake', title: 'Cake Science', to: '/cake-science' },
-  { world: 'Ramen', title: 'Broth Lab', to: '/ramen/broth-lab' },
-  { world: 'Cookies', title: 'Cookie Workshop', to: '/cookies/workshop' },
-  { world: 'Noodles', title: 'Noodle Workshop', to: '/noodles/workshop' },
+  {
+    world: 'Cake',
+    title: 'Cake Science',
+    to: '/cake-science',
+    image: 'https://images.unsplash.com/photo-1638519651608-412009302a02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400',
+  },
+  {
+    world: 'Ramen',
+    title: 'Broth Lab',
+    to: '/ramen/broth-lab',
+    image: 'https://images.pexels.com/photos/15085069/pexels-photo-15085069.jpeg?w=400',
+  },
+  {
+    world: 'Cookies',
+    title: 'Cookie Workshop',
+    to: '/cookies/workshop',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/9/9f/Rolling_Out_Cookie_Dough.JPG',
+  },
+  {
+    world: 'Noodles',
+    title: 'Noodle Workshop',
+    to: '/noodles/workshop',
+    image: 'https://commons.wikimedia.org/wiki/Special:FilePath/%E5%85%B0%E5%B7%9E%E7%89%9B%E8%82%89%E9%9D%A2.jpg?width=400',
+  },
 ]
 
 const kitchenPicks = products.filter((p) => p.offers.some((o) => o.status === 'active' && o.url)).slice(0, 4)
+
+// None of the three worlds' ported product catalogs carry a per-product photo (verified -- no
+// imageUrl/image field exists anywhere in their source data), so a specific product photo here
+// would have to be fabricated. Ramen's own category-level Curated Kitchen photography does
+// genuinely exist and honestly represents this list (all four current picks are bowls/tableware),
+// so that -- not an invented per-item photo -- is what's used, exactly as Ramen's own
+// ContextualCuratedKitchen already does for the same category.
+const kitchenCategoryImage = 'https://images.pexels.com/photos/27527988/pexels-photo-27527988.jpeg?w=800'
 
 export function HomePage() {
   useDocumentTitle('Let Them Eat')
@@ -138,8 +189,11 @@ export function HomePage() {
           {ATLAS_HIGHLIGHTS.map((item) => (
             <li key={item.place}>
               <Link to={item.to}>
-                <span className="home-discovery-place">{item.place}</span>
-                <span className="home-discovery-note">{item.note}</span>
+                <img src={item.image} alt="" className="home-discovery-thumb" loading="lazy" />
+                <span className="home-discovery-text">
+                  <span className="home-discovery-place">{item.place}</span>
+                  <span className="home-discovery-note">{item.note}</span>
+                </span>
               </Link>
             </li>
           ))}
@@ -152,8 +206,11 @@ export function HomePage() {
           {WORKSHOP_HIGHLIGHTS.map((item) => (
             <li key={item.to}>
               <Link to={item.to}>
-                <span className="home-discovery-place">{item.title}</span>
-                <span className="home-discovery-note">{item.world}</span>
+                <img src={item.image} alt="" className="home-discovery-thumb" loading="lazy" />
+                <span className="home-discovery-text">
+                  <span className="home-discovery-place">{item.title}</span>
+                  <span className="home-discovery-note">{item.world}</span>
+                </span>
               </Link>
             </li>
           ))}
@@ -163,14 +220,19 @@ export function HomePage() {
       {kitchenPicks.length > 0 && (
         <section className="home-discovery">
           <h3>From the Kitchen</h3>
-          <ul className="home-discovery-list">
+          <div className="home-kitchen-header">
+            <img src={kitchenCategoryImage} alt="" className="home-kitchen-header-image" loading="lazy" />
+          </div>
+          <ul className="home-discovery-list home-discovery-list-no-thumb">
             {kitchenPicks.map((product) => {
               const offer = product.offers.find((o) => o.status === 'active' && o.url)!
               return (
                 <li key={product.id}>
                   <a href={offer.url} target="_blank" rel="noreferrer sponsored">
-                    <span className="home-discovery-place">{product.name}</span>
-                    <span className="home-discovery-note">{offer.cta ?? 'Shop'}</span>
+                    <span className="home-discovery-text">
+                      <span className="home-discovery-place">{product.name}</span>
+                      <span className="home-discovery-note">{offer.cta ?? 'Shop'}</span>
+                    </span>
                   </a>
                 </li>
               )

@@ -2,13 +2,13 @@ import { Link, useLocation } from 'react-router-dom'
 import { worldFromPathname, type HubWorld } from '../data/hubs'
 import './TopNavBar.css'
 
-type WorldNavConfig = { home: string; saved: string; label: string; emoji: string }
+type WorldNavConfig = { home: string; saved: string; label: string }
 
 const WORLD_CONFIG: Record<HubWorld, WorldNavConfig> = {
-  cake: { home: '/discover', saved: '/notebook', label: 'Cake', emoji: '🍰' },
-  ramen: { home: '/ramen', saved: '/ramen/my-ramen', label: 'Ramen', emoji: '🍜' },
-  cookies: { home: '/cookies', saved: '/cookies/my-cookies', label: 'Cookies', emoji: '🍪' },
-  noodles: { home: '/noodles', saved: '/noodles/my-noodles', label: 'Noodles', emoji: '🍝' },
+  cake: { home: '/discover', saved: '/notebook', label: 'Cake' },
+  ramen: { home: '/ramen', saved: '/ramen/my-ramen', label: 'Ramen' },
+  cookies: { home: '/cookies', saved: '/cookies/my-cookies', label: 'Cookies' },
+  noodles: { home: '/noodles', saved: '/noodles/my-noodles', label: 'Noodles' },
 }
 
 export function TopNavBar() {
@@ -40,14 +40,16 @@ export function TopNavBar() {
 
   return (
     <header className="top-nav-bar">
-      <Link to={config.home} className="top-nav-brand" aria-label={`Let Them Eat — ${config.label} home`}>
+      {/* The logo is the literal, universal "take me home" affordance -- present on every route
+          via this single shared component, at every page depth, since TopNavBar is mounted once
+          in App.tsx outside <Routes>. Previously this linked to the *world's own* landing page
+          (e.g. /ramen) while a separate "Switch world" pill -- confusingly labeled with the
+          current world's own name/emoji -- was the actual way back to the umbrella home. Fixed
+          per user feedback: logo -> umbrella home ("/"), unambiguous, one tap, from anywhere. */}
+      <Link to="/" className="top-nav-brand" aria-label="Let Them Eat — Home">
         <img src="/icon-master.svg" alt="" className="top-nav-icon" />
       </Link>
       <div className="top-nav-actions">
-        <Link to="/" className="top-nav-world-switcher" aria-label="Switch world">
-          <span aria-hidden="true">{config.emoji}</span>
-          <span className="top-nav-world-switcher-label">{config.label}</span>
-        </Link>
         <Link to={config.saved} className="top-nav-favorites" aria-label={`Saved ${config.label}`}>
           ♥
         </Link>
