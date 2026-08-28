@@ -3,6 +3,18 @@ import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { getCookieImage, getSceneImage } from '../../lib/cookies/images'
 import { DiscoverFeatureCard } from '../../components/cookies/DiscoverFeatureCard'
 
+function RowThumb({ src, alt }: { src?: string; alt: string }) {
+  if (!src) return null
+  return (
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      style={{ width: 52, height: 52, borderRadius: 10, objectFit: 'cover', flexShrink: 0 }}
+    />
+  )
+}
+
 export function CrumbPage() {
   useDocumentTitle('Crumb')
   return (
@@ -31,21 +43,33 @@ export function CrumbPage() {
       </section>
 
       <div className="workshop-group-grid crumb-secondary-grid">
-        <Link to="/cookies/atlas" className="workshop-link-card">
-          <h2>Cookie Traditions</h2>
-          <p>Explore traditions by region.</p>
+        <Link to="/cookies/atlas" className="workshop-link-card" style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+          <RowThumb src={getCookieImage('cookie_maamoul')?.url} alt="" />
+          <div>
+            <h2>Cookie Traditions</h2>
+            <p>Explore traditions by region.</p>
+          </div>
         </Link>
-        <Link to="/cookies/crumb/vocabulary" className="workshop-link-card">
-          <h2>Cookie Vocabulary</h2>
-          <p>Key baking terms explained.</p>
+        <Link to="/cookies/crumb/vocabulary" className="workshop-link-card" style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+          <RowThumb src={getSceneImage('scene_dough_lab')?.url} alt="" />
+          <div>
+            <h2>Cookie Vocabulary</h2>
+            <p>Key baking terms explained.</p>
+          </div>
         </Link>
-        <Link to="/cookies/sommelier/find" className="workshop-link-card">
-          <h2>Find Your Cookie</h2>
-          <p>Get matched to a cookie based on your taste.</p>
+        <Link to="/cookies/sommelier/find" className="workshop-link-card" style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+          <RowThumb src={getCookieImage('cookie_french_sable')?.url} alt="" />
+          <div>
+            <h2>Find Your Cookie</h2>
+            <p>Get matched to a cookie based on your taste.</p>
+          </div>
         </Link>
-        <Link to="/cookies/crumb/quiz" className="workshop-link-card">
-          <h2>Cookie 101 Quiz</h2>
-          <p>Test what you've learned.</p>
+        <Link to="/cookies/crumb/quiz" className="workshop-link-card" style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+          <RowThumb src={getSceneImage('scene_chocolate_lab')?.url} alt="" />
+          <div>
+            <h2>Cookie 101 Quiz</h2>
+            <p>Test what you've learned.</p>
+          </div>
         </Link>
       </div>
     </main>

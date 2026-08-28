@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { labs } from '../../data/noodles/workshop';
 import { getImageFor } from '../../data/noodles/images';
+import { PhotoFrame } from '../../components/noodles/PhotoFrame';
 import { useDocumentTitle } from '../../lib/useDocumentTitle';
 
 const GROUPS: { id: (typeof labs)[number]['group']; title: string }[] = [
@@ -14,8 +15,14 @@ export function WorkshopPage() {
   useDocumentTitle('Workshop');
   return (
     <div className="page-container">
-      <span className="eyebrow">Workshop</span>
-      <h1>The Noodle Workshop</h1>
+      <div className="hero-bleed">
+        <PhotoFrame subjectId="lanzhou-lamian" fallbackLabel="The Noodle Workshop" variant="hero" />
+        <div className="hero-bleed__scrim" />
+        <div className="hero-bleed__content">
+          <span className="eyebrow">Workshop</span>
+          <h1>The Noodle Workshop</h1>
+        </div>
+      </div>
       <p className="prose" style={{ maxWidth: 560 }}>
         Deterministic, structured lessons — no calculators, no AI chatbot. Pick a described option
         and see what it actually does to the noodle.

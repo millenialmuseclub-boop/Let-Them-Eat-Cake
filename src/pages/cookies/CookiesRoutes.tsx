@@ -1,11 +1,10 @@
 import { Route, Routes } from 'react-router-dom'
-import { HubPage } from '../../components/HubPage'
-import { HUBS } from '../../data/hubs'
 // Allowlisted component-level styling recovered from Cookies' own global index.css (see
 // scripts/extract-world-css.mjs) -- everything genuinely Cookies-specific (image sizing, card
 // layout, workshop/crumb page structure), nothing that redefines :root or any classname Cake's
 // own shell/shared components already own. Loads only with this lazy-loaded chunk.
 import './cookies-content.css'
+import { CookiesMainPage } from './CookiesMainPage'
 import { CookieEncyclopediaIndexPage } from './CookieEncyclopediaIndexPage'
 import { CookieDetailPage } from './CookieDetailPage'
 import { AtlasPage } from './AtlasPage'
@@ -26,14 +25,11 @@ import { MyCookiesPage } from './MyCookiesPage'
 import { CuratedKitchenPage } from './CuratedKitchenPage'
 
 // Single lazy-loaded entry point for the whole Cookies world (see App.tsx), mounted at
-// /cookies/*. Workshop/Crumb/Sommelier are each a real ported page (direct hub); Main stays a
-// generic hub-tile landing since Cookies never had its own MainPage in the port list.
-const mainHub = HUBS.find((h) => h.path === '/cookies' && h.kind === 'landing')!
-
+// /cookies/*. Workshop/Crumb/Sommelier/Main are each a real ported page.
 export default function CookiesRoutes() {
   return (
     <Routes>
-      <Route path="" element={<HubPage hub={mainHub as Extract<typeof mainHub, { kind: 'landing' }>} />} />
+      <Route path="" element={<CookiesMainPage />} />
       <Route path="atlas" element={<AtlasPage />} />
       <Route path="encyclopedia" element={<CookieEncyclopediaIndexPage />} />
       <Route path="encyclopedia/:cookieId" element={<CookieDetailPage />} />

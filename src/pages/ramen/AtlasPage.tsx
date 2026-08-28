@@ -87,7 +87,8 @@ export function AtlasPage() {
                         return (
                           item && (
                             <Link key={id} to={`/ramen/ramen/${id}`} className="atlas-origin-ramen-link">
-                              {item.name}
+                              <RamenThumbnail ramenId={id} alt={item.name} variant="thumbnail" />
+                              <span>{item.name}</span>
                             </Link>
                           )
                         )

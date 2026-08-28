@@ -6,6 +6,7 @@ export const labs: Lab[] = [
     title: 'Noodle Anatomy',
     group: 'understand',
     summary: 'What actually makes one noodle different from another: base, form, and technique.',
+    relatedDishIds: ['biang-biang-mian'],
     variables: [
       {
         id: 'base',
@@ -24,6 +25,7 @@ export const labs: Lab[] = [
     title: 'Hydration Lab',
     group: 'foundations',
     summary: 'How much water a dough holds changes everything downstream — stretch, chew, and cook time.',
+    relatedDishIds: ['wonton-noodles'],
     variables: [
       {
         id: 'hydration',
@@ -53,12 +55,14 @@ export const labs: Lab[] = [
       },
     ],
     relatedNoodleTypeIds: ['lamian', 'biang-biang', 'udon'],
+    relatedDishIds: ['sanuki-udon'],
   },
   {
     slug: 'rice-noodle-lab',
     title: 'Rice Noodle Lab',
     group: 'foundations',
     summary: 'Rice noodles behave completely differently from wheat — no gluten means no kneading, no resting, and much more careful handling.',
+    relatedDishIds: ['pho-bo'],
     variables: [
       {
         id: 'form',
@@ -76,6 +80,7 @@ export const labs: Lab[] = [
     title: 'Shape Lab',
     group: 'form',
     summary: 'How the same dough becomes a strand, a ribbon, or a hand-torn belt.',
+    relatedDishIds: ['kalguksu'],
     variables: [
       {
         id: 'shaping-method',
@@ -112,6 +117,7 @@ export const labs: Lab[] = [
     title: 'Stir-Fry / Wok Technique',
     group: 'bowl',
     summary: 'High heat, short contact time, and not overcrowding the pan — the three variables that separate charred noodles from steamed ones.',
+    relatedDishIds: ['pad-thai'],
     variables: [
       {
         id: 'heat-and-motion',
@@ -129,6 +135,7 @@ export const labs: Lab[] = [
     title: 'Broth + Sauce Lab',
     group: 'bowl',
     summary: 'The difference between a clear broth, a rich coconut curry, and a dry-tossed sauce comes down to fat, reduction, and thickeners.',
+    relatedDishIds: ['khao-soi'],
     variables: [
       {
         id: 'liquid-style',
