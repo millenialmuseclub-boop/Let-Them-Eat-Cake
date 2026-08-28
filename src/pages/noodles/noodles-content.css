@@ -158,11 +158,23 @@ a {
 .hero-bleed__media {
   aspect-ratio: 4 / 3;
   width: 100%;
+  max-height: 340px;
   object-fit: cover;
   background: linear-gradient(160deg, var(--bg-ceramic), var(--border));
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* At tablet/desktop widths a 4:3 hero at full container width becomes disproportionately tall
+   (e.g. 780px on a 1040px-wide iPad-landscape column) -- capped above so the hero reads as a
+   deliberate banner rather than a giant, uncontrolled image once the page-container is wider
+   than a phone. */
+@media (min-width: 700px) {
+  .hero-bleed__media {
+    aspect-ratio: 21 / 9;
+    max-height: 380px;
+  }
 }
 
 

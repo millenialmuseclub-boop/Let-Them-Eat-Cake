@@ -4,8 +4,11 @@ import { ramen, pairingItems } from '../../lib/ramen/data'
 import { bestPairingByCategory, explainPairingScience } from '../../lib/ramen/sommelier'
 import { RamenThumbnail } from '../../components/ramen/RamenThumbnail'
 import { RamenStateBadges } from '../../components/ramen/RamenStateBadges'
+import { getSceneImage } from '../../lib/ramen/sceneImages'
+import { displayImageUrl } from '../../lib/ramen/images'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import type { PairingCategory } from '../../types/ramen/sommelier'
+import '../ramen/LabPage.css'
 import './SommelierPairPage.css'
 
 // Adapted from Cake's pairing architecture and Bridging/Cutting/Echoing concepts
@@ -25,12 +28,21 @@ const CATEGORY_LABEL: Record<PairingCategory, string> = {
 export function SommelierPairPage() {
   useDocumentTitle('Pair My Ramen | Let Them Eat')
 
+  const scene = getSceneImage('sommelier')
   const [ramenId, setRamenId] = useState(ramen[0].id)
   const candidate = ramen.find((r) => r.id === ramenId)!
   const bestByCategory = bestPairingByCategory(candidate, pairingItems)
 
   return (
     <main className="page">
+      {scene && (
+        <div className="lab-hero-image">
+          <img src={displayImageUrl(scene, 'hero')} alt="A Japanese table setting with ramen, yakitori, and a beer" loading="lazy" />
+          <span className="lab-hero-credit">
+            {scene.photographer} / {scene.source}
+          </span>
+        </div>
+      )}
       <h1>Pair My Ramen</h1>
       <p>Pick a bowl, and we'll recommend a beverage, side, condiment, and finishing touch that actually work with it -- and explain why.</p>
 

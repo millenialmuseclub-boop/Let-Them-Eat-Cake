@@ -1,10 +1,9 @@
 import { Route, Routes } from 'react-router-dom'
-import { HubPage } from '../../components/HubPage'
-import { HUBS } from '../../data/hubs'
 // Allowlisted component-level styling recovered from Noodles' own global index.css (see
 // scripts/extract-world-css.mjs) -- image/tile sizing, atlas lists, etc. Nothing that redefines
 // :root or a classname Cake's own shell/shared components already own. Lazy-loaded chunk only.
 import './noodles-content.css'
+import { MainPage } from './MainPage'
 import { EncyclopediaIndexPage } from './EncyclopediaIndexPage'
 import { NoodleTypeIndexPage } from './NoodleTypeIndexPage'
 import { NoodleTypeDetailPage } from './NoodleTypeDetailPage'
@@ -21,14 +20,14 @@ import { CuratedKitchenPage } from './CuratedKitchenPage'
 import { NotFoundPage } from './NotFoundPage'
 
 // Single lazy-loaded entry point for the whole Noodles world (see App.tsx), mounted at
-// /noodles/*. Workshop/Twirl/Sommelier are each a real ported page (direct hub); Main stays a
-// generic hub-tile landing (Atlas/Encyclopedia/Noodle Types), matching Ramen/Cookies' pattern.
-const mainHub = HUBS.find((h) => h.path === '/noodles' && h.kind === 'landing')!
-
+// /noodles/*. Main/Workshop/Twirl/Sommelier are each a real ported page. Main previously
+// rendered through the generic HubPage (bare text tiles -- same bug found and fixed on Ramen's
+// and Cookies' own Main routes: HubPage only looks up Cake-world images, so it never showed the
+// dish-of-the-day hero or DishTile photography that MainPage.tsx already has ready to go).
 export default function NoodlesRoutes() {
   return (
     <Routes>
-      <Route path="" element={<HubPage hub={mainHub as Extract<typeof mainHub, { kind: 'landing' }>} />} />
+      <Route path="" element={<MainPage />} />
       <Route path="atlas" element={<AtlasPage />} />
       <Route path="encyclopedia" element={<EncyclopediaIndexPage />} />
       <Route path="encyclopedia/noodle-types" element={<NoodleTypeIndexPage />} />

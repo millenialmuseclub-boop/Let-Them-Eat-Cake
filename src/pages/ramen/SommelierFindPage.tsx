@@ -5,9 +5,12 @@ import { getRegionEntryForRamen } from '../../lib/ramen/atlas'
 import { RamenThumbnail } from '../../components/ramen/RamenThumbnail'
 import { FlavorProfileBars } from '../../components/ramen/FlavorProfileBars'
 import { RamenStateBadges } from '../../components/ramen/RamenStateBadges'
+import { getSceneImage } from '../../lib/ramen/sceneImages'
+import { displayImageUrl } from '../../lib/ramen/images'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import type { BrothCharacter, FlavorTag, ProteinCategory } from '../../types/ramen/ramen'
 import type { FindQuery } from '../../types/ramen/sommelier'
+import '../ramen/LabPage.css'
 import './SommelierFindPage.css'
 
 // Adapted from Cake's deterministic weighted-scoring architecture (CAKE_REFERENCE_AUDIT.md §7),
@@ -27,6 +30,8 @@ const PROTEIN_OPTIONS: { value: ProteinCategory | 'flexible'; label: string }[] 
 
 export function SommelierFindPage() {
   useDocumentTitle('Find My Ramen | Let Them Eat')
+
+  const scene = getSceneImage('sommelier')
 
   const [query, setQuery] = useState<FindQuery>({
     richness: 3,
@@ -50,6 +55,14 @@ export function SommelierFindPage() {
 
   return (
     <main className="page">
+      {scene && (
+        <div className="lab-hero-image">
+          <img src={displayImageUrl(scene, 'hero')} alt="A Japanese table setting with ramen, yakitori, and a beer" loading="lazy" />
+          <span className="lab-hero-credit">
+            {scene.photographer} / {scene.source}
+          </span>
+        </div>
+      )}
       <h1>Find My Ramen</h1>
       <p>Tell us what you like, and we'll match it against every bowl in the Encyclopedia -- no AI, just a real scored comparison.</p>
 

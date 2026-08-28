@@ -1,6 +1,4 @@
 import { Route, Routes } from 'react-router-dom'
-import { HubPage } from '../../components/HubPage'
-import { HUBS } from '../../data/hubs'
 import { RamenEncyclopediaIndexPage } from './RamenEncyclopediaIndexPage'
 import { RamenDetailPage } from './RamenDetailPage'
 import { AtlasPage } from './AtlasPage'
@@ -15,6 +13,8 @@ import { FindYourBowlPage } from './FindYourBowlPage'
 import { TrailsIndexPage } from './TrailsIndexPage'
 import { TrailDetailPage } from './TrailDetailPage'
 import { Ramen101QuizPage } from './Ramen101QuizPage'
+import { MainPage } from './MainPage'
+import { SommelierPage } from './SommelierPage'
 import { SommelierFindPage } from './SommelierFindPage'
 import { SommelierPairPage } from './SommelierPairPage'
 import { MyRamenPage } from './MyRamenPage'
@@ -25,13 +25,14 @@ import { CuratedKitchenPage } from './CuratedKitchenPage'
 // (Main, Workshop, Slurp, Sommelier) are rendered here rather than from App.tsx's generic
 // HUBS-driven loop, since that loop only handles Cake's own hubs -- Cake's shell (BottomTabBar,
 // TopNavBar, hubs.ts data model) stays canonical, but each world wires its own hub-backed routes.
-const mainHub = HUBS.find((h) => h.path === '/ramen' && h.kind === 'landing')!
-const sommelierHub = HUBS.find((h) => h.path === '/ramen/sommelier' && h.kind === 'landing')!
-
+// Main and Sommelier both had their own bespoke, photo-led page components (MainPage.tsx,
+// SommelierPage.tsx) sitting unused while these routes rendered through the generic HubPage
+// instead -- HubPage only looks up Cake-world images, so both routes rendered as bare text tiles
+// despite Ramen having its own photography wired up and ready. Switched to the real components.
 export default function RamenRoutes() {
   return (
     <Routes>
-      <Route path="" element={<HubPage hub={mainHub as Extract<typeof mainHub, { kind: 'landing' }>} />} />
+      <Route path="" element={<MainPage />} />
       <Route path="atlas" element={<AtlasPage />} />
       <Route path="encyclopedia" element={<RamenEncyclopediaIndexPage />} />
       <Route path="ramen/:id" element={<RamenDetailPage />} />
@@ -54,7 +55,7 @@ export default function RamenRoutes() {
       <Route path="slurp/trails/:id" element={<TrailDetailPage />} />
       <Route path="slurp/ramen-101" element={<Ramen101QuizPage />} />
 
-      <Route path="sommelier" element={<HubPage hub={sommelierHub as Extract<typeof sommelierHub, { kind: 'landing' }>} />} />
+      <Route path="sommelier" element={<SommelierPage />} />
       <Route path="sommelier/find" element={<SommelierFindPage />} />
       <Route path="sommelier/pair" element={<SommelierPairPage />} />
 
