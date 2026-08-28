@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { troubleshooterProblems } from '../../data/noodles/workshop';
+import { getImageFor } from '../../data/noodles/images';
 import { useDocumentTitle } from '../../lib/useDocumentTitle';
 
 /* Flat data-only troubleshooter — zero branching decision-tree code, all logic lives in the
@@ -9,9 +10,18 @@ export function TroubleshooterPage() {
   useDocumentTitle('Troubleshooter');
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const selected = troubleshooterProblems.find((p) => p.id === selectedId);
+  const heroImage = getImageFor('lanzhou-lamian');
 
   return (
     <div className="page-container">
+      {heroImage && (
+        <img
+          src={heroImage.src}
+          alt={heroImage.alt}
+          loading="lazy"
+          className="photo-medium"
+        />
+      )}
       <span className="eyebrow">Workshop</span>
       <h1>Troubleshooter</h1>
       <p className="prose" style={{ maxWidth: 560 }}>What's going wrong?</p>

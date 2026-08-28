@@ -3,6 +3,8 @@ import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { useCookieLibrary } from '../../lib/cookies/useCookieLibrary'
 import { getCookie } from '../../lib/cookies/data'
 import { CookieThumbnail } from '../../components/cookies/CookieHeroImage'
+import { PageHeroBand } from '../../components/cookies/PageHeroBand'
+import { getSceneImage } from '../../lib/cookies/images'
 
 export function MyCookiesPage() {
   useDocumentTitle('My Cookies')
@@ -35,8 +37,12 @@ export function MyCookiesPage() {
 
   return (
     <main className="page-container my-cookies-page">
-      <h1>My Cookies</h1>
-      <p>Your private cookie shelf -- saved locally on this device. Nothing here is sent anywhere.</p>
+      <PageHeroBand
+        image={getSceneImage('scene_baking_tray')}
+        eyebrow="My Cookies"
+        title="My Cookies"
+        description="Your private cookie shelf -- saved locally on this device. Nothing here is sent anywhere."
+      />
       {records.length === 0 && (
         <div className="my-cookies-empty">
           <p>Your shelf is empty. Save a cookie you want to try, have baked, or love, and it'll show up here.</p>

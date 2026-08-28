@@ -1,1 +1,32 @@
-{}
+{
+  "curated-kitchen-bowls-tableware": {
+    "url": "https://images.pexels.com/photos/27527988/pexels-photo-27527988.jpeg",
+    "photographer": "Gốm sứ Cương Duyên",
+    "photographerUrl": "https://www.pexels.com/@g-m-s-c-ng-duyen-1570923256/",
+    "source": "Pexels"
+  },
+  "curated-kitchen-noodle-tools": {
+    "url": "https://images.pexels.com/photos/6287455/pexels-photo-6287455.jpeg",
+    "photographer": "Klaus Nielsen",
+    "photographerUrl": "https://www.pexels.com/@klaus-nielsen/",
+    "source": "Pexels"
+  },
+  "curated-kitchen-broth-essentials": {
+    "url": "https://images.pexels.com/photos/13533551/pexels-photo-13533551.jpeg",
+    "photographer": "Mateusz Feliksik",
+    "photographerUrl": "https://www.pexels.com/@mateusz-feliksik-1896604/",
+    "source": "Pexels"
+  },
+  "curated-kitchen-japanese-pantry": {
+    "url": "https://images.pexels.com/photos/19730266/pexels-photo-19730266.jpeg",
+    "photographer": "Huu Huynh",
+    "photographerUrl": "https://www.pexels.com/@imhh/",
+    "source": "Pexels"
+  },
+  "curated-kitchen-cookbooks": {
+    "url": "https://images.pexels.com/photos/5674151/pexels-photo-5674151.jpeg",
+    "photographer": "cottonbro studio",
+    "photographerUrl": "https://www.pexels.com/@cottonbro/",
+    "source": "Pexels"
+  }
+}

@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import cookie101QuizJson from '../../data/cookies/cookie101Quiz.json'
 import type { KnowledgeQuizQuestion } from '../../types/cookies/knowledgeQuiz'
+import { PageHeroBand } from '../../components/cookies/PageHeroBand'
+import { getSceneImage } from '../../lib/cookies/images'
 
 const QUESTIONS = cookie101QuizJson as KnowledgeQuizQuestion[]
 
@@ -14,7 +16,12 @@ export function Cookie101QuizPage() {
 
   return (
     <main className="page-container">
-      <h1>Cookie 101 Quiz</h1>
+      <PageHeroBand
+        image={getSceneImage('scene_dough_lab')}
+        eyebrow="Crumb"
+        title="Cookie 101 Quiz"
+        description="Test what you actually know about cookies, from dough to bake."
+      />
       {submitted && (
         <p aria-live="polite" className="quiz-score">You scored {score} out of {QUESTIONS.length}.</p>
       )}

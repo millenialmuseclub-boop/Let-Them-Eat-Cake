@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useMyNoodles } from '../../lib/noodles/useMyNoodles';
 import { getDish } from '../../lib/noodles/data';
 import { DishTile } from '../../components/noodles/DishTile';
+import { getImageFor } from '../../data/noodles/images';
 import { useDocumentTitle } from '../../lib/useDocumentTitle';
 import type { MyNoodlesState } from '../../types/noodles/myNoodles';
 
@@ -15,9 +16,11 @@ export function MyNoodlesPage() {
   useDocumentTitle('My Noodles');
   const entries = useMyNoodles();
   const isEmpty = entries.length === 0;
+  const heroImage = getImageFor('bun-cha');
 
   return (
     <div className="page-container">
+      {heroImage && <img src={heroImage.src} alt={heroImage.alt} loading="lazy" className="photo-medium" />}
       <span className="eyebrow">My Noodles</span>
       <h1>My Noodles</h1>
       <p className="prose" style={{ maxWidth: 560 }}>

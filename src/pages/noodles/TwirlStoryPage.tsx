@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import { twirlStories } from '../../data/noodles/twirl';
 import { getDish, getNoodleType } from '../../lib/noodles/data';
+import { getImageFor } from '../../data/noodles/images';
 import { useDocumentTitle } from '../../lib/useDocumentTitle';
 
 export function TwirlStoryPage() {
@@ -17,8 +18,12 @@ export function TwirlStoryPage() {
     );
   }
 
+  const heroDishId = story.relatedDishIds?.[0];
+  const heroImage = heroDishId ? getImageFor(heroDishId) : undefined;
+
   return (
     <div className="page-container">
+      {heroImage && <img src={heroImage.src} alt={heroImage.alt} loading="lazy" className="photo-medium" />}
       <span className="eyebrow">Twirl</span>
       <h1>{story.title}</h1>
       <p style={{ fontSize: 17, opacity: 0.8 }}>{story.dek}</p>

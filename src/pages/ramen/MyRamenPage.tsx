@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ramen } from '../../lib/ramen/data'
 import { useRamenLibrary } from '../../lib/ramen/useRamenLibrary'
 import { RamenThumbnail } from '../../components/ramen/RamenThumbnail'
+import { RamenHeroImage } from '../../components/ramen/RamenHeroImage'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import './MyRamenPage.css'
 
@@ -24,11 +25,12 @@ export function MyRamenPage() {
 
   return (
     <main className="page my-ramen-page">
+      <RamenHeroImage ramenId="ramen_kyoto" variant="hero" alt="A private shelf of bowls you've tried, favorited, or want to try" />
       <h1>My Ramen</h1>
       <p>Your private ramen library — Want to Try, Tried, and Favorites, all stored on this device. Nothing here is sent anywhere.</p>
 
       <section className="my-ramen-section">
-        <h2>★ Favorites</h2>
+        <h2>Favorites</h2>
         {favorites.length === 0 ? (
           <p className="my-ramen-empty">
             No favorites yet. Mark a bowl as a favorite from its <Link to="/ramen/encyclopedia">Encyclopedia entry</Link>.
@@ -44,7 +46,7 @@ export function MyRamenPage() {
       </section>
 
       <section className="my-ramen-section">
-        <h2>✓ Tried</h2>
+        <h2>Tried</h2>
         {tried.length === 0 ? (
           <p className="my-ramen-empty">
             Nothing marked as tried yet. Once you've had a bowl, mark it tried and optionally leave yourself a note.
@@ -60,7 +62,7 @@ export function MyRamenPage() {
       </section>
 
       <section className="my-ramen-section">
-        <h2>♡ Want to Try</h2>
+        <h2>Want to Try</h2>
         {wantToTry.length === 0 ? (
           <p className="my-ramen-empty">
             Nothing on your list yet. Browse the <Link to="/ramen/encyclopedia">Encyclopedia</Link> or try <Link to="/ramen/sommelier/find">Sommelier FIND</Link> to find your next bowl.

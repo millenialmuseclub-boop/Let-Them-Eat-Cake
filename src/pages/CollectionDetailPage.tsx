@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { getCollection } from '../lib/data'
 import { getCollectionCakes } from '../lib/collections'
+import { getCakeImage } from '../lib/images'
 import { CakeHeroImage } from '../components/CakeHeroImage'
 import './CollectionDetailPage.css'
 
@@ -20,12 +21,11 @@ export function CollectionDetailPage() {
   }
 
   const cakes = getCollectionCakes(collection)
+  const coverCake = cakes.find((c) => c.id && getCakeImage(c.id))
 
   return (
     <main className="page collection-detail-page">
-      <span className="collection-detail-icon" aria-hidden="true">
-        {collection.icon}
-      </span>
+      {coverCake && <CakeHeroImage cakeId={coverCake.id} variant="hero" alt={collection.title} />}
       <h1>{collection.title}</h1>
       <p>{collection.description}</p>
 
