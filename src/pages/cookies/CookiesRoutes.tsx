@@ -1,6 +1,11 @@
 import { Route, Routes } from 'react-router-dom'
 import { HubPage } from '../../components/HubPage'
 import { HUBS } from '../../data/hubs'
+// Allowlisted component-level styling recovered from Cookies' own global index.css (see
+// scripts/extract-world-css.mjs) -- everything genuinely Cookies-specific (image sizing, card
+// layout, workshop/crumb page structure), nothing that redefines :root or any classname Cake's
+// own shell/shared components already own. Loads only with this lazy-loaded chunk.
+import './cookies-content.css'
 import { CookieEncyclopediaIndexPage } from './CookieEncyclopediaIndexPage'
 import { CookieDetailPage } from './CookieDetailPage'
 import { AtlasPage } from './AtlasPage'

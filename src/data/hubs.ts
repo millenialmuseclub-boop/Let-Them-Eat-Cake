@@ -6,6 +6,11 @@ export interface HubSubItem {
   cakeId?: string
   /** Falls back to this scene-images.json entry when there's no natural cakeId to photograph (e.g. Curated Kitchen). */
   sceneId?: string
+  /** Direct image URL for worlds without a cakeId/sceneId lookup table of their own (Ramen/
+      Cookies/Noodles) -- takes precedence over cakeId/sceneId when set. Must be real, existing
+      photography already used elsewhere in that world's own content, not a fabricated image. */
+  imageUrl?: string
+  imageCredit?: string
   cta?: string
 }
 
@@ -330,18 +335,24 @@ export const HUBS: Hub[] = [
         title: 'Noodle Atlas',
         description: 'Noodle traditions from around the world, region by region.',
         cta: 'Open Atlas →',
+        imageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%BAn_ch%E1%BA%A3_H%C3%A0_N%E1%BB%99i_(th%E1%BB%8Bt_n%C6%B0%E1%BB%9Bng)_t%E1%BA%A1i_Nguy%E1%BB%85n_S%C6%A1n,_T%C3%A2n_Ph%C3%BA_(1).jpg',
+        imageCredit: 'Phương Huy / Wikimedia Commons',
       },
       {
         to: '/noodles/encyclopedia',
         title: 'Dish Encyclopedia',
         description: 'The stories and techniques behind the world\'s noodle dishes.',
         cta: 'Explore Dishes →',
+        imageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Ph%E1%BB%9F_%C4%91%E1%BA%B7c_bi%E1%BB%87t.jpg',
+        imageCredit: 'Azure Dragon of the East / Wikimedia Commons',
       },
       {
         to: '/noodles/encyclopedia/noodle-types',
         title: 'Noodle Types',
         description: 'The noodle shapes and families themselves, independent of any one dish.',
         cta: 'Explore Noodle Types →',
+        imageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/%E5%85%B0%E5%B7%9E%E7%89%9B%E8%82%89%E9%9D%A2.jpg',
+        imageCredit: '三猎 / Wikimedia Commons',
       },
     ],
   },

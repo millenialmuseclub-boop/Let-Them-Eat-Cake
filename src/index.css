@@ -73,6 +73,24 @@ p {
   margin: 0 0 8px;
 }
 
+/* Global link default. Cake itself never relied on inheriting the browser's default blue/purple
+   -- every one of its own links is styled via a more specific component class (.hub-card,
+   .discover-feature-card, etc.), which will always win over this on specificity, so this can't
+   change any existing Cake page. It exists for the many bare <a>/<Link> elements ported from
+   Ramen/Cookies/Noodles that relied on THEIR OWN app's global `a { color }` reset -- a reset that
+   was intentionally not carried over with the rest of their global stylesheets (see the
+   consolidation notes on CSS-chunk bleed), which is exactly why those bare links were rendering
+   as unstyled browser-default blue. Uses --raspberry rather than a hardcoded color so it also
+   picks up each world's own scoped accent (see styles/worldAccents.css) automatically. */
+a {
+  color: var(--raspberry);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 button {
   font: inherit;
   cursor: pointer;

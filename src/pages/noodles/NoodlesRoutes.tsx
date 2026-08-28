@@ -1,6 +1,10 @@
 import { Route, Routes } from 'react-router-dom'
 import { HubPage } from '../../components/HubPage'
 import { HUBS } from '../../data/hubs'
+// Allowlisted component-level styling recovered from Noodles' own global index.css (see
+// scripts/extract-world-css.mjs) -- image/tile sizing, atlas lists, etc. Nothing that redefines
+// :root or a classname Cake's own shell/shared components already own. Lazy-loaded chunk only.
+import './noodles-content.css'
 import { EncyclopediaIndexPage } from './EncyclopediaIndexPage'
 import { NoodleTypeIndexPage } from './NoodleTypeIndexPage'
 import { NoodleTypeDetailPage } from './NoodleTypeDetailPage'

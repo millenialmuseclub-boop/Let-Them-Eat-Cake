@@ -1,0 +1,1412 @@
+/* Auto-extracted from index.css by scripts/extract-world-css.mjs.
+   Allowlisted selector prefixes only: about-legal-entry, about-legal-link, about-legal-note, anatomy-step-toggle, atlas-chip, atlas-cookie-list, atlas-cookie-row, atlas-cookie-row-body, atlas-cookie-row-name, atlas-country-card, atlas-origin-complexity-tag, atlas-origin-grid, atlas-page, atlas-region-chips, build-a-cookie-page, build-a-cookie-results, build-a-cookie-stage, button-primary, button-secondary, collection-card, collection-card-body, collection-card-photo, collection-preview-card, collection-preview-count, collections-preview-row, coming-soon-tag, cookie-card, cookie-card-body, cookie-card-description, cookie-card-origin, cookie-card-tags, cookie-card-title, cookie-detail-facts, cookie-detail-header, cookie-detail-local-name, cookie-detail-origin, cookie-detail-page, cookie-detail-related-list, cookie-detail-section, cookie-detail-variation-note, cookie-grid, cookie-grid-compact, cookie-hero-image, cookie-hero-image-credit, cookie-hero-image-figure, cookie-hero-image-placeholder, cookie-hero-image-placeholder-thumb, cookie-hero-image-thumb, cookie-of-day-section, cookie-state-badge, cookie-state-badge-favorite, crumb-masthead, crumb-masthead-eyebrow, crumb-secondary-grid, discover-feature-card-icon, discover-feature-card-scrim, editorial-module, encyclopedia-az-chips, encyclopedia-chip, encyclopedia-traditions, find-form, find-page, find-result-details, find-result-heading, find-result-list, find-result-row, find-result-score, find-results, find-slider-row, flavor-profile-bar-row, flavor-profile-bar-track, flavor-profile-bars, guide-article, lab-concept-definition, lab-concept-item, lab-concept-list, lab-concept-toggle, lab-concepts, lab-explorer, lab-variable, lab-variable-bar-label, lab-variable-bar-row, lab-variable-bars, lab-variable-choice, lab-variable-choices, lab-variable-effect, lab-variable-label, lab-variable-related, lab-variables, my-cookies-empty, my-cookies-group, my-cookies-item, my-cookies-list, my-cookies-page, page-container, page-hero-band, page-hero-band-credit, page-hero-band-description, page-hero-band-eyebrow, page-hero-band-image, page-hero-band-plain, page-hero-band-scrim, quiz-explanation, quiz-option, quiz-page, quiz-question, quiz-result, quiz-result-actions, quiz-score, quiz-why-it-fits, recipe-allergen-note, recipe-body-grid, recipe-details-disclosure, recipe-disclosure-body, recipe-glance, recipe-glance-difficulty, recipe-glance-item, recipe-ingredient-amount, recipe-ingredient-group, recipe-ingredient-note, recipe-ingredients, recipe-instructions, recipe-intro, recipe-lab-link, recipe-meta-line, recipe-notes-block, recipe-section, recipe-source-note, recipe-step-stage, recipe-technique-note, saved-cookie-controls, section-header-row, section-with-view-all, traditions-accordion, traditions-accordion-item, trails-grid, troubleshooter-list, view-all-link, vocabulary-item, vocabulary-list, workshop-group, workshop-group-grid, workshop-link-card, workshop-link-card-coming-soon. See that script for the rationale
+   (narrow allowlist rather than the whole file, to avoid re-styling anything Cake's own shell/
+   shared components or utility classes already own). */
+
+
+
+/* Global link default -- deliberately overrides the browser's default blue/purple everywhere in
+   the app. Any link without a more specific rule below inherits this, not the user agent
+   stylesheet. Visited state is pinned to the same color so links never turn purple. Underline
+   only appears on hover/focus by default, since most links here live inside nav/card contexts
+   that already signal "this is tappable" through layout -- prose links get an explicit
+   always-on underline instead (see .editorial-module a below), since inline text needs a
+   non-color signal that it's a link. */
+a {
+  color: var(--raspberry);
+  text-decoration: none;
+}
+
+
+
+/* ---------- Hero / thumbnail photography ----------
+   Single source of truth for cookie photography sizing (previously duplicated/conflicting with a
+   second, orphaned block that targeted class names -- "-hero"/"-thumbnail" -- no component ever
+   rendered; the real component output is "-figure"/"-thumb", consolidated here). The detail-page
+   hero bleeds to the page-container's own edges (mirrors Cake's card-bleed treatment, adapted to
+   Cookies' full-page hero context rather than a card context); grid thumbnails stay flush inside
+   their card via the card's own overflow:hidden, so they only need top-corner rounding. */
+
+.cookie-hero-image-figure {
+  position: relative;
+  margin: 0 -16px 20px;
+}
+
+
+
+.cookie-hero-image {
+  width: calc(100% + 32px);
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+
+
+@media (min-width: 640px) {
+  .cookie-hero-image {
+    height: 340px;
+  }
+}
+
+
+
+.cookie-hero-image-credit {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 999px;
+  padding: 5px 10px;
+  margin: 0;
+}
+
+
+
+.cookie-hero-image-thumb {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 12px 0 0;
+}
+
+
+
+.cookie-hero-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--raspberry-bg);
+  font-size: 2.5rem;
+}
+
+
+
+.cookie-hero-image-figure .cookie-hero-image-placeholder {
+  width: calc(100% + 32px);
+  height: 260px;
+  border-radius: 16px;
+}
+
+
+
+@media (min-width: 640px) {
+  .cookie-hero-image-figure .cookie-hero-image-placeholder {
+    height: 340px;
+  }
+}
+
+
+
+.cookie-hero-image-placeholder-thumb {
+  aspect-ratio: 4 / 3;
+  border-radius: 12px 12px 0 0;
+}
+
+
+
+/* ---------- Flavor profile bars ---------- */
+
+.flavor-profile-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+
+
+.lab-explorer h2 {
+  margin-top: 28px;
+}
+
+
+
+.lab-variable-card {
+  margin-bottom: 16px;
+}
+
+
+
+.lab-variable-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+
+
+.lab-variable-option {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  min-height: 40px;
+}
+
+
+
+.lab-variable-option.active {
+  background: var(--raspberry);
+  border-color: var(--raspberry);
+  color: white;
+  font-weight: 600;
+}
+
+
+
+.lab-variable-effect {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+
+
+.encyclopedia-traditions-note {
+  opacity: 0.75;
+  font-size: 14px;
+}
+
+
+
+.encyclopedia-traditions-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+
+
+.cookie-detail-section {
+  margin-bottom: 20px;
+}
+
+
+
+.cookie-detail-facts {
+  padding-left: 20px;
+}
+
+
+
+.cookie-detail-variation-note {
+  opacity: 0.75;
+  font-size: 14px;
+}
+
+
+
+/* ---------- Recipe section (Cookie Detail flagship) ---------- */
+
+.recipe-section {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+
+
+.recipe-intro {
+  opacity: 0.85;
+  margin-bottom: 16px;
+}
+
+
+
+.recipe-glance {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0 0 14px;
+  padding: 14px;
+  background: var(--raspberry-bg);
+  border-radius: 12px;
+}
+
+
+
+.recipe-glance-item dt {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+  margin: 0 0 2px;
+}
+
+
+
+.recipe-glance-item dd {
+  margin: 0;
+  font-weight: 700;
+  color: var(--raspberry);
+}
+
+
+
+.recipe-glance-difficulty {
+  text-transform: capitalize;
+}
+
+
+
+.recipe-meta-line {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+
+
+.recipe-body-grid {
+  display: grid;
+  gap: 24px;
+}
+
+
+
+@media (min-width: 720px) {
+  .recipe-body-grid {
+    grid-template-columns: 1fr 1.4fr;
+    align-items: start;
+  }
+}
+
+
+
+.recipe-ingredients h3,
+.recipe-instructions h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+
+
+.recipe-ingredient-group {
+  margin-bottom: 14px;
+}
+
+
+
+.recipe-ingredient-group h4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--raspberry);
+  margin: 0 0 6px;
+}
+
+
+
+.recipe-ingredients ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+
+.recipe-ingredients li {
+  line-height: 1.5;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+
+
+.recipe-ingredient-amount {
+  font-weight: 700;
+}
+
+
+
+.recipe-ingredient-note {
+  opacity: 0.7;
+  font-size: 0.92em;
+}
+
+
+
+.recipe-instructions ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: recipe-step;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+
+.recipe-instructions li {
+  counter-increment: recipe-step;
+  position: relative;
+  padding-left: 36px;
+}
+
+
+
+.recipe-instructions li::before {
+  content: counter(recipe-step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--raspberry);
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.recipe-instructions p {
+  margin: 0 0 4px;
+  line-height: 1.6;
+}
+
+
+
+.recipe-step-stage {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--raspberry);
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+
+
+.recipe-technique-note {
+  font-size: 0.9em;
+  opacity: 0.75;
+  font-style: italic;
+}
+
+
+
+.recipe-lab-link {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.88em;
+  font-weight: 600;
+}
+
+
+
+.recipe-details-disclosure {
+  margin-top: 24px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+
+
+.recipe-details-disclosure summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--raspberry);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.recipe-disclosure-body {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+
+.recipe-notes-block h4 {
+  font-size: 14px;
+  margin: 0 0 6px;
+}
+
+
+
+.recipe-notes-block ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+
+
+.recipe-notes-block li {
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+
+
+.recipe-allergen-note {
+  font-size: 0.9em;
+  opacity: 0.85;
+}
+
+
+
+.recipe-source-note {
+  margin-top: 16px;
+  font-size: 11px;
+  opacity: 0.55;
+  font-style: italic;
+}
+
+
+
+/* ---------- Saved state controls + badges ---------- */
+
+.saved-cookie-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+
+.cookie-state-badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+
+
+.cookie-state-badge {
+  background: var(--raspberry-bg);
+  color: var(--raspberry);
+}
+
+
+
+.my-cookies-empty {
+  opacity: 0.75;
+}
+
+
+
+.atlas-origin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+
+
+.quiz-question-card {
+  margin-top: 16px;
+}
+
+
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+
+
+.quiz-option {
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  text-align: left;
+  font-size: 15px;
+}
+
+
+
+.quiz-option:hover {
+  background: var(--raspberry-bg);
+}
+
+
+
+.quiz-result-card {
+  margin-top: 16px;
+}
+
+
+
+.quiz-why-it-fits {
+  margin-top: 10px;
+}
+
+
+
+.quiz-result-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+
+
+/* ---------- Workshop ---------- */
+
+.workshop-group {
+  margin: 32px 0;
+}
+
+
+
+.workshop-group-heading {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+
+
+/* ---------- Sommelier FIND ---------- */
+
+.find-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px 0 28px;
+}
+
+
+
+.find-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+
+.find-form select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-weight: 400;
+}
+
+
+
+.find-result-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+
+
+.find-result-row .cookie-hero-image-thumb {
+  width: 90px;
+  height: 90px;
+  aspect-ratio: auto;
+  border-radius: 10px;
+}
+
+
+
+.find-result-row .cookie-hero-image-placeholder-thumb {
+  width: 90px;
+  height: 90px;
+  aspect-ratio: auto;
+  border-radius: 10px;
+  font-size: 1.6rem;
+}
+
+
+
+.find-result-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+
+.find-result-score {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--raspberry);
+}
+
+
+
+.find-result-details {
+  margin: 6px 0 0;
+  font-size: 14px;
+}
+
+
+
+@media (max-width: 640px) {
+  .find-result-row {
+    grid-template-columns: 64px 1fr;
+  }
+  .find-result-row .cookie-hero-image-thumb,
+  .find-result-row .cookie-hero-image-placeholder-thumb {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+
+
+/* ---------- Guides / Trails / Vocabulary (Crumb) ---------- */
+
+.guide-article {
+  max-width: 720px;
+}
+
+
+
+.guide-article h2 {
+  margin-top: 28px;
+}
+
+
+
+.vocabulary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+
+
+.trails-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+
+
+.page-container {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+  overflow-x: hidden;
+}
+
+
+
+.page-container:has(> .floating-back-button) {
+  padding-top: 64px;
+}
+
+
+
+.button-primary,
+.button-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+
+
+.button-primary {
+  background: var(--raspberry);
+  color: #fff;
+  border-color: var(--raspberry);
+}
+
+
+
+.button-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+
+.button-secondary {
+  background: transparent;
+  color: var(--text);
+}
+
+
+.cookie-of-day-section { margin: 48px 0; }
+
+
+.section-with-view-all { margin: 48px 0; }
+
+
+.section-header-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+
+.view-all-link { font-weight: 600; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; }
+
+
+.editorial-module { margin: 32px 0; max-width: 70ch; }
+
+
+.editorial-module a,
+.cookie-detail-section p a { text-decoration: underline; text-underline-offset: 2px; }
+
+
+.about-legal-entry { margin: 32px 0 8px; }
+
+
+.about-legal-link { font-weight: 600; }
+
+
+.about-legal-note { font-size: 0.85rem; opacity: 0.7; }
+
+
+
+/* Cookie card */
+.cookie-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+
+.cookie-card-body { padding: 12px 14px 16px; }
+
+
+.cookie-card-title { margin: 0 0 2px; }
+
+
+.cookie-card-origin { font-size: 0.85rem; opacity: 0.7; margin: 0 0 6px; }
+
+
+.cookie-card-description { font-size: 0.92rem; margin: 0 0 10px; }
+
+
+.cookie-card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+
+
+.cookie-grid,
+.encyclopedia-grid,
+.collections-grid,
+.trails-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+
+.cookie-grid-compact { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+
+
+
+.collection-card,
+.collection-preview-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+
+.collections-preview-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+
+.collection-preview-count { font-size: 0.82rem; opacity: 0.65; }
+
+
+
+/* Collections index -- each card leads with its flagship cookie's photo (distinct per collection)
+   rather than the plain text-only card used for Trails. */
+.collection-card-photo {
+  padding: 0;
+  overflow: hidden;
+}
+
+
+.collection-card-photo .collection-card-body {
+  padding: 14px 16px 16px;
+}
+
+
+.collection-card-photo h2 {
+  font-size: 19px;
+}
+
+
+
+/* Discover feature grid card internals */
+.discover-feature-card-scrim {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+
+.discover-feature-card-icon { font-size: 1.6rem; }
+
+
+
+/* Toggle / chip / choice buttons -- shared pressed state */
+.encyclopedia-chip,
+.atlas-chip,
+.lab-variable-choice {
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  border-radius: 999px;
+  padding: 8px 14px;
+  min-height: 44px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+
+.encyclopedia-chip[aria-pressed="true"],
+.atlas-chip[aria-pressed="true"],
+.lab-variable-choice[aria-pressed="true"] {
+  background: var(--raspberry);
+  border-color: var(--raspberry);
+  color: #fff;
+  font-weight: 700;
+}
+
+
+.encyclopedia-az-chips,
+.atlas-region-chips,
+.lab-variable-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+
+
+.encyclopedia-traditions { margin-top: 32px; }
+
+
+.traditions-accordion { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+
+
+.traditions-accordion-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: var(--bg-card);
+}
+
+
+.traditions-accordion-item summary { cursor: pointer; font-weight: 600; min-height: 44px; display: flex; align-items: center; }
+
+
+
+/* Atlas */
+.atlas-page { }
+
+
+.atlas-origin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+
+.atlas-country-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+
+.atlas-cookie-list { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-direction: column; gap: 4px; }
+
+
+.atlas-cookie-row {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 8px 6px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.12s ease;
+}
+
+
+.atlas-cookie-row:hover { background: var(--raspberry-bg); }
+
+
+.atlas-cookie-row .cookie-hero-image-thumb,
+.atlas-cookie-row .cookie-hero-image-placeholder-thumb {
+  width: 56px;
+  height: 56px;
+  aspect-ratio: auto;
+  border-radius: 10px;
+}
+
+
+.atlas-cookie-row-name { font-weight: 700; display: block; }
+
+
+.atlas-cookie-row-body p { margin: 2px 0 0; font-size: 0.9rem; opacity: 0.8; }
+
+
+.atlas-origin-complexity-tag { font-size: 0.75rem; opacity: 0.65; text-transform: capitalize; }
+
+
+
+/* Cookie detail */
+.cookie-detail-page { position: relative; }
+
+
+.cookie-detail-header { margin-bottom: 16px; }
+
+
+.cookie-detail-local-name { opacity: 0.75; font-style: italic; margin: 0 0 4px; }
+
+
+.cookie-detail-origin { opacity: 0.75; margin: 0 0 10px; }
+
+
+.cookie-detail-section { margin: 28px 0; }
+
+
+.cookie-detail-related-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+
+
+.cookie-detail-variation-note { font-style: italic; opacity: 0.85; }
+
+
+
+/* Flavor bars */
+.flavor-profile-bars { display: flex; flex-direction: column; gap: 8px; margin: 12px 0; }
+
+
+.flavor-profile-bar-row { display: grid; grid-template-columns: 90px 1fr; align-items: center; gap: 10px; }
+
+
+.flavor-profile-bar-track { display: flex; gap: 3px; }
+
+
+
+/* Lab explorer */
+.lab-explorer { display: flex; flex-direction: column; gap: 32px; margin-top: 20px; }
+
+
+.lab-concepts { }
+
+
+.lab-concept-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+
+
+.lab-concept-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+
+
+.lab-concept-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 12px 14px;
+  min-height: 44px;
+  background: var(--bg-card);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+.lab-concept-definition { padding: 0 14px 14px; }
+
+
+.lab-variable { border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 16px; background: var(--bg-card); }
+
+
+.lab-variable-label { margin-top: 0; }
+
+
+.lab-variable-effect { margin-top: 12px; }
+
+
+.lab-variable-bars { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+
+
+.lab-variable-bar-row { display: grid; grid-template-columns: 140px 1fr; align-items: center; gap: 8px; }
+
+
+.lab-variable-bar-label { font-size: 0.85rem; }
+
+
+.lab-variable-related { font-size: 0.85rem; opacity: 0.8; margin-top: 8px; }
+
+
+
+/* Anatomy */
+.anatomy-step-toggle {
+  width: 100%;
+  text-align: left;
+  min-height: 44px;
+  padding: 14px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+
+
+/* Build a Cookie */
+.build-a-cookie-page { }
+
+
+.build-a-cookie-stage { margin: 20px 0; }
+
+
+.build-a-cookie-results { margin-top: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+
+
+
+/* ---------- Page hero band (Workshop / Sommelier / Atlas / Curated Kitchen headers) ---------- */
+
+.page-hero-band {
+  position: relative;
+  margin: 0 -16px 24px;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+  min-height: 168px;
+  display: flex;
+  align-items: flex-end;
+}
+
+
+
+.page-hero-band-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.page-hero-band-scrim {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 20px 20px 18px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.15) 70%, transparent 100%);
+  color: white;
+}
+
+
+
+.page-hero-band-scrim h1 {
+  color: white;
+  margin: 2px 0 4px;
+}
+
+
+
+.page-hero-band-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+  opacity: 0.9;
+}
+
+
+
+.page-hero-band-description {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.95;
+  max-width: 480px;
+}
+
+
+
+.page-hero-band-credit {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  z-index: 1;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+
+
+.page-hero-band-plain {
+  display: block;
+  min-height: 0;
+  margin: 0 0 20px;
+}
+
+
+
+.page-hero-band-plain .page-hero-band-eyebrow {
+  color: var(--raspberry);
+}
+
+
+
+.page-hero-band-plain .page-hero-band-description {
+  max-width: none;
+  opacity: 0.85;
+  color: var(--text);
+  margin-top: 6px;
+}
+
+
+
+/* Workshop groups -- an editorial index/rail rather than a grid of boxed cards */
+.workshop-group-grid {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+
+.workshop-link-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-decoration: none;
+  color: inherit;
+  padding: 14px 2px;
+  min-height: 44px;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+  transition: opacity 0.15s, padding-left 0.15s;
+}
+
+
+.workshop-link-card:hover {
+  opacity: 0.7;
+  padding-left: 6px;
+}
+
+
+.workshop-link-card:active {
+  opacity: 0.5;
+}
+
+
+.workshop-link-card-coming-soon { opacity: 0.55; }
+
+
+
+.crumb-masthead { margin-bottom: 20px; }
+
+
+.crumb-masthead-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--raspberry);
+  margin: 0 0 4px;
+}
+
+
+.crumb-secondary-grid { margin-top: 24px; }
+
+
+.coming-soon-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--border);
+  margin-top: 6px;
+}
+
+
+
+/* Sommelier FIND */
+.find-page { }
+
+
+.find-form { display: flex; flex-direction: column; gap: 20px; margin-top: 16px; }
+
+
+.find-slider-row { display: grid; grid-template-columns: 100px 1fr 40px; align-items: center; gap: 10px; }
+
+
+
+.find-slider-row input[type="range"] {
+  accent-color: var(--raspberry);
+  height: 6px;
+  cursor: pointer;
+}
+
+
+.find-results { margin-top: 32px; }
+
+
+.find-result-list { list-style: none; padding: 0; margin: 0; }
+
+
+
+/* Quiz */
+.quiz-page { }
+
+
+.quiz-question { border: none; padding: 0; margin: 0 0 24px; }
+
+
+.quiz-question legend { font-weight: 700; margin-bottom: 8px; font-size: 1.05rem; }
+
+
+.quiz-option { display: flex; align-items: center; gap: 10px; padding: 8px 0; min-height: 44px; cursor: pointer; }
+
+
+.quiz-result { text-align: center; }
+
+
+.quiz-result-actions { display: flex; gap: 12px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+
+
+.quiz-why-it-fits { font-style: italic; opacity: 0.85; }
+
+
+.quiz-score { font-weight: 700; font-size: 1.1rem; }
+
+
+.quiz-explanation { font-size: 0.9rem; opacity: 0.85; margin-top: 4px; }
+
+
+
+/* My Cookies */
+.my-cookies-page { }
+
+
+.my-cookies-group { margin: 28px 0; }
+
+
+.my-cookies-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 14px; margin-top: 12px; }
+
+
+.my-cookies-item {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.85rem;
+  background: var(--bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+
+.my-cookies-item:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(58, 21, 48, 0.16); }
+
+
+.my-cookies-item:active { transform: scale(0.97); }
+
+
+.my-cookies-item img,
+.my-cookies-item .cookie-hero-image-placeholder-thumb { width: 100%; height: 84px; border-radius: 0; }
+
+
+.my-cookies-item span { padding: 8px 8px 10px; text-align: center; font-weight: 600; }
+
+
+.my-cookies-empty {
+  margin-top: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--raspberry-bg);
+  border-radius: 16px;
+}
+
+
+.my-cookies-empty p { margin: 0 0 12px; opacity: 0.85; }
+
+
+
+.cookie-state-badge-favorite { }
+
+
+
+.troubleshooter-list { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+
+
+.vocabulary-list { }
+
+
+.vocabulary-item { margin-bottom: 16px; }
+
+
+.vocabulary-item dt { font-weight: 700; }

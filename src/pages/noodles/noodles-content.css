@@ -1,0 +1,637 @@
+/* Auto-extracted from index.css by scripts/extract-world-css.mjs.
+   Allowlisted selector prefixes only: atlas-country, atlas-list, atlas-place-list, atlas-region, atlas-region__countries, bars, bars__fill, bars__row, bars__track, btn-primary, chip, chip-brass, chip-lacquer, disclosure, divider, eyebrow, glance-strip, glance-strip__item, grid, hero-bleed, hero-bleed__content, hero-bleed__scrim, kicker, lab-item, lab-list, page-container, photo-medium, prose, rail-item, rail-item__meta, rail-item__name, rail-list, recipe-steps, section-heading, story-item, story-item__body, story-item__index, story-item__media, story-list, tile, tile__label, tile__scrim, tile__media, tile__fallback, hero-bleed__media. See that script for the rationale
+   (narrow allowlist rather than the whole file, to avoid re-styling anything Cake's own shell/
+   shared components or utility classes already own). */
+
+
+
+/* Global link default — intentionally overrides browser blue/purple everywhere. Visited state is
+   pinned to the same color so links never turn purple. Nav/card links rely on layout to signal
+   "tappable" and stay underline-free until hover/focus; free-standing prose links (.prose a) get
+   an always-on underline since inline text needs a non-color signal. */
+a {
+  color: var(--jade-strong);
+  text-decoration: none;
+}
+
+
+
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+
+
+.page-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+
+
+@media (max-width: 480px) {
+  .page-container {
+    padding: 18px 16px 40px;
+  }
+}
+
+
+
+.btn-primary {
+  background: var(--jade);
+  color: #fff;
+}
+
+
+
+.btn-primary:hover {
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(47, 111, 98, 0.28);
+}
+
+
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  min-height: 32px;
+}
+
+
+
+.chip[aria-pressed='true'] {
+  background: var(--jade);
+  color: #fff;
+  border-color: var(--jade);
+}
+
+
+
+.chip-lacquer {
+  background: var(--lacquer-bg);
+  color: var(--lacquer);
+  border-color: transparent;
+}
+
+
+
+.chip-brass {
+  background: rgba(176, 141, 79, 0.14);
+  color: var(--brass-strong);
+  border-color: transparent;
+}
+
+
+
+.eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--lacquer);
+  margin-bottom: 8px;
+}
+
+
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 36px 0 14px;
+}
+
+
+
+.section-heading h2 {
+  margin: 0;
+}
+
+
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 28px 0;
+}
+
+
+
+/* Photo-bleed hero: negative margin against the page container's gutter, paired with
+   overflow-x:hidden on body — the single highest-leverage move for reading as editorial rather
+   than a boxed website (learned from Cookies). */
+.hero-bleed {
+  margin: -24px -20px 24px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 20px 20px;
+}
+
+
+
+@media (max-width: 480px) {
+  .hero-bleed {
+    margin: -18px -16px 20px;
+  }
+}
+
+
+
+.hero-bleed__media {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  object-fit: cover;
+  background: linear-gradient(160deg, var(--bg-ceramic), var(--border));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.hero-bleed__scrim {
+  position: absolute;
+  inset: 0;
+  /* Starts darkening earlier (15% vs. the previous 40%) so the kicker label stays legible
+     against real photography of varying brightness, not just the flat gradient fallback it was
+     tuned against originally. */
+  background: linear-gradient(180deg, rgba(28, 33, 29, 0) 15%, rgba(28, 33, 29, 0.55) 55%, rgba(28, 33, 29, 0.82) 100%);
+}
+
+
+
+.hero-bleed__content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  color: #fdf9ee;
+}
+
+
+
+.hero-bleed__content h1 {
+  color: #fdf9ee;
+}
+
+
+
+.hero-bleed__content .eyebrow {
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+}
+
+
+
+/* Medium editorial photo tier — between a .tile (~150px catalog thumbnail) and a full .hero-bleed
+   (page-top, bleeds past the container gutter). For a single flagship spot (e.g. a Workshop lab
+   header) that deserves more visual weight than a tile without going full-bleed hero. 16:9 keeps
+   it landscape/editorial rather than portrait like .tile. */
+.photo-medium {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--bg-ceramic), var(--border));
+  margin: 16px 0 4px;
+}
+
+
+
+.photo-medium img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+
+
+.tile {
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background: var(--bg-ceramic);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+
+
+.tile:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+
+
+.tile__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.tile__fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  background: linear-gradient(160deg, var(--bg-ceramic), var(--border));
+}
+
+
+
+.tile__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(28, 33, 29, 0) 45%, rgba(28, 33, 29, 0.82) 100%);
+}
+
+
+
+.tile__label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px;
+  color: #fdf9ee;
+}
+
+
+
+.tile__label .kicker {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 2px;
+}
+
+
+
+.tile__label strong {
+  font-family: var(--heading);
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+
+
+/* Editorial rail list — a lighter alternative to a full bordered/shadowed .card, used where a
+   card grid would either over-card plain text/links or force imagery that doesn't exist (some
+   noodle types and Twirl stories have no matching photography). Fine divider instead of a card. */
+.rail-list {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.rail-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+.rail-item:first-child {
+  border-top: none;
+}
+
+
+
+.rail-item:hover .rail-item__name {
+  text-decoration: underline;
+}
+
+
+
+.rail-item__name {
+  font-family: var(--heading);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+
+
+.rail-item__meta {
+  font-size: 12.5px;
+  opacity: 0.7;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+
+
+/* Twirl editorial story list — image-forward where a related dish is already photographed,
+   typographic-only where it isn't, rather than forcing an unrelated photo. The index numeral
+   uses lacquer, giving Twirl (the signature magazine section) its own accent instead of the
+   jade used for functional/interactive color everywhere else. */
+.story-list {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.story-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+.story-item:first-child {
+  border-top: none;
+}
+
+
+
+.story-item__index {
+  font-family: var(--heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--lacquer);
+  flex-shrink: 0;
+  min-width: 20px;
+}
+
+
+
+.story-item__media {
+  display: block;
+  width: 76px;
+  height: 76px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--bg-ceramic);
+}
+
+
+
+.story-item__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.story-item__body {
+  display: block;
+  min-width: 0;
+}
+
+
+
+.story-item__body h3 {
+  margin-bottom: 3px;
+}
+
+
+
+.story-item:hover .story-item__body h3 {
+  text-decoration: underline;
+}
+
+
+
+/* Workshop lab list — same lighter rail treatment as .rail-list, grouped by category heading,
+   replacing a grid of identical bordered cards that read like a settings list. */
+.lab-list {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.lab-item {
+  display: block;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+.lab-item:first-child {
+  border-top: none;
+}
+
+
+
+.lab-item:hover h3 {
+  text-decoration: underline;
+}
+
+
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+
+.bars__row {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+}
+
+
+
+.bars__track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+
+
+.bars__fill {
+  height: 100%;
+  background: var(--jade);
+  border-radius: 999px;
+}
+
+
+
+details.disclosure {
+  border-top: 1px solid var(--border);
+  padding: 14px 0;
+}
+
+
+
+details.disclosure summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+details.disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+
+
+.recipe-steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+
+.recipe-steps li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 12px;
+}
+
+
+
+.recipe-steps li::before {
+  content: counter(step);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--jade-bg);
+  color: var(--jade-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+
+
+.glance-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 10px;
+  background: var(--bg-ceramic);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 20px;
+}
+
+
+
+.glance-strip__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+
+
+.glance-strip__item span:first-child {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.65;
+}
+
+
+
+.atlas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+
+
+.atlas-region {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  background: var(--bg-card);
+}
+
+
+
+.atlas-region__countries {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+
+.atlas-country {
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+
+
+
+.atlas-place-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}

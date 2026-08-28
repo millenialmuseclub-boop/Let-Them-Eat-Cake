@@ -12,6 +12,7 @@ function DiscoverFeatureCardBody({
   imageUrl,
   imageAlt,
   photographer,
+  sourceLabel = 'Unsplash',
 }: {
   title: string
   description?: string
@@ -23,6 +24,9 @@ function DiscoverFeatureCardBody({
   photographer?: string
   photographerUrl?: string
   unsplashUrl?: string
+  /** Photo source/network shown in the credit line -- defaults to 'Unsplash' since that's what
+      every Cake caller uses; other worlds (Pexels, Wikimedia Commons) pass their own. */
+  sourceLabel?: string
 }) {
   return (
     <>
@@ -31,8 +35,9 @@ function DiscoverFeatureCardBody({
         <div className="discover-feature-card-image">
           <img src={imageUrl} alt={imageAlt ?? title} loading="lazy" />
           {photographer && (
-            <p className="discover-feature-card-credit" title={`Photo by ${photographer} on Unsplash`}>
-              {photographer} / Unsplash
+            <p className="discover-feature-card-credit" title={`Photo credit: ${photographer}${sourceLabel ? ` / ${sourceLabel}` : ''}`}>
+              {photographer}
+              {sourceLabel && ` / ${sourceLabel}`}
             </p>
           )}
         </div>
@@ -63,6 +68,7 @@ type DiscoverFeatureCardProps = {
   photographer?: string
   photographerUrl?: string
   unsplashUrl?: string
+  sourceLabel?: string
 } & ({ to: string; onClick?: never } | { to?: never; onClick: () => void })
 
 export function DiscoverFeatureCard(props: DiscoverFeatureCardProps) {

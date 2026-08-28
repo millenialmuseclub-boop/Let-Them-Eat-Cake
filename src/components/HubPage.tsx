@@ -20,7 +20,7 @@ export function HubPage({ hub }: { hub: LandingHub }) {
           const hasCakePhoto = item.cakeId && !!getCakeImage(item.cakeId)
           const scene = !hasCakePhoto && item.sceneId ? getSceneImage(item.sceneId) : undefined
 
-          if (hasCakePhoto || scene) {
+          if (hasCakePhoto || scene || item.imageUrl) {
             return (
               <DiscoverFeatureCard
                 key={item.to}
@@ -29,11 +29,12 @@ export function HubPage({ hub }: { hub: LandingHub }) {
                 description={item.description}
                 cta={item.cta ?? 'Explore →'}
                 cakeId={hasCakePhoto ? item.cakeId : undefined}
-                imageUrl={scene?.url}
+                imageUrl={item.imageUrl ?? scene?.url}
                 imageAlt={item.title}
-                photographer={scene?.photographer}
+                photographer={item.imageUrl ? item.imageCredit : scene?.photographer}
                 photographerUrl={scene?.photographerUrl}
                 unsplashUrl={scene?.unsplashUrl}
+                sourceLabel={item.imageUrl ? '' : undefined}
               />
             )
           }
