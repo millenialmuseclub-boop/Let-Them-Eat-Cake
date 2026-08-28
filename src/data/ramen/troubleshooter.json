@@ -1,0 +1,103 @@
+[
+  {
+    "id": "broth-tastes-flat",
+    "problem": "Broth tastes flat",
+    "diagnosticQuestions": ["Did you season with tare at the end, or simmer salt into the stockpot?", "How long did the broth actually simmer?", "Is there any dashi or umami component (kombu, niboshi, bonito) in the base?"],
+    "causes": [
+      { "cause": "Tare was added too early and simmered flat instead of seasoning the bowl fresh.", "correction": "Add tare directly to the bowl just before ladling in broth -- see Tare Lab.", "relatedComponentCategory": "tare" },
+      { "cause": "Not enough extraction time to build real body.", "correction": "Extend simmer time, or switch to a hard rolling boil for a richer, more emulsified broth -- see Broth Lab.", "relatedComponentCategory": "broth" },
+      { "cause": "No umami-building component in the base.", "correction": "Add a kombu, niboshi, or bonito layer underneath the main broth for savory depth.", "flavorTags": ["umami-heavy"], "relatedComponentCategory": "broth" }
+    ],
+    "relatedLessonPath": "/broth-lab",
+    "relatedLessonLabel": "Broth Lab"
+  },
+  {
+    "id": "broth-too-salty",
+    "problem": "Broth is too salty",
+    "diagnosticQuestions": ["How concentrated was the tare relative to the broth volume?", "Was the tare tasted on its own before combining, or only after?"],
+    "causes": [
+      { "cause": "Tare-to-broth ratio was too high for this style.", "correction": "Use less tare per bowl, or dilute it with a bit more broth -- see Tare Lab's Salinity Level variable.", "relatedComponentCategory": "tare" },
+      { "cause": "The tare itself was built too concentrated to be judged on its own.", "correction": "Taste tare diluted at roughly the ratio it'll actually be served at, not straight." }
+    ],
+    "relatedLessonPath": "/tare-lab",
+    "relatedLessonLabel": "Tare Lab"
+  },
+  {
+    "id": "broth-too-greasy",
+    "problem": "Broth is too greasy",
+    "diagnosticQuestions": ["How much aroma oil was added, and how rich is the base broth already?", "Was excess fat skimmed at any point during cooking?"],
+    "causes": [
+      { "cause": "Aroma oil amount doesn't match the broth's own richness.", "correction": "Scale back to a light drizzle, especially on an already-rich base -- see Aroma Oil Lab's Amount variable.", "relatedComponentCategory": "aromaOil" },
+      { "cause": "Excess rendered fat was never skimmed during a long simmer.", "correction": "Skim visible fat periodically while the broth simmers, or use a fat separator after straining." }
+    ],
+    "relatedLessonPath": "/aroma-oil-lab",
+    "relatedLessonLabel": "Aroma Oil Lab"
+  },
+  {
+    "id": "broth-wont-emulsify",
+    "problem": "Broth won't emulsify",
+    "diagnosticQuestions": ["Was the broth boiled hard, or kept at a gentle simmer?", "Is there enough collagen/fat in the bones being used?"],
+    "causes": [
+      { "cause": "A gentle simmer keeps a broth clear by design -- it won't emulsify no matter how long it cooks.", "correction": "Switch to a hard, rolling boil if a cloudy, rich (paitan/tonkotsu-style) broth is the goal -- see Broth Lab's Boil Method variable.", "relatedComponentCategory": "broth" },
+      { "cause": "Lean bones without enough collagen and fat can't emulsify even at a hard boil.", "correction": "Use bones with more marrow and connective tissue, or extend cooking time further." }
+    ],
+    "relatedLessonPath": "/broth-lab",
+    "relatedLessonLabel": "Broth Lab"
+  },
+  {
+    "id": "noodles-too-soft",
+    "problem": "Noodles are too soft",
+    "diagnosticQuestions": ["How long did the noodles sit in the hot broth before eating?", "What was the noodle's hydration level, and how long did it cook?"],
+    "causes": [
+      { "cause": "Noodles sat in hot broth too long after being served.", "correction": "Ramen is meant to be eaten promptly -- noodles keep softening the longer they sit, this isn't a cooking flaw." },
+      { "cause": "Dough hydration was too high for the intended noodle style.", "correction": "Lower the hydration for a firmer, chewier result -- see Noodle Lab's Hydration variable.", "relatedComponentCategory": "noodle" },
+      { "cause": "Noodles were overcooked before serving.", "correction": "Reduce boil time slightly, especially for thin, low-hydration styles meant to be cooked quickly." }
+    ],
+    "relatedLessonPath": "/noodle-lab",
+    "relatedLessonLabel": "Noodle Lab"
+  },
+  {
+    "id": "noodles-stick-together",
+    "problem": "Noodles stick together",
+    "diagnosticQuestions": ["Were the noodles tossed with anything (oil, kansui water) right after boiling?", "How were they stored or rested before cooking?"],
+    "causes": [
+      { "cause": "Noodles weren't separated or tossed with a little oil right after draining.", "correction": "Shake off excess water and toss briefly before plating, especially for thicker or curlier styles." },
+      { "cause": "Fresh-cut noodles weren't dusted with flour or rested on a rack before cooking.", "correction": "Dust with flour and rest on a drying rack or tray so strands don't fuse before they hit the pot." }
+    ],
+    "relatedLessonPath": "/noodle-lab",
+    "relatedLessonLabel": "Noodle Lab"
+  },
+  {
+    "id": "tare-overwhelms-broth",
+    "problem": "Tare overwhelms broth",
+    "diagnosticQuestions": ["Which tare type is being used, and how bold is it relative to the broth?", "Is the broth itself on the lighter or richer end?"],
+    "causes": [
+      { "cause": "A bold tare (miso, or a heavily reduced shoyu) was paired with a delicate, clear broth.", "correction": "Match tare boldness to broth richness -- a light broth calls for a restrained shio or light shoyu tare, not miso -- see Tare Lab.", "relatedComponentCategory": "tare" },
+      { "cause": "Too much tare was used relative to the broth's own body.", "correction": "Reduce the tare-to-broth ratio, or build more richness into the broth itself first." }
+    ],
+    "relatedLessonPath": "/tare-lab",
+    "relatedLessonLabel": "Tare Lab"
+  },
+  {
+    "id": "bowl-lacks-aroma",
+    "problem": "Bowl lacks aroma",
+    "diagnosticQuestions": ["Was any aroma oil floated on top at all?", "Was the aroma oil added right before serving, or cooked in earlier and lost its punch?"],
+    "causes": [
+      { "cause": "No aroma oil was added -- fine for some clear styles, but a gap if aroma was the goal.", "correction": "Float a garlic, chicken fat, or chili oil on top just before serving -- see Aroma Oil Lab.", "relatedComponentCategory": "aromaOil" },
+      { "cause": "Aroma oil was added too early and its aromatics cooked off before the bowl was served.", "correction": "Add aroma oil as close to serving as possible -- it's meant to hit the nose fresh, not simmer." }
+    ],
+    "relatedLessonPath": "/aroma-oil-lab",
+    "relatedLessonLabel": "Aroma Oil Lab"
+  },
+  {
+    "id": "bowl-feels-unbalanced",
+    "problem": "Bowl feels unbalanced",
+    "diagnosticQuestions": ["Do the broth, tare, noodle, and aroma oil richness levels roughly match each other?", "Is any one component (usually tare or aroma oil) dominating the rest?"],
+    "causes": [
+      { "cause": "Component richness levels don't match -- a rich broth with thin noodles, or a delicate broth with a heavy oil.", "correction": "Check each component's richness against the others in Build a Bowl's compatibility guidance before finalizing." },
+      { "cause": "One component (often tare or aroma oil) was scaled up without adjusting the rest.", "correction": "Rebalance by adjusting the dominant component down rather than adding more to everything else." }
+    ],
+    "relatedLessonPath": "/build-a-bowl",
+    "relatedLessonLabel": "Build a Bowl"
+  }
+]

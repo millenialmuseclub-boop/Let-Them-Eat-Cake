@@ -1,0 +1,44 @@
+.saved-ramen-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.saved-ramen-btn {
+  font: inherit;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.saved-ramen-btn.active {
+  background: var(--raspberry);
+  border-color: var(--raspberry);
+  color: white;
+}
+
+.saved-ramen-note {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+.saved-ramen-note textarea {
+  font: inherit;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  resize: vertical;
+}
+
+.saved-ramen-note .btn {
+  align-self: flex-start;
+}

@@ -1,0 +1,177 @@
+[
+  {
+    "id": "crisp-and-buttery",
+    "title": "Crisp & Buttery",
+    "description": "Short, high-fat doughs baked until sandy and crisp throughout -- butter (or ghee) is the whole point.",
+    "cookieIds": [
+      "cookie_scottish_shortbread",
+      "cookie_french_sable",
+      "cookie_polvoron",
+      "cookie_digestive",
+      "cookie_mantecados",
+      "cookie_pepparkakor",
+      "cookie_barazek"
+    ]
+  },
+  {
+    "id": "soft-and-chewy",
+    "title": "Soft & Chewy",
+    "description": "American-style drop cookies with soft centers and just enough structure to hold together.",
+    "cookieIds": [
+      "cookie_chocolate_chip",
+      "cookie_peanut_butter",
+      "cookie_snickerdoodle",
+      "cookie_oatmeal_raisin",
+      "cookie_gingersnap",
+      "cookie_black_and_white"
+    ]
+  },
+  {
+    "id": "filled-and-sandwiched",
+    "title": "Filled & Sandwiched",
+    "description": "Two layers built around a filling -- jam, dulce de leche, or a spiced nut-and-date paste.",
+    "cookieIds": [
+      "cookie_austrian_linzer",
+      "cookie_alfajor",
+      "cookie_maamoul",
+      "cookie_baci_di_dama",
+      "cookie_spitzbuben",
+      "cookie_empire_biscuit",
+      "cookie_pepas",
+      "cookie_hallongrottor",
+      "cookie_monte_carlo",
+      "cookie_macaron"
+    ]
+  },
+  {
+    "id": "cookies-around-the-world",
+    "title": "Cookies Around the World",
+    "description": "A quick tour of cookie traditions well outside the American drop-cookie default.",
+    "cookieIds": [
+      "cookie_maamoul",
+      "cookie_indian_nankhatai",
+      "cookie_alfajor",
+      "cookie_anzac_biscuit",
+      "cookie_dutch_stroopwafel",
+      "cookie_polvoron",
+      "cookie_austrian_linzer",
+      "cookie_thekua",
+      "cookie_kleicha",
+      "cookie_ghraybeh",
+      "cookie_kourabiedes",
+      "cookie_krumkake",
+      "cookie_marranitos"
+    ]
+  },
+  {
+    "id": "tea-and-coffee-companions",
+    "title": "Tea & Coffee Companions",
+    "description": "Restrained sweetness and a crumbly or crisp texture built to be dunked or paired, not eaten as dessert alone.",
+    "cookieIds": [
+      "cookie_scottish_shortbread",
+      "cookie_french_sable",
+      "cookie_italian_amaretti",
+      "cookie_indian_nankhatai",
+      "cookie_biscotti",
+      "cookie_langues_de_chat",
+      "cookie_vanillekipferl",
+      "cookie_almendrados"
+    ]
+  },
+  {
+    "id": "holiday-and-occasion-traditions",
+    "title": "Holiday & Occasion Traditions",
+    "description": "Cookies whose meaning is tied to a specific holiday or occasion, not just a flavor category.",
+    "cookieIds": [
+      "cookie_austrian_linzer",
+      "cookie_maamoul",
+      "cookie_polvoron",
+      "cookie_anzac_biscuit",
+      "cookie_lebkuchen",
+      "cookie_pfeffernusse",
+      "cookie_springerle",
+      "cookie_speculaas",
+      "cookie_melomakarona",
+      "cookie_kourabiedes",
+      "cookie_thekua",
+      "cookie_kleicha"
+    ]
+  },
+  {
+    "id": "chocolate-lovers",
+    "title": "Chocolate Lovers",
+    "description": "Cookies where chocolate is the whole point, not a mix-in afterthought.",
+    "cookieIds": [
+      "cookie_chocolate_chip",
+      "cookie_black_and_white",
+      "cookie_baci_di_dama",
+      "cookie_florentine"
+    ]
+  },
+  {
+    "id": "nut-based-cookies",
+    "title": "Nut-Based Cookies",
+    "description": "Ground nuts standing in for flour, or the defining flavor throughout -- almond, hazelnut, pistachio, and macadamia.",
+    "cookieIds": [
+      "cookie_italian_amaretti",
+      "cookie_ricciarelli",
+      "cookie_almendrados",
+      "cookie_baci_di_dama",
+      "cookie_white_chocolate_macadamia",
+      "cookie_vanillekipferl",
+      "cookie_brutti_ma_buoni"
+    ]
+  },
+  {
+    "id": "spiced-cookies",
+    "title": "Spiced Cookies",
+    "description": "Warm holiday spice -- ginger, cinnamon, clove, cardamom -- carrying the whole flavor profile.",
+    "cookieIds": [
+      "cookie_gingersnap",
+      "cookie_lebkuchen",
+      "cookie_pfeffernusse",
+      "cookie_speculaas",
+      "cookie_pepparkakor",
+      "cookie_snickerdoodle"
+    ]
+  },
+  {
+    "id": "crisp-and-snappy",
+    "title": "Crisp & Snappy",
+    "description": "Thin, fully crisp cookies built to snap cleanly rather than bend or chew.",
+    "cookieIds": [
+      "cookie_gingersnap",
+      "cookie_pepparkakor",
+      "cookie_langues_de_chat",
+      "cookie_pizzelle",
+      "cookie_krumkake",
+      "cookie_kletskoppen"
+    ]
+  },
+  {
+    "id": "elegant-cookie-tin",
+    "title": "Elegant Cookie Tin",
+    "description": "The refined, gift-tin-worthy cookies -- precise shapes, restrained sweetness, built to impress.",
+    "cookieIds": [
+      "cookie_macaron",
+      "cookie_baci_di_dama",
+      "cookie_ricciarelli",
+      "cookie_langues_de_chat",
+      "cookie_palets_bretons",
+      "cookie_vanillekipferl"
+    ]
+  },
+  {
+    "id": "beginner-friendly-baking",
+    "title": "Beginner-Friendly Baking",
+    "description": "Simple doughs, forgiving techniques, and short ingredient lists -- a good place to start.",
+    "cookieIds": [
+      "cookie_chocolate_chip",
+      "cookie_sugar_cookie",
+      "cookie_hallongrottor",
+      "cookie_scottish_shortbread",
+      "cookie_ghraybeh",
+      "cookie_gingersnap"
+    ]
+  }
+]

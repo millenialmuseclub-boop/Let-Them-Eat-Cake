@@ -1,0 +1,97 @@
+[
+  {
+    "slug": "shop-101",
+    "title": "Ramen Shop 101",
+    "description": "What kind of shop you'll find yourself in, and what to expect once you're inside.",
+    "sections": [
+      {
+        "heading": "Shop Types",
+        "paragraphs": [
+          "Ramen is served everywhere from tiny counter-only shops seating eight people to large chains with dozens of locations. Small, independent shops -- often run by a single owner or a small family -- are where most of ramen's regional identity actually lives.",
+          "Many shops specialize in one style or even one bowl, refining it for years rather than offering a broad menu. A short, focused menu is common and is usually a sign of specialization, not limited options."
+        ]
+      },
+      {
+        "heading": "Counter Culture",
+        "paragraphs": [
+          "Eating alone at the counter is the norm, not an exception -- ramen shops are built around fast, solo, functional dining, and solo diners are never treated as unusual.",
+          "Conversation with staff is typically brief and transactional: an order, maybe a customization request, a thank-you. This isn't coldness, it's the expected rhythm of a small, busy kitchen."
+        ]
+      },
+      {
+        "heading": "Pacing",
+        "paragraphs": [
+          "Ramen is meant to be eaten hot and relatively quickly -- noodles keep absorbing broth and softening the longer they sit, so a bowl eaten slowly is a genuinely different bowl than one eaten right away.",
+          "Turnover is often fast and expected, especially at small or popular shops where a line is common. A fast-moving line is usually a good sign, not a bad one."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ordering",
+    "title": "Ordering",
+    "description": "Ticket machines, customization, and the mechanics of getting a bowl in front of you.",
+    "sections": [
+      {
+        "heading": "Ticket Machines",
+        "paragraphs": [
+          "Many shops use a vending-style ticket machine (shokken) at the entrance: you pay first, select your bowl and any add-ons as buttons, and receive a paper ticket to hand to staff once seated.",
+          "Older machines are often Japanese-only, but button layout and photos usually make the main options identifiable even without reading the labels."
+        ],
+        "tips": ["Have cash or a card ready before you approach the machine -- lines move fast", "If a machine looks confusing, it's completely normal to ask a staff member for help"]
+      },
+      {
+        "heading": "Customization",
+        "paragraphs": [
+          "Noodle firmness is a common customization at many shops, especially tonkotsu-style ones -- ranging from very soft to very firm (sometimes called bariyaka). Broth richness, extra fat, and aroma oil amount can also often be adjusted.",
+          "How much customization is offered varies a lot by shop and region -- some shops take detailed requests, others serve one standard bowl with no variation, and that's just as traditional."
+        ]
+      },
+      {
+        "heading": "Kaedama",
+        "paragraphs": [
+          "Kaedama is a plain noodle refill ordered into your existing bowl of broth, most associated with Hakata-style tonkotsu shops in Kyushu. It's ordered partway through the meal, not at the start, and paid for separately.",
+          "This tradition exists specifically because Hakata-style noodles are thin and made to be eaten quickly in smaller portions -- it's a functional custom tied to that noodle style, not something universal across every ramen shop."
+        ]
+      },
+      {
+        "heading": "Payment & Flow",
+        "paragraphs": [
+          "Pay-first (ticket machine) and pay-after (register on the way out) both exist depending on the shop. Tipping is not customary in Japan and isn't expected at any ramen shop -- offering one can sometimes cause confusion rather than being appreciated."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "how-to-eat",
+    "title": "How to Eat Ramen",
+    "description": "Practical, respectful guidance for the meal itself -- with the honest caveat that customs vary.",
+    "sections": [
+      {
+        "heading": "A Note Before You Start",
+        "paragraphs": [
+          "Ramen customs vary by shop, region, and context -- what follows is common, widely seen practice, not a fixed universal rule that applies identically everywhere. Treat it as a helpful starting point, not a strict etiquette code."
+        ]
+      },
+      {
+        "heading": "Eat It Hot",
+        "paragraphs": [
+          "Ramen is built to be eaten promptly. Noodles continue softening in hot broth after they're served, so a bowl left to sit for several minutes is genuinely a different, softer bowl than one eaten right away."
+        ]
+      },
+      {
+        "heading": "Slurping",
+        "paragraphs": [
+          "Audible slurping is common and generally accepted in casual ramen-shop settings in Japan -- it can help cool hot noodles slightly and is often described as enhancing aroma and flavor. It's not obligatory, and comfort with it varies by person and setting even within Japan."
+        ]
+      },
+      {
+        "heading": "The Broth",
+        "paragraphs": [
+          "The broth typically represents hours of preparation and is considered worth appreciating on its own, not just as a vehicle for the noodles -- many diners drink directly from the bowl. Finishing all of it is appreciated but not obligatory, especially with a very large or rich bowl."
+        ],
+        "tips": ["Chopsticks are for noodles and solid toppings", "The wide ceramic spoon is for broth and smaller toppings", "There's no single correct way that applies at every shop or region"]
+      }
+    ]
+  }
+]

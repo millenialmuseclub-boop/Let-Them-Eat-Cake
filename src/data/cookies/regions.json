@@ -1,0 +1,470 @@
+[
+  {
+    "id": "region_us_choc_chip",
+    "cookieId": "cookie_chocolate_chip",
+    "worldRegion": "North America",
+    "country": "United States",
+    "originComplexity": "single-origin",
+    "shortDescription": "Invented at the Toll House Inn in Whitman, Massachusetts in the 1930s.",
+    "historyNote": "Ruth Wakefield's original recipe was later licensed to Nestle and printed on its chocolate bar packaging, cementing the format nationally."
+  },
+  {
+    "id": "region_us_snickerdoodle",
+    "cookieId": "cookie_snickerdoodle",
+    "worldRegion": "North America",
+    "country": "United States",
+    "originComplexity": "regional",
+    "shortDescription": "A New England cinnamon-sugar cookie with a disputed name origin.",
+    "historyNote": "First documented in American cookbooks in the late 1800s; German/Dutch immigrant baking traditions in New England are the most commonly cited influence."
+  },
+  {
+    "id": "region_us_peanut_butter",
+    "cookieId": "cookie_peanut_butter",
+    "worldRegion": "North America",
+    "country": "United States",
+    "originComplexity": "regional",
+    "shortDescription": "An early-20th-century American cookie built around commercial peanut butter.",
+    "historyNote": "The signature fork-crosshatch marking is generally traced to a 1930s Pillsbury recipe."
+  },
+  {
+    "id": "region_scotland_shortbread",
+    "cookieId": "cookie_scottish_shortbread",
+    "worldRegion": "British Isles",
+    "country": "Scotland",
+    "originComplexity": "regional",
+    "shortDescription": "Descended from medieval biscuit bread, refined into a buttery national staple.",
+    "historyNote": "Traditionally made for Christmas and Hogmanay; the 'petticoat tail' wedge shape is Scotland's best-known traditional form."
+  },
+  {
+    "id": "region_france_sable",
+    "cookieId": "cookie_french_sable",
+    "worldRegion": "Western Europe",
+    "country": "France",
+    "originComplexity": "regional",
+    "shortDescription": "Two distinct regional lineages -- Norman and Breton -- both centered on butter.",
+    "historyNote": "Breton sablés use salted butter, reflecting Brittany's salt-producing coast; documented in French baking since the 17th-18th century."
+  },
+  {
+    "id": "region_netherlands_stroopwafel",
+    "cookieId": "cookie_dutch_stroopwafel",
+    "worldRegion": "Western Europe",
+    "country": "Netherlands",
+    "originComplexity": "single-origin",
+    "shortDescription": "A Gouda specialty, still sold fresh from the city's weekly market.",
+    "historyNote": "Dated to the late 18th or early 19th century; the 'made from breadcrumb sweepings' origin story is widely repeated but not firmly documented."
+  },
+  {
+    "id": "region_austria_linzer",
+    "cookieId": "cookie_austrian_linzer",
+    "worldRegion": "Central Europe",
+    "country": "Austria",
+    "originComplexity": "regional",
+    "shortDescription": "A cookie-sized adaptation of Linzertorte, one of the oldest named tarts in the world.",
+    "historyNote": "Linzertorte itself is documented since at least the 17th century in and around the city of Linz."
+  },
+  {
+    "id": "region_italy_amaretti",
+    "cookieId": "cookie_italian_amaretti",
+    "worldRegion": "Southern Europe",
+    "country": "Italy",
+    "originComplexity": "regional",
+    "shortDescription": "Saronno's version is the most internationally known of several regional amaretti.",
+    "historyNote": "Documented in Lombard baking since at least the 18th century; the 'blessed newlyweds' origin story is local legend, not documented history."
+  },
+  {
+    "id": "region_spain_mexico_polvoron",
+    "cookieId": "cookie_polvoron",
+    "worldRegion": "Iberia & Latin America",
+    "country": "Spain / Mexico",
+    "originComplexity": "multi-region",
+    "shortDescription": "An Andalusian shortbread that developed a distinct, equally legitimate Mexican lineage.",
+    "historyNote": "Estepa, Spain remains the historical production center; the Mexican version developed its own fat, flavor, and wrapping conventions after colonization."
+  },
+  {
+    "id": "region_levant_maamoul",
+    "cookieId": "cookie_maamoul",
+    "worldRegion": "Middle East",
+    "country": "Lebanon / Syria / Palestine / Jordan",
+    "originComplexity": "disputed",
+    "shortDescription": "A shared, cross-community Levantine tradition tied to multiple religious holidays.",
+    "historyNote": "Some historians trace related stuffed semolina pastries to the medieval Abbasid era; made across Muslim and Christian households alike for Eid and Easter respectively."
+  },
+  {
+    "id": "region_india_nankhatai",
+    "cookieId": "cookie_indian_nankhatai",
+    "worldRegion": "South Asia",
+    "country": "India",
+    "originComplexity": "single-origin",
+    "shortDescription": "A Surat port-city adaptation of European biscuit technique using ghee.",
+    "historyNote": "Developed by Dutch and Irani bakers in Surat, Gujarat, in the 17th-18th century colonial trade era."
+  },
+  {
+    "id": "region_argentina_alfajor",
+    "cookieId": "cookie_alfajor",
+    "worldRegion": "Latin America",
+    "country": "Argentina",
+    "originComplexity": "multi-region",
+    "shortDescription": "A Moorish-Spanish format rebuilt in Argentina around dulce de leche.",
+    "historyNote": "The name traces to Arabic 'al-hasú'; the modern dulce-de-leche-centered version is a distinctly Argentine/Uruguayan development."
+  },
+  {
+    "id": "region_anz_anzac",
+    "cookieId": "cookie_anzac_biscuit",
+    "worldRegion": "Oceania",
+    "country": "Australia / New Zealand",
+    "originComplexity": "single-origin",
+    "shortDescription": "A WWI-era biscuit designed specifically to survive shipment overseas.",
+    "historyNote": "The name 'Anzac' is legally protected in Australia to preserve the recipe's traditional form and its military association."
+  },
+  {
+    "id": "region_us_oatmeal_raisin",
+    "cookieId": "cookie_oatmeal_raisin",
+    "worldRegion": "North America",
+    "country": "United States",
+    "originComplexity": "single-origin",
+    "shortDescription": "A cookie-jar staple built on rolled oats and raisins.",
+    "historyNote": "Popularized alongside early-20th-century rolled-oats health marketing, especially by Quaker Oats' own recipe pamphlets."
+  },
+  {
+    "id": "region_us_sugar_cookie",
+    "cookieId": "cookie_sugar_cookie",
+    "worldRegion": "North America",
+    "country": "United States",
+    "originComplexity": "regional",
+    "shortDescription": "A German-settler butter cookie that became America's default decorated cookie.",
+    "historyNote": "Descended from 18th-century Pennsylvania German 'Nazareth cookie' traditions."
+  },
+  {
+    "id": "region_us_gingersnap",
+    "cookieId": "cookie_gingersnap",
+    "worldRegion": "North America",
+    "country": "United States",
+    "originComplexity": "regional",
+    "shortDescription": "A crisp molasses cookie from a wider Northern European spiced-biscuit tradition.",
+    "historyNote": "Became widespread once Atlantic-trade molasses was cheaply available in the 18th-19th centuries."
+  },
+  {
+    "id": "region_us_black_and_white",
+    "cookieId": "cookie_black_and_white",
+    "worldRegion": "North America",
+    "country": "United States",
+    "originComplexity": "single-origin",
+    "shortDescription": "A specifically New York City deli-bakery icon.",
+    "historyNote": "Descended from German 'half-moon' cookies brought by Jewish and German immigrant bakers to New York."
+  },
+  {
+    "id": "region_us_white_chocolate_macadamia",
+    "cookieId": "cookie_white_chocolate_macadamia",
+    "worldRegion": "North America",
+    "country": "United States",
+    "originComplexity": "single-origin",
+    "shortDescription": "An 1980s American bakery invention, not a historic folk recipe.",
+    "historyNote": "Popularized by Mrs. Fields and similar chains during the premium-cookie bakery boom."
+  },
+  {
+    "id": "region_mexico_marranitos",
+    "cookieId": "cookie_marranitos",
+    "worldRegion": "Iberia & Latin America",
+    "country": "Mexico",
+    "originComplexity": "regional",
+    "shortDescription": "A pig-shaped pan dulce sweetened with piloncillo.",
+    "historyNote": "Descended from Spanish colonial-era sweet-bread traditions; the pig shape is a playful, affordable format for children."
+  },
+  {
+    "id": "region_argentina_pepas",
+    "cookieId": "cookie_pepas",
+    "worldRegion": "Latin America",
+    "country": "Argentina",
+    "originComplexity": "regional",
+    "shortDescription": "A fruit-jam sandwich cookie from the same bakery tradition as the alfajor.",
+    "historyNote": "Developed as a brighter, less rich alternative to dulce-de-leche-filled alfajores on the same panadería trays."
+  },
+  {
+    "id": "region_spain_mantecados",
+    "cookieId": "cookie_mantecados",
+    "worldRegion": "Iberia & Latin America",
+    "country": "Spain",
+    "originComplexity": "regional",
+    "shortDescription": "A lard-rich Estepa cookie, close kin to polvorón but firmer.",
+    "historyNote": "Produced alongside polvorones as part of the same Andalusian Christmas-baking tradition."
+  },
+  {
+    "id": "region_spain_almendrados",
+    "cookieId": "cookie_almendrados",
+    "worldRegion": "Iberia & Latin America",
+    "country": "Spain",
+    "originComplexity": "regional",
+    "shortDescription": "A flourless Andalusian almond cookie rooted in Al-Andalus confectionery.",
+    "historyNote": "Part of Spain's long Moorish-influenced almond-cultivation and confectionery history."
+  },
+  {
+    "id": "region_france_palets_bretons",
+    "cookieId": "cookie_palets_bretons",
+    "worldRegion": "Western Europe",
+    "country": "France",
+    "originComplexity": "regional",
+    "shortDescription": "A thick Breton butter cookie made with the region's distinctive salted butter.",
+    "historyNote": "Brittany's salted-butter tradition dates to historically avoiding the French royal salt tax."
+  },
+  {
+    "id": "region_france_langues_de_chat",
+    "cookieId": "cookie_langues_de_chat",
+    "worldRegion": "Western Europe",
+    "country": "France",
+    "originComplexity": "single-origin",
+    "shortDescription": "A thin, piped tea-service cookie in French pâtisserie since the 19th century.",
+    "historyNote": "Traditionally served alongside mousses and creamy desserts for textural contrast."
+  },
+  {
+    "id": "region_france_florentine",
+    "cookieId": "cookie_florentine",
+    "worldRegion": "Western Europe",
+    "country": "France",
+    "originComplexity": "disputed",
+    "shortDescription": "A caramelized-nut lace cookie with a genuinely disputed France/Italy origin.",
+    "historyNote": "Despite the name, most food historians trace the modern version to French pâtisserie, not Florence."
+  },
+  {
+    "id": "region_france_macaron",
+    "cookieId": "cookie_macaron",
+    "worldRegion": "Western Europe",
+    "country": "France",
+    "originComplexity": "regional",
+    "shortDescription": "The modern sandwiched macaron is a Parisian innovation on older Italian almond-meringue biscuits.",
+    "historyNote": "Most associated with early-20th-century Parisian pâtissiers, including the Ladurée house."
+  },
+  {
+    "id": "region_italy_biscotti",
+    "cookieId": "cookie_biscotti",
+    "worldRegion": "Southern Europe",
+    "country": "Italy",
+    "originComplexity": "regional",
+    "shortDescription": "A twice-baked Tuscan almond cookie meant for dunking in Vin Santo.",
+    "historyNote": "The twice-baked technique traces to Roman military provisions; the Tuscan almond version is documented since the medieval period."
+  },
+  {
+    "id": "region_italy_baci_di_dama",
+    "cookieId": "cookie_baci_di_dama",
+    "worldRegion": "Southern Europe",
+    "country": "Italy",
+    "originComplexity": "single-origin",
+    "shortDescription": "A hazelnut specialty of Piedmont, reflecting the region's hazelnut-growing tradition.",
+    "historyNote": "Documented since at least the 19th century, closely tied to Tortona and Piedmont's gianduja chocolate heritage."
+  },
+  {
+    "id": "region_italy_pizzelle",
+    "cookieId": "cookie_pizzelle",
+    "worldRegion": "Southern Europe",
+    "country": "Italy",
+    "originComplexity": "regional",
+    "shortDescription": "An iron-pressed Abruzzo wafer among Italy's oldest documented cookie formats.",
+    "historyNote": "Some historians trace ancestry to ancient Roman flatbread precursors; family irons are treated as heirlooms."
+  },
+  {
+    "id": "region_italy_ricciarelli",
+    "cookieId": "cookie_ricciarelli",
+    "worldRegion": "Southern Europe",
+    "country": "Italy",
+    "originComplexity": "single-origin",
+    "shortDescription": "A protected Sienese almond cookie tied to the city's medieval trading history.",
+    "historyNote": "Documented in Siena since the 14th-15th century; holds EU Protected Geographical Indication status."
+  },
+  {
+    "id": "region_italy_brutti_ma_buoni",
+    "cookieId": "cookie_brutti_ma_buoni",
+    "worldRegion": "Southern Europe",
+    "country": "Italy",
+    "originComplexity": "disputed",
+    "shortDescription": "A rustic meringue-nut cookie claimed by both Piedmont and Lombardy.",
+    "historyNote": "Both regions have documented 19th-20th century versions; Italian food historians usually leave the origin genuinely unresolved."
+  },
+  {
+    "id": "region_greece_kourabiedes",
+    "cookieId": "cookie_kourabiedes",
+    "worldRegion": "Southern Europe",
+    "country": "Greece",
+    "originComplexity": "regional",
+    "shortDescription": "One of Greece's two defining Christmas cookies, dusted heavily in powdered sugar.",
+    "historyNote": "Believed to descend from Persian/Middle Eastern almond shortbread traditions via Ottoman-era exchange."
+  },
+  {
+    "id": "region_greece_melomakarona",
+    "cookieId": "cookie_melomakarona",
+    "worldRegion": "Southern Europe",
+    "country": "Greece",
+    "originComplexity": "regional",
+    "shortDescription": "An olive-oil, honey-soaked Christmas cookie set alongside kourabiedes.",
+    "historyNote": "Reflects Greece's oil-based rather than butter-based baking heritage."
+  },
+  {
+    "id": "region_uk_digestive",
+    "cookieId": "cookie_digestive",
+    "worldRegion": "British Isles",
+    "country": "United Kingdom",
+    "originComplexity": "single-origin",
+    "shortDescription": "A wholemeal biscuit originally marketed for its supposed digestive benefits.",
+    "historyNote": "Developed by Scottish doctors in the 1830s-1890s; McVitie's commercialized the now-iconic version in 1892."
+  },
+  {
+    "id": "region_scotland_empire_biscuit",
+    "cookieId": "cookie_empire_biscuit",
+    "worldRegion": "British Isles",
+    "country": "Scotland",
+    "originComplexity": "regional",
+    "shortDescription": "A jam-and-icing sandwich biscuit likely dating to the early 20th century.",
+    "historyNote": "Part of a wider shared European jam-sandwich-biscuit tradition also including Linzer cookies and spitzbuben."
+  },
+  {
+    "id": "region_uk_anz_melting_moments",
+    "cookieId": "cookie_melting_moments",
+    "worldRegion": "British Isles",
+    "country": "United Kingdom / Australia / New Zealand",
+    "originComplexity": "multi-region",
+    "shortDescription": "A cornflour-tenderized shortbread shared across the Commonwealth.",
+    "historyNote": "Recipes appear across British, Australian, and New Zealand cookbooks through the 20th century, with no single clear country of origin."
+  },
+  {
+    "id": "region_germany_lebkuchen",
+    "cookieId": "cookie_lebkuchen",
+    "worldRegion": "Central Europe",
+    "country": "Germany",
+    "originComplexity": "single-origin",
+    "shortDescription": "A protected Nuremberg spice cookie tied to a centuries-old baking guild.",
+    "historyNote": "Documented since the 13th-14th century; 'Nürnberger Lebkuchen' holds EU Protected Geographical Indication status."
+  },
+  {
+    "id": "region_germany_pfeffernusse",
+    "cookieId": "cookie_pfeffernusse",
+    "worldRegion": "Central Europe",
+    "country": "Germany",
+    "originComplexity": "regional",
+    "shortDescription": "A pepper-spiced Advent cookie from the same trade-route spice tradition as Lebkuchen.",
+    "historyNote": "Documented in German baking since the 16th-17th century."
+  },
+  {
+    "id": "region_austria_vanillekipferl",
+    "cookieId": "cookie_vanillekipferl",
+    "worldRegion": "Central Europe",
+    "country": "Austria",
+    "originComplexity": "multi-region",
+    "shortDescription": "A crescent-shaped Christmas shortbread shared across Austria, Germany, and Hungary.",
+    "historyNote": "The Ottoman-crescent origin story is popular folklore rather than firmly documented history."
+  },
+  {
+    "id": "region_germany_springerle",
+    "cookieId": "cookie_springerle",
+    "worldRegion": "Central Europe",
+    "country": "Germany",
+    "originComplexity": "single-origin",
+    "shortDescription": "A carved-mold Swabian cookie dried before baking to keep its relief pattern sharp.",
+    "historyNote": "Documented since the 14th-15th century; family molds are often treated as heirlooms."
+  },
+  {
+    "id": "region_switzerland_spitzbuben",
+    "cookieId": "cookie_spitzbuben",
+    "worldRegion": "Central Europe",
+    "country": "Switzerland / Germany",
+    "originComplexity": "multi-region",
+    "shortDescription": "A jam-windowed sandwich cookie, close kin to the Linzer cookie.",
+    "historyNote": "Part of the same broader jam-sandwich-cookie tradition documented across Swiss and German home baking."
+  },
+  {
+    "id": "region_sweden_pepparkakor",
+    "cookieId": "cookie_pepparkakor",
+    "worldRegion": "Scandinavia",
+    "country": "Sweden",
+    "originComplexity": "single-origin",
+    "shortDescription": "An extremely thin, snap-crisp Swedish Christmas cookie tied to a wish-breaking tradition.",
+    "historyNote": "Documented since at least the 15th century, likely introduced via German trading routes and monasteries."
+  },
+  {
+    "id": "region_sweden_hallongrottor",
+    "cookieId": "cookie_hallongrottor",
+    "worldRegion": "Scandinavia",
+    "country": "Sweden",
+    "originComplexity": "single-origin",
+    "shortDescription": "A raspberry thumbprint cookie central to Swedish fika culture.",
+    "historyNote": "A well-established fixture of Swedish home baking through the 20th century."
+  },
+  {
+    "id": "region_norway_krumkake",
+    "cookieId": "cookie_krumkake",
+    "worldRegion": "Scandinavia",
+    "country": "Norway",
+    "originComplexity": "single-origin",
+    "shortDescription": "An iron-pressed wafer rolled into a cone while still hot.",
+    "historyNote": "Strongly preserved among Norwegian-American immigrant communities in the Upper Midwest US."
+  },
+  {
+    "id": "region_netherlands_speculaas",
+    "cookieId": "cookie_speculaas",
+    "worldRegion": "Western Europe",
+    "country": "Netherlands / Belgium",
+    "originComplexity": "multi-region",
+    "shortDescription": "A carved-mold Sinterklaas cookie whose commercial descendant is the Speculoos coffee cookie.",
+    "historyNote": "Documented in Low Countries baking since at least the 17th century; the spice blend reflects the Dutch East India Company's spice trade."
+  },
+  {
+    "id": "region_netherlands_kletskoppen",
+    "cookieId": "cookie_kletskoppen",
+    "worldRegion": "Western Europe",
+    "country": "Netherlands",
+    "originComplexity": "single-origin",
+    "shortDescription": "An extremely thin, lacy caramelized butter cookie related to the stroopwafel tradition.",
+    "historyNote": "Documented in Dutch home and bakery traditions through the 19th-20th centuries."
+  },
+  {
+    "id": "region_levant_ghraybeh",
+    "cookieId": "cookie_ghraybeh",
+    "worldRegion": "Middle East",
+    "country": "Lebanon / Syria / Palestine / Jordan",
+    "originComplexity": "regional",
+    "shortDescription": "An extremely short Levantine butter cookie prepared widely for Eid.",
+    "historyNote": "Part of a broad family of short, unleavened Middle Eastern butter cookies documented across the region for generations."
+  },
+  {
+    "id": "region_syria_barazek",
+    "cookieId": "cookie_barazek",
+    "worldRegion": "Middle East",
+    "country": "Syria / Lebanon",
+    "originComplexity": "single-origin",
+    "shortDescription": "A sesame-and-pistachio cookie closely associated with Damascus specifically.",
+    "historyNote": "Considered a Damascene specialty within Syrian and Lebanese baking, documented as part of the city's sweets tradition."
+  },
+  {
+    "id": "region_iraq_kleicha",
+    "cookieId": "cookie_kleicha",
+    "worldRegion": "Middle East",
+    "country": "Iraq",
+    "originComplexity": "single-origin",
+    "shortDescription": "Iraq's informally recognized national cookie.",
+    "historyNote": "Part of a wider family of stuffed Middle Eastern pastries related to ma'amoul, with documented Mesopotamian roots."
+  },
+  {
+    "id": "region_india_thekua",
+    "cookieId": "cookie_thekua",
+    "worldRegion": "South Asia",
+    "country": "India",
+    "originComplexity": "single-origin",
+    "shortDescription": "A ritual jaggery cookie central to Bihar's Chhath Puja festival.",
+    "historyNote": "Its long shelf life without refrigeration made it well suited as a ritual offering long before modern preservation."
+  },
+  {
+    "id": "region_india_karachi_biscuit",
+    "cookieId": "cookie_karachi_biscuit",
+    "worldRegion": "South Asia",
+    "country": "India",
+    "originComplexity": "single-origin",
+    "shortDescription": "A Hyderabadi biscuit named for its founder's home city, not imported from Karachi.",
+    "historyNote": "Created by Karachi Bakery, founded in Hyderabad in the 1950s by a Sindhi refugee from Karachi after Partition."
+  },
+  {
+    "id": "region_australia_monte_carlo",
+    "cookieId": "cookie_monte_carlo",
+    "worldRegion": "Oceania",
+    "country": "Australia",
+    "originComplexity": "single-origin",
+    "shortDescription": "A coconut-oat sandwich biscuit popularized by the Arnott's company.",
+    "historyNote": "The exact origin of the name isn't firmly documented, though it fits a mid-century trend of evocative continental biscuit names."
+  }
+]

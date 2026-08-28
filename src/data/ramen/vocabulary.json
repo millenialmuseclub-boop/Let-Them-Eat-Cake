@@ -1,0 +1,12 @@
+[
+  { "id": "tare", "term": "Tare", "japaneseName": "たれ", "romanization": "tare", "definition": "A concentrated seasoning base spooned into the bowl before broth is added -- the actual salt and umami engine of the bowl, not a garnish.", "relatedConcept": "Ramen Anatomy: Tare" },
+  { "id": "menma", "term": "Menma", "japaneseName": "メンマ", "romanization": "menma", "definition": "Fermented, seasoned bamboo shoots with a distinctive savory tang and crunch -- a classic shoyu-ramen topping.", "relatedConcept": "Toppings" },
+  { "id": "ajitama", "term": "Ajitama", "japaneseName": "味玉", "romanization": "ajitama", "definition": "A soft-boiled egg marinated in a soy-based liquid until the yolk turns a deep, jammy amber.", "relatedConcept": "Toppings" },
+  { "id": "chashu", "term": "Chashu", "japaneseName": "チャーシュー", "romanization": "chāshū", "definition": "Braised or roasted pork, most often belly or shoulder, sliced thin -- ramen's most common protein topping.", "relatedConcept": "Protein" },
+  { "id": "kaedama", "term": "Kaedama", "japaneseName": "替え玉", "romanization": "kaedama", "definition": "A noodle-only refill ordered into your existing bowl of broth, most associated with Hakata-style tonkotsu shops.", "relatedConcept": "Ordering" },
+  { "id": "kansui", "term": "Kansui", "japaneseName": "かん水", "romanization": "kansui", "definition": "Alkaline mineral water added to ramen noodle dough, giving the noodles their characteristic spring, chew, and pale yellow tint.", "relatedConcept": "Noodles" },
+  { "id": "abura", "term": "Abura", "japaneseName": "油", "romanization": "abura", "definition": "Fat or oil -- most often referring to the aroma oil floated on the broth's surface just before serving.", "relatedConcept": "Aroma Oil" },
+  { "id": "nori", "term": "Nori", "japaneseName": "海苔", "romanization": "nori", "definition": "A sheet of dried seaweed, typically propped against the bowl's edge -- meant to be dipped bite by bite rather than left to soak and go soft.", "relatedConcept": "Toppings" },
+  { "id": "negi", "term": "Negi", "japaneseName": "ねぎ", "romanization": "negi", "definition": "Scallion, or green onion -- a near-universal fresh, sharp garnish scattered over almost any bowl.", "relatedConcept": "Toppings" },
+  { "id": "mayu", "term": "Mayu", "japaneseName": "マー油", "romanization": "māyu", "definition": "Toasted or lightly burnt black garlic oil -- the defining aroma oil of Kumamoto-style tonkotsu ramen.", "relatedConcept": "Aroma Oil" }
+]

@@ -1,0 +1,136 @@
+/* Form/preview layout ported from Cake's AssemblyLabPage.css (CAKE_REFERENCE_AUDIT.md §6).
+   Tier tags and the compatibility grid below are new -- Assembly Lab has nothing to adapt there. */
+
+.build-a-bowl-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0 24px;
+}
+
+.build-a-bowl-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.build-a-bowl-form select {
+  font: inherit;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  min-width: 200px;
+}
+
+.build-a-bowl-preview {
+  display: grid;
+  grid-template-columns: minmax(260px, 400px) 1fr;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.build-a-bowl-illustration-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.build-a-bowl-summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
+
+.build-a-bowl-description {
+  font-size: 17px;
+  margin: 0;
+}
+
+.build-a-bowl-richness {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.build-a-bowl-compatibility-note {
+  opacity: 0.75;
+  font-size: 15px;
+}
+
+.build-a-bowl-compatibility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.build-a-bowl-compatibility-card p {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.85;
+}
+
+.build-a-bowl-compatibility-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.build-a-bowl-compatibility-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.tier-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tier-tag-traditional {
+  background: var(--raspberry);
+  color: white;
+}
+
+.tier-tag-compatible {
+  background: var(--gold);
+  color: var(--cocoa);
+}
+
+.tier-tag-experimental {
+  background: var(--border);
+  color: var(--text);
+}
+
+.tier-tag-discouraged {
+  background: transparent;
+  border: 1px solid var(--raspberry);
+  color: var(--raspberry);
+}
+
+@media (max-width: 640px) {
+  .build-a-bowl-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .build-a-bowl-form select {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .build-a-bowl-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

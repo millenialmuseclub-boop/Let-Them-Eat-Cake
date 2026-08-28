@@ -1,0 +1,32 @@
+[
+  {
+    "id": "trail_tokyo_shoyu",
+    "title": "Tokyo Shoyu",
+    "region": "Tokyo",
+    "regionalContext": "Tokyo's ramen scene traces back to early-20th-century Chinese-noodle-influenced shops, with Rairaiken (opened in Asakusa in 1910) often cited as one of the earliest to popularize this style. Shoyu ramen became so widespread here that it's long served as ramen's default, reference style both in Japan and abroad.",
+    "whatDefines": "A clear, light-brown broth built from chicken and/or pork bones plus a dashi component, seasoned with a soy-sauce tare blended with mirin, sake, or a touch of sugar. The broth stays clear rather than cloudy -- a gentle simmer, not a hard boil, is what keeps it that way.",
+    "whatToNotice": "Watch the broth's clarity as it's set down -- it should read as brothy and translucent, not opaque. Notice how restrained the seasoning feels compared to a rich tonkotsu or miso bowl; shoyu ramen leans on balance rather than intensity.",
+    "howToApproach": "Because this is widely treated as ramen's mainstream archetype, it's a useful baseline for comparison -- try it before or alongside a richer regional style so the contrast in broth character actually registers.",
+    "relatedRamenId": "ramen_tokyo_shoyu"
+  },
+  {
+    "id": "trail_sapporo_miso",
+    "title": "Sapporo Miso",
+    "region": "Sapporo, Hokkaido",
+    "regionalContext": "Popularized in Sapporo in the mid-1950s, most famously through the shop Aji no Sanpei, which is widely credited with first pairing miso tare with ramen. It became closely tied to Sapporo's identity as a cold-climate city needing warming, calorie-dense food, and is one of Hokkaido's \"big three\" styles alongside Hakodate shio and Asahikawa shoyu.",
+    "whatDefines": "A pork-and-chicken broth blended with a miso-based tare -- commonly a red-and-white miso blend -- finished with stir-fried garlic, ginger, and vegetables for extra depth. Thick, curly, egg-based noodles are chosen specifically because they can carry a broth this heavy without going limp.",
+    "whatToNotice": "Notice the near-universal presence of butter and sweet corn -- both are later, popular additions rather than the style's original form, but they're worth trying since they're now part of how the bowl is commonly served. Pay attention to how the miso's fermented depth sits alongside the fat from the stir-fried aromatics.",
+    "howToApproach": "This is a genuinely hearty, cold-weather bowl -- approach it as a substantial meal rather than a light one, and expect a bolder, more assertive flavor than a clear shoyu or shio bowl.",
+    "relatedRamenId": "ramen_sapporo_miso"
+  },
+  {
+    "id": "trail_hakata_tonkotsu",
+    "title": "Hakata Tonkotsu",
+    "region": "Hakata district, Fukuoka, Kyushu",
+    "regionalContext": "Developed in the Kurume area of Fukuoka prefecture in the 1930s-40s, then popularized and refined in Hakata's yatai (street stall) culture. It's Japan's best-known pork-bone style internationally and a defining feature of Fukuoka's food scene.",
+    "whatDefines": "Pork bones boiled hard and long enough to emulsify marrow and collagen into a cloudy, milky-white broth, seasoned with a light shio or shoyu tare kept simple so the pork broth itself carries the flavor. Thin, straight, low-hydration noodles are cooked quickly, often to a customer-specified firmness.",
+    "whatToNotice": "Notice the noodle portions are intentionally smaller than in other regional styles -- that's what makes ordering a kaedama (a plain noodle refill into the same broth) make sense partway through the meal, a defining part of the Hakata eating ritual rather than a modern add-on.",
+    "howToApproach": "If the shop offers noodle-firmness customization, it's worth using -- firmness is a real, traditional part of how this style is ordered, not an optional gimmick. Consider ordering a kaedama once you're partway through to experience the ritual as it's traditionally meant to be eaten.",
+    "relatedRamenId": "ramen_hakata_tonkotsu"
+  }
+]

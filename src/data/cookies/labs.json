@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "dough-lab",
+    "title": "Dough Lab",
+    "description": "The mixing method and fat temperature decide almost everything about how a cookie bakes -- spread, chew, and crumb all trace back here. See how creaming method, chilling, and portioning each push a dough in a different direction.",
+    "anatomyComponentId": "fat",
+    "doughComponentCategory": "fat",
+    "concepts": [
+      { "id": "creaming-method", "term": "Creaming Method", "definition": "Beating softened fat and sugar together until light and slightly fluffy, incorporating air that helps a cookie rise and stay tender -- the standard method behind most American drop cookies.", "relatedCookieIds": ["cookie_chocolate_chip", "cookie_snickerdoodle"] },
+      { "id": "rubbing-in", "term": "Rubbing-In Method", "definition": "Working cold, solid fat into flour with fingertips or a pastry cutter until sandy, without creaming air into it -- the technique behind short, crumbly doughs like shortbread.", "relatedCookieIds": ["cookie_scottish_shortbread", "cookie_french_sable"] },
+      { "id": "melted-fat-method", "term": "Melted-Fat Method", "definition": "Fully melting the fat before mixing, which produces a denser, chewier result with more spread than creamed butter -- common in doughs bound with syrup rather than creamed butter." , "relatedCookieIds": ["cookie_anzac_biscuit"] },
+      { "id": "chilling-resting", "term": "Chilling / Resting", "definition": "Letting a mixed dough rest cold before baking, which firms the fat back up, deepens flavor, and reduces spread compared to baking immediately." },
+      { "id": "portioning", "term": "Portioning", "definition": "How a dough is divided before baking -- scooped, rolled into balls, pressed into a mold, or cut from a rolled sheet -- which is often what actually defines a cookie's family (drop vs. rolled vs. shaped)." },
+      { "id": "freezing-raw-dough", "term": "Freezing Raw Dough", "definition": "Portioned raw dough can usually be frozen and baked later directly from frozen, typically with a few added minutes in the oven -- useful for make-ahead baking across nearly every dough type here." }
+    ],
+    "variables": [
+      {
+        "id": "fat-temperature",
+        "label": "Fat Temperature When Mixed",
+        "options": [
+          { "id": "cold-fat", "label": "Cold, Cut Into Flour", "effect": "Produces a short, crumbly texture with minimal spread -- the shortbread/sablé approach.", "bars": [{ "label": "Spread", "value": 1 }, { "label": "Crumbliness", "value": 5 }], "relatedCookieIds": ["cookie_scottish_shortbread", "cookie_french_sable"] },
+          { "id": "softened-creamed", "label": "Softened, Creamed with Sugar", "effect": "Incorporates air for a lighter texture with moderate, controlled spread -- the standard American drop-cookie approach.", "bars": [{ "label": "Spread", "value": 3 }, { "label": "Crumbliness", "value": 2 }], "relatedCookieIds": ["cookie_chocolate_chip", "cookie_peanut_butter"] },
+          { "id": "melted", "label": "Fully Melted", "effect": "Produces the most spread and the chewiest, densest texture of the three -- common where the fat is bound with syrup rather than creamed.", "bars": [{ "label": "Spread", "value": 5 }, { "label": "Crumbliness", "value": 1 }], "relatedCookieIds": ["cookie_anzac_biscuit"] }
+        ]
+      },
+      {
+        "id": "chill-time",
+        "label": "Chill Time Before Baking",
+        "options": [
+          { "id": "none", "label": "None (Bake Immediately)", "effect": "Warmer dough spreads more and bakes up thinner and crisper at the edges.", "bars": [{ "label": "Spread", "value": 4 }] },
+          { "id": "short", "label": "Short (30-60 min)", "effect": "A modest firming that slightly reduces spread without a major flavor change.", "bars": [{ "label": "Spread", "value": 3 }] },
+          { "id": "long", "label": "Long (24+ hrs)", "effect": "Noticeably reduces spread and deepens flavor as the flour fully hydrates -- a technique borrowed by many modern 'bakery-style' chocolate chip cookie recipes.", "bars": [{ "label": "Spread", "value": 1 }], "relatedCookieIds": ["cookie_chocolate_chip"] }
+        ]
+      },
+      {
+        "id": "portion-size",
+        "label": "Portion Size",
+        "options": [
+          { "id": "small", "label": "Small / Thin", "effect": "Bakes through quickly and evenly, favoring a fully crisp result.", "bars": [{ "label": "Crisp Edge-to-Center", "value": 5 }] },
+          { "id": "medium", "label": "Medium", "effect": "The most common size across world traditions -- balances a set edge with a softer center.", "bars": [{ "label": "Crisp Edge-to-Center", "value": 3 }] },
+          { "id": "large-thick", "label": "Large / Thick", "effect": "Bakes with a real gradient from crisp edge to soft, underbaked-feeling center -- the modern 'bakery-style' cookie approach.", "bars": [{ "label": "Crisp Edge-to-Center", "value": 1 }] }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "chocolate-lab",
+    "title": "Chocolate Lab",
+    "description": "Chocolate behaves differently depending on form and how it's melted -- see how chip vs. chunk, and tempered vs. untempered, change a cookie's finished texture.",
+    "anatomyComponentId": "mix-ins",
+    "doughComponentCategory": "mixIn",
+    "concepts": [
+      { "id": "chocolate-forms", "term": "Chips vs. Chunks vs. Couverture", "definition": "Chips are formulated with stabilizers to hold their shape in the oven; chopped bar chocolate (chunks) melts more and creates pools; couverture (high-cocoa-butter chocolate meant for dipping/tempering) behaves differently from either.", "relatedCookieIds": ["cookie_chocolate_chip"] },
+      { "id": "tempering", "term": "Tempering", "definition": "Carefully heating and cooling chocolate through specific temperatures so its cocoa butter crystallizes in a stable form -- gives a chocolate coating a glossy finish and a clean snap instead of a dull, soft one." },
+      { "id": "melting-methods", "term": "Melting Methods", "definition": "A double boiler (indirect heat) or short microwave bursts both melt chocolate gently; direct high heat risks scorching or seizing it." },
+      { "id": "cocoa-powder-types", "term": "Natural vs. Dutch-Processed Cocoa", "definition": "Natural cocoa is acidic and pairs with baking soda; Dutch-processed cocoa is alkalized and neutral, and generally pairs better with baking powder -- swapping one for the other in a recipe not designed for it can measurably affect rise." }
+    ],
+    "variables": [
+      {
+        "id": "chocolate-format",
+        "label": "Chocolate Format",
+        "options": [
+          { "id": "chips", "label": "Chocolate Chips", "effect": "Hold their shape as discrete pockets through baking -- the classic, most predictable format.", "bars": [{ "label": "Melt Pooling", "value": 2 }], "relatedCookieIds": ["cookie_chocolate_chip"] },
+          { "id": "chunks", "label": "Chopped Chocolate Chunks", "effect": "Melts further into the dough, creating visible pools and streaks rather than staying discrete.", "bars": [{ "label": "Melt Pooling", "value": 4 }], "relatedCookieIds": ["cookie_chocolate_chip"] },
+          { "id": "coating", "label": "Full Coating / Dip", "effect": "Used as a finish rather than a mix-in -- covers the whole cookie's exterior instead of sitting inside the dough.", "bars": [{ "label": "Melt Pooling", "value": 0 }], "relatedCookieIds": ["cookie_alfajor"] }
+        ]
+      },
+      {
+        "id": "tempering-state",
+        "label": "Tempering (for a coating/dip)",
+        "options": [
+          { "id": "untempered", "label": "Untempered (Simply Melted)", "effect": "Sets with a dull surface and a softer, sometimes streaky texture -- fine for a quick dip, but won't have a clean snap.", "bars": [{ "label": "Gloss / Snap", "value": 1 }] },
+          { "id": "tempered", "label": "Properly Tempered", "effect": "Sets glossy with a clean, audible snap -- the standard for a professional-looking chocolate coating.", "bars": [{ "label": "Gloss / Snap", "value": 5 }] }
+        ]
+      },
+      {
+        "id": "cocoa-type",
+        "label": "Cocoa Powder Type",
+        "options": [
+          { "id": "natural", "label": "Natural Cocoa", "effect": "Acidic -- pairs with baking soda for reliable rise, and gives a brighter, sharper chocolate flavor.", "bars": [{ "label": "Acidity", "value": 4 }] },
+          { "id": "dutched", "label": "Dutch-Processed Cocoa", "effect": "Alkalized and neutral -- pairs better with baking powder, and gives a darker, mellower chocolate flavor.", "bars": [{ "label": "Acidity", "value": 1 }] }
+        ]
+      }
+    ]
+  }
+]

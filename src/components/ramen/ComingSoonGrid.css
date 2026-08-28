@@ -1,0 +1,27 @@
+.coming-soon-heading {
+  margin-top: 40px;
+}
+
+.coming-soon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.coming-soon-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  opacity: 0.65;
+}
+
+.coming-soon-tile h3 {
+  margin: 0;
+}
+
+.coming-soon-tag {
+  background: var(--border);
+  color: var(--text);
+}

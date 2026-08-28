@@ -1,0 +1,79 @@
+.quiz-progress {
+  font-size: 13px;
+  opacity: 0.65;
+  margin-bottom: 20px;
+}
+
+.ramen101-question-card h2 {
+  margin-bottom: 16px;
+}
+
+.ramen101-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ramen101-choice {
+  font: inherit;
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.ramen101-choice:not(:disabled):hover {
+  border-color: var(--raspberry);
+}
+
+.ramen101-choice:disabled {
+  cursor: default;
+}
+
+.ramen101-choice.correct {
+  border-color: #3a8a4a;
+  background: rgba(58, 138, 74, 0.12);
+}
+
+.ramen101-choice.incorrect {
+  border-color: var(--raspberry);
+  background: var(--raspberry-bg);
+}
+
+/* Correct/incorrect is never conveyed by color alone -- this text marker (screen-reader visible
+   too, since it's real DOM text, not a background image) is the non-color signal. */
+.ramen101-choice-marker {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.ramen101-choice.correct .ramen101-choice-marker {
+  color: #2b6b38;
+}
+
+.ramen101-choice.incorrect .ramen101-choice-marker {
+  color: var(--raspberry);
+}
+
+.ramen101-feedback {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.ramen101-feedback p {
+  font-size: 15px;
+}
+
+.ramen101-result-card {
+  text-align: center;
+}
+
+.ramen101-result-card h2 {
+  color: var(--raspberry);
+}

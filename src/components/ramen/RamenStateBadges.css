@@ -1,0 +1,10 @@
+.ramen-state-badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ramen-state-badge {
+  background: var(--raspberry-bg);
+  color: var(--raspberry);
+}

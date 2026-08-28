@@ -1,0 +1,64 @@
+/* Adapted from Cake's AtlasWorldMap.css (CAKE_REFERENCE_AUDIT.md §5). */
+
+.atlas-map-wrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--raspberry-bg);
+  margin-top: 20px;
+}
+
+.atlas-map-reset {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.atlas-map-country {
+  fill: var(--bg-card);
+  stroke: var(--border);
+  stroke-width: 0.5;
+  outline: none;
+}
+
+.atlas-map-pin {
+  fill: var(--raspberry);
+  stroke: white;
+  stroke-width: 1.5;
+}
+
+.atlas-map-pin.active {
+  fill: var(--gold);
+}
+
+.atlas-map-pin-hitarea {
+  cursor: pointer;
+}
+
+/* The hit-area itself is transparent, so its own default SVG focus ring would draw an odd
+   34px-radius square around empty space. Highlighting the visible pin marker (its next sibling
+   in the same <Marker>) instead gives keyboard users a real, legible focus indicator. */
+.atlas-map-pin-hitarea:focus-visible {
+  outline: none;
+}
+
+.atlas-map-pin-hitarea:focus-visible ~ .atlas-map-pin {
+  stroke: var(--gold);
+  stroke-width: 3px;
+}
+
+.atlas-map-label {
+  font-size: 11px;
+  font-weight: 700;
+  fill: var(--cocoa-strong);
+  paint-order: stroke;
+  stroke: var(--bg-card);
+  stroke-width: 3px;
+}

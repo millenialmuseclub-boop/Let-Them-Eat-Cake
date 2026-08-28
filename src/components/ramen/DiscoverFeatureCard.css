@@ -1,0 +1,108 @@
+/* Same shape as Cake's DiscoverFeatureCard.css (CAKE_REFERENCE_AUDIT.md §17):
+   photo-led card, gradient-scrim text overlay, single mobile breakpoint. */
+
+.discover-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.discover-feature-card {
+  display: block;
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, box-shadow 0.15s;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.discover-feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(43, 36, 29, 0.18);
+}
+
+.discover-feature-card .ramen-hero-image-hero img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Generic (non-ramen) scene photography -- same 280px card geometry as the ramen-hero-image
+   path above, so Workshop/Main/Slurp tiles read identically whether the image comes from a
+   ramenId or a sceneImages.json entry. */
+.discover-feature-card-image {
+  position: relative;
+}
+
+.discover-feature-card-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.discover-feature-card-credit {
+  position: absolute;
+  bottom: 6px;
+  right: 8px;
+  font-size: 9px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.55);
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 999px;
+  padding: 3px 7px;
+}
+
+.discover-feature-card-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.25) 55%, transparent 100%);
+  color: white;
+}
+
+.discover-feature-card-content h2 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.discover-feature-card-content p {
+  font-size: 13px;
+  opacity: 0.95;
+  margin-bottom: 12px;
+  max-width: 320px;
+  color: white;
+}
+
+.discover-feature-card-meta {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.discover-feature-card-cta {
+  align-self: flex-start;
+}
+
+@media (max-width: 640px) {
+  .discover-feature-card .ramen-hero-image-hero img,
+  .discover-feature-card-image img {
+    height: 220px;
+  }
+}

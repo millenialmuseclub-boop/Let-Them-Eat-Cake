@@ -1,1 +1,1355 @@
-[]
+[
+  {
+    "id": "product_donburi_bowls",
+    "name": "Mora Ceramic Ramen Bowls",
+    "brand": "Mora",
+    "category": "bowls-tableware",
+    "description": "Wide, deep ceramic bowls that hold heat and give noodles room to move without splashing.",
+    "editorialNote": "Premium editorial pick",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_donburi_bowls-ltk",
+        "network": "ltk",
+        "cta": "Shop Mora Ramen Bowls",
+        "url": "https://on.ltk.com/+frCTJVWjfH17jFJZ8-GwKA",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_chopsticks_spoon_set",
+    "name": "World Market Stripe Floral Noodle Bowl + Chopsticks",
+    "brand": "World Market",
+    "category": "bowls-tableware",
+    "description": "A patterned noodle bowl paired with a matching chopstick set.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_chopsticks_spoon_set-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Bowl",
+        "url": "https://go.shopmy.us/p-79936593",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_world_market_dinnerware_collection",
+    "name": "World Market Asian Dinnerware Collection",
+    "brand": "World Market",
+    "category": "bowls-tableware",
+    "description": "A rotating edit of World Market's Asian-inspired bowls and tableware.",
+    "editorialNote": "Rotating/editorial collection",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_world_market_dinnerware_collection-shopmy",
+        "network": "shopmy",
+        "cta": "Shop World Market Asian Dinnerware",
+        "url": "https://go.shopmy.us/p-79936529",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_black_pad_print_bowl",
+    "name": "World Market Black Pad Print Noodle Bowl",
+    "brand": "World Market",
+    "category": "bowls-tableware",
+    "description": "A matte black noodle bowl with a subtle pad-printed pattern.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_black_pad_print_bowl-shopmy",
+        "network": "shopmy",
+        "cta": "Shop Asian Dinnerware",
+        "url": "https://go.shopmy.us/p-79936688",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_lucky_cat_bowl",
+    "name": "World Market Lucky Cat Porcelain Noodle Bowl",
+    "brand": "World Market",
+    "category": "bowls-tableware",
+    "description": "A porcelain noodle bowl decorated with a maneki-neko (lucky cat) motif.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_lucky_cat_bowl-ltk",
+        "network": "ltk",
+        "cta": "Shop Asian Dinnerware",
+        "url": "https://on.ltk.com/+AozXSAAX-ce3GptY9nobGg",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_blue_swirl_bowl",
+    "name": "World Market Blue Multi-Swirl Noodle Bowl",
+    "brand": "World Market",
+    "category": "bowls-tableware",
+    "description": "A blue swirl-glazed noodle bowl with a hand-painted look.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_blue_swirl_bowl-shopmy",
+        "network": "shopmy",
+        "cta": "Shop Asian Dinnerware",
+        "url": "https://go.shopmy.us/p-79936778",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_red_green_bowl_set",
+    "name": "World Market Red + Green Ramen Bowl Sets",
+    "brand": "World Market",
+    "category": "bowls-tableware",
+    "description": "A matched red-and-green ramen bowl set, sized for two.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_red_green_bowl_set-ltk",
+        "network": "ltk",
+        "cta": "Shop the Set",
+        "url": "https://on.ltk.com/+vlEg-lBUT_oObcZUfPSUbQ",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_yatai_keiji_set",
+    "name": "Yatai Keiji Japanese Ramen Set",
+    "brand": "Yatai Keiji",
+    "category": "bowls-tableware",
+    "description": "A complete Japanese-made ramen set -- bowl, chopsticks, and spoon together.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_yatai_keiji_set-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Ramen Set",
+        "url": "https://go.shopmy.us/p-79937084",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_otemachi_bowl",
+    "name": "Japanese Otemachi Ramen Bowl",
+    "brand": "Otemachi",
+    "category": "bowls-tableware",
+    "description": "A traditional Japanese-style ramen bowl named for Tokyo's Otemachi district.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_otemachi_bowl-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Otemachi Bowl",
+        "url": "https://go.shopmy.us/p-79938505",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_shigenobu_bowl",
+    "name": "Shigenobu 47-oz Japanese Ramen Bowl",
+    "brand": "Shigenobu",
+    "category": "bowls-tableware",
+    "description": "A generously sized 47-ounce bowl with plenty of room for broth, noodles, and toppings.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_shigenobu_bowl-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Shigenobu Bowl",
+        "url": "https://go.shopmy.us/p-79938582",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_nissin_bowl_set",
+    "name": "Nissin Cup Noodles Ceramic Bowl Set",
+    "brand": "Nissin",
+    "category": "bowls-tableware",
+    "description": "A ceramic bowl set inspired by Nissin's iconic Cup Noodles branding.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_nissin_bowl_set-ltk",
+        "network": "ltk",
+        "cta": "Shop the Nissin Bowl Set",
+        "url": "https://on.ltk.com/+rnqWFkWwspWh7tUXKrPMpw",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_infuse_melamine_bowls",
+    "name": "Infuse Black Melamine Ramen Bowls",
+    "brand": "Infuse",
+    "category": "bowls-tableware",
+    "description": "Lightweight, chip-resistant black melamine bowls built for everyday use.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_infuse_melamine_bowls-ltk",
+        "network": "ltk",
+        "cta": "Shop Infuse Ramen Bowls",
+        "url": "https://on.ltk.com/+04zqHZEmHYmWgprWG6jmaw",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_cook_with_color_bowl",
+    "name": "Cook With Color Ramen Bowl",
+    "brand": "Cook With Color",
+    "category": "bowls-tableware",
+    "description": "A colorful, budget-friendly ramen bowl for building a mixed-and-matched table setting.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_cook_with_color_bowl-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Ramen Bowl",
+        "url": "https://go.shopmy.us/p-79938809",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_infuse_bowl_set",
+    "name": "Infuse 8 Piece Ceramic Ramen Bowl Set",
+    "brand": "Infuse",
+    "category": "bowls-tableware",
+    "description": "An 8-piece ceramic ramen bowl set for serving a full table at once.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_infuse_bowl_set-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_tsukemen_dipping_set",
+    "name": "Tsukemen Dipping Bowl Set",
+    "category": "bowls-tableware",
+    "description": "A shallow noodle plate paired with a small concentrated-broth cup, built for dipping-style eating.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_tsukemen_dipping_set-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_rolling_pin",
+    "name": "Long Wooden Rolling Pin",
+    "category": "noodle-tools",
+    "description": "An extra-long pin for rolling noodle dough thin and even by hand -- closer to a take-momi technique than a short pin.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_rolling_pin-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_digital_scale",
+    "name": "Digital Kitchen Scale",
+    "category": "noodle-tools",
+    "description": "For measuring flour and kansui by weight, where noodle-dough hydration actually matters.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_digital_scale-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_dough_proofing_box",
+    "name": "Dough Proofing Box",
+    "category": "noodle-tools",
+    "description": "A sealed container for resting noodle dough at a controlled humidity before rolling.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_dough_proofing_box-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_miso_paste",
+    "name": "Red & White Miso Paste",
+    "category": "japanese-pantry",
+    "description": "The fermented soybean base behind Sapporo-style miso tare.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_miso_paste-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_niboshi",
+    "name": "Dried Niboshi (Sardines)",
+    "category": "japanese-pantry",
+    "description": "Dried baby sardines used for the seafood dashi component in styles like Kitakata and Asahikawa.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_niboshi-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_shoyu_dark",
+    "name": "Dark Soy Sauce (Koikuchi Shoyu)",
+    "category": "japanese-pantry",
+    "description": "The everyday dark soy sauce behind most shoyu tare -- the single most common ramen seasoning base.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_shoyu_dark-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_toasted_sesame_oil",
+    "name": "Toasted Sesame Oil",
+    "category": "japanese-pantry",
+    "description": "A base for building a garlic or chili aroma oil at home.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_toasted_sesame_oil-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_doubanjiang",
+    "name": "Doubanjiang (Fermented Chili Bean Paste)",
+    "category": "japanese-pantry",
+    "description": "The Sichuan-style chili paste behind tantanmen's heat.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_doubanjiang-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_black_garlic",
+    "name": "Black Garlic",
+    "category": "japanese-pantry",
+    "description": "For making mayu (black garlic oil), Kumamoto ramen's signature finish.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_black_garlic-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_bonito_flakes",
+    "name": "Bonito Flakes (Katsuobushi)",
+    "category": "japanese-pantry",
+    "description": "A dashi staple for building umami depth into a lighter shoyu or shio broth.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_bonito_flakes-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_menma_jar",
+    "name": "Prepared Menma (Fermented Bamboo Shoots)",
+    "category": "japanese-pantry",
+    "description": "Ready-to-use seasoned bamboo shoots for topping a bowl at home.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_menma_jar-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_togarashi",
+    "name": "Shichimi Togarashi (Seven Spice Blend)",
+    "category": "japanese-pantry",
+    "description": "A citrus-and-chili spice blend for finishing any bowl with a sharp, aromatic heat.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_togarashi-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_ramen_cookbook",
+    "name": "A Regional Ramen Cookbook",
+    "category": "cookbooks",
+    "description": "A deeper dive into regional broth-building technique than any single app page can cover.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_ramen_cookbook-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_noodle_craft_cookbook",
+    "name": "The Craft of Noodle-Making",
+    "category": "cookbooks",
+    "description": "A dedicated guide to hydration, kansui ratios, and hand-cutting technique.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_noodle_craft_cookbook-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "product_izakaya_cookbook",
+    "name": "Izakaya Companion Cooking Guide",
+    "category": "cookbooks",
+    "description": "Recipes for the sides and small plates that traditionally accompany a bowl of ramen.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "product_izakaya_cookbook-pending",
+        "network": "pending",
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "id": "wooden-ramen-spoon",
+    "name": "Traditional Wooden Ramen Spoons",
+    "category": "bowls-tableware",
+    "description": "A traditional lacquered-style wooden spoon alternative to ceramic, lighter and better at holding heat.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "wooden-ramen-spoon-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Wooden Spoons",
+        "url": "https://go.shopmy.us/p-80168972",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "ceramic-chopstick-rests",
+    "name": "Ceramic Chopstick Rests",
+    "category": "bowls-tableware",
+    "description": "Small rests that keep chopstick tips off the table between bites.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "ceramic-chopstick-rests-shopmy",
+        "network": "shopmy",
+        "cta": "Shop Chopstick Rests",
+        "url": "https://go.shopmy.us/p-80170036",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "ramen-serving-tray",
+    "name": "Ramen Serving Tray",
+    "category": "bowls-tableware",
+    "description": "A tray sized for a full bowl plus side dishes, useful for tsukemen's separate broth cup.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "ramen-serving-tray-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Serving Tray",
+        "url": "https://go.shopmy.us/p-80171360",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "stockpot-fine-mesh-skimmer",
+    "name": "Fine-Mesh Stock Skimmer",
+    "category": "broth-essentials",
+    "description": "For removing scum and impurities during the first hard boil -- key to a cleaner tonkotsu broth.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "broth-lab"
+    ],
+    "offers": [
+      {
+        "id": "stockpot-fine-mesh-skimmer-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Skimmer",
+        "url": "https://go.shopmy.us/p-80207830",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "large-fine-mesh-strainer",
+    "name": "Large Fine-Mesh Strainer",
+    "category": "broth-essentials",
+    "description": "For straining bones and aromatics out of a finished broth without clouding it further than intended.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "broth-lab"
+    ],
+    "offers": [
+      {
+        "id": "large-fine-mesh-strainer-ltk",
+        "network": "ltk",
+        "cta": "Shop the Strainer",
+        "url": "https://on.ltk.com/+okavi-7hobAzxhs9rCYuvA",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "cheesecloth",
+    "name": "Cheesecloth",
+    "category": "broth-essentials",
+    "description": "For straining a seafood dashi component to a clear finish, as used in double-soup styles like Asahikawa.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "broth-lab"
+    ],
+    "offers": [
+      {
+        "id": "cheesecloth-ltk",
+        "network": "ltk",
+        "cta": "Shop Cheesecloth",
+        "url": "https://on.ltk.com/+aZ2_EkkaOiQBT8GVxyqLiQ",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "broth-soup-ladle",
+    "name": "Soup Ladle",
+    "category": "broth-essentials",
+    "description": "A deep ladle sized for reaching a full stockpot without splashing.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "broth-lab"
+    ],
+    "offers": [
+      {
+        "id": "broth-soup-ladle-ltk",
+        "network": "ltk",
+        "cta": "Shop the Ladle",
+        "url": "https://on.ltk.com/+ZqfOFb-nbwPN9W221IeAiQ",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "instant-read-thermometer",
+    "name": "Instant-Read Thermometer",
+    "category": "broth-essentials",
+    "description": "For tracking a hard rolling boil versus a gentle simmer -- the difference between a clear and an emulsified broth.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "broth-lab"
+    ],
+    "offers": [
+      {
+        "id": "instant-read-thermometer-ltk",
+        "network": "ltk",
+        "cta": "Shop the Thermometer",
+        "url": "https://on.ltk.com/+F_VgY0Nl9b6uiCh6HuSE3w",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "marcato-atlas-150-pasta-machine",
+    "name": "Marcato Atlas 150 Pasta Machine",
+    "brand": "Marcato",
+    "category": "noodle-tools",
+    "description": "A hand-crank roller and cutter, usable for rolling and cutting homemade ramen noodle dough.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "offers": [
+      {
+        "id": "marcato-atlas-150-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Marcato Atlas 150",
+        "url": "https://go.shopmy.us/p-80208704",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "noodle-tools-bench-scraper",
+    "name": "Bench Scraper",
+    "category": "noodle-tools",
+    "description": "For dividing and handling noodle dough cleanly during kneading and resting.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "offers": [
+      {
+        "id": "noodle-tools-bench-scraper-ltk",
+        "network": "ltk",
+        "cta": "Shop the Bench Scraper",
+        "url": "https://on.ltk.com/+ebOftqVUiaSPwe915qDu6Q",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "ramen-noodle-strainer-basket",
+    "name": "Ramen Noodle Strainer Basket",
+    "category": "noodle-tools",
+    "description": "A long-handled mesh basket for cooking and lifting noodles straight from the pot to the bowl.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "offers": [
+      {
+        "id": "ramen-noodle-strainer-basket-ltk",
+        "network": "ltk",
+        "cta": "Shop the Strainer Basket",
+        "url": "https://on.ltk.com/+BIxW-anhQNaUuH5Z5dAPVw",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "kansui-alkaline-noodle-water",
+    "name": "Kansui / Alkaline Noodle Water",
+    "category": "japanese-pantry",
+    "description": "The mineral water that gives ramen noodles their characteristic spring and pale yellow tint.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "offers": [
+      {
+        "id": "kansui-alkaline-noodle-water-ltk",
+        "network": "ltk",
+        "cta": "Shop Kansui",
+        "url": "https://on.ltk.com/+TUWWOJlUrgljm3poEIzUdw",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "precision-kitchen-scale",
+    "name": "Precision Kitchen Scale",
+    "category": "noodle-tools",
+    "description": "For measuring flour and kansui by weight, where noodle-dough hydration actually matters.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "offers": [
+      {
+        "id": "precision-kitchen-scale-ltk",
+        "network": "ltk",
+        "cta": "Shop the Scale",
+        "url": "https://on.ltk.com/+5mGHYJLtqujiExkzG8n-aA",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "japanese-ceramic-ramen-soup-spoon",
+    "name": "Japanese Ceramic Ramen Soup Spoon",
+    "category": "bowls-tableware",
+    "description": "The wide, flat-bottomed ceramic spoon shape traditionally used for ramen broth and toppings.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "japanese-ceramic-ramen-soup-spoon-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Ceramic Spoon",
+        "url": "https://go.shopmy.us/p-80168581",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "long-japanese-ramen-chopsticks",
+    "name": "Long Japanese Ramen Chopsticks",
+    "category": "bowls-tableware",
+    "description": "Extra-long chopsticks sized for reaching deep into a full ramen bowl.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "long-japanese-ramen-chopsticks-shopmy",
+        "network": "shopmy",
+        "cta": "Shop Long Chopsticks",
+        "url": "https://go.shopmy.us/p-80169177",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "reusable-bamboo-chopsticks",
+    "name": "Reusable Bamboo Chopsticks",
+    "category": "bowls-tableware",
+    "description": "Lightweight, everyday bamboo chopsticks -- a simple reusable alternative to disposable pairs.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "reusable-bamboo-chopsticks-shopmy",
+        "network": "shopmy",
+        "cta": "Shop Bamboo Chopsticks",
+        "url": "https://go.shopmy.us/p-80169461",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "ironwood-chopsticks",
+    "name": "Ironwood Chopsticks",
+    "category": "bowls-tableware",
+    "description": "Dense, heavy ironwood chopsticks with a smooth, durable finish.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "ironwood-chopsticks-shopmy",
+        "network": "shopmy",
+        "cta": "Shop Ironwood Chopsticks",
+        "url": "https://go.shopmy.us/p-80169747",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "wooden-chopstick-rests",
+    "name": "Wooden Chopstick Rests",
+    "category": "bowls-tableware",
+    "description": "Simple carved wooden rests that keep chopstick tips off the table between bites.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "wooden-chopstick-rests-shopmy",
+        "network": "shopmy",
+        "cta": "Shop Wooden Chopstick Rests",
+        "url": "https://go.shopmy.us/p-80170507",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "japanese-spoon-chopstick-set",
+    "name": "Japanese Spoon-and-Chopstick Set",
+    "category": "bowls-tableware",
+    "description": "A matched spoon-and-chopstick pair sized for a full bowl of ramen.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "japanese-spoon-chopstick-set-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Spoon-and-Chopstick Set",
+        "url": "https://go.shopmy.us/p-80170813",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "japanese-lacquer-style-serving-tray",
+    "name": "Japanese Lacquer-Style Serving Tray",
+    "category": "bowls-tableware",
+    "description": "A lacquer-finish serving tray for a full bowl plus sides -- a step up from the everyday bamboo tray.",
+    "apps": [
+      "ramen"
+    ],
+    "offers": [
+      {
+        "id": "japanese-lacquer-style-serving-tray-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Lacquer Tray",
+        "url": "https://go.shopmy.us/p-80172103",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "stockpot-8qt",
+    "name": "8-Quart Stainless Steel Stockpot",
+    "category": "broth-essentials",
+    "description": "A smaller stockpot suited to a single-batch broth or a smaller household.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "broth-lab"
+    ],
+    "editorialNote": "The Broth Lab Toolkit",
+    "offers": [
+      {
+        "id": "stockpot-8qt-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the 8-Quart Stockpot",
+        "url": "https://go.shopmy.us/p-80207617",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "stockpot-12qt",
+    "name": "12-Quart Stockpot",
+    "category": "broth-essentials",
+    "description": "A tall, heavy stockpot with enough capacity for a real multi-hour tonkotsu or double-soup base.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "broth-lab"
+    ],
+    "editorialNote": "The Broth Lab Toolkit",
+    "offers": [
+      {
+        "id": "stockpot-12qt-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the 12-Quart Stockpot",
+        "url": "https://go.shopmy.us/p-80207666",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "stockpot-16qt",
+    "name": "16-Quart Stockpot",
+    "category": "broth-essentials",
+    "description": "A large-capacity stockpot for bigger batches or bones that need more room to move.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "broth-lab"
+    ],
+    "editorialNote": "The Broth Lab Toolkit",
+    "offers": [
+      {
+        "id": "stockpot-16qt-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the 16-Quart Stockpot",
+        "url": "https://go.shopmy.us/p-80207741",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "large-enameled-dutch-oven",
+    "name": "Large Enameled Dutch Oven",
+    "category": "broth-essentials",
+    "description": "A heavy enameled pot that holds heat evenly -- also doubles for braising chashu.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "broth-lab",
+      "chashu-lab"
+    ],
+    "editorialNote": "The Broth Lab Toolkit",
+    "offers": [
+      {
+        "id": "large-enameled-dutch-oven-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Dutch Oven",
+        "url": "https://go.shopmy.us/p-80207781",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "spider-strainer",
+    "name": "Stainless-Steel Spider Strainer",
+    "category": "broth-essentials",
+    "description": "A wide wire-mesh strainer for lifting bones and solids out of a broth in one motion.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "broth-lab"
+    ],
+    "editorialNote": "The Broth Lab Toolkit",
+    "offers": [
+      {
+        "id": "spider-strainer-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Spider Strainer",
+        "url": "https://go.shopmy.us/p-80207943",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "fine-mesh-chinois",
+    "name": "Fine-Mesh Chinois",
+    "category": "broth-essentials",
+    "description": "A conical fine-mesh strainer for a final, extra-clean pass on a finished broth.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "broth-lab"
+    ],
+    "editorialNote": "The Broth Lab Toolkit",
+    "offers": [
+      {
+        "id": "fine-mesh-chinois-ltk",
+        "network": "ltk",
+        "cta": "Shop the Chinois",
+        "url": "https://on.ltk.com/+rGqEl8gmqKEud1OgVeGVow",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "reusable-broth-stock-bags",
+    "name": "Reusable Broth/Stock Bags",
+    "category": "broth-essentials",
+    "description": "Freezer-safe bags for storing finished broth in portioned amounts.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "broth-lab"
+    ],
+    "editorialNote": "The Broth Lab Toolkit",
+    "offers": [
+      {
+        "id": "reusable-broth-stock-bags-ltk",
+        "network": "ltk",
+        "cta": "Shop Stock Bags",
+        "url": "https://on.ltk.com/+fmsuDTo4p3NDhM_S0tfy2A",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "fat-separator",
+    "name": "Fat Separator",
+    "category": "broth-essentials",
+    "description": "For pulling excess rendered fat off a finished broth before it's seasoned.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "broth-lab"
+    ],
+    "editorialNote": "The Broth Lab Toolkit",
+    "offers": [
+      {
+        "id": "fat-separator-ltk",
+        "network": "ltk",
+        "cta": "Shop the Fat Separator",
+        "url": "https://on.ltk.com/+Yld790Jbtac4oFc_vP0Lkg",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "digital-kitchen-scale-broth",
+    "name": "Digital Kitchen Scale",
+    "category": "broth-essentials",
+    "description": "For weighing bones, aromatics, and salt precisely rather than eyeballing it.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "broth-lab"
+    ],
+    "editorialNote": "The Broth Lab Toolkit",
+    "offers": [
+      {
+        "id": "digital-kitchen-scale-broth-ltk",
+        "network": "ltk",
+        "url": "https://on.ltk.com/+Yld790Jbtac4oFc_vP0Lkg",
+        "status": "needs-verification",
+        "notes": "Supplied URL is identical to the Fat Separator's affiliate URL. Not treated as live pending user confirmation -- no replacement URL was guessed."
+      }
+    ]
+  },
+  {
+    "id": "pressure-cooker-instant-pot",
+    "name": "Pressure Cooker / Instant Pot",
+    "category": "broth-essentials",
+    "description": "Cuts a long broth extraction down to a fraction of the stovetop time.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "broth-lab"
+    ],
+    "editorialNote": "The Broth Lab Toolkit",
+    "offers": [
+      {
+        "id": "pressure-cooker-instant-pot-ltk",
+        "network": "ltk",
+        "url": "https://on.ltk.com/+F_VgY0Nl9b6uiCh6HuSE3w",
+        "status": "needs-verification",
+        "notes": "Supplied URL is identical to the Instant-Read Thermometer's affiliate URL. Not treated as live pending user confirmation -- no replacement URL was guessed."
+      }
+    ]
+  },
+  {
+    "id": "kitchenaid-pasta-roller-attachment",
+    "name": "KitchenAid Pasta Roller Attachment",
+    "brand": "KitchenAid",
+    "category": "noodle-tools",
+    "description": "A stand-mixer roller attachment for laminating and thinning noodle dough.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "offers": [
+      {
+        "id": "kitchenaid-pasta-roller-attachment-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Roller Attachment",
+        "url": "https://go.shopmy.us/p-80208736",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "kitchenaid-pasta-cutter-attachment",
+    "name": "KitchenAid Pasta Cutter Attachment",
+    "brand": "KitchenAid",
+    "category": "noodle-tools",
+    "description": "A stand-mixer cutter attachment for slicing rolled dough into even noodle strands.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "offers": [
+      {
+        "id": "kitchenaid-pasta-cutter-attachment-shopmy",
+        "network": "shopmy",
+        "cta": "Shop the Cutter Attachment (ShopMy)",
+        "url": "https://go.shopmy.us/p-80208772",
+        "status": "active"
+      },
+      {
+        "id": "kitchenaid-pasta-cutter-attachment-ltk",
+        "network": "ltk",
+        "cta": "Shop the Cutter Attachment (LTK)",
+        "url": "https://on.ltk.com/+-FH7teXSlnqMn46-vuWBCw",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "manual-noodle-cutter",
+    "name": "Manual Noodle Cutter",
+    "category": "noodle-tools",
+    "description": "A hand-crank cutter for slicing rolled dough into noodles without a stand mixer.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "offers": [
+      {
+        "id": "manual-noodle-cutter-ltk",
+        "network": "ltk",
+        "cta": "Shop the Manual Cutter",
+        "url": "https://on.ltk.com/+C33iMswm6N4fgHyHNAS1Sw",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "japanese-noodle-knife",
+    "name": "Japanese Noodle Knife",
+    "category": "noodle-tools",
+    "description": "A wide, straight-edged knife purpose-built for hand-cutting noodle dough into even strands.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "offers": [
+      {
+        "id": "japanese-noodle-knife-ltk",
+        "network": "ltk",
+        "cta": "Shop the Noodle Knife",
+        "url": "https://on.ltk.com/+lKL4aSJzKk5t2FROoZuwmA",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "large-wood-cutting-board",
+    "name": "Large Wood Cutting Board",
+    "category": "noodle-tools",
+    "description": "A large, stable surface for rolling and cutting noodle dough by hand.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "offers": [
+      {
+        "id": "large-wood-cutting-board-ltk",
+        "network": "ltk",
+        "cta": "Shop the Cutting Board",
+        "url": "https://on.ltk.com/+DWeFs9gktHqoadUXGJywVQ",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "dough-scraper",
+    "name": "Dough Scraper",
+    "category": "noodle-tools",
+    "description": "A flexible scraper for handling and portioning wetter noodle dough.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "offers": [
+      {
+        "id": "dough-scraper-ltk",
+        "network": "ltk",
+        "cta": "Shop the Dough Scraper",
+        "url": "https://on.ltk.com/+eSi7CDir0L_AlcwG--7LSQ",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "bread-flour",
+    "name": "Bread Flour",
+    "category": "japanese-pantry",
+    "description": "A moderate-protein flour suited to a standard-hydration ramen noodle dough.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "offers": [
+      {
+        "id": "bread-flour-ltk",
+        "network": "ltk",
+        "cta": "Shop Bread Flour",
+        "url": "https://on.ltk.com/+gwqb0sIyVf7luyxFwlwY5Q",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "high-gluten-flour",
+    "name": "High-Gluten Flour",
+    "category": "japanese-pantry",
+    "description": "A higher-protein flour for a firmer, chewier noodle -- closer to Yokohama Iekei's thick strands.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "offers": [
+      {
+        "id": "high-gluten-flour-ltk",
+        "network": "ltk",
+        "cta": "Shop High-Gluten Flour",
+        "url": "https://on.ltk.com/+UPF-n-zuAz66varA7Tf4_w",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "noodle-drying-rack",
+    "name": "Noodle Drying Rack",
+    "category": "noodle-tools",
+    "description": "A rack for air-drying fresh-cut noodles before cooking, so they don't clump.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "offers": [
+      {
+        "id": "noodle-drying-rack-ltk",
+        "network": "ltk",
+        "cta": "Shop the Drying Rack",
+        "url": "https://on.ltk.com/+GiHyOsVpDiNQoy_NL5ScPw",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "bamboo-noodle-tray",
+    "name": "Bamboo Noodle Tray",
+    "category": "noodle-tools",
+    "description": "A shallow bamboo tray for resting and separating fresh-cut noodles.",
+    "apps": [
+      "ramen"
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "offers": [
+      {
+        "id": "bamboo-noodle-tray-ltk",
+        "network": "ltk",
+        "cta": "Shop the Bamboo Tray",
+        "url": "https://on.ltk.com/+yvyFJ7sFf2P04TqtCXA-sQ",
+        "status": "active"
+      }
+    ]
+  }
+]

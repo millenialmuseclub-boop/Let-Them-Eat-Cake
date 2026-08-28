@@ -1,0 +1,68 @@
+[
+  {
+    "id": "q1",
+    "question": "It's a rainy afternoon and you want to bake something. What's your instinct?",
+    "options": [
+      { "id": "q1a", "label": "A reliable classic I could make from memory", "cookieId": "cookie_chocolate_chip" },
+      { "id": "q1b", "label": "Something precise, where the technique matters more than the mix-ins", "cookieId": "cookie_french_sable" },
+      { "id": "q1c", "label": "Something warmly spiced", "cookieId": "cookie_indian_nankhatai" },
+      { "id": "q1d", "label": "Something with real history behind it", "cookieId": "cookie_maamoul" },
+      { "id": "q1e", "label": "Something quick, with pantry staples I already have", "cookieId": "cookie_peanut_butter" }
+    ]
+  },
+  {
+    "id": "q2",
+    "question": "Pick a drink to go with your cookie.",
+    "options": [
+      { "id": "q2a", "label": "Plain drip coffee", "cookieId": "cookie_chocolate_chip" },
+      { "id": "q2b", "label": "A short, strong espresso", "cookieId": "cookie_italian_amaretti" },
+      { "id": "q2c", "label": "Spiced chai", "cookieId": "cookie_indian_nankhatai" },
+      { "id": "q2d", "label": "Mint tea", "cookieId": "cookie_maamoul" },
+      { "id": "q2e", "label": "Café con leche", "cookieId": "cookie_alfajor" }
+    ]
+  },
+  {
+    "id": "q3",
+    "question": "Pick a trip you'd actually take.",
+    "options": [
+      { "id": "q3a", "label": "The Scottish Highlands", "cookieId": "cookie_scottish_shortbread" },
+      { "id": "q3b", "label": "A pâtisserie crawl through Paris", "cookieId": "cookie_french_sable" },
+      { "id": "q3c", "label": "A tango night in Buenos Aires", "cookieId": "cookie_alfajor" },
+      { "id": "q3d", "label": "Wandering the old souks of Beirut", "cookieId": "cookie_maamoul" },
+      { "id": "q3e", "label": "A canal-side market morning in Amsterdam", "cookieId": "cookie_dutch_stroopwafel" }
+    ]
+  },
+  {
+    "id": "q4",
+    "question": "Pick a texture you can't resist.",
+    "options": [
+      { "id": "q4a", "label": "Crisp and completely buttery", "cookieId": "cookie_scottish_shortbread" },
+      { "id": "q4b", "label": "Soft in the center, a little crisp at the edge", "cookieId": "cookie_chocolate_chip" },
+      { "id": "q4c", "label": "So crumbly it dissolves the second you bite it", "cookieId": "cookie_polvoron" },
+      { "id": "q4d", "label": "Crisp shell, warm gooey center", "cookieId": "cookie_dutch_stroopwafel" },
+      { "id": "q4e", "label": "Crisp outside, chewy inside, all in one bite", "cookieId": "cookie_italian_amaretti" }
+    ]
+  },
+  {
+    "id": "q5",
+    "question": "Your friends would describe you as...",
+    "options": [
+      { "id": "q5a", "label": "Reliable -- the one everyone counts on", "cookieId": "cookie_chocolate_chip" },
+      { "id": "q5b", "label": "A little nostalgic, in a good way", "cookieId": "cookie_snickerdoodle" },
+      { "id": "q5c", "label": "Precise and a little particular", "cookieId": "cookie_french_sable" },
+      { "id": "q5d", "label": "Adventurous, always trying something new", "cookieId": "cookie_maamoul" },
+      { "id": "q5e", "label": "Sentimental about family recipes", "cookieId": "cookie_alfajor" }
+    ]
+  },
+  {
+    "id": "q6",
+    "question": "Pick a holiday tradition.",
+    "options": [
+      { "id": "q6a", "label": "A cookie exchange with jam-filled classics", "cookieId": "cookie_austrian_linzer" },
+      { "id": "q6b", "label": "A big Eid family gathering", "cookieId": "cookie_maamoul" },
+      { "id": "q6c", "label": "A quiet morning of remembrance", "cookieId": "cookie_anzac_biscuit" },
+      { "id": "q6d", "label": "A Diwali sweets table", "cookieId": "cookie_indian_nankhatai" },
+      { "id": "q6e", "label": "Hogmanay at midnight", "cookieId": "cookie_scottish_shortbread" }
+    ]
+  }
+]

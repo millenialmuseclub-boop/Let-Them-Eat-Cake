@@ -1,0 +1,40 @@
+.troubleshooter-problem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.troubleshooter-problem-button {
+  font: inherit;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+}
+
+.troubleshooter-problem-button.active {
+  background: var(--raspberry);
+  border-color: var(--raspberry);
+  color: white;
+}
+
+.troubleshooter-detail h3 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.troubleshooter-cause {
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+
+.troubleshooter-cause-text,
+.troubleshooter-correction-text {
+  font-size: 15px;
+  margin: 0 0 4px;
+}

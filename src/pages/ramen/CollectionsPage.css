@@ -1,0 +1,23 @@
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.collections-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.collections-card h3 {
+  margin: 0;
+}
+
+.collections-card .tag {
+  align-self: flex-start;
+  margin-top: 4px;
+}

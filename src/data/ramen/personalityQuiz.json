@@ -1,0 +1,62 @@
+[
+  {
+    "id": "q1_comfort_food",
+    "question": "How do you take your comfort food?",
+    "options": [
+      { "id": "q1_a", "label": "Bold, rich, and completely indulgent", "ramenId": "ramen_yokohama_iekei" },
+      { "id": "q1_b", "label": "Warm, hearty, made for cold days", "ramenId": "ramen_sapporo_miso" },
+      { "id": "q1_c", "label": "Clean and classic, nothing fussy", "ramenId": "ramen_tokyo_shoyu" },
+      { "id": "q1_d", "label": "Light and refined, quality over quantity", "ramenId": "ramen_hakodate_shio" }
+    ]
+  },
+  {
+    "id": "q2_travel_style",
+    "question": "Pick a travel style.",
+    "options": [
+      { "id": "q2_a", "label": "I want the famous, can't-miss spot everyone talks about", "ramenId": "ramen_hakata_tonkotsu" },
+      { "id": "q2_b", "label": "I seek out the quiet local place only regulars know", "ramenId": "ramen_kitakata" },
+      { "id": "q2_c", "label": "I go where the story is -- history and tradition matter to me", "ramenId": "ramen_asahikawa" },
+      { "id": "q2_d", "label": "I want bold flavor first, scenery second", "ramenId": "ramen_kumamoto" }
+    ]
+  },
+  {
+    "id": "q3_saturday_morning",
+    "question": "Your ideal Saturday morning?",
+    "options": [
+      { "id": "q3_a", "label": "Sleeping in, then a slow, rich breakfast", "ramenId": "ramen_yokohama_iekei" },
+      { "id": "q3_b", "label": "An early start and a simple, satisfying meal", "ramenId": "ramen_kitakata" },
+      { "id": "q3_c", "label": "Something classic and dependable", "ramenId": "ramen_tokyo_shoyu" },
+      { "id": "q3_d", "label": "Bundled up against the cold with something warming", "ramenId": "ramen_sapporo_miso" }
+    ]
+  },
+  {
+    "id": "q4_flavor",
+    "question": "Pick a flavor you can't resist.",
+    "options": [
+      { "id": "q4_a", "label": "Garlic. All the garlic.", "ramenId": "ramen_kumamoto" },
+      { "id": "q4_b", "label": "Deep umami and savoriness", "ramenId": "ramen_hakata_tonkotsu" },
+      { "id": "q4_c", "label": "Something briny and seafood-kissed", "ramenId": "ramen_hakodate_shio" },
+      { "id": "q4_d", "label": "Fermented depth, like miso or soy", "ramenId": "ramen_sapporo_miso" }
+    ]
+  },
+  {
+    "id": "q5_personality",
+    "question": "Your personality in one word?",
+    "options": [
+      { "id": "q5_a", "label": "Bold", "ramenId": "ramen_yokohama_iekei" },
+      { "id": "q5_b", "label": "Understated", "ramenId": "ramen_hakodate_shio" },
+      { "id": "q5_c", "label": "Resourceful, makes do with less fuss", "ramenId": "ramen_kitakata" },
+      { "id": "q5_d", "label": "Balanced", "ramenId": "ramen_tokyo_shoyu" }
+    ]
+  },
+  {
+    "id": "q6_line",
+    "question": "How do you handle a long line for something good?",
+    "options": [
+      { "id": "q6_a", "label": "Worth the wait, every time", "ramenId": "ramen_hakata_tonkotsu" },
+      { "id": "q6_b", "label": "I'd rather find the hidden gem with no line", "ramenId": "ramen_asahikawa" },
+      { "id": "q6_c", "label": "I bring a friend and make it an event", "ramenId": "ramen_kumamoto" },
+      { "id": "q6_d", "label": "I plan ahead so I never have to wait", "ramenId": "ramen_sapporo_miso" }
+    ]
+  }
+]

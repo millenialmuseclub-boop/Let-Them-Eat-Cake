@@ -1,0 +1,296 @@
+[
+  {
+    "slug": "broth-lab",
+    "title": "Broth Lab",
+    "description": "The base that decides almost everything else about a bowl -- clear or cloudy, light or rich. Explore the styles, then see how boil method, bones, time, and fat each push a broth in a different direction.",
+    "anatomyComponentId": "broth",
+    "bowlComponentCategory": "broth",
+    "concepts": [
+      { "id": "chintan", "term": "Chintan", "definition": "A clear broth style, simmered gently so it stays transparent rather than emulsifying.", "relatedRamenIds": ["ramen_tokyo_shoyu", "ramen_hakodate_shio", "ramen_yonezawa"] },
+      { "id": "paitan", "term": "Paitan", "definition": "A cloudy, emulsified broth style, boiled hard enough for fat and collagen to blend into the liquid itself.", "relatedRamenIds": ["ramen_hakata_tonkotsu", "ramen_kurume", "ramen_tori_paitan"] },
+      { "id": "tonkotsu", "term": "Tonkotsu", "definition": "A paitan-style broth made specifically from pork bones -- the most internationally recognized version of the technique.", "relatedRamenIds": ["ramen_hakata_tonkotsu", "ramen_kurume", "ramen_wakayama"] },
+      { "id": "chicken-broth", "term": "Chicken Broth", "definition": "A lighter-aroma alternative to pork, usable as either a clear chintan or, boiled hard, its own paitan (tori paitan).", "relatedRamenIds": ["ramen_tori_paitan"] },
+      { "id": "pork-broth", "term": "Pork Broth", "definition": "Ramen's most common animal base -- can be kept clear and light or boiled into a rich, cloudy tonkotsu.", "relatedRamenIds": ["ramen_hakata_tonkotsu"] },
+      { "id": "seafood-broth", "term": "Seafood Broth", "definition": "Usually niboshi (dried sardines) simmered alongside or instead of an animal bone base, for a briny depth.", "relatedRamenIds": ["ramen_kitakata", "ramen_niigata_shoyu", "ramen_asahikawa"] },
+      { "id": "vegetable-broth", "term": "Vegetable Broth", "definition": "An animal-free base, less common in traditional ramen but increasingly seen in modern shops. Not yet represented by a canonical style in this Encyclopedia.", "relatedRamenIds": [] },
+      { "id": "kombu-dashi", "term": "Kombu / Dashi", "definition": "A kelp-based umami stock, often layered underneath a lighter shoyu or shio broth rather than used alone.", "relatedRamenIds": ["ramen_tokyo_shoyu"] }
+    ],
+    "variables": [
+      {
+        "id": "boil-method",
+        "label": "Boil Method",
+        "options": [
+          { "id": "gentle-simmer", "label": "Gentle Simmer", "effect": "Keeps the broth clear and light -- the chintan approach behind shoyu and shio styles.", "bars": [{ "label": "Clarity", "value": 5 }, { "label": "Richness", "value": 1 }], "flavorTags": ["savory"], "relatedRamenIds": ["ramen_tokyo_shoyu", "ramen_hakodate_shio"] },
+          { "id": "hard-rolling-boil", "label": "Hard Rolling Boil", "effect": "Emulsifies fat and collagen into a cloudy, rich broth -- the paitan/tonkotsu approach.", "bars": [{ "label": "Clarity", "value": 1 }, { "label": "Richness", "value": 5 }], "flavorTags": ["umami-heavy"], "relatedRamenIds": ["ramen_hakata_tonkotsu", "ramen_kurume"] }
+        ]
+      },
+      {
+        "id": "bone-base",
+        "label": "Bone Base",
+        "options": [
+          { "id": "chicken", "label": "Chicken", "effect": "A lighter, rounder aroma than pork -- can go clear or, boiled hard, its own creamy tori paitan.", "bars": [{ "label": "Richness", "value": 3 }, { "label": "Umami", "value": 3 }], "relatedRamenIds": ["ramen_tori_paitan"] },
+          { "id": "pork", "label": "Pork", "effect": "The most common ramen base -- sharp and porky when boiled hard, mild when simmered gently.", "bars": [{ "label": "Richness", "value": 5 }, { "label": "Umami", "value": 4 }], "relatedRamenIds": ["ramen_hakata_tonkotsu"] },
+          { "id": "seafood", "label": "Seafood (Niboshi)", "effect": "Adds a briny, savory depth without much body of its own -- usually paired with a lighter animal base.", "bars": [{ "label": "Richness", "value": 1 }, { "label": "Umami", "value": 4 }], "flavorTags": ["seafood-forward"], "relatedRamenIds": ["ramen_kitakata"] },
+          { "id": "kombu-only", "label": "Kombu / Dashi Only", "effect": "The lightest option -- pure umami with almost no body, usually a supporting layer rather than the whole broth.", "bars": [{ "label": "Richness", "value": 1 }, { "label": "Umami", "value": 3 }] }
+        ]
+      },
+      {
+        "id": "extraction-time",
+        "label": "Extraction Time",
+        "options": [
+          { "id": "short", "label": "Short (1-3 hrs)", "effect": "Enough for a light, clean stock -- not enough time to build real body.", "bars": [{ "label": "Body", "value": 1 }] },
+          { "id": "medium", "label": "Medium (4-6 hrs)", "effect": "A fuller-bodied broth, common for standard shoyu and shio styles.", "bars": [{ "label": "Body", "value": 3 }] },
+          { "id": "long", "label": "Long (8-12+ hrs)", "effect": "Long enough to fully emulsify a hard-boiled pork base into a dense, rich tonkotsu.", "bars": [{ "label": "Body", "value": 5 }] }
+        ]
+      },
+      {
+        "id": "fat-content",
+        "label": "Fat Content",
+        "options": [
+          { "id": "lean", "label": "Lean", "effect": "A thin, brothy mouthfeel that lets the tare and dashi lead.", "bars": [{ "label": "Mouthfeel", "value": 1 }] },
+          { "id": "moderate", "label": "Moderate", "effect": "A balanced body -- enough fat to coat the noodle without feeling heavy.", "bars": [{ "label": "Mouthfeel", "value": 3 }] },
+          { "id": "rich", "label": "Rich", "effect": "A thick, coating mouthfeel -- the fat itself becomes part of the broth's identity.", "bars": [{ "label": "Mouthfeel", "value": 5 }] }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "noodle-lab",
+    "title": "Noodle Lab",
+    "description": "What actually makes a ramen noodle a ramen noodle -- not pasta, not udon. See how kansui, hydration, thickness, and shape change the noodle rather than crunching a recipe.",
+    "anatomyComponentId": "noodle",
+    "bowlComponentCategory": "noodle",
+    "concepts": [
+      { "id": "flour-protein", "term": "Flour Protein Content", "definition": "Higher-protein wheat flour builds more gluten, which is what gives ramen noodles their structure and chew." },
+      { "id": "hydration", "term": "Hydration", "definition": "The ratio of water to flour in the dough -- lower hydration makes a firmer, chewier noodle; higher hydration makes a softer, more tender one." },
+      { "id": "kansui", "term": "Kansui", "definition": "Alkaline mineral water added to the dough -- the single ingredient that separates a ramen noodle from a plain wheat noodle or pasta.", "relatedRamenIds": ["ramen_sapporo_miso", "ramen_sano"] },
+      { "id": "alkalinity", "term": "Alkalinity", "definition": "The pH effect kansui has on the dough -- it firms the gluten structure and gives the noodle its pale yellow tint and springy bite." },
+      { "id": "thickness-width", "term": "Thickness / Width", "definition": "How thick or wide a noodle is cut, chosen to match the broth it's meant to carry." },
+      { "id": "shape", "term": "Shape", "definition": "Whether a noodle is cut straight or curly -- curly noodles hold more broth in each bite; straight noodles cook more evenly." }
+    ],
+    "variables": [
+      {
+        "id": "kansui-level",
+        "label": "Kansui Level",
+        "options": [
+          { "id": "none", "label": "None", "effect": "Without kansui, the noodle is closer to plain wheat pasta than true ramen -- soft, with none of the characteristic springiness.", "bars": [{ "label": "Springiness", "value": 1 }] },
+          { "id": "standard", "label": "Standard", "effect": "The typical amount used across most regional styles -- a clear, springy bite and pale yellow color.", "bars": [{ "label": "Springiness", "value": 4 }] },
+          { "id": "high-alkaline", "label": "High-Alkaline", "effect": "A firmer, more assertive bite and a more pronounced mineral aroma -- common in noodles built to stand up to very rich broths.", "bars": [{ "label": "Springiness", "value": 5 }], "relatedRamenIds": ["ramen_yokohama_iekei"] }
+        ]
+      },
+      {
+        "id": "hydration-level",
+        "label": "Hydration",
+        "options": [
+          { "id": "low", "label": "Low (~30%)", "effect": "A firm, dense, chewy noodle -- common in thin styles meant to be eaten quickly, like Hakata's.", "bars": [{ "label": "Chewiness", "value": 4 }, { "label": "Tenderness", "value": 1 }], "relatedRamenIds": ["ramen_hakata_tonkotsu", "ramen_kurume"] },
+          { "id": "medium", "label": "Medium (~35%)", "effect": "A balanced texture -- neither especially firm nor especially soft.", "bars": [{ "label": "Chewiness", "value": 3 }, { "label": "Tenderness", "value": 3 }] },
+          { "id": "high", "label": "High (~40%+)", "effect": "A softer, more tender noodle with a looser structure -- typical of thick, high-hydration styles like Kitakata's.", "bars": [{ "label": "Chewiness", "value": 2 }, { "label": "Tenderness", "value": 4 }], "relatedRamenIds": ["ramen_kitakata"] }
+        ]
+      },
+      {
+        "id": "thickness",
+        "label": "Thickness",
+        "options": [
+          { "id": "thin", "label": "Thin", "effect": "Cooks fast and stays light -- suited to delicate broths and kaedama-style refills.", "bars": [{ "label": "Broth Match: Light Broth", "value": 5 }, { "label": "Broth Match: Rich Broth", "value": 1 }], "relatedRamenIds": ["ramen_hakata_tonkotsu", "ramen_hakodate_shio"] },
+          { "id": "medium", "label": "Medium", "effect": "The most broadly compatible width -- works with most broth styles without disappearing or overwhelming.", "bars": [{ "label": "Broth Match: Light Broth", "value": 3 }, { "label": "Broth Match: Rich Broth", "value": 3 }] },
+          { "id": "thick", "label": "Thick", "effect": "Substantial enough to stand up to a heavy, rich broth without going limp.", "bars": [{ "label": "Broth Match: Light Broth", "value": 1 }, { "label": "Broth Match: Rich Broth", "value": 5 }], "relatedRamenIds": ["ramen_yokohama_iekei", "ramen_sapporo_miso"] }
+        ]
+      },
+      {
+        "id": "shape",
+        "label": "Shape",
+        "options": [
+          { "id": "straight", "label": "Straight", "effect": "Cooks evenly and reads cleanly against a clear broth.", "bars": [{ "label": "Broth-Holding", "value": 2 }], "relatedRamenIds": ["ramen_hakata_tonkotsu"] },
+          { "id": "curly", "label": "Curly", "effect": "Traps more broth in each curl -- a noticeably different eating experience bite to bite.", "bars": [{ "label": "Broth-Holding", "value": 4 }], "relatedRamenIds": ["ramen_sapporo_miso"] }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "tare-lab",
+    "title": "Tare Lab",
+    "description": "The seasoning base that actually defines a bowl's identity -- added to the bottom of the bowl before broth, not simmered into the stockpot. See how tare and broth are meant to work together.",
+    "anatomyComponentId": "tare",
+    "bowlComponentCategory": "tare",
+    "concepts": [
+      { "id": "shoyu-tare", "term": "Shoyu", "definition": "A soy-sauce-based tare, ramen's most common seasoning base -- usually blended with mirin, sake, or a touch of sugar.", "relatedRamenIds": ["ramen_tokyo_shoyu", "ramen_kitakata", "ramen_yokohama_iekei"] },
+      { "id": "shio-tare", "term": "Shio", "definition": "A salt-based tare, kept simple so a broth's own clarity and delicacy stay the focus.", "relatedRamenIds": ["ramen_hakodate_shio"] },
+      { "id": "miso-tare", "term": "Miso", "definition": "A fermented-soybean-paste tare -- the boldest, most assertive of the three major tare families.", "relatedRamenIds": ["ramen_sapporo_miso"] },
+      { "id": "salinity", "term": "Salinity", "definition": "How much salt a tare contributes overall -- the primary lever for how bold or restrained a finished bowl tastes." },
+      { "id": "umami", "term": "Umami", "definition": "The savory depth a tare adds on top of its base saltiness, often from fermentation or added dashi components." },
+      { "id": "fermentation", "term": "Fermentation", "definition": "Both shoyu and miso are fermented products -- the fermentation itself is what gives them complexity beyond simple saltiness." },
+      { "id": "aromatics", "term": "Aromatics", "definition": "Garlic, ginger, and other aromatics sometimes stirred into tare directly, layering a second flavor dimension under the broth." }
+    ],
+    "variables": [
+      {
+        "id": "tare-type",
+        "label": "Tare Type",
+        "options": [
+          { "id": "shoyu", "label": "Shoyu", "effect": "Balanced, savory, and the most broadly compatible with different broth styles.", "bars": [{ "label": "Umami", "value": 4 }, { "label": "Boldness", "value": 3 }], "flavorTags": ["savory", "umami-heavy"], "relatedRamenIds": ["ramen_tokyo_shoyu"] },
+          { "id": "shio", "label": "Shio", "effect": "The most restrained option -- lets a delicate, clear broth carry the bowl.", "bars": [{ "label": "Umami", "value": 2 }, { "label": "Boldness", "value": 1 }], "flavorTags": ["savory"], "relatedRamenIds": ["ramen_hakodate_shio"] },
+          { "id": "miso", "label": "Miso", "effect": "The boldest, most fermented-forward option -- built to stand up to rich, heavy broths.", "bars": [{ "label": "Umami", "value": 5 }, { "label": "Boldness", "value": 5 }], "flavorTags": ["fermented", "umami-heavy"], "relatedRamenIds": ["ramen_sapporo_miso"] }
+        ]
+      },
+      {
+        "id": "salinity-level",
+        "label": "Salinity Level",
+        "options": [
+          { "id": "light", "label": "Light", "effect": "A gentle seasoning that keeps the broth itself in the spotlight.", "bars": [{ "label": "Boldness", "value": 1 }] },
+          { "id": "medium", "label": "Medium", "effect": "A standard, well-balanced seasoning level.", "bars": [{ "label": "Boldness", "value": 3 }] },
+          { "id": "bold", "label": "Bold", "effect": "An assertive, forward seasoning -- risks overwhelming a delicate broth if not matched carefully.", "bars": [{ "label": "Boldness", "value": 5 }], "relatedRamenIds": ["ramen_toyama_black"] }
+        ]
+      },
+      {
+        "id": "aromatics-added",
+        "label": "Aromatics Added",
+        "options": [
+          { "id": "none", "label": "None", "effect": "A clean, unadorned tare flavor.", "bars": [{ "label": "Aroma Complexity", "value": 1 }] },
+          { "id": "garlic-ginger", "label": "Garlic-Ginger", "effect": "Adds a warm, savory aromatic layer, common in miso-style tare.", "bars": [{ "label": "Aroma Complexity", "value": 4 }], "flavorTags": ["garlicky"], "relatedRamenIds": ["ramen_sapporo_miso"] },
+          { "id": "citrus", "label": "Citrus", "effect": "A bright, sharp lift -- less traditional, more often seen in modern shops.", "bars": [{ "label": "Aroma Complexity", "value": 3 }], "flavorTags": ["citrus"] }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "aroma-oil-lab",
+    "title": "Aroma Oil Lab",
+    "description": "A small amount of floated fat that changes a bowl's first impression more than almost anything else. See how the choice of oil shifts a bowl's whole character.",
+    "anatomyComponentId": "aromaOil",
+    "bowlComponentCategory": "aromaOil",
+    "concepts": [
+      { "id": "chicken-fat", "term": "Chicken Fat (Tori Abura)", "definition": "A light, rounded fat, often used to add richness without a strong pork character." },
+      { "id": "pork-fat", "term": "Pork Fat (Lard)", "definition": "A rich, savory rendered fat, one of the most common ramen aroma oils." },
+      { "id": "scallion-oil", "term": "Scallion Oil", "definition": "Oil infused with scallion, adding a sharp, fresh aromatic note without much richness." },
+      { "id": "garlic-oil", "term": "Garlic Oil", "definition": "Garlic (and often ginger) stir-fried into fat -- Sapporo miso's signature aroma oil.", "relatedRamenIds": ["ramen_sapporo_miso"] },
+      { "id": "chili-oil", "term": "Chili Oil (Rayu)", "definition": "A spicy, toasted chili-infused oil, adding both heat and aroma." },
+      { "id": "mayu", "term": "Mayu", "definition": "Toasted or lightly burnt black garlic oil -- Kumamoto ramen's defining, most intense aroma oil.", "relatedRamenIds": ["ramen_kumamoto"] }
+    ],
+    "variables": [
+      {
+        "id": "oil-type",
+        "label": "Oil Type",
+        "options": [
+          { "id": "chicken-fat", "label": "Chicken Fat", "effect": "Rounds out a broth without adding a strong pork note -- a common finish for lighter or chicken-based bowls.", "bars": [{ "label": "Aroma Strength", "value": 2 }, { "label": "Richness", "value": 2 }], "relatedRamenIds": ["ramen_tori_paitan"] },
+          { "id": "pork-fat", "label": "Pork Fat", "effect": "A savory, classic richness -- the default aroma oil for most tonkotsu-adjacent bowls.", "bars": [{ "label": "Aroma Strength", "value": 3 }, { "label": "Richness", "value": 4 }], "relatedRamenIds": ["ramen_hakata_tonkotsu"] },
+          { "id": "scallion-oil", "label": "Scallion Oil", "effect": "A sharp, fresh lift with very little added richness -- good for keeping a bowl feeling light.", "bars": [{ "label": "Aroma Strength", "value": 3 }, { "label": "Richness", "value": 1 }] },
+          { "id": "garlic-oil", "label": "Garlic Oil", "effect": "A warm, savory aroma that becomes part of a bowl's core identity rather than a background note.", "bars": [{ "label": "Aroma Strength", "value": 4 }, { "label": "Richness", "value": 2 }], "flavorTags": ["garlicky"], "relatedRamenIds": ["ramen_sapporo_miso"] },
+          { "id": "chili-oil", "label": "Chili Oil (Rayu)", "effect": "Adds real heat alongside a toasted aroma -- changes a bowl's character more than almost any other single addition.", "bars": [{ "label": "Aroma Strength", "value": 4 }, { "label": "Heat", "value": 4 }], "flavorTags": ["spicy", "smoky"] },
+          { "id": "mayu", "label": "Mayu (Black Garlic Oil)", "effect": "The most intense, assertive option -- built to be noticed, and easy to let dominate a delicate broth if overused.", "bars": [{ "label": "Aroma Strength", "value": 5 }, { "label": "Richness", "value": 3 }], "flavorTags": ["garlicky", "umami-heavy"], "relatedRamenIds": ["ramen_kumamoto"] }
+        ]
+      },
+      {
+        "id": "amount",
+        "label": "Amount",
+        "options": [
+          { "id": "light", "label": "Light Drizzle", "effect": "A subtle background note -- the broth itself still leads.", "bars": [{ "label": "Dominance", "value": 1 }] },
+          { "id": "standard", "label": "Standard", "effect": "A noticeable but balanced presence -- the typical amount used across most shops.", "bars": [{ "label": "Dominance", "value": 3 }] },
+          { "id": "heavy", "label": "Heavy", "effect": "The oil becomes the first thing you notice -- appropriate for bold styles, risky on delicate ones.", "bars": [{ "label": "Dominance", "value": 5 }] }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ajitama-lab",
+    "title": "Ajitama Lab",
+    "description": "The marinated soft-boiled egg that shows up on nearly every shoyu bowl -- a small technique with very little room for error. See how cooking time, cooling, and marinade each shape the result.",
+    "anatomyComponentId": "topping",
+    "concepts": [
+      { "id": "cooking-time", "term": "Cooking Time", "definition": "How long the egg boils before cooling -- the single biggest lever over how set or runny the yolk ends up." },
+      { "id": "yolk-texture", "term": "Yolk Texture", "definition": "The spectrum from fully liquid to fully firm -- ajitama is usually aimed at a jammy, half-set middle ground." },
+      { "id": "cooling", "term": "Cooling", "definition": "An immediate ice bath stops the carryover cooking that would otherwise keep firming the yolk after the egg leaves the pot." },
+      { "id": "peeling", "term": "Peeling", "definition": "Fresher eggs are harder to peel cleanly than eggs a few days old, since the membrane bonds more tightly to a very fresh shell." },
+      { "id": "marinade", "term": "Marinade", "definition": "A soy-based liquid -- usually shoyu, mirin, and sake or dashi -- that the peeled egg sits in to take on color and flavor.", "relatedRamenIds": ["ramen_tokyo_shoyu"] },
+      { "id": "salinity", "term": "Salinity", "definition": "How concentrated the marinade is -- too strong and only the outer white turns salty and rubbery before the yolk takes on any flavor at all." },
+      { "id": "marination-time", "term": "Marination Time", "definition": "How long the peeled egg actually sits in the marinade -- flavor works inward slowly, so time and salinity are linked." },
+      { "id": "storage", "term": "Storage", "definition": "Ajitama keep marinating the whole time they sit in the liquid, so a batch left too long will eventually oversalt even at a mild concentration." }
+    ],
+    "variables": [
+      {
+        "id": "cooking-time",
+        "label": "Cooking Time",
+        "options": [
+          { "id": "six-minutes", "label": "6 Minutes", "effect": "A mostly liquid, deeply jammy yolk -- delicate to handle and easy to overcook by even 30 seconds.", "bars": [{ "label": "Yolk Fluidity", "value": 5 }] },
+          { "id": "seven-minutes", "label": "7 Minutes", "effect": "The classic ajitama target -- a soft, half-set yolk that holds together when sliced.", "bars": [{ "label": "Yolk Fluidity", "value": 3 }] },
+          { "id": "nine-minutes", "label": "9 Minutes", "effect": "A firmer, custard-like yolk -- more forgiving to handle, less of the classic jammy pull.", "bars": [{ "label": "Yolk Fluidity", "value": 1 }] }
+        ]
+      },
+      {
+        "id": "cooling",
+        "label": "Cooling",
+        "options": [
+          { "id": "ice-bath", "label": "Immediate Ice Bath", "effect": "Stops cooking instantly -- the yolk stays exactly where the cooking time left it.", "bars": [{ "label": "Texture Control", "value": 5 }] },
+          { "id": "no-ice-bath", "label": "No Ice Bath", "effect": "Carryover heat keeps cooking the yolk for another minute or more -- a 7-minute egg can drift toward a 9-minute result.", "bars": [{ "label": "Texture Control", "value": 1 }] }
+        ]
+      },
+      {
+        "id": "marinade-base",
+        "label": "Marinade Base",
+        "options": [
+          { "id": "classic-shoyu", "label": "Classic Shoyu-Mirin-Sake", "effect": "The standard, balanced ajitama flavor -- savory with a touch of sweetness.", "bars": [{ "label": "Salinity", "value": 3 }, { "label": "Sweetness", "value": 2 }], "flavorTags": ["savory", "umami-heavy"], "relatedRamenIds": ["ramen_tokyo_shoyu"] },
+          { "id": "dashi-diluted", "label": "Dashi-Diluted (Lighter)", "effect": "A gentler, more savory-forward marinade that colors the egg more slowly.", "bars": [{ "label": "Salinity", "value": 2 }, { "label": "Sweetness", "value": 1 }], "flavorTags": ["umami-heavy"] },
+          { "id": "spicy-chili", "label": "Chili-Infused", "effect": "A modern variation that adds real heat on top of the classic base -- not traditional, but increasingly common.", "bars": [{ "label": "Salinity", "value": 3 }, { "label": "Sweetness", "value": 1 }], "flavorTags": ["spicy"] }
+        ]
+      },
+      {
+        "id": "marination-time",
+        "label": "Marination Time",
+        "options": [
+          { "id": "short", "label": "2-4 Hours", "effect": "A light tint and mild flavor -- mostly on the surface, barely into the white.", "bars": [{ "label": "Flavor Depth", "value": 1 }] },
+          { "id": "overnight", "label": "Overnight", "effect": "The most common target -- flavor reaches through the white with the yolk still mild and jammy.", "bars": [{ "label": "Flavor Depth", "value": 3 }] },
+          { "id": "two-plus-days", "label": "2+ Days", "effect": "Deep color and flavor throughout, but risks an oversalted white and a firmer overall texture the longer it sits.", "bars": [{ "label": "Flavor Depth", "value": 5 }] }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "chashu-lab",
+    "title": "Chashu Lab",
+    "description": "Ramen's signature pork topping, and one with real, legitimate regional variation -- there's no single correct method. See how cut, cooking method, and rolling each change the result.",
+    "anatomyComponentId": "protein",
+    "concepts": [
+      { "id": "common-cuts", "term": "Common Cuts", "definition": "Pork belly and pork shoulder are the two most common cuts -- belly for fat and richness, shoulder for a leaner, chewier bite." },
+      { "id": "rolling", "term": "Rolling", "definition": "Rolling a slab of belly or shoulder and tying it before cooking produces even, round slices -- an optional step, not a requirement." },
+      { "id": "braising", "term": "Braising", "definition": "Slow-cooking the pork directly in a seasoned liquid (often shoyu, mirin, sake, and aromatics) until tender, soaking up flavor as it cooks." },
+      { "id": "roasting", "term": "Roasting", "definition": "Cooking the pork dry, often glazed, closer to Chinese char siu -- a firmer texture with browned, caramelized edges rather than a liquid-soaked one." },
+      { "id": "seasoning", "term": "Seasoning", "definition": "Most chashu takes its flavor from the braising liquid itself rather than a dry rub, though roasted versions may use both." },
+      { "id": "texture", "term": "Texture", "definition": "Ranges from soft and falling-apart tender (long, slow braise) to firmer and slightly chewy (shorter cook, leaner cut)." },
+      { "id": "slicing", "term": "Slicing", "definition": "Chashu is sliced thin to be eaten in a bite or two, not served as a standalone cut of meat." },
+      { "id": "serving", "term": "Serving", "definition": "Usually served cold or room-temperature slices laid over hot noodles and broth, which warms them through at the table." },
+      { "id": "legitimate-variations", "term": "Legitimate Variations", "definition": "Belly vs. shoulder, braised vs. roasted, rolled vs. flat -- all are real, established approaches used across different shops and regions, not a single 'correct' method with everything else a shortcut." }
+    ],
+    "variables": [
+      {
+        "id": "cut",
+        "label": "Cut",
+        "options": [
+          { "id": "pork-belly", "label": "Pork Belly", "effect": "Rich and fatty, with visible fat layers running through each slice -- the most common chashu cut.", "bars": [{ "label": "Richness", "value": 5 }, { "label": "Leanness", "value": 1 }], "relatedRamenIds": ["ramen_hakata_tonkotsu"] },
+          { "id": "pork-shoulder", "label": "Pork Shoulder", "effect": "Leaner and slightly firmer, with more distinct chew -- a common alternative where a lighter bowl calls for it.", "bars": [{ "label": "Richness", "value": 2 }, { "label": "Leanness", "value": 4 }] }
+        ]
+      },
+      {
+        "id": "cooking-method",
+        "label": "Cooking Method",
+        "options": [
+          { "id": "braised", "label": "Braised", "effect": "Long, slow cooking directly in seasoned liquid -- tender, soaked through with flavor, falls apart easily.", "bars": [{ "label": "Tenderness", "value": 5 }, { "label": "Browned Edge", "value": 1 }] },
+          { "id": "roasted", "label": "Roasted", "effect": "Dry-cooked and often glazed -- firmer texture, caramelized edges, closer to Chinese char siu.", "bars": [{ "label": "Tenderness", "value": 3 }, { "label": "Browned Edge", "value": 5 }] }
+        ]
+      },
+      {
+        "id": "rolling",
+        "label": "Rolling",
+        "options": [
+          { "id": "rolled-tied", "label": "Rolled & Tied", "effect": "Produces uniform, round slices with an even fat-to-meat ratio in every piece.", "bars": [{ "label": "Uniformity", "value": 5 }] },
+          { "id": "flat", "label": "Flat (Untied)", "effect": "A more rustic result -- irregular slices, but simpler prep with one less step.", "bars": [{ "label": "Uniformity", "value": 2 }] }
+        ]
+      },
+      {
+        "id": "slicing-thickness",
+        "label": "Slicing Thickness",
+        "options": [
+          { "id": "thin", "label": "Thin", "effect": "Delicate slices that warm through quickly in the hot broth and disappear in a bite or two.", "bars": [{ "label": "Substance", "value": 2 }] },
+          { "id": "thick", "label": "Thick", "effect": "A more substantial, chewier bite -- common at shops that treat chashu as a bigger part of the bowl.", "bars": [{ "label": "Substance", "value": 4 }] }
+        ]
+      }
+    ]
+  }
+]

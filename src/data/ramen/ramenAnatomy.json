@@ -1,0 +1,66 @@
+[
+  {
+    "id": "broth",
+    "name": "Broth",
+    "whatItIs": "The liquid base of the bowl -- usually built from simmered animal bones (pork, chicken) and/or a seafood or kombu dashi, then seasoned with tare just before serving.",
+    "contributes": "Body, temperature, and roughly half of everything you taste. Clarity and richness are a deliberate choice, not an accident: a hard rolling boil emulsifies fat and collagen into a cloudy, rich broth (tonkotsu, paitan); a gentle simmer keeps it clear and light (shio, shoyu).",
+    "commonExamples": ["Tonkotsu (pork bone)", "Chintan (clear chicken/pork)", "Double soup (bone stock + seafood dashi)", "Miso-finished pork and chicken"],
+    "interaction": "Broth and noodle are chosen together -- a thick, rich broth needs a noodle sturdy enough to carry it (see Noodles), and broth richness usually sets how much aroma oil the bowl can take before it feels heavy."
+  },
+  {
+    "id": "tare",
+    "name": "Tare",
+    "whatItIs": "A concentrated seasoning base spooned into the bottom of the bowl before broth is added -- the actual salt/umami engine of the bowl, not a garnish.",
+    "contributes": "The bowl's core flavor identity. Shoyu, shio, and miso tare produce three genuinely different bowls even from the same underlying broth, which is why ramen styles are so often named by their tare (shoyu ramen, shio ramen, miso ramen).",
+    "commonExamples": ["Shoyu (soy sauce based)", "Shio (salt based)", "Miso (fermented soybean paste based)"],
+    "interaction": "Tare is added to the bowl, not simmered into the stockpot, specifically so it stays fragrant rather than boiling flat -- it's the last major seasoning decision before broth, and it should complement rather than fight the broth's own richness."
+  },
+  {
+    "id": "aromaOil",
+    "name": "Aroma Oil",
+    "whatItIs": "A fat -- rendered pork fat, chicken fat, garlic oil, or black garlic oil (mayu) -- infused with aromatics and floated on the broth's surface.",
+    "contributes": "Aroma released with every sip, plus a thin insulating layer that keeps the broth hot longer. A small amount goes a long way, since it sits on top and hits the nose before the broth itself does.",
+    "commonExamples": ["Garlic-ginger fat", "Rendered pork fat", "Black garlic oil (mayu)", "Chili oil"],
+    "interaction": "Aroma oil should scale with broth richness -- a bold oil like mayu can overwhelm a delicate, clear shio broth built specifically to showcase restraint, while a rich tonkotsu can absorb a strong aroma oil without losing its own identity."
+  },
+  {
+    "id": "noodle",
+    "name": "Noodles",
+    "whatItIs": "Wheat noodles made with kansui (alkaline mineral water), which gives ramen noodles their springy bite and yellow tint -- distinct from plain wheat noodles or Italian pasta.",
+    "contributes": "Texture and how long the bowl stays enjoyable to eat -- thickness, hydration, and curl all affect how a noodle holds up in hot broth over the several minutes it takes to finish a bowl.",
+    "commonExamples": ["Thin, straight, low-hydration", "Medium, slightly curly", "Thick, curly, egg-based", "Thick, flat, wavy"],
+    "interaction": "Noodle thickness is chosen to match broth weight: thin noodles cook fast and stay light for delicate broths (and support ordering a kaedama refill), while thick noodles are needed to stand up to heavy, rich broths without disappearing."
+  },
+  {
+    "id": "protein",
+    "name": "Protein",
+    "whatItIs": "The bowl's primary savory topping, most often chashu (braised or roasted pork), though ground pork and other proteins appear depending on style.",
+    "contributes": "Richness, savoriness, and a textural contrast to the noodle and broth -- usually the most substantial single bite in the bowl.",
+    "commonExamples": ["Chashu (pork belly)", "Ground pork", "Chicken chashu"],
+    "interaction": "Protein richness should sit comfortably within the broth's own richness -- a fatty pork belly chashu suits a rich tonkotsu or miso bowl, while lighter preparations keep a delicate shio or shoyu bowl in balance."
+  },
+  {
+    "id": "vegetable",
+    "name": "Vegetables",
+    "whatItIs": "Fresh or lightly cooked vegetables added for texture, color, and a break from the broth's richness.",
+    "contributes": "Crunch and freshness against an otherwise soft, hot bowl, plus visual color contrast on top of the broth.",
+    "commonExamples": ["Bean sprouts", "Sweet corn", "Spinach", "Scallions"],
+    "interaction": "Vegetables are usually chosen to cut richness rather than add to it -- bean sprouts and corn are near-universal on rich Hokkaido miso bowls specifically because they lighten an otherwise heavy bowl."
+  },
+  {
+    "id": "topping",
+    "name": "Toppings",
+    "whatItIs": "The bowl's supporting cast -- items placed on top of the noodles and broth that round out flavor and texture without being the main event.",
+    "contributes": "Layered texture (crunchy, gelatinous, chewy) and small, concentrated flavor accents that keep each bite a little different from the last.",
+    "commonExamples": ["Menma (fermented bamboo shoots)", "Ajitama (marinated soft-boiled egg)", "Nori (dried seaweed)", "Naruto (fish cake)", "Beni shoga (pickled ginger)"],
+    "interaction": "Toppings are traditionally tied to specific styles rather than freely interchangeable -- ajitama and menma are shoyu-ramen mainstays, while beni shoga and sesame seeds are more at home on a Kyushu tonkotsu bowl."
+  },
+  {
+    "id": "finish",
+    "name": "Finishing Elements",
+    "whatItIs": "A final, optional touch added right before serving -- something that changes the first impression of the bowl rather than its underlying structure.",
+    "contributes": "A last flavor or aroma note that can shift the whole bowl's character with a small addition, or simply signal that a bowl is meant to be enjoyed exactly as built with no finishing touch at all.",
+    "commonExamples": ["Butter pat", "Lemon slice", "No finishing touch (clean)"],
+    "interaction": "A finishing element should echo, not fight, the tare and aroma oil already in the bowl -- butter melting into a rich miso bowl deepens it, while an unnecessary finishing touch on an already-balanced clear broth can just get in the way."
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "hokkaido",
+    "region": "Hokkaido",
+    "introduction": "Japan's northernmost major island, and the origin of ramen's best-known regional \"big three\" -- Sapporo miso, Hakodate shio, and Asahikawa shoyu -- each developed independently in a different port or city.",
+    "definingTendencies": ["Cold-climate styles often favor warming richness (Sapporo) or heat-retention tricks like a floated oil layer (Asahikawa), though this isn't true of every Hokkaido bowl -- Hakodate's shio style is deliberately light and restrained.", "Curly, thicker noodles are common where a richer broth needs to be carried."],
+    "cities": ["Sapporo", "Hakodate", "Asahikawa", "Muroran"],
+    "ramenIds": ["ramen_sapporo_miso", "ramen_hakodate_shio", "ramen_asahikawa", "ramen_muroran_curry"]
+  },
+  {
+    "id": "tohoku",
+    "region": "Tohoku",
+    "introduction": "The northeastern region of Japan's main island, home to some of the country's oldest documented ramen traditions -- Yonezawa's shops date back to the 1910s-1920s.",
+    "definingTendencies": ["Clear, light shoyu broths and thin, often hand-cut noodles are common, though this reflects the two specific traditions documented here rather than every Tohoku style."],
+    "cities": ["Kitakata", "Yonezawa"],
+    "ramenIds": ["ramen_kitakata", "ramen_yonezawa"]
+  },
+  {
+    "id": "kanto",
+    "region": "Kanto",
+    "introduction": "The Tokyo-centered region long treated as ramen's mainstream reference point, but also home to genuinely distinct traditions -- from Tsukemen's separated-broth mechanic to Yokohama's heavier Iekei lineage.",
+    "definingTendencies": ["Shoyu is the dominant tare across most Kanto styles, though richness varies enormously from Tokyo's classic clear bowl to Iekei's thick tonkotsu-shoyu hybrid.", "Kanto is also home to two of the region's more experimental mechanics -- Tsukemen's dipping format and Abura Soba's brothless format."],
+    "cities": ["Tokyo", "Yokohama", "Sano", "Musashino"],
+    "ramenIds": ["ramen_tokyo_shoyu", "ramen_yokohama_iekei", "ramen_tsukemen", "ramen_sano", "ramen_tokyo_abura_soba"]
+  },
+  {
+    "id": "chubu",
+    "region": "Chubu",
+    "introduction": "A large central region spanning Nagoya, Toyama, and Niigata, each with a genuinely distinct and well-documented tradition of its own -- from Toyama's intensely dark, salty broth to Nagoya's two unrelated brothless noodle dishes.",
+    "definingTendencies": ["Chubu styles vary widely rather than sharing one throughline -- Nagoya's two styles alone (mazesoba and Taiwan ramen) have separate, documented origins decades apart.", "Niigata is sometimes called one of Japan's \"ramen kingdoms\" for the density and variety of styles within the prefecture."],
+    "cities": ["Nagoya", "Toyama", "Niigata"],
+    "ramenIds": ["ramen_nagoya_mazesoba", "ramen_nagoya_taiwan", "ramen_toyama_black", "ramen_niigata_shoyu"]
+  },
+  {
+    "id": "kansai",
+    "region": "Kansai",
+    "introduction": "The Osaka-Kyoto-Wakayama region, better known internationally for other cuisines, but home to two distinct, well-established ramen traditions of its own.",
+    "definingTendencies": ["Both documented Kansai styles here lean dark and assertively seasoned -- Wakayama's tonkotsu-shoyu hybrid and Kyoto's deliberately salty double broth -- though this reflects two specific traditions, not a rule for the whole region."],
+    "cities": ["Wakayama", "Kyoto"],
+    "ramenIds": ["ramen_wakayama", "ramen_kyoto"]
+  },
+  {
+    "id": "chugoku",
+    "region": "Chugoku",
+    "introduction": "The westernmost region of Japan's main island, represented here by Onomichi's distinctive seafood-inflected shoyu ramen, finished with floating chunks of pork back fat rather than a rendered oil.",
+    "definingTendencies": ["The floating-fat-chunk finish (seabura) is specific to Onomichi and not a broader regional pattern documented here."],
+    "cities": ["Onomichi"],
+    "ramenIds": ["ramen_onomichi"]
+  },
+  {
+    "id": "shikoku",
+    "region": "Shikoku",
+    "introduction": "Japan's smallest main island, more commonly associated with Sanuki udon than ramen -- but home to Imabari's own well-documented grilled-pork shoyu style, born out of the city's shipyard yakitori-stall culture.",
+    "definingTendencies": ["Imabari's grilled (not braised) pork topping is the region's clearest documented ramen identity here, rather than a broader Shikoku pattern."],
+    "cities": ["Imabari"],
+    "ramenIds": ["ramen_imabari_yakiton"]
+  },
+  {
+    "id": "kyushu",
+    "region": "Kyushu",
+    "introduction": "Japan's southernmost main island, and the documented home of tonkotsu ramen -- from Kurume, where the emulsified pork-bone technique is credited to a single 1937 shop, through its refinement in nearby Hakata and its own distinct lineage in Kumamoto and Kagoshima.",
+    "definingTendencies": ["Nearly every Kyushu style here is pork-bone-based, but the character varies -- Hakata's sharp, pure pork broth, Kumamoto's garlic-oil finish, and Kagoshima's rounder chicken-and-vegetable-softened version are each genuinely distinct rather than variations on one formula."],
+    "cities": ["Fukuoka (Hakata)", "Kurume", "Kumamoto", "Kagoshima"],
+    "ramenIds": ["ramen_hakata_tonkotsu", "ramen_kurume", "ramen_kumamoto", "ramen_kagoshima"]
+  }
+]

@@ -1,0 +1,44 @@
+.bowl-diagram {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.bowl-diagram-body {
+  fill: var(--bg);
+  stroke: var(--cocoa-strong);
+  stroke-width: 2;
+}
+
+.bowl-diagram-fill {
+  stroke: var(--cocoa-strong);
+  stroke-width: 1;
+  fill-opacity: 0.9;
+  transition: fill 0.2s ease;
+}
+
+.bowl-diagram-oil {
+  fill-opacity: 0.55;
+  transition: fill 0.2s ease;
+}
+
+.bowl-diagram-noodle {
+  fill: none;
+  stroke-width: 5;
+  stroke-linecap: round;
+  transition: stroke 0.2s ease;
+}
+
+.bowl-diagram-topping {
+  stroke: var(--bg-card);
+  stroke-width: 1.5;
+  transition: fill 0.2s ease;
+}
+
+.bowl-diagram-rim {
+  fill: none;
+  stroke: var(--cocoa-strong);
+  stroke-width: 2.5;
+}

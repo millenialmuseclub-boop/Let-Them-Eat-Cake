@@ -1,0 +1,1942 @@
+[
+  {
+    "id": "cookie_chocolate_chip",
+    "name": "Chocolate Chip Cookie",
+    "description": "The archetypal American drop cookie -- butter, brown sugar, and chunks of chocolate studded through a chewy-edged dough.",
+    "origin": "Whitman, Massachusetts, United States",
+    "historicalContext": "Widely credited to Ruth Wakefield, who ran the Toll House Inn in the 1930s and cut up a bar of semi-sweet chocolate into her butter cookie dough, expecting it to melt into the batter. The chocolate held its shape instead, and the result became the Toll House Cookie. Nestle later printed her recipe on its chocolate bar wrapper and eventually bought the rights to the Toll House name -- the precise 'accident vs. deliberate experiment' detail of the story is told differently across sources, but Wakefield's authorship itself is well documented.",
+    "culturalSignificance": "Became the default American cookie within a generation and remains the most-baked cookie in the United States; the format (butter dough studded with chocolate) has since been adapted into countless regional and bakery-specific variations.",
+    "dominantFat": "butter",
+    "sweetener": "granulated and brown sugar",
+    "leavening": "baking soda",
+    "family": "drop",
+    "textureCategory": "chewy",
+    "commonMixIns": [
+      "semi-sweet chocolate chips or chunks",
+      "chopped walnuts or pecans (regional)"
+    ],
+    "commonVariations": [
+      "Brown-butter chocolate chip",
+      "Chocolate chunk with flaky salt",
+      "Thin and crispy Southern-style"
+    ],
+    "modernVariations": [
+      "Stuffed/thick 'bakery-style' cookies with cold-fermented dough",
+      "Brown butter and miso versions from modern pastry chefs"
+    ],
+    "flavorProfile": {
+      "sweetness": 4,
+      "richness": 4,
+      "crispness": 2,
+      "spice": 0
+    },
+    "flavorTags": [
+      "chocolate-forward",
+      "buttery",
+      "caramel"
+    ],
+    "preparationOverview": "Butter is creamed with sugars, egg and vanilla are beaten in, then flour and baking soda are folded through along with chocolate chips before the dough is portioned and baked until the edges set and the center stays soft.",
+    "variationTag": "traditional",
+    "variationNote": "The 1930s Toll House proportions are still the reference point, but ratios of brown-to-white sugar, chilling time, and chocolate format (chip vs. chopped bar) vary enormously between home and bakery versions."
+  },
+  {
+    "id": "cookie_snickerdoodle",
+    "name": "Snickerdoodle",
+    "description": "A soft, cream-of-tartar-leavened sugar cookie rolled in cinnamon sugar before baking, giving it a crackled top and a faint tang.",
+    "origin": "New England, United States",
+    "historicalContext": "First appears in American cookbooks in the late 19th century. The name's origin is genuinely unresolved -- one popular explanation ties it to the German word 'Schneckennudel' (a cinnamon-rolled pastry) via German and Dutch immigrant baking traditions in New England, but this is a folk etymology repeated widely rather than a documented derivation, and other sources treat the name as simply a whimsical New England coinage with no literal meaning.",
+    "culturalSignificance": "A staple of American home baking and church/community cookie exchanges; the cream-of-tartar leavening (rather than baking powder alone) is considered essential to an authentic version's characteristic soft, slightly tangy crumb.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar",
+    "leavening": "cream of tartar and baking soda",
+    "family": "shaped",
+    "textureCategory": "chewy",
+    "commonMixIns": [
+      "cinnamon-sugar coating"
+    ],
+    "commonVariations": [
+      "Brown-butter snickerdoodle",
+      "Pumpkin snickerdoodle (seasonal, American)"
+    ],
+    "modernVariations": [
+      "Stuffed snickerdoodles with cream cheese filling"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 2,
+      "spice": 3
+    },
+    "flavorTags": [
+      "spiced",
+      "buttery"
+    ],
+    "preparationOverview": "A basic butter-sugar-egg dough is rolled into balls, coated in a cinnamon-sugar mixture, and baked until the outside crackles while the center stays soft -- cream of tartar is what gives the crumb its distinctive slight tang.",
+    "variationTag": "traditional",
+    "variationNote": "Some modern recipes substitute baking powder for cream of tartar for convenience, which changes the tang and texture -- purists consider cream of tartar non-negotiable to an authentic snickerdoodle."
+  },
+  {
+    "id": "cookie_peanut_butter",
+    "name": "Peanut Butter Cookie",
+    "description": "A dense, nutty American drop cookie, almost always marked with a fork-pressed crosshatch pattern before baking.",
+    "origin": "United States",
+    "historicalContext": "Peanut butter cookie recipes began appearing in American cookbooks in the early 20th century as commercial peanut butter became widely available; George Washington Carver's well-known agricultural research on peanuts helped popularize the ingredient broadly but is not documented as the origin of this specific cookie. The now-iconic fork-crosshatch marking is generally traced to a 1930s Pillsbury recipe, adopted because the stiff dough needed to be flattened before baking.",
+    "culturalSignificance": "A standard in American home baking, closely associated with the crosshatch pattern as a visual signature; frequently made for school bake sales and holiday cookie plates.",
+    "dominantFat": "mixed",
+    "sweetener": "granulated and brown sugar",
+    "leavening": "baking soda",
+    "family": "drop",
+    "textureCategory": "chewy",
+    "commonMixIns": [
+      "peanut butter chips (modern)",
+      "chopped peanuts"
+    ],
+    "commonVariations": [
+      "Flourless peanut butter cookie (3-ingredient)",
+      "Peanut butter blossom (topped with a chocolate kiss)"
+    ],
+    "modernVariations": [
+      "Peanut butter and jelly thumbprint cookies"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 4,
+      "crispness": 2,
+      "spice": 0
+    },
+    "flavorTags": [
+      "nutty",
+      "buttery"
+    ],
+    "preparationOverview": "Peanut butter is creamed together with butter and sugars, then egg and dry ingredients are mixed in; the dough is rolled into balls, flattened with a crosshatch fork pattern, and baked until just set.",
+    "variationTag": "traditional",
+    "variationNote": "The flourless three-ingredient version (peanut butter, sugar, egg) is a genuinely different, much later home-baking shortcut rather than the historical original recipe."
+  },
+  {
+    "id": "cookie_scottish_shortbread",
+    "name": "Scottish Shortbread",
+    "description": "A simple three-ingredient butter cookie -- butter, sugar, flour -- baked slowly until pale gold and sandy-crisp throughout.",
+    "origin": "Scotland",
+    "historicalContext": "Descended from medieval 'biscuit bread,' a twice-baked leftover bread dough sweetened and hardened into a durable, long-keeping food. Shortbread as a distinct buttery, unleavened version is generally dated to the 12th century and refined over subsequent centuries; its association with Mary, Queen of Scots and the 'petticoat tail' wedge shape in the 16th century is a widely repeated story, though the historical documentation behind that specific attribution is thinner than the general medieval-biscuit-bread lineage.",
+    "culturalSignificance": "A defining national baked good, traditionally made for Christmas and Hogmanay (Scottish New Year) and closely tied to Scottish identity worldwide; 'petticoat tails' (a round scored into wedges) is the best-known traditional shape.",
+    "dominantFat": "butter",
+    "sweetener": "granulated or caster sugar",
+    "leavening": "none",
+    "family": "bar",
+    "textureCategory": "crumbly",
+    "commonMixIns": [],
+    "commonVariations": [
+      "Petticoat tails (wedge-scored round)",
+      "Shortbread fingers (rectangular)"
+    ],
+    "modernVariations": [
+      "Chocolate-dipped shortbread",
+      "Lavender or citrus-infused shortbread"
+    ],
+    "flavorProfile": {
+      "sweetness": 2,
+      "richness": 5,
+      "crispness": 4,
+      "spice": 0
+    },
+    "flavorTags": [
+      "buttery"
+    ],
+    "preparationOverview": "Butter and sugar are worked into flour (traditionally by hand, not creamed with a mixer) until a short, crumbly dough forms, which is pressed into a pan or rolled and cut, then baked low and slow so it sets without browning much.",
+    "variationTag": "traditional",
+    "variationNote": "The 1:2:3 sugar:butter:flour ratio (by weight) is the traditional benchmark; some modern versions add a small amount of rice flour or cornstarch for extra crumbliness, which is a real but non-traditional adaptation."
+  },
+  {
+    "id": "cookie_french_sable",
+    "name": "Sablé",
+    "localName": "Sablé Breton / Sablé Normand",
+    "description": "A French butter cookie named for its sandy ('sablé') texture -- rich, crumbly, and only lightly sweet.",
+    "origin": "France (Normandy and Brittany traditions)",
+    "historicalContext": "Sablés are documented in French baking at least since the 17th-18th century, with two well-known regional lineages: the Norman sablé (a simple, thin butter cookie) and the Breton sablé, which traditionally uses salted butter reflecting Brittany's salt-producing coast and tends to be thicker and more cake-like.",
+    "culturalSignificance": "A staple of French pâtisserie and home baking, often served alongside tea or coffee, and a base technique taught in French pastry training for its precise butter-to-flour ratio.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar",
+    "leavening": "none (Breton versions sometimes use a small amount of baking powder)",
+    "family": "rolled",
+    "textureCategory": "crumbly",
+    "commonMixIns": [],
+    "commonVariations": [
+      "Sablé Breton (thicker, salted butter)",
+      "Sablé Normand (thinner, unsalted)"
+    ],
+    "modernVariations": [
+      "Chocolate sablé",
+      "Sablé sandwich cookies with jam or ganache"
+    ],
+    "flavorProfile": {
+      "sweetness": 2,
+      "richness": 4,
+      "crispness": 4,
+      "spice": 0
+    },
+    "flavorTags": [
+      "buttery"
+    ],
+    "preparationOverview": "Butter and sugar are creamed or rubbed into flour to a short dough, often enriched with egg yolk for structure, then chilled, rolled, and cut before baking to a pale gold.",
+    "variationTag": "traditional",
+    "variationNote": "The Breton and Norman versions are genuinely distinct rather than regional dialects of the same recipe -- salted butter is specifically a Breton signature, not a universal French sablé trait."
+  },
+  {
+    "id": "cookie_italian_amaretti",
+    "name": "Amaretti",
+    "localName": "Amaretti di Saronno",
+    "description": "A crisp-shelled, chewy-centered Italian almond cookie, traditionally leavened only by whipped egg whites, with no flour or butter.",
+    "origin": "Saronno, Lombardy, Italy",
+    "historicalContext": "Amaretti are documented in Italian baking since at least the 18th century, with Saronno's version the most internationally known. A widely told origin story -- newlyweds gifting a batch of almond cookies to a visiting cardinal, who blessed the union -- is a local legend rather than a documented historical event, and should be treated as folklore alongside the more reliably dated Lombard almond-confectionery tradition it grew from.",
+    "culturalSignificance": "A defining Italian confection often paired with dessert wine or espresso, and a common ingredient in other Italian desserts (crumbled into tiramisu variations or peach ripiene).",
+    "dominantFat": "mixed",
+    "sweetener": "granulated and powdered sugar",
+    "leavening": "whipped egg whites (mechanical leavening, no chemical raising agent)",
+    "family": "drop",
+    "textureCategory": "chewy",
+    "commonMixIns": [
+      "bitter almonds or apricot kernels (traditional, for a distinct bitter note)"
+    ],
+    "commonVariations": [
+      "Amaretti morbidi (soft, chewy)",
+      "Amaretti secchi (dry, fully crisp)"
+    ],
+    "modernVariations": [
+      "Amaretti flavored with orange zest or cocoa"
+    ],
+    "flavorProfile": {
+      "sweetness": 4,
+      "richness": 3,
+      "crispness": 3,
+      "spice": 0
+    },
+    "flavorTags": [
+      "nutty"
+    ],
+    "preparationOverview": "Ground almonds are combined with sugar and whipped egg whites into a sticky paste, piped or shaped into small mounds, and baked until the outside sets crisp while the inside stays dense and chewy.",
+    "variationTag": "traditional",
+    "variationNote": "Traditional recipes include a small proportion of bitter almonds or apricot kernels for their distinct flavor; most modern commercial versions substitute almond extract for food-safety reasons, which is a real and fairly significant flavor difference from the historical recipe."
+  },
+  {
+    "id": "cookie_dutch_stroopwafel",
+    "name": "Stroopwafel",
+    "description": "Two thin waffle-iron wafers sandwiched around a warm caramel-syrup filling -- technically a filled waffle-cookie hybrid rather than a baked drop or rolled cookie.",
+    "origin": "Gouda, Netherlands",
+    "historicalContext": "Generally dated to the late 18th or early 19th century in Gouda, with an oft-repeated (though not firmly documented) story that bakers created it using leftover breadcrumbs and sweepings, bound with syrup, as a low-cost treat. It became strongly associated with Gouda specifically, which still hosts a weekly market where stroopwafels are made fresh.",
+    "culturalSignificance": "A defining Dutch treat, traditionally sold warm from street markets and commonly perched over a hot drink so the steam softens the caramel filling; now exported and sold internationally, including a widely recognized packaged version.",
+    "dominantFat": "butter",
+    "sweetener": "caramel syrup filling (stroop)",
+    "leavening": "none (a cooked waffle-iron batter, not a baked cookie dough)",
+    "family": "wafer",
+    "textureCategory": "chewy",
+    "commonMixIns": [
+      "cinnamon (in some regional syrup recipes)"
+    ],
+    "commonVariations": [
+      "Fresh market stroopwafel (larger, sold warm)",
+      "Packaged mini stroopwafels"
+    ],
+    "modernVariations": [
+      "Chocolate-dipped stroopwafels",
+      "Flavored syrup fillings (speculaas spice, etc.)"
+    ],
+    "flavorProfile": {
+      "sweetness": 4,
+      "richness": 3,
+      "crispness": 3,
+      "spice": 1
+    },
+    "flavorTags": [
+      "caramel",
+      "buttery"
+    ],
+    "preparationOverview": "A yeasted batter is cooked in a waffle iron into a thin round, sliced horizontally while still warm, and filled with a butter-and-syrup caramel before the halves are pressed back together.",
+    "variationTag": "traditional",
+    "variationNote": "Because it's cooked in a waffle iron rather than baked, some culinary references classify it as a confection or waffle rather than a cookie in the strict sense -- it's included here for its role in Dutch cookie/treat culture and because it's marketed and eaten as a cookie internationally."
+  },
+  {
+    "id": "cookie_austrian_linzer",
+    "name": "Linzer Cookie",
+    "localName": "Linzer Plätzchen",
+    "description": "A jam-filled sandwich cookie made from a nutty, spiced shortbread-style dough, with a cut-out window in the top layer that shows the jam beneath.",
+    "origin": "Linz, Austria",
+    "historicalContext": "Named for and derived from Linzertorte, a lattice-topped jam tart associated with the city of Linz and documented since at least the 17th century -- Linzertorte is sometimes described as one of the oldest named cakes/tarts in the world, though the exact dating of the earliest recipe is debated among food historians. The individual cookie-sized version (Linzer Plätzchen/Linzer Augen) is a later adaptation of the torte's flavor profile into a smaller, shareable format.",
+    "culturalSignificance": "A staple of Austrian and broader Central European Christmas baking, and widely adopted into American and other holiday cookie traditions under the 'Linzer cookie' name.",
+    "dominantFat": "butter",
+    "sweetener": "powdered sugar (dusted) and jam filling",
+    "leavening": "none or minimal",
+    "family": "sandwich",
+    "textureCategory": "crumbly",
+    "commonMixIns": [
+      "ground hazelnuts or almonds",
+      "cinnamon"
+    ],
+    "commonVariations": [
+      "Raspberry jam (most traditional)",
+      "Apricot jam"
+    ],
+    "modernVariations": [
+      "Chocolate ganache filling instead of jam"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 4,
+      "crispness": 3,
+      "spice": 1
+    },
+    "flavorTags": [
+      "nutty",
+      "fruity",
+      "buttery"
+    ],
+    "preparationOverview": "A short, nut-flour-enriched dough is rolled and cut into matching pairs, one with a small cut-out window; the solid cookie is spread with jam, the windowed cookie is set on top, and the finished sandwich is dusted with powdered sugar.",
+    "variationTag": "traditional",
+    "variationNote": "Raspberry is the most historically associated jam, but apricot and other fruit preserves are common regional and family variations, not a deviation from any single 'correct' version."
+  },
+  {
+    "id": "cookie_maamoul",
+    "name": "Ma'amoul",
+    "localName": "معمول",
+    "description": "A shaped semolina cookie filled with dates, walnuts, or pistachios and pressed in a decorative wooden mold, with the mold's pattern traditionally signaling the filling inside.",
+    "origin": "Levant (Lebanon, Syria, Palestine, Jordan)",
+    "historicalContext": "Ma'amoul has been documented across the Levant for centuries, with some food historians tracing related stuffed semolina pastries back to the medieval Abbasid era, though a single precise origin point is not established. It holds religious significance across multiple communities in the region: prepared for Eid al-Fitr and Eid al-Adha in Muslim households, and for Easter among many Christian communities in the Levant, making it a genuinely shared, cross-community tradition rather than tied to one group alone.",
+    "culturalSignificance": "Closely tied to specific holidays rather than everyday eating, and traditionally made in large batches with family involvement; the wooden mold's carved pattern is a real functional code (commonly: a specific shape or number of prongs for date filling, another for pistachio, another for walnut), though the exact pattern-to-filling convention varies by region and household.",
+    "dominantFat": "mixed",
+    "sweetener": "sweetened date paste or sugared nut filling; the dough itself is only lightly sweetened",
+    "leavening": "minimal -- a rested semolina dough, sometimes with a small amount of yeast or mahlab (a spice) depending on the regional recipe",
+    "family": "shaped",
+    "textureCategory": "crumbly",
+    "commonMixIns": [
+      "date paste",
+      "walnuts",
+      "pistachios",
+      "orange blossom or rose water"
+    ],
+    "commonVariations": [
+      "Date-filled (tamer)",
+      "Walnut-filled (jouz)",
+      "Pistachio-filled (fistuq)"
+    ],
+    "modernVariations": [
+      "Chocolate-filled ma'amoul (contemporary bakeries)"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 1,
+      "spice": 2
+    },
+    "flavorTags": [
+      "nutty",
+      "fruity",
+      "spiced",
+      "floral"
+    ],
+    "preparationOverview": "A semolina dough enriched with ghee or clarified butter is rested, portioned, filled with a date or nut paste, pressed into a carved wooden mold to shape and seal it, then baked until pale and dusted with powdered sugar once cool.",
+    "variationTag": "traditional",
+    "variationNote": "This is a genuinely shared, cross-community tradition across the Levant with real household and regional variation in dough enrichment, filling ratio, and flavoring -- it should not be flattened into a single national or religious origin story."
+  },
+  {
+    "id": "cookie_indian_nankhatai",
+    "name": "Nankhatai",
+    "localName": "नानखटाई",
+    "description": "A crumbly, ghee-based shortbread-style cookie from India, often flavored with cardamom and topped with a few pistachio or almond slivers.",
+    "origin": "Surat, Gujarat, India",
+    "historicalContext": "Nankhatai's development is genuinely a colonial-era cross-cultural story: food historians trace it to Surat's port-city bakeries in the 17th-18th century, where Dutch and Irani (Persian-descended Zoroastrian) bakers adapted European-style biscuit techniques using local ingredients like ghee in place of butter, since fresh dairy butter did not keep well in the climate and trade conditions of the period. It is not a purely indigenous recipe nor a direct import -- it's a documented local adaptation.",
+    "culturalSignificance": "A widely loved teatime biscuit across India and Pakistan, commonly sold by traditional bakeries (some Irani bakeries in India still specifically associated with it) and made at home for festivals.",
+    "dominantFat": "mixed",
+    "sweetener": "powdered sugar",
+    "leavening": "baking soda and/or baking powder",
+    "family": "shaped",
+    "textureCategory": "crumbly",
+    "commonMixIns": [
+      "cardamom",
+      "pistachio or almond slivers (topping)"
+    ],
+    "commonVariations": [
+      "Cardamom nankhatai (most common)",
+      "Semolina (sooji) nankhatai for extra crumb"
+    ],
+    "modernVariations": [
+      "Eggless nankhatai (widely the norm)",
+      "Chocolate or saffron-flavored nankhatai"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 4,
+      "crispness": 3,
+      "spice": 2
+    },
+    "flavorTags": [
+      "nutty",
+      "spiced",
+      "buttery"
+    ],
+    "preparationOverview": "Ghee is worked with powdered sugar until light, then flour (often with a portion of semolina or gram flour) and cardamom are folded in; the dough is shaped into small discs, topped with a nut sliver, and baked at a low temperature until just set and cracked on top.",
+    "variationTag": "traditional",
+    "variationNote": "The specific flour blend (all-purpose, semolina, gram flour, or a mix) varies significantly by region and family recipe, all considered legitimate rather than one being more 'authentic' than another."
+  },
+  {
+    "id": "cookie_alfajor",
+    "name": "Alfajor",
+    "description": "A sandwich cookie of two soft, tender rounds filled with a thick layer of dulce de leche, often finished with a coating of chocolate or a dusting of powdered sugar.",
+    "origin": "Argentina (with roots in Moorish Spain)",
+    "historicalContext": "The name traces to the Arabic 'al-hasú' (stuffed/filled), reflecting the sweet's roots in Moorish Andalusian confectionery, which spread to Spain and then to Latin America through Spanish colonization. Once in the Americas, the format was adapted regionally -- Argentina and Uruguay in particular built the version most people now think of first, centered on dulce de leche, a filling that itself became a defining element of the region's culinary identity.",
+    "culturalSignificance": "One of Argentina's most iconic sweets, sold everywhere from gas stations to artisanal bakeries, with strong regional rivalries over specific brands and styles; closely tied to Argentine national identity abroad.",
+    "dominantFat": "butter",
+    "sweetener": "dulce de leche filling, plus sugar in the dough",
+    "leavening": "baking powder",
+    "family": "sandwich",
+    "textureCategory": "soft",
+    "commonMixIns": [
+      "cornstarch (for a tender, powdery crumb)"
+    ],
+    "commonVariations": [
+      "Chocolate-coated alfajor",
+      "Coconut-rolled alfajor (edges rolled in shredded coconut)"
+    ],
+    "modernVariations": [
+      "Gourmet/artisanal alfajores with flavored ganache or fruit fillings"
+    ],
+    "flavorProfile": {
+      "sweetness": 5,
+      "richness": 4,
+      "crispness": 1,
+      "spice": 0
+    },
+    "flavorTags": [
+      "caramel",
+      "buttery"
+    ],
+    "preparationOverview": "A tender, cornstarch-enriched dough is rolled and cut into rounds, baked briefly so they stay pale and soft, then sandwiched thickly with dulce de leche and optionally dipped in chocolate or rolled in coconut along the exposed filling edge.",
+    "variationTag": "traditional",
+    "variationNote": "Chocolate-coated and coconut-rolled versions are both long-standing regional variations within Argentina and Uruguay rather than modern inventions -- there is real, longstanding regional debate over which is more traditional."
+  },
+  {
+    "id": "cookie_anzac_biscuit",
+    "name": "ANZAC Biscuit",
+    "description": "A dense, chewy oat-and-coconut biscuit sweetened with golden syrup, made without eggs specifically because the original recipe needed to survive shipping overseas.",
+    "origin": "Australia and New Zealand",
+    "historicalContext": "Documented from World War I, when wives and mothers on the home front sent biscuits to soldiers serving overseas with the Australian and New Zealand Army Corps (ANZAC); the recipe deliberately avoided eggs (in short supply and prone to spoiling) in favor of golden syrup and baking soda dissolved in hot water as a binder and leavener, which also gave the biscuit good keeping qualities for the long sea journey.",
+    "culturalSignificance": "Strongly tied to ANZAC Day (April 25) commemorations in both countries; the name 'Anzac' is legally protected in Australia, and commercial use of 'Anzac biscuit' is regulated to preserve the recipe's traditional form and honor its military association.",
+    "dominantFat": "butter",
+    "sweetener": "golden syrup and sugar",
+    "leavening": "baking soda dissolved in boiling water",
+    "family": "drop",
+    "textureCategory": "chewy",
+    "commonMixIns": [
+      "rolled oats",
+      "desiccated coconut"
+    ],
+    "commonVariations": [
+      "Chewier, softer-baked version",
+      "Crisper, thinner version"
+    ],
+    "modernVariations": [
+      "Chocolate-dipped Anzac biscuits (a departure from the traditionally protected recipe in Australia)"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 3,
+      "spice": 0
+    },
+    "flavorTags": [
+      "coconut",
+      "caramel",
+      "buttery"
+    ],
+    "preparationOverview": "Butter and golden syrup are melted together, combined with baking soda dissolved in hot water, then stirred into oats, coconut, flour, and sugar; the dough is portioned and baked until golden, with bake time controlling whether the result is chewy or crisp.",
+    "variationTag": "traditional",
+    "variationNote": "Because the name and general recipe are protected in Australia for their military association, significant departures (like a chocolate coating) are generally marketed as a distinct product rather than sold simply as 'Anzac biscuits.'"
+  },
+  {
+    "id": "cookie_polvoron",
+    "name": "Polvorón",
+    "description": "An extremely short, powdery shortbread-style cookie that crumbles almost immediately in the mouth -- its name comes directly from the Spanish word for dust.",
+    "origin": "Andalusia, Spain, with a distinct Mexican lineage",
+    "historicalContext": "Polvorones are documented in Andalusian Spain since at least the 16th century, with the town of Estepa becoming the best-known historical center of production; the recipe traveled to Latin America through Spanish colonization and was adapted regionally, with Mexico in particular developing its own widely eaten version -- typically smaller, individually wrapped in colored tissue paper, and made with a slightly different fat and flour ratio than the Spanish original. Both lineages are genuinely distinct living traditions today, not one simply a copy of the other.",
+    "culturalSignificance": "In Spain, closely associated with Christmas; in Mexico, eaten year-round as an everyday treat and closely tied to childhood nostalgia, often sold from bakeries and street vendors wrapped in twisted colored paper.",
+    "dominantFat": "mixed",
+    "sweetener": "powdered sugar (dusted on top)",
+    "leavening": "none (unleavened by design, for maximum crumble)",
+    "family": "shaped",
+    "textureCategory": "crumbly",
+    "commonMixIns": [
+      "ground almonds (Spanish version)",
+      "cinnamon (Mexican version)"
+    ],
+    "commonVariations": [
+      "Spanish polvorón de Estepa (almond-based, lard)",
+      "Mexican polvorón (often butter or vegetable shortening, cinnamon-forward)"
+    ],
+    "modernVariations": [
+      "Chocolate or fruit-flavored Mexican polvorones"
+    ],
+    "flavorProfile": {
+      "sweetness": 2,
+      "richness": 4,
+      "crispness": 1,
+      "spice": 1
+    },
+    "flavorTags": [
+      "buttery",
+      "nutty"
+    ],
+    "preparationOverview": "Flour is toasted before use to remove excess moisture, then combined with a high proportion of fat and powdered sugar into a very short dough with minimal gluten development; the dough is shaped into rounds and baked briefly, staying pale, before being dusted heavily with powdered sugar.",
+    "variationTag": "traditional",
+    "variationNote": "Spanish and Mexican polvorones are both legitimate, long-standing traditions with real recipe differences (fat choice, flavoring, size, wrapping convention) rather than one being a variant of the other."
+  },
+  {
+    "id": "cookie_oatmeal_raisin",
+    "name": "Oatmeal Raisin Cookie",
+    "description": "A chewy, spiced drop cookie built around rolled oats and plumped raisins -- one of the American cookie jar's oldest steady standbys, often unfairly treated as the also-ran to chocolate chip.",
+    "origin": "United States",
+    "historicalContext": "Oat-based cookies were popularized in the US alongside the marketing of rolled oats as a health food in the late 19th and early 20th centuries, with Quaker Oats' own recipe pamphlets doing much of the early promotional work; raisins were a cheap, shelf-stable way to sweeten a cookie without relying entirely on refined sugar during that same period.",
+    "culturalSignificance": "A fixture of American home baking and lunchboxes for over a century, frequently the cookie associated with grandmothers and cookie jars specifically, and a recurring subject of good-natured jokes about being 'the cookie that looks like chocolate chip but isn't.'",
+    "dominantFat": "butter",
+    "sweetener": "brown sugar and granulated sugar",
+    "leavening": "baking soda",
+    "family": "drop",
+    "textureCategory": "chewy",
+    "commonMixIns": [
+      "rolled oats",
+      "raisins",
+      "cinnamon"
+    ],
+    "commonVariations": [
+      "Oatmeal raisin with walnuts",
+      "Oatmeal cookie without raisins (plain oat)"
+    ],
+    "modernVariations": [
+      "Oatmeal chocolate chip (raisins swapped for chocolate)",
+      "Oatmeal cream pie sandwich cookies"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 2,
+      "spice": 2
+    },
+    "flavorTags": [
+      "spiced",
+      "fruity",
+      "buttery"
+    ],
+    "preparationOverview": "A standard creamed butter-and-sugar dough is built up with cinnamon and rolled oats folded in along with raisins, then portioned and baked until the edges set while the oat-thickened center stays chewy.",
+    "variationTag": "traditional",
+    "variationNote": "The raisin-vs-chocolate-chip debate is a genuine, long-running preference split in American baking rather than one being a corruption of the other -- both are long-standing variations on the same oat-cookie base."
+  },
+  {
+    "id": "cookie_sugar_cookie",
+    "name": "Sugar Cookie",
+    "description": "A simple butter-and-sugar rolled cookie, cut into shapes and often iced -- the default American cookie for decorating, from birthdays to Christmas.",
+    "origin": "United States, with roots in German and Central European settler baking",
+    "historicalContext": "Descended from butter cookie traditions brought by German and other Central European immigrants to Pennsylvania in the 18th century (the 'Nazareth cookie' is one documented early American ancestor); the plain, decoratable cut-out format became a distinctly American staple as commercial food coloring and royal icing made elaborate home decorating widely accessible in the 20th century.",
+    "culturalSignificance": "The default American cut-out and decorated cookie, closely tied to Christmas cookie exchanges, birthdays, and school baking projects; the specific pairing with royal icing and cookie cutters is a recognizable cultural shorthand on its own.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar",
+    "leavening": "baking powder",
+    "family": "rolled",
+    "textureCategory": "crisp",
+    "commonMixIns": [],
+    "commonVariations": [
+      "Iced/decorated cut-out sugar cookies",
+      "Plain rolled sugar cookies with sanding sugar"
+    ],
+    "modernVariations": [
+      "Royal-icing 'cookie decorating' as its own hobby/craft genre",
+      "Brown-butter sugar cookies"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 4,
+      "spice": 0
+    },
+    "flavorTags": [
+      "buttery"
+    ],
+    "preparationOverview": "Butter and sugar are creamed, then egg and vanilla beaten in before flour, baking powder, and salt are folded through; the dough is chilled, rolled, and cut into shapes before baking until just set at the edges, then optionally iced once fully cool.",
+    "variationTag": "traditional",
+    "variationNote": "The line between a 'sugar cookie' and other plain butter cookies is mostly about the rolled-and-cut format and icing tradition rather than a fundamentally different dough."
+  },
+  {
+    "id": "cookie_gingersnap",
+    "name": "Gingersnap",
+    "description": "A small, hard-snapping molasses cookie forward with ginger, cinnamon, and clove -- crisp throughout rather than chewy, unlike many of its softer molasses-cookie cousins.",
+    "origin": "United States and United Kingdom, from a broader European spiced-cookie tradition",
+    "historicalContext": "Spiced molasses biscuits have deep roots across Northern Europe (see also Pfeffernüsse and Lebkuchen), and English/American versions using molasses and baking soda specifically became widespread once molasses was cheaply available via the Atlantic trade in the 18th-19th centuries; the deliberately crisp, 'snap' texture distinguishes it from the softer American molasses cookie eaten at the same tables.",
+    "culturalSignificance": "A common accompaniment to tea and coffee in both American and British households, and a frequent base for gingerbread-adjacent holiday baking, though gingersnaps themselves are eaten year-round rather than being holiday-exclusive.",
+    "dominantFat": "butter",
+    "sweetener": "molasses and granulated sugar",
+    "leavening": "baking soda",
+    "family": "drop",
+    "textureCategory": "crisp",
+    "commonMixIns": [
+      "ground ginger",
+      "cinnamon",
+      "clove"
+    ],
+    "commonVariations": [
+      "Rolled-in-sugar gingersnaps",
+      "Thin, extra-crisp bakery-style gingersnaps"
+    ],
+    "modernVariations": [
+      "Molasses crinkle cookies (a softer, cracked-top cousin)"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 2,
+      "crispness": 5,
+      "spice": 4
+    },
+    "flavorTags": [
+      "spiced",
+      "caramel"
+    ],
+    "preparationOverview": "Butter, sugar, and molasses are creamed together, then combined with flour, baking soda, and warm spices into a firm dough; balls are rolled in sugar and baked until they crack and spread thin, producing a fully crisp, snapping texture as they cool.",
+    "variationTag": "traditional",
+    "variationNote": "Bake time is the key variable separating a true crisp gingersnap from a softer, chewier molasses cookie made from a very similar base dough."
+  },
+  {
+    "id": "cookie_black_and_white",
+    "name": "Black and White Cookie",
+    "description": "A large, cake-like drop cookie iced in a half-and-half split of vanilla and chocolate fondant -- a specifically New York City bakery-case icon.",
+    "origin": "New York, United States",
+    "historicalContext": "Descended from German 'half-moon' cookies brought by Jewish and German immigrant bakers to New York in the late 19th and early 20th centuries; the modern black-and-white became a fixture of New York delis and bakeries through the 20th century, cemented further in wider pop culture by a well-known television reference in the 1990s.",
+    "culturalSignificance": "Treated as a genuine only-in-New-York bakery icon, closely associated with delis and Jewish-American baking traditions; the icing split itself is sometimes used as a lighthearted metaphor for unity/duality in local culture.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar, plus vanilla and chocolate icing",
+    "leavening": "baking powder",
+    "family": "drop",
+    "textureCategory": "cakey",
+    "commonMixIns": [],
+    "commonVariations": [
+      "Standard bakery-size (palm-sized)",
+      "Mini black and whites"
+    ],
+    "modernVariations": [
+      "Red velvet or other flavored cake bases under the same split-icing format"
+    ],
+    "flavorProfile": {
+      "sweetness": 4,
+      "richness": 3,
+      "crispness": 1,
+      "spice": 0
+    },
+    "flavorTags": [
+      "chocolate-forward",
+      "buttery"
+    ],
+    "preparationOverview": "A soft, cake-like batter closer to a drop cake than a typical cookie dough is baked into thick rounds, then cooled and iced on the flat side in two halves -- one plain vanilla fondant, one chocolate -- divided by a clean straight line down the center.",
+    "variationTag": "traditional",
+    "variationNote": "The cookie's cake-like crumb (not a typical dense cookie texture) is a defining, non-negotiable trait -- a chewy or crisp version made with the icing pattern alone would not read as a genuine black and white to New York bakers."
+  },
+  {
+    "id": "cookie_white_chocolate_macadamia",
+    "name": "White Chocolate Macadamia Nut Cookie",
+    "description": "A rich, buttery drop cookie studded with white chocolate chunks and macadamia nuts -- a distinctly late-20th-century American bakery invention rather than a historic recipe.",
+    "origin": "United States (Hawaii-influenced)",
+    "historicalContext": "Emerged in the 1980s alongside the broader American premium-cookie bakery boom (Mrs. Fields and similar chains popularized it nationally); the macadamia nut, though genuinely native to Australia, entered American cooking largely through Hawaii's macadamia industry, which is the flavor association most people make with this specific pairing.",
+    "culturalSignificance": "Became a standard 'specialty' flavor alongside chocolate chip in American cookie shops and mall bakeries by the 1990s, often marketed as the more indulgent or 'grown-up' option on a cookie menu.",
+    "dominantFat": "butter",
+    "sweetener": "granulated and brown sugar",
+    "leavening": "baking soda",
+    "family": "drop",
+    "textureCategory": "chewy",
+    "commonMixIns": [
+      "white chocolate chunks",
+      "macadamia nuts"
+    ],
+    "commonVariations": [
+      "Extra-large bakery-style version",
+      "Dark chocolate and macadamia variant"
+    ],
+    "modernVariations": [
+      "Stuffed/thick bakery-style versions with cold-fermented dough, mirroring chocolate chip trends"
+    ],
+    "flavorProfile": {
+      "sweetness": 4,
+      "richness": 5,
+      "crispness": 2,
+      "spice": 0
+    },
+    "flavorTags": [
+      "nutty",
+      "buttery"
+    ],
+    "preparationOverview": "A standard creamed-butter drop-cookie dough is loaded with chopped white chocolate and roasted macadamia nuts, then portioned generously and baked until the edges are golden and the rich, high-fat center stays soft.",
+    "variationTag": "modern",
+    "variationNote": "Unlike most cookies in this catalog, this one has a clearly dated modern origin (1980s bakery culture) rather than a deep folk history -- worth being upfront about rather than implying an older lineage that doesn't exist."
+  },
+  {
+    "id": "cookie_marranitos",
+    "name": "Marranitos",
+    "localName": "Cochinitos / Puerquitos",
+    "description": "A soft, pig-shaped Mexican cookie spiced and sweetened with piloncillo (unrefined cane sugar) -- closer to a gently spiced gingerbread than a typical American cookie.",
+    "origin": "Mexico",
+    "historicalContext": "Descended from Spanish colonial-era pan dulce (sweet bread) traditions, with the specific pig shape most commonly explained as a playful, affordable treat for children, made from readily available bakery scraps and spiced sugar; piloncillo, an unrefined whole-cane sugar with a molasses-like depth, is the defining traditional sweetener.",
+    "culturalSignificance": "A beloved, everyday panadería (bakery) staple across Mexico and Mexican-American communities, closely tied to childhood and often one of the first pan dulce items children are introduced to.",
+    "dominantFat": "shortening",
+    "sweetener": "piloncillo (unrefined cane sugar)",
+    "leavening": "baking powder",
+    "family": "shaped",
+    "textureCategory": "soft",
+    "commonMixIns": [
+      "cinnamon",
+      "piloncillo syrup"
+    ],
+    "commonVariations": [
+      "Larger bakery-size marranitos",
+      "Smaller individual cookie-size versions"
+    ],
+    "modernVariations": [
+      "Marranitos filled with dulce de leche or chocolate"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 1,
+      "spice": 2
+    },
+    "flavorTags": [
+      "spiced",
+      "caramel"
+    ],
+    "preparationOverview": "Piloncillo is melted into a syrup with cinnamon and water, then worked into a shortening-enriched dough; the dough is rolled out, cut with a pig-shaped cutter (or shaped by hand), and baked until softly set with a deep caramel-brown color from the piloncillo.",
+    "variationTag": "traditional",
+    "variationNote": "Despite the cookie-like size and eating context, marranitos are technically pan dulce (sweet bread) rather than a Western-style butter cookie -- included here for how they're actually eaten and marketed, similar to Stroopwafel's wafer/cookie edge case."
+  },
+  {
+    "id": "cookie_pepas",
+    "name": "Pepas",
+    "description": "A soft Argentine sandwich cookie of two tender rounds joined with a bright fruit jam, usually finished with a thin sugar glaze -- a lighter, fruitier sibling to the alfajor.",
+    "origin": "Argentina",
+    "historicalContext": "Part of the same broad Argentine home-baking and bakery-case tradition that produced the alfajor, with pepas developing as a jam-filled variant favoring tart fruit preserves (commonly quince or apricot) over dulce de leche, giving a brighter, less rich alternative on the same bakery trays.",
+    "culturalSignificance": "A common sight in Argentine panaderías alongside alfajores, often the lighter option chosen specifically as a contrast to dulce-de-leche-heavy sweets.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar, plus fruit jam filling and a sugar glaze",
+    "leavening": "baking powder",
+    "family": "sandwich",
+    "textureCategory": "soft",
+    "commonMixIns": [
+      "cornstarch (for a tender crumb)"
+    ],
+    "commonVariations": [
+      "Quince paste (membrillo) filling",
+      "Apricot jam filling"
+    ],
+    "modernVariations": [
+      "Raspberry or mixed-berry filled versions"
+    ],
+    "flavorProfile": {
+      "sweetness": 4,
+      "richness": 2,
+      "crispness": 1,
+      "spice": 0
+    },
+    "flavorTags": [
+      "fruity",
+      "buttery"
+    ],
+    "preparationOverview": "A tender, cornstarch-enriched dough similar to an alfajor base is rolled and cut into rounds, baked pale and soft, then sandwiched with a fruit jam or quince paste and finished with a thin sugar glaze once assembled.",
+    "variationTag": "traditional",
+    "variationNote": "Pepas and alfajores share a dough family but are genuinely distinct finished products in Argentine bakeries, not interchangeable names for the same cookie."
+  },
+  {
+    "id": "cookie_mantecados",
+    "name": "Mantecados",
+    "description": "A soft, crumbly Spanish shortbread-style cookie enriched heavily with lard, closely related to polvorones but typically softer and less powdery.",
+    "origin": "Andalusia, Spain (Estepa)",
+    "historicalContext": "Documented alongside polvorones as part of the same Andalusian Christmas-baking tradition centered on Estepa, with mantecados generally distinguished by a higher fat ratio and a firmer, less crumble-apart bite than the more powdery polvorón; both are frequently produced by the same bakeries and sold together in mixed holiday tins.",
+    "culturalSignificance": "A defining Spanish Christmas confection, traditionally shipped and sold in decorated tins as part of the season's turrón-and-mantecados gift tradition.",
+    "dominantFat": "lard",
+    "sweetener": "granulated sugar",
+    "leavening": "none",
+    "family": "shaped",
+    "textureCategory": "crumbly",
+    "commonMixIns": [
+      "cinnamon",
+      "sesame or almond (regional)"
+    ],
+    "commonVariations": [
+      "Mantecados de canela (cinnamon)",
+      "Mantecados de almendra (almond)"
+    ],
+    "modernVariations": [
+      "Chocolate-coated mantecados"
+    ],
+    "flavorProfile": {
+      "sweetness": 2,
+      "richness": 5,
+      "crispness": 1,
+      "spice": 1
+    },
+    "flavorTags": [
+      "buttery",
+      "spiced"
+    ],
+    "preparationOverview": "Lard is worked into flour and sugar until a rich, short dough forms, then rested, shaped into small rounds or ovals, and baked at a low temperature so the cookies stay pale, dense, and tender rather than crisp.",
+    "variationTag": "traditional",
+    "variationNote": "Mantecados and polvorones are close relatives from the same Estepa tradition but are not the same cookie -- mantecados hold together more, polvorones crumble apart almost immediately."
+  },
+  {
+    "id": "cookie_almendrados",
+    "name": "Almendrados",
+    "description": "A chewy Spanish almond cookie made from ground almonds and whipped egg white, close in spirit to Italian amaretti but typically simpler and less sweet.",
+    "origin": "Spain",
+    "historicalContext": "Rooted in the same Moorish-influenced almond-confectionery tradition found across southern Spain, drawing on Andalusia's long history of almond cultivation introduced under Al-Andalus rule; flourless almond cookies of this type appear across many Mediterranean baking traditions with genuine parallel development rather than one clearly borrowing from another.",
+    "culturalSignificance": "A common everyday and holiday almond confection across Spain, often served alongside coffee or as part of a larger dessert spread of turrón and mazapán at Christmas.",
+    "dominantFat": "mixed",
+    "sweetener": "granulated sugar",
+    "leavening": "whipped egg white",
+    "family": "drop",
+    "textureCategory": "chewy",
+    "commonMixIns": [
+      "ground almonds",
+      "lemon zest"
+    ],
+    "commonVariations": [
+      "Plain almendrados",
+      "Lemon-zested almendrados"
+    ],
+    "modernVariations": [
+      "Almendrados dipped in chocolate"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 2,
+      "spice": 0
+    },
+    "flavorTags": [
+      "nutty",
+      "citrus"
+    ],
+    "preparationOverview": "Ground almonds are combined with sugar and lightly whipped egg white into a thick paste, shaped into small mounds (often topped with a whole almond), and baked until the outside sets while the center stays dense and moist.",
+    "variationTag": "traditional",
+    "variationNote": "Almendrados and Italian amaretti share a flourless, whipped-egg-white almond-cookie structure independently rather than one being derived from the other -- both are legitimate, separately documented Mediterranean traditions."
+  },
+  {
+    "id": "cookie_palets_bretons",
+    "name": "Palets Bretons",
+    "localName": "Palet Breton",
+    "description": "A thick, tender Breton butter cookie made almost entirely from salted butter -- more like a small round of shortbread cake than a thin cookie.",
+    "origin": "Brittany, France",
+    "historicalContext": "Rooted in Brittany's distinctive tradition of using salted butter (the region historically avoided the French royal salt tax, or gabelle, giving Breton butter its salted-by-default character); palets bretons emerged as an expression of that regional butter alongside the thinner sablé breton, favoring thickness and a moist, cake-like crumb over crispness.",
+    "culturalSignificance": "A recognized regional specialty of Brittany and a staple of French bakery cookie assortments nationally, often sold in tins as a gift item.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar",
+    "leavening": "baking powder",
+    "family": "rolled",
+    "textureCategory": "soft",
+    "commonMixIns": [],
+    "commonVariations": [
+      "Plain palet breton",
+      "Vanilla-scented palet breton"
+    ],
+    "modernVariations": [
+      "Chocolate-dipped palets bretons"
+    ],
+    "flavorProfile": {
+      "sweetness": 2,
+      "richness": 5,
+      "crispness": 1,
+      "spice": 0
+    },
+    "flavorTags": [
+      "buttery"
+    ],
+    "preparationOverview": "Salted butter and sugar are creamed thoroughly with egg yolks, then flour and a small amount of baking powder are folded in; the soft dough is chilled, cut into thick rounds (often using a ring mold to hold their shape while baking), and baked until golden but still moist and cake-like inside.",
+    "variationTag": "traditional",
+    "variationNote": "The thickness is deliberate and defining -- a thin, crisp version would read as a sablé breton, a related but distinct cookie, not a palet breton."
+  },
+  {
+    "id": "cookie_langues_de_chat",
+    "name": "Langues de Chat",
+    "localName": "Langue de Chat",
+    "description": "Thin, delicate French butter cookies piped into narrow ovals -- the name means 'cat's tongues,' after their shape.",
+    "origin": "France",
+    "historicalContext": "Documented in French pâtisserie since at least the 19th century as a refined tea-and-dessert accompaniment, traditionally piped by hand into their characteristic narrow shape and baked just long enough to set pale in the center with lightly browned edges.",
+    "culturalSignificance": "A classic French tea-service cookie, often served alongside mousses, ice cream, and creamy desserts for textural contrast, and considered a benchmark of piping precision in pastry training.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar",
+    "leavening": "egg white (mechanical)",
+    "family": "drop",
+    "textureCategory": "crisp",
+    "commonMixIns": [],
+    "commonVariations": [
+      "Plain vanilla langues de chat",
+      "Chocolate-dipped tips"
+    ],
+    "modernVariations": [
+      "Sandwiched langues de chat with chocolate ganache"
+    ],
+    "flavorProfile": {
+      "sweetness": 2,
+      "richness": 3,
+      "crispness": 5,
+      "spice": 0
+    },
+    "flavorTags": [
+      "buttery"
+    ],
+    "preparationOverview": "Butter and sugar are creamed, then egg whites are beaten in gradually (rather than whole egg) before flour is folded through into a smooth, pipeable batter; the batter is piped into narrow finger shapes on a lined sheet and baked briefly until the edges brown while the centers stay pale.",
+    "variationTag": "traditional",
+    "variationNote": "The thin, precisely piped shape is intrinsic to the name and format -- a thicker or drop-scooped version would not be recognized as a langue de chat."
+  },
+  {
+    "id": "cookie_florentine",
+    "name": "Florentine",
+    "localName": "Florentin",
+    "description": "A thin, lacy cookie of caramelized nuts, candied fruit, and honey, usually finished with a layer of chocolate on the flat underside -- more confection than dough-based cookie.",
+    "origin": "France and Italy (contested origin)",
+    "historicalContext": "Despite the name pointing to Florence, food historians generally trace the modern florentine's development to French pâtisserie in the 19th-20th centuries, with the Italian-sounding name likely a marketing/romantic gesture toward Italian confectionery rather than a documented Florentine invention -- the true origin is genuinely disputed and often overstated with false certainty in casual sources.",
+    "culturalSignificance": "A staple of French and broader European pâtisserie cookie boxes, often positioned as a premium, gift-tin item due to its labor-intensive caramelized construction.",
+    "dominantFat": "butter",
+    "sweetener": "honey and granulated sugar",
+    "leavening": "none",
+    "family": "drop",
+    "textureCategory": "crisp",
+    "commonMixIns": [
+      "sliced almonds",
+      "candied orange peel",
+      "candied cherries"
+    ],
+    "commonVariations": [
+      "Half-dipped in dark chocolate (most common)",
+      "Fully sandwiched between two chocolate layers"
+    ],
+    "modernVariations": [
+      "Florentine lace cookies without the chocolate layer"
+    ],
+    "flavorProfile": {
+      "sweetness": 4,
+      "richness": 4,
+      "crispness": 5,
+      "spice": 0
+    },
+    "flavorTags": [
+      "nutty",
+      "caramel",
+      "chocolate-forward"
+    ],
+    "preparationOverview": "Cream, sugar, and honey are cooked into a caramel, then mixed with sliced almonds and candied fruit and spread thin on a lined sheet; the mixture bakes into a lacy, deeply caramelized wafer, which is cooled, trimmed, and coated on one side with tempered chocolate.",
+    "variationTag": "traditional",
+    "variationNote": "The origin story is genuinely disputed rather than cleanly French or Italian -- treated here with appropriate uncertainty rather than asserting a single confident lineage."
+  },
+  {
+    "id": "cookie_macaron",
+    "name": "French Macaron",
+    "localName": "Macaron",
+    "description": "A delicate sandwich cookie of two almond-meringue shells around a ganache, buttercream, or jam filling -- prized for its smooth domed top and ruffled 'foot' at the base.",
+    "origin": "France (with earlier Italian roots)",
+    "historicalContext": "The base almond-meringue biscuit likely arrived in France from Italy (some accounts credit Catherine de' Medici's 16th-century court), but the modern sandwiched, filled macaron most people picture today is specifically a Parisian innovation credited to early-20th-century pâtissiers, most famously associated with the Ladurée house, which popularized the double-shell filled format that became the internationally recognized version.",
+    "culturalSignificance": "An emblem of modern French pâtisserie and luxury confectionery worldwide, closely associated with Parisian tea salons; frequently confused with the unrelated coconut macaroon, a distinction worth being explicit about.",
+    "dominantFat": "butter",
+    "sweetener": "granulated and powdered sugar",
+    "leavening": "egg white (mechanical)",
+    "family": "sandwich",
+    "textureCategory": "chewy",
+    "commonMixIns": [
+      "almond flour"
+    ],
+    "commonVariations": [
+      "Ganache-filled macarons",
+      "Buttercream-filled macarons"
+    ],
+    "modernVariations": [
+      "Wildly varied modern flavors and colors (matcha, salted caramel, rose, etc.)"
+    ],
+    "flavorProfile": {
+      "sweetness": 4,
+      "richness": 3,
+      "crispness": 2,
+      "spice": 0
+    },
+    "flavorTags": [
+      "nutty",
+      "floral"
+    ],
+    "preparationOverview": "Almond flour and powdered sugar are folded into a stabilized meringue in a deliberately precise technique (macaronage) until the batter flows to a specific ribboned consistency, then piped into rounds, rested until a skin forms, and baked until a ruffled 'foot' rises at the base; cooled shells are sandwiched with a filling.",
+    "variationTag": "traditional",
+    "variationNote": "Macaron (this cookie) and macaroon (a separate coconut-based cookie) are frequently confused in English due to the similar name -- they are unrelated in composition and technique despite both tracing loosely to older almond-confection traditions."
+  },
+  {
+    "id": "cookie_biscotti",
+    "name": "Biscotti",
+    "localName": "Cantucci",
+    "description": "A twice-baked, dry, crisp Tuscan almond cookie designed to be dunked in coffee or Vin Santo dessert wine -- the double bake is what gives it exceptional keeping qualities and crunch.",
+    "origin": "Tuscany, Italy",
+    "historicalContext": "The word 'biscotto' itself derives from Latin for 'twice-cooked,' and the technique dates back to Roman military provisions prized for their long shelf life; the specific almond-studded Tuscan cantucci recipe associated with Prato is documented since at least the medieval period and remains the most internationally recognized version of the broader 'biscotti' category.",
+    "culturalSignificance": "A defining Tuscan specialty traditionally served with Vin Santo for dipping, and now one of the most internationally recognized Italian cookies broadly, often adapted (sometimes loosely) outside Italy as an umbrella term for any long, crisp, twice-baked cookie.",
+    "dominantFat": "oil",
+    "sweetener": "granulated sugar",
+    "leavening": "baking powder",
+    "family": "bar",
+    "textureCategory": "crisp",
+    "commonMixIns": [
+      "whole almonds"
+    ],
+    "commonVariations": [
+      "Cantucci with pine nuts",
+      "Anise-flavored biscotti"
+    ],
+    "modernVariations": [
+      "Chocolate-dipped or chocolate-chip biscotti (an American bakery-driven adaptation)"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 2,
+      "crispness": 5,
+      "spice": 0
+    },
+    "flavorTags": [
+      "nutty"
+    ],
+    "preparationOverview": "A firm, low-fat dough studded with whole almonds is shaped into logs and baked once until set, then sliced on the diagonal while still warm and baked a second time, cut-side up, until fully dry and crisp throughout.",
+    "variationTag": "traditional",
+    "variationNote": "'Biscotti' is technically the plural of 'biscotto' (any twice-baked cookie) in Italian, while cantucci refers specifically to the almond Tuscan version -- English usage has flattened this distinction, worth noting rather than treating as interchangeable without qualification."
+  },
+  {
+    "id": "cookie_baci_di_dama",
+    "name": "Baci di Dama",
+    "description": "Two small, hazelnut-rich domed cookies sandwiched around a thin layer of chocolate -- the name means 'lady's kisses,' after their delicate paired shape.",
+    "origin": "Piedmont, Italy",
+    "historicalContext": "Documented in Piedmontese baking since at least the 19th century, drawing on the region's strong hazelnut-growing tradition (the same hazelnuts behind gianduja chocolate and Nutella); the two-domed, chocolate-joined format has remained essentially unchanged as a specialty of Tortona and the wider Piedmont region.",
+    "culturalSignificance": "A recognized specialty of Piedmont, often given as a gift in the same regional confectionery tradition as gianduja chocolates, and a benchmark small cookie in Italian pastry training for its precise, matched-pair shaping.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar",
+    "leavening": "none",
+    "family": "sandwich",
+    "textureCategory": "crumbly",
+    "commonMixIns": [
+      "ground hazelnuts"
+    ],
+    "commonVariations": [
+      "Classic hazelnut baci di dama",
+      "Almond-based version"
+    ],
+    "modernVariations": [
+      "Gianduja (hazelnut-chocolate) filling instead of plain dark chocolate"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 4,
+      "crispness": 2,
+      "spice": 0
+    },
+    "flavorTags": [
+      "nutty",
+      "chocolate-forward"
+    ],
+    "preparationOverview": "Butter, sugar, and finely ground hazelnuts are worked into a short dough, rolled into small, precisely matched balls, and baked until just set; once cool, pairs of domes are joined with a thin layer of melted chocolate spread on the flat side.",
+    "variationTag": "traditional",
+    "variationNote": "The matched-pair sizing is a real technical benchmark in Piedmontese baking -- mismatched domes are considered a shaping flaw, not a stylistic variation."
+  },
+  {
+    "id": "cookie_pizzelle",
+    "name": "Pizzelle",
+    "description": "A thin, iron-pressed Italian wafer cookie stamped with an intricate pattern, traditionally flavored with anise -- one of Italy's oldest documented cookie formats.",
+    "origin": "Abruzzo, Italy",
+    "historicalContext": "Traced by some food historians to ancient Roman flatbread-like precursors, with the specific iron-pressed pizzelle format documented in the Abruzzo region since at least the medieval period; traditionally made with hand-forged decorative irons passed down through families, a tradition that continues alongside modern electric pizzelle irons.",
+    "culturalSignificance": "A traditional Christmas and wedding cookie in Abruzzo and across much of Italy, and a strongly preserved tradition among Italian-American communities, where family pizzelle irons are often treated as heirlooms.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar",
+    "leavening": "baking powder",
+    "family": "wafer",
+    "textureCategory": "crisp",
+    "commonMixIns": [
+      "anise seed or anise extract"
+    ],
+    "commonVariations": [
+      "Anise pizzelle (most traditional)",
+      "Vanilla pizzelle"
+    ],
+    "modernVariations": [
+      "Chocolate or lemon pizzelle",
+      "Pizzelle rolled into cones or bowls while warm"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 2,
+      "crispness": 5,
+      "spice": 1
+    },
+    "flavorTags": [
+      "floral",
+      "buttery"
+    ],
+    "preparationOverview": "A thin, egg-rich batter is spooned onto a heated, patterned pizzelle iron and pressed for under a minute until golden and crisp; the wafers are lifted out immediately and cooled flat, or shaped into cones/bowls while still pliable.",
+    "variationTag": "traditional",
+    "variationNote": "The iron's decorative pattern is often a specific family or regional design, similar in spirit to ma'amoul's carved wooden molds -- a real, meaningful craft tradition rather than a generic waffle pattern."
+  },
+  {
+    "id": "cookie_ricciarelli",
+    "name": "Ricciarelli",
+    "description": "A soft, chewy Sienese almond cookie shaped into a distinctive lozenge and dusted heavily in powdered sugar, with a delicate, slightly cracked crust.",
+    "origin": "Siena, Tuscany, Italy",
+    "historicalContext": "Documented in Siena since at least the 14th-15th century, with some accounts tying its introduction to returning Crusaders who encountered similar almond sweets in the Middle East, though the precise route is not firmly established; ricciarelli became one of Siena's defining confections alongside panforte, both closely tied to the city's medieval trading history.",
+    "culturalSignificance": "A protected regional specialty of Siena (holding Protected Geographical Indication status in the EU) and a traditional Christmas sweet across Tuscany, often given as a gift alongside panforte.",
+    "dominantFat": "mixed",
+    "sweetener": "granulated and powdered sugar",
+    "leavening": "whipped egg white",
+    "family": "shaped",
+    "textureCategory": "chewy",
+    "commonMixIns": [
+      "ground almonds",
+      "orange zest (regional)"
+    ],
+    "commonVariations": [
+      "Classic almond ricciarelli",
+      "Orange-scented ricciarelli"
+    ],
+    "modernVariations": [
+      "Chocolate-dipped ricciarelli"
+    ],
+    "flavorProfile": {
+      "sweetness": 4,
+      "richness": 3,
+      "crispness": 1,
+      "spice": 0
+    },
+    "flavorTags": [
+      "nutty",
+      "citrus"
+    ],
+    "preparationOverview": "Ground almonds are worked with sugar and whipped egg whites into a soft, pliable paste, shaped by hand into the traditional pointed-oval lozenge, rolled generously in powdered sugar, and baked briefly so the exterior sets with a light crackle while the center stays soft and chewy.",
+    "variationTag": "traditional",
+    "variationNote": "The lozenge shape and heavy powdered-sugar coating are protected, defining traits of genuine Sienese ricciarelli, not optional presentation choices."
+  },
+  {
+    "id": "cookie_brutti_ma_buoni",
+    "name": "Brutti ma Buoni",
+    "description": "A deliberately misshapen, meringue-based hazelnut cookie whose name translates to 'ugly but good' -- prized specifically for its rustic, irregular appearance.",
+    "origin": "Northern Italy (Piedmont and Lombardy both claim origin)",
+    "historicalContext": "Both Piedmont and Lombardy claim the original recipe, with documented versions in each region dating to the 19th-20th centuries; the genuinely disputed origin is itself part of the cookie's charm and is usually acknowledged rather than resolved by Italian food historians, similar to several other regionally contested Italian sweets.",
+    "culturalSignificance": "A well-loved everyday Italian bakery cookie precisely because of, not despite, its rough appearance -- often cited as an example of Italian cooking's comfort with rustic imperfection over polished presentation.",
+    "dominantFat": "mixed",
+    "sweetener": "granulated sugar",
+    "leavening": "whipped egg white",
+    "family": "drop",
+    "textureCategory": "chewy",
+    "commonMixIns": [
+      "ground hazelnuts or almonds"
+    ],
+    "commonVariations": [
+      "Hazelnut version (Piedmont)",
+      "Almond or mixed-nut version (Lombardy)"
+    ],
+    "modernVariations": [
+      "Chocolate-flecked brutti ma buoni"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 2,
+      "spice": 0
+    },
+    "flavorTags": [
+      "nutty"
+    ],
+    "preparationOverview": "Toasted, chopped nuts are folded into a stabilized meringue base, then the sticky mixture is cooked briefly in a pan to firm it slightly before being dropped in rough, irregular mounds onto a lined sheet and baked until deeply golden and craggy on the outside, chewy within.",
+    "variationTag": "traditional",
+    "variationNote": "The irregular, rustic shape is intentional and correct -- a neatly piped or uniform version would miss the entire point of the cookie's name and appeal."
+  },
+  {
+    "id": "cookie_kourabiedes",
+    "name": "Kourabiedes",
+    "localName": "Κουραμπιέδες",
+    "description": "A rich, crumbly Greek butter cookie heavily dusted in powdered sugar, often studded with a whole clove and scented with rosewater -- a defining Greek Christmas sweet.",
+    "origin": "Greece",
+    "historicalContext": "Believed to descend from Persian/Middle Eastern almond shortbread traditions (the name itself is thought to derive from Persian/Turkish roots) that spread through the Ottoman-influenced eastern Mediterranean, adapted into a distinctly Greek Christmas confection over centuries; the whole clove pressed into the top is a traditional touch some link symbolically to the spices brought by the Magi.",
+    "culturalSignificance": "One of the two defining Greek Christmas cookies (alongside melomakarona), traditionally made in large batches for the holidays and heavily dusted in powdered sugar meant to evoke snow.",
+    "dominantFat": "butter",
+    "sweetener": "powdered sugar",
+    "leavening": "baking powder",
+    "family": "shaped",
+    "textureCategory": "crumbly",
+    "commonMixIns": [
+      "ground almonds",
+      "rosewater or orange blossom water",
+      "whole cloves (decorative)"
+    ],
+    "commonVariations": [
+      "Crescent-shaped kourabiedes",
+      "Round kourabiedes"
+    ],
+    "modernVariations": [
+      "Kourabiedes with added liqueur (brandy or ouzo)"
+    ],
+    "flavorProfile": {
+      "sweetness": 4,
+      "richness": 5,
+      "crispness": 1,
+      "spice": 1
+    },
+    "flavorTags": [
+      "nutty",
+      "floral",
+      "buttery"
+    ],
+    "preparationOverview": "Butter is beaten at length until very pale and light, then combined with ground almonds, a touch of brandy, and flour into a soft, rich dough; the dough is shaped into crescents or rounds, baked until pale gold, and while still warm is generously dusted with powdered sugar, which continues to coat the cookie as it cools.",
+    "variationTag": "traditional",
+    "variationNote": "The heavy final sugar dusting is essential and traditional, not an optional decorative flourish -- kourabiedes are meant to be visibly, generously white."
+  },
+  {
+    "id": "cookie_melomakarona",
+    "name": "Melomakarona",
+    "localName": "Μελομακάρονα",
+    "description": "An oil-based, spiced Greek Christmas cookie soaked in a honey-citrus syrup and topped with chopped walnuts -- moist and syrup-soaked rather than dry, unlike most cookies in this catalog.",
+    "origin": "Greece",
+    "historicalContext": "Documented in Greek Christmas baking traditions for centuries, built around olive oil (reflecting Greece's oil-based rather than butter-based baking heritage) and honey, both foods with deep symbolic and practical roots in Greek culture; the honey-syrup soak links it to a broader family of Mediterranean and Middle Eastern syrup-soaked sweets.",
+    "culturalSignificance": "The second of Greece's two defining Christmas cookies alongside kourabiedes, traditionally set out together on the same holiday plate as a deliberate contrast -- one dry and sugar-dusted, one moist and honey-soaked.",
+    "dominantFat": "oil",
+    "sweetener": "honey syrup",
+    "leavening": "baking soda",
+    "family": "drop",
+    "textureCategory": "soft",
+    "commonMixIns": [
+      "orange zest",
+      "cinnamon",
+      "clove",
+      "chopped walnuts (topping)"
+    ],
+    "commonVariations": [
+      "Classic honey-orange melomakarona",
+      "Melomakarona with added brandy in the dough"
+    ],
+    "modernVariations": [
+      "Chocolate-dipped or chocolate-filled melomakarona"
+    ],
+    "flavorProfile": {
+      "sweetness": 5,
+      "richness": 3,
+      "crispness": 1,
+      "spice": 3
+    },
+    "flavorTags": [
+      "spiced",
+      "citrus",
+      "caramel"
+    ],
+    "preparationOverview": "Olive oil, orange juice and zest, and warm spices are combined into a soft dough, shaped into oval mounds, and baked until firm; the still-warm cookies are dunked briefly in a hot honey-sugar syrup to soak through, then topped with chopped walnuts and a final dusting of cinnamon.",
+    "variationTag": "traditional",
+    "variationNote": "The syrup soak must happen while the cookie is still warm from the oven to absorb properly -- soaking a fully cooled cookie is a common home-baking mistake that results in a syrup coating rather than proper absorption."
+  },
+  {
+    "id": "cookie_digestive",
+    "name": "Digestive Biscuit",
+    "description": "A semi-sweet, wholemeal British biscuit with a coarse, slightly sandy crumb -- originally marketed for its supposed digestive benefits, now simply a tea-time staple.",
+    "origin": "United Kingdom (Scotland)",
+    "historicalContext": "Developed in the 1830s-1890s by Scottish doctors who included bicarbonate of soda believed at the time to aid digestion (giving the biscuit its name); McVitie's commercialized the now-iconic version in 1892, and it remains one of the best-selling biscuits in the UK, though the original digestive health claim is no longer taken literally.",
+    "culturalSignificance": "One of the most commonly stocked biscuits in British households, closely associated with tea-dunking and, in chocolate-coated form, considered a genuine national comfort food.",
+    "dominantFat": "butter",
+    "sweetener": "brown sugar",
+    "leavening": "baking soda",
+    "family": "rolled",
+    "textureCategory": "crumbly",
+    "commonMixIns": [
+      "wholemeal flour",
+      "oatmeal (some recipes)"
+    ],
+    "commonVariations": [
+      "Plain digestive",
+      "Chocolate-coated digestive (a hugely popular variant in its own right)"
+    ],
+    "modernVariations": [
+      "Dark chocolate digestives",
+      "Reduced-sugar digestives"
+    ],
+    "flavorProfile": {
+      "sweetness": 2,
+      "richness": 3,
+      "crispness": 4,
+      "spice": 0
+    },
+    "flavorTags": [
+      "buttery"
+    ],
+    "preparationOverview": "Wholemeal flour is combined with butter, sugar, and baking soda into a coarse, crumbly dough, rolled fairly thin, docked with small holes to prevent excessive puffing, cut into rounds, and baked until firm and lightly golden throughout.",
+    "variationTag": "traditional",
+    "variationNote": "The chocolate-coated version is so widespread in the UK that many people encounter it before the plain original -- both are considered fully legitimate, not one a lesser version of the other."
+  },
+  {
+    "id": "cookie_empire_biscuit",
+    "name": "Empire Biscuit",
+    "description": "Two round Scottish shortbread-style biscuits sandwiched with jam and topped with a thin layer of icing and a glacé cherry -- a festive, brightly finished teatime treat.",
+    "origin": "Scotland",
+    "historicalContext": "Believed to date to the early 20th century, with the name possibly linked to the British Empire era, though the exact naming origin isn't firmly documented; the format closely parallels German 'Linzer'-style jam sandwich biscuits and Austrian Spitzbuben, part of a broader shared European tradition of jam-filled iced sandwich biscuits that spread and localized differently across regions.",
+    "culturalSignificance": "A familiar sight in Scottish and wider UK bakeries and supermarkets, especially around celebratory occasions, valued for its cheerful, brightly decorated appearance as much as its flavor.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar, plus icing and jam",
+    "leavening": "none",
+    "family": "sandwich",
+    "textureCategory": "crumbly",
+    "commonMixIns": [
+      "raspberry jam"
+    ],
+    "commonVariations": [
+      "Round empire biscuits (most common)",
+      "Heart or novelty-shaped versions"
+    ],
+    "modernVariations": [
+      "Chocolate ganache instead of jam"
+    ],
+    "flavorProfile": {
+      "sweetness": 4,
+      "richness": 3,
+      "crispness": 2,
+      "spice": 0
+    },
+    "flavorTags": [
+      "fruity",
+      "buttery"
+    ],
+    "preparationOverview": "A simple butter shortbread dough is rolled and cut into matching rounds, baked until pale gold, then sandwiched with raspberry jam once cool; the top is finished with a thin layer of white icing and a glacé cherry pressed into the center.",
+    "variationTag": "traditional",
+    "variationNote": "Empire biscuits, Austrian Spitzbuben, and the Linzer cookie all share a jam-sandwich-biscuit structure that developed with real regional distinctness rather than one being a simple copy of another."
+  },
+  {
+    "id": "cookie_melting_moments",
+    "name": "Melting Moments",
+    "description": "A very short, buttery cookie -- often made with cornflour for extra tenderness -- typically sandwiched with buttercream or finished with a simple glaze; genuinely melts on the tongue.",
+    "origin": "United Kingdom, Australia, and New Zealand",
+    "historicalContext": "Recipes for cornflour-enriched 'melting moment' biscuits appear across British, Australian, and New Zealand cookbooks through the 20th century, with the cornflour addition (a technique shared with several other short, tender biscuit traditions) becoming the format's defining feature; it's genuinely a shared Commonwealth-wide tradition rather than one country's clear invention.",
+    "culturalSignificance": "A well-loved home-baking staple across the UK, Australia, and New Zealand, frequently appearing at afternoon tea and school fundraiser bake sales.",
+    "dominantFat": "butter",
+    "sweetener": "granulated or powdered sugar",
+    "leavening": "baking powder",
+    "family": "sandwich",
+    "textureCategory": "crumbly",
+    "commonMixIns": [
+      "cornflour/cornstarch"
+    ],
+    "commonVariations": [
+      "Plain buttercream-sandwiched melting moments",
+      "Single, unsandwiched melting moments rolled in coconut before baking"
+    ],
+    "modernVariations": [
+      "Passionfruit or lemon buttercream filling (Australia/NZ)"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 4,
+      "crispness": 1,
+      "spice": 0
+    },
+    "flavorTags": [
+      "buttery"
+    ],
+    "preparationOverview": "Butter is creamed thoroughly with sugar, then flour and cornflour are folded in to give an especially tender dough; the dough is rolled into small balls, flattened slightly (often with a fork), and baked until just set but not browned, then cooled and sandwiched with buttercream.",
+    "variationTag": "traditional",
+    "variationNote": "The cornflour/cornstarch addition is what earns the 'melting' name and texture -- omitting it produces a standard butter cookie rather than a true melting moment."
+  },
+  {
+    "id": "cookie_lebkuchen",
+    "name": "Lebkuchen",
+    "description": "A dense, deeply spiced German gingerbread-style cookie, often glazed or chocolate-coated, closely tied to Nuremberg's centuries-old baking guild tradition.",
+    "origin": "Nuremberg, Germany",
+    "historicalContext": "Documented since at least the 13th-14th century, with Nuremberg's access to trade-route spices and a protected local honey supply making it a historic center of production; the city's Lebkuchen bakers formed their own guild, and 'Nürnberger Lebkuchen' now holds EU Protected Geographical Indication status, distinguishing it from generic gingerbread produced elsewhere.",
+    "culturalSignificance": "A defining German Christmas market food, closely associated with Nuremberg's famous Christkindlesmarkt, and often packaged in decorated tins as a traditional holiday gift.",
+    "dominantFat": "mixed",
+    "sweetener": "honey",
+    "leavening": "hartshorn salt or baking soda",
+    "family": "drop",
+    "textureCategory": "chewy",
+    "commonMixIns": [
+      "ground almonds or hazelnuts",
+      "candied citrus peel",
+      "gingerbread spice blend"
+    ],
+    "commonVariations": [
+      "Elisenlebkuchen (flourless, nut-heavy, protected recipe)",
+      "Glazed Lebkuchen",
+      "Chocolate-coated Lebkuchen"
+    ],
+    "modernVariations": [
+      "Lebkuchen hearts sold at fairs with iced messages"
+    ],
+    "flavorProfile": {
+      "sweetness": 4,
+      "richness": 3,
+      "crispness": 1,
+      "spice": 5
+    },
+    "flavorTags": [
+      "spiced",
+      "nutty",
+      "caramel"
+    ],
+    "preparationOverview": "Honey is warmed and combined with ground nuts, candied peel, and a heavy spice blend (cinnamon, clove, cardamom, and more) into a dense dough, often rested for days to mellow the flavor before baking on edible wafer bases (Oblaten); once baked, the cookies are glazed with sugar icing or coated in chocolate.",
+    "variationTag": "traditional",
+    "variationNote": "Elisenlebkuchen specifically must meet a minimum nut content and contain very little to no flour under its protected designation -- not every Lebkuchen recipe qualifies for that specific name."
+  },
+  {
+    "id": "cookie_pfeffernusse",
+    "name": "Pfeffernüsse",
+    "localName": "Pfeffernüsse",
+    "description": "Small, dense, heavily spiced German cookies -- the name means 'pepper nuts,' referring to the historic inclusion of black pepper among the warming spices, usually finished with a white sugar glaze.",
+    "origin": "Germany",
+    "historicalContext": "Documented in German baking since at least the 16th-17th century, part of the same trade-route-spiced Christmas biscuit family as Lebkuchen; the inclusion of actual black pepper (a genuine, if now often reduced, ingredient) reflects an era when access to a wide range of imported spices was itself a marker of festive indulgence.",
+    "culturalSignificance": "A staple of German and broader Northern/Central European Christmas cookie plates, often eaten specifically during Advent, and widely adopted (sometimes under variant spellings) throughout the German diaspora in the Americas.",
+    "dominantFat": "butter",
+    "sweetener": "molasses or honey",
+    "leavening": "baking soda or hartshorn salt",
+    "family": "shaped",
+    "textureCategory": "crisp",
+    "commonMixIns": [
+      "black pepper",
+      "cardamom",
+      "clove",
+      "anise"
+    ],
+    "commonVariations": [
+      "Glazed pfeffernüsse (most common)",
+      "Unglazed pfeffernüsse"
+    ],
+    "modernVariations": [
+      "Reduced-pepper, sweeter modern home versions"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 2,
+      "crispness": 4,
+      "spice": 5
+    },
+    "flavorTags": [
+      "spiced"
+    ],
+    "preparationOverview": "Molasses or honey is warmed and combined with butter, sugar, and a heavy spice blend including black pepper, then mixed into a firm dough, often rested overnight; the dough is shaped into small balls, baked until firm, and while still warm dipped or drizzled in a white sugar glaze that dries into a distinctive matte coating.",
+    "variationTag": "traditional",
+    "variationNote": "The pepper is a genuine historical ingredient, not a modern novelty twist -- many contemporary recipes reduce it significantly, which is a real, disclosed departure from the traditional spice balance rather than the defining original."
+  },
+  {
+    "id": "cookie_vanillekipferl",
+    "name": "Vanillekipferl",
+    "description": "A tender, crescent-shaped Austrian shortbread made with ground almonds or hazelnuts, rolled in vanilla sugar while still warm -- a defining Christmas cookie of the Austro-Hungarian baking tradition.",
+    "origin": "Austria",
+    "historicalContext": "Documented in Austrian and broader Central European (also strongly associated with Germany and Hungary) Christmas baking for centuries, with the crescent shape sometimes linked in folklore to the Ottoman crescent symbol following the 17th-century Battle of Vienna, though this is a popular story rather than firmly documented history; the format is genuinely shared across Austria, Germany, and Hungary as part of the same regional Christmas cookie plate tradition.",
+    "culturalSignificance": "One of the defining cookies of the Austrian and German Christkindlmarkt/Weihnachtsplätzchen tradition, almost always baked in large batches as part of a mixed holiday cookie plate rather than eaten alone.",
+    "dominantFat": "butter",
+    "sweetener": "vanilla sugar",
+    "leavening": "none",
+    "family": "shaped",
+    "textureCategory": "crumbly",
+    "commonMixIns": [
+      "ground almonds or hazelnuts"
+    ],
+    "commonVariations": [
+      "Almond vanillekipferl",
+      "Hazelnut vanillekipferl"
+    ],
+    "modernVariations": [
+      "Chocolate-dipped tips"
+    ],
+    "flavorProfile": {
+      "sweetness": 2,
+      "richness": 4,
+      "crispness": 1,
+      "spice": 0
+    },
+    "flavorTags": [
+      "nutty",
+      "buttery"
+    ],
+    "preparationOverview": "Butter, ground nuts, sugar, and flour are worked into a short, delicate dough, chilled, then shaped by hand into small crescents and baked until just pale gold; while still warm and fragile, the crescents are rolled gently in vanilla sugar, which adheres to the warm surface.",
+    "variationTag": "traditional",
+    "variationNote": "Rolling in vanilla sugar while the cookie is still warm (not after full cooling) is essential for the sugar to adhere properly and for the characteristic fragrant coating."
+  },
+  {
+    "id": "cookie_springerle",
+    "name": "Springerle",
+    "description": "An anise-flavored German cookie stamped with an intricate relief design from a carved wooden mold, then dried before a low, slow bake that preserves the sharp imprint.",
+    "origin": "Germany (Swabia)",
+    "historicalContext": "Documented since at least the 14th-15th century in the Swabian region, with the carved mold tradition connected to older European tradition of ornately molded festive breads and cakes; the specific drying-before-baking technique developed to keep the stamped design crisp, since baking a wet dough directly would blur the relief.",
+    "culturalSignificance": "A traditional German Christmas cookie especially associated with Swabia, valued as much for the decorative carved imagery (often floral, animal, or folk motifs) as for eating, with old molds sometimes treated as family heirlooms.",
+    "dominantFat": "mixed",
+    "sweetener": "granulated sugar",
+    "leavening": "hartshorn salt or baking powder",
+    "family": "rolled",
+    "textureCategory": "crisp",
+    "commonMixIns": [
+      "anise seed"
+    ],
+    "commonVariations": [
+      "Classic anise springerle",
+      "Unflavored/plain springerle"
+    ],
+    "modernVariations": [
+      "Modern flavor variants (lemon, almond) replacing traditional anise"
+    ],
+    "flavorProfile": {
+      "sweetness": 2,
+      "richness": 2,
+      "crispness": 4,
+      "spice": 1
+    },
+    "flavorTags": [
+      "floral"
+    ],
+    "preparationOverview": "Eggs and sugar are beaten at length until thick and pale, then flour and a little leavening are folded in to a firm, smooth dough; the dough is rolled and pressed firmly into a carved springerle mold to take its relief pattern, cut apart, and left to air-dry for several hours to overnight before a low, slow bake that keeps the design crisp and the cookie pale.",
+    "variationTag": "traditional",
+    "variationNote": "The air-drying step before baking is not optional -- skipping it is the most common reason a home baker's stamped design blurs or the cookie spreads and loses its relief."
+  },
+  {
+    "id": "cookie_spitzbuben",
+    "name": "Spitzbuben",
+    "description": "A Swiss and German jam-filled sandwich cookie with a cut-out window top, close kin to the Austrian Linzer cookie but typically made from a plainer, unspiced shortbread dough.",
+    "origin": "Switzerland and Germany",
+    "historicalContext": "Part of the same broader European jam-sandwich-cookie tradition as the Linzer cookie and Scottish empire biscuit, documented in Swiss and German home baking for generations; the name translates loosely to 'rascals' or 'rogues,' though the exact reason for that name isn't firmly documented.",
+    "culturalSignificance": "A standard fixture of Swiss and German Christmas cookie baking (Guetzli in Swiss German), usually made in large mixed batches alongside several other shaped and filled cookies for the holiday plate.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar, plus jam filling",
+    "leavening": "none",
+    "family": "sandwich",
+    "textureCategory": "crumbly",
+    "commonMixIns": [
+      "raspberry or apricot jam"
+    ],
+    "commonVariations": [
+      "Raspberry spitzbuben",
+      "Apricot spitzbuben"
+    ],
+    "modernVariations": [
+      "Chocolate ganache filling"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 3,
+      "spice": 0
+    },
+    "flavorTags": [
+      "fruity",
+      "buttery"
+    ],
+    "preparationOverview": "A plain butter shortbread dough is rolled and cut into matching pairs, one with a cut-out window; the cookies are baked pale gold, then the solid halves are spread with jam and topped with the windowed half once fully cool, finished with a dusting of powdered sugar.",
+    "variationTag": "traditional",
+    "variationNote": "Unlike the Linzer cookie, spitzbuben's dough is typically not nut-flour-enriched or heavily spiced -- the two are close relatives with a genuinely different base dough, not the same recipe under a different name."
+  },
+  {
+    "id": "cookie_pepparkakor",
+    "name": "Pepparkakor",
+    "description": "Extremely thin, crisp Swedish ginger-spiced cookies, traditionally cut into shapes like hearts, stars, and pigs -- close kin to gingersnaps but rolled far thinner.",
+    "origin": "Sweden",
+    "historicalContext": "Documented in Swedish baking since at least the 15th century, likely introduced via German trading routes and monasteries where spiced breads were already common; pepparkakor became specifically associated with Swedish Christmas (Jul) traditions, with the thin, snap-crisp texture becoming a defining regional signature distinct from thicker German lebkuchen-style spice cookies.",
+    "culturalSignificance": "One of Sweden's defining Christmas foods, traditionally baked in large batches, hung as edible tree ornaments, and associated with a folk custom of making a wish while breaking a pepparkaka cleanly into three pieces.",
+    "dominantFat": "butter",
+    "sweetener": "golden syrup and dark sugar",
+    "leavening": "baking soda",
+    "family": "rolled",
+    "textureCategory": "crisp",
+    "commonMixIns": [
+      "ginger",
+      "cinnamon",
+      "clove",
+      "cardamom"
+    ],
+    "commonVariations": [
+      "Heart and star shapes (most traditional)",
+      "Pig-shaped pepparkakor (a specific folk tradition)"
+    ],
+    "modernVariations": [
+      "Iced/decorated pepparkakor"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 2,
+      "crispness": 5,
+      "spice": 5
+    },
+    "flavorTags": [
+      "spiced",
+      "caramel"
+    ],
+    "preparationOverview": "Butter, sugar, and syrup are melted together with warm spices, then combined with flour and baking soda into a dough that rests, often overnight, before being rolled extremely thin and cut into shapes; baked briefly at a moderate temperature so the cookies stay pale and fully crisp rather than browning.",
+    "variationTag": "traditional",
+    "variationNote": "Rolling the dough very thin is essential to the cookie's identity -- a thicker cut produces something closer to a German lebkuchen or American gingersnap rather than a true pepparkaka."
+  },
+  {
+    "id": "cookie_hallongrottor",
+    "name": "Hallongrottor",
+    "description": "A Swedish shortbread thumbprint cookie filled with raspberry jam -- the name literally means 'raspberry caves,' after the little jam-filled well pressed into each cookie.",
+    "origin": "Sweden",
+    "historicalContext": "A well-established fixture of Swedish home baking through the 20th century, part of a broader Scandinavian tradition of thumbprint-style jam cookies; the specific raspberry filling and name have become iconic enough that hallongrottor is often one of the first cookies Swedish children learn to bake.",
+    "culturalSignificance": "A staple of Swedish fika (coffee-and-cake break) culture and home baking, closely associated with childhood baking and considered an easy, foundational recipe in Swedish households.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar, plus raspberry jam",
+    "leavening": "baking powder",
+    "family": "shaped",
+    "textureCategory": "crumbly",
+    "commonMixIns": [
+      "raspberry jam"
+    ],
+    "commonVariations": [
+      "Round hallongrottor",
+      "Ring-shaped variants"
+    ],
+    "modernVariations": [
+      "Other jam flavors (blackcurrant, apricot) in place of raspberry"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 2,
+      "spice": 0
+    },
+    "flavorTags": [
+      "fruity",
+      "buttery"
+    ],
+    "preparationOverview": "A simple butter shortbread dough is rolled into balls, and a deep thumbprint or spoon-well is pressed into the center of each before baking partway; the cookies are removed briefly to fill the wells with raspberry jam, then returned to the oven to finish baking until the edges are set and golden.",
+    "variationTag": "traditional",
+    "variationNote": "Raspberry is specifically named in the cookie's own title -- while other jams are used in practice, a hallongrottor made with a different fruit is understood as a variation on the raspberry original, not a neutral base recipe."
+  },
+  {
+    "id": "cookie_krumkake",
+    "name": "Krumkake",
+    "description": "A thin, delicate Norwegian waffle-iron cookie stamped with a patterned iron and rolled into a cone or cylinder while still warm and pliable.",
+    "origin": "Norway",
+    "historicalContext": "Documented in Norwegian baking for generations as part of the same iron-pressed wafer-cookie family as pizzelle and Dutch-style waffle cookies, with cast-iron krumkake irons (often decoratively engraved) traditionally passed down through families; the format became especially strongly preserved among Norwegian-American immigrant communities in the American Midwest.",
+    "culturalSignificance": "A traditional Norwegian Christmas cookie, often served alongside other classic 'seven sorts' (sju slag) holiday baking, and a well-preserved heritage tradition in Norwegian-American communities, particularly in the Upper Midwest US.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar",
+    "leavening": "none",
+    "family": "wafer",
+    "textureCategory": "crisp",
+    "commonMixIns": [
+      "cardamom (common regional flavoring)"
+    ],
+    "commonVariations": [
+      "Plain krumkake",
+      "Cardamom-scented krumkake"
+    ],
+    "modernVariations": [
+      "Cream-filled krumkake cones (a dessert-course adaptation)"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 5,
+      "spice": 1
+    },
+    "flavorTags": [
+      "buttery",
+      "spiced"
+    ],
+    "preparationOverview": "A thin, egg-and-butter-rich batter is poured onto a heated, patterned krumkake iron and pressed briefly until golden and crisp; the hot wafer is immediately lifted off and rolled around a wooden cone-shaped form (or rolled into a cylinder) while still pliable, then left to cool and set into its final crisp shape.",
+    "variationTag": "traditional",
+    "variationNote": "The rolling must happen within seconds of coming off the iron, while the wafer is still hot and flexible -- once cooled, krumkake becomes too brittle to shape without cracking."
+  },
+  {
+    "id": "cookie_speculaas",
+    "name": "Speculaas",
+    "localName": "Speculoos",
+    "description": "A crisp, deeply spiced Dutch and Belgian cookie traditionally stamped with a carved wooden mold into figures like windmills or St. Nicholas, most associated with the Sinterklaas holiday.",
+    "origin": "Netherlands and Belgium",
+    "historicalContext": "Documented in Low Countries baking since at least the 17th century, tied closely to the Sinterklaas (St. Nicholas) feast on December 5th/6th, with the traditional wooden speculaas molds carved into festive figures; the spice blend (cinnamon, nutmeg, clove, ginger, cardamom, white pepper) reflects the Dutch East India Company's historic spice trade.",
+    "culturalSignificance": "A defining Dutch and Belgian Sinterklaas tradition, and internationally recognized today largely through the Belgian 'Speculoos' brand cookie widely used in coffee-shop culture, which is a commercialized descendant of the traditional home-baked/molded version.",
+    "dominantFat": "butter",
+    "sweetener": "brown sugar",
+    "leavening": "baking soda",
+    "family": "rolled",
+    "textureCategory": "crisp",
+    "commonMixIns": [
+      "cinnamon",
+      "nutmeg",
+      "clove",
+      "ginger",
+      "cardamom",
+      "white pepper"
+    ],
+    "commonVariations": [
+      "Molded speculaas figures",
+      "Plain rolled and cut speculaas"
+    ],
+    "modernVariations": [
+      "Speculoos cookie butter (a modern spread made from crushed speculoos cookies)"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 5,
+      "spice": 5
+    },
+    "flavorTags": [
+      "spiced",
+      "caramel"
+    ],
+    "preparationOverview": "Butter and dark brown sugar are worked together with a heavy traditional spice blend and flour into a firm dough, often rested overnight to deepen flavor; the dough is pressed into a carved wooden mold (or rolled and cut plainly) and baked until deeply golden-brown and fully crisp throughout.",
+    "variationTag": "traditional",
+    "variationNote": "The commercial 'Speculoos' cookie widely sold with coffee internationally is a real, simplified descendant of traditional home-molded speculaas, not a separate cookie -- both names refer to the same core tradition across Dutch/Belgian spelling conventions."
+  },
+  {
+    "id": "cookie_kletskoppen",
+    "name": "Kletskoppen",
+    "description": "An extremely thin, lacy, caramelized Dutch cookie made mostly of butter, sugar, and oats -- the name translates roughly to 'chatterboxes' or 'gossips,' after their thin, wide, flat shape.",
+    "origin": "Netherlands",
+    "historicalContext": "Part of the Netherlands' broader tradition of thin, caramelized butter cookies (a category also including stroopwafels), documented in Dutch home and bakery traditions through the 19th-20th centuries; the high sugar-to-flour ratio is what produces the cookie's signature lacy, almost translucent-edged spread during baking.",
+    "culturalSignificance": "A well-loved Dutch teatime cookie, often sold in tins as a gift item, and occasionally made with almonds as a specific gebakken amandelspaander (baked almond splinter) variant.",
+    "dominantFat": "butter",
+    "sweetener": "brown sugar",
+    "leavening": "none",
+    "family": "drop",
+    "textureCategory": "crisp",
+    "commonMixIns": [
+      "rolled oats",
+      "sliced almonds (common addition)"
+    ],
+    "commonVariations": [
+      "Plain kletskoppen",
+      "Almond-topped kletskoppen"
+    ],
+    "modernVariations": [
+      "Chocolate-dipped kletskoppen"
+    ],
+    "flavorProfile": {
+      "sweetness": 4,
+      "richness": 4,
+      "crispness": 5,
+      "spice": 0
+    },
+    "flavorTags": [
+      "caramel",
+      "buttery",
+      "nutty"
+    ],
+    "preparationOverview": "Butter, brown sugar, and a small amount of flour and oats are melted and combined into a thin, pourable batter; small spoonfuls are spread very thin on a lined sheet, leaving generous space to spread, and baked until deeply caramelized and lacy, then cooled briefly before lifting, as they set crisp within seconds off the heat.",
+    "variationTag": "traditional",
+    "variationNote": "The batter's thinness and generous spacing on the sheet is essential -- these cookies spread dramatically during baking, and crowding the sheet is the most common home-baking mistake."
+  },
+  {
+    "id": "cookie_ghraybeh",
+    "name": "Ghraybeh",
+    "localName": "غريبة",
+    "description": "An extremely short, pale Levantine butter or ghee cookie that shatters at the first bite -- often shaped into rings or crescents and topped with a single almond or pistachio.",
+    "origin": "Levant (Lebanon, Syria, Palestine, Jordan)",
+    "historicalContext": "Part of a broad family of short, unleavened Middle Eastern butter cookies documented across the region for generations, related in spirit (though independently developed) to Spanish/Mexican polvorones and Mexican pan dulce shortbreads through a shared emphasis on high fat and minimal gluten development; ghraybeh is prepared across many Levantine and wider Arab households, especially for Eid celebrations.",
+    "culturalSignificance": "A staple Eid and celebratory sweet across the Levant and wider Arab world, often made in large batches alongside ma'amoul as part of the same holiday baking effort.",
+    "dominantFat": "mixed",
+    "sweetener": "powdered sugar",
+    "leavening": "none",
+    "family": "shaped",
+    "textureCategory": "crumbly",
+    "commonMixIns": [
+      "pistachios or almonds (topping)"
+    ],
+    "commonVariations": [
+      "Ring-shaped ghraybeh",
+      "Crescent-shaped ghraybeh"
+    ],
+    "modernVariations": [
+      "Ghraybeh with a small jam center"
+    ],
+    "flavorProfile": {
+      "sweetness": 2,
+      "richness": 5,
+      "crispness": 1,
+      "spice": 0
+    },
+    "flavorTags": [
+      "buttery",
+      "nutty"
+    ],
+    "preparationOverview": "Ghee or clarified butter is beaten at length with powdered sugar until very light and almost whipped, then flour is folded in gently just until combined into an extremely soft, short dough; the dough is shaped into rings or crescents, topped with a single nut, and baked at a low temperature so the cookies stay pale white rather than browning.",
+    "variationTag": "traditional",
+    "variationNote": "Ghraybeh must stay pale/white when baked -- any browning is considered a sign of overbaking rather than a stylistic choice, unlike many other shortbread-style cookies where light gold is acceptable."
+  },
+  {
+    "id": "cookie_barazek",
+    "name": "Barazek",
+    "description": "A thin, crisp Syrian cookie coated on one side with sesame seeds and studded with chopped pistachios, sweetened with a caramelized sugar or date-molasses glaze.",
+    "origin": "Syria and Lebanon (especially Damascus)",
+    "historicalContext": "Closely associated with Damascus, Syria, where it's considered a specialty confection, documented as part of the city's broader sweets tradition; the combination of sesame and pistachio reflects ingredients long central to Levantine cuisine, and the cookie remains a point of regional pride, particularly for Damascene bakeries.",
+    "culturalSignificance": "Considered a specialty item of Damascus specifically within Syrian and Lebanese baking, often given as a gift or served to guests, and a recognizable export item from Levantine bakeries in the diaspora.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar or date molasses",
+    "leavening": "baking powder",
+    "family": "drop",
+    "textureCategory": "crisp",
+    "commonMixIns": [
+      "sesame seeds",
+      "chopped pistachios"
+    ],
+    "commonVariations": [
+      "Sugar-glazed barazek",
+      "Date-molasses-glazed barazek"
+    ],
+    "modernVariations": [
+      "Barazek with a chocolate drizzle"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 5,
+      "spice": 0
+    },
+    "flavorTags": [
+      "nutty",
+      "caramel"
+    ],
+    "preparationOverview": "A simple butter dough is rolled thin, pressed generously into sesame seeds on one side and chopped pistachios on the other, then baked until deeply golden and fully crisp; some versions are brushed with a light sugar or date-molasses glaze before or after baking for extra shine and sweetness.",
+    "variationTag": "traditional",
+    "variationNote": "Genuine barazek is specifically associated with Damascus rather than being a generic pan-Levantine cookie -- other regions in Syria and Lebanon bake sesame cookies, but 'barazek' as a named specialty is a Damascene identity."
+  },
+  {
+    "id": "cookie_kleicha",
+    "name": "Kleicha",
+    "localName": "كليجة",
+    "description": "Iraq's national cookie -- a soft, cardamom-and-rosewater-scented pastry filled with date paste or nuts, closely related to ma'amoul but with its own distinct dough and shaping.",
+    "origin": "Iraq",
+    "historicalContext": "Documented across Iraq for generations as part of a wider family of stuffed Middle Eastern pastries related to ma'amoul, kleicha has a documented history tracing back centuries in Mesopotamian baking; it holds a uniquely elevated cultural position in Iraq, having been informally recognized as something close to a national dish/cookie, prepared heavily around Eid.",
+    "culturalSignificance": "Widely regarded as Iraq's national cookie, prepared in large communal batches especially for Eid al-Fitr and Eid al-Adha, with family recipes for the dough and filling passed down as treasured heirlooms.",
+    "dominantFat": "mixed",
+    "sweetener": "date paste or sugared nut filling",
+    "leavening": "yeast (small amount)",
+    "family": "shaped",
+    "textureCategory": "soft",
+    "commonMixIns": [
+      "date paste",
+      "walnuts",
+      "cardamom",
+      "rosewater or orange blossom water"
+    ],
+    "commonVariations": [
+      "Date-filled kleicha (most common)",
+      "Walnut-filled kleicha"
+    ],
+    "modernVariations": [
+      "Kleicha with a sweetened coconut filling"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 1,
+      "spice": 2
+    },
+    "flavorTags": [
+      "fruity",
+      "nutty",
+      "spiced",
+      "floral"
+    ],
+    "preparationOverview": "A soft, lightly yeasted dough enriched with butter or ghee and scented with cardamom is rolled thin, spread or filled with a date paste or spiced nut mixture, rolled or folded closed, and cut into individual pieces before baking until lightly golden and tender.",
+    "variationTag": "traditional",
+    "variationNote": "Kleicha and ma'amoul are close relatives across the wider Middle Eastern stuffed-pastry family but are prepared with genuinely different doughs and techniques -- kleicha is not simply an Iraqi name for ma'amoul."
+  },
+  {
+    "id": "cookie_thekua",
+    "name": "Thekua",
+    "localName": "ठेकुआ",
+    "description": "A dense, deep-fried wheat cookie sweetened with jaggery and often stamped with a decorative wooden mold -- a defining ritual food of Bihar's Chhath Puja festival.",
+    "origin": "Bihar, India",
+    "historicalContext": "Deeply tied to Chhath Puja, a major Hindu festival observed primarily in Bihar, Jharkhand, and parts of Uttar Pradesh and Nepal honoring the sun god Surya; thekua's long shelf life without refrigeration made it well suited as a ritual offering (prasad) and travel food long before modern preservation was available, and the tradition remains central to the festival today.",
+    "culturalSignificance": "Central to Chhath Puja specifically, prepared as a ritual offering and shared food rather than an everyday snack, with the wooden stamped patterns sometimes carrying symbolic meaning within the ritual.",
+    "dominantFat": "shortening",
+    "sweetener": "jaggery (unrefined cane sugar)",
+    "leavening": "none",
+    "family": "shaped",
+    "textureCategory": "crisp",
+    "commonMixIns": [
+      "fennel seed",
+      "grated coconut (regional)"
+    ],
+    "commonVariations": [
+      "Wheat-flour thekua (most common)",
+      "Rice-flour thekua (regional)"
+    ],
+    "modernVariations": [
+      "Baked (rather than fried) thekua, a health-conscious modern adaptation"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 5,
+      "spice": 1
+    },
+    "flavorTags": [
+      "caramel",
+      "spiced"
+    ],
+    "preparationOverview": "Whole wheat flour is combined with melted jaggery, ghee or shortening, and fennel seed into a stiff dough, which is shaped by hand or pressed into a carved wooden mold, then deep-fried slowly over moderate heat until deeply golden-brown and fully crisp throughout.",
+    "variationTag": "traditional",
+    "variationNote": "Thekua is prepared specifically as ritual prasad for Chhath Puja, not as a general-purpose snack cookie -- its cultural context is inseparable from the festival itself, and that context deserves to be represented accurately rather than flattened into 'just an Indian fried cookie.'"
+  },
+  {
+    "id": "cookie_karachi_biscuit",
+    "name": "Karachi Biscuit",
+    "description": "A crumbly, fruit-and-nut-studded shortbread-style biscuit made famous by Karachi Bakery in Hyderabad, India -- despite the name, not from the city of Karachi itself.",
+    "origin": "Hyderabad, India",
+    "historicalContext": "Created by Karachi Bakery, founded in Hyderabad in the 1950s by a Sindhi refugee from Karachi following Partition, who named the bakery after his home city as a personal tribute rather than the biscuit being an imported Karachi, Pakistan recipe; the biscuit became the bakery's signature product and is now closely associated with Hyderabad specifically.",
+    "culturalSignificance": "A recognized specialty of Hyderabad and a common gift/travel souvenir from the city, with the name itself a small piece of Partition-era migration history worth telling accurately rather than assuming a Pakistani origin.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar",
+    "leavening": "baking powder",
+    "family": "bar",
+    "textureCategory": "crumbly",
+    "commonMixIns": [
+      "candied tutti-frutti (papaya)",
+      "cashews or almonds"
+    ],
+    "commonVariations": [
+      "Classic tutti-frutti Karachi biscuit",
+      "Cashew Karachi biscuit"
+    ],
+    "modernVariations": [
+      "Chocolate chip Karachi biscuit"
+    ],
+    "flavorProfile": {
+      "sweetness": 3,
+      "richness": 3,
+      "crispness": 4,
+      "spice": 0
+    },
+    "flavorTags": [
+      "fruity",
+      "nutty",
+      "buttery"
+    ],
+    "preparationOverview": "Butter and sugar are creamed, then flour and a mix of candied fruit and chopped nuts are folded through into a firm dough; the dough is pressed into a slab, scored into finger-shaped pieces, and baked until golden and crisp, then cut fully along the scored lines once cooled.",
+    "variationTag": "traditional",
+    "variationNote": "Despite the name, this is an Indian (Hyderabadi) biscuit named after the founder's home city, not a Pakistani recipe -- worth stating clearly since the name alone is genuinely misleading about its origin."
+  },
+  {
+    "id": "cookie_monte_carlo",
+    "name": "Monte Carlo Biscuit",
+    "description": "A soft Australian sandwich biscuit of two coconut-flecked oat cookies joined with raspberry jam and vanilla buttercream -- a lunchbox and biscuit-tin classic.",
+    "origin": "Australia",
+    "historicalContext": "Popularized in Australia primarily through the Arnott's biscuit company, which has produced a commercial Monte Carlo since the mid-20th century; the exact origin of the name isn't firmly documented, though it fits a broader mid-century Australian and British trend of giving biscuits evocative, vaguely continental names.",
+    "culturalSignificance": "One of Australia's most recognized packaged biscuits, closely tied to childhood lunchboxes and considered a fixture of the classic Australian biscuit tin alongside Tim Tams and other Arnott's products.",
+    "dominantFat": "butter",
+    "sweetener": "granulated sugar, plus jam and buttercream filling",
+    "leavening": "baking soda",
+    "family": "sandwich",
+    "textureCategory": "soft",
+    "commonMixIns": [
+      "desiccated coconut",
+      "rolled oats"
+    ],
+    "commonVariations": [
+      "Classic raspberry jam and vanilla buttercream filling"
+    ],
+    "modernVariations": [
+      "Homemade Monte Carlo recipes replicating the commercial original"
+    ],
+    "flavorProfile": {
+      "sweetness": 4,
+      "richness": 3,
+      "crispness": 1,
+      "spice": 0
+    },
+    "flavorTags": [
+      "fruity",
+      "coconut",
+      "buttery"
+    ],
+    "preparationOverview": "A soft dough enriched with coconut and rolled oats is shaped into oval biscuits, ridged on top with a fork, and baked until lightly golden; once cool, pairs are sandwiched together with a layer of vanilla buttercream and a thin layer of raspberry jam.",
+    "variationTag": "traditional",
+    "variationNote": "The commercial Arnott's version is so dominant in Australia that it functions as the de facto reference recipe -- home versions are typically explicit attempts to replicate that specific product rather than an older, independent home-baking tradition."
+  }
+]

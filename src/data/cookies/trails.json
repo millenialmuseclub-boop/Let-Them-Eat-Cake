@@ -1,0 +1,20 @@
+[
+  {
+    "id": "trail-buttery-classics",
+    "title": "The Buttery Classics Trail",
+    "description": "Start with the cookies where butter technique is the whole story.",
+    "cookieIds": ["cookie_scottish_shortbread", "cookie_french_sable", "cookie_snickerdoodle"]
+  },
+  {
+    "id": "trail-holiday-traditions",
+    "title": "Holiday Traditions Trail",
+    "description": "Cookies tied to a specific holiday or seasonal ritual across cultures.",
+    "cookieIds": ["cookie_maamoul", "cookie_austrian_linzer", "cookie_indian_nankhatai"]
+  },
+  {
+    "id": "trail-filled-and-layered",
+    "title": "Filled & Layered Trail",
+    "description": "Cookies built around what's inside or between them.",
+    "cookieIds": ["cookie_alfajor", "cookie_austrian_linzer", "cookie_dutch_stroopwafel"]
+  }
+]

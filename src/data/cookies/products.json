@@ -1,1 +1,531 @@
-[]
+[
+  {
+    "id": "product_stand_mixer",
+    "name": "Stand Mixer",
+    "category": "mixing-prep",
+    "description": "The workhorse behind creaming butter and sugar, and mixing stiffer doughs like shortbread or nankhatai.",
+    "editorialNote": "The workhorse behind creaming, whipping, and kneading -- worth the counter space.",
+    "apps": [
+      "cake",
+      "ramen",
+      "cookies"
+    ],
+    "contexts": [
+      "dough-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_stand_mixer-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77597966",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_thermapen",
+    "name": "Thermapen",
+    "category": "chocolate-decorating",
+    "description": "Instant, accurate reads take the guesswork out of tempering chocolate and checking caramel or dulce de leche.",
+    "editorialNote": "Instant, accurate reads take the guesswork out of ganache and syrup temperatures.",
+    "apps": [
+      "cake",
+      "ramen",
+      "cookies"
+    ],
+    "contexts": [
+      "chocolate-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_thermapen-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77601195",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_marble_pastry_board",
+    "name": "Marble Pastry Board",
+    "category": "mixing-prep",
+    "description": "A cool, stable surface for rolling out short, butter-heavy doughs like sablé or linzer without them softening too fast.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "contexts": [
+      "dough-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_marble_pastry_board-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77603136",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_measuring_set",
+    "name": "Ultimate Measuring Set",
+    "category": "mixing-prep",
+    "description": "Precise cup and spoon measures for doughs where ratio really matters.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "contexts": [
+      "dough-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_measuring_set-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77603371",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_digital_scale_cake",
+    "name": "Digital Scale",
+    "category": "mixing-prep",
+    "description": "Weight-based baking is the single biggest upgrade for consistent cookies, batch after batch.",
+    "editorialNote": "Weight-based baking is the single biggest upgrade for consistent results.",
+    "apps": [
+      "cake",
+      "ramen",
+      "cookies"
+    ],
+    "contexts": [
+      "dough-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_digital_scale_cake-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77173367",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_scraper_cake",
+    "name": "Bench Scraper -- Mixing & Portioning",
+    "category": "mixing-prep",
+    "description": "For dividing and handling dough cleanly during mixing and portioning.",
+    "apps": [
+      "cake",
+      "ramen",
+      "cookies"
+    ],
+    "contexts": [
+      "dough-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_scraper_cake-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77172564",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_offset_spatula",
+    "name": "Offset Spatula",
+    "category": "chocolate-decorating",
+    "description": "For spreading ganache, glazes, and icing evenly across a finished cookie.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "contexts": [
+      "chocolate-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_offset_spatula-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77099492",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_vanilla",
+    "name": "Vanilla",
+    "category": "ingredients-pantry",
+    "description": "The default aromatic behind most American cookie doughs.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "offers": [
+      {
+        "id": "product_vanilla-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77599215",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_milk_chocolate",
+    "name": "Baking Milk Chocolate",
+    "category": "ingredients-pantry",
+    "description": "A reliable baking chocolate for chip, chunk, or dipped applications.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "contexts": [
+      "chocolate-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_milk_chocolate-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77601825",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_cocoa_powder",
+    "name": "Cocoa Powder",
+    "category": "ingredients-pantry",
+    "description": "For chocolate cookie doughs and cocoa-forward finishes.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "contexts": [
+      "chocolate-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_cocoa_powder-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77634268",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_bourbon_vanilla_paste",
+    "name": "Bourbon Vanilla Paste",
+    "category": "ingredients-pantry",
+    "description": "Visible vanilla-bean flecks and a rounder flavor than extract alone.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "offers": [
+      {
+        "id": "product_bourbon_vanilla_paste-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77637631",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_almond_paste",
+    "name": "Almond Paste",
+    "category": "ingredients-pantry",
+    "description": "A structural and flavor base for almond-forward cookies like amaretti.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "offers": [
+      {
+        "id": "product_almond_paste-ltk",
+        "network": "ltk",
+        "url": "https://on.ltk.com/+3kwTgnpWXc1RMpvpDe6Q4Q",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_fancy_sprinkles",
+    "name": "Fancy Sprinkles",
+    "category": "chocolate-decorating",
+    "description": "A finishing touch for decorated sugar and holiday cookies.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "contexts": [
+      "chocolate-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_fancy_sprinkles-ltk",
+        "network": "ltk",
+        "url": "https://on.ltk.com/+TFzoOaCIF96-r8OAUCvEfQ",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_gel_colors",
+    "name": "Gel Colors",
+    "category": "chocolate-decorating",
+    "description": "Concentrated color for royal icing and decorated cookies without thinning the icing.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "contexts": [
+      "chocolate-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_gel_colors-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77602673",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_zester",
+    "name": "Zester",
+    "category": "cookie-tools",
+    "description": "For citrus-forward cookies and flavor finishing.",
+    "editorialNote": "Contextual crossover -- useful for citrus-forward cookie recipes.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "offers": [
+      {
+        "id": "product_zester-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77174896",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_decorating_kit",
+    "name": "Decorating Kit",
+    "category": "chocolate-decorating",
+    "description": "Piping tips for royal icing and decorated cookie work.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "contexts": [
+      "chocolate-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_decorating_kit-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77100253",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_cake_flour",
+    "name": "Cake Flour",
+    "category": "ingredients-pantry",
+    "description": "A lower-protein flour worth having on hand for a few especially tender, delicate cookie styles -- most cookie doughs still call for all-purpose.",
+    "editorialNote": "Contextual -- most cookies use all-purpose flour; this is for delicate/shortbread-adjacent styles specifically.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "offers": [
+      {
+        "id": "product_cake_flour-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77599880",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_earl_grey_tea",
+    "name": "Earl Grey Tea",
+    "category": "ingredients-pantry",
+    "description": "A classic pairing for buttery, restrained cookies like shortbread and sablé.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "offers": [
+      {
+        "id": "product_earl_grey_tea-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77600915",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_espresso_machine",
+    "name": "Espresso Machine",
+    "category": "serving-gifting",
+    "description": "Completes the experience for any coffee-forward cookie pairing.",
+    "editorialNote": "Completes the experience for any coffee-forward pairing.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "offers": [
+      {
+        "id": "product_espresso_machine-ltk",
+        "network": "ltk",
+        "url": "https://on.ltk.com/+J36FilnB_SaVOx966SJi4A",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_gold_leaf",
+    "name": "Edible Gold Leaf",
+    "category": "chocolate-decorating",
+    "description": "An editorial, gift-worthy finish for special-occasion cookies.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "offers": [
+      {
+        "id": "product_gold_leaf-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77638287",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_glass_cake_stand",
+    "name": "Covered Glass Cake Stand",
+    "category": "serving-gifting",
+    "description": "Doubles as an elegant cookie-serving stand for a gifted batch.",
+    "apps": [
+      "cake",
+      "cookies"
+    ],
+    "offers": [
+      {
+        "id": "product_glass_cake_stand-shopmy",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-77635581",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_precision_kitchen_scale",
+    "name": "Precision Kitchen Scale",
+    "category": "mixing-prep",
+    "description": "For weighing flour and butter precisely, where cookie-dough ratios genuinely matter.",
+    "apps": [
+      "ramen",
+      "cookies"
+    ],
+    "contexts": [
+      "dough-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_precision_kitchen_scale-ltk",
+        "network": "ltk",
+        "url": "https://on.ltk.com/+5mGHYJLtqujiExkzG8n-aA",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_bench_scraper_ramen",
+    "name": "Bench Scraper -- Kneading & Portioning",
+    "category": "mixing-prep",
+    "description": "For dividing and handling dough cleanly during kneading and portioning.",
+    "apps": [
+      "ramen",
+      "cookies"
+    ],
+    "contexts": [
+      "dough-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_bench_scraper_ramen-ltk",
+        "network": "ltk",
+        "url": "https://on.ltk.com/+ebOftqVUiaSPwe915qDu6Q",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_dough_scraper",
+    "name": "Dough Scraper",
+    "category": "mixing-prep",
+    "description": "A flexible scraper for handling soft or sticky cookie dough.",
+    "apps": [
+      "ramen",
+      "cookies"
+    ],
+    "contexts": [
+      "dough-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_dough_scraper-ltk",
+        "network": "ltk",
+        "url": "https://on.ltk.com/+eSi7CDir0L_AlcwG--7LSQ",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_large_wood_cutting_board",
+    "name": "Large Wood Cutting Board",
+    "category": "mixing-prep",
+    "description": "A large, stable surface for rolling and cutting cookie dough by hand.",
+    "apps": [
+      "ramen",
+      "cookies"
+    ],
+    "contexts": [
+      "dough-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_large_wood_cutting_board-ltk",
+        "network": "ltk",
+        "url": "https://on.ltk.com/+DWeFs9gktHqoadUXGJywVQ",
+        "status": "active"
+      }
+    ]
+  },
+  {
+    "id": "product_instant_read_thermometer",
+    "name": "Instant-Read Thermometer",
+    "category": "chocolate-decorating",
+    "description": "For tracking chocolate tempering temperatures and caramel/dulce de leche stages precisely.",
+    "apps": [
+      "ramen",
+      "cookies"
+    ],
+    "contexts": [
+      "chocolate-lab"
+    ],
+    "offers": [
+      {
+        "id": "product_instant_read_thermometer-ltk",
+        "network": "ltk",
+        "url": "https://on.ltk.com/+F_VgY0Nl9b6uiCh6HuSE3w",
+        "status": "active"
+      }
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+.flavor-profile-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.flavor-profile-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.flavor-profile-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.flavor-profile-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--raspberry);
+}

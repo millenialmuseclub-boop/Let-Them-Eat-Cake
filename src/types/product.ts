@@ -6,15 +6,11 @@
 // stay as-is (untouched, still shipping) rather than being retrofitted -- see
 // src/lib/products.ts for how the two coexist.
 
-export type ProductCategory =
-  | 'bowls-tableware'
-  | 'noodle-tools'
-  | 'broth-essentials'
-  | 'japanese-pantry'
-  | 'baking-tools'
-  | 'cookie-tools'
-  | 'pasta-tools'
-  | 'cookbooks'
+// Left as a plain string rather than a strict union: Ramen, Cookies, and Noodles each shipped
+// their own category vocabulary (e.g. Ramen's "broth-essentials" vs Cookies' "chocolate-decorating"
+// vs Noodles' own set), and forcing them into one shared enum would be exactly the kind of
+// generic-flattening the merge is explicitly not supposed to do to each world's domain model.
+export type ProductCategory = string
 
 export type AffiliateNetwork = 'shopmy' | 'ltk' | 'pending'
 

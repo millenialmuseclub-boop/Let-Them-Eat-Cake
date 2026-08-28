@@ -1,0 +1,215 @@
+[
+  {
+    "id": "north-america",
+    "worldRegion": "North America",
+    "introduction": "American cookie tradition is dominated by drop cookies -- a soft dough spooned or scooped directly onto a sheet pan -- built around butter, brown sugar, and mix-ins like chocolate or peanut butter.",
+    "definingTendencies": [
+      "Baking soda is the most common leavener, giving a soft, chewy result rather than a fully crisp one.",
+      "Recipes are usually documented precisely (level teaspoons, exact oven temperatures) rather than passed down by feel."
+    ],
+    "countries": [
+      "United States"
+    ],
+    "cookieIds": [
+      "cookie_chocolate_chip",
+      "cookie_snickerdoodle",
+      "cookie_peanut_butter",
+      "cookie_oatmeal_raisin",
+      "cookie_sugar_cookie",
+      "cookie_gingersnap",
+      "cookie_black_and_white",
+      "cookie_white_chocolate_macadamia"
+    ]
+  },
+  {
+    "id": "british-isles",
+    "worldRegion": "British Isles",
+    "introduction": "British and Scottish baking favors restrained sweetness and a heavy reliance on butter as the defining flavor, often in unleavened, slow-baked formats.",
+    "definingTendencies": [
+      "Shortbread's three-ingredient simplicity (butter, sugar, flour) is treated as a technique to master rather than a recipe to modify."
+    ],
+    "countries": [
+      "Scotland",
+      "United Kingdom"
+    ],
+    "cookieIds": [
+      "cookie_scottish_shortbread",
+      "cookie_digestive",
+      "cookie_empire_biscuit",
+      "cookie_melting_moments"
+    ]
+  },
+  {
+    "id": "western-europe",
+    "worldRegion": "Western Europe",
+    "introduction": "French and Dutch traditions each center on a single defining technique -- France's precise butter-and-flour sablé dough, and the Netherlands' cooked waffle-iron stroopwafel.",
+    "definingTendencies": [
+      "French sablés prioritize a precise fat-to-flour ratio over added flavorings.",
+      "This isn't a single throughline -- the two traditions here (baked dough vs. cooked wafer) are genuinely different techniques, not variations on one method."
+    ],
+    "countries": [
+      "France",
+      "Netherlands",
+      "Belgium"
+    ],
+    "cookieIds": [
+      "cookie_french_sable",
+      "cookie_dutch_stroopwafel",
+      "cookie_palets_bretons",
+      "cookie_langues_de_chat",
+      "cookie_florentine",
+      "cookie_macaron",
+      "cookie_speculaas",
+      "cookie_kletskoppen"
+    ]
+  },
+  {
+    "id": "central-europe",
+    "worldRegion": "Central Europe",
+    "introduction": "Austrian and broader Central European holiday baking favors nut-flour doughs and fruit preserves, often built for visual presentation as much as flavor.",
+    "definingTendencies": [
+      "Ground nuts (hazelnut, almond) commonly replace some of the flour for a shorter, richer crumb."
+    ],
+    "countries": [
+      "Austria",
+      "Germany",
+      "Switzerland"
+    ],
+    "cookieIds": [
+      "cookie_austrian_linzer",
+      "cookie_lebkuchen",
+      "cookie_pfeffernusse",
+      "cookie_vanillekipferl",
+      "cookie_springerle",
+      "cookie_spitzbuben"
+    ]
+  },
+  {
+    "id": "southern-europe",
+    "worldRegion": "Southern Europe",
+    "introduction": "Italian cookie tradition includes almond-based confections leavened mechanically (by whipped egg whites) rather than chemically, a genuinely different technique from butter-creamed doughs.",
+    "definingTendencies": [
+      "Almonds (or almond paste) frequently serve as both flavor and structural base, not just a mix-in."
+    ],
+    "countries": [
+      "Italy",
+      "Greece"
+    ],
+    "cookieIds": [
+      "cookie_italian_amaretti",
+      "cookie_biscotti",
+      "cookie_baci_di_dama",
+      "cookie_pizzelle",
+      "cookie_ricciarelli",
+      "cookie_brutti_ma_buoni",
+      "cookie_kourabiedes",
+      "cookie_melomakarona"
+    ]
+  },
+  {
+    "id": "iberia-latin-america",
+    "worldRegion": "Iberia & Latin America",
+    "introduction": "Spanish confectionery techniques carried to Latin America through colonization and were adapted locally -- polvorón in particular now has two distinct, equally legitimate lineages either side of the Atlantic.",
+    "definingTendencies": [
+      "An extremely high fat-to-flour ratio, specifically engineered for a cookie that crumbles rather than holds together, is the throughline across both the Spanish and Mexican versions."
+    ],
+    "countries": [
+      "Spain",
+      "Mexico"
+    ],
+    "cookieIds": [
+      "cookie_polvoron",
+      "cookie_marranitos",
+      "cookie_mantecados",
+      "cookie_almendrados"
+    ]
+  },
+  {
+    "id": "middle-east",
+    "worldRegion": "Middle East",
+    "introduction": "Levantine cookie tradition centers on semolina-based doughs, decoratively molded and filled with dates or nuts, closely tied to specific religious holidays across multiple faith communities.",
+    "definingTendencies": [
+      "A carved wooden mold both shapes and decoratively signals the filling inside -- form and function are the same object, not separate steps."
+    ],
+    "countries": [
+      "Lebanon",
+      "Syria",
+      "Palestine",
+      "Jordan",
+      "Iraq"
+    ],
+    "cookieIds": [
+      "cookie_maamoul",
+      "cookie_ghraybeh",
+      "cookie_barazek",
+      "cookie_kleicha"
+    ]
+  },
+  {
+    "id": "south-asia",
+    "worldRegion": "South Asia",
+    "introduction": "Indian teatime baking developed its own biscuit tradition through colonial-era trade contact, substituting ghee for butter and cardamom for the vanilla common in European versions.",
+    "definingTendencies": [
+      "Ghee, not butter, is the defining fat -- a genuinely different ingredient with a different flavor and melting behavior, not a simple swap."
+    ],
+    "countries": [
+      "India",
+      "Pakistan"
+    ],
+    "cookieIds": [
+      "cookie_indian_nankhatai",
+      "cookie_thekua",
+      "cookie_karachi_biscuit"
+    ]
+  },
+  {
+    "id": "latin-america",
+    "worldRegion": "Latin America",
+    "introduction": "Latin American cookie tradition frequently centers on dulce de leche as a filling, built around soft, tender doughs designed to complement rather than compete with a rich filling.",
+    "definingTendencies": [
+      "Dough tenderness (often via cornstarch) is prioritized over structural crispness, since the filling is the focal point."
+    ],
+    "countries": [
+      "Argentina",
+      "Uruguay"
+    ],
+    "cookieIds": [
+      "cookie_alfajor",
+      "cookie_pepas"
+    ]
+  },
+  {
+    "id": "oceania",
+    "worldRegion": "Oceania",
+    "introduction": "Australian and New Zealand cookie tradition includes at least one cookie whose recipe was directly shaped by a specific historical logistics problem rather than by regional taste alone.",
+    "definingTendencies": [
+      "Golden syrup and oats, rather than eggs, are the structural backbone -- a practical wartime substitution that became a permanent defining trait."
+    ],
+    "countries": [
+      "Australia",
+      "New Zealand"
+    ],
+    "cookieIds": [
+      "cookie_anzac_biscuit",
+      "cookie_monte_carlo"
+    ]
+  },
+  {
+    "id": "scandinavia",
+    "worldRegion": "Scandinavia",
+    "introduction": "Scandinavian holiday baking favors thin, snap-crisp spiced cookies and iron-pressed wafers, built for keeping through a long, dark winter rather than eating fresh in a single sitting.",
+    "definingTendencies": [
+      "Extreme thinness is a deliberate technical goal, not a stylistic accident -- pepparkakor and krumkake both fail if rolled or poured too thick.",
+      "Warm baking spice blends (ginger, cardamom, clove) function as a specifically festive/Jul signal, not an everyday flavor."
+    ],
+    "countries": [
+      "Sweden",
+      "Norway"
+    ],
+    "cookieIds": [
+      "cookie_pepparkakor",
+      "cookie_hallongrottor",
+      "cookie_krumkake"
+    ]
+  }
+]

@@ -3,6 +3,10 @@
 // instead of Ramen's own standalone 'ramenLibrary' localStorage key. That legacy key is imported
 // non-destructively into the unified store on first load (see savedItems.ts migrateLegacyData)
 // and left untouched on disk.
+//
+// NOTE: this file intentionally replaces the raw copy that scripts/port-world.mjs produces from
+// Ramen's own lib/myRamen.ts (which reimplements a second, standalone localStorage store) --
+// keep this adapter version, do not regenerate it from the sibling repo.
 import * as savedItems from '../savedItems'
 import type { RamenLibraryRecord } from '../../types/ramen/myRamen'
 

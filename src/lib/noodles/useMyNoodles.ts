@@ -3,6 +3,10 @@
 // (lib/savedItems.ts, world: 'noodles') instead of Noodles' own
 // 'let-them-eat-noodles:my-noodles:v1' localStorage key. That legacy key is imported
 // non-destructively on first load and left untouched on disk.
+//
+// NOTE: this file intentionally replaces the raw copy that scripts/port-world.mjs produces from
+// Noodles' own lib/useMyNoodles.ts (which reimplements a second, standalone localStorage store)
+// -- keep this adapter version, do not regenerate it from the sibling repo.
 import { useSyncExternalStore } from 'react'
 import * as savedItems from '../savedItems'
 import type { MyNoodlesEntry, MyNoodlesState } from '../../types/noodles/myNoodles'

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "r101_kansui",
+    "question": "What gives ramen noodles their characteristic springy bite and pale yellow tint?",
+    "choices": ["Egg yolks", "Kansui (alkaline mineral water)", "Baking soda alone", "Extra gluten flour"],
+    "correctIndex": 1,
+    "explanation": "Kansui is alkaline mineral water added to the noodle dough -- it's what makes ramen noodles springy and yellow-tinted, not egg (though some styles add egg too)."
+  },
+  {
+    "id": "r101_tare",
+    "question": "What is tare?",
+    "choices": ["The floated aroma oil on top of the broth", "A concentrated seasoning base spooned in before broth", "A type of ramen noodle", "A dipping sauce served on the side"],
+    "correctIndex": 1,
+    "explanation": "Tare is the concentrated salt-and-umami seasoning base -- shoyu, shio, or miso -- added to the bowl before the broth, not a garnish or side sauce."
+  },
+  {
+    "id": "r101_tonkotsu",
+    "question": "What makes a tonkotsu broth cloudy and white?",
+    "choices": ["Adding milk or cream", "A gentle, slow simmer", "A hard, rolling boil that emulsifies fat and collagen", "Blending the broth in a machine"],
+    "correctIndex": 2,
+    "explanation": "A hard, rolling boil (not a gentle simmer) emulsifies the pork bones' fat and collagen into the broth, turning it cloudy and milky-white."
+  },
+  {
+    "id": "r101_ajitama",
+    "question": "Which topping is a soft-boiled egg marinated in a soy-based liquid?",
+    "choices": ["Menma", "Ajitama", "Naruto", "Nori"],
+    "correctIndex": 1,
+    "explanation": "Ajitama is the marinated soft-boiled egg. Menma is fermented bamboo shoots, naruto is a fish cake, and nori is dried seaweed."
+  },
+  {
+    "id": "r101_kaedama",
+    "question": "What is kaedama?",
+    "choices": ["A type of broth", "A noodle-only refill ordered into your existing broth", "A dessert served after ramen", "A ticket-machine button for spice level"],
+    "correctIndex": 1,
+    "explanation": "Kaedama is a plain noodle refill added to your existing bowl of broth, most associated with Hakata-style tonkotsu shops."
+  },
+  {
+    "id": "r101_sapporo",
+    "question": "Which Hokkaido city is most associated with miso ramen?",
+    "choices": ["Hakodate", "Asahikawa", "Sapporo", "Kitakata"],
+    "correctIndex": 2,
+    "explanation": "Sapporo is credited with popularizing miso ramen in the mid-1950s, most famously through the shop Aji no Sanpei."
+  },
+  {
+    "id": "r101_mayu",
+    "question": "What is mayu?",
+    "choices": ["A clear seafood broth", "Toasted or lightly burnt black garlic oil", "A type of thick wheat noodle", "A pickled ginger topping"],
+    "correctIndex": 1,
+    "explanation": "Mayu is black garlic oil -- toasted or lightly burnt -- and the defining aroma oil of Kumamoto-style tonkotsu ramen."
+  },
+  {
+    "id": "r101_shio",
+    "question": "What does \"shio\" ramen refer to?",
+    "choices": ["Soy-sauce seasoned", "Salt seasoned", "Miso seasoned", "Spicy seasoned"],
+    "correctIndex": 1,
+    "explanation": "Shio means salt -- shio ramen is seasoned with a salt-based tare rather than soy sauce (shoyu) or miso."
+  },
+  {
+    "id": "r101_shokken",
+    "question": "What is a shokken?",
+    "choices": ["A ramen shop's head chef", "A vending-style ticket machine used to order", "A type of ceramic bowl", "A regional ramen festival"],
+    "correctIndex": 1,
+    "explanation": "A shokken is the vending-style ticket machine many shops use -- you pay first, select your order, and hand the printed ticket to staff."
+  }
+]

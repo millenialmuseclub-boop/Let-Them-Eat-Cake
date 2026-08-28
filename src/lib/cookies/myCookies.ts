@@ -3,6 +3,10 @@
 // Cookies' "baked" concept maps onto the unified store's "tried" field (both mean "I made this").
 // The legacy 'letThemEatCookies.myCookies' key is imported non-destructively on first load and
 // left untouched on disk.
+//
+// NOTE: this file intentionally replaces the raw copy that scripts/port-world.mjs produces from
+// Cookies' own lib/myCookies.ts (which reimplements a second, standalone localStorage store) --
+// keep this adapter version, do not regenerate it from the sibling repo.
 import * as savedItems from '../savedItems'
 import type { CookieLibraryRecord } from '../../types/cookies/myCookies'
 

@@ -1,0 +1,50 @@
+[
+  {
+    "ramenId": "ramen_sapporo_miso",
+    "title": "The Sapporo Miso",
+    "description": "You're warm, a little indulgent, and you show up for people when it's cold outside. You'd rather over-deliver on comfort than hold back.",
+    "whyItFits": "Sapporo Miso's rich, fermented depth and generous, warming character matches your instinct to go all-in on comfort."
+  },
+  {
+    "ramenId": "ramen_hakata_tonkotsu",
+    "title": "The Hakata Tonkotsu",
+    "description": "You believe the famous spot is famous for a reason, and you're patient enough to prove it. Once you commit to something, you commit all the way.",
+    "whyItFits": "Hakata Tonkotsu's hours-long emulsified broth rewards exactly that kind of patience and full commitment."
+  },
+  {
+    "ramenId": "ramen_tokyo_shoyu",
+    "title": "The Tokyo Shoyu",
+    "description": "You're the reliable one -- balanced, unfussy, and quietly excellent rather than loud about it. People trust your taste precisely because it isn't showing off.",
+    "whyItFits": "Tokyo Shoyu is ramen's own reference point -- balanced and restrained, not because it lacks ambition, but because restraint is the whole skill."
+  },
+  {
+    "ramenId": "ramen_hakodate_shio",
+    "title": "The Hakodate Shio",
+    "description": "You're understated and precise. You'd rather do less, better, than pile on more just to be noticed.",
+    "whyItFits": "Hakodate Shio is built entirely around restraint and clarity -- proof that a lighter touch can still be the most memorable one in the room."
+  },
+  {
+    "ramenId": "ramen_kitakata",
+    "title": "The Kitakata",
+    "description": "You're resourceful and low-key -- you don't need a big production to enjoy something fully, and you're just as happy with a simple, honest routine.",
+    "whyItFits": "Kitakata's whole identity is unpretentious -- a light, dependable bowl locals eat for breakfast without a second thought."
+  },
+  {
+    "ramenId": "ramen_yokohama_iekei",
+    "title": "The Yokohama Iekei",
+    "description": "You're bold and unapologetic about what you want -- rich flavor, no compromises, and you're not afraid to ask for exactly how you like it.",
+    "whyItFits": "Iekei shops are famous for taking detailed customer requests -- richness, noodle firmness, extra fat -- which suits someone who knows exactly what they want."
+  },
+  {
+    "ramenId": "ramen_asahikawa",
+    "title": "The Asahikawa",
+    "description": "You care about the story behind things, and you'll go out of your way to find something with real history rather than settling for whatever's closest.",
+    "whyItFits": "Asahikawa's double-soup method and insulating oil layer are a direct, functional response to its climate and history -- a bowl built by necessity, not trend."
+  },
+  {
+    "ramenId": "ramen_kumamoto",
+    "title": "The Kumamoto",
+    "description": "You're bold, social, and a little intense in the best way -- you'd rather make an experience out of something than eat it and move on.",
+    "whyItFits": "Kumamoto's signature black garlic oil is assertive and memorable -- a bowl that announces itself, the same way you do."
+  }
+]

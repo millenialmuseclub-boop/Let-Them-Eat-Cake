@@ -9,11 +9,20 @@ import cookiesProducts from '../data/cookies/products.json'
 import noodlesProducts from '../data/noodles/products.json'
 import type { AffiliateProduct } from '../types/product'
 
-export const products: AffiliateProduct[] = [
+// Some products are legitimately shared across more than one world's own source data (e.g. a
+// stand mixer useful in both Ramen's and Cookies' workshops) and can appear with the same id in
+// more than one of the three files above -- deduped here (first occurrence wins) so a Curated
+// Kitchen listing never renders/keys the same product twice.
+function dedupeById(items: AffiliateProduct[]): AffiliateProduct[] {
+  const seen = new Set<string>()
+  return items.filter((p) => (seen.has(p.id) ? false : (seen.add(p.id), true)))
+}
+
+export const products: AffiliateProduct[] = dedupeById([
   ...(ramenProducts as AffiliateProduct[]),
   ...(cookiesProducts as AffiliateProduct[]),
   ...(noodlesProducts as AffiliateProduct[]),
-]
+])
 
 export function getProductsForContext(context: string): AffiliateProduct[] {
   return products.filter((p) => p.contexts?.includes(context))

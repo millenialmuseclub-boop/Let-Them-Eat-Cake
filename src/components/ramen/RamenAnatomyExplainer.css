@@ -1,0 +1,40 @@
+/* Ported directly from Cake's CakeAnatomyExplainer.css (CAKE_REFERENCE_AUDIT.md §6). */
+
+.anatomy-explainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.anatomy-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.anatomy-step {
+  font: inherit;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.anatomy-step.active {
+  background: var(--raspberry);
+  border-color: var(--raspberry);
+  color: white;
+}
+
+.anatomy-detail p {
+  font-size: 15px;
+}
+
+.anatomy-interaction {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--bg);
+}

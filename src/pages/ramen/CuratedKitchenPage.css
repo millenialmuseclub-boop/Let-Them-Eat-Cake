@@ -1,0 +1,90 @@
+.curated-kitchen-section {
+  margin-top: 32px;
+}
+
+.curated-kitchen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.curated-kitchen-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.curated-kitchen-card h3 {
+  margin: 0;
+}
+
+.curated-kitchen-card p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.curated-kitchen-pending-tag {
+  background: var(--border);
+  color: var(--text);
+}
+
+/* Live/verified picks get a quiet accent border rather than a loud "for sale" treatment --
+   distinct from pending cards without turning the page into a storefront. */
+.curated-kitchen-card-active {
+  border-left: 3px solid var(--raspberry);
+}
+
+.curated-kitchen-editorial-tag {
+  background: var(--gold);
+  color: var(--cocoa);
+}
+
+.curated-kitchen-brand {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  opacity: 0.65;
+  margin: -4px 0 0;
+}
+
+.curated-kitchen-active-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.curated-kitchen-network-label {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.curated-kitchen-offers {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.curated-kitchen-needs-verification-tag {
+  background: transparent;
+  border: 1px solid var(--gold-strong);
+  color: var(--gold-strong);
+}
+
+.curated-kitchen-category-hero {
+  margin-bottom: 4px;
+}
+
+.curated-kitchen-category-hero img {
+  height: 160px;
+}
+
+/* Shared "View All N" pattern -- also used by RamenEncyclopediaIndexPage.css's A-Z preview. */
+.encyclopedia-view-all {
+  display: block;
+  margin: 16px auto 0;
+}

@@ -9,7 +9,7 @@ import './HubPage.css'
 type LandingHub = Extract<Hub, { kind: 'landing' }>
 
 export function HubPage({ hub }: { hub: LandingHub }) {
-  useDocumentTitle(`${hub.title} | Let Them Eat Cake`)
+  useDocumentTitle(`${hub.title} | Let Them Eat`)
 
   return (
     <main className="page hub-page">

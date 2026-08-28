@@ -1,0 +1,45 @@
+.find-your-bowl-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0 24px;
+}
+
+.find-your-bowl-question {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.find-your-bowl-options {
+  display: flex;
+  gap: 8px;
+}
+
+.find-your-bowl-option {
+  font: inherit;
+  text-transform: capitalize;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.find-your-bowl-option.active {
+  background: var(--raspberry);
+  border-color: var(--raspberry);
+  color: white;
+}
+
+.find-your-bowl-result {
+  text-align: center;
+}
+
+.find-your-bowl-result h2 {
+  margin-top: 12px;
+}

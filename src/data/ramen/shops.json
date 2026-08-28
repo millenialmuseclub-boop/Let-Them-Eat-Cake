@@ -1,0 +1,103 @@
+[
+  {
+    "id": "shop_ichiran",
+    "name": "Ichiran",
+    "city": "Fukuoka",
+    "region": "Kyushu",
+    "specialty": "Hakata tonkotsu",
+    "editorialNote": "Best known for its individual counter booths, designed to remove distraction and let a diner focus entirely on the bowl -- a genuinely original piece of ramen-shop design that's since become one of Hakata tonkotsu's most recognized global ambassadors.",
+    "relatedRamenIds": ["ramen_hakata_tonkotsu"],
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Ichiran+ramen+Fukuoka",
+    "officialWebsite": "https://en.ichiran.com",
+    "sourceNotes": "Widely documented chain origin story (individual booth seating); official website confirmed."
+  },
+  {
+    "id": "shop_ippudo",
+    "name": "Ippudo",
+    "city": "Fukuoka",
+    "region": "Kyushu",
+    "specialty": "Hakata tonkotsu",
+    "editorialNote": "One of the shops most credited with taking Hakata-style tonkotsu international, opening its first overseas location in the 2000s and helping introduce the style to diners well outside Japan.",
+    "relatedRamenIds": ["ramen_hakata_tonkotsu"],
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Ippudo+ramen+Fukuoka",
+    "officialWebsite": "https://www.ippudo.com",
+    "sourceNotes": "Widely documented international expansion history; official website confirmed."
+  },
+  {
+    "id": "shop_nankin_senryo",
+    "name": "Nankin Senryo",
+    "city": "Kurume",
+    "region": "Kyushu",
+    "specialty": "Kurume tonkotsu",
+    "editorialNote": "Credited in ramen histories as the 1937 origin point of the emulsified, hard-boiled tonkotsu technique -- the method later refined and popularized a short distance away in Hakata.",
+    "relatedRamenIds": ["ramen_kurume"],
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Nankin+Senryo+ramen+Kurume",
+    "sourceNotes": "Widely repeated origin attribution in ramen histories (1937, Kurume); current official website not confidently verified, so omitted rather than guessed."
+  },
+  {
+    "id": "shop_taishoken",
+    "name": "Taishoken",
+    "city": "Tokyo",
+    "region": "Kanto",
+    "specialty": "Tsukemen",
+    "editorialNote": "Founded by Kazuo Yamagishi in Higashi-Ikebukuro in 1961, and widely called the origin shop of tsukemen -- the separated noodle-and-dipping-broth format documented on this app's Tsukemen entry.",
+    "relatedRamenIds": ["ramen_tsukemen"],
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Taishoken+ramen+Higashi-Ikebukuro+Tokyo",
+    "sourceNotes": "Widely documented 1961 origin attribution (Kazuo Yamagishi); current official website not confidently verified, so omitted rather than guessed."
+  },
+  {
+    "id": "shop_yoshimuraya",
+    "name": "Yoshimuraya",
+    "city": "Yokohama",
+    "region": "Kanto",
+    "specialty": "Yokohama Iekei",
+    "editorialNote": "Founded by Yoshimura Minoru in 1974, and the shop the entire Iekei (\"house-style\") lineage traces back to -- the tonkotsu-shoyu hybrid documented on this app's Yokohama Iekei entry.",
+    "relatedRamenIds": ["ramen_yokohama_iekei"],
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Yoshimuraya+ramen+Yokohama",
+    "sourceNotes": "Widely documented 1974 origin attribution (Yoshimura Minoru); current official website not confidently verified, so omitted rather than guessed."
+  },
+  {
+    "id": "shop_menya_hanabi",
+    "name": "Menya Hanabi",
+    "city": "Nagoya",
+    "region": "Chubu",
+    "specialty": "Taiwan mazesoba",
+    "editorialNote": "Invented \"Taiwan mazesoba\" in 2008, the brothless tossed-noodle dish that spread nationwide from this single Nagoya shop within about a decade.",
+    "relatedRamenIds": ["ramen_nagoya_mazesoba"],
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Menya+Hanabi+Nagoya",
+    "sourceNotes": "Widely documented 2008 origin attribution; current official website not confidently verified, so omitted rather than guessed."
+  },
+  {
+    "id": "shop_misen",
+    "name": "Misen",
+    "city": "Nagoya",
+    "region": "Chubu",
+    "specialty": "Nagoya Taiwan Ramen",
+    "editorialNote": "Created Nagoya Taiwan Ramen in the 1970s under Taiwanese-born chef Kaku Gakusei -- the fiery, garlic-and-chili noodle soup named for the chef's origin, not the dish's.",
+    "relatedRamenIds": ["ramen_nagoya_taiwan"],
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Misen+ramen+Nagoya",
+    "sourceNotes": "Widely documented 1970s origin attribution (Kaku Gakusei); current official website not confidently verified, so omitted rather than guessed."
+  },
+  {
+    "id": "shop_aji_no_sanpei",
+    "name": "Aji no Sanpei",
+    "city": "Sapporo",
+    "region": "Hokkaido",
+    "specialty": "Sapporo miso",
+    "editorialNote": "Widely credited with pairing miso tare with ramen for the first time in the mid-1950s, making it the origin point of the style that became Sapporo's signature.",
+    "relatedRamenIds": ["ramen_sapporo_miso"],
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Aji+no+Sanpei+ramen+Sapporo",
+    "sourceNotes": "Widely repeated origin attribution in ramen histories (mid-1950s); current official website not confidently verified, so omitted rather than guessed."
+  },
+  {
+    "id": "shop_miyoshi",
+    "name": "Miyoshi",
+    "city": "Musashino",
+    "region": "Kanto",
+    "specialty": "Abura soba",
+    "editorialNote": "Credited with originating abura soba in Musashino in the 1950s -- the brothless, tossed-noodle dish that predates and developed independently of Nagoya's later, unrelated mazesoba.",
+    "relatedRamenIds": ["ramen_tokyo_abura_soba"],
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Miyoshi+ramen+Musashino",
+    "sourceNotes": "Widely repeated origin attribution (1950s, Musashino); current official website not confidently verified, so omitted rather than guessed."
+  }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "id": "collection_rich_comforting",
+    "title": "Rich & Comforting",
+    "description": "Heavy, warming bowls built for indulgence -- thick broths and generous fat.",
+    "ramenIds": [
+      "ramen_sapporo_miso",
+      "ramen_hakata_tonkotsu",
+      "ramen_yokohama_iekei",
+      "ramen_wakayama",
+      "ramen_kyoto",
+      "ramen_kurume"
+    ]
+  },
+  {
+    "id": "collection_clear_delicate",
+    "title": "Clear & Delicate",
+    "description": "Light, restrained broths that lead with clarity rather than richness.",
+    "ramenIds": [
+      "ramen_tokyo_shoyu",
+      "ramen_hakodate_shio",
+      "ramen_kitakata",
+      "ramen_yonezawa",
+      "ramen_sano",
+      "ramen_imabari_yakiton"
+    ]
+  },
+  {
+    "id": "collection_regional_classics",
+    "title": "Regional Classics",
+    "description": "The reference-point styles most representative of ramen's major regional traditions.",
+    "ramenIds": [
+      "ramen_tokyo_shoyu",
+      "ramen_sapporo_miso",
+      "ramen_hakata_tonkotsu",
+      "ramen_kurume",
+      "ramen_niigata_shoyu"
+    ]
+  },
+  {
+    "id": "collection_beginners",
+    "title": "Ramen for Beginners",
+    "description": "Approachable, widely recognizable bowls -- a good place to start exploring.",
+    "ramenIds": [
+      "ramen_tokyo_shoyu",
+      "ramen_hakata_tonkotsu",
+      "ramen_sapporo_miso",
+      "ramen_tori_paitan"
+    ]
+  },
+  {
+    "id": "collection_bold_garlicky",
+    "title": "Bold & Garlicky",
+    "description": "Assertive, aromatic bowls that don't hold back.",
+    "ramenIds": [
+      "ramen_kumamoto",
+      "ramen_yokohama_iekei",
+      "ramen_nagoya_taiwan",
+      "ramen_tantanmen",
+      "ramen_nagoya_mazesoba"
+    ]
+  },
+  {
+    "id": "collection_cold_weather",
+    "title": "Cold-Weather Bowls",
+    "description": "Hokkaido's own answer to brutal winters -- built to keep you warm to the last drop.",
+    "ramenIds": [
+      "ramen_sapporo_miso",
+      "ramen_asahikawa",
+      "ramen_hakodate_shio",
+      "ramen_muroran_curry",
+      "ramen_yonezawa"
+    ]
+  },
+  {
+    "id": "collection_brothless",
+    "title": "Brothless & Different",
+    "description": "No soup at all -- noodles tossed directly in tare, fat, and toppings instead of served submerged.",
+    "ramenIds": [
+      "ramen_nagoya_mazesoba",
+      "ramen_tokyo_abura_soba"
+    ]
+  }
+]

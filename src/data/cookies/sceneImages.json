@@ -1,0 +1,21 @@
+{
+  "scene_dough_lab": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Rolling_Out_Cookie_Dough.JPG",
+    "photographer": "ParentingPatch",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rolling_Out_Cookie_Dough.JPG"
+  },
+  "scene_chocolate_lab": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Melting_Chocolate_in_Double_Boiler.jpg",
+    "photographer": "John V. Pozniak",
+    "photographerUrl": "https://commons.wikimedia.org/wiki/user:Gentgeen",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Melting_Chocolate_in_Double_Boiler.jpg"
+  },
+  "scene_baking_tray": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Chocolate_chip_cookies_in_the_oven%2C_March_2008.jpg",
+    "photographer": "Sarah Fleming",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chocolate_chip_cookies_in_the_oven,_March_2008.jpg"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "ramen_tokyo_shoyu": {
+    "url": "https://images.pexels.com/photos/31393431/pexels-photo-31393431.jpeg",
+    "photographer": "Matheus Bertelli",
+    "photographerUrl": "https://www.pexels.com/@bertellifotografia/",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/delicious-japanese-ramen-with-egg-and-scallions-31393431/"
+  },
+  "ramen_hakata_tonkotsu": {
+    "url": "https://images.pexels.com/photos/35773118/pexels-photo-35773118.jpeg",
+    "photographer": "Nadin Sh",
+    "photographerUrl": "https://www.pexels.com/@nadin-sh-78971847/",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/japanese-tonkotsu-ramen-with-soft-boiled-egg-35773118/"
+  },
+  "ramen_sapporo_miso": {
+    "url": "https://images.pexels.com/photos/16594958/pexels-photo-16594958.jpeg",
+    "photographer": "Nadin Sh",
+    "photographerUrl": "https://www.pexels.com/@nadin-sh-78971847/",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/egg-and-noodles-in-ramen-16594958/"
+  },
+  "ramen_tsukemen": {
+    "url": "https://images.pexels.com/photos/30682730/pexels-photo-30682730.jpeg",
+    "photographer": "Airam Dato-on",
+    "photographerUrl": "https://www.pexels.com/@airamdphoto/",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/delicious-tsukemen-with-rich-broth-and-toppings-30682730/"
+  },
+  "ramen_tantanmen": {
+    "url": "https://images.pexels.com/photos/27672703/pexels-photo-27672703.jpeg",
+    "photographer": "Nadin Sh",
+    "photographerUrl": "https://www.pexels.com/@nadin-sh-78971847/",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/a-bowl-of-soup-with-noodles-and-vegetables-27672703/"
+  },
+  "ramen_tori_paitan": {
+    "url": "https://images.pexels.com/photos/32123670/pexels-photo-32123670.jpeg",
+    "photographer": "Markus Winkler",
+    "photographerUrl": "https://www.pexels.com/@markus-winkler-1430818/",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/delicious-japanese-ramen-bowl-with-toppings-32123670/"
+  },
+  "ramen_kurume": {
+    "url": "https://images.pexels.com/photos/29989995/pexels-photo-29989995.jpeg",
+    "photographer": "Deane Bayas",
+    "photographerUrl": "https://www.pexels.com/@dbaler/",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/delicious-bowl-of-gourmet-tonkotsu-ramen-29989995/"
+  },
+  "ramen_yokohama_iekei": {
+    "url": "https://images.pexels.com/photos/16068669/pexels-photo-16068669.jpeg",
+    "photographer": "Connor Scott McManus",
+    "photographerUrl": "https://www.pexels.com/@connorscottmcmanus/",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/a-bowl-of-ramen-with-meat-and-eggs-16068669/"
+  },
+  "ramen_kumamoto": {
+    "url": "https://images.pexels.com/photos/16068590/pexels-photo-16068590.jpeg",
+    "photographer": "Connor Scott McManus",
+    "photographerUrl": "https://www.pexels.com/@connorscottmcmanus/",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/a-bowl-of-ramen-with-meat-and-eggs-16068590/"
+  },
+  "ramen_nagoya_taiwan": {
+    "url": "https://images.pexels.com/photos/31417032/pexels-photo-31417032.jpeg",
+    "photographer": "zhen ciang huang",
+    "photographerUrl": "https://www.pexels.com/@zhen-ciang-huang-2150740552/",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/delicious-spicy-ramen-bowl-in-tokyo-restaurant-31417032/"
+  },
+  "ramen_imabari_yakiton": {
+    "url": "https://images.pexels.com/photos/29848266/pexels-photo-29848266.jpeg",
+    "photographer": "Eden FC",
+    "photographerUrl": "https://www.pexels.com/@eden-fc-620771246/",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/delicious-ramen-bowl-with-grilled-pork-29848266/"
+  },
+  "ramen_kyoto": {
+    "url": "https://images.pexels.com/photos/36968014/pexels-photo-36968014.jpeg",
+    "photographer": "Leongsan Tung",
+    "photographerUrl": "https://www.pexels.com/@leongsan/",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/delicious-ramen-bowl-in-kyoto-restaurant-36968014/"
+  },
+  "ramen_nagoya_mazesoba": {
+    "url": "https://images.pexels.com/photos/30153919/pexels-photo-30153919.jpeg",
+    "photographer": "Jeremy Li",
+    "photographerUrl": "https://www.pexels.com/@picswithjer/",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/delectable-asian-noodle-bowl-with-fresh-ingredients-30153919/"
+  }
+}
