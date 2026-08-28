@@ -39,6 +39,19 @@ export function hubWorld(hub: Hub): HubWorld {
   return hub.world ?? 'cake'
 }
 
+/** Which world a given pathname belongs to, purely from its URL prefix. `null` only for "/"
+    itself (the world-selector home, which belongs to no single world). Everything else defaults
+    to Cake, since Cake's own routes predate the merge and were never given a /cake prefix. Single
+    source of truth for BottomTabBar (which tabs to show), TopNavBar (which world's brand/saved
+    links + accent color to show), and App.tsx (which world's accent-color class to apply). */
+export function worldFromPathname(pathname: string): HubWorld | null {
+  if (pathname === '/') return null
+  if (pathname.startsWith('/ramen')) return 'ramen'
+  if (pathname.startsWith('/cookies')) return 'cookies'
+  if (pathname.startsWith('/noodles')) return 'noodles'
+  return 'cake'
+}
+
 export const HUBS: Hub[] = [
   {
     kind: 'landing',

@@ -1,0 +1,60 @@
+/* Per-world accent-color theming, scoped to a wrapper class on each world's route root
+   (`.ramen-world`, `.cookies-world`, `.noodles-world` -- see each world's Routes.tsx) rather than
+   redefined at `:root`.
+
+   This is a deliberately narrow fix for the "all worlds inherit Cake's palette" gap noted in the
+   consolidation report. The full risk analysis still holds: each sibling app's own index.css
+   redefines `:root` wholesale (background, ink, every utility class) and loading any of those
+   files verbatim would repaint Cake's shared UI after a visit to another world, since a lazily
+   loaded CSS chunk doesn't unload when navigating back (this is exactly the CSS-chunk-bleed
+   concern already on record). A *class-scoped* override doesn't have that problem: these rules
+   only apply to elements actually inside the wrapper div, so once you navigate away from a world
+   route (the wrapper unmounts), nothing lingers -- there is no bleed to guard against.
+
+   Only the accent tokens Cake's shared .card/.btn/.tag/link/heading rules actually key off of are
+   overridden (--raspberry/--raspberry-bg, aliased as each world's own primary accent; --gold as a
+   secondary accent where used) -- background/ink/border/shadow stay Cake's, so layout, spacing,
+   and cards read identically across worlds, only the accent color changes. Values are taken
+   directly from each sibling app's own :root tokens (light and dark), not invented. */
+
+.ramen-world {
+  /* Deep shoyu-brown -- Ramen's own primary accent. */
+  --raspberry: #a13d1f;
+  --raspberry-bg: rgba(196, 108, 58, 0.15);
+  --gold: #e0a83c;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ramen-world {
+    --raspberry: #e08a5c;
+    --raspberry-bg: rgba(224, 138, 92, 0.2);
+  }
+}
+
+.cookies-world {
+  /* Raspberry/plum -- Cookies' own primary accent (a Parisian-patisserie palette). */
+  --raspberry: #a3134f;
+  --raspberry-bg: rgba(163, 19, 79, 0.1);
+  --gold: #c9a24b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .cookies-world {
+    --raspberry: #f472b0;
+    --raspberry-bg: rgba(244, 114, 176, 0.18);
+  }
+}
+
+.noodles-world {
+  /* Jade/celadon -- Noodles' own primary accent (an editorial, non-"takeout" palette). */
+  --raspberry: #2f6f62;
+  --raspberry-bg: rgba(47, 111, 98, 0.1);
+  --gold: #b0413e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .noodles-world {
+    --raspberry: #6fc9b3;
+    --raspberry-bg: rgba(111, 201, 179, 0.16);
+  }
+}

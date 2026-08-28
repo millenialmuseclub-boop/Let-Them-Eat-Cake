@@ -1,22 +1,10 @@
 import { Link, useLocation } from 'react-router-dom'
-import { HUBS, isHubActive, hubWorld, type HubWorld } from '../data/hubs'
+import { HUBS, isHubActive, hubWorld, worldFromPathname } from '../data/hubs'
 import './BottomTabBar.css'
-
-/** Which world's tabs to show, based on the current path. Home ("/") shows no tabs -- the world
-    selector itself does the choosing. Everything else defaults to Cake, since Cake's own routes
-    (e.g. /discover, /workshop) were never given a /cake prefix -- they predate the merge and
-    must keep working exactly as they do today. */
-function worldForPath(pathname: string): HubWorld | null {
-  if (pathname === '/') return null
-  if (pathname.startsWith('/ramen')) return 'ramen'
-  if (pathname.startsWith('/cookies')) return 'cookies'
-  if (pathname.startsWith('/noodles')) return 'noodles'
-  return 'cake'
-}
 
 export function BottomTabBar() {
   const { pathname } = useLocation()
-  const world = worldForPath(pathname)
+  const world = worldFromPathname(pathname)
   if (!world) return null
 
   const tabs = HUBS.filter((hub) => hubWorld(hub) === world)

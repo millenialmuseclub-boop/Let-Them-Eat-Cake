@@ -1,26 +1,19 @@
 import { Link, useLocation } from 'react-router-dom'
+import { worldFromPathname, type HubWorld } from '../data/hubs'
 import './TopNavBar.css'
 
 type WorldNavConfig = { home: string; saved: string; label: string; emoji: string }
 
-const WORLD_CONFIG: Record<'cake' | 'ramen' | 'cookies' | 'noodles', WorldNavConfig> = {
+const WORLD_CONFIG: Record<HubWorld, WorldNavConfig> = {
   cake: { home: '/discover', saved: '/notebook', label: 'Cake', emoji: '🍰' },
   ramen: { home: '/ramen', saved: '/ramen/my-ramen', label: 'Ramen', emoji: '🍜' },
   cookies: { home: '/cookies', saved: '/cookies/my-cookies', label: 'Cookies', emoji: '🍪' },
   noodles: { home: '/noodles', saved: '/noodles/my-noodles', label: 'Noodles', emoji: '🍝' },
 }
 
-function currentWorld(pathname: string): keyof typeof WORLD_CONFIG | null {
-  if (pathname === '/') return null
-  if (pathname.startsWith('/ramen')) return 'ramen'
-  if (pathname.startsWith('/cookies')) return 'cookies'
-  if (pathname.startsWith('/noodles')) return 'noodles'
-  return 'cake'
-}
-
 export function TopNavBar() {
   const { pathname } = useLocation()
-  const world = currentWorld(pathname)
+  const world = worldFromPathname(pathname)
 
   if (!world) {
     // On the world-selector home itself, there's nothing to switch away from or save yet.

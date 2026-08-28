@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import './styles/worldAccents.css'
 import { HomePage } from './pages/HomePage'
 import { TimeMachinePage } from './pages/TimeMachinePage'
 import { AtlasPage } from './pages/AtlasPage'
@@ -34,7 +35,7 @@ import { HubPage } from './components/HubPage'
 import { TopNavBar } from './components/TopNavBar'
 import { BottomTabBar } from './components/BottomTabBar'
 import { FloatingBackButton } from './components/FloatingBackButton'
-import { HUBS, hubWorld } from './data/hubs'
+import { HUBS, hubWorld, worldFromPathname } from './data/hubs'
 
 // Each other world's page bundle is route-level code-split via React.lazy, so visiting Cake
 // (or Home) never pulls in Ramen/Cookies/Noodles' content -- each world's <World>Routes.tsx is
@@ -43,9 +44,20 @@ const RamenRoutes = lazy(() => import('./pages/ramen/RamenRoutes'))
 const CookiesRoutes = lazy(() => import('./pages/cookies/CookiesRoutes'))
 const NoodlesRoutes = lazy(() => import('./pages/noodles/NoodlesRoutes'))
 
+// Non-Cake worlds get their own accent color (see styles/worldAccents.css) applied across the
+// whole shell -- nav chrome included, not just in-page content -- via a class on a wrapper div
+// computed from the current route. The class only overrides a couple of accent tokens scoped to
+// itself, so it can never bleed into Cake's own pages: there's no :root involved, and the
+// override simply doesn't apply once its wrapper unmounts on navigating elsewhere.
+function worldAccentClass(pathname: string): string | undefined {
+  const world = worldFromPathname(pathname)
+  return world && world !== 'cake' ? `${world}-world` : undefined
+}
+
 function App() {
+  const { pathname } = useLocation()
   return (
-    <>
+    <div className={worldAccentClass(pathname)}>
       <TopNavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -116,7 +128,7 @@ function App() {
       </Routes>
       <FloatingBackButton />
       <BottomTabBar />
-    </>
+    </div>
   )
 }
 
