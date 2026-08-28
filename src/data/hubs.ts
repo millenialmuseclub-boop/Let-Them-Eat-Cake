@@ -9,6 +9,11 @@ export interface HubSubItem {
   cta?: string
 }
 
+/** Which of the four "Let Them Eat" worlds a hub belongs to. Omitted (undefined) means Cake --
+    Cake's original hubs predate the multi-world merge and were never tagged, so this keeps them
+    working unchanged. Every hub added for Ramen/Cookies/Noodles sets this explicitly. */
+export type HubWorld = 'cake' | 'ramen' | 'cookies' | 'noodles'
+
 export type Hub =
   | {
       kind: 'landing'
@@ -18,6 +23,7 @@ export type Hub =
       title: string
       description: string
       items: HubSubItem[]
+      world?: HubWorld
     }
   | {
       kind: 'direct'
@@ -26,7 +32,12 @@ export type Hub =
       navIcon: string
       title: string
       description: string
+      world?: HubWorld
     }
+
+export function hubWorld(hub: Hub): HubWorld {
+  return hub.world ?? 'cake'
+}
 
 export const HUBS: Hub[] = [
   {
@@ -172,10 +183,192 @@ export const HUBS: Hub[] = [
       },
     ],
   },
+
+  // --- Ramen world -----------------------------------------------------------------------
+  {
+    kind: 'landing',
+    path: '/ramen',
+    navLabel: 'Main',
+    navIcon: '🍜',
+    title: 'Ramen',
+    description: 'The world of ramen — broth, tare, noodles, and the culture around the bowl.',
+    world: 'ramen',
+    items: [
+      {
+        to: '/ramen/atlas',
+        title: 'Ramen Atlas',
+        description: 'Japan\'s ramen regions and cities, and the styles that define them.',
+        cta: 'Open Atlas →',
+      },
+      {
+        to: '/ramen/encyclopedia',
+        title: 'Ramen Encyclopedia',
+        description: 'The stories, broths, and toppings behind ramen\'s major regional styles.',
+        cta: 'Explore Encyclopedia →',
+      },
+    ],
+  },
+  {
+    kind: 'direct',
+    path: '/ramen/workshop',
+    navLabel: 'Workshop',
+    navIcon: '🍲',
+    title: 'Ramen Workshop',
+    description: 'Build a bowl and dive into the broth, tare, noodle, aroma oil, ajitama, and chashu labs.',
+    world: 'ramen',
+  },
+  {
+    kind: 'direct',
+    path: '/ramen/slurp',
+    navLabel: 'Slurp',
+    navIcon: '🥢',
+    title: 'Slurp',
+    description: 'Ramen culture and etiquette — vocabulary, shop-finding, trails, and a 101 quiz.',
+    world: 'ramen',
+  },
+  {
+    kind: 'landing',
+    path: '/ramen/sommelier',
+    navLabel: 'Sommelier',
+    navIcon: '🍶',
+    title: 'Ramen Sommelier',
+    description: 'Start from a bowl to find its best drink pairings, or start from a drink to find the bowls that match it.',
+    world: 'ramen',
+    items: [
+      {
+        to: '/ramen/sommelier/find',
+        title: 'Find a Pairing',
+        description: 'Start from a ramen and find its best drink pairings.',
+        cta: 'Find a Pairing →',
+      },
+      {
+        to: '/ramen/sommelier/pair',
+        title: 'Pair a Drink',
+        description: 'Start from a drink and find the ramen bowls that match it.',
+        cta: 'Pair a Drink →',
+      },
+    ],
+  },
+
+  // --- Cookies world ---------------------------------------------------------------------
+  {
+    kind: 'landing',
+    path: '/cookies',
+    navLabel: 'Main',
+    navIcon: '🍪',
+    title: 'Cookies',
+    description: 'The world of cookies — dough science, techniques, and cookie culture.',
+    world: 'cookies',
+    items: [
+      {
+        to: '/cookies/atlas',
+        title: 'Cookie Atlas',
+        description: 'Cookie traditions from around the world, region by region.',
+        cta: 'Open Atlas →',
+      },
+      {
+        to: '/cookies/encyclopedia',
+        title: 'Cookie Encyclopedia',
+        description: 'The stories, flavors, and techniques behind the world\'s cookies.',
+        cta: 'Explore Encyclopedia →',
+      },
+    ],
+  },
+  {
+    kind: 'direct',
+    path: '/cookies/workshop',
+    navLabel: 'Workshop',
+    navIcon: '🥣',
+    title: 'Cookie Workshop',
+    description: 'Cookie anatomy, dough science, build-a-cookie, and the doughtroubleshooter.',
+    world: 'cookies',
+  },
+  {
+    kind: 'direct',
+    path: '/cookies/crumb',
+    navLabel: 'Crumb',
+    navIcon: '🍫',
+    title: 'Crumb',
+    description: 'Cookie culture — vocabulary, trails, a 101 guide, and a quiz.',
+    world: 'cookies',
+  },
+  {
+    kind: 'direct',
+    path: '/cookies/sommelier',
+    navLabel: 'Sommelier',
+    navIcon: '🥛',
+    title: 'Cookie Sommelier',
+    description: 'Find the best drink pairing for any cookie.',
+    world: 'cookies',
+  },
+
+  // --- Noodles world ---------------------------------------------------------------------
+  {
+    kind: 'landing',
+    path: '/noodles',
+    navLabel: 'Main',
+    navIcon: '🍝',
+    title: 'Noodles',
+    description: 'The world of noodles — dish and noodle-type encyclopedias, and pasta culture.',
+    world: 'noodles',
+    items: [
+      {
+        to: '/noodles/atlas',
+        title: 'Noodle Atlas',
+        description: 'Noodle traditions from around the world, region by region.',
+        cta: 'Open Atlas →',
+      },
+      {
+        to: '/noodles/encyclopedia',
+        title: 'Dish Encyclopedia',
+        description: 'The stories and techniques behind the world\'s noodle dishes.',
+        cta: 'Explore Dishes →',
+      },
+      {
+        to: '/noodles/encyclopedia/noodle-types',
+        title: 'Noodle Types',
+        description: 'The noodle shapes and families themselves, independent of any one dish.',
+        cta: 'Explore Noodle Types →',
+      },
+    ],
+  },
+  {
+    kind: 'direct',
+    path: '/noodles/workshop',
+    navLabel: 'Workshop',
+    navIcon: '🍳',
+    title: 'Noodle Workshop',
+    description: 'Noodle-making technique labs and a troubleshooter for common problems.',
+    world: 'noodles',
+  },
+  {
+    kind: 'direct',
+    path: '/noodles/twirl',
+    navLabel: 'Twirl',
+    navIcon: '🌀',
+    title: 'Twirl',
+    description: 'Noodle culture and stories from around the world.',
+    world: 'noodles',
+  },
+  {
+    kind: 'direct',
+    path: '/noodles/sommelier',
+    navLabel: 'Sommelier',
+    navIcon: '🍷',
+    title: 'Noodle Sommelier',
+    description: 'Find the best drink pairing for any noodle dish.',
+    world: 'noodles',
+  },
 ]
 
-/** True if `pathname` is this hub's own path, or (for landing hubs) one of its sub-item paths. */
+/** True if `pathname` is this hub's own path, one of its sub-item paths (landing hubs), or --
+    for 'direct' hubs only, which render one real ported page rather than a generic tile list --
+    a path nested beneath it (e.g. a direct hub's own sub-routes, like `/cookies/sommelier/find`
+    under `/cookies/sommelier`). Landing hubs never match on nested paths: multiple sibling hubs
+    in the same world share a path prefix (e.g. `/ramen` and `/ramen/workshop`), so a landing
+    hub must only ever claim its own exact path or its own explicit items. */
 export function isHubActive(hub: Hub, pathname: string): boolean {
   if (pathname === hub.path) return true
-  return hub.kind === 'landing' && hub.items.some((item) => item.to === pathname)
+  if (hub.kind === 'direct') return pathname.startsWith(`${hub.path}/`)
+  return hub.items.some((item) => item.to === pathname)
 }

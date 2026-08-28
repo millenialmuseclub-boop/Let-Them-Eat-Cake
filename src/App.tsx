@@ -1,4 +1,6 @@
+import { lazy, Suspense } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
+import { HomePage } from './pages/HomePage'
 import { TimeMachinePage } from './pages/TimeMachinePage'
 import { AtlasPage } from './pages/AtlasPage'
 import { AtlasRegionPage } from './pages/AtlasRegionPage'
@@ -32,21 +34,28 @@ import { HubPage } from './components/HubPage'
 import { TopNavBar } from './components/TopNavBar'
 import { BottomTabBar } from './components/BottomTabBar'
 import { FloatingBackButton } from './components/FloatingBackButton'
-import { HUBS } from './data/hubs'
+import { HUBS, hubWorld } from './data/hubs'
+
+// Each other world's page bundle is route-level code-split via React.lazy, so visiting Cake
+// (or Home) never pulls in Ramen/Cookies/Noodles' content -- each world's <World>Routes.tsx is
+// the single lazy-loaded entry point for all of that world's pages, hub-landing routes included.
+const RamenRoutes = lazy(() => import('./pages/ramen/RamenRoutes'))
+const CookiesRoutes = lazy(() => import('./pages/cookies/CookiesRoutes'))
+const NoodlesRoutes = lazy(() => import('./pages/noodles/NoodlesRoutes'))
 
 function App() {
   return (
     <>
       <TopNavBar />
       <Routes>
-        <Route path="/" element={<Navigate to="/discover" replace />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/celebrate" element={<CelebrateLandingPage />} />
         <Route path="/discover" element={<DiscoverPage />} />
         <Route path="/my-cakes" element={<Navigate to="/discover" replace />} />
         <Route path="/my-collections" element={<Navigate to="/discover" replace />} />
         {HUBS.filter(
           (hub): hub is Extract<typeof hub, { kind: 'landing' }> =>
-            hub.kind === 'landing' && hub.path !== '/celebrate' && hub.path !== '/discover',
+            hub.kind === 'landing' && hubWorld(hub) === 'cake' && hub.path !== '/celebrate' && hub.path !== '/discover',
         ).map((hub) => (
           <Route key={hub.path} path={hub.path} element={<HubPage hub={hub} />} />
         ))}
@@ -78,6 +87,32 @@ function App() {
         <Route path="/traditions/:id" element={<BakingTraditionDetailPage />} />
         <Route path="/curated-kitchen" element={<CuratedKitchenPage />} />
         <Route path="/about" element={<AboutPage />} />
+
+        {/* Other worlds -- each is its own lazily-loaded chunk, mounted at /<world>/* */}
+        <Route
+          path="/ramen/*"
+          element={
+            <Suspense fallback={<div className="page" />}>
+              <RamenRoutes />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/cookies/*"
+          element={
+            <Suspense fallback={<div className="page" />}>
+              <CookiesRoutes />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/noodles/*"
+          element={
+            <Suspense fallback={<div className="page" />}>
+              <NoodlesRoutes />
+            </Suspense>
+          }
+        />
       </Routes>
       <FloatingBackButton />
       <BottomTabBar />

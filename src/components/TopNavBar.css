@@ -48,6 +48,43 @@
   transform: scale(1.05);
 }
 
+.top-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.top-nav-world-switcher {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.top-nav-world-switcher:hover {
+  background: var(--raspberry-bg);
+  transform: scale(1.03);
+}
+
+.top-nav-world-switcher-label {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .top-nav-world-switcher-label {
+    display: inline;
+  }
+}
+
 @media print {
   .top-nav-bar {
     display: none !important;

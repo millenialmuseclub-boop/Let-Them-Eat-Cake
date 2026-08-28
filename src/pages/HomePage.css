@@ -1,0 +1,50 @@
+.home-brand {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.home-brand h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.home-brand p {
+  max-width: 52ch;
+  margin: 0 auto;
+  opacity: 0.85;
+}
+
+.home-world-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.home-world-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  text-align: left;
+  padding: 24px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.home-world-card:hover {
+  transform: translateY(-2px);
+}
+
+.home-world-emoji {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.home-world-card h2 {
+  margin: 0;
+}
+
+.home-world-card p {
+  margin: 0;
+  opacity: 0.85;
+}

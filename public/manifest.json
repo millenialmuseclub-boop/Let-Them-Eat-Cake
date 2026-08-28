@@ -1,7 +1,7 @@
 {
-  "name": "Let Them Eat Cake",
-  "short_name": "Let Them Eat Cake",
-  "description": "The world's cake encyclopedia and sommelier — history, flavor pairings, and recipes for cakes from every corner of the globe.",
+  "name": "Let Them Eat",
+  "short_name": "Let Them Eat",
+  "description": "A culinary discovery app spanning four worlds — Cake, Ramen, Cookies, and Noodles.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fff8f0",
