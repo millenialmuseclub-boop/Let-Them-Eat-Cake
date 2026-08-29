@@ -21,8 +21,8 @@ const GROUP_ORDER = ['Understand the Bowl', 'Master the Components', 'Solve a Pr
 // Troubleshooter use real scene photography (sceneImages.json) instead, since none of them are
 // about one specific canonical ramen -- see lib/sceneImages.ts.
 const TILE_RAMEN_ID: Record<string, string> = {
-  '/ramen-anatomy': 'ramen_tokyo_shoyu',
-  '/build-a-bowl': 'ramen_hakata_tonkotsu',
+  '/ramen/ramen-anatomy': 'ramen_tokyo_shoyu',
+  '/ramen/build-a-bowl': 'ramen_hakata_tonkotsu',
 }
 
 // Calculators (Recipe Scaler, Broth Ratio, Noodle Hydration, Egg Timer) stay removed from V1
@@ -45,7 +45,7 @@ export function WorkshopPage() {
             <h2 className="workshop-group-heading">{group}</h2>
             <div className="discover-feature-grid">
               {groupItems.map((item) => {
-                const scene = getSceneImage(item.to.replace('/', ''))
+                const scene = getSceneImage(item.to.replace('/ramen/', ''))
                 const ramenId = TILE_RAMEN_ID[item.to]
                 return (
                   <DiscoverFeatureCard

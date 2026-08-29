@@ -1,0 +1,37 @@
+[This is a scratch file for copy-pasting into App Store Connect — not part of the app, safe to delete after use.]
+
+--- Paste into App Review Information > Notes ---
+
+App description and target audience:
+Let Them Eat Cake is a reference and inspiration app for home bakers and cake enthusiasts. It combines a cake encyclopedia (history, flavor profiles, traditional recipes, and regional baking traditions from around the world), an interactive world map ("Atlas") of regional cakes, a cake-pairing "Sommelier" tool, cake-building/technique tools (Assembly Lab, Cake Anatomy, Cake Stability calculator), and guided planning flows for weddings, birthdays, and other celebrations. Target audience: home bakers, cake decorators, and anyone planning a cake for an event who wants inspiration, technique guidance, or pairing suggestions.
+
+Setup instructions / login credentials:
+The app has no account system, login, or sign-up of any kind — there is nothing to set up. All content and features (encyclopedia, Atlas, Sommelier, Workshop tools, Celebrate planners) are available immediately on launch with no credentials required. A "Saved Cakes" favorites feature stores selections locally on-device (no server-side account).
+
+Device models and OS tested:
+[FILL IN: your iPhone model + iOS version, e.g. "iPhone 15 Pro, iOS 18.x" — tested via TestFlight]
+
+External services used:
+- Cloudflare R2 (static object storage): hosts the app's over-the-air web-bundle update manifest and update packages only. No user data is sent to it; it is polled for version-check purposes only.
+- Unsplash: source of editorial food/lifestyle photography used throughout the app, bundled into the app at build time (not fetched live) and credited in-app to the photographer on every photo.
+- ShopMy and LTK: affiliate product links in the "Curated Kitchen" section. These are outbound links that open in the system browser; no data is exchanged with these networks by the app itself, and no purchase or checkout flow happens in-app.
+There is no authentication service, payment processor, or AI/ML service used by the app.
+
+Regional differences:
+The app functions identically in all regions/locales — there is no region-gated content or region-specific feature set.
+
+Regulated industry / third-party material:
+The app is not in a regulated industry (it is a recipe/reference/lifestyle app). All photography is licensed stock photography from Unsplash, used under Unsplash's license terms with photographer attribution displayed on every image in the app.
+
+Account registration / paid content / user-generated content / sensitive permissions:
+None of these apply to this app:
+- No account registration, login, or account deletion flow exists.
+- No paid content, in-app purchases, or subscriptions exist.
+- No user-generated content, and therefore no content moderation/reporting/blocking needed.
+- The app requests no sensitive device permissions (no camera, location, contacts, or App Tracking Transparency prompts) — confirmed no usage-description keys are declared in the app's Info.plist.
+
+--- End paste ---
+
+Still needed from you (can't be done by me):
+1. Screen recording on a physical device (per Apple's item #1) — install the TestFlight build on your iPhone, start a screen recording, then walk through: launch app -> Main tab -> tap into a cake (e.g. Black Forest) -> Workshop tab -> Assembly Lab -> Sommelier tab -> Celebrate tab -> pick Birthday -> a couple of quiz steps. That covers the app's actual core flows. No login/purchase/UGC/permission screens exist to show, so the recording can be short (60-90 seconds is plenty).
+2. Attach that recording in the "Attachment" field of App Review Information, or reference it in your reply if App Store Connect asks for it via the resolution thread instead.

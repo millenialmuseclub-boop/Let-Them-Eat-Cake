@@ -19,6 +19,10 @@ import { SommelierFindPage } from './SommelierFindPage'
 import { SommelierPairPage } from './SommelierPairPage'
 import { MyRamenPage } from './MyRamenPage'
 import { CuratedKitchenPage } from './CuratedKitchenPage'
+import { PersonalityQuizPage } from './PersonalityQuizPage'
+import { CollectionsPage } from './CollectionsPage'
+import { CollectionDetailPage } from './CollectionDetailPage'
+import { RamenAnatomyPage } from './RamenAnatomyPage'
 
 // This is the single lazy-loaded entry point for the whole Ramen world (see App.tsx), mounted at
 // /ramen/*. All routes here are relative (no leading /ramen). The four "tab" landing routes
@@ -36,6 +40,10 @@ export default function RamenRoutes() {
       <Route path="atlas" element={<AtlasPage />} />
       <Route path="encyclopedia" element={<RamenEncyclopediaIndexPage />} />
       <Route path="ramen/:id" element={<RamenDetailPage />} />
+      <Route path="personality-quiz" element={<PersonalityQuizPage />} />
+      <Route path="collections" element={<CollectionsPage />} />
+      <Route path="collections/:id" element={<CollectionDetailPage />} />
+      <Route path="ramen-anatomy" element={<RamenAnatomyPage />} />
 
       <Route path="workshop" element={<WorkshopPage />} />
       <Route path="build-a-bowl" element={<BuildABowlPage />} />

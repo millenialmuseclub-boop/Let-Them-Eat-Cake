@@ -16,11 +16,11 @@ const mainHub = HUBS.find((hub) => hub.path === '/discover')!
 const mainItems = mainHub.kind === 'landing' ? mainHub.items : []
 
 const RAMEN_IDS: Record<string, string> = {
-  '/encyclopedia': 'ramen_sapporo_miso',
-  '/atlas': 'ramen_kurume',
-  '/personality-quiz': 'ramen_tokyo_shoyu',
-  '/collections': 'ramen_yokohama_iekei',
-  '/curated-kitchen': 'ramen_kumamoto',
+  '/ramen/encyclopedia': 'ramen_sapporo_miso',
+  '/ramen/atlas': 'ramen_kurume',
+  '/ramen/personality-quiz': 'ramen_tokyo_shoyu',
+  '/ramen/collections': 'ramen_yokohama_iekei',
+  '/ramen/curated-kitchen': 'ramen_kumamoto',
 }
 
 export function MainPage() {
