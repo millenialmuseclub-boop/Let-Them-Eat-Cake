@@ -27,8 +27,20 @@ export function subscribe(listener: () => void): () => void {
   return savedItems.subscribe(listener)
 }
 
+// useSyncExternalStore requires getSnapshot to be referentially stable when nothing changed --
+// savedItems.getByWorld('cookies') is now itself stable, but the .map() here would still
+// allocate a new array every call without this memoization, causing an infinite render loop
+// (React error #185).
+let lastInput: ReturnType<typeof savedItems.getByWorld> | undefined
+let lastOutput: CookieLibraryRecord[] = []
+
 export function getSnapshot(): CookieLibraryRecord[] {
-  return savedItems.getByWorld('cookies').map((r) => toRecord(r.id))
+  const input = savedItems.getByWorld('cookies')
+  if (input !== lastInput) {
+    lastInput = input
+    lastOutput = input.map((r) => toRecord(r.id))
+  }
+  return lastOutput
 }
 
 export function getRecord(cookieId: string): CookieLibraryRecord | undefined {

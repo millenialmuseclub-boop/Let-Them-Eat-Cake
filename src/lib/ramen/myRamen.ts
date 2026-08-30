@@ -27,8 +27,20 @@ export function subscribe(listener: () => void): () => void {
   return savedItems.subscribe(listener)
 }
 
+// useSyncExternalStore requires getSnapshot to be referentially stable when nothing changed --
+// savedItems.getByWorld('ramen') is now itself stable, but the .map() here would still allocate
+// a new array every call without this memoization, causing an infinite render loop (React error
+// #185) -- the same bug found and fixed on My Cookies / My Noodles.
+let lastInput: ReturnType<typeof savedItems.getByWorld> | undefined
+let lastOutput: RamenLibraryRecord[] = []
+
 export function getLibrary(): RamenLibraryRecord[] {
-  return savedItems.getByWorld('ramen').map((r) => toRecord(r.id))
+  const input = savedItems.getByWorld('ramen')
+  if (input !== lastInput) {
+    lastInput = input
+    lastOutput = input.map((r) => toRecord(r.id))
+  }
+  return lastOutput
 }
 
 export function getRecord(ramenId: string): RamenLibraryRecord | undefined {

@@ -22,11 +22,20 @@ function toEntry(dishId: string): MyNoodlesEntry | undefined {
   return { dishId, states, note: r.note, savedAt: new Date(r.savedAt).toISOString() }
 }
 
+// useSyncExternalStore requires getSnapshot to be referentially stable when nothing changed --
+// savedItems.getByWorld('noodles') is now itself stable, but the .map()/.filter() here would
+// still allocate a new array every call without this memoization, causing an infinite render
+// loop (React error #185).
+let lastInput: ReturnType<typeof savedItems.getByWorld> | undefined
+let lastOutput: MyNoodlesEntry[] = []
+
 function getSnapshot(): MyNoodlesEntry[] {
-  return savedItems
-    .getByWorld('noodles')
-    .map((r) => toEntry(r.id))
-    .filter((e): e is MyNoodlesEntry => Boolean(e))
+  const input = savedItems.getByWorld('noodles')
+  if (input !== lastInput) {
+    lastInput = input
+    lastOutput = input.map((r) => toEntry(r.id)).filter((e): e is MyNoodlesEntry => Boolean(e))
+  }
+  return lastOutput
 }
 
 function getServerSnapshot() {

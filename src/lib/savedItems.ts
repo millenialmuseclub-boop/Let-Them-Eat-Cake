@@ -154,6 +154,7 @@ function readLegacyRecords(): SavedItemRecord[] {
 
 function persist(items: SavedItemRecord[]) {
   cache = items
+  byWorldCache = {}
   if (hasWindow()) {
     const payload: SavedItemsPayload = { version: CURRENT_VERSION, items }
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
@@ -185,6 +186,13 @@ function migrateLegacyData(existing: SavedItemRecord[]): SavedItemRecord[] {
 
 let cache: SavedItemRecord[] = migrateLegacyData(loadCurrent())
 
+// useSyncExternalStore requires getSnapshot to return a referentially stable value when nothing
+// changed -- `cache.filter()` allocated a new array on every call regardless, so any component
+// reading it via useSyncExternalStore saw a "new" snapshot on every render and re-rendered
+// forever (React error #185). Cached here per world, invalidated only when persist() actually
+// replaces `cache`.
+let byWorldCache: Partial<Record<World, SavedItemRecord[]>> = {}
+
 const listeners = new Set<() => void>()
 
 export function subscribe(listener: () => void): () => void {
@@ -197,7 +205,7 @@ export function getAll(): SavedItemRecord[] {
 }
 
 export function getByWorld(world: World): SavedItemRecord[] {
-  return cache.filter((r) => r.world === world)
+  return (byWorldCache[world] ??= cache.filter((r) => r.world === world))
 }
 
 export function getRecord(world: World, id: string): SavedItemRecord | undefined {
