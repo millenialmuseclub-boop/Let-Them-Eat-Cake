@@ -50,11 +50,32 @@
   --raspberry: #2f6f62;
   --raspberry-bg: rgba(47, 111, 98, 0.1);
   --gold: #b0413e;
+  /* Everything below is a real token from Noodles' own :root, ported here because
+     noodles-content.css references these original names directly (e.g. .btn-primary uses
+     var(--jade), not var(--raspberry)) -- the extraction script deliberately excludes :root
+     redefinitions, so these were never brought over and every reference to them was invalid,
+     silently collapsing to transparent. That's the "blank gray box" where a photo should be
+     (--bg-ceramic), and would equally have made .btn-primary and other real elements invisible. */
+  --bg-ceramic: #eee6d5;
+  --jade: #2f6f62;
+  --jade-bg: rgba(47, 111, 98, 0.1);
+  --jade-strong: #1f4a40;
+  --lacquer: #a5342f;
+  --lacquer-bg: rgba(165, 52, 47, 0.1);
+  --brass-strong: #7c5f2e;
+  --heading: 'Fraunces', Georgia, 'Times New Roman', serif;
 }
 
 @media (prefers-color-scheme: dark) {
   .noodles-world {
     --raspberry: #6fc9b3;
     --raspberry-bg: rgba(111, 201, 179, 0.16);
+    --bg-ceramic: #232a25;
+    --jade: #6fc9b3;
+    --jade-bg: rgba(111, 201, 179, 0.16);
+    --jade-strong: #9fe0cd;
+    --lacquer: #e2857e;
+    --lacquer-bg: rgba(226, 133, 126, 0.16);
+    --brass-strong: #dcbb78;
   }
 }
