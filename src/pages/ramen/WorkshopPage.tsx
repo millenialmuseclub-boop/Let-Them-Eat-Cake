@@ -1,15 +1,13 @@
 import { HUBS } from '../../data/ramen/hubs'
 import { DiscoverFeatureCard } from '../../components/ramen/DiscoverFeatureCard'
-import { ComingSoonGrid } from '../../components/ramen/ComingSoonGrid'
 import { getSceneImage } from '../../lib/ramen/sceneImages'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import './WorkshopPage.css'
 
 // Bespoke page rather than the generic HubPage/HUBS-driven grid (same pattern as
 // Cake's Celebrate/Discover bespoke pages, CAKE_REFERENCE_AUDIT.md §8) -- Workshop
-// needs a "Coming Soon" disabled-tile treatment and grouped sections the generic
-// HubSubItem/HubPage shape has no concept of, since every Cake hub item is always a
-// live route rendered in one flat grid.
+// needs grouped sections the generic HubSubItem/HubPage shape has no concept of, since
+// every Cake hub item is always a live route rendered in one flat grid.
 const workshopHub = HUBS.find((hub) => hub.path === '/workshop')!
 const activeItems = workshopHub.kind === 'landing' ? workshopHub.items : []
 
@@ -26,8 +24,8 @@ const TILE_RAMEN_ID: Record<string, string> = {
 }
 
 // Calculators (Recipe Scaler, Broth Ratio, Noodle Hydration, Egg Timer) stay removed from V1
-// scope. Ajitama Lab, Chashu Lab, and Troubleshooter are now live and dropped from this list.
-const COMING_SOON: string[] = []
+// scope. Ajitama Lab, Chashu Lab, and Troubleshooter are now live. Nothing in this app family
+// is built to warrant a "Coming Soon" placeholder here.
 
 export function WorkshopPage() {
   useDocumentTitle('Workshop | Let Them Eat')
@@ -77,13 +75,6 @@ export function WorkshopPage() {
           />
         </div>
       </section>
-
-      {COMING_SOON.length > 0 && (
-        <>
-          <h2 className="coming-soon-heading">Coming Soon</h2>
-          <ComingSoonGrid items={COMING_SOON} />
-        </>
-      )}
     </main>
   )
 }

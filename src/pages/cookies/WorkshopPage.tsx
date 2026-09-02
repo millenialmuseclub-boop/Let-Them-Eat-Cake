@@ -25,11 +25,7 @@ export function WorkshopPage() {
   const populatedLabSlugs = new Set(LABS.map((l) => l.slug))
   const allLabs = [
     { slug: 'dough-lab', title: 'Dough Lab' },
-    { slug: 'flour-lab', title: 'Flour Lab' },
-    { slug: 'sugar-lab', title: 'Sugar Lab' },
-    { slug: 'fat-lab', title: 'Butter & Fat Lab' },
     { slug: 'chocolate-lab', title: 'Chocolate Lab' },
-    { slug: 'texture-lab', title: 'Texture Lab' },
   ]
 
   return (
@@ -77,20 +73,6 @@ export function WorkshopPage() {
               />
             ))}
         </div>
-        {allLabs.some((lab) => !populatedLabSlugs.has(lab.slug)) && (
-          <div className="workshop-group-grid" style={{ marginTop: 16 }}>
-            {allLabs
-              .filter((lab) => !populatedLabSlugs.has(lab.slug))
-              .map((lab) => (
-                <div className="workshop-link-card workshop-link-card-coming-soon" key={lab.slug} aria-disabled="true">
-                  <div className="coming-soon-row">
-                    <h3>{lab.title}</h3>
-                    <span className="coming-soon-tag">Coming Soon</span>
-                  </div>
-                </div>
-              ))}
-          </div>
-        )}
       </section>
 
       <section className="workshop-group" aria-labelledby="solve-heading">

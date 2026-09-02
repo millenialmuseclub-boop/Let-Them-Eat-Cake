@@ -1,16 +1,15 @@
 import { HUBS } from '../../data/ramen/hubs'
 import { DiscoverFeatureCard } from '../../components/ramen/DiscoverFeatureCard'
-import { ComingSoonGrid } from '../../components/ramen/ComingSoonGrid'
 import { getSceneImage } from '../../lib/ramen/sceneImages'
 import { displayImageUrl } from '../../lib/ramen/images'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import './LabPage.css'
 
-// Bespoke page, same pattern as WorkshopPage -- two active modes as DiscoverFeatureCard tiles,
-// Create a Bowl as a non-routed Coming Soon tile (master spec §22: CREATE waits until the Build
-// a Bowl compatibility model has grown further). Matches Cake's Sommelier visual structure
-// (feature-card grid into modes, CAKE_REFERENCE_AUDIT.md §7) rather than Cake's own
-// query-param mode toggle, since Ramen's two modes are real distinct routes here.
+// Bespoke page, same pattern as WorkshopPage -- active modes as DiscoverFeatureCard tiles.
+// Matches Cake's Sommelier visual structure (feature-card grid into modes,
+// CAKE_REFERENCE_AUDIT.md §7) rather than Cake's own query-param mode toggle, since Ramen's
+// modes are real distinct routes here. "Create a Bowl" (master spec §22) is not built anywhere
+// in the app family yet, so no placeholder tile is shown for it.
 const sommelierHub = HUBS.find((hub) => hub.path === '/sommelier')!
 const activeItems = sommelierHub.kind === 'landing' ? sommelierHub.items : []
 
@@ -44,9 +43,6 @@ export function SommelierPage() {
           />
         ))}
       </div>
-
-      <h2 className="coming-soon-heading">Coming Soon</h2>
-      <ComingSoonGrid items={['Create a Bowl']} />
     </main>
   )
 }

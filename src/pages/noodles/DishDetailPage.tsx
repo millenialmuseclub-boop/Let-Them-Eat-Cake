@@ -5,6 +5,7 @@ import { FlavorProfileBars } from '../../components/noodles/FlavorProfileBars';
 import { SavedDishControls } from '../../components/noodles/SavedDishControls';
 import { DishTile } from '../../components/noodles/DishTile';
 import { useDocumentTitle } from '../../lib/useDocumentTitle';
+import { getImperialEquivalent } from '../../utils/noodles/unitConversion';
 
 export function DishDetailPage() {
   const { id = '' } = useParams();
@@ -102,16 +103,20 @@ export function DishDetailPage() {
             <div key={group.groupName} style={{ marginBottom: 16 }}>
               <h3>{group.groupName}</h3>
               <ul style={{ paddingLeft: 18, margin: 0 }}>
-                {group.items.map((item, i) => (
-                  <li key={i}>
-                    <strong>
-                      {item.amount}
-                      {item.unit ? ` ${item.unit}` : ''}
-                    </strong>{' '}
-                    {item.ingredient}
-                    {item.note ? ` — ${item.note}` : ''}
-                  </li>
-                ))}
+                {group.items.map((item, i) => {
+                  const imperial = getImperialEquivalent(item.amount, item.unit, item.ingredient);
+                  return (
+                    <li key={i}>
+                      <strong>
+                        {item.amount}
+                        {item.unit ? ` ${item.unit}` : ''}
+                        {imperial ? ` (${imperial})` : ''}
+                      </strong>{' '}
+                      {item.ingredient}
+                      {item.note ? ` — ${item.note}` : ''}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

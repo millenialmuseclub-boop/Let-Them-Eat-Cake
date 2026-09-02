@@ -88,6 +88,10 @@ export function MainPage() {
         <Link to="/noodles/curated-kitchen">Shop the essentials →</Link>
       </div>
       <p className="prose">Bowls, hand-noodle tools, and broth essentials, reused from the family's verified affiliate catalog.</p>
+
+      <Link to="/about" className="discover-about-link">
+        About &amp; Legal
+      </Link>
     </div>
   );
 }

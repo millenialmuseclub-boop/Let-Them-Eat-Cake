@@ -105,7 +105,7 @@ export function AtlasPage() {
       <section className="atlas-row">
         <h2>🏮 Ramen Shops to Know</h2>
         <p className="atlas-row-note">
-          A small, accuracy-first set of historically significant shops -- not a directory, not reviews. See <Link to="/ramen/about">About &amp; Legal</Link> for sourcing notes.
+          A small, accuracy-first set of historically significant shops -- not a directory, not reviews.
         </p>
         <div className="atlas-shops-grid">
           {shops.map((shop) => (

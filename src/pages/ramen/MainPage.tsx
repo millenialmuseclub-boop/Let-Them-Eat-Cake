@@ -56,7 +56,7 @@ export function MainPage() {
         ))}
       </div>
 
-      <Link to="/ramen/about" className="discover-about-link">
+      <Link to="/about" className="discover-about-link">
         About &amp; Legal
       </Link>
     </main>
