@@ -15,8 +15,8 @@ const mainHub = HUBS.find((h) => h.path === '/cookies' && h.kind === 'landing')!
 const mainItems = mainHub.kind === 'landing' ? mainHub.items : []
 
 const FEATURE_COOKIE_IDS: Record<string, string> = {
-  '/cookies/atlas': 'cookie_french_sable',
   '/cookies/encyclopedia': 'cookie_chocolate_chip',
+  '/cookies/sommelier': 'cookie_french_sable',
 }
 
 export function CookiesMainPage() {

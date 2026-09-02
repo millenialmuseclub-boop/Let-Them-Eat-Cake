@@ -17,10 +17,10 @@ const mainItems = mainHub.kind === 'landing' ? mainHub.items : []
 
 const RAMEN_IDS: Record<string, string> = {
   '/ramen/encyclopedia': 'ramen_sapporo_miso',
-  '/ramen/atlas': 'ramen_kurume',
   '/ramen/personality-quiz': 'ramen_tokyo_shoyu',
   '/ramen/collections': 'ramen_yokohama_iekei',
-  '/ramen/curated-kitchen': 'ramen_kumamoto',
+  '/ramen/sommelier': 'ramen_kurume',
+  '/ramen/slurp': 'ramen_kumamoto',
 }
 
 export function MainPage() {

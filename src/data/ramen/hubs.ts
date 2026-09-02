@@ -48,12 +48,6 @@ export const HUBS: Hub[] = [
         cta: 'Explore Encyclopedia →',
       },
       {
-        to: '/ramen/atlas',
-        title: 'Ramen Atlas',
-        description: 'An interactive map of the regions and cities that define ramen — starting with Japan\'s defining traditions.',
-        cta: 'Open Atlas →',
-      },
-      {
         to: '/ramen/personality-quiz',
         title: 'Ramen Personality Quiz',
         description: 'A playful quiz about taste, habits, and travel style -- find the canonical ramen that matches your personality.',
@@ -66,10 +60,16 @@ export const HUBS: Hub[] = [
         cta: 'Browse Collections →',
       },
       {
-        to: '/ramen/curated-kitchen',
-        title: 'Curated Kitchen',
-        description: 'A considered edit of the bowls, tools, and pantry staples worth keeping close.',
-        cta: 'Enter the Kitchen →',
+        to: '/ramen/sommelier',
+        title: 'Ramen Sommelier',
+        description: 'Start from a bowl to find its best drink pairings, or start from a drink to find the bowls that match it.',
+        cta: 'Find a Pairing →',
+      },
+      {
+        to: '/ramen/slurp',
+        title: 'Slurp',
+        description: 'Ramen culture and etiquette -- vocabulary, shop-finding, trails, and a 101 quiz.',
+        cta: 'Explore Slurp →',
       },
     ],
   },
