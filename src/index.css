@@ -7,6 +7,12 @@
   --raspberry: #bf2743;
   --raspberry-bg: rgba(232, 141, 158, 0.15);
   --gold: #d4af37;
+  /* Shared editorial heading face -- the serif treatment established on the Home page (see
+     HomePage.css) is part of the umbrella app's typographic identity, not a per-world choice
+     (unlike --raspberry/--gold, which each world DOES override in worldAccents.css). Defining it
+     here makes the global h1/h2/h3 rule below resolve to serif everywhere by default; Noodles
+     still overrides it with its own Fraunces face via .noodles-world in worldAccents.css. */
+  --heading: Georgia, 'Times New Roman', serif;
 
   --text: var(--cocoa);
   --cocoa-strong: var(--cocoa);
