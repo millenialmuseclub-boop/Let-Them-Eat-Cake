@@ -18,13 +18,17 @@ export function SommelierPage() {
           <h2>FIND</h2>
           <p>Answer a few questions about your taste and get ranked cookie matches.</p>
         </Link>
-        <div className="workshop-link-card workshop-link-card-coming-soon">
-          <h2>PAIR</h2>
-          <span className="coming-soon-tag">Coming Soon</span>
+        <div className="workshop-link-card workshop-link-card-coming-soon" aria-disabled="true">
+          <div className="coming-soon-row">
+            <h2>PAIR</h2>
+            <span className="coming-soon-tag">Coming Soon</span>
+          </div>
         </div>
-        <div className="workshop-link-card workshop-link-card-coming-soon">
-          <h2>CREATE</h2>
-          <span className="coming-soon-tag">Coming Soon</span>
+        <div className="workshop-link-card workshop-link-card-coming-soon" aria-disabled="true">
+          <div className="coming-soon-row">
+            <h2>CREATE</h2>
+            <span className="coming-soon-tag">Coming Soon</span>
+          </div>
         </div>
       </div>
     </main>

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { getCookieImage, getSceneImage } from '../../lib/cookies/images'
 import { DiscoverFeatureCard } from '../../components/cookies/DiscoverFeatureCard'
+import { PageHeroBand } from '../../components/cookies/PageHeroBand'
 
 function RowThumb({ src, alt }: { src?: string; alt: string }) {
   if (!src) return null
@@ -19,11 +20,12 @@ export function CrumbPage() {
   useDocumentTitle('Crumb')
   return (
     <main className="page-container">
-      <header className="crumb-masthead">
-        <p className="crumb-masthead-eyebrow">A Small Cookie Culture Magazine</p>
-        <h1>Crumb</h1>
-        <p>Culture, history, vocabulary, and cookie trivia -- the stories behind the recipes.</p>
-      </header>
+      <PageHeroBand
+        image={getCookieImage('cookie_speculaas')}
+        eyebrow="A Small Cookie Culture Magazine"
+        title="Crumb"
+        description="Culture, history, vocabulary, and cookie trivia -- the stories behind the recipes."
+      />
 
       <section className="discover-feature-grid" aria-label="Featured Crumb stories">
         <DiscoverFeatureCard

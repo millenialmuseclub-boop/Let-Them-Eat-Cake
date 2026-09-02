@@ -80,9 +80,11 @@ export function WorkshopPage() {
             {allLabs
               .filter((lab) => !populatedLabSlugs.has(lab.slug))
               .map((lab) => (
-                <div className="workshop-link-card workshop-link-card-coming-soon" key={lab.slug}>
-                  <h3>{lab.title}</h3>
-                  <span className="coming-soon-tag">Coming Soon</span>
+                <div className="workshop-link-card workshop-link-card-coming-soon" key={lab.slug} aria-disabled="true">
+                  <div className="coming-soon-row">
+                    <h3>{lab.title}</h3>
+                    <span className="coming-soon-tag">Coming Soon</span>
+                  </div>
                 </div>
               ))}
           </div>

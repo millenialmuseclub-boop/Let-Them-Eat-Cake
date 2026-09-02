@@ -1267,21 +1267,19 @@ a {
 }
 
 
-.workshop-link-card-coming-soon { opacity: 0.55; }
+.workshop-link-card-coming-soon { opacity: 0.55; min-height: 0; padding: 10px 2px; }
 
-
-
-.crumb-masthead { margin-bottom: 20px; }
-
-
-.crumb-masthead-eyebrow {
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--raspberry);
-  margin: 0 0 4px;
+.coming-soon-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
+.coming-soon-row h2,
+.coming-soon-row h3 {
+  margin: 0;
+}
+
 
 
 .crumb-secondary-grid { margin-top: 24px; }
@@ -1289,12 +1287,12 @@ a {
 
 .coming-soon-tag {
   display: inline-block;
+  align-self: flex-start;
   font-size: 0.78rem;
   font-weight: 700;
   padding: 2px 10px;
   border-radius: 999px;
   background: var(--border);
-  margin-top: 6px;
 }
 
 

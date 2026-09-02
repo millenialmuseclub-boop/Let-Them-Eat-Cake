@@ -2,7 +2,7 @@ import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import vocabularyJson from '../../data/cookies/vocabulary.json'
 import type { VocabularyTerm } from '../../types/cookies/trails'
 import { PageHeroBand } from '../../components/cookies/PageHeroBand'
-import { getSceneImage } from '../../lib/cookies/images'
+import { getCookieImage } from '../../lib/cookies/images'
 
 const VOCABULARY = vocabularyJson as VocabularyTerm[]
 
@@ -11,7 +11,7 @@ export function VocabularyPage() {
   return (
     <main className="page-container">
       <PageHeroBand
-        image={getSceneImage('scene_baking_tray')}
+        image={getCookieImage('cookie_biscotti')}
         eyebrow="Crumb"
         title="Cookie Vocabulary"
         description="The terms bakers actually use, defined plainly."

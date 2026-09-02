@@ -4,7 +4,7 @@ import { useCookieLibrary } from '../../lib/cookies/useCookieLibrary'
 import { getCookie } from '../../lib/cookies/data'
 import { CookieThumbnail } from '../../components/cookies/CookieHeroImage'
 import { PageHeroBand } from '../../components/cookies/PageHeroBand'
-import { getSceneImage } from '../../lib/cookies/images'
+import { getCookieImage } from '../../lib/cookies/images'
 
 export function MyCookiesPage() {
   useDocumentTitle('My Cookies')
@@ -38,7 +38,7 @@ export function MyCookiesPage() {
   return (
     <main className="page-container my-cookies-page">
       <PageHeroBand
-        image={getSceneImage('scene_baking_tray')}
+        image={getCookieImage('cookie_black_and_white')}
         eyebrow="My Cookies"
         title="My Cookies"
         description="Your private cookie shelf -- saved locally on this device. Nothing here is sent anywhere."
