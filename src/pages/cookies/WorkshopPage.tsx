@@ -1,21 +1,23 @@
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { LABS } from '../../lib/cookies/data'
-import { getSceneImage } from '../../lib/cookies/images'
+import { getSceneImage, getCookieImage } from '../../lib/cookies/images'
 import { PageHeroBand } from '../../components/cookies/PageHeroBand'
 import { DiscoverFeatureCard } from '../../components/cookies/DiscoverFeatureCard'
 
 // Cake's and Ramen's own Workshop pages use full photo-led feature cards (DiscoverFeatureCard,
-// ~280px photo + gradient-scrim title) for every live lab -- Cookies Workshop previously used a
-// much smaller 52px inline row thumbnail for the same content, a visibly lower bar even though
-// the photography existed. Matched to the same card language here; each maps to a real,
-// already-sourced scene photo (dough/chocolate labs get their own; everything else reuses the
-// closest thematically-appropriate scene rather than going bare).
+// ~280px photo + gradient-scrim title) for every live lab. Only 3 generic "scene" photos exist
+// (dough/chocolate/baking-tray) -- reusing scene_dough_lab for Anatomy, Build-a-Cookie, AND Dough
+// Lab (plus the hero above) meant the same photo rendered 4 times on one screen. Anatomy and
+// Build-a-Cookie now use distinct real cookie photos from the 49-cookie library instead, so only
+// Dough Lab's card still legitimately shares the hero's dough photo (accurate, not lazy reuse).
 const LAB_SCENE: Record<string, string> = {
-  anatomy: 'scene_dough_lab',
-  'build-a-cookie': 'scene_dough_lab',
   'dough-lab': 'scene_dough_lab',
   'chocolate-lab': 'scene_chocolate_lab',
   troubleshooter: 'scene_baking_tray',
+}
+const LAB_COOKIE: Record<string, string> = {
+  anatomy: 'cookie_sugar_cookie',
+  'build-a-cookie': 'cookie_snickerdoodle',
 }
 
 export function WorkshopPage() {
@@ -47,14 +49,14 @@ export function WorkshopPage() {
             title="Cookie Anatomy"
             description="The nine components that make up every cookie, and what each one contributes."
             icon="🍪"
-            image={getSceneImage(LAB_SCENE.anatomy)}
+            image={getCookieImage(LAB_COOKIE.anatomy)}
           />
           <DiscoverFeatureCard
             to="/cookies/workshop/build-a-cookie"
             title="Build a Cookie"
             description="Combine components stage by stage and see how traditional -- or experimental -- the result is."
             icon="🥣"
-            image={getSceneImage(LAB_SCENE['build-a-cookie'])}
+            image={getCookieImage(LAB_COOKIE['build-a-cookie'])}
           />
         </div>
       </section>
@@ -112,6 +114,7 @@ export function WorkshopPage() {
             title="Curated Kitchen"
             description="Tools and ingredients from our editorial picks."
             icon="🛍️"
+            image={getCookieImage('cookie_macaron')}
           />
         </div>
       </section>
