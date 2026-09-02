@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { labs } from '../../data/noodles/workshop';
-import { getImageFor } from '../../data/noodles/images';
 import { PhotoFrame } from '../../components/noodles/PhotoFrame';
 import { useDocumentTitle } from '../../lib/useDocumentTitle';
 
@@ -36,31 +35,16 @@ export function WorkshopPage() {
             <div className="section-heading">
               <h2>{group.title}</h2>
             </div>
-            <div className="lab-list">
-              {groupLabs.map((lab) => {
-                const image = lab.relatedDishIds?.[0] ? getImageFor(lab.relatedDishIds[0]) : undefined;
-                return (
-                  <Link
-                    key={lab.slug}
-                    to={`/noodles/workshop/lab/${lab.slug}`}
-                    className="lab-item"
-                    style={{ display: 'flex', alignItems: 'center', gap: 12 }}
-                  >
-                    {image && (
-                      <img
-                        src={image.src}
-                        alt=""
-                        loading="lazy"
-                        style={{ width: 48, height: 48, borderRadius: 10, objectFit: 'cover', flexShrink: 0 }}
-                      />
-                    )}
-                    <div>
-                      <h3 style={{ marginBottom: 3 }}>{lab.title}</h3>
-                      <p style={{ fontSize: 13.5, opacity: 0.75, margin: 0 }}>{lab.summary}</p>
-                    </div>
-                  </Link>
-                );
-              })}
+            <div className="grid">
+              {groupLabs.map((lab) => (
+                <Link key={lab.slug} to={`/noodles/workshop/lab/${lab.slug}`} className="tile">
+                  <PhotoFrame subjectId={lab.relatedDishIds?.[0] ?? lab.slug} fallbackLabel={lab.title} variant="tile" />
+                  <div className="tile__scrim" />
+                  <div className="tile__label">
+                    <strong>{lab.title}</strong>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         );

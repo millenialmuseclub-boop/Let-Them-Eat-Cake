@@ -39,8 +39,14 @@ export function SommelierFindPage() {
 
   return (
     <div className="page-container">
-      <span className="eyebrow">Sommelier</span>
-      <h1>What Kind of Noodle Are You Craving?</h1>
+      <div className="hero-bleed">
+        <PhotoFrame subjectId="pad-thai" fallbackLabel="What Kind of Noodle Are You Craving?" variant="hero" />
+        <div className="hero-bleed__scrim" />
+        <div className="hero-bleed__content">
+          <span className="eyebrow">Sommelier</span>
+          <h1>What Kind of Noodle Are You Craving?</h1>
+        </div>
+      </div>
 
       {DIMENSIONS.map((dim) => (
         <div key={dim.key} style={{ marginTop: 16 }}>

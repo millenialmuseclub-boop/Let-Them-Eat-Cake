@@ -1,14 +1,21 @@
 import { Link } from 'react-router-dom';
 import { twirlStories, vocabulary } from '../../data/noodles/twirl';
 import { getImageFor } from '../../data/noodles/images';
+import { PhotoFrame } from '../../components/noodles/PhotoFrame';
 import { useDocumentTitle } from '../../lib/useDocumentTitle';
 
 export function TwirlPage() {
   useDocumentTitle('Twirl');
   return (
     <div className="page-container">
-      <span className="eyebrow">Twirl</span>
-      <h1>A Small Noodle Culture Magazine</h1>
+      <div className="hero-bleed">
+        <PhotoFrame subjectId="biang-biang-mian" fallbackLabel="A Small Noodle Culture Magazine" variant="hero" />
+        <div className="hero-bleed__scrim" />
+        <div className="hero-bleed__content">
+          <span className="eyebrow">Twirl</span>
+          <h1>A Small Noodle Culture Magazine</h1>
+        </div>
+      </div>
       <p className="prose" style={{ maxWidth: 560 }}>
         How the world eats noodles — technique stories, vocabulary, and the culture behind the bowl.
       </p>
