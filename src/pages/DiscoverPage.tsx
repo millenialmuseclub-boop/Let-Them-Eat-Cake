@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { HUBS } from '../data/hubs'
 import { getSceneImage } from '../lib/sceneImages'
+import { CakeHeroImage } from '../components/CakeHeroImage'
 import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
 import './DiscoverPage.css'
@@ -16,6 +17,7 @@ export function DiscoverPage() {
 
   return (
     <main className="page discover-page">
+      <CakeHeroImage cakeId="cake_black_forest" variant="hero" alt="A classic Black Forest cake, layered with cherries and cream" />
       <div className="discover-brand">
         <h1>Let Them Eat Cake</h1>
         <p>Explore cake culture, master pastry, discover perfect pairing and create the best cakes.</p>

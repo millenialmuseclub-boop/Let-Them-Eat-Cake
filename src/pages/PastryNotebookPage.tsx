@@ -17,6 +17,7 @@ export function PastryNotebookPage() {
 
   return (
     <main className="page notebook-page">
+      <CakeThumbnail cakeId="cake_pavlova" variant="hero" alt="A shelf of saved cakes and personalities, kept just for you" />
       <h1>Pastry Notebook</h1>
       <p>Your saved cakes and cake personalities, all in one place — stored right in your browser.</p>
 

@@ -7,6 +7,8 @@ import './cookies-content.css'
 import { CookiesMainPage } from './CookiesMainPage'
 import { CookieEncyclopediaIndexPage } from './CookieEncyclopediaIndexPage'
 import { CookieDetailPage } from './CookieDetailPage'
+import { CollectionsPage } from './CollectionsPage'
+import { CollectionDetailPage } from './CollectionDetailPage'
 import { AtlasPage } from './AtlasPage'
 import { WorkshopPage } from './WorkshopPage'
 import { CookieAnatomyPage } from './CookieAnatomyPage'
@@ -33,6 +35,8 @@ export default function CookiesRoutes() {
       <Route path="atlas" element={<AtlasPage />} />
       <Route path="encyclopedia" element={<CookieEncyclopediaIndexPage />} />
       <Route path="encyclopedia/:cookieId" element={<CookieDetailPage />} />
+      <Route path="collections" element={<CollectionsPage />} />
+      <Route path="collections/:collectionId" element={<CollectionDetailPage />} />
 
       <Route path="workshop" element={<WorkshopPage />} />
       <Route path="workshop/anatomy" element={<CookieAnatomyPage />} />

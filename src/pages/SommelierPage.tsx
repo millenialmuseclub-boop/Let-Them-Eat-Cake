@@ -96,6 +96,7 @@ export function SommelierPage() {
 
   return (
     <main className="page sommelier-page">
+      <CakeThumbnail cakeId="cake_dobos_torte" variant="hero" alt="A Dobos torte, sliced to show its thin layers and caramel top" />
       <h1>Cake Sommelier</h1>
       <p>
         Pair any cake with wine, coffee, tea, cocktails and more — pick a cake or a drink and we'll score the match with real flavor

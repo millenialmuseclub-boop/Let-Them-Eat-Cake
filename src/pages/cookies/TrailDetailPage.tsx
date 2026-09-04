@@ -1,6 +1,7 @@
 import { useParams, Navigate } from 'react-router-dom'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { CookieCard } from '../../components/cookies/CookieCard'
+import { CookieHeroImage } from '../../components/cookies/CookieHeroImage'
 import { getCookiesByIds } from '../../lib/cookies/data'
 import trailsJson from '../../data/cookies/trails.json'
 import type { CookieTrail } from '../../types/cookies/trails'
@@ -14,9 +15,11 @@ export function TrailDetailPage() {
 
   if (!trail) return <Navigate to="/cookies/crumb/trails" replace />
   const cookies = getCookiesByIds(trail.cookieIds)
+  const leadCookie = cookies[0]
 
   return (
     <main className="page-container">
+      {leadCookie && <CookieHeroImage cookieId={leadCookie.id} name={trail.title} />}
       <h1>{trail.title}</h1>
       <p>{trail.description}</p>
       <div className="cookie-grid">

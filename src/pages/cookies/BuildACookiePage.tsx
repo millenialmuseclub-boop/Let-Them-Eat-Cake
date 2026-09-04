@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { DOUGH_COMPONENTS } from '../../lib/cookies/data'
 import { checkCompatibility } from '../../lib/cookies/workshop'
+import { CookieHeroImage } from '../../components/cookies/CookieHeroImage'
 import type { DoughComponentCategory, CompatibilityTier } from '../../types/cookies/workshop'
 
 const STAGES: { category: DoughComponentCategory; label: string }[] = [
@@ -34,6 +35,7 @@ export function BuildACookiePage() {
 
   return (
     <main className="page-container build-a-cookie-page">
+      <CookieHeroImage cookieId="cookie_snickerdoodle" name="Build a Cookie" />
       <h1>Build a Cookie</h1>
       <p>
         Pick a component for each stage and see how the combination reads -- traditional, compatible,
