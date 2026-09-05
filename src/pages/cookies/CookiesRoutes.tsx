@@ -25,8 +25,6 @@ import { TrailDetailPage } from './TrailDetailPage'
 import { Cookie101QuizPage } from './Cookie101QuizPage'
 import { MyCookiesPage } from './MyCookiesPage'
 import { CuratedKitchenPage } from './CuratedKitchenPage'
-import { CollectionsPage } from './CollectionsPage'
-import { CollectionDetailPage } from './CollectionDetailPage'
 
 // Single lazy-loaded entry point for the whole Cookies world (see App.tsx), mounted at
 // /cookies/*. Workshop/Crumb/Sommelier/Main are each a real ported page.
@@ -55,9 +53,6 @@ export default function CookiesRoutes() {
       <Route path="crumb/trails" element={<TrailsIndexPage />} />
       <Route path="crumb/trails/:trailId" element={<TrailDetailPage />} />
       <Route path="crumb/quiz" element={<Cookie101QuizPage />} />
-
-      <Route path="collections" element={<CollectionsPage />} />
-      <Route path="collections/:collectionId" element={<CollectionDetailPage />} />
 
       <Route path="my-cookies" element={<MyCookiesPage />} />
       <Route path="curated-kitchen" element={<CuratedKitchenPage />} />
