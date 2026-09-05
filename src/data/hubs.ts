@@ -261,6 +261,12 @@ export const HUBS: Hub[] = [
         cta: 'Find a Pairing →',
       },
       {
+        to: '/cookies/collections',
+        title: 'Curated Collections',
+        description: 'Cookies grouped by theme — bake sale favorites, holiday classics, and more.',
+        cta: 'Browse Collections →',
+      },
+      {
         to: '/cookies/crumb',
         title: 'Crumb',
         description: 'Cookie culture — vocabulary, trails, a 101 guide, and a quiz.',

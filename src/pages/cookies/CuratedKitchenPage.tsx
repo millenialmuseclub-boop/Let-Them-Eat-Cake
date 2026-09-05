@@ -3,6 +3,7 @@ import { products } from '../../lib/products'
 import { AffiliateDisclosure } from '../../components/AffiliateDisclosure'
 import { PageHeroBand } from '../../components/cookies/PageHeroBand'
 import { ContextualCuratedKitchen } from '../../components/ContextualCuratedKitchen'
+import { getCookieImage } from '../../lib/cookies/images'
 
 const CATEGORY_LABELS: Record<string, string> = {
   bakeware: 'Bakeware',
@@ -26,6 +27,7 @@ export function CuratedKitchenPage() {
   return (
     <main className="page-container">
       <PageHeroBand
+        image={getCookieImage('cookie_scottish_shortbread')}
         eyebrow="Objects for the Cookie Kitchen"
         title="Curated Kitchen"
         description="A short, honest list of tools and ingredients we'd actually keep on our own counter, organized by what you're baking -- not a product database."

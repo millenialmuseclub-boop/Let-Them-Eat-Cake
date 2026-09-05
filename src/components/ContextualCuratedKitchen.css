@@ -56,6 +56,25 @@
   align-items: flex-start;
 }
 
+/* No per-product photography exists for these affiliate items (kitchen tools, bowls, pantry
+   goods) -- a branded placeholder keeps every card's layout consistent rather than leaving image
+   space out entirely, matching Cake's own AffiliateProductCard fallback treatment. */
+.curated-kitchen-product-image {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  background: var(--raspberry-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.curated-kitchen-product-image img {
+  width: 36%;
+  height: 36%;
+  object-fit: contain;
+}
+
 .curated-kitchen-card h3 {
   margin: 0;
 }

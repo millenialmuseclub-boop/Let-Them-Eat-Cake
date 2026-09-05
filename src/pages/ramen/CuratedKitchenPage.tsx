@@ -1,7 +1,10 @@
 import { ContextualCuratedKitchen } from '../../components/ContextualCuratedKitchen'
 import { AffiliateDisclosure } from '../../components/AffiliateDisclosure'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
+import { getSceneImage } from '../../lib/ramen/sceneImages'
+import { displayImageUrl } from '../../lib/ramen/images'
 import type { ProductCategory } from '../../types/product'
+import '../../components/ContextualCuratedKitchen.css'
 import './CuratedKitchenPage.css'
 
 const CATEGORY_LABEL: Record<ProductCategory, string> = {
@@ -16,9 +19,18 @@ const CATEGORY_ORDER: ProductCategory[] = ['bowls-tableware', 'noodle-tools', 'b
 
 export function CuratedKitchenPage() {
   useDocumentTitle('Curated Kitchen | Let Them Eat')
+  const scene = getSceneImage('curated-kitchen-bowls-tableware')
 
   return (
     <main className="page">
+      {scene && (
+        <div className="lab-hero-image">
+          <img src={displayImageUrl(scene, 'hero')} alt="Ceramic ramen bowls and tableware" loading="lazy" />
+          <span className="lab-hero-credit">
+            {scene.photographer} / {scene.source}
+          </span>
+        </div>
+      )}
       <h1>Curated Kitchen</h1>
       <p>A considered edit of the bowls, tools, and pantry staples worth keeping close -- content leads here, not commerce.</p>
 
