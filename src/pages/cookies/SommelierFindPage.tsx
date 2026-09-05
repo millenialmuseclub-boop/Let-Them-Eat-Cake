@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { findCookies, explainResult } from '../../lib/cookies/sommelier'
 import { CookieThumbnail } from '../../components/cookies/CookieHeroImage'
+import { PageHeroBand } from '../../components/cookies/PageHeroBand'
+import { getCookieImage } from '../../lib/cookies/images'
 import type { FindQuery } from '../../types/cookies/sommelier'
 import type { CookieFamily, CookieFlavorTag } from '../../types/cookies/cookie'
 
@@ -33,8 +35,12 @@ export function SommelierFindPage() {
 
   return (
     <main className="page-container find-page">
-      <h1>FIND</h1>
-      <p>Tell us what you like, and we'll match you to real cookies -- no black box, just a plain-language reason for each match.</p>
+      <PageHeroBand
+        image={getCookieImage('cookie_french_sable')}
+        eyebrow="Sommelier"
+        title="FIND"
+        description="Tell us what you like, and we'll match you to real cookies -- no black box, just a plain-language reason for each match."
+      />
 
       <form
         className="find-form"

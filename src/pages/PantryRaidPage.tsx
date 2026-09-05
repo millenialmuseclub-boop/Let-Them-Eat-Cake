@@ -149,6 +149,7 @@ export function PantryRaidPage() {
 
   return (
     <main className="page pantry-page">
+      <CakeThumbnail cakeId="cake_emergency_self_rising_pound_cake" variant="hero" alt="A simple emergency cake made from pantry staples" />
       <h1>Pantry Raid</h1>
       <p>Check off what you have on hand and we'll find the emergency cake that needs the least shopping.</p>
 

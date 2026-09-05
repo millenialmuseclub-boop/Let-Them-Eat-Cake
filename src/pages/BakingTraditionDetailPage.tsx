@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { bakingTraditions } from '../lib/data'
 import { getTraditionCakes } from '../lib/bakingTraditions'
+import { getCakeImage } from '../lib/images'
 import { CakeHeroImage } from '../components/CakeHeroImage'
 import './BakingTraditionDetailPage.css'
 
@@ -20,9 +21,11 @@ export function BakingTraditionDetailPage() {
   }
 
   const cakes = getTraditionCakes(tradition)
+  const coverCake = cakes.find((c) => getCakeImage(c.id))
 
   return (
     <main className="page tradition-detail-page">
+      {coverCake && <CakeHeroImage cakeId={coverCake.id} variant="hero" alt={tradition.title} />}
       <h1>{tradition.title}</h1>
       <p className="tradition-detail-specialty">{tradition.specialty}</p>
       <p>{tradition.description}</p>

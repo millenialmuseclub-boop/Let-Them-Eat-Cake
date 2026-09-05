@@ -1,14 +1,20 @@
 import { Link } from 'react-router-dom'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { COLLECTIONS, getCookie } from '../../lib/cookies/data'
-import { getCollectionFlagshipCookieId } from '../../lib/cookies/images'
+import { getCollectionFlagshipCookieId, getCookieImage } from '../../lib/cookies/images'
 import { CookieThumbnail } from '../../components/cookies/CookieHeroImage'
+import { PageHeroBand } from '../../components/cookies/PageHeroBand'
 
 export function CollectionsPage() {
   useDocumentTitle('Curated Collections')
   return (
     <main className="page-container">
-      <h1>Curated Collections</h1>
+      <PageHeroBand
+        image={getCookieImage('cookie_macaron')}
+        eyebrow="Curated Collections"
+        title="Curated Collections"
+        description="Editorial groupings of the Encyclopedia's cookies -- each collection references existing entries, nothing duplicated."
+      />
       <div className="collections-grid">
         {COLLECTIONS.map((collection) => {
           const flagshipId = getCollectionFlagshipCookieId(collection.id)
