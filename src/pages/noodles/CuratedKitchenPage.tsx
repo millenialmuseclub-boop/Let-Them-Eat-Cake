@@ -2,6 +2,8 @@ import { ContextualCuratedKitchen } from '../../components/ContextualCuratedKitc
 import { AffiliateDisclosure } from '../../components/AffiliateDisclosure'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { products } from '../../lib/products'
+import { getImageFor } from '../../data/noodles/images'
+import '../../components/ContextualCuratedKitchen.css'
 
 // Rewritten to use the shared canonical ContextualCuratedKitchen (Ramen's richest variant) and
 // the aggregated cross-world catalog (lib/products.ts), instead of Noodles' own bespoke
@@ -11,9 +13,18 @@ import { products } from '../../lib/products'
 export function CuratedKitchenPage() {
   useDocumentTitle('Curated Kitchen | Noodles')
   const categories = Array.from(new Set(products.filter((p) => p.apps.includes('noodles')).map((p) => p.category)))
+  const heroImage = getImageFor('pho-bo')
 
   return (
     <main className="page">
+      {heroImage && (
+        <div className="lab-hero-image">
+          <img src={heroImage.src} alt={heroImage.alt} loading="lazy" />
+          <span className="lab-hero-credit">
+            {heroImage.credit.creator} / Wikimedia Commons
+          </span>
+        </div>
+      )}
       <h1>Curated Kitchen</h1>
       <p>Bowls, hand-noodle tools, and pantry staples that translate directly to noodle cooking.</p>
       {categories.map((category) => (

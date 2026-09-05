@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { regions, countries, places, dishes } from '../../lib/noodles/data';
 import { getImageFor } from '../../data/noodles/images';
 import { useDocumentTitle } from '../../lib/useDocumentTitle';
+import '../../components/ContextualCuratedKitchen.css';
 
 /* One real, attributed dish photo per region, used as a visual header strip so the flagship
    "global variety" page doesn't open on pure text before any imagery appears -- picked as the
@@ -21,11 +22,22 @@ function regionSpotlightImage(regionId: string) {
    library) is documented as a Phase 2 addition in the master spec rather than built now, since
    Noodles needs a genuinely global default view rather than Ramen's single-country-scoped map,
    and that view logic deserves its own pass. */
+const ATLAS_HERO_DISH_ID = 'pho-bo';
+
 export function AtlasPage() {
   useDocumentTitle('Atlas');
+  const heroImage = getImageFor(ATLAS_HERO_DISH_ID);
 
   return (
     <div className="page-container">
+      {heroImage && (
+        <div className="lab-hero-image">
+          <img src={heroImage.src} alt={heroImage.alt} loading="lazy" />
+          <span className="lab-hero-credit">
+            {heroImage.credit.creator} / Wikimedia Commons
+          </span>
+        </div>
+      )}
       <span className="eyebrow">Atlas</span>
       <h1>Browse by Origin</h1>
       <p className="prose" style={{ maxWidth: 560 }}>

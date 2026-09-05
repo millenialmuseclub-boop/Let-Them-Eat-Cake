@@ -1,5 +1,7 @@
 import { getProductsByIds } from '../lib/affiliateProducts'
 import { AffiliateProductSet } from '../components/AffiliateProductSet'
+import { getSceneImage } from '../lib/sceneImages'
+import '../components/ContextualCuratedKitchen.css'
 
 const CORE_BAKING_IDS = [
   'product_stand_mixer',
@@ -49,8 +51,18 @@ const CAKES_TO_ORDER_IDS = [
 ]
 
 export function CuratedKitchenPage() {
+  const scene = getSceneImage('curated-kitchen')
+
   return (
     <main className="page curated-kitchen-page">
+      {scene && (
+        <div className="lab-hero-image">
+          <img src={scene.url} alt="A flat-lay of baking tools and kitchen equipment" loading="lazy" />
+          <span className="lab-hero-credit">
+            {scene.photographer} / Unsplash
+          </span>
+        </div>
+      )}
       <h1>Curated Kitchen</h1>
       <p>The tools, equipment, and ingredients we reach for again and again — organized by what you're doing.</p>
       <AffiliateProductSet title="Core Baking" products={getProductsByIds(CORE_BAKING_IDS)} />
