@@ -17,6 +17,10 @@ interface AtlasMapProps {
 // resolved through an ISO-country-code lookup table that has no equivalent at
 // city granularity, so that interaction is deliberately left out here rather
 // than force-fit.
+// zoom kept at 3.2 (not raised) so all of Japan -- Hokkaido to Kyushu -- stays visible on
+// initial load; the map's own pinch/scroll zoom (up to maxZoom 8 below) is how a diner
+// resolves the tightly-clustered Kanto pins (Tokyo, Yokohama, Ikebukuro, Musashino, all
+// within ~0.3 degrees of each other), same as any pin-map at country scale.
 const JAPAN_VIEW = { coordinates: [140, 38] as [number, number], zoom: 3.2 }
 
 export function AtlasMap({ entries, selectedCity, onSelectCity }: AtlasMapProps) {
@@ -39,7 +43,7 @@ export function AtlasMap({ entries, selectedCity, onSelectCity }: AtlasMapProps)
             return (
               <Marker key={entry.id} coordinates={entry.coordinates}>
                 <circle
-                  r={34}
+                  r={22}
                   fill="transparent"
                   className="atlas-map-pin-hitarea"
                   tabIndex={0}
