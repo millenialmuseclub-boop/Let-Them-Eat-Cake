@@ -1,13 +1,19 @@
 import { Link } from 'react-router-dom'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { TROUBLESHOOTER } from '../../lib/cookies/data'
+import { getSceneImage } from '../../lib/cookies/images'
+import { PageHeroBand } from '../../components/cookies/PageHeroBand'
 
 export function TroubleshooterPage() {
   useDocumentTitle('Troubleshooter')
   return (
     <main className="page-container">
-      <h1>Troubleshooter</h1>
-      <p>What went wrong with your cookies, and how to fix it next time.</p>
+      <PageHeroBand
+        image={getSceneImage('scene_baking_tray')}
+        eyebrow="Workshop"
+        title="Troubleshooter"
+        description="What went wrong with your cookies, and how to fix it next time."
+      />
       <div className="troubleshooter-list">
         {TROUBLESHOOTER.map((problem) => (
           <details className="traditions-accordion-item" key={problem.id}>

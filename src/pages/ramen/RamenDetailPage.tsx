@@ -1,7 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { getRamen, ramen } from '../../lib/ramen/data'
 import { getRegionEntryForRamen } from '../../lib/ramen/atlas'
-import { RamenHeroImage } from '../../components/ramen/RamenHeroImage'
 import { RamenThumbnail } from '../../components/ramen/RamenThumbnail'
 import { FlavorProfileBars } from '../../components/ramen/FlavorProfileBars'
 import { SavedRamenControls } from '../../components/ramen/SavedRamenControls'
@@ -44,7 +43,7 @@ export function RamenDetailPage() {
   return (
     <main className="page ramen-detail-page">
       <div className="card ramen-detail-hero">
-        <RamenHeroImage ramenId={item.id} variant="hero" alt={item.name} />
+        <RamenThumbnail ramenId={item.id} variant="hero" alt={item.name} />
         <div className="ramen-detail-tags">
           {region && <span className="tag">{region.cityMicroRegion}</span>}
           <span className="tag">{VARIATION_LABEL[item.variationTag]}</span>

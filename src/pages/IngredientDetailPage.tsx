@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import { getIngredient } from '../lib/ingredients'
 import { getCake } from '../lib/data'
 import { getProductsForIngredient } from '../lib/affiliateProducts'
-import { CakeHeroImage } from '../components/CakeHeroImage'
+import { CakeThumbnail } from '../components/CakeThumbnail'
 import { AffiliateProductSet } from '../components/AffiliateProductSet'
 import './IngredientDetailPage.css'
 
@@ -56,7 +56,7 @@ export function IngredientDetailPage() {
         <div className="ingredient-cake-grid">
           {cakes.map((cake) => (
             <Link key={cake.id} to={`/cake/${cake.id}`} className="card ingredient-cake-card">
-              <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
+              <CakeThumbnail cakeId={cake.id} variant="thumbnail" alt={cake.name} />
               <h3>{cake.name}</h3>
               <p>{cake.description}</p>
             </Link>

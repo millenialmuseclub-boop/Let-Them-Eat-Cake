@@ -6,7 +6,6 @@ import { FlavorProfileBars } from '../components/FlavorProfileBars'
 import { CakeOriginStory } from '../components/CakeOriginStory'
 import { RecipeCard } from '../components/RecipeCard'
 import { SaveButton } from '../components/SaveButton'
-import { CakeHeroImage } from '../components/CakeHeroImage'
 import { CakeThumbnail } from '../components/CakeThumbnail'
 import { AffiliateProductSet } from '../components/AffiliateProductSet'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
@@ -62,7 +61,7 @@ export function CakeDetailPage() {
   return (
     <main className="page cake-detail-page">
       <div className="card cake-detail-hero">
-        <CakeHeroImage cakeId={cake.id} variant="hero" alt={cake.name} />
+        <CakeThumbnail cakeId={cake.id} variant="hero" alt={cake.name} />
         <div className="cake-detail-tags">
           {locationLabel && <span className="tag">{locationLabel}</span>}
           <span className="tag cake-detail-texture-tag">{cake.texture}</span>

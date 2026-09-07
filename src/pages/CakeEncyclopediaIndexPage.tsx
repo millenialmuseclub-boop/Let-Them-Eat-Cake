@@ -6,7 +6,6 @@ import { getTraditionCakes } from '../lib/bakingTraditions'
 import { getCakeOfTheDay } from '../lib/discovery'
 import { getFirstPhotographedCakeId } from '../lib/images'
 import { CakeThumbnail } from '../components/CakeThumbnail'
-import { CakeHeroImage } from '../components/CakeHeroImage'
 import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
 import type { MoodTag } from '../types/persona'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
@@ -126,7 +125,7 @@ export function CakeEncyclopediaIndexPage() {
           <section className="encyclopedia-row">
             <h2>🎂 Cake of the Day</h2>
             <Link to={`/cake/${cakeOfTheDay.id}`} className="card encyclopedia-cake-of-day">
-              <CakeHeroImage cakeId={cakeOfTheDay.id} variant="hero" alt={cakeOfTheDay.name} />
+              <CakeThumbnail cakeId={cakeOfTheDay.id} variant="hero" alt={cakeOfTheDay.name} />
               <h3>{cakeOfTheDay.name}</h3>
               <p>{cakeOfTheDay.description}</p>
             </Link>

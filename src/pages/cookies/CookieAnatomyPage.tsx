@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { COOKIE_ANATOMY } from '../../lib/cookies/data'
+import { getCookieImage } from '../../lib/cookies/images'
+import { PageHeroBand } from '../../components/cookies/PageHeroBand'
 
 export function CookieAnatomyPage() {
   useDocumentTitle('Cookie Anatomy')
@@ -8,8 +10,12 @@ export function CookieAnatomyPage() {
 
   return (
     <main className="page-container">
-      <h1>Cookie Anatomy</h1>
-      <p>Every cookie is built from the same nine kinds of components, combined differently.</p>
+      <PageHeroBand
+        image={getCookieImage('cookie_sugar_cookie')}
+        eyebrow="Workshop"
+        title="Cookie Anatomy"
+        description="Every cookie is built from the same nine kinds of components, combined differently."
+      />
 
       <div className="anatomy-flow">
         {COOKIE_ANATOMY.map((stage) => {

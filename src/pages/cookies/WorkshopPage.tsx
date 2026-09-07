@@ -6,18 +6,17 @@ import { DiscoverFeatureCard } from '../../components/cookies/DiscoverFeatureCar
 
 // Cake's and Ramen's own Workshop pages use full photo-led feature cards (DiscoverFeatureCard,
 // ~280px photo + gradient-scrim title) for every live lab. Only 3 generic "scene" photos exist
-// (dough/chocolate/baking-tray) -- reusing scene_dough_lab for Anatomy, Build-a-Cookie, AND Dough
-// Lab (plus the hero above) meant the same photo rendered 4 times on one screen. Anatomy and
-// Build-a-Cookie now use distinct real cookie photos from the 49-cookie library instead, so only
-// Dough Lab's card still legitimately shares the hero's dough photo (accurate, not lazy reuse).
+// (dough/chocolate/baking-tray). The hero band above already uses scene_dough_lab, so Dough Lab's
+// own card uses a real butter-dough cookie photo instead of repeating the hero image on the same
+// screen; Chocolate Lab and Troubleshooter still legitimately use their own distinct scene photos.
 const LAB_SCENE: Record<string, string> = {
-  'dough-lab': 'scene_dough_lab',
   'chocolate-lab': 'scene_chocolate_lab',
   troubleshooter: 'scene_baking_tray',
 }
 const LAB_COOKIE: Record<string, string> = {
   anatomy: 'cookie_sugar_cookie',
   'build-a-cookie': 'cookie_snickerdoodle',
+  'dough-lab': 'cookie_scottish_shortbread',
 }
 
 export function WorkshopPage() {

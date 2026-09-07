@@ -7,7 +7,7 @@ import { getRelatedCakes, getTopPairings } from '../lib/encyclopedia'
 import { RecipeCard } from '../components/RecipeCard'
 import { ShareCard } from '../components/ShareCard'
 import { TimeMachineTimeline } from '../components/TimeMachineTimeline'
-import { CakeHeroImage } from '../components/CakeHeroImage'
+import { CakeThumbnail } from '../components/CakeThumbnail'
 import { SaveButton } from '../components/SaveButton'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
 import { hapticSuccess } from '../lib/haptics'
@@ -95,7 +95,7 @@ export function TimeMachinePage() {
           )}
 
           <div className="card">
-            <CakeHeroImage cakeId={cake.id} variant="hero" alt={cake.name} />
+            <CakeThumbnail cakeId={cake.id} variant="hero" alt={cake.name} />
             <span className="tag">{entry.decadeLabel}</span>
             <h2>{cake.name}</h2>
             <p>{cake.description}</p>
@@ -137,7 +137,7 @@ export function TimeMachinePage() {
               <div className="cake-detail-related-grid">
                 {relatedCakes.map(({ cake: related, reason }) => (
                   <Link key={related.id} to={`/cake/${related.id}`} className="card cake-detail-related-card">
-                    <CakeHeroImage cakeId={related.id} variant="thumbnail" alt={related.name} />
+                    <CakeThumbnail cakeId={related.id} variant="thumbnail" alt={related.name} />
                     <h3>{related.name}</h3>
                     <p>{reason}</p>
                   </Link>
