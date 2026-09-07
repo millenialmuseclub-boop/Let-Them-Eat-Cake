@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { regions, traditions, shops, getRamen } from '../../lib/ramen/data'
 import { getEntryForCity, getAllCities } from '../../lib/ramen/atlas'
 import { AtlasMap } from '../../components/ramen/AtlasMap'
-import { RamenHeroImage } from '../../components/ramen/RamenHeroImage'
 import { RamenThumbnail } from '../../components/ramen/RamenThumbnail'
 import { RamenStateBadges } from '../../components/ramen/RamenStateBadges'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
@@ -50,7 +49,7 @@ export function AtlasPage() {
 
       {selectedEntry && selectedRamen && (
         <section className="atlas-result card">
-          <RamenHeroImage ramenId={selectedRamen.id} variant="hero" alt={selectedRamen.name} />
+          <RamenThumbnail ramenId={selectedRamen.id} variant="hero" alt={selectedRamen.name} />
           <span className="tag">{selectedEntry.cityMicroRegion}</span>
           <RamenStateBadges ramenId={selectedRamen.id} />
           <h2>{selectedRamen.name}</h2>

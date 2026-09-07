@@ -9,7 +9,7 @@ import { getCakePersonality } from '../lib/data'
 import { getPersonalityImage } from '../lib/personalityImages'
 import { getCountryFlag } from '../lib/countryFlags'
 import { FlavorProfileBars } from '../components/FlavorProfileBars'
-import { CakeHeroImage } from '../components/CakeHeroImage'
+import { CakeThumbnail } from '../components/CakeThumbnail'
 import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
 import { PersonaShareCard } from '../components/PersonaShareCard'
 import { SaveButton } from '../components/SaveButton'
@@ -138,7 +138,7 @@ function ResultView({
       <div className="persona-results">
         {recommendedCakes.map((cake) => (
           <Link key={cake.id} to={`/cake/${cake.id}`} className="card persona-result-card">
-            <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
+            <CakeThumbnail cakeId={cake.id} variant="thumbnail" alt={cake.name} />
             <h3>{cake.name}</h3>
             <p>{cake.description}</p>
             <p className="persona-notes">Notes: {cake.flavorNotes.join(', ')}</p>

@@ -3,6 +3,7 @@ import { getCollection } from '../lib/data'
 import { getCollectionCakes } from '../lib/collections'
 import { getCakeImage } from '../lib/images'
 import { CakeHeroImage } from '../components/CakeHeroImage'
+import { CakeThumbnail } from '../components/CakeThumbnail'
 import './CollectionDetailPage.css'
 
 export function CollectionDetailPage() {
@@ -32,7 +33,7 @@ export function CollectionDetailPage() {
       <div className="collection-detail-grid">
         {cakes.map((cake) => (
           <Link key={cake.id} to={`/cake/${cake.id}`} className="card collection-detail-card">
-            <CakeHeroImage cakeId={cake.id} variant="thumbnail" alt={cake.name} />
+            <CakeThumbnail cakeId={cake.id} variant="thumbnail" alt={cake.name} />
             <h3>{cake.name}</h3>
             <p>{cake.description}</p>
           </Link>

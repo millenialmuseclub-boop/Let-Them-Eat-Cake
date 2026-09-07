@@ -4,6 +4,8 @@ import trailsJson from '../../data/cookies/trails.json'
 import type { CookieTrail } from '../../types/cookies/trails'
 import { getCookie } from '../../lib/cookies/data'
 import { CookieThumbnail } from '../../components/cookies/CookieHeroImage'
+import { getCookieImage } from '../../lib/cookies/images'
+import { PageHeroBand } from '../../components/cookies/PageHeroBand'
 
 const TRAILS = trailsJson as CookieTrail[]
 
@@ -11,8 +13,12 @@ export function TrailsIndexPage() {
   useDocumentTitle('Cookie Trails')
   return (
     <main className="page-container">
-      <h1>Cookie Trails</h1>
-      <p>Themed paths through the Encyclopedia -- a starting point when you're not sure where to look.</p>
+      <PageHeroBand
+        image={getCookieImage('cookie_alfajor')}
+        eyebrow="Crumb"
+        title="Cookie Trails"
+        description="Themed paths through the Encyclopedia -- a starting point when you're not sure where to look."
+      />
       <div className="trails-grid">
         {TRAILS.map((trail) => {
           const leadCookieId = trail.cookieIds[0]

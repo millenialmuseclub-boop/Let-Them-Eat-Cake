@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { COOKIES, TRADITIONS } from '../../lib/cookies/data'
 import { CookieCard } from '../../components/cookies/CookieCard'
+import { getCookieImage } from '../../lib/cookies/images'
+import { PageHeroBand } from '../../components/cookies/PageHeroBand'
 
 const AZ = Array.from(new Set(COOKIES.map((c) => c.name[0].toUpperCase()))).sort()
 
@@ -24,8 +26,12 @@ export function CookieEncyclopediaIndexPage() {
 
   return (
     <main className="page-container">
-      <h1>Cookie Encyclopedia</h1>
-      <p>Browse {COOKIES.length} cookies from traditions around the world.</p>
+      <PageHeroBand
+        image={getCookieImage('cookie_biscotti')}
+        eyebrow="The Encyclopedia"
+        title="Cookie Encyclopedia"
+        description={`Browse ${COOKIES.length} cookies from traditions around the world.`}
+      />
 
       <div className="encyclopedia-search">
         <label htmlFor="encyclopedia-search-input">Search</label>
