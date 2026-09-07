@@ -51,22 +51,16 @@ export function AtlasPage() {
           const spotlight = regionSpotlightImage(region.id);
           return (
             <div key={region.id} className="atlas-region">
-              <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 6 }}>
+              <div className="atlas-region__header">
                 {spotlight && (
                   <img
                     src={spotlight.image.src}
                     alt={spotlight.image.alt}
                     loading="lazy"
-                    style={{
-                      width: 64,
-                      height: 64,
-                      borderRadius: 12,
-                      objectFit: 'cover',
-                      flexShrink: 0,
-                    }}
+                    className="atlas-region__spotlight"
                   />
                 )}
-                <h2 style={{ marginBottom: 0 }}>{region.name}</h2>
+                <h2>{region.name}</h2>
               </div>
               <div className="atlas-region__countries">
                 {regionCountries.map((country) => {
@@ -74,9 +68,9 @@ export function AtlasPage() {
                   const countryDishes = dishes.filter((d) => d.place.countryId === country.id);
                   return (
                     <div key={country.id} className="atlas-country">
-                      <h3 style={{ marginBottom: 4 }}>{country.name}</h3>
+                      <h3>{country.name}</h3>
                       {countryPlaces.map((place) => (
-                        <p key={place.id} style={{ fontSize: 13.5, opacity: 0.8, margin: '2px 0' }}>
+                        <p key={place.id} className="atlas-place-note">
                           <strong>{place.name}</strong> — {place.noteOnSignificance}
                         </p>
                       ))}
@@ -85,14 +79,7 @@ export function AtlasPage() {
                           const dishImage = getImageFor(dish.id);
                           return (
                             <Link key={dish.id} to={`/noodles/encyclopedia/${dish.id}`} className="chip chip-brass">
-                              {dishImage && (
-                                <img
-                                  src={dishImage.src}
-                                  alt=""
-                                  loading="lazy"
-                                  style={{ width: 20, height: 20, borderRadius: '50%', objectFit: 'cover', marginLeft: -4 }}
-                                />
-                              )}
+                              {dishImage && <img src={dishImage.src} alt="" loading="lazy" className="atlas-dish-avatar" />}
                               {dish.name}
                             </Link>
                           );
