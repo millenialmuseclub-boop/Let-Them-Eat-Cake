@@ -1,11 +1,11 @@
-.trails-grid {
+.ramen-world .trails-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 16px;
   margin-top: 20px;
 }
 
-.trails-card {
+.ramen-world .trails-card {
   text-decoration: none;
   color: inherit;
   display: flex;
@@ -13,6 +13,6 @@
   gap: 8px;
 }
 
-.trails-card h3 {
+.ramen-world .trails-card h3 {
   margin: 0;
 }

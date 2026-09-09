@@ -14,7 +14,7 @@ local/on-device tooling:
   own app code.
 
 The app itself owns the update decision, in `src/lib/otaUpdater.ts`: it polls
-a static `manifest.json` on Cloudflare R2, and if the version differs from
+a static `manifest.json` on Cloudflare R2, and if the version is newer than
 what's installed, downloads and schedules the new bundle.
 
 ```
@@ -130,26 +130,14 @@ only, never a way to route around review.
 
 ## Rollback
 
-There is no dashboard button — rollback means re-pointing (or restoring)
-`manifest.json` on R2:
+- Automatic, per-device: the updater watchdog can revert a bundle that never acknowledges readiness. Readiness is now sent from an effect after the initial route commits, rather than immediately after scheduling React rendering. This does not detect later runtime or content defects.
+- Manual: revert the faulty web changes in a NEW commit, build and publish that commit through the normal signed/encrypted workflow. The new commit timestamp must exceed the installed bundle version.
 
-- **Automatic, per-device**: any bundle that never calls `notifyAppReady()`
-  (crash, white screen, hang) is auto-reverted by the plugin on next launch —
-  no action needed. This is purely on-device; there's no fleet-wide detection
-  since there's no backend collecting data across devices.
-- **Manual**: to pull a bad update that "works" but is wrong (e.g. a content
-  mistake), re-upload the previous release's `manifest.json` (pointing back at
-  the last-good `bundles/<sha>.zip`, which is still in R2 since bundles are
-  never deleted automatically) to `updates/<channel>/manifest.json`. Devices
-  that already applied the bad bundle will "update" back to the good one on
-  their next check.
+Restoring an older manifest can prevent additional devices from taking the bad update, but cannot downgrade devices that already installed it: the app rejects older/equal versions. Do not promise fleet rollback by restoring a previous manifest.
 
 ## Emergency process
 
-1. Identify the last-good `bundles/<sha>.zip` (git history of `ota-publish.yml`
-   runs, or R2 bucket contents).
-2. Re-upload that bundle's manifest fields as `updates/<channel>/manifest.json`.
-3. Fix the issue in the repo, run the OTA workflow again to `staging`, verify,
-   then `production`.
-4. If the issue is severe enough that no cached bundle is safe, submit an
-   emergency store update instead — OTA should never be the only recovery path.
+1. Identify the last-good source revision from OTA workflow history.
+2. Restore the desired web changes in a new commit; preserve the current native/OTA compatibility settings.
+3. Run lint, tests, and build. Publish to staging and verify native download, next-launch activation, saved data, and recovery.
+4. Publish the verified newer commit to production when authorized. If native code is responsible, prepare a new binary through the existing release process instead.

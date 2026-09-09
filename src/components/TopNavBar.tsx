@@ -49,6 +49,9 @@ export function TopNavBar() {
       <Link to="/" className="top-nav-brand" aria-label="Let Them Eat — Home">
         <img src="/icon-master.svg" alt="" className="top-nav-icon" />
       </Link>
+      <Link to="/" className="top-nav-world-link" aria-label={`${config.label} world — change worlds`}>
+        <strong>{config.label}</strong><span>Change world</span>
+      </Link>
       <div className="top-nav-actions">
         <Link to={config.saved} className="top-nav-favorites" aria-label={`Saved ${config.label}`}>
           ♥

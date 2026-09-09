@@ -37,6 +37,9 @@ jobs:
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
 
+      - name: Lint and regression tests
+        run: npm run lint && npm test
+
       - name: Typecheck + build (must pass before anything ships)
         # VITE_OTA_CHANNEL is baked into this bundle so that once a device
         # downloads it, it keeps polling the SAME channel's manifest on

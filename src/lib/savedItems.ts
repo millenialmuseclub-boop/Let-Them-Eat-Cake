@@ -17,6 +17,12 @@ import type { SavedItemRecord, SavedItemsPayload, World } from '../types/savedIt
 const STORAGE_KEY = 'letThemEat.savedItems.v1'
 const MIGRATION_MARKER_KEY = 'letThemEat.savedItems.migrated.v1'
 const CURRENT_VERSION = 1
+let storageIssue = false
+let protectStoredPayload = false
+
+export function getStorageIssue(): boolean {
+  return storageIssue
+}
 
 const LEGACY_CAKE_KEY = 'pastryNotebookItems'
 const LEGACY_RAMEN_KEY = 'ramenLibrary'
@@ -39,9 +45,22 @@ function readJSON<T>(key: string): T | undefined {
 }
 
 function loadCurrent(): SavedItemRecord[] {
-  const payload = readJSON<SavedItemsPayload>(STORAGE_KEY)
-  if (!payload || payload.version !== CURRENT_VERSION || !Array.isArray(payload.items)) return []
-  return payload.items
+  if (!hasWindow()) return []
+  try {
+    const raw = window.localStorage.getItem(STORAGE_KEY)
+    if (!raw) return []
+    const payload = JSON.parse(raw) as SavedItemsPayload
+    if (!payload || payload.version !== CURRENT_VERSION || !Array.isArray(payload.items) ||
+      !payload.items.every((record) => record && ['cake', 'ramen', 'cookies', 'noodles'].includes(record.world) && typeof record.id === 'string' && Number.isFinite(record.savedAt))) {
+      throw new Error('Unrecognized saved-items payload')
+    }
+    return payload.items
+  } catch {
+    // Preserve unrecognized/corrupt/future data on disk; never overwrite it with an empty library.
+    protectStoredPayload = true
+    storageIssue = true
+    return []
+  }
 }
 
 function recordKey(world: World, id: string): string {
@@ -157,14 +176,27 @@ function persist(items: SavedItemRecord[]) {
   byWorldCache = {}
   if (hasWindow()) {
     const payload: SavedItemsPayload = { version: CURRENT_VERSION, items }
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
+    try {
+      if (protectStoredPayload) throw new Error('Preserving unreadable saved data')
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
+      storageIssue = false
+    } catch {
+      // Keep this session usable without pretending the save reached disk.
+      storageIssue = true
+    }
   }
   listeners.forEach((listener) => listener())
 }
 
 function migrateLegacyData(existing: SavedItemRecord[]): SavedItemRecord[] {
   if (!hasWindow()) return existing
-  if (window.localStorage.getItem(MIGRATION_MARKER_KEY)) return existing
+  if (protectStoredPayload) return existing
+  try {
+    if (window.localStorage.getItem(MIGRATION_MARKER_KEY)) return existing
+  } catch {
+    storageIssue = true
+    return existing
+  }
 
   const legacy = readLegacyRecords()
   const existingKeys = new Set(existing.map((r) => recordKey(r.world, r.id)))
@@ -176,10 +208,15 @@ function migrateLegacyData(existing: SavedItemRecord[]): SavedItemRecord[] {
     }
   }
 
-  window.localStorage.setItem(MIGRATION_MARKER_KEY, String(Date.now()))
-  if (merged.length !== existing.length) {
-    const payload: SavedItemsPayload = { version: CURRENT_VERSION, items: merged }
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
+  try {
+    if (merged.length !== existing.length) {
+      const payload: SavedItemsPayload = { version: CURRENT_VERSION, items: merged }
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
+    }
+    // Only mark completion after the data is durable. A failed write must be retried.
+    window.localStorage.setItem(MIGRATION_MARKER_KEY, String(Date.now()))
+  } catch {
+    storageIssue = true
   }
   return merged
 }

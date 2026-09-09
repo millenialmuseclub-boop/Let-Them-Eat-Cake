@@ -57,3 +57,7 @@ android/app/release
 .capgo_key_v2
 .capgo_key_v2.pub
 capgo_key_v2
+
+# Local visual contact sheet (source images and credits are committed)
+reports/photo-review.png
+reports/build-output.txt

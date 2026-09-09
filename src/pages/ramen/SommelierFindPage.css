@@ -1,11 +1,11 @@
-.find-form {
+.ramen-world .find-form {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   margin: 20px 0 24px;
 }
 
-.find-form label {
+.ramen-world .find-form label {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -14,7 +14,7 @@
   min-width: 160px;
 }
 
-.find-form select {
+.ramen-world .find-form select {
   font: inherit;
   padding: 8px 12px;
   border-radius: 8px;
@@ -23,11 +23,11 @@
   color: var(--text);
 }
 
-.find-form input[type='range'] {
+.ramen-world .find-form input[type='range'] {
   accent-color: var(--raspberry);
 }
 
-.find-flavor-preferences {
+.ramen-world .find-flavor-preferences {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -35,13 +35,13 @@
   width: 100%;
 }
 
-.find-flavor-tag-row {
+.ramen-world .find-flavor-tag-row {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.find-flavor-tag {
+.ramen-world .find-flavor-tag {
   font: inherit;
   padding: 6px 12px;
   border-radius: 999px;
@@ -52,48 +52,48 @@
   cursor: pointer;
 }
 
-.find-flavor-tag.active {
+.ramen-world .find-flavor-tag.active {
   background: var(--raspberry);
   border-color: var(--raspberry);
   color: white;
 }
 
-.sommelier-section-heading {
+.ramen-world .sommelier-section-heading {
   margin: 28px 0 12px;
 }
 
-.find-result-card {
+.ramen-world .find-result-card {
   margin-bottom: 16px;
 }
 
-.find-result-card-highlight {
+.ramen-world .find-result-card-highlight {
   border-color: var(--raspberry);
 }
 
-.find-result-row {
+.ramen-world .find-result-row {
   display: flex;
   align-items: flex-start;
   gap: 16px;
   margin-bottom: 12px;
 }
 
-.find-result-row .ramen-hero-image-thumbnail {
+.ramen-world .find-result-row .ramen-hero-image-thumbnail {
   flex-shrink: 0;
   margin: 0;
   width: 56px;
 }
 
-.find-result-row .ramen-hero-image-thumbnail img {
+.ramen-world .find-result-row .ramen-hero-image-thumbnail img {
   width: 56px;
   height: 56px;
   border-radius: 10px;
 }
 
-.find-result-row .ramen-hero-image-placeholder {
+.ramen-world .find-result-row .ramen-hero-image-placeholder {
   height: 56px !important;
 }
 
-.find-result-score {
+.ramen-world .find-result-score {
   flex-shrink: 0;
   width: 44px;
   height: 44px;
@@ -107,33 +107,33 @@
   color: var(--cocoa);
 }
 
-.find-result-details {
+.ramen-world .find-result-details {
   flex: 1;
   min-width: 0;
 }
 
-.find-result-details h3 {
+.ramen-world .find-result-details h3 {
   margin-bottom: 2px;
 }
 
-.find-result-region {
+.ramen-world .find-result-region {
   font-size: 13px;
   opacity: 0.75;
   margin-bottom: 6px;
 }
 
-.find-result-details ul {
+.ramen-world .find-result-details ul {
   margin: 0;
   padding-left: 18px;
   font-size: 14px;
 }
 
-.find-result-details li {
+.ramen-world .find-result-details li {
   margin-bottom: 2px;
 }
 
 @media (max-width: 640px) {
-  .find-form {
+  .ramen-world .find-form {
     flex-direction: column;
     align-items: stretch;
   }

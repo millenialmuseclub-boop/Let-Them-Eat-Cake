@@ -54,10 +54,29 @@ body {
   margin: 0;
 }
 
+.photo-credit-entry { display: flex; flex-wrap: wrap; gap: 18px; padding: 24px 0; border-bottom: 1px solid var(--border); }
+.photo-credit-entry img { object-fit: cover; border-radius: 10px; }
+.photo-credit-entry > div { flex: 1; min-width: 180px; }
+.photo-credit-entry p { font-size: 14px; overflow-wrap: anywhere; }
+
+.storage-notice {
+  position: fixed;
+  top: calc(56px + env(safe-area-inset-top, 0px));
+  left: 0;
+  right: 0;
+  z-index: 30;
+  padding: 12px 16px;
+  background: var(--bg-card);
+  color: var(--text);
+  border-bottom: 2px solid var(--raspberry);
+  font-size: 14px;
+}
+
 h1,
 h2,
 h3 {
   font-family: var(--heading, inherit);
+  line-height: 1.2;
   color: var(--cocoa-strong);
   margin: 0 0 8px;
 }

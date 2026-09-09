@@ -1,6 +1,6 @@
 /* Adapted from Cake's AtlasWorldMap.css (CAKE_REFERENCE_AUDIT.md §5). */
 
-.atlas-map-wrap {
+.ramen-world .atlas-map-wrap {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
@@ -8,7 +8,8 @@
   margin-top: 20px;
 }
 
-.atlas-map-reset {
+.ramen-world .atlas-map-reset {
+  min-height: 44px;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -21,40 +22,47 @@
   font-weight: 600;
 }
 
-.atlas-map-country {
+.ramen-world .atlas-map-count { fill: white; font-size: 12px; font-weight: 700; }
+.ramen-world .atlas-map-zoom { position: absolute; left: 10px; top: 10px; z-index: 5; display: flex; gap: 4px; }
+.ramen-world .atlas-map-zoom button { width: 44px; height: 44px; border-radius: 50%; background: var(--bg-card); color: var(--text); border: 1px solid var(--border); }
+.ramen-world .atlas-map-zoom button:disabled { opacity: 0.5; }
+.ramen-world .atlas-cluster-choices { margin-top: 16px; }
+.ramen-world .atlas-map-hint { font-size: 14px; margin-top: 12px; }
+
+.ramen-world .atlas-map-country {
   fill: var(--bg-card);
   stroke: var(--border);
   stroke-width: 0.5;
   outline: none;
 }
 
-.atlas-map-pin {
+.ramen-world .atlas-map-pin {
   fill: var(--raspberry);
   stroke: white;
   stroke-width: 1.5;
 }
 
-.atlas-map-pin.active {
+.ramen-world .atlas-map-pin.active {
   fill: var(--gold);
 }
 
-.atlas-map-pin-hitarea {
+.ramen-world .atlas-map-pin-hitarea {
   cursor: pointer;
 }
 
 /* The hit-area itself is transparent, so its own default SVG focus ring would draw an odd
    34px-radius square around empty space. Highlighting the visible pin marker (its next sibling
    in the same <Marker>) instead gives keyboard users a real, legible focus indicator. */
-.atlas-map-pin-hitarea:focus-visible {
+.ramen-world .atlas-map-pin-hitarea:focus-visible {
   outline: none;
 }
 
-.atlas-map-pin-hitarea:focus-visible ~ .atlas-map-pin {
+.ramen-world .atlas-map-pin-hitarea:focus-visible ~ .atlas-map-pin {
   stroke: var(--gold);
   stroke-width: 3px;
 }
 
-.atlas-map-label {
+.ramen-world .atlas-map-label {
   font-size: 11px;
   font-weight: 700;
   fill: var(--cocoa-strong);

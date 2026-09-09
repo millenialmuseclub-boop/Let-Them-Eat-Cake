@@ -1,7 +1,8 @@
-import { useState } from 'react'
-import { ComposableMap, Geographies, Geography, Marker, ZoomableGroup } from 'react-simple-maps'
+import { useEffect, useRef, useState } from 'react'
+import { ComposableMap, Geographies, Geography, ZoomableGroup, useMapContext } from 'react-simple-maps'
 import worldTopoJson from 'world-atlas/countries-110m.json'
 import type { RegionalRamenEntry } from '../../types/ramen/atlas'
+import { clusterMapPoints } from '../../lib/ramen/mapClusters'
 import './AtlasMap.css'
 
 interface AtlasMapProps {
@@ -10,68 +11,73 @@ interface AtlasMapProps {
   onSelectCity: (city: string) => void
 }
 
-// Centered on Japan by default -- the master spec's Phase 1 Atlas anchors
-// (§9) are all Japanese cities. Adapted from Cake's world-view AtlasWorldMap
-// (CAKE_REFERENCE_AUDIT.md §5): same map/marker/zoom mechanics, but simplified
-// to marker-only selection -- Cake also supports tapping a country *shape*,
-// resolved through an ISO-country-code lookup table that has no equivalent at
-// city granularity, so that interaction is deliberately left out here rather
-// than force-fit.
-// zoom kept at 3.2 (not raised) so all of Japan -- Hokkaido to Kyushu -- stays visible on
-// initial load; the map's own pinch/scroll zoom (up to maxZoom 8 below) is how a diner
-// resolves the tightly-clustered Kanto pins (Tokyo, Yokohama, Ikebukuro, Musashino, all
-// within ~0.3 degrees of each other), same as any pin-map at country scale.
+// Preserve PR #5's full Japan view. Nearby cities share a visible target and an explicit choice.
 const JAPAN_VIEW = { coordinates: [140, 38] as [number, number], zoom: 3.2 }
 
-export function AtlasMap({ entries, selectedCity, onSelectCity }: AtlasMapProps) {
-  const [hovered, setHovered] = useState<string | null>(null)
-  const [view, setView] = useState(JAPAN_VIEW)
+function CityMarkers({ entries, selectedCity, zoom, displayWidth, onChoose }: Omit<AtlasMapProps, 'onSelectCity'> & {
+  zoom: number; displayWidth: number; onChoose: (entries: RegionalRamenEntry[]) => void
+}) {
+  const { projection, width } = useMapContext()
+  const scale = zoom * displayWidth / width
+  const points = entries.flatMap((entry) => {
+    const point = projection(entry.coordinates)
+    return point ? [{ x: point[0] * scale, y: point[1] * scale, items: [entry] }] : []
+  })
+  return clusterMapPoints(points).map((cluster) => {
+    const label = cluster.items.length === 1 ? cluster.items[0].cityMicroRegion : `Choose from ${cluster.items.length} nearby cities: ${cluster.items.map((entry) => entry.cityMicroRegion).join(', ')}`
+    const selected = cluster.items.some((entry) => entry.cityMicroRegion === selectedCity)
+    return <g key={cluster.items.map((entry) => entry.id).join('-')} transform={`translate(${cluster.x / scale},${cluster.y / scale}) scale(${1 / scale})`}>
+      <circle r={22} className="atlas-map-pin-hitarea" fill="transparent" tabIndex={0} role="button" aria-label={label} aria-pressed={selected}
+        onClick={() => onChoose(cluster.items)}
+        onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onChoose(cluster.items) } }} />
+      <circle r={cluster.items.length > 1 ? 16 : 7} className={selected ? 'atlas-map-pin active' : 'atlas-map-pin'} pointerEvents="none" />
+      {cluster.items.length > 1 && <text textAnchor="middle" y={4} className="atlas-map-count" pointerEvents="none">{cluster.items.length}</text>}
+      <title>{label}</title>
+    </g>
+  })
+}
 
-  return (
-    <div className="atlas-map-wrap">
-      <button type="button" className="atlas-map-reset" onClick={() => setView(JAPAN_VIEW)}>
-        Reset view
-      </button>
-      <ComposableMap projection="geoEqualEarth" projectionConfig={{ scale: 150 }} role="img" aria-label="Interactive map of Ramen Atlas cities">
-        {/* minZoom raised from 1 to 2.2 -- low enough to still see all of Japan comfortably, high
-            enough that a diner can't accidentally zoom/pan out into a de facto world map, which
-            this Atlas is deliberately not (master pass §2). */}
+export function AtlasMap({ entries, selectedCity, onSelectCity }: AtlasMapProps) {
+  const [view, setView] = useState(JAPAN_VIEW)
+  const [displayWidth, setDisplayWidth] = useState(375)
+  const [choices, setChoices] = useState<RegionalRamenEntry[]>([])
+  const wrap = useRef<HTMLDivElement>(null)
+  const choiceHeading = useRef<HTMLHeadingElement>(null)
+  const pointerStart = useRef<{ x: number; y: number } | null>(null)
+  const dragged = useRef(false)
+  useEffect(() => {
+    if (!wrap.current) return
+    const observer = new ResizeObserver(([entry]) => setDisplayWidth(Math.max(1, entry.contentRect.width)))
+    observer.observe(wrap.current)
+    return () => observer.disconnect()
+  }, [])
+  useEffect(() => { if (choices.length) choiceHeading.current?.focus() }, [choices])
+
+  return <div>
+    <div className="atlas-map-wrap" ref={wrap}
+      onPointerDownCapture={(event) => { pointerStart.current = { x: event.clientX, y: event.clientY }; dragged.current = false }}
+      onPointerMoveCapture={(event) => { const start = pointerStart.current; if (start && Math.hypot(event.clientX - start.x, event.clientY - start.y) > 8) dragged.current = true }}
+      onPointerCancelCapture={() => { dragged.current = true; pointerStart.current = null }}
+      onPointerUpCapture={() => { pointerStart.current = null }}
+      onClickCapture={(event) => { if (event.detail > 0 && dragged.current) { event.preventDefault(); event.stopPropagation() } }}>
+      <button type="button" className="atlas-map-reset" onClick={() => { setView(JAPAN_VIEW); setChoices([]) }}>Reset view</button>
+      <div className="atlas-map-zoom">
+        <button type="button" aria-label="Zoom in" disabled={view.zoom >= 8} onClick={() => setView((current) => ({ ...current, zoom: Math.min(8, current.zoom * 1.5) }))}>+</button>
+        <button type="button" aria-label="Zoom out" disabled={view.zoom <= 2.2} onClick={() => setView((current) => ({ ...current, zoom: Math.max(2.2, current.zoom / 1.5) }))}>−</button>
+      </div>
+      <ComposableMap projection="geoEqualEarth" projectionConfig={{ scale: 650 }} role="group" aria-label="Interactive map of Ramen Atlas cities">
         <ZoomableGroup center={view.coordinates} zoom={view.zoom} minZoom={2.2} maxZoom={8} onMoveEnd={({ coordinates, zoom }) => setView({ coordinates, zoom })}>
-          <Geographies geography={worldTopoJson}>{({ geographies }) => geographies.map((geo) => <Geography key={geo.rsmKey} geography={geo} className="atlas-map-country" />)}</Geographies>
-          {entries.map((entry) => {
-            const isSelected = entry.cityMicroRegion === selectedCity
-            return (
-              <Marker key={entry.id} coordinates={entry.coordinates}>
-                <circle
-                  r={22}
-                  fill="transparent"
-                  className="atlas-map-pin-hitarea"
-                  tabIndex={0}
-                  role="button"
-                  aria-label={entry.cityMicroRegion}
-                  onClick={() => onSelectCity(entry.cityMicroRegion)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault()
-                      onSelectCity(entry.cityMicroRegion)
-                    }
-                  }}
-                  onMouseEnter={() => setHovered(entry.cityMicroRegion)}
-                  onMouseLeave={() => setHovered((prev) => (prev === entry.cityMicroRegion ? null : prev))}
-                  onFocus={() => setHovered(entry.cityMicroRegion)}
-                  onBlur={() => setHovered((prev) => (prev === entry.cityMicroRegion ? null : prev))}
-                />
-                <circle r={isSelected ? 7 : 5} className={isSelected ? 'atlas-map-pin active' : 'atlas-map-pin'} pointerEvents="none" />
-                {hovered === entry.cityMicroRegion && (
-                  <text textAnchor="middle" y={-14} className="atlas-map-label">
-                    {entry.cityMicroRegion}
-                  </text>
-                )}
-              </Marker>
-            )
-          })}
+          <Geographies geography={worldTopoJson} aria-hidden="true">{({ geographies }) => geographies.map((geo) => <Geography key={geo.rsmKey} geography={geo} className="atlas-map-country" />)}</Geographies>
+          <CityMarkers entries={entries} selectedCity={selectedCity} zoom={view.zoom} displayWidth={displayWidth} onChoose={(items) => {
+            if (items.length === 1) { setChoices([]); onSelectCity(items[0].cityMicroRegion) } else setChoices(items)
+          }} />
         </ZoomableGroup>
       </ComposableMap>
     </div>
-  )
+    {choices.length > 0 && <section className="atlas-cluster-choices" aria-label="Nearby cities">
+      <h2 ref={choiceHeading} tabIndex={-1}>Choose a city</h2>
+      <div className="atlas-city-list">{choices.map((entry) => <button key={entry.id} type="button" className="atlas-city-chip" aria-pressed={selectedCity === entry.cityMicroRegion} onClick={() => onSelectCity(entry.cityMicroRegion)}>{entry.cityMicroRegion}</button>)}</div>
+    </section>}
+    <p className="atlas-map-hint" role="status">{selectedCity ? `Selected: ${selectedCity}.` : 'Numbered pins contain nearby cities.'} Choose a pin or browse the city buttons below.</p>
+  </div>
 }

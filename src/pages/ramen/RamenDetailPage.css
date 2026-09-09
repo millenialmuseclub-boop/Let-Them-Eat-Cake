@@ -1,21 +1,21 @@
-.ramen-detail-tags {
+.ramen-world .ramen-detail-tags {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
   margin-bottom: 10px;
 }
 
-.ramen-detail-pronunciation {
+.ramen-world .ramen-detail-pronunciation {
   font-weight: 400;
   font-size: 22px;
   opacity: 0.7;
 }
 
-.ramen-detail-section {
+.ramen-world .ramen-detail-section {
   margin-top: 20px;
 }
 
-.ramen-detail-variation-note {
+.ramen-world .ramen-detail-variation-note {
   font-size: 14px;
   opacity: 0.85;
   border-left: 3px solid var(--gold);
@@ -23,7 +23,7 @@
   margin-top: 10px;
 }
 
-.ramen-detail-facts {
+.ramen-world .ramen-detail-facts {
   list-style: none;
   padding: 0;
   margin: 12px 0 0;
@@ -32,18 +32,18 @@
   gap: 8px;
 }
 
-.ramen-detail-facts li strong {
+.ramen-world .ramen-detail-facts li strong {
   color: var(--cocoa-strong);
 }
 
-.ramen-detail-related-grid {
+.ramen-world .ramen-detail-related-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 16px;
   margin-top: 12px;
 }
 
-.ramen-detail-related-card {
+.ramen-world .ramen-detail-related-card {
   display: block;
   text-decoration: none;
   color: inherit;

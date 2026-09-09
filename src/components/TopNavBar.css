@@ -23,6 +23,18 @@
   min-height: 44px;
 }
 
+.top-nav-world-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+}
+.top-nav-world-link strong { font-family: var(--heading); font-size: 17px; }
+.top-nav-world-link span { font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
+
 .top-nav-icon {
   width: 32px;
   height: 32px;

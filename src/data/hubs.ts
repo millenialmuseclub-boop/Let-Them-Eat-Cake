@@ -51,9 +51,9 @@ export function hubWorld(hub: Hub): HubWorld {
     links + accent color to show), and App.tsx (which world's accent-color class to apply). */
 export function worldFromPathname(pathname: string): HubWorld | null {
   if (pathname === '/') return null
-  if (pathname.startsWith('/ramen')) return 'ramen'
-  if (pathname.startsWith('/cookies')) return 'cookies'
-  if (pathname.startsWith('/noodles')) return 'noodles'
+  if (pathname === '/ramen' || pathname.startsWith('/ramen/')) return 'ramen'
+  if (pathname === '/cookies' || pathname.startsWith('/cookies/')) return 'cookies'
+  if (pathname === '/noodles' || pathname.startsWith('/noodles/')) return 'noodles'
   return 'cake'
 }
 
@@ -381,4 +381,14 @@ export function isHubActive(hub: Hub, pathname: string): boolean {
   if (pathname === hub.path) return true
   if (hub.kind === 'direct') return pathname.startsWith(`${hub.path}/`)
   return hub.items.some((item) => item.to === pathname)
+}
+
+/** Select exactly one department, including detail pages and personal libraries. */
+export function activeHubPath(pathname: string): string | undefined {
+  const world = worldFromPathname(pathname)
+  const tabs = HUBS.filter((hub) => hubWorld(hub) === world)
+  const direct = tabs.find((hub) => isHubActive(hub, pathname))
+  if (direct) return direct.path
+  const nested = tabs.find((hub) => hub.kind === 'landing' && hub.items.some((item) => pathname.startsWith(`${item.to}/`)))
+  return nested?.path ?? tabs[0]?.path
 }

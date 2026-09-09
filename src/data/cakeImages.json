@@ -706,5 +706,53 @@
     "photographer": "Toa Heftiba",
     "photographerUrl": "https://unsplash.com/@heftiba",
     "unsplashUrl": "https://unsplash.com/photos/sliced-cake-on-white-ceramic-saucer-1Hh57OhkdCc"
+  },
+  "cake_nanaimo_bar": {
+    "url": "/photography/cake_nanaimo_bar.webp",
+    "photographer": "Stephanie Spencer",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nanaimo_bar.JPG",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+  },
+  "cake_paris_brest": {
+    "url": "/photography/cake_paris_brest.webp",
+    "photographer": "lazy fri13th",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paris-brest_1.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "cake_dundee_cake": {
+    "url": "/photography/cake_dundee_cake.webp",
+    "photographer": "RGloucester",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:North_British_Dundee_cake.JPG",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "cake_vinarterta": {
+    "url": "/photography/cake_vinarterta.webp",
+    "photographer": "Navaro",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:V%C3%ADnarterta.JPG",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "cake_galette_des_rois": {
+    "url": "/photography/cake_galette_des_rois.webp",
+    "photographer": "Dllu",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Galette_des_rois_dllu.jpg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+  },
+  "cake_clootie_dumpling": {
+    "url": "/photography/cake_clootie_dumpling.webp",
+    "photographer": "Matt Riggott from Reykjavik, Iceland",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clootie_dumpling.jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
   }
 }

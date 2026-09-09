@@ -9,14 +9,14 @@
    pinned to the same color so links never turn purple. Nav/card links rely on layout to signal
    "tappable" and stay underline-free until hover/focus; free-standing prose links (.prose a) get
    an always-on underline since inline text needs a non-color signal. */
-a {
+.noodles-world a {
   color: var(--jade-strong);
   text-decoration: none;
 }
 
 
 
-.prose a {
+.noodles-world .prose a {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -29,7 +29,7 @@ a {
    underneath them instead of flowing below/above. Previously this was a flat 24px/48px, which
    clipped the first ~50-70px of every page under the nav bar and left the last section of every
    page hidden behind the tab bar. */
-.page-container {
+.noodles-world .page-container {
   max-width: 1040px;
   margin: 0 auto;
   padding: calc(56px + env(safe-area-inset-top, 0px) + 24px) 20px calc(64px + 76px);
@@ -38,28 +38,28 @@ a {
 
 
 @media (max-width: 480px) {
-  .page-container {
+  .noodles-world .page-container {
     padding: calc(56px + env(safe-area-inset-top, 0px) + 18px) 16px calc(48px + 76px);
   }
 }
 
 
 
-.btn-primary {
+.noodles-world .btn-primary {
   background: var(--jade);
   color: #fff;
 }
 
 
 
-.btn-primary:hover {
+.noodles-world .btn-primary:hover {
   text-decoration: none;
   box-shadow: 0 6px 16px rgba(47, 111, 98, 0.28);
 }
 
 
 
-.chip {
+.noodles-world .chip {
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -75,7 +75,7 @@ a {
 
 
 
-.chip[aria-pressed='true'] {
+.noodles-world .chip[aria-pressed='true'] {
   background: var(--jade);
   color: #fff;
   border-color: var(--jade);
@@ -83,7 +83,7 @@ a {
 
 
 
-.chip-lacquer {
+.noodles-world .chip-lacquer {
   background: var(--lacquer-bg);
   color: var(--lacquer);
   border-color: transparent;
@@ -91,7 +91,7 @@ a {
 
 
 
-.chip-brass {
+.noodles-world .chip-brass {
   background: rgba(176, 141, 79, 0.14);
   color: var(--brass-strong);
   border-color: transparent;
@@ -99,7 +99,7 @@ a {
 
 
 
-.eyebrow {
+.noodles-world .eyebrow {
   display: inline-block;
   font-size: 12px;
   font-weight: 700;
@@ -111,7 +111,7 @@ a {
 
 
 
-.section-heading {
+.noodles-world .section-heading {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -121,13 +121,13 @@ a {
 
 
 
-.section-heading h2 {
+.noodles-world .section-heading h2 {
   margin: 0;
 }
 
 
 
-.divider {
+.noodles-world .divider {
   border: none;
   border-top: 1px solid var(--border);
   margin: 28px 0;
@@ -138,7 +138,7 @@ a {
 /* Photo-bleed hero: negative margin against the page container's gutter, paired with
    overflow-x:hidden on body — the single highest-leverage move for reading as editorial rather
    than a boxed website (learned from Cookies). */
-.hero-bleed {
+.noodles-world .hero-bleed {
   margin: -24px -20px 24px;
   position: relative;
   overflow: hidden;
@@ -148,14 +148,14 @@ a {
 
 
 @media (max-width: 480px) {
-  .hero-bleed {
+  .noodles-world .hero-bleed {
     margin: -18px -16px 20px;
   }
 }
 
 
 
-.hero-bleed__media {
+.noodles-world .hero-bleed__media {
   aspect-ratio: 4 / 3;
   width: 100%;
   max-height: 340px;
@@ -171,7 +171,7 @@ a {
    deliberate banner rather than a giant, uncontrolled image once the page-container is wider
    than a phone. */
 @media (min-width: 700px) {
-  .hero-bleed__media {
+  .noodles-world .hero-bleed__media {
     aspect-ratio: 21 / 9;
     max-height: 380px;
   }
@@ -179,7 +179,7 @@ a {
 
 
 
-.hero-bleed__scrim {
+.noodles-world .hero-bleed__scrim {
   position: absolute;
   inset: 0;
   /* Starts darkening earlier (15% vs. the previous 40%) so the kicker label stays legible
@@ -190,7 +190,7 @@ a {
 
 
 
-.hero-bleed__content {
+.noodles-world .hero-bleed__content {
   position: absolute;
   left: 0;
   right: 0;
@@ -201,15 +201,33 @@ a {
 
 
 
-.hero-bleed__content h1 {
+.noodles-world .hero-bleed__content h1 {
   color: #fdf9ee;
 }
 
 
 
-.hero-bleed__content .eyebrow {
+.noodles-world .hero-bleed__content .eyebrow {
+  color: #fdf9ee;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
 }
+
+.noodles-world .noodle-workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 18px;
+}
+.noodles-world .noodle-workshop-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg-card);
+  color: var(--text);
+}
+.noodles-world .noodle-workshop-photo { position: relative; aspect-ratio: 16 / 9; }
+.noodles-world .noodle-workshop-copy { padding: 18px; }
+.noodles-world .noodle-workshop-copy p { font-size: 15px; line-height: 1.5; }
+.noodles-world .noodle-workshop-copy span { display: block; margin-top: 12px; color: var(--raspberry); font-size: 14px; }
 
 
 
@@ -217,7 +235,7 @@ a {
    (page-top, bleeds past the container gutter). For a single flagship spot (e.g. a Workshop lab
    header) that deserves more visual weight than a tile without going full-bleed hero. 16:9 keeps
    it landscape/editorial rather than portrait like .tile. */
-.photo-medium {
+.noodles-world .photo-medium {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -229,7 +247,7 @@ a {
 
 
 
-.photo-medium img {
+.noodles-world .photo-medium img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -237,7 +255,7 @@ a {
 
 
 
-.grid {
+.noodles-world .grid {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -245,7 +263,7 @@ a {
 
 
 
-.tile {
+.noodles-world .tile {
   display: block;
   border-radius: 16px;
   overflow: hidden;
@@ -257,14 +275,14 @@ a {
 
 
 
-.tile:hover {
+.noodles-world .tile:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow);
 }
 
 
 
-.tile__media {
+.noodles-world .tile__media {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -274,7 +292,7 @@ a {
 
 
 
-.tile__fallback {
+.noodles-world .tile__fallback {
   position: absolute;
   inset: 0;
   display: flex;
@@ -286,7 +304,7 @@ a {
 
 
 
-.tile__scrim {
+.noodles-world .tile__scrim {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(28, 33, 29, 0) 45%, rgba(28, 33, 29, 0.82) 100%);
@@ -294,7 +312,7 @@ a {
 
 
 
-.tile__label {
+.noodles-world .tile__label {
   position: absolute;
   left: 0;
   right: 0;
@@ -305,7 +323,7 @@ a {
 
 
 
-.tile__label .kicker {
+.noodles-world .tile__label .kicker {
   display: block;
   font-size: 10.5px;
   font-weight: 700;
@@ -317,7 +335,7 @@ a {
 
 
 
-.tile__label strong {
+.noodles-world .tile__label strong {
   font-family: var(--heading);
   font-size: 15px;
   line-height: 1.2;
@@ -328,14 +346,14 @@ a {
 /* Editorial rail list — a lighter alternative to a full bordered/shadowed .card, used where a
    card grid would either over-card plain text/links or force imagery that doesn't exist (some
    noodle types and Twirl stories have no matching photography). Fine divider instead of a card. */
-.rail-list {
+.noodles-world .rail-list {
   display: flex;
   flex-direction: column;
 }
 
 
 
-.rail-item {
+.noodles-world .rail-item {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -348,19 +366,19 @@ a {
 
 
 
-.rail-item:first-child {
+.noodles-world .rail-item:first-child {
   border-top: none;
 }
 
 
 
-.rail-item:hover .rail-item__name {
+.noodles-world .rail-item:hover .rail-item__name {
   text-decoration: underline;
 }
 
 
 
-.rail-item__name {
+.noodles-world .rail-item__name {
   font-family: var(--heading);
   font-size: 17px;
   font-weight: 600;
@@ -369,7 +387,7 @@ a {
 
 
 
-.rail-item__meta {
+.noodles-world .rail-item__meta {
   font-size: 12.5px;
   opacity: 0.7;
   text-align: right;
@@ -382,14 +400,14 @@ a {
    typographic-only where it isn't, rather than forcing an unrelated photo. The index numeral
    uses lacquer, giving Twirl (the signature magazine section) its own accent instead of the
    jade used for functional/interactive color everywhere else. */
-.story-list {
+.noodles-world .story-list {
   display: flex;
   flex-direction: column;
 }
 
 
 
-.story-item {
+.noodles-world .story-item {
   display: flex;
   gap: 14px;
   align-items: flex-start;
@@ -401,13 +419,13 @@ a {
 
 
 
-.story-item:first-child {
+.noodles-world .story-item:first-child {
   border-top: none;
 }
 
 
 
-.story-item__index {
+.noodles-world .story-item__index {
   font-family: var(--heading);
   font-size: 13px;
   font-weight: 700;
@@ -418,7 +436,7 @@ a {
 
 
 
-.story-item__media {
+.noodles-world .story-item__media {
   display: block;
   width: 76px;
   height: 76px;
@@ -430,7 +448,7 @@ a {
 
 
 
-.story-item__media img {
+.noodles-world .story-item__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -438,20 +456,20 @@ a {
 
 
 
-.story-item__body {
+.noodles-world .story-item__body {
   display: block;
   min-width: 0;
 }
 
 
 
-.story-item__body h3 {
+.noodles-world .story-item__body h3 {
   margin-bottom: 3px;
 }
 
 
 
-.story-item:hover .story-item__body h3 {
+.noodles-world .story-item:hover .story-item__body h3 {
   text-decoration: underline;
 }
 
@@ -459,14 +477,14 @@ a {
 
 /* Workshop lab list — same lighter rail treatment as .rail-list, grouped by category heading,
    replacing a grid of identical bordered cards that read like a settings list. */
-.lab-list {
+.noodles-world .lab-list {
   display: flex;
   flex-direction: column;
 }
 
 
 
-.lab-item {
+.noodles-world .lab-item {
   display: block;
   padding: 14px 0;
   border-top: 1px solid var(--border);
@@ -476,19 +494,19 @@ a {
 
 
 
-.lab-item:first-child {
+.noodles-world .lab-item:first-child {
   border-top: none;
 }
 
 
 
-.lab-item:hover h3 {
+.noodles-world .lab-item:hover h3 {
   text-decoration: underline;
 }
 
 
 
-.bars {
+.noodles-world .bars {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -496,7 +514,7 @@ a {
 
 
 
-.bars__row {
+.noodles-world .bars__row {
   display: grid;
   grid-template-columns: 96px 1fr;
   align-items: center;
@@ -506,7 +524,7 @@ a {
 
 
 
-.bars__track {
+.noodles-world .bars__track {
   height: 8px;
   border-radius: 999px;
   background: var(--border);
@@ -515,7 +533,7 @@ a {
 
 
 
-.bars__fill {
+.noodles-world .bars__fill {
   height: 100%;
   background: var(--jade);
   border-radius: 999px;
@@ -523,14 +541,14 @@ a {
 
 
 
-details.disclosure {
+.noodles-world details.disclosure {
   border-top: 1px solid var(--border);
   padding: 14px 0;
 }
 
 
 
-details.disclosure summary {
+.noodles-world details.disclosure summary {
   cursor: pointer;
   font-weight: 700;
   list-style: none;
@@ -541,13 +559,13 @@ details.disclosure summary {
 
 
 
-details.disclosure summary::-webkit-details-marker {
+.noodles-world details.disclosure summary::-webkit-details-marker {
   display: none;
 }
 
 
 
-.recipe-steps {
+.noodles-world .recipe-steps {
   counter-reset: step;
   list-style: none;
   padding: 0;
@@ -559,7 +577,7 @@ details.disclosure summary::-webkit-details-marker {
 
 
 
-.recipe-steps li {
+.noodles-world .recipe-steps li {
   counter-increment: step;
   display: grid;
   grid-template-columns: 30px 1fr;
@@ -568,7 +586,7 @@ details.disclosure summary::-webkit-details-marker {
 
 
 
-.recipe-steps li::before {
+.noodles-world .recipe-steps li::before {
   content: counter(step);
   width: 30px;
   height: 30px;
@@ -584,7 +602,7 @@ details.disclosure summary::-webkit-details-marker {
 
 
 
-.glance-strip {
+.noodles-world .glance-strip {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
   gap: 10px;
@@ -596,7 +614,7 @@ details.disclosure summary::-webkit-details-marker {
 
 
 
-.glance-strip__item {
+.noodles-world .glance-strip__item {
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -604,7 +622,7 @@ details.disclosure summary::-webkit-details-marker {
 
 
 
-.glance-strip__item span:first-child {
+.noodles-world .glance-strip__item span:first-child {
   font-size: 10.5px;
   font-weight: 700;
   text-transform: uppercase;
@@ -614,7 +632,7 @@ details.disclosure summary::-webkit-details-marker {
 
 
 
-.atlas-list {
+.noodles-world .atlas-list {
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -622,7 +640,7 @@ details.disclosure summary::-webkit-details-marker {
 
 
 
-.atlas-region {
+.noodles-world .atlas-region {
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 16px;
@@ -631,7 +649,7 @@ details.disclosure summary::-webkit-details-marker {
 
 
 
-.atlas-region__countries {
+.noodles-world .atlas-region__countries {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -640,14 +658,14 @@ details.disclosure summary::-webkit-details-marker {
 
 
 
-.atlas-country {
+.noodles-world .atlas-country {
   border-top: 1px solid var(--border);
   padding-top: 10px;
 }
 
 
 
-.atlas-place-list {
+.noodles-world .atlas-place-list {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -657,14 +675,14 @@ details.disclosure summary::-webkit-details-marker {
 /* Added to replace ad-hoc inline styles in AtlasPage.tsx -- region header row, place notes, and
    the per-dish chip avatar were the only remaining hand-rolled styles in this file, inconsistent
    with every other card/tile treatment in the app (which all go through a real CSS class). */
-.atlas-region__header {
+.noodles-world .atlas-region__header {
   display: flex;
   align-items: center;
   gap: 14px;
   margin-bottom: 6px;
 }
 
-.atlas-region__spotlight {
+.noodles-world .atlas-region__spotlight {
   width: 64px;
   height: 64px;
   border-radius: 12px;
@@ -672,24 +690,29 @@ details.disclosure summary::-webkit-details-marker {
   flex-shrink: 0;
 }
 
-.atlas-region__header h2 {
+.noodles-world .atlas-region__header h2 {
   margin-bottom: 0;
 }
 
-.atlas-place-note {
+.noodles-world .atlas-place-note {
   font-size: 13.5px;
   opacity: 0.8;
   margin: 2px 0;
 }
 
-.atlas-country h3 {
+.noodles-world .atlas-country h3 {
   margin-bottom: 4px;
 }
 
-.atlas-dish-avatar {
+.noodles-world .atlas-dish-avatar {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   object-fit: cover;
   margin-left: -4px;
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .noodles-world .hero-bleed__media { height: 220px; max-height: 220px; }
+  .noodles-world .hero-bleed__content h1 { font-size: 30px; margin-bottom: 0; }
 }

@@ -1,8 +1,8 @@
-.pair-form {
+.ramen-world .pair-form {
   margin: 20px 0 24px;
 }
 
-.pair-form label {
+.ramen-world .pair-form label {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -10,7 +10,7 @@
   color: var(--text);
 }
 
-.pair-form select {
+.ramen-world .pair-form select {
   font: inherit;
   padding: 8px 12px;
   border-radius: 8px;
@@ -20,34 +20,34 @@
   max-width: 320px;
 }
 
-.pair-summary {
+.ramen-world .pair-summary {
   margin-bottom: 12px;
 }
 
-.sommelier-section-heading {
+.ramen-world .sommelier-section-heading {
   margin: 28px 0 12px;
 }
 
-.pair-grid {
+.ramen-world .pair-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 16px;
 }
 
-.pair-category-tag {
+.ramen-world .pair-category-tag {
   margin-bottom: 8px;
 }
 
-.pair-card h3 {
+.ramen-world .pair-card h3 {
   margin-bottom: 4px;
 }
 
-.pair-item-description {
+.ramen-world .pair-item-description {
   font-size: 14px;
   opacity: 0.85;
 }
 
-.pair-reason {
+.ramen-world .pair-reason {
   font-size: 14px;
   margin: 0;
   padding-top: 8px;

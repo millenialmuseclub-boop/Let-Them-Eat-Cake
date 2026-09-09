@@ -1,22 +1,22 @@
 
-.my-ramen-section {
+.ramen-world .my-ramen-section {
   margin-top: 32px;
 }
 
-.my-ramen-empty {
+.ramen-world .my-ramen-empty {
   opacity: 0.75;
   font-size: 15px;
   margin-top: 12px;
 }
 
-.my-ramen-grid {
+.ramen-world .my-ramen-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 16px;
   margin-top: 16px;
 }
 
-.my-ramen-card {
+.ramen-world .my-ramen-card {
   text-decoration: none;
   color: inherit;
   display: flex;
@@ -24,12 +24,12 @@
   gap: 6px;
 }
 
-.my-ramen-card h3 {
+.ramen-world .my-ramen-card h3 {
   margin: 0;
   font-size: 16px;
 }
 
-.my-ramen-note {
+.ramen-world .my-ramen-note {
   font-size: 13px;
   font-style: italic;
   opacity: 0.75;

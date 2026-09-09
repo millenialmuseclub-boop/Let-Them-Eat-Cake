@@ -14,8 +14,17 @@ import type { AffiliateProduct } from '../types/product'
 // more than one of the three files above -- deduped here (first occurrence wins) so a Curated
 // Kitchen listing never renders/keys the same product twice.
 function dedupeById(items: AffiliateProduct[]): AffiliateProduct[] {
-  const seen = new Set<string>()
-  return items.filter((p) => (seen.has(p.id) ? false : (seen.add(p.id), true)))
+  const merged = new Map<string, AffiliateProduct>()
+  for (const product of items) {
+    const existing = merged.get(product.id)
+    merged.set(product.id, existing ? {
+      ...existing,
+      apps: [...new Set([...existing.apps, ...product.apps])],
+      contexts: [...new Set([...(existing.contexts ?? []), ...(product.contexts ?? [])])],
+      offers: [...existing.offers, ...product.offers.filter((offer) => !existing.offers.some((saved) => saved.id === offer.id))],
+    } : product)
+  }
+  return [...merged.values()]
 }
 
 export const products: AffiliateProduct[] = dedupeById([

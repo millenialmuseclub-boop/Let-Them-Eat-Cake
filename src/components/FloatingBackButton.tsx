@@ -1,4 +1,5 @@
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { worldFromPathname } from '../data/hubs'
 import { Capacitor } from '@capacitor/core'
 import { runBackHandlers } from '../lib/backButtonInterceptor'
 import './FloatingBackButton.css'
@@ -11,8 +12,9 @@ import './FloatingBackButton.css'
     second on-screen back control would be redundant with the OS-level one. */
 export function FloatingBackButton() {
   const navigate = useNavigate()
+  const { pathname } = useLocation()
 
-  if (Capacitor.getPlatform() === 'android') return null
+  if (Capacitor.getPlatform() === 'android' || pathname === '/') return null
 
   function handleBack() {
     if (runBackHandlers()) return
@@ -23,7 +25,9 @@ export function FloatingBackButton() {
       return
     }
 
-    navigate('/discover')
+    const world = worldFromPathname(pathname)
+    const home = world && world !== 'cake' ? `/${world}` : '/discover'
+    navigate(pathname === home ? '/' : home)
   }
 
   return (

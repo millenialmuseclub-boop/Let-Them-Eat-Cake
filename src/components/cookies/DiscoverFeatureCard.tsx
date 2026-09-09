@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import type { CookieImage } from '../../types/cookies/images'
+import '../DiscoverFeatureCard.css'
 
 export function DiscoverFeatureCard({
   to,
