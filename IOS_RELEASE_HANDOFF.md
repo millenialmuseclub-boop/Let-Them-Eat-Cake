@@ -1,19 +1,27 @@
 # iOS Release Handoff
 
-Written 2026-08-13, last updated 2026-08-15. A signed build is now shipping to TestFlight entirely from GitHub Actions — no Mac was ever used. The one thing still genuinely blocked without a Mac is native QA in a simulator/device (see below); everything about getting a build signed and uploaded is done and repeatable.
+Written 2026-08-13, last updated 2026-09-08 for a handoff to Codex. A signed build is now shipping to TestFlight entirely from GitHub Actions — no Mac was ever used. The one thing still genuinely blocked without a Mac is native QA in a simulator/device (see below); everything about getting a build signed and uploaded is done and repeatable.
 
-**Build 3 (2026-08-15)** ships everything through the accessibility pass, Atlas region screens, photography backfill, and the share-system rewrite + Capacitor Haptics plugin — build 2 predated all of that. OTA-shippable JS/web changes reach any installed build automatically via the production channel; a fresh native build was only needed here because Haptics is a native plugin addition OTA can't deliver.
+**Build 4 / version 2.0 (uploaded 2026-08-28, run `33187821817`)** is the latest native build in TestFlight. Everything below that date is app content/UI: the app is now a merged multi-world product (Cake, Ramen, Cookies, Noodles under one shell — see `src/data/hubs.ts`), not the single-world Cake app the App Store record's version-1.0 copy in this file used to describe.
+
+**Since Build 4, all shipped work has been OTA-only** (JS/CSS/data changes, no native plugin or `capacitor.config.ts` changes) — see `OTA_UPDATES.md` for the mechanism. Every installed build (TestFlight or otherwise) already has this content on next launch; **no new native build is required to pick up recent work**. Most recent OTA pushes (all to `production`, all `npm run build`+lint+typecheck clean before publish):
+- Cookies Curated Collections route fix + Atlas/Shop feature-photo cards across all four worlds (PR #3)
+- Fixed hard-blank hero images for cakes/ramen with no sourced photo (now show a branded "photo coming soon" placeholder instead of nothing) + added missing hero photos to several Cookies hub pages (PR #4)
+- Fixed Ramen Atlas map pin tap-precision (Kanto-region cities were hard to tap individually) + brought Noodles Atlas off ad-hoc inline styles onto real CSS classes (PR #5)
+
+**Known content gap, not yet fixed (real, not a placeholder bug):** 7 of 118 cakes and 12 of 25 ramen have no real sourced photo yet — they now render an honest "photo coming soon" placeholder rather than a blank hole, but still lack real photography. Sourcing verified, accurately-attributed photos for these is real remaining work (not native-blocked, could be done as another OTA push).
 
 ## Current State
 
 - Apple Developer account: enrolled, Individual, Team ID **J48FJJ3ABL**, Apple Developer Program active (renews Aug 8 2027). Signed in as enchantedheadwear@gmail.com.
 - App ID registered: `com.letthemeatcake.app`, no capabilities enabled (none needed — the app uses no push notifications, HealthKit, iCloud, Sign In with Apple, etc.).
-- App Store Connect app record: **Apple ID 6801655009**, "Let Them Eat Cake", iOS. **Build 3 (version 1.0) uploaded successfully and is processing/available in TestFlight** as of 2026-08-15 — see `.github/workflows/ios-release.yml` run history for the exact run. Store-listing metadata (screenshots, description, keywords, App Review info) is still **not** filled in — not needed until actual App Store submission, which per the original brief we're deliberately not doing yet.
+- App Store Connect app record: **Apple ID 6801655009**, "Let Them Eat Cake", iOS. **Build 4 (version 2.0) uploaded successfully and is processing/available in TestFlight** as of 2026-08-28 — see `.github/workflows/ios-release.yml` run history for the exact run. Store-listing metadata (screenshots, description, keywords, App Review info) is still **not** filled in — not needed until actual App Store submission, which per the original brief we're deliberately not doing yet.
 - Bundle ID: `com.letthemeatcake.app` — matches Android, `capacitor.config.ts`, the registered App ID, and the App Store Connect app record.
-- App name: "Let Them Eat Cake". Version `1.0`, build `1` (`ios/App/App.xcodeproj/project.pbxproj`).
+- App name: "Let Them Eat Cake". Version `2.0`, build `4` (`ios/App/App.xcodeproj/project.pbxproj`, `CURRENT_PROJECT_VERSION`/`MARKETING_VERSION`).
 - Icon (1024×1024) and splash screen assets are in place (`ios/App/App/Assets.xcassets`).
 - Capacitor plugins synced into the iOS project via SPM (`ios/App/CapApp-SPM/Package.swift`): `@capacitor/app`, `@capacitor/share`, `@capacitor/haptics`, `@capgo/capacitor-updater`.
 - No CocoaPods — this project uses Swift Package Manager for Capacitor's iOS integration, so there's no `Podfile`/`pod install` step. That's expected, not missing.
+- Android is behind iOS: last released build was `versionCode 1` / `versionName "1.0"` on 2026-08-14, predating the multi-world merge. Not otherwise covered by this doc (iOS-specific) — flag if Android parity becomes a priority.
 
 ## CI signing pipeline (`.github/workflows/ios-release.yml`)
 
@@ -30,12 +38,13 @@ Manual `workflow_dispatch` trigger (`gh workflow run ios-release.yml`, or the Ac
 ## What still needs a Mac
 
 Native QA in a simulator or on a device — this genuinely cannot happen without Xcode:
-- Four bottom tabs: Main, Workshop, Sommelier, Celebrate
-- Safe-area spacing, native back/navigation, keyboard/forms
-- Saved Cakes persistence (localStorage-backed, should just work in WKWebView)
-- External affiliate links open correctly
+- All four worlds (Cake, Ramen, Cookies, Noodles), each with its own bottom tab bar: Main, Workshop, Atlas, Shop
+- World switching from Home, safe-area spacing, native back/navigation, keyboard/forms
+- Saved items persistence per world (localStorage-backed, should just work in WKWebView)
+- External affiliate links open correctly (Curated Kitchen / Shop in every world)
 - Native iOS Share sheet + share cards render/share correctly
-- Atlas, Pantry Raid, Sommelier, Celebrate flows
+- Atlas map interaction specifically on a real device (Ramen's pinch/pan/tap on the Japan map — the pin-density fix in the 2026-09-08 OTA push was verified in a desktop browser emulator, not a real iPhone touch screen)
+- Sommelier/pairing flows, Workshop labs, quizzes in each world
 - Legal/privacy/support links
 - Fix only genuine iOS-specific bugs found here — no product changes.
 
