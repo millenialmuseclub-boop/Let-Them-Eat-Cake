@@ -9,7 +9,7 @@ Written 2026-08-13, last updated 2026-09-08 for a handoff to Codex. A signed bui
 - Fixed hard-blank hero images for cakes/ramen with no sourced photo (now show a branded "photo coming soon" placeholder instead of nothing) + added missing hero photos to several Cookies hub pages (PR #4)
 - Fixed Ramen Atlas map pin tap-precision (Kanto-region cities were hard to tap individually) + brought Noodles Atlas off ad-hoc inline styles onto real CSS classes (PR #5)
 
-**Photography update in the unshipped takeover branch:** 20 verified, attributed dish photos are now bundled locally (6 Cake, 12 Ramen, 2 Cookies). Two dish-photo gaps remain: Kerala Plum Cake and Pepas. See `reports/content-audit.json` and `public/photography/credits.json`.
+**Photography update shipped through OTA production:** 20 verified, attributed dish photos are now bundled locally (6 Cake, 12 Ramen, 2 Cookies). Two dish-photo gaps remain: Kerala Plum Cake and Pepas. See `reports/content-audit.json` and `public/photography/credits.json`.
 
 ## Current State
 
@@ -55,10 +55,14 @@ To open the project locally: `ios/App/App.xcodeproj` (no separate `.xcworkspace`
 - The App Store Connect app record (6801655009) already exists under `com.letthemeatcake.app` — don't let anything create a second app.
 - Duplicate build number: increment `CURRENT_PROJECT_VERSION` before re-running the workflow.
 
-## Prepared Build 5: takeover pass (not shipped)
+## Prepared Build 5: native binary not shipped
 
 Build 5 should bundle PR #3–5 plus the current navigation, saved-state, photography, Atlas, CSS isolation, route loading, and contextual commerce fixes. Native identity, signing, permissions, OTA public key, and plugin versions are unchanged. The native changes are build numbering, portable Swift package paths, and a privacy resource declaring FileTimestamp C617.1 and UserDefaults CA92.1 for the installed plugins.
 
 Validation commands: npm run lint; npm test; npm run build; APP_BUILD_VERSION=<commit timestamp> npx cap sync ios; npm run ios:normalize; npm run ios:check. Set VITE_R2_PUBLIC_BASE_URL and VITE_OTA_CHANNEL=production before a release web build. CI adds --release checks before touching signing credentials. The local sync validates packaged assets, not executable iOS behavior.
 
 The manual iOS workflow uploads to Apple: do not run it without explicit authorization. First verify physical touch interaction, native sharing, safe areas/text scaling, persistence, offline launch, and signed OTA download/activation/watchdog recovery on a staging build. Browser viewport checks do not satisfy these gates. See TAKEOVER_REPORT.md for the pass evidence and outstanding work.
+
+## Latest verified OTA production publish
+
+The takeover web changes shipped as 953119abf404d80d4897f89f9e8b21103630993e (PR #7), OTA version 1788926462. Workflow 34309325018 succeeded on 2026-09-09 UTC / 2026-09-08 Pacific. The public manifest and encrypted bundle availability were independently verified. Build 4 remains the latest known native binary; Build 5 preparation has not been uploaded. Physical-device OTA activation still needs testing.

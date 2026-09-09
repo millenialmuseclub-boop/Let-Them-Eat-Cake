@@ -40,7 +40,7 @@ No Xcode archive, signing, TestFlight upload, or Apple submission was performed.
 
 Build 4 contains the previous native snapshot. Per the incoming handoff, PR #3–5 shipped later through OTA production; devices must actually download and activate that OTA before showing it. PR #6 was documentation cleanup. This takeover adds the web changes described above and separate native Build 5 preparation. Native project/privacy/build-number changes cannot be delivered by OTA.
 
-The user subsequently authorized publishing these web changes to OTA production. Publication is pending GitHub CLI authorization and the production workflow; no new OTA from this pass has been published yet. Update this section with the deployed commit and workflow evidence after success. The production workflow remains manual and now also requires lint/regression tests.
+The user authorized OTA production publication. PR #7 merged the implementation commit 5a05c24 as 953119abf404d80d4897f89f9e8b21103630993e. Production workflow 34309325018 succeeded on 2026-09-09 UTC (2026-09-08 Pacific): lint, 11 tests, build, signing/encryption, and R2 upload all passed. The public manifest was independently verified at version 1788926462 with that exact SHA; the encrypted bundle returned HTTP 200 (3,359,936 bytes). The live Netlify /photo-credits page also showed all 20 new credits with no browser console errors. Native-device download/activation is still untested. Workflow: https://github.com/millenialmuseclub-boop/Let-Them-Eat-Cake/actions/runs/34309325018
 
 ## Remaining release checks
 
@@ -48,4 +48,4 @@ Before a native release: run the physical/simulator checks above, especially Ram
 
 ## Git state at preparation
 
-Branch: codex/takeover-polish. Changes are prepared locally for review/commit. No native deployment. The final user-facing report records the actual commit, push, PR, and OTA outcome; do not infer deployment from a commit or merge.
+Implementation branch: codex/takeover-polish; implementation commit 5a05c24 was pushed and merged through PR #7. OTA deployed merge commit 953119a. This documentation follow-up records the verified result; it does not require another OTA publish. No native deployment.
