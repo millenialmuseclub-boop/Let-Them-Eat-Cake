@@ -13,7 +13,7 @@ const GROUPS: { id: (typeof labs)[number]['group']; title: string }[] = [
 export function WorkshopPage() {
   useDocumentTitle('Workshop');
   return (
-    <div className="page-container">
+    <main className="page-container noodle-workshop">
       <div className="hero-bleed">
         <PhotoFrame subjectId="lanzhou-lamian" fallbackLabel="The Noodle Workshop" variant="hero" />
         <div className="hero-bleed__scrim" />
@@ -23,8 +23,7 @@ export function WorkshopPage() {
         </div>
       </div>
       <p className="prose" style={{ maxWidth: 560 }}>
-        Deterministic, structured lessons — no calculators, no AI chatbot. Pick a described option
-        and see what it actually does to the noodle.
+        Find your next kitchen skill: build a better dough, shape it by hand, or bring the whole bowl together.
       </p>
 
       {GROUPS.map((group) => {
@@ -35,13 +34,14 @@ export function WorkshopPage() {
             <div className="section-heading">
               <h2>{group.title}</h2>
             </div>
-            <div className="grid">
+            <div className="noodle-workshop-grid">
               {groupLabs.map((lab) => (
-                <Link key={lab.slug} to={`/noodles/workshop/lab/${lab.slug}`} className="tile">
-                  <PhotoFrame subjectId={lab.relatedDishIds?.[0] ?? lab.slug} fallbackLabel={lab.title} variant="tile" />
-                  <div className="tile__scrim" />
-                  <div className="tile__label">
-                    <strong>{lab.title}</strong>
+                <Link key={lab.slug} to={`/noodles/workshop/lab/${lab.slug}`} className="noodle-workshop-card">
+                  <div className="noodle-workshop-photo"><PhotoFrame subjectId={lab.relatedDishIds?.[0] ?? lab.slug} fallbackLabel={lab.title} variant="tile" /></div>
+                  <div className="noodle-workshop-copy">
+                    <h3>{lab.title}</h3>
+                    <p>{lab.summary}</p>
+                    <span>Explore the lesson →</span>
                   </div>
                 </Link>
               ))}
@@ -55,6 +55,6 @@ export function WorkshopPage() {
         <h2>Solve a Problem</h2>
         <Link to="/noodles/workshop/troubleshooter">Open the Troubleshooter →</Link>
       </div>
-    </div>
+    </main>
   );
 }

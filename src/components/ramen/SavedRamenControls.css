@@ -1,10 +1,10 @@
-.saved-ramen-buttons {
+.ramen-world .saved-ramen-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.saved-ramen-btn {
+.ramen-world .saved-ramen-btn {
   font: inherit;
   font-size: 14px;
   padding: 8px 14px;
@@ -15,13 +15,13 @@
   cursor: pointer;
 }
 
-.saved-ramen-btn.active {
+.ramen-world .saved-ramen-btn.active {
   background: var(--raspberry);
   border-color: var(--raspberry);
   color: white;
 }
 
-.saved-ramen-note {
+.ramen-world .saved-ramen-note {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -29,7 +29,7 @@
   font-size: 13px;
 }
 
-.saved-ramen-note textarea {
+.ramen-world .saved-ramen-note textarea {
   font: inherit;
   padding: 10px 12px;
   border-radius: 8px;
@@ -39,6 +39,6 @@
   resize: vertical;
 }
 
-.saved-ramen-note .btn {
+.ramen-world .saved-ramen-note .btn {
   align-self: flex-start;
 }

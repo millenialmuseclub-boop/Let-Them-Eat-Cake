@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
 import { getSceneImage } from '../lib/sceneImages'
 import { products } from '../lib/products'
+import { AffiliateDisclosure } from '../components/AffiliateDisclosure'
 import './HomePage.css'
 
 // The umbrella "What are we eating?" home for the merged app. Rewritten from an equal four-card
@@ -238,6 +239,7 @@ export function HomePage() {
               )
             })}
           </ul>
+          <AffiliateDisclosure />
         </section>
       )}
     </main>

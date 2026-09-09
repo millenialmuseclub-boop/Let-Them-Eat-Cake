@@ -13,16 +13,14 @@ const FALLBACK_CLASS = { tile: 'tile__fallback', hero: 'hero-bleed__media' };
 /** Renders real, attributed photography when available; otherwise an honest editorial fallback
     (a typographic name-card, not an emoji or a substitute photo) per the master spec.
 
-    Unlike every other world's photography (pre-fetched at build time and bundled with the app),
-    Noodles' images are live Wikimedia Commons hotlinks fetched at runtime -- a genuinely more
-    fragile dependency (slow/blocked/rate-limited on a real device's network). Falls back to the
-    same honest editorial card on a load failure instead of leaving a broken-image icon on screen. */
+    Remote imagery can be slow, blocked, or unavailable on a device network.
+    A failed source falls back to the same editorial card without blocking exploration. */
 export function PhotoFrame({ subjectId, fallbackLabel, variant = 'tile' }: PhotoFrameProps) {
   const image = getImageFor(subjectId);
-  const [failed, setFailed] = useState(false);
+  const [failedSrc, setFailedSrc] = useState<string | null>(null);
 
-  if (image && !failed) {
-    return <img src={image.src} alt={image.alt} className={MEDIA_CLASS[variant]} loading="lazy" onError={() => setFailed(true)} />;
+  if (image && failedSrc !== image.src) {
+    return <img src={image.src} alt={image.alt} className={MEDIA_CLASS[variant]} loading={variant === 'hero' ? 'eager' : 'lazy'} decoding="async" onError={() => setFailedSrc(image.src)} />;
   }
 
   return (

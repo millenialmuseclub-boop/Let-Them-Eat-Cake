@@ -1,13 +1,13 @@
-.discover-brand {
+.ramen-world .discover-brand {
   text-align: left;
 }
 
-.discover-brand p {
+.ramen-world .discover-brand p {
   font-size: 17px;
   opacity: 0.85;
 }
 
-.discover-about-link {
+.ramen-world .discover-about-link {
   display: block;
   text-align: center;
   margin: 40px 0 16px;
@@ -17,6 +17,6 @@
   text-decoration: none;
 }
 
-.discover-about-link:hover {
+.ramen-world .discover-about-link:hover {
   opacity: 0.85;
 }

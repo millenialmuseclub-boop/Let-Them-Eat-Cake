@@ -1,36 +1,36 @@
-.lab-explorer {
+.ramen-world .lab-explorer {
   display: flex;
   flex-direction: column;
   gap: 32px;
   margin-top: 20px;
 }
 
-.lab-explorer h2 {
+.ramen-world .lab-explorer h2 {
   margin-bottom: 12px;
 }
 
-.lab-try-it-note {
+.ramen-world .lab-try-it-note {
   opacity: 0.75;
   font-size: 15px;
   margin-bottom: 16px;
 }
 
-.lab-variable-card {
+.ramen-world .lab-variable-card {
   margin-bottom: 16px;
 }
 
-.lab-variable-card h3 {
+.ramen-world .lab-variable-card h3 {
   margin-bottom: 10px;
 }
 
-.lab-variable-options {
+.ramen-world .lab-variable-options {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 12px;
 }
 
-.lab-variable-option {
+.ramen-world .lab-variable-option {
   font: inherit;
   padding: 8px 14px;
   border-radius: 999px;
@@ -41,29 +41,29 @@
   font-size: 14px;
 }
 
-.lab-variable-option.active {
+.ramen-world .lab-variable-option.active {
   background: var(--raspberry);
   border-color: var(--raspberry);
   color: white;
 }
 
-.lab-variable-effect {
+.ramen-world .lab-variable-effect {
   font-size: 15px;
   margin-bottom: 12px;
 }
 
-.lab-related-ramen {
+.ramen-world .lab-related-ramen {
   font-size: 13px;
   opacity: 0.75;
   margin-top: 10px;
 }
 
-.lab-related-ramen a {
+.ramen-world .lab-related-ramen a {
   color: var(--raspberry);
   text-decoration: none;
   text-transform: capitalize;
 }
 
-.lab-related-ramen a:hover {
+.ramen-world .lab-related-ramen a:hover {
   text-decoration: underline;
 }

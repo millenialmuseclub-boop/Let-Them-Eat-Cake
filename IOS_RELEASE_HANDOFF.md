@@ -1,15 +1,15 @@
 # iOS Release Handoff
 
-Written 2026-08-13, last updated 2026-09-08 for a handoff to Codex. A signed build is now shipping to TestFlight entirely from GitHub Actions — no Mac was ever used. The one thing still genuinely blocked without a Mac is native QA in a simulator/device (see below); everything about getting a build signed and uploaded is done and repeatable.
+Written 2026-08-13, last updated 2026-09-08 for a handoff to Codex. A signed build is now shipping to TestFlight entirely from GitHub Actions — no Mac was ever used. Simulator QA needs Xcode on a Mac; physical TestFlight QA can be performed on an iPhone without a Mac. Neither was available during this takeover pass.
 
 **Build 4 / version 2.0 (uploaded 2026-08-28, run `33187821817`)** is the latest native build in TestFlight. Everything below that date is app content/UI: the app is now a merged multi-world product (Cake, Ramen, Cookies, Noodles under one shell — see `src/data/hubs.ts`), not the single-world Cake app the App Store record's version-1.0 copy in this file used to describe.
 
-**Since Build 4, all shipped work has been OTA-only** (JS/CSS/data changes, no native plugin or `capacitor.config.ts` changes) — see `OTA_UPDATES.md` for the mechanism. Every installed build (TestFlight or otherwise) already has this content on next launch; **no new native build is required to pick up recent work**. Most recent OTA pushes (all to `production`, all `npm run build`+lint+typecheck clean before publish):
+**Since Build 4, all shipped work has been OTA-only** (JS/CSS/data changes, no native plugin or `capacitor.config.ts` changes) — see `OTA_UPDATES.md` for the mechanism. Eligible production-channel installations can download this content and activate it at the next launch/background transition; offline devices may still have older content. **The PR #3–5 web changes do not require a new binary.** Most recent OTA pushes (all to `production`, all `npm run build`+lint+typecheck clean before publish):
 - Cookies Curated Collections route fix + Atlas/Shop feature-photo cards across all four worlds (PR #3)
 - Fixed hard-blank hero images for cakes/ramen with no sourced photo (now show a branded "photo coming soon" placeholder instead of nothing) + added missing hero photos to several Cookies hub pages (PR #4)
 - Fixed Ramen Atlas map pin tap-precision (Kanto-region cities were hard to tap individually) + brought Noodles Atlas off ad-hoc inline styles onto real CSS classes (PR #5)
 
-**Known content gap, not yet fixed (real, not a placeholder bug):** 7 of 118 cakes and 12 of 25 ramen have no real sourced photo yet — they now render an honest "photo coming soon" placeholder rather than a blank hole, but still lack real photography. Sourcing verified, accurately-attributed photos for these is real remaining work (not native-blocked, could be done as another OTA push).
+**Photography update in the unshipped takeover branch:** 20 verified, attributed dish photos are now bundled locally (6 Cake, 12 Ramen, 2 Cookies). Two dish-photo gaps remain: Kerala Plum Cake and Pepas. See `reports/content-audit.json` and `public/photography/credits.json`.
 
 ## Current State
 
@@ -17,9 +17,9 @@ Written 2026-08-13, last updated 2026-09-08 for a handoff to Codex. A signed bui
 - App ID registered: `com.letthemeatcake.app`, no capabilities enabled (none needed — the app uses no push notifications, HealthKit, iCloud, Sign In with Apple, etc.).
 - App Store Connect app record: **Apple ID 6801655009**, "Let Them Eat Cake", iOS. **Build 4 (version 2.0) uploaded successfully and is processing/available in TestFlight** as of 2026-08-28 — see `.github/workflows/ios-release.yml` run history for the exact run. Store-listing metadata (screenshots, description, keywords, App Review info) is still **not** filled in — not needed until actual App Store submission, which per the original brief we're deliberately not doing yet.
 - Bundle ID: `com.letthemeatcake.app` — matches Android, `capacitor.config.ts`, the registered App ID, and the App Store Connect app record.
-- App name: "Let Them Eat Cake". Version `2.0`, build `4` (`ios/App/App.xcodeproj/project.pbxproj`, `CURRENT_PROJECT_VERSION`/`MARKETING_VERSION`).
+- App name: "Let Them Eat Cake". Shipped version `2.0`, build `4`. The source now prepares version `2.0`, build `5` (`CURRENT_PROJECT_VERSION`/`MARKETING_VERSION`); Build 5 has NOT been archived, signed, uploaded, or submitted.
 - Icon (1024×1024) and splash screen assets are in place (`ios/App/App/Assets.xcassets`).
-- Capacitor plugins synced into the iOS project via SPM (`ios/App/CapApp-SPM/Package.swift`): `@capacitor/app`, `@capacitor/share`, `@capacitor/haptics`, `@capgo/capacitor-updater`.
+- Capacitor plugins synced into the iOS project via SPM (`ios/App/CapApp-SPM/Package.swift`): `@capacitor/app`, `@capacitor/share`, `@capacitor/haptics`, `@capacitor/filesystem`, `@capgo/capacitor-updater`.
 - No CocoaPods — this project uses Swift Package Manager for Capacitor's iOS integration, so there's no `Podfile`/`pod install` step. That's expected, not missing.
 - Android is behind iOS: last released build was `versionCode 1` / `versionName "1.0"` on 2026-08-14, predating the multi-world merge. Not otherwise covered by this doc (iOS-specific) — flag if Android parity becomes a priority.
 
@@ -35,9 +35,9 @@ Manual `workflow_dispatch` trigger (`gh workflow run ios-release.yml`, or the Ac
 
 **To ship a new build:** bump `CURRENT_PROJECT_VERSION` in `project.pbxproj` (App Store Connect rejects duplicate build numbers per version), commit, push, then `gh workflow run ios-release.yml`. No Mac needed.
 
-## What still needs a Mac
+## Native QA still required
 
-Native QA in a simulator or on a device — this genuinely cannot happen without Xcode:
+Use Xcode on macOS for simulator testing, or the TestFlight app on a physical iPhone for device testing:
 - All four worlds (Cake, Ramen, Cookies, Noodles), each with its own bottom tab bar: Main, Workshop, Atlas, Shop
 - World switching from Home, safe-area spacing, native back/navigation, keyboard/forms
 - Saved items persistence per world (localStorage-backed, should just work in WKWebView)
@@ -54,3 +54,11 @@ To open the project locally: `ios/App/App.xcodeproj` (no separate `.xcworkspace`
 
 - The App Store Connect app record (6801655009) already exists under `com.letthemeatcake.app` — don't let anything create a second app.
 - Duplicate build number: increment `CURRENT_PROJECT_VERSION` before re-running the workflow.
+
+## Prepared Build 5: takeover pass (not shipped)
+
+Build 5 should bundle PR #3–5 plus the current navigation, saved-state, photography, Atlas, CSS isolation, route loading, and contextual commerce fixes. Native identity, signing, permissions, OTA public key, and plugin versions are unchanged. The native changes are build numbering, portable Swift package paths, and a privacy resource declaring FileTimestamp C617.1 and UserDefaults CA92.1 for the installed plugins.
+
+Validation commands: npm run lint; npm test; npm run build; APP_BUILD_VERSION=<commit timestamp> npx cap sync ios; npm run ios:normalize; npm run ios:check. Set VITE_R2_PUBLIC_BASE_URL and VITE_OTA_CHANNEL=production before a release web build. CI adds --release checks before touching signing credentials. The local sync validates packaged assets, not executable iOS behavior.
+
+The manual iOS workflow uploads to Apple: do not run it without explicit authorization. First verify physical touch interaction, native sharing, safe areas/text scaling, persistence, offline launch, and signed OTA download/activation/watchdog recovery on a staging build. Browser viewport checks do not satisfy these gates. See TAKEOVER_REPORT.md for the pass evidence and outstanding work.

@@ -5,7 +5,6 @@ import { Capacitor } from '@capacitor/core'
 import { App as CapacitorApp } from '@capacitor/app'
 import './index.css'
 import App from './App.tsx'
-import { checkForOtaUpdate, markAppReady } from './lib/otaUpdater'
 import { runBackHandlers } from './lib/backButtonInterceptor'
 
 createRoot(document.getElementById('root')!).render(
@@ -16,9 +15,7 @@ createRoot(document.getElementById('root')!).render(
   </StrictMode>,
 )
 
-// Fire-and-forget, after the app has already rendered — never blocks startup.
-markAppReady()
-checkForOtaUpdate()
+// OTA readiness is confirmed after the initial route commits in App.tsx.
 
 // Android hardware back button. Order: 1) let a mounted component (Celebrate
 // wizard step, open share card) claim it first -- see backButtonInterceptor.ts.

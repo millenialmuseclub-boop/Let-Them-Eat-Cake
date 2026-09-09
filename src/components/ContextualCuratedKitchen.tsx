@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
+import { worldFromPathname } from '../data/hubs'
 import { products } from '../lib/products'
 import curatedKitchenScenes from '../data/curatedKitchenScenes.json'
 import type { AffiliateNetwork, AffiliateProduct, ProductCategory } from '../types/product'
@@ -35,10 +37,13 @@ type ContextualCuratedKitchenProps = { title: string } & (
     section additionally gets a section-level header photo when one exists, and caps itself to a
     preview with "View All" so a growing catalog doesn't turn into an endless scroll. */
 export function ContextualCuratedKitchen({ context, category, title }: ContextualCuratedKitchenProps) {
+  const world = worldFromPathname(useLocation().pathname)
   const [expanded, setExpanded] = useState(false)
   const scene = category ? SCENES[`curated-kitchen-${category}`] : undefined
 
   const items = products
+    .filter((p) => world !== null && p.apps.some((app) => app === world))
+    .filter((p) => activeOffers(p).length > 0)
     .filter((p) => (context ? p.contexts?.includes(context) : p.category === category))
     .sort((a, b) => (activeOffers(a).length > 0 ? -1 : 1) - (activeOffers(b).length > 0 ? -1 : 1))
 

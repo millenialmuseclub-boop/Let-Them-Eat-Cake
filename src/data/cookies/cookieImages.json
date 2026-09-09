@@ -331,5 +331,21 @@
     "photographerUrl": "https://commons.wikimedia.org/wiki/User:Aoziwe",
     "source": "Wikimedia Commons",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monte_carlo_biscuit_-_whole.jpg"
+  },
+  "cookie_barazek": {
+    "url": "/photography/cookie_barazek.webp",
+    "photographer": "El Mono Español",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barazeq.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "cookie_marranitos": {
+    "url": "/photography/cookie_marranitos.webp",
+    "photographer": "Stephanie Lopez",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Galletas_de_puerquitos_de_la_dulceria_de_celaya_en_la_Colonia_Roma.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
   }
 }

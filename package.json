@@ -7,6 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
+    "test": "node --test tests/*.test.mjs",
+    "audit:content": "node --import ./scripts/register-typescript.mjs scripts/audit-content.mjs",
+    "ios:normalize": "node scripts/normalize-ios-paths.mjs",
+    "ios:check": "node scripts/check-ios.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

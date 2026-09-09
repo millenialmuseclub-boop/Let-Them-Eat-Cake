@@ -1,46 +1,49 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import './styles/worldAccents.css'
+import { markAppReady, checkForOtaUpdate } from './lib/otaUpdater'
 import { HomePage } from './pages/HomePage'
-import { TimeMachinePage } from './pages/TimeMachinePage'
-import { AtlasPage } from './pages/AtlasPage'
-import { AtlasRegionPage } from './pages/AtlasRegionPage'
-import { SommelierPage } from './pages/SommelierPage'
-import { PersonaMatchPage } from './pages/PersonaMatchPage'
-import { PantryRaidPage } from './pages/PantryRaidPage'
-import { WeddingJourneyPage } from './pages/WeddingJourneyPage'
-import { BirthdayPlannerPage } from './pages/BirthdayPlannerPage'
-import { OtherCelebrationsPage } from './pages/OtherCelebrationsPage'
-import { AssemblyLabPage } from './pages/AssemblyLabPage'
-import { CakeAnatomyPage } from './pages/CakeAnatomyPage'
-import { CakeStabilityPage } from './pages/CakeStabilityPage'
-import { TechniqueLibraryPage } from './pages/TechniqueLibraryPage'
-import { CakeSciencePage } from './pages/CakeSciencePage'
-import { CakeBlueprintsPage } from './pages/CakeBlueprintsPage'
-import { CakeFailureLabPage } from './pages/CakeFailureLabPage'
-import { CakeEncyclopediaIndexPage } from './pages/CakeEncyclopediaIndexPage'
-import { CakeDetailPage } from './pages/CakeDetailPage'
-import { PastryNotebookPage } from './pages/PastryNotebookPage'
-import { IngredientIndexPage } from './pages/IngredientIndexPage'
-import { IngredientDetailPage } from './pages/IngredientDetailPage'
-import { CollectionsIndexPage } from './pages/CollectionsIndexPage'
-import { CollectionDetailPage } from './pages/CollectionDetailPage'
-import { BakingTraditionsIndexPage } from './pages/BakingTraditionsIndexPage'
-import { BakingTraditionDetailPage } from './pages/BakingTraditionDetailPage'
-import { CuratedKitchenPage } from './pages/CuratedKitchenPage'
-import { CelebrateLandingPage } from './pages/CelebrateLandingPage'
-import { DiscoverPage } from './pages/DiscoverPage'
-import { AboutPage } from './pages/AboutPage'
-import { HubPage } from './components/HubPage'
+const TimeMachinePage = lazy(() => import('./pages/TimeMachinePage').then((module) => ({ default: module.TimeMachinePage })))
+const AtlasPage = lazy(() => import('./pages/AtlasPage').then((module) => ({ default: module.AtlasPage })))
+const AtlasRegionPage = lazy(() => import('./pages/AtlasRegionPage').then((module) => ({ default: module.AtlasRegionPage })))
+const SommelierPage = lazy(() => import('./pages/SommelierPage').then((module) => ({ default: module.SommelierPage })))
+const PersonaMatchPage = lazy(() => import('./pages/PersonaMatchPage').then((module) => ({ default: module.PersonaMatchPage })))
+const PantryRaidPage = lazy(() => import('./pages/PantryRaidPage').then((module) => ({ default: module.PantryRaidPage })))
+const WeddingJourneyPage = lazy(() => import('./pages/WeddingJourneyPage').then((module) => ({ default: module.WeddingJourneyPage })))
+const BirthdayPlannerPage = lazy(() => import('./pages/BirthdayPlannerPage').then((module) => ({ default: module.BirthdayPlannerPage })))
+const OtherCelebrationsPage = lazy(() => import('./pages/OtherCelebrationsPage').then((module) => ({ default: module.OtherCelebrationsPage })))
+const AssemblyLabPage = lazy(() => import('./pages/AssemblyLabPage').then((module) => ({ default: module.AssemblyLabPage })))
+const CakeAnatomyPage = lazy(() => import('./pages/CakeAnatomyPage').then((module) => ({ default: module.CakeAnatomyPage })))
+const CakeStabilityPage = lazy(() => import('./pages/CakeStabilityPage').then((module) => ({ default: module.CakeStabilityPage })))
+const TechniqueLibraryPage = lazy(() => import('./pages/TechniqueLibraryPage').then((module) => ({ default: module.TechniqueLibraryPage })))
+const CakeSciencePage = lazy(() => import('./pages/CakeSciencePage').then((module) => ({ default: module.CakeSciencePage })))
+const CakeBlueprintsPage = lazy(() => import('./pages/CakeBlueprintsPage').then((module) => ({ default: module.CakeBlueprintsPage })))
+const CakeFailureLabPage = lazy(() => import('./pages/CakeFailureLabPage').then((module) => ({ default: module.CakeFailureLabPage })))
+const CakeEncyclopediaIndexPage = lazy(() => import('./pages/CakeEncyclopediaIndexPage').then((module) => ({ default: module.CakeEncyclopediaIndexPage })))
+const CakeDetailPage = lazy(() => import('./pages/CakeDetailPage').then((module) => ({ default: module.CakeDetailPage })))
+const PastryNotebookPage = lazy(() => import('./pages/PastryNotebookPage').then((module) => ({ default: module.PastryNotebookPage })))
+const IngredientIndexPage = lazy(() => import('./pages/IngredientIndexPage').then((module) => ({ default: module.IngredientIndexPage })))
+const IngredientDetailPage = lazy(() => import('./pages/IngredientDetailPage').then((module) => ({ default: module.IngredientDetailPage })))
+const CollectionsIndexPage = lazy(() => import('./pages/CollectionsIndexPage').then((module) => ({ default: module.CollectionsIndexPage })))
+const CollectionDetailPage = lazy(() => import('./pages/CollectionDetailPage').then((module) => ({ default: module.CollectionDetailPage })))
+const BakingTraditionsIndexPage = lazy(() => import('./pages/BakingTraditionsIndexPage').then((module) => ({ default: module.BakingTraditionsIndexPage })))
+const BakingTraditionDetailPage = lazy(() => import('./pages/BakingTraditionDetailPage').then((module) => ({ default: module.BakingTraditionDetailPage })))
+const CuratedKitchenPage = lazy(() => import('./pages/CuratedKitchenPage').then((module) => ({ default: module.CuratedKitchenPage })))
+const CelebrateLandingPage = lazy(() => import('./pages/CelebrateLandingPage').then((module) => ({ default: module.CelebrateLandingPage })))
+const DiscoverPage = lazy(() => import('./pages/DiscoverPage').then((module) => ({ default: module.DiscoverPage })))
+const AboutPage = lazy(() => import('./pages/AboutPage').then((module) => ({ default: module.AboutPage })))
+const HubPage = lazy(() => import('./components/HubPage').then((module) => ({ default: module.HubPage })))
 import { TopNavBar } from './components/TopNavBar'
 import { BottomTabBar } from './components/BottomTabBar'
 import { FloatingBackButton } from './components/FloatingBackButton'
+import { RouteLoading, RouteNotFound, StorageNotice } from './components/RouteStatus'
 import { HUBS, hubWorld, worldFromPathname } from './data/hubs'
 
 // Each other world's page bundle is route-level code-split via React.lazy, so visiting Cake
 // (or Home) never pulls in Ramen/Cookies/Noodles' content -- each world's <World>Routes.tsx is
 // the single lazy-loaded entry point for all of that world's pages, hub-landing routes included.
 const RamenRoutes = lazy(() => import('./pages/ramen/RamenRoutes'))
+const PhotoCreditsPage = lazy(() => import('./pages/PhotoCreditsPage').then((module) => ({ default: module.PhotoCreditsPage })))
 const CookiesRoutes = lazy(() => import('./pages/cookies/CookiesRoutes'))
 const NoodlesRoutes = lazy(() => import('./pages/noodles/NoodlesRoutes'))
 
@@ -54,11 +57,24 @@ function worldAccentClass(pathname: string): string | undefined {
   return world && world !== 'cake' ? `${world}-world` : undefined
 }
 
+let didConfirmBoot = false
+function ConfirmBoot() {
+  useEffect(() => {
+    if (didConfirmBoot) return
+    didConfirmBoot = true
+    void markAppReady()
+    void checkForOtaUpdate()
+  }, [])
+  return null
+}
+
 function App() {
   const { pathname } = useLocation()
   return (
     <div className={worldAccentClass(pathname)}>
       <TopNavBar />
+      <StorageNotice />
+      <Suspense fallback={<RouteLoading />}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/celebrate" element={<CelebrateLandingPage />} />
@@ -99,33 +115,31 @@ function App() {
         <Route path="/traditions/:id" element={<BakingTraditionDetailPage />} />
         <Route path="/curated-kitchen" element={<CuratedKitchenPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/photo-credits" element={<PhotoCreditsPage />} />
 
         {/* Other worlds -- each is its own lazily-loaded chunk, mounted at /<world>/* */}
         <Route
           path="/ramen/*"
           element={
-            <Suspense fallback={<div className="page" />}>
-              <RamenRoutes />
-            </Suspense>
+            <RamenRoutes />
           }
         />
         <Route
           path="/cookies/*"
           element={
-            <Suspense fallback={<div className="page" />}>
-              <CookiesRoutes />
-            </Suspense>
+            <CookiesRoutes />
           }
         />
         <Route
           path="/noodles/*"
           element={
-            <Suspense fallback={<div className="page" />}>
-              <NoodlesRoutes />
-            </Suspense>
+            <NoodlesRoutes />
           }
         />
+        <Route path="*" element={<RouteNotFound />} />
       </Routes>
+      <ConfirmBoot />
+      </Suspense>
       <FloatingBackButton />
       <BottomTabBar />
     </div>

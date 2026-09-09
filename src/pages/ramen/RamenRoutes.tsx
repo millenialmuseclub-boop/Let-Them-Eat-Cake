@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import { RouteNotFound } from '../../components/RouteStatus'
 import { RamenEncyclopediaIndexPage } from './RamenEncyclopediaIndexPage'
 import { RamenDetailPage } from './RamenDetailPage'
 import { AtlasPage } from './AtlasPage'
@@ -69,6 +70,7 @@ export default function RamenRoutes() {
 
       <Route path="my-ramen" element={<MyRamenPage />} />
       <Route path="curated-kitchen" element={<CuratedKitchenPage />} />
+      <Route path="*" element={<RouteNotFound />} />
     </Routes>
   )
 }

@@ -1,12 +1,12 @@
 /* Same shape as Cake's CakeHeroImage.css (CAKE_REFERENCE_AUDIT.md §12):
    two size variants, object-fit: cover, small always-visible credit pill. */
 
-.ramen-hero-image-hero {
+.ramen-world .ramen-hero-image-hero {
   position: relative;
   margin: -20px -20px 16px;
 }
 
-.ramen-hero-image-hero img {
+.ramen-world .ramen-hero-image-hero img {
   width: 100%;
   height: 280px;
   object-fit: cover;
@@ -14,7 +14,7 @@
   border-radius: 12px 12px 0 0;
 }
 
-.ramen-hero-image-credit {
+.ramen-world .ramen-hero-image-credit {
   position: absolute;
   bottom: 6px;
   right: 8px;
@@ -28,11 +28,11 @@
   margin: 0;
 }
 
-.ramen-hero-image-thumbnail {
+.ramen-world .ramen-hero-image-thumbnail {
   margin: -20px -20px 12px;
 }
 
-.ramen-hero-image-thumbnail img {
+.ramen-world .ramen-hero-image-thumbnail img {
   width: 100%;
   height: 140px;
   object-fit: cover;
@@ -44,7 +44,7 @@
    yet have a sourced photo. Concentric rings evoke a bowl viewed from above
    rather than dropping the app icon into a card; an honest "photo coming"
    label beats guessing with an unrelated dish's photo. */
-.ramen-hero-image-placeholder {
+.ramen-world .ramen-hero-image-placeholder {
   background:
     radial-gradient(circle at 50% 42%, transparent 0%, transparent 22%, var(--raspberry-bg) 23%, var(--raspberry-bg) 34%, transparent 35%, transparent 46%, var(--raspberry-bg) 47%, var(--raspberry-bg) 56%, transparent 57%),
     var(--raspberry-bg);
@@ -55,7 +55,7 @@
   position: relative;
 }
 
-.ramen-hero-image-placeholder::after {
+.ramen-world .ramen-hero-image-placeholder::after {
   content: 'Photograph coming soon';
   display: block;
   width: 100%;
@@ -69,14 +69,14 @@
   border-radius: 0 0 12px 12px;
 }
 
-.ramen-hero-image-thumbnail.ramen-hero-image-placeholder {
+.ramen-world .ramen-hero-image-thumbnail.ramen-hero-image-placeholder {
   height: 140px;
 }
 
-.ramen-hero-image-hero.ramen-hero-image-placeholder {
+.ramen-world .ramen-hero-image-hero.ramen-hero-image-placeholder {
   height: 280px;
 }
 
-.ramen-hero-image-placeholder img {
+.ramen-world .ramen-hero-image-placeholder img {
   display: none;
 }

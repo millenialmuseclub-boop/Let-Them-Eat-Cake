@@ -89,5 +89,101 @@
     "photographerUrl": "https://www.pexels.com/@picswithjer/",
     "source": "Pexels",
     "sourceUrl": "https://www.pexels.com/photo/delectable-asian-noodle-bowl-with-fresh-ingredients-30153919/"
+  },
+  "ramen_hakodate_shio": {
+    "url": "/photography/ramen_hakodate_shio.webp",
+    "photographer": "Hector Martin",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hakodate-Shio-Ramen.png",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+  },
+  "ramen_kitakata": {
+    "url": "/photography/ramen_kitakata.webp",
+    "photographer": "macyu from Kitakata, Kitakata",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kitakata_ramen_by_macyu_in_Yamagata.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "ramen_asahikawa": {
+    "url": "/photography/ramen_asahikawa.webp",
+    "photographer": "Famicon",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Asahikawa_Tenkin_Shoyu_Ramen.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ramen_onomichi": {
+    "url": "/photography/ramen_onomichi.webp",
+    "photographer": "chicatan from Onomichi, Hiroshima",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Onomichi_ramen_by_chicatan.jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+  },
+  "ramen_toyama_black": {
+    "url": "/photography/ramen_toyama_black.webp",
+    "photographer": "Totti",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toyama_Black_Daiki.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ramen_kagoshima": {
+    "url": "/photography/ramen_kagoshima.webp",
+    "photographer": "JKT-c",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kagoshima_Ramen.jpg",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "ramen_yonezawa": {
+    "url": "/photography/ramen_yonezawa.webp",
+    "photographer": "Ttsuchitori",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%B1%B3%E6%B2%A2%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "ramen_muroran_curry": {
+    "url": "/photography/ramen_muroran_curry.webp",
+    "photographer": "Reform1028",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Muroran-CurryRamen.jpg",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "ramen_sano": {
+    "url": "/photography/ramen_sano.webp",
+    "photographer": "Ocdp",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sano_ramen_001.jpg",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "ramen_tokyo_abura_soba": {
+    "url": "/photography/ramen_tokyo_abura_soba.webp",
+    "photographer": "Douglas Perkins",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abura_soba_01.jpg",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "ramen_wakayama": {
+    "url": "/photography/ramen_wakayama.webp",
+    "photographer": "Hykw-a4",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wakayamaramen222.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "ramen_niigata_shoyu": {
+    "url": "/photography/ramen_niigata_shoyu.webp",
+    "photographer": "Tail furry",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Niboshi_Shoyu_Ramen,_Nishimaki-ryu,_Niigata,_Niigata,_Japan,_November_2021.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
   }
 }

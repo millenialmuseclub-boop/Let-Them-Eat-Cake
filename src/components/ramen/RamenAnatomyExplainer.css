@@ -1,18 +1,18 @@
 /* Ported directly from Cake's CakeAnatomyExplainer.css (CAKE_REFERENCE_AUDIT.md §6). */
 
-.anatomy-explainer {
+.ramen-world .anatomy-explainer {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.anatomy-flow {
+.ramen-world .anatomy-flow {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.anatomy-step {
+.ramen-world .anatomy-step {
   font: inherit;
   padding: 8px 14px;
   border-radius: 999px;
@@ -23,17 +23,17 @@
   font-size: 14px;
 }
 
-.anatomy-step.active {
+.ramen-world .anatomy-step.active {
   background: var(--raspberry);
   border-color: var(--raspberry);
   color: white;
 }
 
-.anatomy-detail p {
+.ramen-world .anatomy-detail p {
   font-size: 15px;
 }
 
-.anatomy-interaction {
+.ramen-world .anatomy-interaction {
   padding: 10px 12px;
   border-radius: 8px;
   background: var(--bg);

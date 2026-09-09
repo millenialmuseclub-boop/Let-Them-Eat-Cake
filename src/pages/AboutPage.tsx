@@ -1,11 +1,12 @@
 import './AboutPage.css'
+import { Link } from 'react-router-dom'
 
 export function AboutPage() {
   return (
     <main className="page about-page">
       <h1>About &amp; Legal</h1>
       <p>
-        Let Them Eat Cake is a cake encyclopedia, world atlas, pairing sommelier, and recipe app. This page covers how the app works,
+        Let Them Eat brings Cake, Ramen, Cookies, and Noodles together through encyclopedias, atlases, workshops, and flavor discovery. This page covers how the app works,
         what it does (and doesn't do) with your information, and the disclaimers worth knowing before you bake or plan around anything
         here.
       </p>
@@ -16,7 +17,7 @@ export function AboutPage() {
           <p>Let Them Eat Cake doesn't require an account, login, or any personal information to use. Here's what actually happens:</p>
           <ul>
             <li>
-              <strong>Favorites / Saved Cakes:</strong> tapping the heart icon to save a cake or personality stores that choice only in
+              <strong>Saved items and notes:</strong> favorites, things to try, cooking history, and private notes across all four worlds stay in
               your device's local app storage. It's never sent to us or anyone else — clearing your browser data or reinstalling the
               app removes it.
             </li>
@@ -30,9 +31,7 @@ export function AboutPage() {
               tap one, you've left this app, and that retailer's own privacy policy applies from there.
             </li>
             <li>
-              <strong>Photography:</strong> images throughout the app load directly from Unsplash's servers. Loading any image shares
-              standard technical details (like general network information) with Unsplash, the same as viewing any embedded photo on
-              the web.
+              <strong>Photography:</strong> some photographs are bundled with the app; others load from Unsplash, Pexels, or Wikimedia Commons. Remote image providers receive standard network information when an image loads.
             </li>
           </ul>
           <p>
@@ -67,7 +66,7 @@ export function AboutPage() {
             </li>
             <li>
               <strong>Intellectual property:</strong> app design, curation, and original written content belong to Let Them Eat Cake.
-              Photography is used under license/attribution from Unsplash and its contributing photographers.
+              Photography is used under the applicable source licenses. <Link to="/photo-credits">View credits and licenses for bundled photography.</Link>
             </li>
             <li>
               <strong>Changes:</strong> these terms may be updated from time to time; continued use of the app means you accept the

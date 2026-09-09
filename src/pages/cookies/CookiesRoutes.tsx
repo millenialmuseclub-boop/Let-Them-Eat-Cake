@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import { RouteNotFound } from '../../components/RouteStatus'
 // Allowlisted component-level styling recovered from Cookies' own global index.css (see
 // scripts/extract-world-css.mjs) -- everything genuinely Cookies-specific (image sizing, card
 // layout, workshop/crumb page structure), nothing that redefines :root or any classname Cake's
@@ -56,6 +57,7 @@ export default function CookiesRoutes() {
 
       <Route path="my-cookies" element={<MyCookiesPage />} />
       <Route path="curated-kitchen" element={<CuratedKitchenPage />} />
+      <Route path="*" element={<RouteNotFound />} />
     </Routes>
   )
 }

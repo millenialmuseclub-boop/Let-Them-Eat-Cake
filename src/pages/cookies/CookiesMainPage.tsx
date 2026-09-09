@@ -18,6 +18,7 @@ const FEATURE_COOKIE_IDS: Record<string, string> = {
   '/cookies/encyclopedia': 'cookie_chocolate_chip',
   '/cookies/sommelier': 'cookie_french_sable',
   '/cookies/collections': 'cookie_scottish_shortbread',
+  '/cookies/crumb': 'cookie_speculaas',
 }
 
 export function CookiesMainPage() {

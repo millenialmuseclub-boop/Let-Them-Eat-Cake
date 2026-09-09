@@ -1,18 +1,18 @@
-.lab-hero-image {
+.ramen-world .lab-hero-image {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 20px;
 }
 
-.lab-hero-image img {
+.ramen-world .lab-hero-image img {
   width: 100%;
   height: 280px;
   object-fit: cover;
   display: block;
 }
 
-.lab-hero-credit {
+.ramen-world .lab-hero-credit {
   position: absolute;
   bottom: 6px;
   right: 8px;
@@ -24,7 +24,7 @@
   padding: 3px 7px;
 }
 
-.lab-cross-links {
+.ramen-world .lab-cross-links {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -34,7 +34,7 @@
 }
 
 @media (max-width: 640px) {
-  .lab-hero-image img {
+  .ramen-world .lab-hero-image img {
     height: 200px;
   }
 }
