@@ -44,8 +44,8 @@ export function getLibrary(): RamenLibraryRecord[] {
 }
 
 export function getRecord(ramenId: string): RamenLibraryRecord | undefined {
-  const r = savedItems.getRecord('ramen', ramenId)
-  return r ? toRecord(ramenId) : undefined
+  // Reuse the library snapshot: a fresh object here loops once a bowl is saved.
+  return getLibrary().find((record) => record.ramenId === ramenId)
 }
 
 export function toggleWantToTry(ramenId: string): RamenLibraryRecord {

@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { Link } from 'react-router-dom'
 import { HUBS } from '../../data/ramen/hubs'
 import { DiscoverFeatureCard } from '../../components/ramen/DiscoverFeatureCard'
@@ -32,7 +33,7 @@ export function MainPage() {
     <main className="page discover-page">
       {scene && (
         <div className="lab-hero-image">
-          <img src={displayImageUrl(scene, 'hero')} alt="An overhead view of a bowl of ramen" loading="lazy" />
+          <EditorialImage src={displayImageUrl(scene, 'hero')} alt="An overhead view of a bowl of ramen" loading="lazy" />
           <span className="lab-hero-credit">
             {scene.photographer} / {scene.source}
           </span>

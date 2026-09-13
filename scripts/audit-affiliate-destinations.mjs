@@ -1,0 +1,4 @@
+import fs from 'node:fs'
+const entries=JSON.parse(fs.readFileSync('reports/affiliate-destinations.json','utf8'));const queue=[...entries], result=[]
+await Promise.all(Array.from({length:3},async()=>{while(queue.length){const entry=queue.shift();try{const response=await fetch(entry.url,{signal:AbortSignal.timeout(15000)});const html=await response.text();result.push({...entry,getStatus:response.status,title:html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1]?.trim(),availability:[...new Set(html.match(/https?:\/\/schema.org\/(?:InStock|OutOfStock|SoldOut|PreOrder)/g))]})}catch(e){result.push({...entry,error:e.message})}}}))
+fs.writeFileSync('reports/affiliate-product-checks.json',JSON.stringify({checkedAt:new Date().toISOString(),entries:result},null,2));console.log(JSON.stringify({checked:result.length,blocked:result.filter(r=>r.getStatus!==200).length}))

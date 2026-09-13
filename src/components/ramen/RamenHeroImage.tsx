@@ -9,7 +9,7 @@ export function RamenHeroImage({ ramenId, variant, alt }: { ramenId: string; var
   const image = getRamenImage(ramenId)
   const [failedUrl, setFailedUrl] = useState<string | null>(null)
   if (!image) return null
-  if (failedUrl === image.url) return <div className={`ramen-hero-image ramen-hero-image-${variant} ramen-hero-image-placeholder`} role="img" aria-label={`${alt} — photo unavailable`}><span>Photo unavailable</span></div>
+  if (failedUrl === image.url) return <div className={`ramen-hero-image ramen-hero-image-${variant} ramen-hero-image-placeholder`} role="img" aria-label={`${alt} — photo unavailable`}></div>
 
   return (
     <div className={`ramen-hero-image ramen-hero-image-${variant}`}>

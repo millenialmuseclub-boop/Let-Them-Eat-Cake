@@ -75,3 +75,8 @@
 .cake-hero-image-placeholder img {
   display: none;
 }
+
+/* Page padding is 16px on phones; card bleed must not extend past the viewport. */
+@media (max-width: 640px) {
+  .page > .cake-hero-image-hero { margin-left: -16px; margin-right: -16px; }
+}

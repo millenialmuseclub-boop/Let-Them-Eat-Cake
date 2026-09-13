@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { troubleshooterProblems } from '../../lib/ramen/data'
@@ -21,7 +22,7 @@ export function TroubleshooterPage() {
     <main className="page">
       {scene && (
         <div className="lab-hero-image">
-          <img src={displayImageUrl(scene, 'hero')} alt="A chef preparing ramen in a Tokyo kitchen" loading="lazy" />
+          <EditorialImage src={displayImageUrl(scene, 'hero')} alt="A chef preparing ramen in a Tokyo kitchen" loading="lazy" />
           <span className="lab-hero-credit">
             {scene.photographer} / {scene.source}
           </span>

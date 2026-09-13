@@ -1,3 +1,4 @@
+import { EditorialImage } from './EditorialImage'
 import type { AffiliateProduct } from '../types/affiliateProduct'
 import { trackAffiliateClicked } from '../lib/analytics'
 import { getCakeImage } from '../lib/images'
@@ -18,10 +19,10 @@ export function AffiliateProductCard({ product, context }: { product: AffiliateP
   return (
     <div className="card affiliate-product-card">
       {imageUrl ? (
-        <img src={imageUrl} alt={product.name} className="affiliate-product-image" loading="lazy" />
+        <EditorialImage src={imageUrl} alt={product.name} className="affiliate-product-image" loading="lazy" />
       ) : (
         <div className="affiliate-product-image affiliate-product-image-placeholder">
-          <img src="/icon-master.svg" alt="" />
+          <EditorialImage src="/icon-master.svg" alt="" />
         </div>
       )}
       <h4 className="affiliate-product-name">{product.name}</h4>

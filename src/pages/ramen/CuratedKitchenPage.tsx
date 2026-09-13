@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { ContextualCuratedKitchen } from '../../components/ContextualCuratedKitchen'
 import { AffiliateDisclosure } from '../../components/AffiliateDisclosure'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
@@ -25,7 +26,7 @@ export function CuratedKitchenPage() {
     <main className="page">
       {scene && (
         <div className="lab-hero-image">
-          <img src={displayImageUrl(scene, 'hero')} alt="Ceramic ramen bowls and tableware" loading="lazy" />
+          <EditorialImage src={displayImageUrl(scene, 'hero')} alt="Ceramic ramen bowls and tableware" loading="lazy" />
           <span className="lab-hero-credit">
             {scene.photographer} / {scene.source}
           </span>

@@ -1,3 +1,4 @@
+import { EditorialImage } from '../EditorialImage'
 import { Link } from 'react-router-dom'
 import { RamenThumbnail } from './RamenThumbnail'
 import { displayImageUrl } from '../../lib/ramen/images'
@@ -23,7 +24,7 @@ function DiscoverFeatureCardBody({ title, description, cta, meta, ramenId, image
         <RamenThumbnail ramenId={ramenId} variant="hero" alt={title} />
       ) : imageUrl ? (
         <div className="discover-feature-card-image">
-          <img src={displayImageUrl({ url: imageUrl, source: source ?? '' }, 'hero')} alt={title} loading="lazy" />
+          <EditorialImage src={displayImageUrl({ url: imageUrl, source: source ?? '' }, 'hero')} alt={title} loading="lazy" />
           {photographer && (
             <span className="discover-feature-card-credit" title={`Photo by ${photographer}${source ? ` on ${source}` : ''}`}>
               {photographer}

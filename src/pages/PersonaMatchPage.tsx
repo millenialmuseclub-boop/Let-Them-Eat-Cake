@@ -1,3 +1,4 @@
+import { EditorialImage } from '../components/EditorialImage'
 import { useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import type { CakeProfile } from '../types/cake'
@@ -107,7 +108,7 @@ function ResultView({
   return (
     <div className="persona-result ltec-reveal">
       <div className="persona-result-hero">
-        {image && <img src={image.url} alt="" className="persona-result-hero-image" />}
+        {image && <EditorialImage src={image.url} alt="" className="persona-result-hero-image" />}
         <div
           className={image ? 'persona-result-hero-content' : 'persona-result-hero-content no-image'}
           style={{ background: image ? undefined : personality.colorHex }}

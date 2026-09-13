@@ -1,3 +1,4 @@
+import { EditorialImage } from '../components/EditorialImage'
 import { getProductsByIds } from '../lib/affiliateProducts'
 import { AffiliateProductSet } from '../components/AffiliateProductSet'
 import { getSceneImage } from '../lib/sceneImages'
@@ -57,7 +58,7 @@ export function CuratedKitchenPage() {
     <main className="page curated-kitchen-page">
       {scene && (
         <div className="lab-hero-image">
-          <img src={scene.url} alt="A flat-lay of baking tools and kitchen equipment" loading="lazy" />
+          <EditorialImage src={scene.url} alt="A flat-lay of baking tools and kitchen equipment" loading="lazy" />
           <span className="lab-hero-credit">
             {scene.photographer} / Unsplash
           </span>

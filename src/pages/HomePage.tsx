@@ -1,3 +1,4 @@
+import { EditorialImage } from '../components/EditorialImage'
 import { Link } from 'react-router-dom'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
 import { getSceneImage } from '../lib/sceneImages'
@@ -158,7 +159,7 @@ export function HomePage() {
   return (
     <main className="home-page">
       <section className="home-hero">
-        {heroScene && <img src={heroScene.url} alt="" className="home-hero-image" />}
+        {heroScene && <EditorialImage src={heroScene.url} alt="" className="home-hero-image" />}
         <div className="home-hero-copy">
           <p className="home-hero-mark">LET THEM EAT</p>
           <h1>A world of food, culture, craft &amp; flavor.</h1>
@@ -168,7 +169,7 @@ export function HomePage() {
       {WORLD_INTROS.map((intro) => (
         <section key={intro.world} className={`home-world-intro${intro.imageFirst ? ' home-world-intro-image-first' : ''}`}>
           <div className="home-world-intro-image-wrap">
-            <img src={intro.image.url} alt={intro.image.alt} className="home-world-intro-image" loading="lazy" />
+            <EditorialImage src={intro.image.url} alt={intro.image.alt} className="home-world-intro-image" loading="lazy" />
             {intro.image.credit && <span className="home-world-intro-credit">{intro.image.credit}</span>}
           </div>
           <div className="home-world-intro-copy">
@@ -190,7 +191,7 @@ export function HomePage() {
           {ATLAS_HIGHLIGHTS.map((item) => (
             <li key={item.place}>
               <Link to={item.to}>
-                <img src={item.image} alt="" className="home-discovery-thumb" loading="lazy" />
+                <EditorialImage src={item.image} alt="" className="home-discovery-thumb" loading="lazy" />
                 <span className="home-discovery-text">
                   <span className="home-discovery-place">{item.place}</span>
                   <span className="home-discovery-note">{item.note}</span>
@@ -207,7 +208,7 @@ export function HomePage() {
           {WORKSHOP_HIGHLIGHTS.map((item) => (
             <li key={item.to}>
               <Link to={item.to}>
-                <img src={item.image} alt="" className="home-discovery-thumb" loading="lazy" />
+                <EditorialImage src={item.image} alt="" className="home-discovery-thumb" loading="lazy" />
                 <span className="home-discovery-text">
                   <span className="home-discovery-place">{item.title}</span>
                   <span className="home-discovery-note">{item.world}</span>
@@ -222,7 +223,7 @@ export function HomePage() {
         <section className="home-discovery">
           <h3>From the Kitchen</h3>
           <div className="home-kitchen-header">
-            <img src={kitchenCategoryImage} alt="" className="home-kitchen-header-image" loading="lazy" />
+            <EditorialImage src={kitchenCategoryImage} alt="" className="home-kitchen-header-image" loading="lazy" />
           </div>
           <ul className="home-discovery-list home-discovery-list-no-thumb">
             {kitchenPicks.map((product) => {

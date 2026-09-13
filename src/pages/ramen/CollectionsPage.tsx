@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { Link } from 'react-router-dom'
 import { collections } from '../../lib/ramen/data'
 import { RamenThumbnail } from '../../components/ramen/RamenThumbnail'
@@ -16,7 +17,7 @@ export function CollectionsPage() {
     <main className="page">
       {scene && (
         <div className="lab-hero-image">
-          <img src={displayImageUrl(scene, 'hero')} alt="An overhead view of a ramen bowl with fresh vegetables" loading="lazy" />
+          <EditorialImage src={displayImageUrl(scene, 'hero')} alt="An overhead view of a ramen bowl with fresh vegetables" loading="lazy" />
           <span className="lab-hero-credit">
             {scene.photographer} / {scene.source}
           </span>

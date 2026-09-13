@@ -1,3 +1,4 @@
+import { CompanionApp } from '../components/CompanionApp'
 import { Link } from 'react-router-dom'
 import { getCake } from '../lib/data'
 import { CakeHeroImage } from '../components/CakeHeroImage'
@@ -46,6 +47,7 @@ export function CelebrateLandingPage() {
       <Link to="/time-machine" className="celebrate-time-machine-link">
         🎂 Curious what cake defined your birth year? Try the Birthday Time Machine →
       </Link>
+      <CompanionApp app="luxejetter" />
     </main>
   )
 }

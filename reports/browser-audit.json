@@ -1,0 +1,1814 @@
+{
+  "generatedAt": "2026-09-13T22:38:19.998Z",
+  "origin": "http://127.0.0.1:5173",
+  "pages": [
+    {
+      "route": "/discover",
+      "width": 390,
+      "heading": "Let Them Eat Cake",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/workshop",
+      "width": 390,
+      "heading": "Workshop",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/atlas",
+      "width": 390,
+      "heading": "Global Cake Atlas",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/curated-kitchen",
+      "width": 390,
+      "heading": "Curated Kitchen",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen",
+      "width": 390,
+      "heading": "Let Them Eat",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/workshop",
+      "width": 390,
+      "heading": "Workshop",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/atlas",
+      "width": 390,
+      "heading": "Ramen Atlas",
+      "overflow": false,
+      "overflowing": [
+        "g.[object SVGAnimatedString]",
+        "g.[object SVGAnimatedString]",
+        "g.[object SVGAnimatedString]",
+        "path.[object SVGAnimatedString]",
+        "path.[object SVGAnimatedString]",
+        "path.[object SVGAnimatedString]",
+        "path.[object SVGAnimatedString]",
+        "path.[object SVGAnimatedString]"
+      ],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/curated-kitchen",
+      "width": 390,
+      "heading": "Curated Kitchen",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies",
+      "width": 390,
+      "heading": "Cookies",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/workshop",
+      "width": 390,
+      "heading": "Workshop",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/atlas",
+      "width": 390,
+      "heading": "Browse by Origin",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/curated-kitchen",
+      "width": 390,
+      "heading": "Curated Kitchen",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles",
+      "width": 390,
+      "heading": "Naengmyeon",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/workshop",
+      "width": 390,
+      "heading": "The Noodle Workshop",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/atlas",
+      "width": 390,
+      "heading": "Browse by Origin",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/curated-kitchen",
+      "width": 390,
+      "heading": "Curated Kitchen",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "heading": "A world of food, culture, craft & flavor.",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/celebrate",
+      "width": 390,
+      "heading": "Celebrate",
+      "overflow": false,
+      "overflowing": [
+        "DIV.cake-hero-image cake-hero-image-hero cake-hero-image-placeholder",
+        "DIV.cake-hero-image cake-hero-image-hero cake-hero-image-placeholder",
+        "DIV.cake-hero-image cake-hero-image-hero cake-hero-image-placeholder"
+      ],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/my-cakes",
+      "width": 390,
+      "heading": "Let Them Eat Cake",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/my-collections",
+      "width": 390,
+      "heading": "Let Them Eat Cake",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/time-machine",
+      "width": 390,
+      "heading": "Birthday Time Machine",
+      "overflow": false,
+      "overflowing": [
+        "BUTTON.timeline-stop",
+        "SPAN.timeline-dot",
+        "SPAN.timeline-decade-label",
+        "SPAN.timeline-cake-name",
+        "BUTTON.timeline-stop",
+        "SPAN.timeline-dot",
+        "SPAN.timeline-decade-label",
+        "SPAN.timeline-cake-name"
+      ],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/sommelier",
+      "width": 390,
+      "heading": "Cake Sommelier",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/persona-match",
+      "width": 390,
+      "heading": "Cake Personality Quiz",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/pantry-raid",
+      "width": 390,
+      "heading": "Pantry Raid",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/wedding-cake-planner",
+      "width": 390,
+      "heading": "Wedding Cake Planner",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/wedding-planner",
+      "width": 390,
+      "heading": "Wedding Cake Planner",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/birthday-planner",
+      "width": 390,
+      "heading": "Birthday Cake Planner",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/other-celebrations",
+      "width": 390,
+      "heading": "Other Celebrations",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/assembly-lab",
+      "width": 390,
+      "heading": "Assembly Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cake-anatomy",
+      "width": 390,
+      "heading": "Anatomy of a Cake",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cake-stability",
+      "width": 390,
+      "heading": "Cake Stability Calculator",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/technique-library",
+      "width": 390,
+      "heading": "Technique Library",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cake-science",
+      "width": 390,
+      "heading": "Cake Science",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cake-blueprints",
+      "width": 390,
+      "heading": "Real Cake Blueprints",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cake-failure-lab",
+      "width": 390,
+      "heading": "🚨 Cake Failure Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/encyclopedia",
+      "width": 390,
+      "heading": "Cake Encyclopedia",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/notebook",
+      "width": 390,
+      "heading": "Pastry Notebook",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ingredients",
+      "width": 390,
+      "heading": "Ingredient Explorer",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/collections",
+      "width": 390,
+      "heading": "Curated Collections",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/traditions",
+      "width": 390,
+      "heading": "Baking Traditions",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/about",
+      "width": 390,
+      "heading": "About & Legal",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/photo-credits",
+      "width": 390,
+      "heading": "Photography credits",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/encyclopedia",
+      "width": 390,
+      "heading": "Ramen Encyclopedia",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/personality-quiz",
+      "width": 390,
+      "heading": "Ramen Personality Quiz",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/collections",
+      "width": 390,
+      "heading": "Curated Collections",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/ramen-anatomy",
+      "width": 390,
+      "heading": "Anatomy of a Bowl",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/build-a-bowl",
+      "width": 390,
+      "heading": "Build a Bowl",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/broth-lab",
+      "width": 390,
+      "heading": "Broth Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/noodle-lab",
+      "width": 390,
+      "heading": "Noodle Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/tare-lab",
+      "width": 390,
+      "heading": "Tare Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/aroma-oil-lab",
+      "width": 390,
+      "heading": "Aroma Oil Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/ajitama-lab",
+      "width": 390,
+      "heading": "Ajitama Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/chashu-lab",
+      "width": 390,
+      "heading": "Chashu Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/troubleshooter",
+      "width": 390,
+      "heading": "Troubleshooter",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/slurp",
+      "width": 390,
+      "heading": "Slurp",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/slurp/vocabulary",
+      "width": 390,
+      "heading": "Ramen Vocabulary",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/slurp/find-your-bowl",
+      "width": 390,
+      "heading": "Find Your Bowl",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/slurp/trails",
+      "width": 390,
+      "heading": "Ramen Trails",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/slurp/ramen-101",
+      "width": 390,
+      "heading": "Ramen 101 Quiz",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/sommelier",
+      "width": 390,
+      "heading": "Ramen Sommelier",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/sommelier/find",
+      "width": 390,
+      "heading": "Find My Ramen",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/sommelier/pair",
+      "width": 390,
+      "heading": "Pair My Ramen",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/my-ramen",
+      "width": 390,
+      "heading": "My Ramen",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/encyclopedia",
+      "width": 390,
+      "heading": "Cookie Encyclopedia",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/collections",
+      "width": 390,
+      "heading": "Curated Collections",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/workshop/anatomy",
+      "width": 390,
+      "heading": "Cookie Anatomy",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/workshop/build-a-cookie",
+      "width": 390,
+      "heading": "Build a Cookie",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/workshop/troubleshooter",
+      "width": 390,
+      "heading": "Troubleshooter",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/sommelier",
+      "width": 390,
+      "heading": "Tell us what you're craving",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/sommelier/find",
+      "width": 390,
+      "heading": "FIND",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/crumb",
+      "width": 390,
+      "heading": "Crumb",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/crumb/101",
+      "width": 390,
+      "heading": "Cookie 101",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/crumb/vocabulary",
+      "width": 390,
+      "heading": "Cookie Vocabulary",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/crumb/trails",
+      "width": 390,
+      "heading": "Cookie Trails",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/crumb/quiz",
+      "width": 390,
+      "heading": "Cookie 101 Quiz",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/my-cookies",
+      "width": 390,
+      "heading": "My Cookies",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/encyclopedia",
+      "width": 390,
+      "heading": "The Noodle Encyclopedia",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/encyclopedia/noodle-types",
+      "width": 390,
+      "heading": "What's the Noodle, Actually?",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/workshop/troubleshooter",
+      "width": 390,
+      "heading": "Troubleshooter",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/twirl",
+      "width": 390,
+      "heading": "A Small Noodle Culture Magazine",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/sommelier",
+      "width": 390,
+      "heading": "What Kind of Noodle Are You Craving?",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/my-noodles",
+      "width": 390,
+      "heading": "My Noodles",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cake/cake_yellow_choc_1950s",
+      "width": 390,
+      "heading": "Classic Yellow Layer Cake with Chocolate Frosting",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/ramen/ramen_sapporo_miso",
+      "width": 390,
+      "heading": "Sapporo Miso Ramen (Sapporo miso rāmen)",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/encyclopedia/cookie_chocolate_chip",
+      "width": 390,
+      "heading": "Chocolate Chip Cookie",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/encyclopedia/pho-bo",
+      "width": 390,
+      "heading": "Phở Bò",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/workshop/labs/dough-lab",
+      "width": 390,
+      "heading": "Dough Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/workshop/lab/hydration-lab",
+      "width": 390,
+      "heading": "Hydration Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/discover",
+      "width": 1440,
+      "heading": "Let Them Eat Cake",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/workshop",
+      "width": 1440,
+      "heading": "Workshop",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/atlas",
+      "width": 1440,
+      "heading": "Global Cake Atlas",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/curated-kitchen",
+      "width": 1440,
+      "heading": "Curated Kitchen",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen",
+      "width": 1440,
+      "heading": "Let Them Eat",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/workshop",
+      "width": 1440,
+      "heading": "Workshop",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/atlas",
+      "width": 1440,
+      "heading": "Ramen Atlas",
+      "overflow": false,
+      "overflowing": [
+        "g.[object SVGAnimatedString]",
+        "g.[object SVGAnimatedString]",
+        "g.[object SVGAnimatedString]",
+        "path.[object SVGAnimatedString]",
+        "path.[object SVGAnimatedString]",
+        "path.[object SVGAnimatedString]",
+        "path.[object SVGAnimatedString]",
+        "path.[object SVGAnimatedString]"
+      ],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/curated-kitchen",
+      "width": 1440,
+      "heading": "Curated Kitchen",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies",
+      "width": 1440,
+      "heading": "Cookies",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/workshop",
+      "width": 1440,
+      "heading": "Workshop",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/atlas",
+      "width": 1440,
+      "heading": "Browse by Origin",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/curated-kitchen",
+      "width": 1440,
+      "heading": "Curated Kitchen",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles",
+      "width": 1440,
+      "heading": "Naengmyeon",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/workshop",
+      "width": 1440,
+      "heading": "The Noodle Workshop",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/atlas",
+      "width": 1440,
+      "heading": "Browse by Origin",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Curry_Laksa_-_Chilli_Padi_(52320132).jpg",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Char_Kuey_Teow_Basah.jpg",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Aunt_Lay_Leong%27s_KL_Hokkien_Mee_(2874463017).jpg",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Maggi_Goreng.jpg",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Penang_laksa.jpg",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/MeeRebus.JPG",
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Myanmar%E2%80%99s_Traditional_Food_-_Mohinga.jpg"
+      ],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/curated-kitchen",
+      "width": 1440,
+      "heading": "Curated Kitchen",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "heading": "A world of food, culture, craft & flavor.",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/celebrate",
+      "width": 1440,
+      "heading": "Celebrate",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/my-cakes",
+      "width": 1440,
+      "heading": "Let Them Eat Cake",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/my-collections",
+      "width": 1440,
+      "heading": "Let Them Eat Cake",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/time-machine",
+      "width": 1440,
+      "heading": "Birthday Time Machine",
+      "overflow": false,
+      "overflowing": [
+        "BUTTON.timeline-stop",
+        "SPAN.timeline-dot",
+        "SPAN.timeline-decade-label",
+        "SPAN.timeline-cake-name",
+        "BUTTON.timeline-stop",
+        "SPAN.timeline-dot",
+        "SPAN.timeline-decade-label",
+        "SPAN.timeline-cake-name"
+      ],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/sommelier",
+      "width": 1440,
+      "heading": "Cake Sommelier",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/persona-match",
+      "width": 1440,
+      "heading": "Cake Personality Quiz",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/pantry-raid",
+      "width": 1440,
+      "heading": "Pantry Raid",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/wedding-cake-planner",
+      "width": 1440,
+      "heading": "Wedding Cake Planner",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/wedding-planner",
+      "width": 1440,
+      "heading": "Wedding Cake Planner",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/birthday-planner",
+      "width": 1440,
+      "heading": "Birthday Cake Planner",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/other-celebrations",
+      "width": 1440,
+      "heading": "Other Celebrations",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/assembly-lab",
+      "width": 1440,
+      "heading": "Assembly Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cake-anatomy",
+      "width": 1440,
+      "heading": "Anatomy of a Cake",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cake-stability",
+      "width": 1440,
+      "heading": "Cake Stability Calculator",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/technique-library",
+      "width": 1440,
+      "heading": "Technique Library",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cake-science",
+      "width": 1440,
+      "heading": "Cake Science",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cake-blueprints",
+      "width": 1440,
+      "heading": "Real Cake Blueprints",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cake-failure-lab",
+      "width": 1440,
+      "heading": "🚨 Cake Failure Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/encyclopedia",
+      "width": 1440,
+      "heading": "Cake Encyclopedia",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/notebook",
+      "width": 1440,
+      "heading": "Pastry Notebook",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ingredients",
+      "width": 1440,
+      "heading": "Ingredient Explorer",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/collections",
+      "width": 1440,
+      "heading": "Curated Collections",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/traditions",
+      "width": 1440,
+      "heading": "Baking Traditions",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/about",
+      "width": 1440,
+      "heading": "About & Legal",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/photo-credits",
+      "width": 1440,
+      "heading": "Photography credits",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/encyclopedia",
+      "width": 1440,
+      "heading": "Ramen Encyclopedia",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/personality-quiz",
+      "width": 1440,
+      "heading": "Ramen Personality Quiz",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/collections",
+      "width": 1440,
+      "heading": "Curated Collections",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/ramen-anatomy",
+      "width": 1440,
+      "heading": "Anatomy of a Bowl",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/build-a-bowl",
+      "width": 1440,
+      "heading": "Build a Bowl",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/broth-lab",
+      "width": 1440,
+      "heading": "Broth Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/noodle-lab",
+      "width": 1440,
+      "heading": "Noodle Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/tare-lab",
+      "width": 1440,
+      "heading": "Tare Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/aroma-oil-lab",
+      "width": 1440,
+      "heading": "Aroma Oil Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/ajitama-lab",
+      "width": 1440,
+      "heading": "Ajitama Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/chashu-lab",
+      "width": 1440,
+      "heading": "Chashu Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/troubleshooter",
+      "width": 1440,
+      "heading": "Troubleshooter",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/slurp",
+      "width": 1440,
+      "heading": "Slurp",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/slurp/vocabulary",
+      "width": 1440,
+      "heading": "Ramen Vocabulary",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/slurp/find-your-bowl",
+      "width": 1440,
+      "heading": "Find Your Bowl",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/slurp/trails",
+      "width": 1440,
+      "heading": "Ramen Trails",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/slurp/ramen-101",
+      "width": 1440,
+      "heading": "Ramen 101 Quiz",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/sommelier",
+      "width": 1440,
+      "heading": "Ramen Sommelier",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/sommelier/find",
+      "width": 1440,
+      "heading": "Find My Ramen",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/sommelier/pair",
+      "width": 1440,
+      "heading": "Pair My Ramen",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/my-ramen",
+      "width": 1440,
+      "heading": "My Ramen",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/encyclopedia",
+      "width": 1440,
+      "heading": "Cookie Encyclopedia",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/collections",
+      "width": 1440,
+      "heading": "Curated Collections",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/workshop/anatomy",
+      "width": 1440,
+      "heading": "Cookie Anatomy",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/workshop/build-a-cookie",
+      "width": 1440,
+      "heading": "Build a Cookie",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/workshop/troubleshooter",
+      "width": 1440,
+      "heading": "Troubleshooter",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/sommelier",
+      "width": 1440,
+      "heading": "Tell us what you're craving",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/sommelier/find",
+      "width": 1440,
+      "heading": "FIND",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/crumb",
+      "width": 1440,
+      "heading": "Crumb",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/crumb/101",
+      "width": 1440,
+      "heading": "Cookie 101",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/crumb/vocabulary",
+      "width": 1440,
+      "heading": "Cookie Vocabulary",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/crumb/trails",
+      "width": 1440,
+      "heading": "Cookie Trails",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/crumb/quiz",
+      "width": 1440,
+      "heading": "Cookie 101 Quiz",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/my-cookies",
+      "width": 1440,
+      "heading": "My Cookies",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/encyclopedia",
+      "width": 1440,
+      "heading": "The Noodle Encyclopedia",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/encyclopedia/noodle-types",
+      "width": 1440,
+      "heading": "What's the Noodle, Actually?",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/workshop/troubleshooter",
+      "width": 1440,
+      "heading": "Troubleshooter",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/twirl",
+      "width": 1440,
+      "heading": "A Small Noodle Culture Magazine",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/sommelier",
+      "width": 1440,
+      "heading": "What Kind of Noodle Are You Craving?",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/my-noodles",
+      "width": 1440,
+      "heading": "My Noodles",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cake/cake_yellow_choc_1950s",
+      "width": 1440,
+      "heading": "Classic Yellow Layer Cake with Chocolate Frosting",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/ramen/ramen/ramen_sapporo_miso",
+      "width": 1440,
+      "heading": "Sapporo Miso Ramen (Sapporo miso rāmen)",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/encyclopedia/cookie_chocolate_chip",
+      "width": 1440,
+      "heading": "Chocolate Chip Cookie",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/encyclopedia/pho-bo",
+      "width": 1440,
+      "heading": "Phở Bò",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/cookies/workshop/labs/dough-lab",
+      "width": 1440,
+      "heading": "Dough Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/noodles/workshop/lab/hydration-lab",
+      "width": 1440,
+      "heading": "Hydration Lab",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    }
+  ]
+}

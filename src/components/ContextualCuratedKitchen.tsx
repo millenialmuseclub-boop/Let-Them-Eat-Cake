@@ -1,3 +1,5 @@
+import { EditorialImage } from './EditorialImage'
+import { AffiliateDisclosure } from './AffiliateDisclosure'
 import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { worldFromPathname } from '../data/hubs'
@@ -45,7 +47,6 @@ export function ContextualCuratedKitchen({ context, category, title }: Contextua
     .filter((p) => world !== null && p.apps.some((app) => app === world))
     .filter((p) => activeOffers(p).length > 0)
     .filter((p) => (context ? p.contexts?.includes(context) : p.category === category))
-    .sort((a, b) => (activeOffers(a).length > 0 ? -1 : 1) - (activeOffers(b).length > 0 ? -1 : 1))
 
   if (items.length === 0) return null
 
@@ -55,7 +56,7 @@ export function ContextualCuratedKitchen({ context, category, title }: Contextua
     <section className="curated-kitchen-section">
       {scene && (
         <div className="lab-hero-image curated-kitchen-category-hero">
-          <img src={scene.url} alt={`Editorial photography representing the ${title} category`} loading="lazy" />
+          <EditorialImage src={scene.url} alt={`Editorial photography representing the ${title} category`} loading="lazy" />
           {scene.photographer && (
             <span className="lab-hero-credit">
               {scene.photographer}
@@ -65,37 +66,32 @@ export function ContextualCuratedKitchen({ context, category, title }: Contextua
         </div>
       )}
       <h2>{title}</h2>
+      {context && <AffiliateDisclosure />}
       <div className="curated-kitchen-grid">
         {visible.map((product) => {
           const live = activeOffers(product)
           return (
             <div
               key={product.id}
-              className={live.length > 0 ? 'card curated-kitchen-card curated-kitchen-card-active' : 'card curated-kitchen-card'}
+              className="card curated-kitchen-card curated-kitchen-card-active"
             >
               <div className="curated-kitchen-product-image">
-                <img src="/icon-master.svg" alt="" loading="lazy" />
+                <EditorialImage src="/icon-master.svg" alt="" loading="lazy" />
               </div>
               {product.editorialNote && <span className="tag curated-kitchen-editorial-tag">{product.editorialNote}</span>}
               <h3>{product.name}</h3>
               {product.brand && <p className="curated-kitchen-brand">{product.brand}</p>}
               <p>{product.description}</p>
-              {live.length > 0 ? (
                 <div className="curated-kitchen-offers">
                   {live.map((offer) => (
                     <div key={offer.id} className="curated-kitchen-active-footer">
                       <a href={offer.url} target="_blank" rel="sponsored noreferrer" className="btn">
-                        {offer.cta ?? 'Shop →'}
+                        {offer.cta ?? `View ${product.name} →`}
                       </a>
                       <span className="curated-kitchen-network-label">{NETWORK_LABEL[offer.network]}</span>
                     </div>
                   ))}
                 </div>
-              ) : product.offers.some((o) => o.status === 'needs-verification') ? (
-                <span className="tag curated-kitchen-needs-verification-tag">Needs Verification</span>
-              ) : (
-                <span className="tag curated-kitchen-pending-tag">Coming Soon</span>
-              )}
             </div>
           )
         })}

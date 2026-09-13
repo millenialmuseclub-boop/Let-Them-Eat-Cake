@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { useState } from 'react'
 import { ramen101Quiz } from '../../lib/ramen/data'
 import { getSceneImage } from '../../lib/ramen/sceneImages'
@@ -41,7 +42,7 @@ export function Ramen101QuizPage() {
       <main className="page">
         {scene && (
           <div className="lab-hero-image">
-            <img src={displayImageUrl(scene, 'hero')} alt="" loading="lazy" />
+            <EditorialImage src={displayImageUrl(scene, 'hero')} alt="" loading="lazy" />
             <span className="lab-hero-credit">
               {scene.photographer} / {scene.source}
             </span>
@@ -65,7 +66,7 @@ export function Ramen101QuizPage() {
     <main className="page">
       {scene && (
         <div className="lab-hero-image">
-          <img src={displayImageUrl(scene, 'hero')} alt="" loading="lazy" />
+          <EditorialImage src={displayImageUrl(scene, 'hero')} alt="" loading="lazy" />
           <span className="lab-hero-credit">
             {scene.photographer} / {scene.source}
           </span>

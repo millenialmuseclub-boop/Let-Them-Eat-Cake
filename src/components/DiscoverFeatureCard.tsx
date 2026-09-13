@@ -1,3 +1,4 @@
+import { EditorialImage } from './EditorialImage'
 import { Link } from 'react-router-dom'
 import { CakeThumbnail } from './CakeThumbnail'
 import { hapticSelect } from '../lib/haptics'
@@ -33,7 +34,7 @@ function DiscoverFeatureCardBody({
       {cakeId && <CakeThumbnail cakeId={cakeId} variant="hero" alt={imageAlt ?? title} />}
       {!cakeId && imageUrl && (
         <div className="discover-feature-card-image">
-          <img src={imageUrl} alt={imageAlt ?? title} loading="lazy" />
+          <EditorialImage src={imageUrl} alt={imageAlt ?? title} loading="lazy" />
           {photographer && (
             <p className="discover-feature-card-credit" title={`Photo credit: ${photographer}${sourceLabel ? ` / ${sourceLabel}` : ''}`}>
               {photographer}
@@ -44,7 +45,7 @@ function DiscoverFeatureCardBody({
       )}
       {!cakeId && !imageUrl && (
         <div className="cake-hero-image cake-hero-image-hero cake-hero-image-placeholder">
-          <img src="/icon-master.svg" alt="" />
+          <EditorialImage src="/icon-master.svg" alt="" />
         </div>
       )}
       <div className="discover-feature-card-content">

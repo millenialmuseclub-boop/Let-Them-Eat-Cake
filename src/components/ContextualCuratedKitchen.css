@@ -84,10 +84,6 @@
   opacity: 0.85;
 }
 
-.curated-kitchen-pending-tag {
-  background: var(--border);
-  color: var(--text);
-}
 
 /* Live/verified picks get a quiet accent border rather than a loud "for sale" treatment --
    distinct from pending cards without turning the page into a storefront. */
@@ -113,6 +109,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
   margin-top: 4px;
 }
 
@@ -128,11 +125,6 @@
   width: 100%;
 }
 
-.curated-kitchen-needs-verification-tag {
-  background: transparent;
-  border: 1px solid var(--gold-strong);
-  color: var(--gold-strong);
-}
 
 .curated-kitchen-category-hero {
   margin-bottom: 4px;

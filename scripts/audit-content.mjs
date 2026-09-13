@@ -29,6 +29,7 @@ const report = { generatedAt: new Date().toISOString(), coverage, activeOffers: 
   sharedOfferUrls: [...grouped].filter(([, ids]) => new Set(ids).size > 1).map(([url, ids]) => ({ url, products: [...new Set(ids)] })), network: [] }
 
 if (process.argv.includes('--network')) {
+  report.networkCheckedAt = report.generatedAt
   const queue = [...new Set([...grouped.keys(), ...catalogs.flatMap(([, , images]) => Object.values(images).map((image) => image.url).filter((url) => url.startsWith('https://')))])]
   await Promise.all(Array.from({ length: 6 }, async () => {
     while (queue.length) {
@@ -48,5 +49,6 @@ if (!process.argv.includes('--network') && fs.existsSync('reports/content-audit.
 fs.mkdirSync('reports', { recursive: true })
 fs.writeFileSync('reports/content-audit.json', JSON.stringify(report, null, 2) + '\n')
 console.log(JSON.stringify({ coverage, activeOffers: offers.length, invalidOffers, sharedOfferUrls: report.sharedOfferUrls,
-  networkChecked: report.network.length, networkFailures: report.network.filter((entry) => !entry.status || entry.status >= 400).length }, null, 2))
+  networkChecked: report.network.length, networkNeedsReview: report.network.filter((entry) => !entry.status || entry.status >= 400).length,
+  networkMissing: report.network.filter((entry) => [404, 410].includes(entry.status)).length }, null, 2))
 if (invalidOffers.length) process.exitCode = 1

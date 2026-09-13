@@ -1,14 +1,15 @@
-import { useState } from 'react'
+import { useSyncExternalStore } from 'react'
 import type { SavedItemType } from '../types/notebook'
 import { isSaved, toggleSaved } from '../lib/notebook'
 import { hapticToggle } from '../lib/haptics'
+import { subscribe } from '../lib/savedItems'
 import './SaveButton.css'
 
 export function SaveButton({ type, id }: { type: SavedItemType; id: string }) {
-  const [saved, setSaved] = useState(() => isSaved(type, id))
+  const saved = useSyncExternalStore(subscribe, () => isSaved(type, id), () => false)
 
   function handleClick() {
-    setSaved(toggleSaved(type, id))
+    toggleSaved(type, id)
     hapticToggle()
   }
 

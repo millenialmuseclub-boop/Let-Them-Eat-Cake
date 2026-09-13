@@ -401,7 +401,8 @@
         "id": "product_gold_leaf-shopmy",
         "network": "shopmy",
         "url": "https://go.shopmy.us/p-77638287",
-        "status": "active"
+        "status": "needs-verification",
+        "notes": "Audit 2026-09-13: Edible gold leaf redirects to edible glitter. Confirm or replace the affiliate URL before reactivating."
       }
     ]
   },

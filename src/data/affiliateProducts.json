@@ -301,7 +301,7 @@
     "category": "ingredient",
     "url": "https://go.shopmy.us/p-77638287",
     "network": "shopmy",
-    "active": true,
+    "active": false,
     "imageUrl": "https://images.unsplash.com/photo-1739785938082-92757ce73abe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZWRpYmxlJTIwZ29sZCUyMGxlYWYlMjBkZXNzZXJ0fGVufDB8Mnx8fDE3ODY3Mjk1Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
@@ -310,7 +310,7 @@
     "category": "ingredient",
     "url": "https://go.shopmy.us/p-77638959",
     "network": "shopmy",
-    "active": true,
+    "active": false,
     "associatedCakeIds": [
       "cake_mont_blanc"
     ]
@@ -362,7 +362,7 @@
     "category": "presentation",
     "url": "https://go.shopmy.us/p-77635295",
     "network": "shopmy",
-    "active": true,
+    "active": false,
     "imageUrl": "https://images.unsplash.com/photo-1556713304-7a0dfeadff38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZmxvcmFsJTIwY2FrZSUyMHN0YW5kJTIwZGVzc2VydCUyMHRhYmxlfGVufDB8Mnx8fDE3ODY3Mjk1ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
@@ -525,7 +525,7 @@
     "category": "featured-cake",
     "url": "https://go.shopmy.us/p-78607636",
     "network": "shopmy",
-    "active": true,
+    "active": false,
     "imageUrl": "https://images.unsplash.com/photo-1773632996592-e150b9ed5059?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8YmFzcXVlJTIwY2FrZSUyMGRlc3NlcnR8ZW58MHwyfHx8MTc4NjczMzY2MXww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {

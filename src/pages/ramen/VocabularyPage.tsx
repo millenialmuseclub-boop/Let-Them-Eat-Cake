@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { vocabulary } from '../../lib/ramen/data'
 import { getSceneImage } from '../../lib/ramen/sceneImages'
 import { displayImageUrl } from '../../lib/ramen/images'
@@ -14,7 +15,7 @@ export function VocabularyPage() {
     <main className="page">
       {scene && (
         <div className="lab-hero-image">
-          <img src={displayImageUrl(scene, 'hero')} alt="Wooden chopsticks resting on a dark ramen bowl" loading="lazy" />
+          <EditorialImage src={displayImageUrl(scene, 'hero')} alt="Wooden chopsticks resting on a dark ramen bowl" loading="lazy" />
           <span className="lab-hero-credit">
             {scene.photographer} / {scene.source}
           </span>

@@ -1,3 +1,4 @@
+import { EditorialImage } from './EditorialImage'
 import { getIngredientImage } from '../lib/ingredientImages'
 import './IngredientThumbnail.css'
 
@@ -9,7 +10,7 @@ export function IngredientThumbnail({ slug, alt }: { slug: string; alt: string }
   if (image) {
     return (
       <div className="ingredient-thumbnail">
-        <img src={image.url} alt={alt} loading="lazy" />
+        <EditorialImage src={image.url} alt={alt} loading="lazy" />
       </div>
     )
   }
