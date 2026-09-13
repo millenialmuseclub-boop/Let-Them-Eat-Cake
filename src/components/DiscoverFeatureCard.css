@@ -111,3 +111,6 @@
     height: 220px;
   }
 }
+
+/* These cards have no padding to offset. Keep the complete photograph and credit visible. */
+.discover-feature-card > .cake-hero-image-hero { margin: 0; }

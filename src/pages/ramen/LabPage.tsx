@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { Link, useLocation } from 'react-router-dom'
 import { getLab } from '../../lib/ramen/labs'
 import { getSceneImage } from '../../lib/ramen/sceneImages'
@@ -36,7 +37,7 @@ export function LabPage() {
     <main className="page">
       {scene && (
         <div className="lab-hero-image">
-          <img src={displayImageUrl(scene, 'hero')} alt={lab.title} loading="lazy" />
+          <EditorialImage src={displayImageUrl(scene, 'hero')} alt={lab.title} loading="lazy" />
           <span className="lab-hero-credit">
             {scene.photographer} / {scene.source}
           </span>
@@ -47,7 +48,7 @@ export function LabPage() {
 
       <LabExplorer lab={lab} />
 
-      <ContextualCuratedKitchen context={slug} title="From the Curated Kitchen" />
+      <ContextualCuratedKitchen context={slug} title="Tools for this technique" />
 
       <div className="lab-cross-links">
         <Link to="/ramen/ramen-anatomy" className="encyclopedia-link">

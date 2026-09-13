@@ -1,3 +1,4 @@
+import { EditorialImage } from './EditorialImage'
 import { getDrinkImage } from '../lib/drinkImages'
 import './DrinkImage.css'
 
@@ -7,7 +8,7 @@ export function DrinkImage({ drinkId, variant, alt }: { drinkId: string; variant
 
   return (
     <div className={`drink-image drink-image-${variant}`}>
-      <img src={image.url} alt={alt} loading="lazy" />
+      <EditorialImage src={image.url} alt={alt} loading="lazy" />
       {variant === 'hero' && (
         <span className="drink-image-credit" title={`Photo by ${image.photographer} on Unsplash`}>
           {image.photographer} / Unsplash

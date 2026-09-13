@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { ContextualCuratedKitchen } from '../../components/ContextualCuratedKitchen'
 import { AffiliateDisclosure } from '../../components/AffiliateDisclosure'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
@@ -19,7 +20,7 @@ export function CuratedKitchenPage() {
     <main className="page">
       {heroImage && (
         <div className="lab-hero-image">
-          <img src={heroImage.src} alt={heroImage.alt} loading="lazy" />
+          <EditorialImage src={heroImage.src} alt={heroImage.alt} loading="lazy" />
           <span className="lab-hero-credit">
             {heroImage.credit.creator} / Wikimedia Commons
           </span>

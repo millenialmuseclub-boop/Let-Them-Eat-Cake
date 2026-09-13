@@ -1,0 +1,96 @@
+[
+  {
+    "check": "save persists after reload",
+    "route": "/cake/cake_black_forest",
+    "passed": true
+  },
+  {
+    "check": "save persists after reload",
+    "route": "/ramen/ramen/ramen_sapporo_miso",
+    "passed": true
+  },
+  {
+    "check": "save persists after reload",
+    "route": "/cookies/encyclopedia/cookie_chocolate_chip",
+    "passed": true
+  },
+  {
+    "check": "save persists after reload",
+    "route": "/noodles/encyclopedia/pho-bo",
+    "passed": true
+  },
+  {
+    "check": "world switching and saved library",
+    "passed": true
+  },
+  {
+    "check": "companion link",
+    "route": "/ramen/atlas",
+    "passed": true
+  },
+  {
+    "check": "companion link",
+    "route": "/noodles/atlas",
+    "passed": true
+  },
+  {
+    "check": "companion link",
+    "route": "/celebrate",
+    "passed": true
+  },
+  {
+    "check": "contextual offers and disclosure",
+    "route": "/ramen/broth-lab",
+    "passed": true
+  },
+  {
+    "check": "contextual offers and disclosure",
+    "route": "/cookies/workshop/labs/dough-lab",
+    "passed": true
+  },
+  {
+    "check": "contextual offers and disclosure",
+    "route": "/noodles/workshop/lab/hydration-lab",
+    "passed": true
+  },
+  {
+    "check": "contextual offers and disclosure",
+    "route": "/noodles/workshop/lab/rice-noodle-lab",
+    "passed": true
+  },
+  {
+    "check": "contextual offers and disclosure",
+    "route": "/noodles/workshop/lab/hand-pulled-lab",
+    "passed": true
+  },
+  {
+    "check": "failed images use fallback",
+    "route": "/",
+    "passed": true
+  },
+  {
+    "check": "failed images use fallback",
+    "route": "/sommelier",
+    "passed": true
+  },
+  {
+    "check": "failed images use fallback",
+    "route": "/ingredients",
+    "passed": true
+  },
+  {
+    "check": "failed images use fallback",
+    "route": "/cookies/workshop",
+    "passed": true
+  },
+  {
+    "check": "failed images use fallback",
+    "route": "/noodles/atlas",
+    "passed": true
+  },
+  {
+    "check": "failed images use fallback",
+    "route": "/ramen/curated-kitchen",
+    "passed": true
+  }
+]

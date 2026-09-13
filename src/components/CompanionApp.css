@@ -1,0 +1,9 @@
+.companion-app {
+  margin: 32px 0 16px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+}
+
+.companion-app h2 { font-size: 20px; margin: 0 0 8px; }
+.companion-app p { margin: 0 0 8px; max-width: 560px; }
+.companion-app a { display: inline-flex; align-items: center; min-height: 44px; }

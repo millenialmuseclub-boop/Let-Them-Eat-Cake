@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { Link } from 'react-router-dom';
 import { twirlStories, vocabulary } from '../../data/noodles/twirl';
 import { getImageFor } from '../../data/noodles/images';
@@ -32,7 +33,7 @@ export function TwirlPage() {
               <span className="story-item__index">{String(i + 1).padStart(2, '0')}</span>
               {image && (
                 <span className="story-item__media">
-                  <img src={image.src} alt="" />
+                  <EditorialImage src={image.src} alt="" />
                 </span>
               )}
               <span className="story-item__body">

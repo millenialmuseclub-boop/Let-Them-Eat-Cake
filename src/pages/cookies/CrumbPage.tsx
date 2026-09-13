@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { Link } from 'react-router-dom'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { getCookieImage, getSceneImage } from '../../lib/cookies/images'
@@ -7,7 +8,7 @@ import { PageHeroBand } from '../../components/cookies/PageHeroBand'
 function RowThumb({ src, alt }: { src?: string; alt: string }) {
   if (!src) return null
   return (
-    <img
+    <EditorialImage
       src={src}
       alt={alt}
       loading="lazy"

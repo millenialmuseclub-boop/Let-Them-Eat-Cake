@@ -1,3 +1,4 @@
+import { CompanionApp } from '../../components/CompanionApp'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { regions, traditions, shops, getRamen } from '../../lib/ramen/data'
@@ -138,6 +139,7 @@ export function AtlasPage() {
           ))}
         </div>
       </section>
+      <CompanionApp app="rallii" />
     </main>
   )
 }

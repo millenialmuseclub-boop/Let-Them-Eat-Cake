@@ -1,0 +1,30 @@
+[
+  {
+    "route": "/discover",
+    "overflow": false
+  },
+  {
+    "route": "/celebrate",
+    "overflow": false
+  },
+  {
+    "route": "/assembly-lab",
+    "overflow": false
+  },
+  {
+    "route": "/ramen/build-a-bowl",
+    "overflow": false
+  },
+  {
+    "route": "/ramen/curated-kitchen",
+    "overflow": false
+  },
+  {
+    "route": "/cookies",
+    "overflow": false
+  },
+  {
+    "route": "/noodles",
+    "overflow": false
+  }
+]

@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { Link, useParams } from 'react-router-dom';
 import { twirlStories } from '../../data/noodles/twirl';
 import { getDish, getNoodleType } from '../../lib/noodles/data';
@@ -23,7 +24,7 @@ export function TwirlStoryPage() {
 
   return (
     <div className="page-container">
-      {heroImage && <img src={heroImage.src} alt={heroImage.alt} loading="lazy" className="photo-medium" />}
+      {heroImage && <EditorialImage src={heroImage.src} alt={heroImage.alt} loading="lazy" className="photo-medium" />}
       <span className="eyebrow">Twirl</span>
       <h1>{story.title}</h1>
       <p style={{ fontSize: 17, opacity: 0.8 }}>{story.dek}</p>

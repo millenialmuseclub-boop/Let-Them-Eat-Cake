@@ -1,3 +1,4 @@
+import { EditorialImage } from './EditorialImage'
 import type { CSSProperties } from 'react'
 import { CakeThumbnail } from './CakeThumbnail'
 import { hapticSelect } from '../lib/haptics'
@@ -34,7 +35,7 @@ export function InspirationTile({
   ) : (
     imageUrl && (
       <div className="inspiration-tile-photo">
-        <img src={imageUrl} alt="" loading="lazy" />
+        <EditorialImage src={imageUrl} alt="" loading="lazy" />
       </div>
     )
   )

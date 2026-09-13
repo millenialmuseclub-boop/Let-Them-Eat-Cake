@@ -1,0 +1,104 @@
+[
+  {
+    "world": "ramen",
+    "id": "product_red_green_bowl_set",
+    "url": "https://on.ltk.com/+vlEg-lBUT_oObcZUfPSUbQ",
+    "reason": "Red/green ramen set redirects to Fuji Blossom rice bowl set of four."
+  },
+  {
+    "world": "ramen",
+    "id": "product_yatai_keiji_set",
+    "url": "https://go.shopmy.us/p-79937084",
+    "reason": "Yatai Keiji set redirects to Williams-Sonoma Famille Rose bowls; merchant blocks full inspection."
+  },
+  {
+    "world": "ramen",
+    "id": "ramen-noodle-strainer-basket",
+    "url": "https://on.ltk.com/+BIxW-anhQNaUuH5Z5dAPVw",
+    "reason": "Noodle strainer basket redirects to RSVP Berry Colander."
+  },
+  {
+    "world": "ramen",
+    "id": "japanese-spoon-chopstick-set",
+    "url": "https://go.shopmy.us/p-80170813",
+    "reason": "Spoon-and-chopstick set redirects to Bento Kishimoto lunch box."
+  },
+  {
+    "world": "ramen",
+    "id": "kitchenaid-pasta-cutter-attachment",
+    "url": "https://go.shopmy.us/p-80208772",
+    "reason": "KitchenAid cutter redirects to a SMEG attachment, with different mixer compatibility."
+  },
+  {
+    "world": "ramen",
+    "id": "japanese-noodle-knife",
+    "url": "https://on.ltk.com/+lKL4aSJzKk5t2FROoZuwmA",
+    "reason": "Noodle knife redirects to a Miyabi Nakiri vegetable knife."
+  },
+  {
+    "world": "cookies",
+    "id": "product_gold_leaf",
+    "url": "https://go.shopmy.us/p-77638287",
+    "reason": "Edible gold leaf redirects to edible glitter."
+  },
+  {
+    "world": "noodles",
+    "id": "kitchenaid-pasta-cutter-attachment",
+    "url": "https://go.shopmy.us/p-80208772",
+    "reason": "KitchenAid cutter redirects to a SMEG attachment, with different mixer compatibility."
+  },
+  {
+    "world": "noodles",
+    "id": "japanese-noodle-knife",
+    "url": "https://on.ltk.com/+lKL4aSJzKk5t2FROoZuwmA",
+    "reason": "Noodle knife redirects to a Miyabi Nakiri vegetable knife."
+  },
+  {
+    "world": "noodles",
+    "id": "ramen-noodle-strainer-basket",
+    "url": "https://on.ltk.com/+BIxW-anhQNaUuH5Z5dAPVw",
+    "reason": "Noodle strainer basket redirects to RSVP Berry Colander."
+  },
+  {
+    "world": "noodles",
+    "id": "product_red_green_bowl_set",
+    "url": "https://on.ltk.com/+vlEg-lBUT_oObcZUfPSUbQ",
+    "reason": "Red/green ramen set redirects to Fuji Blossom rice bowl set of four."
+  },
+  {
+    "world": "noodles",
+    "id": "product_yatai_keiji_set",
+    "url": "https://go.shopmy.us/p-79937084",
+    "reason": "Yatai Keiji set redirects to Williams-Sonoma Famille Rose bowls; merchant blocks full inspection."
+  },
+  {
+    "world": "noodles",
+    "id": "japanese-spoon-chopstick-set",
+    "url": "https://go.shopmy.us/p-80170813",
+    "reason": "Spoon-and-chopstick set redirects to Bento Kishimoto lunch box."
+  },
+  {
+    "world": "cake",
+    "id": "product_gold_leaf",
+    "url": "https://go.shopmy.us/p-77638287",
+    "reason": "Edible gold leaf redirects to edible glitter."
+  },
+  {
+    "world": "cake",
+    "id": "product_chestnut_paste",
+    "url": "https://go.shopmy.us/p-77638959",
+    "reason": "Agrimontana candied chestnut paste redirects to Amoretti roasted chestnut compound."
+  },
+  {
+    "world": "cake",
+    "id": "product_floral_cake_stand",
+    "url": "https://go.shopmy.us/p-77635295",
+    "reason": "Merchant structured availability reports OutOfStock; recheck before reactivating."
+  },
+  {
+    "world": "cake",
+    "id": "product_cake_gateau_basque",
+    "url": "https://go.shopmy.us/p-78607636",
+    "reason": "Merchant structured availability reports OutOfStock; recheck before reactivating."
+  }
+]

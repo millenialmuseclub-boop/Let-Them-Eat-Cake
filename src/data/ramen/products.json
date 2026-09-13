@@ -130,7 +130,8 @@
         "network": "ltk",
         "cta": "Shop the Set",
         "url": "https://on.ltk.com/+vlEg-lBUT_oObcZUfPSUbQ",
-        "status": "active"
+        "status": "needs-verification",
+        "notes": "Audit 2026-09-13: Red/green ramen set redirects to Fuji Blossom rice bowl set of four. Confirm or replace the affiliate URL before reactivating."
       }
     ]
   },
@@ -149,7 +150,8 @@
         "network": "shopmy",
         "cta": "Shop the Ramen Set",
         "url": "https://go.shopmy.us/p-79937084",
-        "status": "active"
+        "status": "needs-verification",
+        "notes": "Audit 2026-09-13: Yatai Keiji set redirects to Williams-Sonoma Famille Rose bowls; merchant blocks full inspection. Confirm or replace the affiliate URL before reactivating."
       }
     ]
   },
@@ -740,7 +742,8 @@
         "network": "ltk",
         "cta": "Shop the Strainer Basket",
         "url": "https://on.ltk.com/+BIxW-anhQNaUuH5Z5dAPVw",
-        "status": "active"
+        "status": "needs-verification",
+        "notes": "Audit 2026-09-13: Noodle strainer basket redirects to RSVP Berry Colander. Confirm or replace the affiliate URL before reactivating."
       }
     ]
   },
@@ -890,7 +893,8 @@
         "network": "shopmy",
         "cta": "Shop the Spoon-and-Chopstick Set",
         "url": "https://go.shopmy.us/p-80170813",
-        "status": "active"
+        "status": "needs-verification",
+        "notes": "Audit 2026-09-13: Spoon-and-chopstick set redirects to Bento Kishimoto lunch box. Confirm or replace the affiliate URL before reactivating."
       }
     ]
   },
@@ -1173,7 +1177,8 @@
         "network": "shopmy",
         "cta": "Shop the Cutter Attachment (ShopMy)",
         "url": "https://go.shopmy.us/p-80208772",
-        "status": "active"
+        "status": "needs-verification",
+        "notes": "Audit 2026-09-13: KitchenAid cutter redirects to a SMEG attachment, with different mixer compatibility. Confirm or replace the affiliate URL before reactivating."
       },
       {
         "id": "kitchenaid-pasta-cutter-attachment-ltk",
@@ -1222,7 +1227,8 @@
         "network": "ltk",
         "cta": "Shop the Noodle Knife",
         "url": "https://on.ltk.com/+lKL4aSJzKk5t2FROoZuwmA",
-        "status": "active"
+        "status": "needs-verification",
+        "notes": "Audit 2026-09-13: Noodle knife redirects to a Miyabi Nakiri vegetable knife. Confirm or replace the affiliate URL before reactivating."
       }
     ]
   },

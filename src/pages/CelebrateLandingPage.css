@@ -74,3 +74,10 @@
     height: 240px;
   }
 }
+
+.celebrate-entry-card > .cake-hero-image-hero { margin: 0; }
+.celebrate-entry-card .cake-hero-image-placeholder { height: 320px; }
+.celebrate-entry-card .cake-hero-image-placeholder::after { content: none; }
+@media (max-width: 640px) {
+  .celebrate-entry-card .cake-hero-image-placeholder { height: 240px; }
+}

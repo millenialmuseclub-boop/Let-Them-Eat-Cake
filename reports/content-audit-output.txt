@@ -1,0 +1,109 @@
+
+> let-them-eat@0.0.0 audit:content
+> node --import ./scripts/register-typescript.mjs scripts/audit-content.mjs
+
+{
+  "coverage": [
+    {
+      "world": "Cake",
+      "total": 118,
+      "photographed": 117,
+      "missing": [
+        {
+          "id": "cake_kerala_plum_cake",
+          "name": "Kerala Plum Cake"
+        }
+      ],
+      "repeatedSources": []
+    },
+    {
+      "world": "Ramen",
+      "total": 25,
+      "photographed": 25,
+      "missing": [],
+      "repeatedSources": []
+    },
+    {
+      "world": "Cookies",
+      "total": 52,
+      "photographed": 51,
+      "missing": [
+        {
+          "id": "cookie_pepas",
+          "name": "Pepas"
+        }
+      ],
+      "repeatedSources": []
+    },
+    {
+      "world": "Noodles",
+      "total": 51,
+      "photographed": 51,
+      "missing": [],
+      "repeatedSources": []
+    }
+  ],
+  "activeOffers": 115,
+  "invalidOffers": [],
+  "sharedOfferUrls": [
+    {
+      "url": "https://go.shopmy.us/p-80171360",
+      "products": [
+        "ramen-serving-tray",
+        "noodle-serving-tray"
+      ]
+    },
+    {
+      "url": "https://on.ltk.com/+F_VgY0Nl9b6uiCh6HuSE3w",
+      "products": [
+        "instant-read-thermometer",
+        "product_instant_read_thermometer"
+      ]
+    },
+    {
+      "url": "https://on.ltk.com/+ebOftqVUiaSPwe915qDu6Q",
+      "products": [
+        "noodle-tools-bench-scraper",
+        "product_bench_scraper_ramen"
+      ]
+    },
+    {
+      "url": "https://on.ltk.com/+5mGHYJLtqujiExkzG8n-aA",
+      "products": [
+        "precision-kitchen-scale",
+        "product_precision_kitchen_scale"
+      ]
+    },
+    {
+      "url": "https://on.ltk.com/+DWeFs9gktHqoadUXGJywVQ",
+      "products": [
+        "large-wood-cutting-board",
+        "product_large_wood_cutting_board"
+      ]
+    },
+    {
+      "url": "https://on.ltk.com/+eSi7CDir0L_AlcwG--7LSQ",
+      "products": [
+        "dough-scraper",
+        "product_dough_scraper"
+      ]
+    },
+    {
+      "url": "https://go.shopmy.us/p-77173367",
+      "products": [
+        "product_digital_scale_cake",
+        "product_digital_scale"
+      ]
+    },
+    {
+      "url": "https://go.shopmy.us/p-77172564",
+      "products": [
+        "product_scraper_cake",
+        "product_scraper"
+      ]
+    }
+  ],
+  "networkChecked": 329,
+  "networkNeedsReview": 116,
+  "networkMissing": 0
+}

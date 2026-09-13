@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { Link } from 'react-router-dom';
 import { useMyNoodles } from '../../lib/noodles/useMyNoodles';
 import { getDish } from '../../lib/noodles/data';
@@ -20,7 +21,7 @@ export function MyNoodlesPage() {
 
   return (
     <div className="page-container">
-      {heroImage && <img src={heroImage.src} alt={heroImage.alt} loading="lazy" className="photo-medium" />}
+      {heroImage && <EditorialImage src={heroImage.src} alt={heroImage.alt} loading="lazy" className="photo-medium" />}
       <span className="eyebrow">My Noodles</span>
       <h1>My Noodles</h1>
       <p className="prose" style={{ maxWidth: 560 }}>

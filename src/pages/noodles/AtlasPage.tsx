@@ -1,3 +1,5 @@
+import { CompanionApp } from '../../components/CompanionApp'
+import { EditorialImage } from '../../components/EditorialImage'
 import { Link } from 'react-router-dom';
 import { regions, countries, places, dishes } from '../../lib/noodles/data';
 import { getImageFor } from '../../data/noodles/images';
@@ -32,7 +34,7 @@ export function AtlasPage() {
     <div className="page-container">
       {heroImage && (
         <div className="lab-hero-image">
-          <img src={heroImage.src} alt={heroImage.alt} loading="lazy" />
+          <EditorialImage src={heroImage.src} alt={heroImage.alt} loading="lazy" />
           <span className="lab-hero-credit">
             {heroImage.credit.creator} / Wikimedia Commons
           </span>
@@ -53,7 +55,7 @@ export function AtlasPage() {
             <div key={region.id} className="atlas-region">
               <div className="atlas-region__header">
                 {spotlight && (
-                  <img
+                  <EditorialImage
                     src={spotlight.image.src}
                     alt={spotlight.image.alt}
                     loading="lazy"
@@ -79,7 +81,7 @@ export function AtlasPage() {
                           const dishImage = getImageFor(dish.id);
                           return (
                             <Link key={dish.id} to={`/noodles/encyclopedia/${dish.id}`} className="chip chip-brass">
-                              {dishImage && <img src={dishImage.src} alt="" loading="lazy" className="atlas-dish-avatar" />}
+                              {dishImage && <EditorialImage src={dishImage.src} alt="" loading="lazy" className="atlas-dish-avatar" />}
                               {dish.name}
                             </Link>
                           );
@@ -93,6 +95,7 @@ export function AtlasPage() {
           );
         })}
       </div>
+      <CompanionApp app="rallii" />
     </div>
   );
 }

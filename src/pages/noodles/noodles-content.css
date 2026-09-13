@@ -716,3 +716,7 @@
   .noodles-world .hero-bleed__media { height: 220px; max-height: 220px; }
   .noodles-world .hero-bleed__content h1 { font-size: 30px; margin-bottom: 0; }
 }
+
+/* Overlay cards already show the dish name; keep fallback text from doubling it. */
+.noodles-world .tile > .tile__fallback > span,
+.noodles-world .hero-bleed > div.hero-bleed__media > span { visibility: hidden; }

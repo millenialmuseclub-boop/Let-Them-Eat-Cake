@@ -1,0 +1,11 @@
+img[data-image-fallback] {
+  object-fit: contain !important;
+  padding: 24px;
+  box-sizing: border-box;
+  background: var(--raspberry-bg, #f8eee9);
+}
+
+/* A fallback is bundled artwork, so it must not carry the failed photograph's credit. */
+img[data-image-fallback] ~ [class*="credit"] {
+  display: none;
+}

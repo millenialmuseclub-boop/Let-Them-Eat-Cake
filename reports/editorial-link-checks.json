@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-09-13T22:55:12.327Z",
+  "results": [
+    {
+      "url": "https://www.google.com/maps/search/?api=1&query=Ichiran+ramen+Fukuoka",
+      "status": 200,
+      "destination": "https://www.google.com/maps/search/?api=1&query=Ichiran+ramen+Fukuoka"
+    },
+    {
+      "url": "https://en.ichiran.com",
+      "status": 200,
+      "destination": "https://en.ichiran.com/"
+    },
+    {
+      "url": "https://www.google.com/maps/search/?api=1&query=Ippudo+ramen+Fukuoka",
+      "status": 200,
+      "destination": "https://www.google.com/maps/search/?api=1&query=Ippudo+ramen+Fukuoka"
+    },
+    {
+      "url": "https://www.ippudo.com",
+      "status": 200,
+      "destination": "https://www.ippudo.com/"
+    },
+    {
+      "url": "https://www.google.com/maps/search/?api=1&query=Nankin+Senryo+ramen+Kurume",
+      "status": 200,
+      "destination": "https://www.google.com/maps/search/?api=1&query=Nankin+Senryo+ramen+Kurume"
+    },
+    {
+      "url": "https://www.google.com/maps/search/?api=1&query=Taishoken+ramen+Higashi-Ikebukuro+Tokyo",
+      "status": 200,
+      "destination": "https://www.google.com/maps/search/?api=1&query=Taishoken+ramen+Higashi-Ikebukuro+Tokyo"
+    },
+    {
+      "url": "https://www.google.com/maps/search/?api=1&query=Yoshimuraya+ramen+Yokohama",
+      "status": 200,
+      "destination": "https://www.google.com/maps/search/?api=1&query=Yoshimuraya+ramen+Yokohama"
+    },
+    {
+      "url": "https://www.google.com/maps/search/?api=1&query=Menya+Hanabi+Nagoya",
+      "status": 200,
+      "destination": "https://www.google.com/maps/search/?api=1&query=Menya+Hanabi+Nagoya"
+    },
+    {
+      "url": "https://www.google.com/maps/search/?api=1&query=Misen+ramen+Nagoya",
+      "status": 200,
+      "destination": "https://www.google.com/maps/search/?api=1&query=Misen+ramen+Nagoya"
+    },
+    {
+      "url": "https://www.google.com/maps/search/?api=1&query=Aji+no+Sanpei+ramen+Sapporo",
+      "status": 200,
+      "destination": "https://www.google.com/maps/search/?api=1&query=Aji+no+Sanpei+ramen+Sapporo"
+    },
+    {
+      "url": "https://www.google.com/maps/search/?api=1&query=Miyoshi+ramen+Musashino",
+      "status": 200,
+      "destination": "https://www.google.com/maps/search/?api=1&query=Miyoshi+ramen+Musashino"
+    }
+  ]
+}

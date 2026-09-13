@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { useParams, Navigate } from 'react-router-dom'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { LABS_BY_SLUG } from '../../lib/cookies/data'
@@ -27,14 +28,14 @@ export function LabPage() {
     <main className="page-container">
       {scene && (
         <figure className="lab-hero-image">
-          <img src={scene.url} alt="" loading="lazy" />
+          <EditorialImage src={scene.url} alt="" loading="lazy" />
           <figcaption className="lab-hero-credit">Photo by {scene.photographer}</figcaption>
         </figure>
       )}
       <h1>{lab.title}</h1>
       <p>{lab.description}</p>
       <LabExplorer lab={lab} />
-      <ContextualCuratedKitchen context={lab.slug} title={`Shop the ${lab.title}`} />
+      <ContextualCuratedKitchen context={lab.slug} title="Tools for this technique" />
     </main>
   )
 }

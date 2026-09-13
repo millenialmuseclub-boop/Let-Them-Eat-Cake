@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { troubleshooterProblems } from '../../data/noodles/workshop';
@@ -15,7 +16,7 @@ export function TroubleshooterPage() {
   return (
     <div className="page-container">
       {heroImage && (
-        <img
+        <EditorialImage
           src={heroImage.src}
           alt={heroImage.alt}
           loading="lazy"

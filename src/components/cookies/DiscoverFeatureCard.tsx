@@ -1,3 +1,4 @@
+import { EditorialImage } from '../EditorialImage'
 import { Link } from 'react-router-dom'
 import type { CookieImage } from '../../types/cookies/images'
 import '../DiscoverFeatureCard.css'
@@ -29,7 +30,7 @@ export function DiscoverFeatureCard({
   return (
     <Link to={to} className="discover-feature-card">
       <div className="discover-feature-card-image">
-        <img src={image.url} alt="" loading="lazy" />
+        <EditorialImage src={image.url} alt="" loading="lazy" />
         <p className="discover-feature-card-credit">Photo by {image.photographer}</p>
       </div>
       <div className="discover-feature-card-content">

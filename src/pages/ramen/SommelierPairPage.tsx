@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ramen, pairingItems } from '../../lib/ramen/data'
@@ -37,7 +38,7 @@ export function SommelierPairPage() {
     <main className="page">
       {scene && (
         <div className="lab-hero-image">
-          <img src={displayImageUrl(scene, 'hero')} alt="A Japanese table setting with ramen, yakitori, and a beer" loading="lazy" />
+          <EditorialImage src={displayImageUrl(scene, 'hero')} alt="A Japanese table setting with ramen, yakitori, and a beer" loading="lazy" />
           <span className="lab-hero-credit">
             {scene.photographer} / {scene.source}
           </span>

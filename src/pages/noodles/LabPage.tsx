@@ -1,3 +1,4 @@
+import { EditorialImage } from '../../components/EditorialImage'
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { labs } from '../../data/noodles/workshop';
@@ -37,7 +38,7 @@ export function LabPage() {
 
       {featuredImage && (
         <figure className="photo-medium">
-          <img src={featuredImage.src} alt={featuredImage.alt} />
+          <EditorialImage src={featuredImage.src} alt={featuredImage.alt} />
         </figure>
       )}
 
@@ -104,7 +105,7 @@ export function LabPage() {
         </>
       )}
 
-      <ContextualCuratedKitchen context={lab.slug} title="From the Curated Kitchen" />
+      <ContextualCuratedKitchen context={lab.slug} title="Tools for this technique" />
     </div>
   );
 }
