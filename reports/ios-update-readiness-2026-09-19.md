@@ -1,5 +1,9 @@
 # Let Them Eat — release preparation, 19 September 2026
 
+## Subsequent submission request
+
+The user subsequently authorized the App Store update and submission. The authenticated App Store Connect record showed a **2.1** draft and published 2.0. Source and static validation were corrected to **2.1 (5)**. Release commit `932c413` was pushed to `codex/ios-2-1-gold-icon`; signed build/upload workflow `35446160060` was dispatched. The preparation-only status below describes the earlier checkpoint, before this authorization. Submission completion must be verified separately in App Store Connect.
+
 **Ready for the next approved iOS build: YES.** This is repository/build readiness, not a claim that an Xcode archive, physical iPhone test, or App Store review has passed. No upload, deployment, workflow dispatch, or OTA publication was performed. Changes remain local for review.
 
 ## Commercial improvements
