@@ -3,6 +3,7 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import './styles/worldAccents.css'
 import { markAppReady, checkForOtaUpdate } from './lib/otaUpdater'
 import { HomePage } from './pages/HomePage'
+import { trackContentViewed } from './lib/analytics'
 const TimeMachinePage = lazy(() => import('./pages/TimeMachinePage').then((module) => ({ default: module.TimeMachinePage })))
 const AtlasPage = lazy(() => import('./pages/AtlasPage').then((module) => ({ default: module.AtlasPage })))
 const AtlasRegionPage = lazy(() => import('./pages/AtlasRegionPage').then((module) => ({ default: module.AtlasRegionPage })))
@@ -70,6 +71,7 @@ function ConfirmBoot() {
 
 function App() {
   const { pathname } = useLocation()
+  useEffect(() => { trackContentViewed(pathname, worldFromPathname(pathname) ?? 'home') }, [pathname])
   return (
     <div className={worldAccentClass(pathname)}>
       <TopNavBar />

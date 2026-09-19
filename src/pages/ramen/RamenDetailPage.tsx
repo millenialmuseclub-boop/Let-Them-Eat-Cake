@@ -6,6 +6,8 @@ import { FlavorProfileBars } from '../../components/ramen/FlavorProfileBars'
 import { SavedRamenControls } from '../../components/ramen/SavedRamenControls'
 import { RamenStateBadges } from '../../components/ramen/RamenStateBadges'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
+import { ContextualCuratedKitchen } from '../../components/ContextualCuratedKitchen'
+import { ramenRecommendations } from '../../lib/contextualRecommendations'
 import './RamenDetailPage.css'
 
 const VARIATION_LABEL: Record<string, string> = {
@@ -109,6 +111,8 @@ export function RamenDetailPage() {
         <h2>👩‍🍳 Preparation Overview</h2>
         <p>{item.preparationOverview}</p>
       </section>
+
+      <ContextualCuratedKitchen key={item.id} productIds={ramenRecommendations(item.tare)} title="Bring this bowl home" limit={3} />
 
       <section className="card ramen-detail-section">
         <h2>📊 Flavor Profile</h2>

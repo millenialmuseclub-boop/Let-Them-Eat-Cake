@@ -49,7 +49,7 @@ export function CakeDetailPage() {
 
   const bakingTools = getProductsForHubPath('/encyclopedia')
   const vanillaMatch = cake.flavorNotes.some((n) => /vanilla/i.test(n)) ? getProductsForIngredient('vanilla-extract') : []
-  const chocolateMatch = cake.flavorNotes.some((n) => /chocolate|cocoa/i.test(n)) ? getProductsForIngredient('dark-chocolate') : []
+  const chocolateMatch = recipe?.ingredients.some((ingredient) => /cocoa/i.test(ingredient.name)) ? getProductsByIds(['product_cocoa_powder']) : []
   const almondMatch = cake.flavorNotes.some((n) => /marzipan|almond/i.test(n)) ? getProductsByIds(['product_almond_paste']) : []
   const cakeSpecificAll = getProductsForCakeId(cake.id)
   const cakeSpecificMatch = cakeSpecificAll.filter((p) => p.category !== 'featured-cake')

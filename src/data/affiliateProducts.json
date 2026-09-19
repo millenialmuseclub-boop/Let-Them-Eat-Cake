@@ -10,7 +10,10 @@
       "/workshop"
     ],
     "editorialNote": "The workhorse behind creaming, whipping, and kneading — worth the counter space.",
-    "imageUrl": "https://images.unsplash.com/photo-1758565810987-ca8d617ea7be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8a2l0Y2hlbiUyMG1peGVyJTIwYmFraW5nfGVufDB8fHx8MTc4NjczNzQ3M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    "imageUrl": "https://images.unsplash.com/photo-1758565810987-ca8d617ea7be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8a2l0Y2hlbiUyMG1peGVyJTIwYmFraW5nfGVufDB8fHx8MTc4NjczNzQ3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "associatedTechniqueIds": [
+      "creaming_method"
+    ]
   },
   {
     "id": "product_revolving_cake_stand",
@@ -25,14 +28,15 @@
       "/assembly-lab"
     ],
     "associatedTechniqueIds": [
-      "buttercream_smoothing"
+      "buttercream_smoothing",
+      "crumb_coating"
     ],
     "editorialNote": "Makes smooth sides and even piping dramatically easier — turn the cake, not your wrist.",
     "imageUrl": "https://images.unsplash.com/photo-1708782345056-d526d434a48b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8cmV2b2x2aW5nJTIwY2FrZSUyMGRlY29yYXRpbmclMjB0dXJudGFibGV8ZW58MHwyfHx8MTc4NjcyOTU2OXww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     "id": "product_cake_pan",
-    "name": "Cake Pan",
+    "name": "Fat Daddio’s Bakeware Collection",
     "category": "equipment",
     "url": "https://go.shopmy.us/p-77598720",
     "network": "shopmy",
@@ -42,7 +46,11 @@
       "/cake-blueprints",
       "/encyclopedia"
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8cm91bmQlMjBjYWtlJTIwcGFuJTIwYmFraW5nfGVufDB8Mnx8fDE3ODY3Mjk1NzB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "imageUrl": "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8cm91bmQlMjBjYWtlJTIwcGFuJTIwYmFraW5nfGVufDB8Mnx8fDE3ODY3Mjk1NzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "associatedTechniqueIds": [
+      "pan_preparation"
+    ],
+    "editorialNote": "Browse the bakeware collection and select the pan size and shape specified by your recipe."
   },
   {
     "id": "product_thermapen",
@@ -60,7 +68,8 @@
       "/assembly-lab"
     ],
     "associatedTechniqueIds": [
-      "ganache"
+      "ganache",
+      "doneness_testing"
     ],
     "editorialNote": "Instant, accurate reads take the guesswork out of ganache, custard, and syrup temperatures.",
     "imageUrl": "https://images.unsplash.com/photo-1719358156765-bd93d906c06e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8ZGlnaXRhbCUyMGNvb2tpbmclMjB0aGVybW9tZXRlcnxlbnwwfDJ8fHwxNzg2NzI5NTcwfDA&ixlib=rb-4.1.0&q=80&w=1080"
@@ -84,7 +93,10 @@
     "associatedHubPaths": [
       "/cake-science"
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1604746207634-2a8e7604a2b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8bWVhc3VyaW5nJTIwY3VwcyUyMHNwb29ucyUyMGJha2luZ3xlbnwwfDJ8fHwxNzg2NzI5NTcxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "imageUrl": "https://images.unsplash.com/photo-1604746207634-2a8e7604a2b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8bWVhc3VyaW5nJTIwY3VwcyUyMHNwb29ucyUyMGJha2luZ3xlbnwwfDJ8fHwxNzg2NzI5NTcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "associatedTechniqueIds": [
+      "soaking"
+    ]
   },
   {
     "id": "product_zester",
@@ -216,10 +228,7 @@
     "url": "https://go.shopmy.us/p-77601825",
     "network": "shopmy",
     "active": true,
-    "associatedIngredientSlugs": [
-      "dark-chocolate",
-      "sweet-baking-chocolate"
-    ],
+    "associatedIngredientSlugs": [],
     "imageUrl": "https://images.unsplash.com/photo-1720029106261-0d0396bb270d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8bWlsayUyMGNob2NvbGF0ZSUyMGJhcnMlMjBiYWtpbmd8ZW58MHwyfHx8MTc4NjcyOTU3Nnww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
@@ -536,5 +545,44 @@
     "network": "shopmy",
     "active": true,
     "imageUrl": "https://images.unsplash.com/photo-1662687923931-18c60d75b2fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8dGhyZWUlMjBsYXllciUyMGNob2NvbGF0ZSUyMGNha2V8ZW58MHwyfHx8MTc4NjcyOTU4OXww&ixlib=rb-4.1.0&q=80&w=1080"
+  },
+  {
+    "id": "release-square-pan",
+    "name": "KitchenAid 9-Inch Square Cake Pan",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-87739329",
+    "network": "shopmy",
+    "active": true,
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87739329-1789823365661-.jpg",
+    "editorialNote": "A square pan for bar cookies and brownies. Use it only when the recipe specifies a 9-inch square pan or has been scaled for one.",
+    "associatedTechniqueIds": [
+      "pan_preparation"
+    ]
+  },
+  {
+    "id": "release-cooling-rack",
+    "name": "Fox Run Stainless Steel Cooling Rack",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-87739363",
+    "network": "shopmy",
+    "active": true,
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87739363-1789823380534-.jpg",
+    "editorialNote": "Air circulation beneath baked cookies helps them cool without trapping steam.",
+    "associatedTechniqueIds": [
+      "glazing"
+    ]
+  },
+  {
+    "id": "release-rolling-pin",
+    "name": "Ironwood Gourmet French Rolling Pin",
+    "category": "equipment",
+    "url": "https://go.shopmy.us/p-87739455",
+    "network": "shopmy",
+    "active": true,
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87739455-1789823410540-.jpg",
+    "editorialNote": "A handle-free wooden pin for controlling dough thickness by hand.",
+    "associatedTechniqueIds": [
+      "fondant"
+    ]
   }
 ]

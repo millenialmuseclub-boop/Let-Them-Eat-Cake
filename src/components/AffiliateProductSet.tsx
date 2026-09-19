@@ -6,7 +6,7 @@ import { trackAffiliateViewed } from '../lib/analytics'
 import './AffiliateProductSet.css'
 
 export function AffiliateProductSet({ title, products }: { title: string; products: AffiliateProduct[] }) {
-  const visibleProducts = products.slice(0, 5)
+  const visibleProducts = [...new Map(products.filter(p => p.active).map(p => [p.id, p])).values()].slice(0, 5)
 
   useEffect(() => {
     visibleProducts.forEach((product) => trackAffiliateViewed(product, title))

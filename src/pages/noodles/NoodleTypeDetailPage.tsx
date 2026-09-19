@@ -3,6 +3,8 @@ import { getNoodleType, getDishesForNoodleType, getTechnique } from '../../lib/n
 import { PhotoFrame } from '../../components/noodles/PhotoFrame';
 import { DishTile } from '../../components/noodles/DishTile';
 import { useDocumentTitle } from '../../lib/useDocumentTitle';
+import { ContextualCuratedKitchen } from '../../components/ContextualCuratedKitchen';
+import { noodleTechniqueRecommendations } from '../../lib/contextualRecommendations';
 
 export function NoodleTypeDetailPage() {
   const { id = '' } = useParams();
@@ -64,6 +66,7 @@ export function NoodleTypeDetailPage() {
           <DishTile key={dish.id} dish={dish} />
         ))}
       </div>
+      <ContextualCuratedKitchen key={type.id} productIds={noodleTechniqueRecommendations(type.techniqueIds)} title="Tools for this noodle technique" limit={3} />
     </div>
   );
 }

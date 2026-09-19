@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
 import { getSceneImage } from '../lib/sceneImages'
 import { products } from '../lib/products'
+import { trackProductClicked } from '../lib/analytics'
 import { AffiliateDisclosure } from '../components/AffiliateDisclosure'
 import './HomePage.css'
 
@@ -230,7 +231,7 @@ export function HomePage() {
               const offer = product.offers.find((o) => o.status === 'active' && o.url)!
               return (
                 <li key={product.id}>
-                  <a href={offer.url} target="_blank" rel="noreferrer sponsored">
+                  <a href={offer.url} target="_blank" rel="noopener noreferrer sponsored" onClick={() => trackProductClicked(product, offer.network, '/')}>
                     <span className="home-discovery-text">
                       <span className="home-discovery-place">{product.name}</span>
                       <span className="home-discovery-note">{offer.cta ?? 'Shop'}</span>

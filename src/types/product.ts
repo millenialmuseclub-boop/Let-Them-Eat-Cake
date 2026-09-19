@@ -38,6 +38,7 @@ export interface AffiliateProduct {
   brand?: string
   category: ProductCategory
   description: string
+  imageUrl?: string
   editorialNote?: string
   /** Which world(s) this product surfaces in. */
   apps: World[]

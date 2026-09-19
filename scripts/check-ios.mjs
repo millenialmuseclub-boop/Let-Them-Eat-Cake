@@ -15,7 +15,7 @@ assert.ok(categories.some((entry) => entry.NSPrivacyAccessedAPIType === 'NSPriva
 assert.ok(categories.some((entry) => entry.NSPrivacyAccessedAPIType === 'NSPrivacyAccessedAPICategoryUserDefaults' && entry.NSPrivacyAccessedAPITypeReasons.includes('CA92.1')))
 assert.ok(source.includes('PrivacyInfo.xcprivacy in Resources'))
 assert.equal([...source.matchAll(/CURRENT_PROJECT_VERSION = (\d+);/g)].every((match) => match[1] === '5'), true)
-assert.equal([...source.matchAll(/MARKETING_VERSION = ([\d.]+);/g)].every((match) => match[1] === '2.0'), true)
+assert.equal([...source.matchAll(/MARKETING_VERSION = ([\d.]+);/g)].every((match) => match[1] === '2.1'), true)
 assert.ok(source.includes('IPHONEOS_DEPLOYMENT_TARGET = 15.0;'))
 const config = JSON.parse(fs.readFileSync('ios/App/App/capacitor.config.json', 'utf8'))
 assert.equal(config.appId, 'com.letthemeatcake.app')
@@ -31,6 +31,7 @@ const resources = project.pbxResourcesBuildPhaseObj(project.getFirstTarget().uui
 assert.ok(resources.some((file) => file.comment === 'PrivacyInfo.xcprivacy in Resources'))
 const icon = await sharp('ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png').metadata()
 assert.equal(icon.width, 1024); assert.equal(icon.height, 1024)
+assert.equal(icon.hasAlpha, false, 'iOS icon must be opaque')
 const bundled = 'ios/App/App/public'
 const compareTree = (relative = '') => {
   for (const name of fs.readdirSync(path.join('dist', relative))) {

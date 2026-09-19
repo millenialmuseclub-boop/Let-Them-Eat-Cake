@@ -528,5 +528,180 @@
         "status": "active"
       }
     ]
+  },
+  {
+    "id": "release-baking-sheets",
+    "offers": [
+      {
+        "id": "release-baking-sheets-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87738222",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
+      }
+    ],
+    "name": "Nordic Ware Naturals Baking Sheet Set",
+    "description": "One half sheet and two quarter sheets for baking cookie batches. Check your oven dimensions before choosing a pan.",
+    "category": "bakeware",
+    "apps": [
+      "cookies"
+    ],
+    "contexts": [
+      "dough-lab"
+    ],
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87738222-1789822913587-.jpg"
+  },
+  {
+    "id": "release-cookie-scoop",
+    "offers": [
+      {
+        "id": "release-cookie-scoop-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87738271",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
+      }
+    ],
+    "name": "OXO Medium Cookie Scoop",
+    "description": "Portion drop-cookie dough evenly so each batch bakes at a similar pace.",
+    "category": "cookie-tools",
+    "apps": [
+      "cookies"
+    ],
+    "contexts": [
+      "dough-lab"
+    ],
+    "imageUrl": "https://static.shopmy.us/uploads/pretty-prod-1779378722580"
+  },
+  {
+    "id": "release-baking-mat",
+    "offers": [
+      {
+        "id": "release-baking-mat-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87738446",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
+      }
+    ],
+    "name": "Silpat Half-Sheet Baking Mat",
+    "description": "A reusable nonstick surface for cookies and chocolate work. Match the mat to your baking sheet and follow the recipe's lining guidance.",
+    "category": "bakeware",
+    "apps": [
+      "cookies"
+    ],
+    "contexts": [
+      "dough-lab",
+      "chocolate-lab"
+    ],
+    "imageUrl": "https://static.shopmy.us/uploads/pretty-prod-1759129206185"
+  },
+  {
+    "id": "release-matcha",
+    "offers": [
+      {
+        "id": "release-matcha-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87739236",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
+      }
+    ],
+    "name": "Navitas Organics Matcha Powder",
+    "description": "Matcha powder for recipes that call for green tea flavor; check the recipe before substituting for cocoa or flour.",
+    "category": "ingredients-pantry",
+    "apps": [
+      "cookies"
+    ],
+    "contexts": [],
+    "imageUrl": "https://static.shopmy.us/uploads/pretty-prod-1787098532646"
+  },
+  {
+    "id": "release-square-pan",
+    "offers": [
+      {
+        "id": "release-square-pan-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87739329",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
+      }
+    ],
+    "name": "KitchenAid 9-Inch Square Cake Pan",
+    "description": "A square pan for bar cookies and brownies. Use it only when the recipe specifies a 9-inch square pan or has been scaled for one.",
+    "category": "bakeware",
+    "apps": [
+      "cookies"
+    ],
+    "contexts": [],
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87739329-1789823365661-.jpg"
+  },
+  {
+    "id": "release-cooling-rack",
+    "offers": [
+      {
+        "id": "release-cooling-rack-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87739363",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
+      }
+    ],
+    "name": "Fox Run Stainless Steel Cooling Rack",
+    "description": "Air circulation beneath baked cookies helps them cool without trapping steam.",
+    "category": "bakeware",
+    "apps": [
+      "cookies"
+    ],
+    "contexts": [
+      "dough-lab"
+    ],
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87739363-1789823380534-.jpg"
+  },
+  {
+    "id": "release-rolling-pin",
+    "offers": [
+      {
+        "id": "release-rolling-pin-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87739455",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
+      }
+    ],
+    "name": "Ironwood Gourmet French Rolling Pin",
+    "description": "A handle-free wooden pin for controlling dough thickness by hand.",
+    "category": "mixing-prep",
+    "apps": [
+      "cookies",
+      "noodles"
+    ],
+    "contexts": [
+      "dough-lab",
+      "shape-lab"
+    ],
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87739455-1789823410540-.jpg"
+  },
+  {
+    "id": "release-cookie-book",
+    "offers": [
+      {
+        "id": "release-cookie-book-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87740026",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
+      }
+    ],
+    "name": "100 Cookies by Sarah Kieffer",
+    "description": "A baking book spanning classic cookies, brownies, bars, and new variations.",
+    "category": "books",
+    "apps": [
+      "cookies"
+    ],
+    "contexts": [
+      "dough-lab"
+    ],
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87740026-1789823640795-9781452180731_p0.jpg"
   }
 ]

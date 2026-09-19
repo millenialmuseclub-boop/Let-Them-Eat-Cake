@@ -1,5 +1,5 @@
 // Regenerates every platform icon asset from the new "Let Them Eat" master icon (black
-// background, gold circular brushstroke, wordmark, fork+pasta). Only replaces image content and
+// background and approved gold fork+pasta). Only replaces image content and
 // dimensions -- every existing file path/name/format is preserved so nothing needs re-wiring in
 // native project files or React components that reference these paths.
 import sharp from 'sharp'
@@ -7,15 +7,20 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 
 const ROOT = process.cwd()
-const SRC = 'C:/Users/Jordann Lopez/Downloads/Codex Image Aug 27, 2026, 04_46_55 PM.png'
+const SRC = path.resolve(ROOT, process.argv[2] ?? 'assets/branding/let-them-eat-gold-fork-master.png')
 
 async function resizeSquareTo(outPath, size) {
-  await sharp(SRC).resize(size, size, { fit: 'cover' }).png().toFile(outPath)
+  const output = await sharp(SRC).resize(size, size, { fit: 'cover' }).flatten({ background: '#000000' }).removeAlpha().png().toBuffer()
+  await fs.writeFile(outPath, output)
   console.log('wrote', outPath, size, 'x', size)
 }
 
 async function main() {
   const srcBuf = await fs.readFile(SRC)
+  const metadata = await sharp(srcBuf).metadata()
+  if (metadata.width !== metadata.height || metadata.width < 1024) {
+    throw new Error('Icon master must be square and at least 1024 pixels wide.')
+  }
 
   // --- iOS: single 1024x1024 marketing/app icon (Xcode's single-size appiconset format) ---
   await resizeSquareTo(
@@ -45,7 +50,9 @@ async function main() {
   // --- Web/PWA ---
   await resizeSquareTo(path.join(ROOT, 'public/icons/icon-192.png'), 192)
   await resizeSquareTo(path.join(ROOT, 'public/icons/icon-512.png'), 512)
+  await resizeSquareTo(path.join(ROOT, 'play-store-assets/app-icon/app-icon-512.png'), 512)
   await resizeSquareTo(path.join(ROOT, 'public/apple-touch-icon.png'), 180)
+  await resizeSquareTo(path.join(ROOT, 'public/icons/apple-touch-icon.png'), 180)
 
   // --- App-shell SVG icons (icon-master.svg / icon-foreground.svg / favicon.svg) ---
   // These are referenced by path from React components (e.g. TopNavBar's `/icon-master.svg`)
