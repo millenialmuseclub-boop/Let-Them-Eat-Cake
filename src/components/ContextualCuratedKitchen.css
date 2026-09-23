@@ -142,6 +142,11 @@
   width: 100%;
 }
 
+.curated-kitchen-offers a.btn,
+.curated-kitchen-offers a.btn:hover {
+  color: #fff;
+}
+
 
 .curated-kitchen-category-hero {
   margin-bottom: 4px;

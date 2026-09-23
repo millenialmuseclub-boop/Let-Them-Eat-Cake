@@ -36,6 +36,8 @@ jobs:
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
 
       - name: Sync Capacitor Android project with the fresh web build
         # APP_BUILD_VERSION (this commit's timestamp) is baked into the native

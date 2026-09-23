@@ -1,4 +1,5 @@
 import { CompanionApp } from '../../components/CompanionApp'
+import { trackExperienceClicked } from '../../lib/analytics'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { regions, traditions, shops, getRamen } from '../../lib/ramen/data'
@@ -116,11 +117,11 @@ export function AtlasPage() {
               <p className="atlas-shop-specialty">{shop.specialty}</p>
               <p>{shop.editorialNote}</p>
               <div className="atlas-shop-links">
-                <a href={shop.mapLink} target="_blank" rel="noreferrer" className="encyclopedia-link">
+                <a href={shop.mapLink} target="_blank" rel="noopener noreferrer" className="encyclopedia-link" onClick={() => trackExperienceClicked(shop.name, 'ramen-atlas-map')}>
                   View on map →
                 </a>
                 {shop.officialWebsite && (
-                  <a href={shop.officialWebsite} target="_blank" rel="noreferrer" className="encyclopedia-link">
+                  <a href={shop.officialWebsite} target="_blank" rel="noopener noreferrer" className="encyclopedia-link" onClick={() => trackExperienceClicked(shop.name, 'ramen-atlas-website')}>
                     Official site →
                   </a>
                 )}

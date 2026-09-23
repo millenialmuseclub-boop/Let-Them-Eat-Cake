@@ -110,10 +110,10 @@
   },
   {
     "id": "product_blue_swirl_bowl",
-    "name": "World Market Blue Multi-Swirl Noodle Bowl",
+    "name": "World Market Pad Print Noodle Bowls, Set of Four",
     "brand": "World Market",
     "category": "bowls-tableware",
-    "description": "A blue swirl-glazed noodle bowl with a hand-painted look.",
+    "description": "A patterned set of four noodle bowls for serving at the table.",
     "apps": [
       "ramen"
     ],
@@ -121,7 +121,7 @@
       {
         "id": "product_blue_swirl_bowl-shopmy",
         "network": "shopmy",
-        "cta": "Shop Asian Dinnerware",
+        "cta": "View World Market Pad Print Noodle Bowls, Set of Four →",
         "url": "https://go.shopmy.us/p-79936778",
         "status": "active"
       }
@@ -265,10 +265,10 @@
   },
   {
     "id": "product_cook_with_color_bowl",
-    "name": "Cook With Color Ramen Bowl",
+    "name": "Williams Sonoma Cyprus Reactive Glaze Noodle Bowls",
     "brand": "Cook With Color",
     "category": "bowls-tableware",
-    "description": "A colorful, budget-friendly ramen bowl for building a mixed-and-matched table setting.",
+    "description": "Reactive-glaze noodle bowls from the Cyprus collection.",
     "apps": [
       "ramen"
     ],
@@ -276,7 +276,7 @@
       {
         "id": "product_cook_with_color_bowl-shopmy",
         "network": "shopmy",
-        "cta": "Shop the Ramen Bowl",
+        "cta": "View Williams Sonoma Cyprus Reactive Glaze Noodle Bowls →",
         "url": "https://go.shopmy.us/p-79938809",
         "status": "active"
       }
@@ -369,9 +369,9 @@
   },
   {
     "id": "product_miso_paste",
-    "name": "Red & White Miso Paste",
+    "name": "The Wasabi Company White Miso Paste",
     "category": "japanese-pantry",
-    "description": "The fermented soybean base behind Sapporo-style miso tare.",
+    "description": "White miso for exploring fermented flavor in tare; use the miso style your recipe calls for. Sold by Selfridges; check delivery to your country.",
     "apps": [
       "ramen"
     ],
@@ -380,8 +380,19 @@
         "id": "product_miso_paste-pending",
         "network": "pending",
         "status": "pending"
+      },
+      {
+        "id": "product_miso_paste-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87738803",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
       }
-    ]
+    ],
+    "contexts": [
+      "tare-lab"
+    ],
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87738803-1789823172570-R03890457_M"
   },
   {
     "id": "product_niboshi",
@@ -401,9 +412,9 @@
   },
   {
     "id": "product_shoyu_dark",
-    "name": "Dark Soy Sauce (Koikuchi Shoyu)",
+    "name": "Eden Foods Organic Shoyu Soy Sauce",
     "category": "japanese-pantry",
-    "description": "The everyday dark soy sauce behind most shoyu tare -- the single most common ramen seasoning base.",
+    "description": "Japanese-style shoyu for tare, marinated eggs, and braising. Follow the recipe's seasoning quantities and adjust to taste.",
     "apps": [
       "ramen"
     ],
@@ -412,14 +423,27 @@
         "id": "product_shoyu_dark-pending",
         "network": "pending",
         "status": "pending"
+      },
+      {
+        "id": "product_shoyu_dark-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87739003",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
       }
-    ]
+    ],
+    "contexts": [
+      "tare-lab",
+      "ajitama-lab",
+      "chashu-lab"
+    ],
+    "imageUrl": "https://static.shopmy.us/uploads/pretty-prod-1783551164408"
   },
   {
     "id": "product_toasted_sesame_oil",
-    "name": "Toasted Sesame Oil",
+    "name": "La Tourangelle Toasted Sesame Oil",
     "category": "japanese-pantry",
-    "description": "A base for building a garlic or chili aroma oil at home.",
+    "description": "A roasted sesame finish for bowls and dressings. Use it where your recipe calls for toasted sesame oil.",
     "apps": [
       "ramen"
     ],
@@ -428,8 +452,19 @@
         "id": "product_toasted_sesame_oil-pending",
         "network": "pending",
         "status": "pending"
+      },
+      {
+        "id": "product_toasted_sesame_oil-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87738879",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
       }
-    ]
+    ],
+    "contexts": [
+      "aroma-oil-lab"
+    ],
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87738879-1789823199906-24.jpg"
   },
   {
     "id": "product_doubanjiang",
@@ -513,9 +548,9 @@
   },
   {
     "id": "product_ramen_cookbook",
-    "name": "A Regional Ramen Cookbook",
-    "category": "cookbooks",
-    "description": "A deeper dive into regional broth-building technique than any single app page can cover.",
+    "name": "Ivan Ramen by Ivan Orkin",
+    "category": "books",
+    "description": "Ivan Orkin’s story and recipes from his Tokyo ramen shop.",
     "apps": [
       "ramen"
     ],
@@ -524,8 +559,20 @@
         "id": "product_ramen_cookbook-pending",
         "network": "pending",
         "status": "pending"
+      },
+      {
+        "id": "product_ramen_cookbook-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87739738",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
       }
-    ]
+    ],
+    "contexts": [
+      "broth-lab",
+      "noodle-lab"
+    ],
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87739738-1789823530780-9781607744467_p0.jpg"
   },
   {
     "id": "product_noodle_craft_cookbook",
@@ -561,9 +608,9 @@
   },
   {
     "id": "wooden-ramen-spoon",
-    "name": "Traditional Wooden Ramen Spoons",
+    "name": "Musubi Kiln Ramen Spoon Collection",
     "category": "bowls-tableware",
-    "description": "A traditional lacquered-style wooden spoon alternative to ceramic, lighter and better at holding heat.",
+    "description": "Browse the retailer’s ramen spoon collection and choose a material and shape to suit your bowl.",
     "apps": [
       "ramen"
     ],
@@ -571,7 +618,7 @@
       {
         "id": "wooden-ramen-spoon-shopmy",
         "network": "shopmy",
-        "cta": "Shop the Wooden Spoons",
+        "cta": "View Musubi Kiln Ramen Spoon Collection →",
         "url": "https://go.shopmy.us/p-80168972",
         "status": "active"
       }
@@ -583,9 +630,9 @@
   },
   {
     "id": "ceramic-chopstick-rests",
-    "name": "Ceramic Chopstick Rests",
+    "name": "Aero Chopsticks with Rest",
     "category": "bowls-tableware",
-    "description": "Small rests that keep chopstick tips off the table between bites.",
+    "description": "A chopstick and rest set for keeping the tips off the table between bites.",
     "apps": [
       "ramen"
     ],
@@ -593,7 +640,7 @@
       {
         "id": "ceramic-chopstick-rests-shopmy",
         "network": "shopmy",
-        "cta": "Shop Chopstick Rests",
+        "cta": "View Aero Chopsticks with Rest →",
         "url": "https://go.shopmy.us/p-80170036",
         "status": "active"
       }
@@ -791,11 +838,12 @@
   },
   {
     "id": "ramen-noodle-strainer-basket",
-    "name": "Ramen Noodle Strainer Basket",
+    "name": "FixtureDisplays Noodle Strainer Basket",
     "category": "noodle-tools",
-    "description": "A long-handled mesh basket for cooking and lifting noodles straight from the pot to the bowl.",
+    "description": "A long-handled mesh basket for lifting cooked noodles from the pot.",
     "apps": [
-      "ramen"
+      "ramen",
+      "noodles"
     ],
     "contexts": [
       "noodle-lab"
@@ -808,8 +856,16 @@
         "url": "https://on.ltk.com/+BIxW-anhQNaUuH5Z5dAPVw",
         "status": "needs-verification",
         "notes": "Audit 2026-09-13: Noodle strainer basket redirects to RSVP Berry Colander. Confirm or replace the affiliate URL before reactivating."
+      },
+      {
+        "id": "ramen-noodle-strainer-basket-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87738101",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
       }
-    ]
+    ],
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87738101-1789822861497-.jpg"
   },
   {
     "id": "kansui-alkaline-noodle-water",
@@ -929,9 +985,9 @@
   },
   {
     "id": "ironwood-chopsticks",
-    "name": "Ironwood Chopsticks",
+    "name": "Williams Sonoma Red Sandalwood Chopsticks",
     "category": "bowls-tableware",
-    "description": "Dense, heavy ironwood chopsticks with a smooth, durable finish.",
+    "description": "A set of four red sandalwood chopsticks for the table.",
     "apps": [
       "ramen"
     ],
@@ -939,7 +995,7 @@
       {
         "id": "ironwood-chopsticks-shopmy",
         "network": "shopmy",
-        "cta": "Shop Ironwood Chopsticks",
+        "cta": "View Williams Sonoma Red Sandalwood Chopsticks →",
         "url": "https://go.shopmy.us/p-80169747",
         "status": "active"
       }
@@ -951,9 +1007,9 @@
   },
   {
     "id": "wooden-chopstick-rests",
-    "name": "Wooden Chopstick Rests",
+    "name": "Japanese Artwork Chopstick and Rest Gift Set",
     "category": "bowls-tableware",
-    "description": "Simple carved wooden rests that keep chopstick tips off the table between bites.",
+    "description": "A coordinated chopstick and rest gift set featuring Japanese artwork.",
     "apps": [
       "ramen"
     ],
@@ -961,7 +1017,7 @@
       {
         "id": "wooden-chopstick-rests-shopmy",
         "network": "shopmy",
-        "cta": "Shop Wooden Chopstick Rests",
+        "cta": "View Japanese Artwork Chopstick and Rest Gift Set →",
         "url": "https://go.shopmy.us/p-80170507",
         "status": "active"
       }
@@ -1491,20 +1547,18 @@
   },
   {
     "id": "bamboo-noodle-tray",
-    "name": "Bamboo Noodle Tray",
-    "category": "noodle-tools",
-    "description": "A shallow bamboo tray for resting and separating fresh-cut noodles.",
+    "name": "Acacia Serving Tray with Handles",
+    "category": "bowls-tableware",
+    "description": "An acacia wood tray with handles for carrying bowls and side dishes.",
     "apps": [
       "ramen"
     ],
-    "contexts": [
-      "noodle-lab"
-    ],
+    "contexts": [],
     "offers": [
       {
         "id": "bamboo-noodle-tray-ltk",
         "network": "ltk",
-        "cta": "Shop the Bamboo Tray",
+        "cta": "View Acacia Serving Tray with Handles →",
         "url": "https://on.ltk.com/+yvyFJ7sFf2P04TqtCXA-sQ",
         "status": "active"
       }

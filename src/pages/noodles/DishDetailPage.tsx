@@ -6,6 +6,8 @@ import { SavedDishControls } from '../../components/noodles/SavedDishControls';
 import { DishTile } from '../../components/noodles/DishTile';
 import { useDocumentTitle } from '../../lib/useDocumentTitle';
 import { getImperialEquivalent } from '../../utils/noodles/unitConversion';
+import { ContextualCuratedKitchen } from '../../components/ContextualCuratedKitchen';
+import { noodleDishRecommendations } from '../../lib/contextualRecommendations';
 
 export function DishDetailPage() {
   const { id = '' } = useParams();
@@ -163,6 +165,8 @@ export function DishDetailPage() {
           <p style={{ fontSize: 11.5, opacity: 0.55, marginTop: 16 }}>{recipe.sourceNote}</p>
         </>
       )}
+
+      <ContextualCuratedKitchen key={dish.id} productIds={noodleDishRecommendations(dish)} title="For cooking this dish" limit={3} />
 
       {relatedDishes.length > 0 && (
         <>

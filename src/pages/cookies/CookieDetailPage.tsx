@@ -5,6 +5,8 @@ import { CookieHeroImage } from '../../components/cookies/CookieHeroImage'
 import { FlavorProfileBars } from '../../components/cookies/FlavorProfileBars'
 import { SavedCookieControls } from '../../components/cookies/SavedCookieControls'
 import { RecipeSection } from '../../components/cookies/RecipeSection'
+import { ContextualCuratedKitchen } from '../../components/ContextualCuratedKitchen'
+import { cookieRecommendations } from '../../lib/contextualRecommendations'
 
 export function CookieDetailPage() {
   const { cookieId = '' } = useParams()
@@ -60,6 +62,7 @@ export function CookieDetailPage() {
       </section>
 
       {recipe && <RecipeSection recipe={recipe} />}
+      <ContextualCuratedKitchen key={cookie.id} productIds={cookieRecommendations(cookie.family)} title="For your next batch" limit={3} />
 
       <section className="cookie-detail-section" aria-labelledby="variations-heading">
         <h2 id="variations-heading">Variations</h2>

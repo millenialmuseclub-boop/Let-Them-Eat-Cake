@@ -197,9 +197,9 @@
   },
   {
     "id": "bamboo-noodle-tray",
-    "name": "Bamboo Noodle Tray",
-    "category": "noodle-making-equipment",
-    "description": "A shallow bamboo tray for resting and separating fresh-cut noodles.",
+    "name": "Acacia Serving Tray with Handles",
+    "category": "serving",
+    "description": "An acacia wood tray with handles for carrying bowls and side dishes.",
     "apps": [
       "noodles"
     ],
@@ -208,9 +208,11 @@
         "id": "bamboo-noodle-tray-ltk",
         "network": "ltk",
         "url": "https://on.ltk.com/+yvyFJ7sFf2P04TqtCXA-sQ",
-        "status": "active"
+        "status": "active",
+        "cta": "View Acacia Serving Tray with Handles →"
       }
     ],
+    "contexts": [],
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Tray_on_a_High_Foot_with_Bamboo_and_Flowers_LACMA_M.87.268.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "photographer": "Unknown",
     "imageSource": "Wikimedia Commons",
@@ -218,10 +220,11 @@
   },
   {
     "id": "ramen-noodle-strainer-basket",
-    "name": "Noodle Strainer Basket",
-    "category": "prep-tools",
-    "description": "A long-handled mesh basket for cooking and lifting noodles straight from the pot to the bowl.",
+    "name": "FixtureDisplays Noodle Strainer Basket",
+    "category": "noodle-tools",
+    "description": "A long-handled mesh basket for lifting cooked noodles from the pot.",
     "apps": [
+      "ramen",
       "noodles"
     ],
     "offers": [
@@ -231,8 +234,19 @@
         "url": "https://on.ltk.com/+BIxW-anhQNaUuH5Z5dAPVw",
         "status": "needs-verification",
         "notes": "Audit 2026-09-13: Noodle strainer basket redirects to RSVP Berry Colander. Confirm or replace the affiliate URL before reactivating."
+      },
+      {
+        "id": "ramen-noodle-strainer-basket-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87738101",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
       }
-    ]
+    ],
+    "contexts": [
+      "noodle-lab"
+    ],
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87738101-1789822861497-.jpg"
   },
   {
     "id": "noodle-tools-bench-scraper",
@@ -488,9 +502,9 @@
   },
   {
     "id": "product_blue_swirl_bowl",
-    "name": "World Market Blue Multi-Swirl Noodle Bowl",
+    "name": "World Market Pad Print Noodle Bowls, Set of Four",
     "category": "bowls",
-    "description": "A blue swirl-glazed noodle bowl with a hand-painted look.",
+    "description": "A patterned set of four noodle bowls for serving at the table.",
     "apps": [
       "noodles"
     ],
@@ -499,7 +513,8 @@
         "id": "product_blue_swirl_bowl-shopmy",
         "network": "shopmy",
         "url": "https://go.shopmy.us/p-79936778",
-        "status": "active"
+        "status": "active",
+        "cta": "View World Market Pad Print Noodle Bowls, Set of Four →"
       }
     ],
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Simple-ceramic-bowl_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -625,9 +640,9 @@
   },
   {
     "id": "product_cook_with_color_bowl",
-    "name": "Cook With Color Noodle Bowl",
+    "name": "Williams Sonoma Cyprus Reactive Glaze Noodle Bowls",
     "category": "bowls",
-    "description": "A colorful, budget-friendly noodle bowl for building a mixed-and-matched table setting.",
+    "description": "Reactive-glaze noodle bowls from the Cyprus collection.",
     "apps": [
       "noodles"
     ],
@@ -636,15 +651,16 @@
         "id": "product_cook_with_color_bowl-shopmy",
         "network": "shopmy",
         "url": "https://go.shopmy.us/p-79938809",
-        "status": "active"
+        "status": "active",
+        "cta": "View Williams Sonoma Cyprus Reactive Glaze Noodle Bowls →"
       }
     ]
   },
   {
     "id": "wooden-ramen-spoon",
-    "name": "Traditional Wooden Noodle Spoons",
+    "name": "Musubi Kiln Ramen Spoon Collection",
     "category": "chopsticks-spoons",
-    "description": "A traditional lacquered-style wooden spoon alternative to ceramic, lighter and better at holding heat.",
+    "description": "Browse the retailer’s ramen spoon collection and choose a material and shape to suit your bowl.",
     "apps": [
       "noodles"
     ],
@@ -653,7 +669,8 @@
         "id": "wooden-ramen-spoon-shopmy",
         "network": "shopmy",
         "url": "https://go.shopmy.us/p-80168972",
-        "status": "active"
+        "status": "active",
+        "cta": "View Musubi Kiln Ramen Spoon Collection →"
       }
     ],
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Noodle_Soup_in_Chiang_Rai.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -663,9 +680,9 @@
   },
   {
     "id": "ceramic-chopstick-rests",
-    "name": "Ceramic Chopstick Rests",
+    "name": "Aero Chopsticks with Rest",
     "category": "chopsticks-spoons",
-    "description": "Small rests that keep chopstick tips off the table between bites.",
+    "description": "A chopstick and rest set for keeping the tips off the table between bites.",
     "apps": [
       "noodles"
     ],
@@ -674,7 +691,8 @@
         "id": "ceramic-chopstick-rests-shopmy",
         "network": "shopmy",
         "url": "https://go.shopmy.us/p-80170036",
-        "status": "active"
+        "status": "active",
+        "cta": "View Aero Chopsticks with Rest →"
       }
     ],
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/1994_SquareHashioki-CircleHashioki_Masahiro-Mori.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -760,9 +778,9 @@
   },
   {
     "id": "ironwood-chopsticks",
-    "name": "Ironwood Chopsticks",
+    "name": "Williams Sonoma Red Sandalwood Chopsticks",
     "category": "chopsticks-spoons",
-    "description": "Dense, heavy ironwood chopsticks with a smooth, durable finish.",
+    "description": "A set of four red sandalwood chopsticks for the table.",
     "apps": [
       "noodles"
     ],
@@ -771,15 +789,16 @@
         "id": "ironwood-chopsticks-shopmy",
         "network": "shopmy",
         "url": "https://go.shopmy.us/p-80169747",
-        "status": "active"
+        "status": "active",
+        "cta": "View Williams Sonoma Red Sandalwood Chopsticks →"
       }
     ]
   },
   {
     "id": "wooden-chopstick-rests",
-    "name": "Wooden Chopstick Rests",
+    "name": "Japanese Artwork Chopstick and Rest Gift Set",
     "category": "chopsticks-spoons",
-    "description": "Simple carved wooden rests that keep chopstick tips off the table between bites.",
+    "description": "A coordinated chopstick and rest gift set featuring Japanese artwork.",
     "apps": [
       "noodles"
     ],
@@ -788,7 +807,8 @@
         "id": "wooden-chopstick-rests-shopmy",
         "network": "shopmy",
         "url": "https://go.shopmy.us/p-80170507",
-        "status": "active"
+        "status": "active",
+        "cta": "View Japanese Artwork Chopstick and Rest Gift Set →"
       }
     ]
   },
@@ -912,5 +932,73 @@
         "status": "active"
       }
     ]
+  },
+  {
+    "id": "release-bamboo-steamer",
+    "offers": [
+      {
+        "id": "release-bamboo-steamer-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87738515",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
+      }
+    ],
+    "name": "Joyce Chen Bamboo Steamer Basket",
+    "description": "For steaming noodle sheets in a heatproof tray that fits inside the basket. Check tray and pot fit before buying.",
+    "category": "noodle-tools",
+    "apps": [
+      "noodles"
+    ],
+    "contexts": [
+      "rice-noodle-lab"
+    ],
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87738515-1789823040966-.jpg"
+  },
+  {
+    "id": "release-carbon-steel-wok",
+    "offers": [
+      {
+        "id": "release-carbon-steel-wok-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87738575",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
+      }
+    ],
+    "name": "Joyce Chen 14-Inch Carbon Steel Wok",
+    "description": "Room to toss noodles in small batches. Check stove compatibility and follow the manufacturer's seasoning instructions.",
+    "category": "cookware",
+    "apps": [
+      "noodles"
+    ],
+    "contexts": [
+      "stir-fry-technique"
+    ],
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87738575-1789823064074-.jpg"
+  },
+  {
+    "id": "release-rolling-pin",
+    "offers": [
+      {
+        "id": "release-rolling-pin-shopmy-20260919",
+        "network": "shopmy",
+        "url": "https://go.shopmy.us/p-87739455",
+        "status": "active",
+        "notes": "Product and destination matched in ShopMy on 2026-09-19."
+      }
+    ],
+    "name": "Ironwood Gourmet French Rolling Pin",
+    "description": "A handle-free wooden pin for controlling dough thickness by hand.",
+    "category": "mixing-prep",
+    "apps": [
+      "cookies",
+      "noodles"
+    ],
+    "contexts": [
+      "dough-lab",
+      "shape-lab"
+    ],
+    "imageUrl": "https://static.shopmy.us/pins/zoom-87739455-1789823410540-.jpg"
   }
 ]
