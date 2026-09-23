@@ -47,7 +47,11 @@
         "url": "https://go.shopmy.us/p-77601195",
         "status": "active"
       }
-    ]
+    ],
+    "imageUrl": "https://live.staticflickr.com/65535/49918620471_0780405494_b.jpg",
+    "photographer": "bfishadow",
+    "imageSource": "Flickr",
+    "imageSourceUrl": "https://www.flickr.com/photos/61368956@N00/49918620471"
   },
   {
     "id": "product_marble_pastry_board",
@@ -142,7 +146,11 @@
         "url": "https://go.shopmy.us/p-77172564",
         "status": "active"
       }
-    ]
+    ],
+    "imageUrl": "https://live.staticflickr.com/3378/3599973014_2789c06b96_b.jpg",
+    "photographer": "Stacy Spensley",
+    "imageSource": "Flickr",
+    "imageSourceUrl": "https://www.flickr.com/photos/21001756@N06/3599973014"
   },
   {
     "id": "product_offset_spatula",
@@ -231,7 +239,11 @@
         "url": "https://go.shopmy.us/p-77634268",
         "status": "active"
       }
-    ]
+    ],
+    "imageUrl": "https://live.staticflickr.com/8090/8375528851_c876ea4d77_b.jpg",
+    "photographer": "lemonfilmblog",
+    "imageSource": "Flickr",
+    "imageSourceUrl": "https://www.flickr.com/photos/22245339@N05/8375528851"
   },
   {
     "id": "product_bourbon_vanilla_paste",
@@ -478,7 +490,11 @@
         "url": "https://go.shopmy.us/p-77635581",
         "status": "active"
       }
-    ]
+    ],
+    "imageUrl": "https://live.staticflickr.com/4100/4923269092_6bc444a6c2_b.jpg",
+    "photographer": "Steve Snodgrass",
+    "imageSource": "Flickr",
+    "imageSourceUrl": "https://www.flickr.com/photos/10710442@N08/4923269092"
   },
   {
     "id": "product_precision_kitchen_scale",
@@ -524,7 +540,11 @@
         "url": "https://on.ltk.com/+ebOftqVUiaSPwe915qDu6Q",
         "status": "active"
       }
-    ]
+    ],
+    "imageUrl": "https://collections.museumsvictoria.com.au/content/media/48/435798-large.jpg",
+    "photographer": "Unknown",
+    "imageSource": "Museums Victoria",
+    "imageSourceUrl": "https://collections.museumsvictoria.com.au/items/1347699"
   },
   {
     "id": "product_dough_scraper",
@@ -545,7 +565,11 @@
         "url": "https://on.ltk.com/+eSi7CDir0L_AlcwG--7LSQ",
         "status": "active"
       }
-    ]
+    ],
+    "imageUrl": "https://cdn.thingiverse.com/renders/4e/f9/27/9f/70/34ee6dc89887a4b7260990e624d9b4d2_display_large.jpg",
+    "photographer": "Daniel",
+    "imageSource": "Thingiverse",
+    "imageSourceUrl": "https://www.thingiverse.com/thing:2318853"
   },
   {
     "id": "product_large_wood_cutting_board",
@@ -591,6 +615,10 @@
         "url": "https://on.ltk.com/+F_VgY0Nl9b6uiCh6HuSE3w",
         "status": "active"
       }
-    ]
+    ],
+    "imageUrl": "https://live.staticflickr.com/65535/49059570838_2989c7bb5f.jpg",
+    "photographer": "shop8447",
+    "imageSource": "Flickr",
+    "imageSourceUrl": "https://www.flickr.com/photos/185514373@N06/49059570838"
   }
 ]
