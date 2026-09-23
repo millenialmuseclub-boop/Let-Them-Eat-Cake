@@ -7,6 +7,7 @@ import { CakeOriginStory } from '../components/CakeOriginStory'
 import { RecipeCard } from '../components/RecipeCard'
 import { SaveButton } from '../components/SaveButton'
 import { CakeThumbnail } from '../components/CakeThumbnail'
+import { DrinkThumbnail } from '../components/DrinkThumbnail'
 import { AffiliateProductSet } from '../components/AffiliateProductSet'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
 import './CakeDetailPage.css'
@@ -118,16 +119,17 @@ export function CakeDetailPage() {
       {pairings.length > 0 && (
         <section className="card cake-detail-section">
           <h2>🥂 Pairings</h2>
-          <ul className="cake-detail-pairing-list">
+          <div className="cake-detail-pairing-grid">
             {pairings.map(({ drink, score }) => (
-              <li key={drink.id}>
+              <Link key={drink.id} to="/sommelier" className="card cake-detail-pairing-card">
+                <DrinkThumbnail drinkId={drink.id} alt={drink.name} />
                 <span className="cake-detail-pairing-score" style={{ background: scoreColor(score) }}>
                   {score}
                 </span>
-                {drink.name}
-              </li>
+                <h3>{drink.name}</h3>
+              </Link>
             ))}
-          </ul>
+          </div>
           <Link to="/sommelier" className="btn btn-secondary cake-detail-sommelier-link">
             Explore all pairings in the Sommelier →
           </Link>

@@ -15,28 +15,37 @@ export function AffiliateProductCard({ product, context }: { product: AffiliateP
   // only fall back further to the branded placeholder -- never a text-only card.
   const associatedCakeImage = product.associatedCakeIds?.[0] ? getCakeImage(product.associatedCakeIds[0]) : undefined
   const imageUrl = associatedCakeImage?.url ?? product.imageUrl
+  const onSale = product.salePrice != null && product.price != null && product.salePrice < product.price
 
   return (
     <div className="card affiliate-product-card">
-      {imageUrl ? (
+      <div className="affiliate-product-image-wrap">
         <EditorialImage src={imageUrl} alt={product.name} className="affiliate-product-image" loading="lazy" />
-      ) : (
-        <div className="affiliate-product-image affiliate-product-image-placeholder">
-          <EditorialImage src="/icon-master.svg" alt="" />
-        </div>
-      )}
-      <h4 className="affiliate-product-name">{product.name}</h4>
-      {product.editorialNote && <p className="affiliate-product-note">{product.editorialNote}</p>}
-      <a
-        href={product.url}
-        target="_blank"
-        rel="noreferrer sponsored"
-        className="affiliate-product-link"
-        onClick={() => trackAffiliateClicked(product, context ?? 'unknown')}
-      >
-        View Recommendation →
-      </a>
-      <span className="affiliate-product-network">via {NETWORK_LABELS[product.network]}</span>
+        {onSale && <span className="affiliate-product-sale-badge">Sale</span>}
+      </div>
+      <div className="affiliate-product-body">
+        {product.retailer && <span className="affiliate-product-retailer">{product.retailer}</span>}
+        <h4 className="affiliate-product-name">{product.name}</h4>
+        {product.editorialNote && <p className="affiliate-product-note">{product.editorialNote}</p>}
+        {product.price != null && (
+          <p className="affiliate-product-price">
+            {onSale && <span className="affiliate-product-price-original">${product.price.toFixed(2)}</span>}
+            <span className={onSale ? 'affiliate-product-price-sale' : undefined}>
+              ${(onSale ? product.salePrice! : product.price).toFixed(2)}
+            </span>
+          </p>
+        )}
+        <a
+          href={product.url}
+          target="_blank"
+          rel="noreferrer sponsored"
+          className="affiliate-product-link"
+          onClick={() => trackAffiliateClicked(product, context ?? 'unknown')}
+        >
+          Shop This →
+        </a>
+        <span className="affiliate-product-network">via {NETWORK_LABELS[product.network]}</span>
+      </div>
     </div>
   )
 }

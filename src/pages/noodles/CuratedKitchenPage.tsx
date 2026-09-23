@@ -6,6 +6,16 @@ import { products } from '../../lib/products'
 import { getImageFor } from '../../data/noodles/images'
 import '../../components/ContextualCuratedKitchen.css'
 
+const CATEGORY_LABELS: Record<string, string> = {
+  bowls: 'Bowls',
+  'chopsticks-spoons': 'Chopsticks & Spoons',
+  'noodle-making-equipment': 'Noodle-Making Equipment',
+  'prep-tools': 'Prep Tools',
+  serving: 'Serving',
+  cookware: 'Cookware',
+  storage: 'Storage',
+}
+
 // Rewritten to use the shared canonical ContextualCuratedKitchen (Ramen's richest variant) and
 // the aggregated cross-world catalog (lib/products.ts), instead of Noodles' own bespoke
 // category-grid implementation reading its own local data/products.json directly -- this keeps
@@ -29,7 +39,7 @@ export function CuratedKitchenPage() {
       <h1>Curated Kitchen</h1>
       <p>Bowls, hand-noodle tools, and pantry staples that translate directly to noodle cooking.</p>
       {categories.map((category) => (
-        <ContextualCuratedKitchen key={category} category={category} title={category} />
+        <ContextualCuratedKitchen key={category} category={category} title={CATEGORY_LABELS[category] ?? category} />
       ))}
       <AffiliateDisclosure />
     </main>

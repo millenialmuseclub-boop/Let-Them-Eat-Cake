@@ -44,4 +44,9 @@ export interface AffiliateProduct {
   /** Contexts this product should surface in beyond the general Curated Kitchen catalog, e.g. Workshop Lab slugs. */
   contexts?: string[]
   offers: AffiliateRoute[]
+  imageUrl?: string
+  photographer?: string
+  photographerUrl?: string
+  imageSource?: string
+  imageSourceUrl?: string
 }

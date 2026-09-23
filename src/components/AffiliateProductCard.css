@@ -2,28 +2,48 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  overflow: hidden;
+}
+
+.affiliate-product-image-wrap {
+  position: relative;
 }
 
 .affiliate-product-image {
   width: 100%;
-  height: 120px;
+  height: 140px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 6px;
+  aspect-ratio: 4 / 3;
 }
 
-.affiliate-product-image-placeholder {
-  background: var(--raspberry-bg);
+.affiliate-product-sale-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: var(--raspberry);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.affiliate-product-body {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
 }
 
-.affiliate-product-image-placeholder img {
-  width: 40%;
-  height: 40%;
-  object-fit: contain;
-  border-radius: 0;
+.affiliate-product-retailer {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  opacity: 0.6;
 }
 
 .affiliate-product-name {
@@ -35,6 +55,25 @@
   font-size: 13px;
   opacity: 0.85;
   margin: 0;
+}
+
+.affiliate-product-price {
+  margin: 2px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+}
+
+.affiliate-product-price-original {
+  font-weight: 400;
+  opacity: 0.55;
+  text-decoration: line-through;
+}
+
+.affiliate-product-price-sale {
+  color: var(--raspberry);
 }
 
 .affiliate-product-link {

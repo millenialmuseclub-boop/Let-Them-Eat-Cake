@@ -75,9 +75,7 @@ export function ContextualCuratedKitchen({ context, category, title }: Contextua
               key={product.id}
               className="card curated-kitchen-card curated-kitchen-card-active"
             >
-              <div className="curated-kitchen-product-image">
-                <EditorialImage src="/icon-master.svg" alt="" loading="lazy" />
-              </div>
+              <EditorialImage src={product.imageUrl} alt={product.name} className="curated-kitchen-product-image" loading="lazy" />
               {product.editorialNote && <span className="tag curated-kitchen-editorial-tag">{product.editorialNote}</span>}
               <h3>{product.name}</h3>
               {product.brand && <p className="curated-kitchen-brand">{product.brand}</p>}
