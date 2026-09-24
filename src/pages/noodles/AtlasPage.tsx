@@ -35,6 +35,7 @@ export function AtlasPage() {
 
   return (
     <div className="page-container">
+      <Link to="/atlas">← Explore the World Food Atlas</Link>
       {heroImage && (
         <div className="lab-hero-image">
           <EditorialImage src={heroImage.src} alt={heroImage.alt} loading="lazy" />

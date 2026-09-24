@@ -27,7 +27,7 @@ export function CookieEncyclopediaIndexPage() {
   return (
     <main className="page-container">
       <PageHeroBand
-        image={getCookieImage('cookie_biscotti')}
+        image={getCookieImage('cookie_marranitos')}
         eyebrow="The Encyclopedia"
         title="Cookie Encyclopedia"
         description={`Browse ${COOKIES.length} cookies from traditions around the world.`}

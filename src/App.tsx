@@ -7,6 +7,7 @@ const ExplorePage = lazy(() => import('./pages/ExplorePage').then(module => ({ d
 import { trackContentViewed, trackDiscovery } from './lib/analytics'
 const TimeMachinePage = lazy(() => import('./pages/TimeMachinePage').then((module) => ({ default: module.TimeMachinePage })))
 const AtlasPage = lazy(() => import('./pages/AtlasPage').then((module) => ({ default: module.AtlasPage })))
+const CakeAtlasPage = lazy(() => import('./pages/CakeAtlasPage').then((module) => ({ default: module.CakeAtlasPage })))
 const AtlasRegionPage = lazy(() => import('./pages/AtlasRegionPage').then((module) => ({ default: module.AtlasRegionPage })))
 const SommelierPage = lazy(() => import('./pages/SommelierPage').then((module) => ({ default: module.SommelierPage })))
 const PersonaMatchPage = lazy(() => import('./pages/PersonaMatchPage').then((module) => ({ default: module.PersonaMatchPage })))
@@ -101,6 +102,7 @@ function App() {
         ))}
         <Route path="/time-machine" element={<TimeMachinePage />} />
         <Route path="/atlas" element={<AtlasPage />} />
+        <Route path="/atlas/cakes" element={<CakeAtlasPage />} />
         <Route path="/atlas/region/:region" element={<AtlasRegionPage />} />
         <Route path="/sommelier" element={<SommelierPage />} />
         <Route path="/persona-match" element={<PersonaMatchPage />} />

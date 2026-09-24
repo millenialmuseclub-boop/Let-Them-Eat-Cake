@@ -49,7 +49,7 @@
 }
 
 .atlas-map-country.tappable {
-  fill: var(--border);
+  fill: #c8b299;
   cursor: pointer;
 }
 
@@ -90,3 +90,16 @@
   stroke-width: 3px;
   pointer-events: none;
 }
+
+.atlas-world-map .atlas-map-wrap { max-width: none; background: #f3eadf; box-shadow: none; }
+.atlas-world-map .atlas-map-country { stroke: #f3eadf; }
+.atlas-world-map .atlas-map-country.selected { fill: #b85d48; }
+.atlas-world-controls { position: absolute; top: 12px; left: 12px; display: flex; gap: 5px; z-index: 1; max-width: 65%; flex-wrap: wrap; }
+.atlas-world-controls button { min-height: 44px; min-width: 44px; border: 1px solid #b9a78e; border-radius: 9px; background: #fffaf1; color: #43352b; cursor: pointer; font: inherit; padding: 8px; }
+.atlas-world-controls button:disabled { opacity: .45; cursor: default; }
+.atlas-world-map .atlas-map-reset { min-height: 44px; }
+.atlas-world-count { fill: white; font: 600 12px sans-serif; }
+.atlas-world-map-note { margin: 0; padding: 12px 16px; color: #5a4538; font-size: 12px; border-top: 1px solid #d7c7b5; }
+.atlas-world-choices { border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 20px; }
+.atlas-world-choices button { min-height: 44px; margin: 4px; padding: 9px 13px; border: 1px solid var(--border); border-radius: 9px; background: var(--bg-card); color: var(--text); font: inherit; cursor: pointer; }
+@media (prefers-reduced-motion: reduce) { .atlas-map-pin { transition: none; } }

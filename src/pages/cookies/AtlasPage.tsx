@@ -16,6 +16,7 @@ export function AtlasPage() {
 
   return (
     <main className="page-container atlas-page">
+      <Link to="/atlas">← Explore the World Food Atlas</Link>
       <PageHeroBand
         image={getCookieImage('cookie_maamoul')}
         eyebrow="An Editorial Atlas"

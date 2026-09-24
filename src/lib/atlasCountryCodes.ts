@@ -7,6 +7,11 @@
  * through their existing pin only -- no regression, just no shape tap for those few.
  */
 export const ATLAS_COUNTRY_ISO_NUMERIC: Record<string, string> = {
+  Iraq: '368',
+  Jordan: '400',
+  Myanmar: '104',
+  Palestine: '275',
+  Syria: '760',
   Argentina: '32',
   Armenia: '51',
   Australia: '36',

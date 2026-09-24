@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "map zoom/reset and keyboard-accessible cluster choices",
+    "world → Japan → ramen → Sapporo → miso → story/recipe, reload, Back and travel gating",
+    "explicit destination links; no Rio handoff for Pernambuco-specific cake",
+    "Italian regional styles; incompatible world filter and empty-place recovery",
+    "distinct, loaded Encyclopedia photography on landing card and banner",
+    "320/390/1440px layouts and reduced-motion preference"
+  ],
+  "errors": []
+}

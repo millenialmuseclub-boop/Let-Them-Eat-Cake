@@ -1,5 +1,7 @@
+import generatedCoordinates from '../data/atlasCountryCenters.json'
 /** Representative [longitude, latitude] per Atlas country — not precise centroids, just a legible pin location. */
 export const ATLAS_COUNTRY_COORDINATES: Record<string, [number, number]> = {
+  ...Object.fromEntries(Object.entries(generatedCoordinates).map(([country, [lon, lat]]) => [country, [lon, lat] as [number, number]])),
   Mexico: [-102, 23],
   'Dominican Republic': [-70.2, 18.7],
   Sweden: [15, 62],

@@ -34,6 +34,7 @@ export function AtlasPage() {
 
   return (
     <main className="page atlas-page">
+      <Link to="/atlas">← Explore the World Food Atlas</Link>
       <h1>Ramen Atlas</h1>
       <p>Discover the regions and cities that define ramen — tap a pin, or a city below, for its signature style and story.</p>
 

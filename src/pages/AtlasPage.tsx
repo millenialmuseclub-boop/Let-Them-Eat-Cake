@@ -1,182 +1,103 @@
-import { useMemo, useState } from 'react'
+import { useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { getCake, getRecipe } from '../lib/data'
-import {
-  ATLAS_DISPLAY_REGIONS,
-  getAllCountries,
-  getCountriesForDisplayRegion,
-  getCountryEntries,
-  getPrimaryEntry,
-  getRelatedCountries,
-  regionToSlug,
-  type AtlasDisplayRegion,
-} from '../lib/atlas'
-import { getFirstPhotographedCakeId } from '../lib/images'
-import { RecipeCard } from '../components/RecipeCard'
 import { AtlasWorldMap } from '../components/AtlasWorldMap'
-import { CakeHeroImage } from '../components/CakeHeroImage'
-import { DiscoverFeatureCard } from '../components/DiscoverFeatureCard'
+import { EditorialImage } from '../components/EditorialImage'
+import { ContentShare } from '../components/ContentShare'
+import { TasteThisPlace } from '../components/TasteThisPlace'
+import { atlasCountries, atlasFoods, atlasTrails, atlasWorlds, placesFor } from '../lib/foodAtlas'
 import { useDocumentTitle } from '../lib/useDocumentTitle'
-import './AtlasPage.css'
+import { trackDiscovery } from '../lib/analytics'
+import './WorldAtlasPage.css'
 
-/** One representative, ideally-photographed cake per region -- the region-groups and catalog are both static. */
-const REGION_REP_CAKE: Partial<Record<AtlasDisplayRegion, string>> = Object.fromEntries(
-  ATLAS_DISPLAY_REGIONS.map((region) => {
-    const entries = getCountriesForDisplayRegion(region)
-    return [region, getFirstPhotographedCakeId(entries.map((e) => e.cakeId)) ?? entries[0]?.cakeId]
-  }),
-)
-
+const worldNames: Record<string, string> = { all: 'All worlds', cake: 'Cakes', cookies: 'Cookies', ramen: 'Ramen', noodles: 'Noodles' }
 export function AtlasPage() {
-  const allCountries = useMemo(() => getAllCountries(), [])
-  const [searchParams] = useSearchParams()
-  const countryParam = searchParams.get('country')
-  const initialCountry = countryParam ? allCountries.find((c) => c.toLowerCase() === countryParam.toLowerCase()) ?? null : null
-
-  const [query, setQuery] = useState(initialCountry ?? '')
-  const [country, setCountry] = useState<string | null>(initialCountry)
-  const [selectedEntryId, setSelectedEntryId] = useState<string | null>(initialCountry ? getPrimaryEntry(initialCountry)?.id ?? null : null)
-
-  useDocumentTitle(country ? `${country} — Global Cake Atlas | Let Them Eat Cake` : 'Global Cake Atlas | Let Them Eat Cake')
-
-  function handleSearch(value: string) {
-    setQuery(value)
-    const match = allCountries.find((c) => c.toLowerCase() === value.toLowerCase())
-    if (match) {
-      setCountry(match)
-      setSelectedEntryId(getPrimaryEntry(match)?.id ?? null)
-    } else {
-      setCountry(null)
-      setSelectedEntryId(null)
-    }
+  const [params, setParams] = useSearchParams()
+  const world = atlasWorlds.find(w => w === params.get('world')) ?? 'all'
+  const country = atlasCountries.find(c => c.toLowerCase() === params.get('country')?.toLowerCase()) ?? ''
+  const [query, setQuery] = useState('')
+  const region = params.get('region') ?? ''
+  const [shown, setShown] = useState(12)
+  const heading = useRef<HTMLHeadingElement>(null)
+  const storyHeading = useRef<HTMLHeadingElement>(null)
+  const entries = placesFor(country, world)
+  const areas = [...new Set(entries.map(e => e.area).filter(Boolean))].sort()
+  const activeRegion = areas.includes(region) ? region : ''
+  const displayed = entries.filter(e => !activeRegion || e.area === activeRegion)
+  const selected = displayed.find(e => e.foodId === params.get('food'))
+  const food = selected && atlasFoods.get(selected.foodId)
+  const countries = atlasCountries.filter(c => placesFor(c, world).length)
+  const shownCountries = countries.filter(c => c.toLowerCase().includes(query.toLowerCase()))
+  useDocumentTitle(country ? `${country} — World Food Atlas | Let Them Eat` : 'World Food Atlas | Let Them Eat')
+  function browse(nextCountry = country, nextWorld = world, nextRegion = '', nextFood = '') {
+    setParams({ ...(nextCountry ? { country: nextCountry } : {}), ...(nextWorld !== 'all' ? { world: nextWorld } : {}), ...(nextRegion ? { region: nextRegion } : {}), ...(nextFood ? { food: nextFood } : {}) })
+    if (!nextFood) setShown(12)
+    trackDiscovery('Atlas Interaction', { country: nextCountry || 'world', world: nextWorld, id: nextFood })
   }
-
-  const countryEntries = country ? getCountryEntries(country) : []
-  const selectedEntry = countryEntries.find((e) => e.id === selectedEntryId) ?? null
-  const selectedCake = selectedEntry ? getCake(selectedEntry.cakeId) : null
-  const selectedRecipe = selectedEntry ? getRecipe(selectedEntry.recipeId) : null
-  const otherEntries = countryEntries.filter((e) => e.id !== selectedEntryId)
-  const relatedCountries = country ? getRelatedCountries(country) : []
-
-  return (
-    <main className="page atlas-page">
-      <h1>Global Cake Atlas</h1>
-      <p>
-        Discover iconic cakes and baking traditions around the world — click a pin or search a country for a full recipe and background
-        story.
-      </p>
-
-      <AtlasWorldMap countries={allCountries} selectedCountry={country} onSelectCountry={handleSearch} />
-
-      <div className="atlas-search">
-        <h2 className="atlas-search-heading">🔎 Search Countries</h2>
-        <input
-          type="text"
-          list="atlas-countries"
-          placeholder="Search a country (e.g. Japan, Mexico, Sweden)"
-          aria-label="Search a country"
-          value={query}
-          onChange={(e) => handleSearch(e.target.value)}
-        />
-        <datalist id="atlas-countries">
-          {allCountries.map((c) => (
-            <option key={c} value={c} />
-          ))}
-        </datalist>
+  function selectCountry(value: string) {
+    browse(value)
+    requestAnimationFrame(() => heading.current?.focus())
+  }
+  const photo = food ?? atlasFoods.get((entries.find(e => atlasFoods.get(e.foodId)?.image)?.foodId) ?? '')
+  return <main className="page world-food-atlas">
+    <header className="world-atlas-intro">
+      <p className="eyebrow">Let Them Eat · The Atlas</p>
+      <h1>The world, one bite at a time.</h1>
+      <p>Start with a place. Follow a flavor. Discover the little details that make it unmistakably local.</p>
+      <span>{countries.length} places to explore · Four food worlds</span>
+    </header>
+    <div className="atlas-world-tabs" role="group" aria-label="Food world">
+      {atlasWorlds.map(w => <button key={w} aria-pressed={w === world} onClick={() => browse(country && placesFor(country, w).length ? country : '', w)}>{worldNames[w]}</button>)}
+    </div>
+    <nav className="atlas-breadcrumb" aria-label="Atlas journey"><button onClick={() => browse('', world)}>World</button>{country && <><span aria-hidden="true">/</span><button onClick={() => browse(country)}>{country}</button></>}{activeRegion && <span>/ {activeRegion}</span>}{food && <span>/ {food.name}</span>}</nav>
+    <div className="atlas-exploration">
+      <AtlasWorldMap countries={countries} selectedCountry={country || null} onSelectCountry={selectCountry} />
+      <aside className="atlas-place-picker">
+        <label htmlFor="atlas-place-query">Where are you curious about?</label>
+        <input id="atlas-place-query" type="search" placeholder="Search a country or place" value={query} onChange={e => setQuery(e.target.value)} />
+        <div className="atlas-place-list" aria-label="Choose a country">
+          {shownCountries.map(c => <button key={c} aria-pressed={c === country} onClick={() => selectCountry(c)}><span>{c}</span><small>{placesFor(c, world).length} discoveries ↗</small></button>)}
+          {!shownCountries.length && <p>No places match. Try another name or food world.</p>}
+        </div>
+      </aside>
+    </div>
+    {!country && <section className="atlas-trails"><div className="atlas-section-title"><p className="eyebrow">A few places to begin</p><h2>Follow an appetite.</h2></div>
+      <div className="atlas-trail-grid">{atlasTrails.filter(t => world === 'all' || placesFor(t.country, world).length).map(trail => {
+        const imageFood = atlasFoods.get(trail.food)
+        return <button key={trail.country} className="atlas-trail" onClick={() => selectCountry(trail.country)}>
+          <EditorialImage src={imageFood?.image} alt={imageFood?.name} loading="lazy" width={480} height={320} />
+          <div><p className="eyebrow">{trail.country}</p><h3>{trail.title}</h3><p>{trail.note}</p><strong>Explore this place →</strong></div>
+        </button>
+      })}</div>
+    </section>}
+    {country && <section className="atlas-country-story" key={country}>
+      <div className="atlas-country-heading"><div><p className="eyebrow">What does this place taste like?</p><h2 ref={heading} tabIndex={-1}>{country}</h2><p>{entries.length} discoveries across {new Set(entries.map(e => e.world)).size} food {new Set(entries.map(e => e.world)).size === 1 ? 'world' : 'worlds'}. Choose a style to meet the place behind it.</p><p className="atlas-association-note">Places mark culinary associations; shared traditions and debated origins cross borders.</p></div>
+        {photo && <figure><EditorialImage src={photo.image} alt={photo.name} width={500} height={330} loading="lazy" /><figcaption>{photo.name}{photo.credit && ` · Photo: ${photo.credit}`}</figcaption></figure>}
       </div>
-
-      {query && !country && <p className="atlas-empty">No country matches "{query}" yet — try one from the suggestions.</p>}
-
-      {selectedEntry && selectedCake && selectedRecipe && (
-        <section className="atlas-result">
-          <div className="card">
-            <CakeHeroImage cakeId={selectedCake.id} variant="hero" alt={selectedCake.name} />
-            <span className="tag">{country}</span>
-            {selectedEntry.cityMicroRegion && <span className="tag atlas-city-tag">{selectedEntry.cityMicroRegion}</span>}
-            <h2>🎂 Cake Heritage</h2>
-            <h3>{selectedCake.name}</h3>
-            <p>{selectedCake.description}</p>
-            <Link to={`/cake/${selectedCake.id}`} className="encyclopedia-link">
-              View full encyclopedia entry →
-            </Link>
-          </div>
-
-          <h2 className="recipe-heading">📖 Signature Cake</h2>
-          <RecipeCard key={selectedRecipe.id} recipe={selectedRecipe} />
-          <Link to="/sommelier" className="btn btn-secondary atlas-sommelier-link">
-            Explore pairings in the Sommelier →
-          </Link>
-
-          {otherEntries.length > 0 && (
-            <>
-              <h2 className="recipe-heading">More Signature Cakes from {country}</h2>
-              <div className="discover-feature-grid">
-                {otherEntries.map((entry) => {
-                  const cake = getCake(entry.cakeId)
-                  return (
-                    <DiscoverFeatureCard
-                      key={entry.id}
-                      onClick={() => setSelectedEntryId(entry.id)}
-                      title={cake?.name ?? entry.country}
-                      description={entry.shortDescription}
-                      meta={entry.cityMicroRegion}
-                      cta="View →"
-                      cakeId={getFirstPhotographedCakeId([entry.cakeId]) ?? entry.cakeId}
-                    />
-                  )
-                })}
-              </div>
-            </>
-          )}
-
-          <section className="atlas-cultural-story">
-            <h2>📜 Cultural Story</h2>
-            <details>
-              <summary>Read the background story</summary>
-              <p>{selectedEntry.historyNote}</p>
-            </details>
-          </section>
-
-          {relatedCountries.length > 0 && (
-            <>
-              <h2 className="recipe-heading">🌍 Regional Variations</h2>
-              <div className="discover-feature-grid">
-                {relatedCountries.map((c) => {
-                  const primary = getPrimaryEntry(c)
-                  return (
-                    <DiscoverFeatureCard
-                      key={c}
-                      onClick={() => handleSearch(c)}
-                      title={c}
-                      description={primary?.shortDescription ?? 'See its signature cake'}
-                      cta="Explore →"
-                      cakeId={primary ? (getFirstPhotographedCakeId([primary.cakeId]) ?? primary.cakeId) : undefined}
-                    />
-                  )
-                })}
-              </div>
-            </>
-          )}
-        </section>
-      )}
-
-      {!country && !query && (
-        <section className="atlas-row">
-          <h2>🌍 Browse by Region</h2>
-          <div className="discover-feature-grid">
-            {ATLAS_DISPLAY_REGIONS.map((region) => (
-              <DiscoverFeatureCard
-                key={region}
-                to={`/atlas/region/${regionToSlug(region)}`}
-                title={region}
-                description="See cakes from this region"
-                cta="Explore →"
-                cakeId={REGION_REP_CAKE[region]}
-              />
-            ))}
-          </div>
-        </section>
-      )}
-    </main>
-  )
+      {areas.length > 0 && <div className="atlas-region-picker"><label htmlFor="atlas-area">Look closer: region or city</label><select id="atlas-area" value={activeRegion} onChange={e => browse(country, world, e.target.value)}><option value="">All regional traditions</option>{areas.map(area => <option key={area}>{area}</option>)}</select></div>}
+      {country === 'Japan' && <Link className="atlas-deeper-map" to="/ramen/atlas">Go deeper: explore Japan’s ramen city map →</Link>}
+      <div className="atlas-food-grid">{displayed.slice(0, shown).map(entry => {
+        const item = atlasFoods.get(entry.foodId)
+        if (!item) return null
+        return <button key={entry.foodId} className="atlas-food-card" aria-pressed={selected?.foodId === entry.foodId} onClick={() => { browse(country, world, activeRegion, entry.foodId); requestAnimationFrame(() => storyHeading.current?.focus()) }}>
+          <EditorialImage src={item.image} alt={item.name} width={400} height={280} loading="lazy" />
+          <div><p className="eyebrow">{worldNames[entry.world]} · {entry.area || country}</p><h3>{item.name}</h3><p>{item.description}</p><span>Meet the style →</span></div>
+        </button>
+      })}</div>
+      {displayed.length > shown && <button className="atlas-more" onClick={() => setShown(n => n + 12)}>Show more regional discoveries</button>}
+      {selected && food && <article className="atlas-style-story" key={food.id}>
+        <figure><EditorialImage src={food.image} alt={food.name} loading="lazy" width={800} height={600} />{food.credit && <figcaption>Photo: {food.credit}</figcaption>}</figure>
+        <div><p className="eyebrow">{selected.area || country} · {worldNames[food.world]}</p><h2 ref={storyHeading} tabIndex={-1}>{food.name}</h2>
+          <p>{selected.context}</p><h3>What makes it distinctive</h3><p>{food.lesson}</p>
+          {selected.ingredients?.map(ingredient => <p key={ingredient}>{ingredient}</p>)}
+          {selected.variations?.length ? <details><summary>Variations on the tradition</summary>{selected.variations.map(v => <p key={v}>{v}</p>)}</details> : null}
+          <details><summary>The deeper story</summary><p>{selected.story}</p>{selected.association && <p>{selected.association}</p>}</details>
+          <Link className="atlas-story-link" to={food.path}>Explore the full story & recipe →</Link>
+          <ContentShare title={`${food.name} · ${country}`} path={`/atlas?${params}`} />
+        </div>
+      </article>}
+      <TasteThisPlace country={country} foodId={food?.id} />
+      <div className="atlas-continue"><h3>Keep wandering</h3><p>Another style, another place, another reason to be curious.</p>{atlasTrails.filter(t => t.country !== country && placesFor(t.country, world).length).map(t => <button key={t.country} onClick={() => selectCountry(t.country)}>{t.country} →</button>)}</div>
+    </section>}
+    <footer className="atlas-collections"><h2>Explore the specialist atlases</h2><p>Spend a little longer with one food world.</p><div><Link to="/atlas/cakes">Cake heritage & recipes →</Link><Link to="/cookies/atlas">Cookie traditions →</Link><Link to="/ramen/atlas">Ramen regions & cities →</Link><Link to="/noodles/atlas">Noodle places & techniques →</Link></div></footer>
+  </main>
 }

@@ -5,6 +5,7 @@ const foods = JSON.parse(fs.readFileSync('src/data/foodSearch.json', 'utf8'))
 const template = fs.readFileSync('dist/index.html', 'utf8')
 const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))
 const pages = [{ path: '/', name: 'Let Them Eat', description: 'Explore Cake, Cookies, Ramen and Noodles through flavor, culture and hands-on learning.' },
+  { path: '/atlas', name: 'World Food Atlas', description: 'The world, one bite at a time. Explore food through geography, regional traditions and the stories behind the flavor.', image: '/photography/ramen_sapporo_miso.webp' },
   { path: '/explore', name: 'Explore food, flavor & place', description: `Discover ${foods.length} foods across four worlds. Search by ingredient, texture, technique or place.`, lesson: 'Follow an ingredient from one food tradition to another.', links: foods }, ...foods]
 for (const item of pages) {
   const url = origin + item.path

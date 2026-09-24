@@ -50,7 +50,7 @@ export function hubWorld(hub: Hub): HubWorld {
     source of truth for BottomTabBar (which tabs to show), TopNavBar (which world's brand/saved
     links + accent color to show), and App.tsx (which world's accent-color class to apply). */
 export function worldFromPathname(pathname: string): HubWorld | null {
-  if (pathname === '/' || pathname === '/explore') return null
+  if (pathname === '/' || pathname === '/explore' || pathname === '/atlas') return null
   if (pathname === '/ramen' || pathname.startsWith('/ramen/')) return 'ramen'
   if (pathname === '/cookies' || pathname.startsWith('/cookies/')) return 'cookies'
   if (pathname === '/noodles' || pathname.startsWith('/noodles/')) return 'noodles'
@@ -167,9 +167,9 @@ export const HUBS: Hub[] = [
     path: '/atlas',
     navLabel: 'Atlas',
     navIcon: '🗺️',
-    title: 'Global Cake Atlas',
+    title: 'World Food Atlas',
     description:
-      'Click a pin on an interactive world map — or search directly — for any country’s most popular cake, complete with a full recipe and background story.',
+      'Explore food through geography: choose a country, discover regional styles, and follow the flavor into its story and recipe.',
   },
   {
     kind: 'direct',

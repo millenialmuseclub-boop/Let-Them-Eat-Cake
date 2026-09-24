@@ -200,7 +200,9 @@ export function HomePage() {
       <hr className="home-divider" />
 
       <section className="home-discovery">
-        <h3>From the Atlas</h3>
+        <h3>The World Food Atlas</h3>
+        <p>Follow a place from the map to the food, then into its story.</p>
+        <Link to="/atlas">Open the world →</Link>
         <ul className="home-discovery-list">
           {ATLAS_HIGHLIGHTS.map((item) => (
             <li key={item.place}>

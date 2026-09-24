@@ -9,5 +9,5 @@ for (const food of foods) {
   assert.ok(!html.includes('capacitor://') && !html.includes('localhost'), food.path)
 }
 const sitemap = fs.readFileSync('dist/sitemap.xml', 'utf8')
-assert.equal((sitemap.match(/<loc>/g) ?? []).length, foods.length + 2)
-console.log(`Verified ${foods.length} food metadata pages and ${foods.length + 2} sitemap routes`)
+assert.equal((sitemap.match(/<loc>/g) ?? []).length, foods.length + 3)
+console.log(`Verified ${foods.length} food metadata pages and ${foods.length + 3} sitemap routes`)

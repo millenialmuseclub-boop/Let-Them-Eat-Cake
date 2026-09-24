@@ -43,7 +43,7 @@ export function ExplorePage() {
         trackDiscovery('Surprise Me', { world })
         navigate(matches[Math.floor(Math.random() * matches.length)].path)
       }}>Surprise me</button>
-      <ContentShare title={query ? `${query} discoveries` : 'Food discoveries'} path={`/explore${params.size ? `?${params}` : ''}`} />
+      <ContentShare title={query ? `${query} discoveries` : 'Food discoveries'} path={`/explore${params.toString() ? `?${params}` : ''}`} />
     </div>
     {!matches.length && <section><h2>A different trail?</h2><p>Try one ingredient, a country or a texture. Search matches words together; fewer words can uncover more.</p><button onClick={() => browse('', 'all')}>Show all discoveries</button></section>}
     <div className="food-result-grid">
