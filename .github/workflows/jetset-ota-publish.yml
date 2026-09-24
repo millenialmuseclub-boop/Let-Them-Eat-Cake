@@ -1,0 +1,91 @@
+# Installed as .github/workflows/jetset-ota-publish.yml in Let-Them-Eat-Cake.
+# Uses the existing R2 credentials in place; never exports them to another repo.
+name: Publish Jet Set OTA
+on:
+  workflow_dispatch:
+    inputs:
+      source_sha:
+        description: Full Jet-Set-LatAM commit SHA to publish
+        required: true
+        type: string
+      channel:
+        description: OTA channel
+        required: true
+        default: staging
+        type: choice
+        options: [staging, production]
+permissions:
+  contents: read
+concurrency:
+  group: jetset-ota-${{ inputs.channel }}
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: Production
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: millenialmuseclub-boop/Jet-Set-LatAM
+          ref: ${{ inputs.source_sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify source and native compatibility
+        env:
+          SOURCE_SHA: ${{ inputs.source_sha }}
+        run: |
+          set -euo pipefail
+          [[ "$SOURCE_SHA" =~ ^[a-f0-9]{40}$ ]]
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+          git merge-base --is-ancestor HEAD origin/main
+          git diff --exit-code jetset-ota-runtime-v1 HEAD -- ios capacitor.config.ts package.json package-lock.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Check and build
+        env:
+          VITE_OTA_CHANNEL: ${{ inputs.channel }}
+        run: |
+          npm run lint
+          npm run check:ota
+          node scripts/check-release.mjs
+          npm run build
+      - name: Encrypt and publish Jet Set only
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          CAPGO_PRIVATE_KEY_B64: ${{ secrets.CAPGO_PRIVATE_KEY }}
+          PUBLIC_BASE: ${{ vars.R2_PUBLIC_BASE_URL }}
+          CHANNEL: ${{ inputs.channel }}
+        run: |
+          set -euo pipefail
+          test "$PUBLIC_BASE" = 'https://pub-9fa41a6ec38e4064b998f30a35df2cb0.r2.dev'
+          umask 077
+          KEY_FILE=$(mktemp)
+          trap 'rm -f "$KEY_FILE"' EXIT
+          printf '%s' "$CAPGO_PRIVATE_KEY_B64" | base64 -d > "$KEY_FILE"
+          npx --yes @capgo/cli@8.66.0 bundle zip com.jetsetlatam.app --path ./dist --json > zip.json
+          ZIP=$(jq -er '.filename' zip.json)
+          CHECKSUM=$(jq -er '.checksum' zip.json)
+          npx --yes @capgo/cli@8.66.0 bundle encrypt "$ZIP" "$CHECKSUM" --key "$KEY_FILE" --json > enc.json
+          SHA=$(git rev-parse HEAD)
+          VERSION=$(git log -1 --format=%ct)
+          PREFIX="updates/jetset-latam/jetset-ios-v1/$CHANNEL"
+          STATUS=$(curl -sS -o previous.json -w '%{http_code}' "$PUBLIC_BASE/$PREFIX/manifest.json")
+          if [ "$STATUS" = 200 ]; then
+            test "$VERSION" -gt "$(jq -er '.version | tonumber' previous.json)"
+          else
+            test "$STATUS" = 404
+          fi
+          jq -n --arg v "$VERSION" --arg sha "$SHA" --arg channel "$CHANNEL" \
+            --arg url "$PUBLIC_BASE/$PREFIX/bundles/$SHA.zip" \
+            --arg ck "$(jq -er '.checksum' enc.json)" --arg sk "$(jq -er '.ivSessionKey' enc.json)" \
+            '{appId:"com.jetsetlatam.app",runtime:"jetset-ios-v1",channel:$channel,version:$v,sha:$sha,url:$url,checksum:$ck,sessionKey:$sk}' > manifest.json
+          npx --yes wrangler@4.138.0 r2 object put "$R2_BUCKET_NAME/$PREFIX/bundles/$SHA.zip" \
+            --remote --file="$(jq -er '.filename' enc.json)" --cache-control 'public, max-age=31536000, immutable'
+          curl --fail --retry 3 -sS -o /dev/null "$PUBLIC_BASE/$PREFIX/bundles/$SHA.zip"
+          npx --yes wrangler@4.138.0 r2 object put "$R2_BUCKET_NAME/$PREFIX/manifest.json" \
+            --remote --file=manifest.json --content-type application/json --cache-control 'no-cache, max-age=0'
