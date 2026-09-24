@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cookie_biscotti",
+    "status": "cached",
+    "bytes": 91790
+  },
+  {
+    "id": "cookie_chocolate_chip",
+    "status": "cached",
+    "bytes": 122326
+  },
+  {
+    "id": "cookie_alfajor",
+    "status": "cached",
+    "bytes": 51734
+  },
+  {
+    "id": "cookie_scottish_shortbread",
+    "status": "cached",
+    "bytes": 34118
+  },
+  {
+    "id": "pho-bo",
+    "status": "cached",
+    "bytes": 91506
+  },
+  {
+    "id": "cookie_french_sable",
+    "status": "cached",
+    "bytes": 26884
+  },
+  {
+    "id": "bun-bo-hue",
+    "status": "cached",
+    "bytes": 82190
+  },
+  {
+    "id": "cao-lau",
+    "status": "cached",
+    "bytes": 73740
+  }
+]

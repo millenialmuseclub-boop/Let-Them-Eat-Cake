@@ -1,15 +1,19 @@
 {
   "cookie_barazek": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Barazeq.jpg",
+    "url": "/photography/cookie_barazek.webp",
     "photographer": "El Mono Español",
     "source": "Wikimedia Commons",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barazeq.jpg"
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barazeq.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
   },
   "cookie_chocolate_chip": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Chocolate_chip_cookies_cooling_on_a_wire_rack%2C_May_2009.jpg",
+    "url": "/photography/cookie_chocolate_chip.webp",
     "photographer": "Kari Sullivan",
     "source": "Wikimedia Commons",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chocolate_chip_cookies_cooling_on_a_wire_rack,_May_2009.jpg"
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chocolate_chip_cookies_cooling_on_a_wire_rack,_May_2009.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
   },
   "cookie_snickerdoodle": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Snickerdoodles.jpg",
@@ -25,18 +29,22 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peanut_butter_cookies,_September_2009.jpg"
   },
   "cookie_scottish_shortbread": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Scottish_Shortbread_Biscuits.jpg",
+    "url": "/photography/cookie_scottish_shortbread.webp",
     "photographer": "Nizil Shah",
     "photographerUrl": "https://commons.wikimedia.org/wiki/User:Nizil_Shah",
     "source": "Wikimedia Commons",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scottish_Shortbread_Biscuits.jpg"
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scottish_Shortbread_Biscuits.jpg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
   "cookie_french_sable": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Le_v%C3%A9ritable_petit_sabl%C3%A9.jpg",
+    "url": "/photography/cookie_french_sable.webp",
     "photographer": "Antoine mf Pelletier",
     "photographerUrl": "https://commons.wikimedia.org/wiki/User:Antoine_mf_Pelletier",
     "source": "Wikimedia Commons",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Le_v%C3%A9ritable_petit_sabl%C3%A9.jpg"
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Le_v%C3%A9ritable_petit_sabl%C3%A9.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   "cookie_dutch_stroopwafel": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Stroopwafels_01.jpg",
@@ -73,11 +81,13 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nankhatai.jpg"
   },
   "cookie_alfajor": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Alfajores-Argentins.JPG",
+    "url": "/photography/cookie_alfajor.webp",
     "photographer": "V!NZ",
     "photographerUrl": "https://commons.wikimedia.org/wiki/user:V%21NZ",
     "source": "Wikimedia Commons",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alfajores-Argentins.JPG"
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alfajores-Argentins.JPG",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
   },
   "cookie_anzac_biscuit": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/ANZAC_biscuits_%2814_April_2006%29.jpg",
@@ -155,11 +165,13 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:French_macaroons.jpg"
   },
   "cookie_biscotti": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Cantuccini-Toscani.jpg",
+    "url": "/photography/cookie_biscotti.webp",
     "photographer": "Gwang17",
     "photographerUrl": "https://commons.wikimedia.org/wiki/User:Gwang17",
     "source": "Wikimedia Commons",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cantuccini-Toscani.jpg"
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cantuccini-Toscani.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
   "cookie_baci_di_dama": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Baci_di_dama_al_cacao.jpg",
@@ -337,14 +349,6 @@
     "photographerUrl": "https://commons.wikimedia.org/wiki/User:Aoziwe",
     "source": "Wikimedia Commons",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monte_carlo_biscuit_-_whole.jpg"
-  },
-  "cookie_barazek": {
-    "url": "/photography/cookie_barazek.webp",
-    "photographer": "El Mono Español",
-    "source": "Wikimedia Commons",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barazeq.jpg",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
   },
   "cookie_marranitos": {
     "url": "/photography/cookie_marranitos.webp",

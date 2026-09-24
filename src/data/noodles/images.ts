@@ -15,7 +15,7 @@ export const images: NoodleImage[] = [
     id: 'img-pho-bo',
     subjectId: 'pho-bo',
     subjectKind: 'dish',
-    src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Ph%E1%BB%9F_%C4%91%E1%BA%B7c_bi%E1%BB%87t.jpg',
+    src: '/photography/pho-bo.webp',
     alt: 'A bowl of phở đặc biệt (special beef phở) with rice noodles, broth, and herbs',
     credit: {
       creator: 'Azure Dragon of the East',
@@ -314,13 +314,13 @@ export const images: NoodleImage[] = [
     id: 'img-bun-bo-hue',
     subjectId: 'bun-bo-hue',
     subjectKind: 'dish',
-    src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Bun_Bo_Hue.jpg',
+    src: '/photography/bun-bo-hue.webp',
     alt: 'A bowl of bún bò Huế with thick rice noodles in a bold, lemongrass-spiced broth',
     credit: {
-      creator: 'Alpha',
+      creator: 'SauceSupreme',
       source: 'wikimedia-commons',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bun_Bo_Hue.jpg',
-      license: 'CC BY-SA 2.0',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Bun_Bo_Hue_1.jpg',
+      license: 'CC BY 2.0',
     },
   },
   {
@@ -340,7 +340,7 @@ export const images: NoodleImage[] = [
     id: 'img-cao-lau',
     subjectId: 'cao-lau',
     subjectKind: 'dish',
-    src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Cao_Lau_Hoi_An.JPG',
+    src: '/photography/cao-lau.webp',
     alt: 'A bowl of cao lầu with thick chewy noodles, roast pork, and pork cracklings',
     credit: {
       creator: 'Dragfyre',

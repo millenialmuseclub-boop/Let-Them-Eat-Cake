@@ -15,9 +15,13 @@ export function placesFor(country: string, world = 'all') {
   return atlasPlaces.filter(place => place.countries.includes(country) && (world === 'all' || place.world === world))
     .filter((place, index, all) => all.findIndex(other => other.foodId === place.foodId) === index)
 }
-export const atlasTrails = [
-  { country: 'Japan', world: 'ramen', food: 'ramen_sapporo_miso', title: 'One country. Many bowls.', note: 'Follow ramen from Sapporo’s miso broth to Hakata’s pork-bone tradition.' },
-  { country: 'Mexico', world: 'all', food: 'cookie_marranitos', title: 'A sweet side of Mexico', note: 'Pig-shaped cookies, milk-soaked sponge and the pleasure of the panadería.' },
-  { country: 'Vietnam', world: 'noodles', food: 'pho-bo', title: 'Follow the rice noodle', note: 'Discover how broth, dipping sauce and herbs change the way a noodle is eaten.' },
-  { country: 'Italy', world: 'all', food: 'cookie_biscotti', title: 'The Italian sweet table', note: 'Explore the cakes and cookies in our collection, one tradition at a time.' },
-]
+import { atlasJourneys } from '../data/atlasJourneys'
+export const atlasTrails = atlasJourneys
+export function journeysFor(world = 'all') {
+  return atlasJourneys.filter(journey => world === 'all' || journey.stops.every(stop => atlasFoods.get(stop.foodId)?.world === world))
+}
+export function resolveJourney(id: string | null, country: string, world: string, region: string, foodId: string | null) {
+  if (region) return undefined
+  return journeysFor(world).find(journey => journey.id === id && journey.country === country &&
+    (!foodId || journey.stops.some(stop => stop.foodId === foodId)))
+}

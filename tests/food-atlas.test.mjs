@@ -35,3 +35,27 @@ test('Jet Set handoffs use explicit verified guides and geographically associate
   assert.ok(!jetSetDestinations.some(d => d.country === 'Japan'))
   assert.ok(!jetSetDestinations.some(d => d.foodIds.includes('cake_bolo_de_rolo')))
 })
+import { journeysFor, resolveJourney, atlasTrails } from '../src/lib/foodAtlas.ts'
+
+test('curated tasting trails contain three distinct existing foods in their stated place and world', () => {
+  assert.equal(atlasTrails.length, 6)
+  for (const journey of atlasTrails) {
+    assert.equal(journey.stops.length, 3)
+    assert.equal(new Set(journey.stops.map(s => s.foodId)).size, 3)
+    for (const stop of journey.stops) assert.ok(placesFor(journey.country, journey.world).some(p => p.foodId === stop.foodId), `${journey.id}: ${stop.foodId}`)
+    assert.ok(atlasFoods.get(journey.food)?.image.startsWith('/photography/'), journey.id)
+  }
+  assert.deepEqual(journeysFor('ramen').map(t => t.country), ['Japan'])
+  assert.deepEqual(journeysFor('noodles').map(t => t.country), ['Vietnam'])
+  assert.equal(journeysFor('cake').length, 0)
+})
+test('shared trail URLs reject mismatched geography, filter, region and food', () => {
+  const id = 'japan-regional-ramen'
+  assert.ok(resolveJourney(id, 'Japan', 'ramen', '', 'ramen_sapporo_miso'))
+  assert.ok(resolveJourney(id, 'Japan', 'all', '', null))
+  assert.equal(resolveJourney(id, 'Italy', 'all', '', null), undefined)
+  assert.equal(resolveJourney(id, 'Japan', 'cookies', '', null), undefined)
+  assert.equal(resolveJourney(id, 'Japan', 'ramen', 'Tokyo', null), undefined)
+  assert.equal(resolveJourney(id, 'Japan', 'ramen', '', 'ramen_kitakata'), undefined)
+  assert.equal(resolveJourney('unknown', 'Japan', 'all', '', null), undefined)
+})

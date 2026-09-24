@@ -1,0 +1,13 @@
+{
+  "origin": "http://127.0.0.1:4173",
+  "checks": [
+    "Japan: all 3 stops, reload, Back, local cover and 320/390/1440px layouts",
+    "Mexico: all 3 stops, reload, Back, local cover and 320/390/1440px layouts",
+    "Vietnam: all 3 stops, reload, Back, local cover and 320/390/1440px layouts",
+    "Italy: all 3 stops, reload, Back, local cover and 320/390/1440px layouts",
+    "France: all 3 stops, reload, Back, local cover and 320/390/1440px layouts",
+    "Argentina: all 3 stops, reload, Back, local cover and 320/390/1440px layouts",
+    "verified travel destinations, incompatible world filters and malformed trail recovery"
+  ],
+  "errors": []
+}

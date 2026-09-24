@@ -3,6 +3,18 @@
 // Add a destination only after checking the article and the food's geographic relationship.
 export const jetSetDestinations = [
   {
+    id: 'buenos-aires', country: 'Argentina', city: 'Buenos Aires',
+    foodIds: ['cookie_alfajor', 'cookie_pepas', 'cake_torta_rogel'],
+    url: 'https://thebrunchmanifesto.blog/2025/11/11/cafe-culture-in-buenos-aires-historic-cafes-with-a-view/',
+    note: 'Take your Argentine sweet discoveries into a slower afternoon with Jet Set’s guide to Buenos Aires café culture.',
+  },
+  {
+    id: 'santiago', country: 'Chile', city: 'Santiago',
+    foodIds: ['cake_torta_mil_hojas'],
+    url: 'https://thebrunchmanifesto.blog/2025/10/21/santiago-by-cruiser-bike-parks-bohemian-neighborhoods-and-vineyard-escapes/',
+    note: 'Explore more of Chile through Santiago’s parks and neighborhoods with Jet Set’s city guide.',
+  },
+  {
     id: 'mexico-city', country: 'Mexico', city: 'Mexico City',
     foodIds: ['cookie_marranitos', 'cake_tres_leches', 'cake_chocoflan', 'cake_pan_de_elote'],
     url: 'https://thebrunchmanifesto.blog/2025/10/22/mexico-city-by-cruiser-bike-parks-culture-and-ciclovia-charm/',

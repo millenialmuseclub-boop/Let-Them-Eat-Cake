@@ -30,7 +30,7 @@ const noodles = dishes.map(d => ({
   foodId: d.id, world: 'noodles', countries: d.place.countryId === 'malaysia' && d.place.cityOrAreaId
     ? [d.place.cityOrAreaId === 'singapore-city' ? 'Singapore' : 'Malaysia'] : noodleCountry[d.place.countryId],
   area: places.find(p => p.id === d.place.cityOrAreaId)?.name ?? '',
-  context: [places.find(p => p.id === d.place.cityOrAreaId)?.noteOnSignificance, d.culturalContext].filter(Boolean).join(' '), story: d.historicalContext,
+  context: d.culturalContext, story: d.historicalContext,
   association: countries.find(c => c.id === d.place.countryId)?.name,
 }))
 export const atlasCatalog = [...cake, ...cookies, ...ramen, ...noodles]
