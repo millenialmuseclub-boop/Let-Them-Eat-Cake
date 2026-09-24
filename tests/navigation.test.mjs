@@ -4,6 +4,11 @@ import { activeHubPath, worldFromPathname, HUBS, hubWorld } from '../src/data/hu
 
 test('world detection respects route boundaries and the editorial home', () => {
   assert.equal(worldFromPathname('/'), null)
+  for (const path of ['/atlas', '/atlas/', '/explore', '/explore/']) {
+    assert.equal(worldFromPathname(path), null, path)
+    assert.equal(activeHubPath(path), undefined, path)
+  }
+  assert.equal(worldFromPathname('/atlas/cakes/'), 'cake')
   assert.equal(worldFromPathname('/ramen/atlas'), 'ramen')
   assert.equal(worldFromPathname('/ramenish'), 'cake')
   assert.equal(activeHubPath('/'), undefined)

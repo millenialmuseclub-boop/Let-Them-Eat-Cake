@@ -50,6 +50,7 @@ export function hubWorld(hub: Hub): HubWorld {
     source of truth for BottomTabBar (which tabs to show), TopNavBar (which world's brand/saved
     links + accent color to show), and App.tsx (which world's accent-color class to apply). */
 export function worldFromPathname(pathname: string): HubWorld | null {
+  pathname = pathname.replace(/\/+$/, '') || '/'
   if (pathname === '/' || pathname === '/explore' || pathname === '/atlas') return null
   if (pathname === '/ramen' || pathname.startsWith('/ramen/')) return 'ramen'
   if (pathname === '/cookies' || pathname.startsWith('/cookies/')) return 'cookies'
