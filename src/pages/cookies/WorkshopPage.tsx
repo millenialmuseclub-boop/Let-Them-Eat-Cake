@@ -66,9 +66,9 @@ export function WorkshopPage() {
                 key={lab.slug}
                 to={`/cookies/workshop/labs/${lab.slug}`}
                 title={lab.title}
-                description="Open the lab"
+                description={LABS.find(item => item.slug === lab.slug)?.description ?? 'Explore the technique'}
                 icon="🧪"
-                image={getSceneImage(LAB_SCENE[lab.slug])}
+                image={getSceneImage(LAB_SCENE[lab.slug]) ?? getCookieImage(LAB_COOKIE[lab.slug])}
               />
             ))}
         </div>

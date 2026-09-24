@@ -1,3 +1,5 @@
+import { getRamenImage } from '../../lib/ramen/images'
+import { ContentJourney } from '../../components/ContentJourney'
 import { Link, useParams } from 'react-router-dom'
 import { getRamen, ramen } from '../../lib/ramen/data'
 import { getRegionEntryForRamen } from '../../lib/ramen/atlas'
@@ -8,6 +10,7 @@ import { RamenStateBadges } from '../../components/ramen/RamenStateBadges'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { ContextualCuratedKitchen } from '../../components/ContextualCuratedKitchen'
 import { ramenRecommendations } from '../../lib/contextualRecommendations'
+import { relatedRamen } from '../../lib/ramen/related'
 import './RamenDetailPage.css'
 
 const VARIATION_LABEL: Record<string, string> = {
@@ -26,7 +29,7 @@ export function RamenDetailPage() {
   const { id } = useParams<{ id: string }>()
   const item = id ? getRamen(id) : undefined
 
-  useDocumentTitle(item ? `${item.name} — Ramen Encyclopedia | Let Them Eat` : 'Ramen Not Found | Let Them Eat')
+  useDocumentTitle(item ? `${item.name} — Ramen Encyclopedia | Let Them Eat` : 'Ramen Not Found | Let Them Eat', { description: item?.description, image: item ? getRamenImage(item.id)?.url : undefined })
 
   if (!item) {
     return (
@@ -40,7 +43,7 @@ export function RamenDetailPage() {
   }
 
   const region = getRegionEntryForRamen(item.id)
-  const related = ramen.filter((r) => r.id !== item.id).slice(0, 3)
+  const related = relatedRamen(item, ramen)
 
   return (
     <main className="page ramen-detail-page">
@@ -123,11 +126,13 @@ export function RamenDetailPage() {
         <section className="ramen-detail-section">
           <h2>🗺️ On the Atlas</h2>
           <p>{region.historyNote}</p>
-          <Link to="/ramen/atlas" className="encyclopedia-link">
+          <Link to={`/ramen/atlas?city=${encodeURIComponent(region.cityMicroRegion)}`} className="encyclopedia-link">
             Explore the Ramen Atlas →
           </Link>
         </section>
       )}
+
+      <ContentJourney world="ramen" id={item.id} title={item.name} path={`/ramen/ramen/${item.id}`} notes={item.flavorTags} />
 
       <section className="ramen-detail-section">
         <h2>🔗 More Ramen</h2>
@@ -135,7 +140,7 @@ export function RamenDetailPage() {
           {related.map((r) => (
             <Link key={r.id} to={`/ramen/ramen/${r.id}`} className="card ramen-detail-related-card">
               <RamenThumbnail ramenId={r.id} alt={r.name} />
-              <h3>{r.name}</h3>
+              <h3>{r.name}</h3><p>{r.relatedReason}</p>
             </Link>
           ))}
         </div>

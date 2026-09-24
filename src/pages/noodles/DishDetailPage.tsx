@@ -1,3 +1,5 @@
+import { getImageFor } from '../../data/noodles/images'
+import { ContentJourney } from '../../components/ContentJourney'
 import { Link, useParams } from 'react-router-dom';
 import { getDish, getNoodleType, getRecipeForDish, getRelatedDishes, getPlaceLabel, getTechnique } from '../../lib/noodles/data';
 import { PhotoFrame } from '../../components/noodles/PhotoFrame';
@@ -12,7 +14,7 @@ import { noodleDishRecommendations } from '../../lib/contextualRecommendations';
 export function DishDetailPage() {
   const { id = '' } = useParams();
   const dish = getDish(id);
-  useDocumentTitle(dish?.name ?? 'Dish');
+  useDocumentTitle(dish?.name ?? 'Dish', { description: dish?.brothOrSauceRelationship, image: dish ? getImageFor(dish.id)?.src : undefined });
 
   if (!dish) {
     return (
@@ -167,6 +169,8 @@ export function DishDetailPage() {
       )}
 
       <ContextualCuratedKitchen key={dish.id} productIds={noodleDishRecommendations(dish)} title="For cooking this dish" limit={3} />
+
+      <ContentJourney world="noodles" id={dish.id} title={dish.name} path={`/noodles/encyclopedia/${dish.id}`} notes={dish.flavorTags} />
 
       {relatedDishes.length > 0 && (
         <>

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-13T22:38:19.998Z",
-  "origin": "http://127.0.0.1:5173",
+  "generatedAt": "2026-09-24T19:28:06.838Z",
+  "origin": "http://127.0.0.1:4173",
   "pages": [
     {
       "route": "/discover",
@@ -134,7 +134,7 @@
     {
       "route": "/noodles",
       "width": 390,
-      "heading": "Naengmyeon",
+      "heading": "Bún Thịt Nướng",
       "overflow": false,
       "overflowing": [],
       "brokenImages": [],
@@ -182,15 +182,21 @@
       "errors": []
     },
     {
+      "route": "/explore",
+      "width": 390,
+      "heading": "One ingredient. A world of discoveries.",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
       "route": "/celebrate",
       "width": 390,
       "heading": "Celebrate",
       "overflow": false,
-      "overflowing": [
-        "DIV.cake-hero-image cake-hero-image-hero cake-hero-image-placeholder",
-        "DIV.cake-hero-image cake-hero-image-hero cake-hero-image-placeholder",
-        "DIV.cake-hero-image cake-hero-image-hero cake-hero-image-placeholder"
-      ],
+      "overflowing": [],
       "brokenImages": [],
       "duplicateIds": [],
       "errors": []
@@ -717,7 +723,7 @@
     {
       "route": "/cookies/sommelier/find",
       "width": 390,
-      "heading": "FIND",
+      "heading": "Find my cookie",
       "overflow": false,
       "overflowing": [],
       "brokenImages": [],
@@ -1036,7 +1042,7 @@
     {
       "route": "/noodles",
       "width": 1440,
-      "heading": "Naengmyeon",
+      "heading": "Bún Thịt Nướng",
       "overflow": false,
       "overflowing": [],
       "brokenImages": [],
@@ -1059,15 +1065,7 @@
       "heading": "Browse by Origin",
       "overflow": false,
       "overflowing": [],
-      "brokenImages": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Curry_Laksa_-_Chilli_Padi_(52320132).jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Char_Kuey_Teow_Basah.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Aunt_Lay_Leong%27s_KL_Hokkien_Mee_(2874463017).jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Maggi_Goreng.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Penang_laksa.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/MeeRebus.JPG",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Myanmar%E2%80%99s_Traditional_Food_-_Mohinga.jpg"
-      ],
+      "brokenImages": [],
       "duplicateIds": [],
       "errors": []
     },
@@ -1085,6 +1083,16 @@
       "route": "/",
       "width": 1440,
       "heading": "A world of food, culture, craft & flavor.",
+      "overflow": false,
+      "overflowing": [],
+      "brokenImages": [],
+      "duplicateIds": [],
+      "errors": []
+    },
+    {
+      "route": "/explore",
+      "width": 1440,
+      "heading": "One ingredient. A world of discoveries.",
       "overflow": false,
       "overflowing": [],
       "brokenImages": [],
@@ -1623,7 +1631,7 @@
     {
       "route": "/cookies/sommelier/find",
       "width": 1440,
-      "heading": "FIND",
+      "heading": "Find my cookie",
       "overflow": false,
       "overflowing": [],
       "brokenImages": [],

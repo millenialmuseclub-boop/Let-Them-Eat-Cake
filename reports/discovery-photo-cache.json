@@ -1,0 +1,29 @@
+[
+  {
+    "id": "cake_yellow_choc_1950s",
+    "bytes": 37246,
+    "status": "cached"
+  },
+  {
+    "id": "ramen_hakata_tonkotsu",
+    "bytes": 228506,
+    "status": "cached"
+  },
+  {
+    "id": "ramen_sapporo_miso",
+    "bytes": 111318,
+    "status": "cached"
+  },
+  {
+    "id": "cookie_chocolate_chip",
+    "status": 429
+  },
+  {
+    "id": "cookie_scottish_shortbread",
+    "status": 429
+  },
+  {
+    "id": "scene_dough_lab",
+    "status": 429
+  }
+]

@@ -38,7 +38,7 @@ const WORLD_INTROS: WorldIntro[] = [
     cta: 'Explore Cake',
     to: '/discover',
     image: {
-      url: 'https://images.unsplash.com/photo-1586985289906-406988974504?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Q2xhc3NpYyUyMFllbGxvdyUyMExheWVyJTIwQ2FrZSUyMHdpdGglMjBDaG9jb2xhdGUlMjBGcm9zdGluZyUyMGNha2V8ZW58MHwwfHx8MTc4NjA0OTkyNXww&ixlib=rb-4.1.0&q=80&w=1080',
+      url: '/photography/cake_yellow_choc_1950s.webp',
       alt: 'A layered yellow cake with chocolate frosting',
       credit: 'American Heritage Chocolate / Unsplash',
     },
@@ -52,7 +52,7 @@ const WORLD_INTROS: WorldIntro[] = [
     cta: 'Explore Ramen',
     to: '/ramen',
     image: {
-      url: 'https://images.pexels.com/photos/15085069/pexels-photo-15085069.jpeg',
+      url: 'https://images.pexels.com/photos/15085069/pexels-photo-15085069.jpeg?auto=compress&w=960',
       alt: 'Two bowls of ramen',
       credit: 'Яна Шабала / Pexels',
     },
@@ -95,19 +95,19 @@ const ATLAS_HIGHLIGHTS = [
   {
     place: 'Mexico',
     note: 'Tres leches cake',
-    to: '/atlas',
+    to: '/atlas?country=Mexico',
     image: 'https://images.unsplash.com/photo-1615735486329-c61cd40bfcc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400',
   },
   {
     place: 'Sapporo, Japan',
     note: 'Miso ramen',
-    to: '/ramen/atlas',
-    image: 'https://images.pexels.com/photos/16594958/pexels-photo-16594958.jpeg?w=400',
+    to: '/ramen/atlas?city=Sapporo%2C+Hokkaido',
+    image: '/photography/ramen_sapporo_miso.webp',
   },
   {
     place: 'Vietnam',
     note: 'Phở',
-    to: '/noodles/atlas',
+    to: '/noodles/atlas?country=vietnam',
     image: 'https://commons.wikimedia.org/wiki/Special:FilePath/Ph%E1%BB%9F_%C4%91%E1%BA%B7c_bi%E1%BB%87t.jpg?width=400',
   },
 ]
@@ -164,6 +164,19 @@ export function HomePage() {
         <div className="home-hero-copy">
           <p className="home-hero-mark">LET THEM EAT</p>
           <h1>A world of food, culture, craft &amp; flavor.</h1>
+        </div>
+      </section>
+
+      <section className="home-discovery home-curiosity">
+        <p className="home-world-intro-eyebrow">Follow your curiosity</p>
+        <h2>What connects a sesame cookie to a bowl of noodles?</h2>
+        <p>Follow an ingredient across cultures, compare textures, or find something you have never tried.</p>
+        <Link to="/explore" className="home-world-intro-cta">Search food, flavor &amp; place →</Link>
+        <div className="home-curiosity-links">
+          <Link to="/explore?q=sesame">Follow sesame</Link>
+          <Link to="/explore?q=chewy">Explore chewy textures</Link>
+          <Link to="/explore?q=Mexico">A taste of Mexico</Link>
+          <Link to="/cake-anatomy">How a cake is built</Link>
         </div>
       </section>
 

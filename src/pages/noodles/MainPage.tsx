@@ -44,7 +44,7 @@ export function MainPage() {
       </div>
       <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
         {regions.map((region) => (
-          <Link key={region.id} to="/noodles/atlas" className="chip chip-brass">
+          <Link key={region.id} to={`/noodles/atlas?region=${region.id}`} className="chip chip-brass">
             {region.name}
           </Link>
         ))}
@@ -87,7 +87,7 @@ export function MainPage() {
         <h2>Curated Kitchen</h2>
         <Link to="/noodles/curated-kitchen">Shop the essentials →</Link>
       </div>
-      <p className="prose">Bowls, hand-noodle tools, and broth essentials, reused from the family's verified affiliate catalog.</p>
+      <p className="prose">Bowls, noodle tools and broth essentials selected to help you put the techniques into practice.</p>
 
       <Link to="/about" className="discover-about-link">
         About &amp; Legal

@@ -13,6 +13,11 @@ function track(event: string, props: Record<string, string>) {
   }
 }
 
+/** Use event categories and canonical IDs only, never search text or saved notes. */
+export function trackDiscovery(event: string, props: Record<string, string> = {}): void {
+  track(event, props)
+}
+
 export function trackProductClicked(product: { id: string; name: string; category: string }, network: string, context: string): void {
   track('Affiliate Link Clicked', { product: product.name, productId: product.id, network, category: product.category, context })
 }
@@ -20,6 +25,7 @@ export function trackProductClicked(product: { id: string; name: string; categor
 export function trackContentViewed(path: string, world: string): void {
   // Only route identity; never include search terms, saved notes, or query parameters.
   track('Content Viewed', { path, world })
+  if (['/discover', '/ramen', '/cookies', '/noodles'].includes(path)) track('World Entered', { world })
 }
 
 export function trackExperienceClicked(name: string, context: string): void {

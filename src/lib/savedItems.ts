@@ -1,3 +1,4 @@
+import { trackDiscovery } from './analytics'
 // Unified saved-items store for all four worlds, replacing the four apps' separate personal
 // libraries (Cake's `pastryNotebookItems`, Ramen's `ramenLibrary`, Cookies'
 // `letThemEatCookies.myCookies`, Noodles' `let-them-eat-noodles:my-noodles:v1`).
@@ -275,6 +276,7 @@ function upsert(world: World, id: string, patch: MutablePatch): SavedItemRecord 
 export function toggleSaved(world: World, id: string, itemType?: string): boolean {
   const next = !getRecord(world, id)?.saved
   upsert(world, id, { saved: next, itemType })
+  trackDiscovery("Saved Item", { world, id, state: String(next) })
   return next
 }
 
@@ -293,6 +295,7 @@ export function toggleTried(world: World, id: string): boolean {
 export function toggleFavorite(world: World, id: string): boolean {
   const next = !getRecord(world, id)?.favorite
   upsert(world, id, { favorite: next })
+  trackDiscovery("Favorite Changed", { world, id, state: String(next) })
   return next
 }
 

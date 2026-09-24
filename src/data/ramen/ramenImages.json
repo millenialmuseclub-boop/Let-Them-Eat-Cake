@@ -7,18 +7,22 @@
     "sourceUrl": "https://www.pexels.com/photo/delicious-japanese-ramen-with-egg-and-scallions-31393431/"
   },
   "ramen_hakata_tonkotsu": {
-    "url": "https://images.pexels.com/photos/35773118/pexels-photo-35773118.jpeg",
+    "url": "/photography/ramen_hakata_tonkotsu.webp",
     "photographer": "Nadin Sh",
     "photographerUrl": "https://www.pexels.com/@nadin-sh-78971847/",
     "source": "Pexels",
-    "sourceUrl": "https://www.pexels.com/photo/japanese-tonkotsu-ramen-with-soft-boiled-egg-35773118/"
+    "sourceUrl": "https://www.pexels.com/photo/japanese-tonkotsu-ramen-with-soft-boiled-egg-35773118/",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/"
   },
   "ramen_sapporo_miso": {
-    "url": "https://images.pexels.com/photos/16594958/pexels-photo-16594958.jpeg",
+    "url": "/photography/ramen_sapporo_miso.webp",
     "photographer": "Nadin Sh",
     "photographerUrl": "https://www.pexels.com/@nadin-sh-78971847/",
     "source": "Pexels",
-    "sourceUrl": "https://www.pexels.com/photo/egg-and-noodles-in-ramen-16594958/"
+    "sourceUrl": "https://www.pexels.com/photo/egg-and-noodles-in-ramen-16594958/",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/"
   },
   "ramen_tsukemen": {
     "url": "https://images.pexels.com/photos/30682730/pexels-photo-30682730.jpeg",

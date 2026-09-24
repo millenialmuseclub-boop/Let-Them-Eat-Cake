@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { getCookie } from '../../lib/cookies/data'
 import type { Lab, LabVariable } from '../../types/cookies/lab'
 
 function VariablePicker({ variable }: { variable: LabVariable }) {
@@ -78,6 +79,7 @@ export function LabExplorer({ lab }: { lab: Lab }) {
                 {isExpanded && (
                   <div id={`concept-${concept.id}`} className="lab-concept-definition">
                     <p>{concept.definition}</p>
+                    {concept.relatedCookieIds?.length ? <p>Explore this technique in: {concept.relatedCookieIds.map((id, index) => <span key={id}>{index > 0 && ', '}<Link to={`/cookies/encyclopedia/${id}`}>{getCookie(id)?.name ?? id}</Link></span>)}</p> : null}
                   </div>
                 )}
               </li>

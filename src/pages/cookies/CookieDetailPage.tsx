@@ -1,3 +1,5 @@
+import { getCookieImage } from '../../lib/cookies/images'
+import { ContentJourney } from '../../components/ContentJourney'
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { getCookie, getRecipeForCookie, COOKIES, COLLECTIONS } from '../../lib/cookies/data'
@@ -12,7 +14,7 @@ export function CookieDetailPage() {
   const { cookieId = '' } = useParams()
   const cookie = getCookie(cookieId)
   const recipe = cookie ? getRecipeForCookie(cookie.id) : undefined
-  useDocumentTitle(cookie?.name ?? 'Cookie')
+  useDocumentTitle(cookie?.name ?? 'Cookie', { description: cookie?.description, image: cookie ? getCookieImage(cookie.id)?.url : undefined })
 
   if (!cookie) return <Navigate to="/cookies/encyclopedia" replace />
 
@@ -74,6 +76,8 @@ export function CookieDetailPage() {
           <p><strong>Modern variations:</strong> {cookie.modernVariations.join(', ')}</p>
         )}
       </section>
+
+      <ContentJourney world="cookies" id={cookie.id} title={cookie.name} path={`/cookies/encyclopedia/${cookie.id}`} notes={cookie.flavorTags} place={cookie.origin} />
 
       {relatedCookies.length > 0 && (
         <section className="cookie-detail-section" aria-labelledby="related-heading">

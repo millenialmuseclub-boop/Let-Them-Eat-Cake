@@ -79,8 +79,9 @@ export function SommelierPage() {
   const initialMode = isMode(modeParam) ? modeParam : 'cake-first'
 
   const [mode, setMode] = useState<Mode>(initialMode)
-  const [modeChosen, setModeChosen] = useState(isMode(modeParam))
-  const [cakeId, setCakeId] = useState<string | null>(null)
+  const initialCakeId = cakes.find(c => c.id === searchParams.get('cake'))?.id ?? null
+  const [modeChosen, setModeChosen] = useState(isMode(modeParam) || Boolean(initialCakeId))
+  const [cakeId, setCakeId] = useState<string | null>(initialCakeId)
   const [drinkId, setDrinkId] = useState<string | null>(null)
   const [expandedId, setExpandedId] = useState<string | null>(null)
 

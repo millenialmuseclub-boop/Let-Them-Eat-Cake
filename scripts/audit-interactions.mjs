@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import assert from 'node:assert/strict'
 import { chromium } from 'playwright'
 const b=await chromium.launch();const c=await b.newContext({viewport:{width:390,height:844}});const p=await c.newPage();const errors=[];p.on('pageerror',e=>errors.push(e.message));const results=[]
-const go=async route=>{await p.goto('http://127.0.0.1:5173'+route);await p.locator('h1').first().waitFor()}
+const go=async route=>{await p.goto((process.env.AUDIT_ORIGIN ?? 'http://127.0.0.1:5173')+route);await p.locator('h1').first().waitFor()}
 try {
  for(const [route,label] of [['/cake/cake_black_forest','Save to favorites'],['/ramen/ramen/ramen_sapporo_miso','★ Favorite'],['/cookies/encyclopedia/cookie_chocolate_chip','Favorite'],['/noodles/encyclopedia/pho-bo','Favorite']]) {
   await go(route);const button=p.getByRole('button',{name:label,exact:true});await button.click();await p.reload();await p.locator('h1').first().waitFor();assert.equal(await p.locator('button[aria-pressed="true"]').count()>0,true,route);results.push({check:'save persists after reload',route,passed:true})

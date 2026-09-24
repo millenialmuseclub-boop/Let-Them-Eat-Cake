@@ -1,7 +1,6 @@
 import { CompanionApp } from '../../components/CompanionApp'
 import { trackExperienceClicked } from '../../lib/analytics'
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { regions, traditions, shops, getRamen } from '../../lib/ramen/data'
 import { getEntryForCity, getAllCities } from '../../lib/ramen/atlas'
 import { AtlasMap } from '../../components/ramen/AtlasMap'
@@ -21,7 +20,12 @@ import './AtlasPage.css'
 // traditions.json data the map already runs on -- no separate geography.
 export function AtlasPage() {
   const cities = getAllCities()
-  const [selectedCity, setSelectedCity] = useState<string | null>(null)
+  const [params, setParams] = useSearchParams()
+  const selectedCity = cities.includes(params.get('city') ?? '') ? params.get('city')! : null
+  const setSelectedCity = (city: string | null) => {
+    setParams(city ? { city } : {})
+    trackExperienceClicked('Atlas city selected', '/ramen/atlas')
+  }
 
   useDocumentTitle(selectedCity ? `${selectedCity} — Ramen Atlas | Let Them Eat` : 'Ramen Atlas | Let Them Eat')
 

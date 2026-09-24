@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { useDocumentTitle } from '../../lib/useDocumentTitle'
 import { regionsByWorldRegion, getTradition, worldRegions } from '../../lib/cookies/atlas'
 import { getCookie } from '../../lib/cookies/data'
@@ -10,7 +9,9 @@ import { PageHeroBand } from '../../components/cookies/PageHeroBand'
 export function AtlasPage() {
   useDocumentTitle('Browse by Origin')
   const regions = worldRegions()
-  const [active, setActive] = useState<string | null>(null)
+  const [params, setParams] = useSearchParams()
+  const active = regions.includes(params.get('region') ?? '') ? params.get('region')! : null
+  const setActive = (region: string | null) => setParams(region ? { region } : {})
   const byRegion = regionsByWorldRegion()
 
   return (

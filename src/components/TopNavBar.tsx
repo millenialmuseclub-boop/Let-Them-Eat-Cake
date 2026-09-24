@@ -21,9 +21,9 @@ export function TopNavBar() {
     // itself; each world still gets its own full identity once you're inside it.
     return (
       <header className="top-nav-bar top-nav-bar-home">
-        <span className="top-nav-brand" aria-label="Let Them Eat">
+        <Link to="/" className="top-nav-brand" aria-label="Let Them Eat — Home">
           <img src="/icon-master.svg" alt="" className="top-nav-icon" />
-        </span>
+        </Link>
         <nav className="top-nav-departments" aria-label="Worlds">
           {(Object.keys(WORLD_CONFIG) as HubWorld[]).map((w, i) => (
             <span key={w}>
@@ -53,6 +53,7 @@ export function TopNavBar() {
         <strong>{config.label}</strong><span>Change world</span>
       </Link>
       <div className="top-nav-actions">
+        <Link to="/explore" className="top-nav-favorites" aria-label="Search all foods">⌕</Link>
         <Link to={config.saved} className="top-nav-favorites" aria-label={`Saved ${config.label}`}>
           ♥
         </Link>

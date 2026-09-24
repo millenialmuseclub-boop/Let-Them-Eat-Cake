@@ -12,7 +12,7 @@ const FLAVOR_TAGS: CookieFlavorTag[] = ['chocolate-forward', 'nutty', 'citrus', 
 const FAMILIES: (CookieFamily | 'flexible')[] = ['flexible', 'drop', 'rolled', 'shaped', 'bar', 'sandwich', 'wafer']
 
 export function SommelierFindPage() {
-  useDocumentTitle('FIND')
+  useDocumentTitle('Find my cookie | Let Them Eat')
   const [query, setQuery] = useState<FindQuery>({
     sweetness: 3,
     richness: 3,
@@ -38,8 +38,8 @@ export function SommelierFindPage() {
       <PageHeroBand
         image={getCookieImage('cookie_french_sable')}
         eyebrow="Sommelier"
-        title="FIND"
-        description="Tell us what you like, and we'll match you to real cookies -- no black box, just a plain-language reason for each match."
+        title="Find my cookie"
+        description="Choose your sweetness, richness and texture. Discover cookies with a reason for every match."
       />
 
       <form

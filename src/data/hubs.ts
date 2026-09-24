@@ -50,7 +50,7 @@ export function hubWorld(hub: Hub): HubWorld {
     source of truth for BottomTabBar (which tabs to show), TopNavBar (which world's brand/saved
     links + accent color to show), and App.tsx (which world's accent-color class to apply). */
 export function worldFromPathname(pathname: string): HubWorld | null {
-  if (pathname === '/') return null
+  if (pathname === '/' || pathname === '/explore') return null
   if (pathname === '/ramen' || pathname.startsWith('/ramen/')) return 'ramen'
   if (pathname === '/cookies' || pathname.startsWith('/cookies/')) return 'cookies'
   if (pathname === '/noodles' || pathname.startsWith('/noodles/')) return 'noodles'
@@ -257,7 +257,7 @@ export const HUBS: Hub[] = [
       {
         to: '/cookies/sommelier',
         title: 'Cookie Sommelier',
-        description: 'Find the best drink pairing for any cookie.',
+        description: 'Find cookies that match your favorite flavors and textures.',
         cta: 'Find a Pairing →',
       },
       {

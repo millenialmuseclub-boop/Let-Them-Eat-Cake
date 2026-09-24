@@ -1,3 +1,5 @@
+import { getCakeImage } from '../lib/images'
+import { ContentJourney } from '../components/ContentJourney'
 import { Link, useParams } from 'react-router-dom'
 import { getCake, getRecipeForCake } from '../lib/data'
 import { getRegionEntriesForCake, getDecadeForCake, getTopPairings, getRelatedCakes } from '../lib/encyclopedia'
@@ -22,7 +24,7 @@ export function CakeDetailPage() {
   const { id } = useParams<{ id: string }>()
   const cake = id ? getCake(id) : undefined
 
-  useDocumentTitle(cake ? `${cake.name} — Cake Encyclopedia | Let Them Eat Cake` : 'Cake Not Found | Let Them Eat Cake')
+  useDocumentTitle(cake ? `${cake.name} — Cake Encyclopedia | Let Them Eat Cake` : 'Cake Not Found | Let Them Eat Cake', { description: cake?.description, image: cake ? getCakeImage(cake.id)?.url : undefined })
 
   if (!cake) {
     return (
@@ -121,7 +123,7 @@ export function CakeDetailPage() {
           <h2>🥂 Pairings</h2>
           <div className="cake-detail-pairing-grid">
             {pairings.map(({ drink, score }) => (
-              <Link key={drink.id} to="/sommelier" className="card cake-detail-pairing-card">
+              <Link key={drink.id} to={`/sommelier?cake=${cake.id}`} className="card cake-detail-pairing-card">
                 <DrinkThumbnail drinkId={drink.id} alt={drink.name} />
                 <span className="cake-detail-pairing-score" style={{ background: scoreColor(score) }}>
                   {score}
@@ -130,11 +132,13 @@ export function CakeDetailPage() {
               </Link>
             ))}
           </div>
-          <Link to="/sommelier" className="btn btn-secondary cake-detail-sommelier-link">
+          <Link to={`/sommelier?cake=${cake.id}`} className="btn btn-secondary cake-detail-sommelier-link">
             Explore all pairings in the Sommelier →
           </Link>
         </section>
       )}
+
+      <ContentJourney world="cake" id={cake.id} title={cake.name} path={`/cake/${cake.id}`} notes={cake.flavorNotes} place={regionEntries.map(r => r.country).join(", ")} />
 
       <AffiliateProductSet title="Baking This Cake?" products={[...vanillaMatch, ...chocolateMatch, ...almondMatch, ...cakeSpecificMatch, ...bakingTools]} />
       <AffiliateProductSet title="Celebration Finishes" products={celebrationFinishes} />

@@ -298,5 +298,47 @@
     "description": "Cookies from Celaya's candy store in Mexico City",
     "localUrl": "/photography/cookie_marranitos.webp",
     "changes": "Resized and converted to WebP; no content edits."
+  },
+  {
+    "id": "cake_yellow_choc_1950s",
+    "name": "Classic Yellow Layer Cake",
+    "world": "Cake",
+    "title": "Classic Yellow Layer Cake",
+    "url": "https://images.unsplash.com/photo-1586985289906-406988974504?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE5NzI1fDB8MXxzZWFyY2h8MXx8Q2xhc3NpYyUyMFllbGxvdyUyMExheWVyJTIwQ2FrZSUyMHdpdGglMjBDaG9jb2xhdGUlMjBGcm9zdGluZyUyMGNha2V8ZW58MHwwfHx8MTc4NjA0OTkyNXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "source": "https://unsplash.com/photos/brown-cake-on-clear-glass-cake-stand-Id8BO472TbY",
+    "author": "American Heritage Chocolate",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "description": "Classic Yellow Layer Cake",
+    "localUrl": "/photography/cake_yellow_choc_1950s.webp",
+    "changes": "Resized and converted to WebP; no content edits."
+  },
+  {
+    "id": "ramen_hakata_tonkotsu",
+    "name": "Hakata Tonkotsu Ramen",
+    "world": "Ramen",
+    "title": "Hakata Tonkotsu Ramen",
+    "url": "https://images.pexels.com/photos/35773118/pexels-photo-35773118.jpeg",
+    "source": "https://www.pexels.com/photo/japanese-tonkotsu-ramen-with-soft-boiled-egg-35773118/",
+    "author": "Nadin Sh",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/",
+    "description": "Hakata Tonkotsu Ramen",
+    "localUrl": "/photography/ramen_hakata_tonkotsu.webp",
+    "changes": "Resized and converted to WebP; no content edits."
+  },
+  {
+    "id": "ramen_sapporo_miso",
+    "name": "Sapporo Miso Ramen",
+    "world": "Ramen",
+    "title": "Sapporo Miso Ramen",
+    "url": "https://images.pexels.com/photos/16594958/pexels-photo-16594958.jpeg",
+    "source": "https://www.pexels.com/photo/egg-and-noodles-in-ramen-16594958/",
+    "author": "Nadin Sh",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/",
+    "description": "Sapporo Miso Ramen",
+    "localUrl": "/photography/ramen_sapporo_miso.webp",
+    "changes": "Resized and converted to WebP; no content edits."
   }
 ]

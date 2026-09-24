@@ -1,6 +1,6 @@
 import { EditorialImage } from '../../components/EditorialImage'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { ramen, pairingItems } from '../../lib/ramen/data'
 import { bestPairingByCategory, explainPairingScience } from '../../lib/ramen/sommelier'
 import { RamenThumbnail } from '../../components/ramen/RamenThumbnail'
@@ -30,7 +30,8 @@ export function SommelierPairPage() {
   useDocumentTitle('Pair My Ramen | Let Them Eat')
 
   const scene = getSceneImage('sommelier')
-  const [ramenId, setRamenId] = useState(ramen[0].id)
+  const [params] = useSearchParams()
+  const [ramenId, setRamenId] = useState(() => ramen.find(r => r.id === params.get('ramen'))?.id ?? ramen[0].id)
   const candidate = ramen.find((r) => r.id === ramenId)!
   const bestByCategory = bestPairingByCategory(candidate, pairingItems)
 

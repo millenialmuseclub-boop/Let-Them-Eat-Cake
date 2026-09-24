@@ -74,7 +74,7 @@ export type FlavorTag =
   | 'sweet';
 
 export interface FlavorProfile {
-  /** 0 = brothy, 5 = dry */
+  /** 0 = dry, 5 = brothy (matches the canonical dish records). */
   brothiness: number;
   /** 0 = delicate, 5 = bold */
   boldness: number;

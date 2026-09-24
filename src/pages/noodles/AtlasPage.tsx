@@ -1,6 +1,6 @@
 import { CompanionApp } from '../../components/CompanionApp'
 import { EditorialImage } from '../../components/EditorialImage'
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { regions, countries, places, dishes } from '../../lib/noodles/data';
 import { getImageFor } from '../../data/noodles/images';
 import { useDocumentTitle } from '../../lib/useDocumentTitle';
@@ -29,6 +29,9 @@ const ATLAS_HERO_DISH_ID = 'pho-bo';
 export function AtlasPage() {
   useDocumentTitle('Atlas');
   const heroImage = getImageFor(ATLAS_HERO_DISH_ID);
+  const [params, setParams] = useSearchParams();
+  const countryId = countries.some(c => c.id === params.get('country')) ? params.get('country') : null;
+  const regionId = regions.some(r => r.id === params.get('region')) ? params.get('region') : null;
 
   return (
     <div className="page-container">
@@ -47,9 +50,15 @@ export function AtlasPage() {
         point — each entry below reflects the region most strongly and widely associated with it.
       </p>
 
+      <label htmlFor="noodle-atlas-country">Explore a country</label>
+      <select id="noodle-atlas-country" value={countryId ?? ''} onChange={e => setParams(e.target.value ? { country: e.target.value } : {})}>
+        <option value="">All countries</option>
+        {countries.map(country => <option key={country.id} value={country.id}>{country.name}</option>)}
+      </select>
+      {regionId && <p><button onClick={() => setParams({})}>Show all regions</button></p>}
       <div className="atlas-list">
-        {regions.map((region) => {
-          const regionCountries = countries.filter((c) => c.regionId === region.id);
+        {regions.filter(r => (!regionId || r.id === regionId) && (!countryId || countries.some(c => c.id === countryId && c.regionId === r.id))).map((region) => {
+          const regionCountries = countries.filter((c) => c.regionId === region.id && (!countryId || c.id === countryId));
           const spotlight = regionSpotlightImage(region.id);
           return (
             <div key={region.id} className="atlas-region">

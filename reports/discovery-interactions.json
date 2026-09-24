@@ -1,0 +1,16 @@
+{
+  "checks": [
+    "cross-world ingredient search",
+    "search filters survive reload",
+    "empty-state recovery and random discovery open a real detail",
+    "all four saves survive reload; detail metadata and sharing render",
+    "ramen pairing preserves selected bowl",
+    "cake pairing preserves selection; geographically relevant Jet Set link",
+    "noodle craving presets change recommendations",
+    "cookie flexible matches explain actual preferences",
+    "three Atlas deep links restore filtered context",
+    "Cookie Lab shows related examples and cause/effect",
+    "320/390/1440px layouts without horizontal overflow"
+  ],
+  "errors": []
+}

@@ -19,7 +19,7 @@ export function scoreCookie(cookie: CookieProfile, query: FindQuery, weights: Fi
   const richnessGap = Math.abs(cookie.flavorProfile.richness - query.richness)
   const crispnessGap = Math.abs(cookie.flavorProfile.crispness - query.crispness)
   const matchedFlavorTags = cookie.flavorTags.filter((tag) => query.flavorPreferences.includes(tag))
-  const familyMatched = query.familyPreference === 'flexible' || cookie.family === query.familyPreference
+  const familyMatched = query.familyPreference !== 'flexible' && cookie.family === query.familyPreference
 
   let score = weights.baseScore
   score -= sweetnessGap * weights.sweetnessGapPenalty

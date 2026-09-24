@@ -3,7 +3,8 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import './styles/worldAccents.css'
 import { markAppReady, checkForOtaUpdate } from './lib/otaUpdater'
 import { HomePage } from './pages/HomePage'
-import { trackContentViewed } from './lib/analytics'
+const ExplorePage = lazy(() => import('./pages/ExplorePage').then(module => ({ default: module.ExplorePage })))
+import { trackContentViewed, trackDiscovery } from './lib/analytics'
 const TimeMachinePage = lazy(() => import('./pages/TimeMachinePage').then((module) => ({ default: module.TimeMachinePage })))
 const AtlasPage = lazy(() => import('./pages/AtlasPage').then((module) => ({ default: module.AtlasPage })))
 const AtlasRegionPage = lazy(() => import('./pages/AtlasRegionPage').then((module) => ({ default: module.AtlasRegionPage })))
@@ -73,12 +74,21 @@ function App() {
   const { pathname } = useLocation()
   useEffect(() => { trackContentViewed(pathname, worldFromPathname(pathname) ?? 'home') }, [pathname])
   return (
-    <div className={worldAccentClass(pathname)}>
+    <div className={worldAccentClass(pathname)} onClickCapture={event => {
+      const target = event.target as HTMLElement
+      if (!target.closest("button") || target.closest("header, nav")) return
+      const kind = pathname.includes("sommelier") ? "Sommelier Used" : pathname.includes("atlas") ? "Atlas Interaction" : /workshop|lab|anatomy|cake-science|technique/.test(pathname) ? "Workshop Used" : null
+      if (kind) trackDiscovery(kind, { path: pathname })
+    }} onChangeCapture={() => {
+      const kind = pathname.includes("sommelier") ? "Sommelier Used" : pathname.includes("atlas") ? "Atlas Interaction" : /workshop|lab|anatomy/.test(pathname) ? "Workshop Used" : null
+      if (kind) trackDiscovery(kind, { path: pathname })
+    }}>
       <TopNavBar />
       <StorageNotice />
       <Suspense fallback={<RouteLoading />}>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/explore" element={<ExplorePage />} />
         <Route path="/celebrate" element={<CelebrateLandingPage />} />
         <Route path="/discover" element={<DiscoverPage />} />
         <Route path="/my-cakes" element={<Navigate to="/discover" replace />} />

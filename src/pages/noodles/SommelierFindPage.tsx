@@ -48,6 +48,12 @@ export function SommelierFindPage() {
         </div>
       </div>
 
+      <p className="prose">Start with a craving, then adjust the sliders. Results update as you explore.</p>
+      <div role="group" aria-label="Craving starting points" style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+        <button className="chip" onClick={() => setCraving({ brothiness: 5, boldness: 2, richness: 1, chewiness: 2, spice: 0, desiredTags: [] })}>Light &amp; brothy</button>
+        <button className="chip" onClick={() => setCraving({ brothiness: 0, boldness: 5, richness: 3, chewiness: 4, spice: 4, desiredTags: [] })}>Bold &amp; saucy</button>
+        <button className="chip" onClick={() => setCraving({ brothiness: 3, boldness: 3, richness: 3, chewiness: 3, spice: 2, desiredTags: [] })}>Reset taste</button>
+      </div>
       {DIMENSIONS.map((dim) => (
         <div key={dim.key} style={{ marginTop: 16 }}>
           <label htmlFor={`dim-${dim.key}`} style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13, fontWeight: 600 }}>
@@ -61,6 +67,7 @@ export function SommelierFindPage() {
             max={5}
             step={1}
             value={craving[dim.key]}
+            aria-valuetext={`${craving[dim.key]} of 5, from ${dim.left.toLowerCase()} to ${dim.right.toLowerCase()}`}
             onChange={(e) => setCraving((c) => ({ ...c, [dim.key]: Number(e.target.value) }))}
           />
         </div>
@@ -90,7 +97,7 @@ export function SommelierFindPage() {
                 <PhotoFrame subjectId={dish.id} fallbackLabel={dish.name} variant="tile" />
               </Link>
               <div>
-                <h3 style={{ margin: '0 0 4px' }}>{dish.name}</h3>
+                <h3 style={{ margin: '0 0 4px' }}><Link to={`/noodles/encyclopedia/${dish.id}`}>{dish.name}</Link></h3>
                 <p style={{ margin: '0 0 6px', fontSize: 12.5, opacity: 0.7 }}>{getPlaceLabel(dish.place)}</p>
                 <ul style={{ margin: 0, paddingLeft: 16, fontSize: 13 }}>
                   {match.reasons.map((r, i) => <li key={i}>{r}</li>)}
