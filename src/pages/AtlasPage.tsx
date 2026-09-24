@@ -31,7 +31,7 @@ export function AtlasPage() {
   function browse(nextCountry = country, nextWorld = world, nextRegion = '', nextFood = '') {
     setParams({ ...(nextCountry ? { country: nextCountry } : {}), ...(nextWorld !== 'all' ? { world: nextWorld } : {}), ...(nextRegion ? { region: nextRegion } : {}), ...(nextFood ? { food: nextFood } : {}) })
     if (!nextFood) setShown(12)
-    trackDiscovery('Atlas Interaction', { country: nextCountry || 'world', world: nextWorld, id: nextFood })
+    trackDiscovery('Atlas Selection', { country: nextCountry || 'world', world: nextWorld, id: nextFood })
   }
   function selectCountry(value: string) {
     browse(value)
